@@ -1,0 +1,46 @@
+{%- if type == "viewed_product" -%}
+  <script type="text/javascript">
+    window.addEventListener('CookiebotOnLoad', function () {
+      if (Cookiebot.consented) {
+        var _learnq = _learnq || [];
+        const item = {
+          "ProductName": {{ product.title | json }},
+          "ProductID": {{ product.selected_or_first_available_variant.id | json }},
+          "SKU": {{ product.selected_or_first_available_variant.sku | json }},
+          "Categories": {{ product.collections | map: 'title' | json }},
+          {% if seo_media -%}
+            "ImageURL": {{ seo_media | image_url: width: seo_media.preview_image.width | prepend: "https:" | json }},
+          {%- endif %}
+          "URL": {{ request.origin | append: product.url | json }},
+          "Brand": {{ product.vendor | json }},
+          "Price": {{ product.selected_or_first_available_variant.price | divided_by: 100.00 | json }},
+          {% if product.selected_or_first_available_variant.compare_at_price -%}
+            "CompareAtPrice": {{ product.selected_or_first_available_variant.compare_at_price | divided_by: 100.00 | json }}
+          {%- endif -%}
+        };
+        _learnq.push(["track", "Viewed Product", item]);
+      } else {
+        window.addEventListener('CookiebotOnAccept', function () {
+          if (Cookiebot.consented) 
+            var _learnq = _learnq || [];
+            const item = {
+              "ProductName": {{ product.title | json }},
+              "ProductID": {{ product.selected_or_first_available_variant.id | json }},
+              "SKU": {{ product.selected_or_first_available_variant.sku | json }},
+              "Categories": {{ product.collections | map: 'title' | json }},
+              {% if seo_media -%}
+                "ImageURL": {{ seo_media | image_url: width: seo_media.preview_image.width | prepend: "https:" | json }},
+              {%- endif %}
+              "URL": {{ request.origin | append: product.url | json }},
+              "Brand": {{ product.vendor | json }},
+              "Price": {{ product.selected_or_first_available_variant.price | divided_by: 100.00 | json }},
+              {% if product.selected_or_first_available_variant.compare_at_price -%}
+                "CompareAtPrice": {{ product.selected_or_first_available_variant.compare_at_price | divided_by: 100.00 | json }}
+              {%- endif -%}
+            };
+            _learnq.push(["track", "Viewed Product", item]);
+        }, false);
+      }
+    })
+  </script>
+{%- endif -%}

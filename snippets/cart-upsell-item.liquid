@@ -1,0 +1,41 @@
+<div class="cart-item-upsell">
+  <div class="cart-item-upsell-container">
+    <a href="{{ product_data.url }}" class="cart-item-upsell-image">
+      {% capture content %} 
+      {{
+        product_data.featured_image
+        | image_url: width: 60, height: 60
+        | image_tag:
+          widths: '60',
+          alt: product_data.selected_or_first_available_variant.featured_image.alt,
+          loading: 'lazy'
+      }}
+    {% endcapture %} 
+    {% assign content = content | replace: ' src=', ' data-src=' | replace: ' srcset=', ' class=" lazyload" data-srcset='  %} 
+    {{content}}
+    </a>
+    <div class="cart-item-upsell-info">
+      <span class="cart-item-upsell-title">{{ product_data.title }}</span>
+      <span class="cart-item-upsell-price">{{ product_data.price | money }}</span>
+    </div>
+    {%- if product_data.variants.size > 1 -%}
+      <label for="toggle-{{ index }}" class="cart-item-upsell-atc">{% render 'icon-plus' %}</label>
+    {%- else -%}
+      <div class="cart-item-upsell-atc" id="{{ product_data.selected_or_first_available_variant.id }}">{% render 'icon-plus' %}</div>
+    {%- endif -%}
+  </div>
+  {%- if product_data.variants.size > 1 -%}
+    <input class="hidden cart-item-upsell-pills-toggle" type="checkbox" id="toggle-{{ index }}">
+  {%- endif -%}
+  {%- if product_data.variants.size > 1 -%}
+    <div class="cart-item-upsell-pills">
+      {%- for variant in product_data.variants -%}
+        {%- unless cart_ids contains variant.id -%}
+          <div class="cart-item-upsell-pill" id="{{ variant.id }}">
+            {% render 'icon-plus' %} {{ variant.title }}
+          </div>
+        {%- endunless -%}
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+</div>

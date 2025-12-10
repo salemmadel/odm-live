@@ -1,0 +1,408 @@
+{% comment %} 
+  Flavor Profile Slider Section: Based on Swiper.js for block content.
+  The CDN links for Swiper CSS and JS are included here.
+{% endcomment %}
+
+{{ 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css' | stylesheet_tag }}
+
+{% assign swiper_id = 'FlavorSwiper-' | append: section.id %}
+
+<div class="flavor-profile-slider-section section-flavor-profiles">
+  <div class="page-width">
+    <h2 class="section-header">{{ section.settings.title }}</h2>
+
+    {% if section.blocks.size > 0 %}
+      <div class="swiper mySwiper"
+           id="{{ swiper_id }}"
+           data-desktop-slides="{{ section.settings.desktop_slides }}"
+           {# NOTE: data-mobile-slides is still present in Liquid but is ignored by the new JS #}
+           data-show-nav="{{ section.settings.show_navigation }}"
+           data-show-pag="{{ section.settings.show_pagination }}"
+      >
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="swiper-slide" {{ block.shopify_attributes }}>
+              <div class="flavor-card">
+                {% if block.settings.image != blank %}
+                  <div class="flavor-card__image">
+                    {{ block.settings.image | image_url: width: 300 | image_tag: loading: 'lazy' }}
+                  </div>
+                {% endif %}
+
+                <h3 class="flavor-card__heading">{{ block.settings.heading | upcase }}</h3>
+                <p class="flavor-card__description">{{ block.settings.description }}</p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        {% comment %} ARROW NAVIGATION - Controlled by show_navigation setting - UPDATED WITH SVG ICONS {% endcomment %}
+        {% if section.settings.show_navigation %}
+
+          <div class="slider-controls">
+            
+            <div class="swiper-button-prev slider-arrow" aria-label="Previous slide">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+            </div> 
+            
+            <div class="swiper-button-next slider-arrow" aria-label="Next slide">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+            </div>
+          </div>
+        {% endif %}
+
+        {% comment %} DOTS PAGINATION - Controlled by show_pagination setting {% endcomment %}
+        {% if section.settings.show_pagination %}
+          <div class="swiper-pagination"></div>
+        {% endif %}
+      </div>
+      {% else %}
+      {% comment %} Default Content for empty state in editor {% endcomment %}
+      <div class="placeholder-content">
+        <p>Please add **Flavor Profile** blocks to this section.</p>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  /* Basic Styling (Unchanged) */
+  .section-flavor-profiles {
+  
+    text-align: center;
+    /* 👇 CHANGE: Using the color setting with a fallback */
+    background-color: {{ section.settings.background_color }}; 
+  }
+  .flavor-profile-slider-section .page-width {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .flavor-profile-slider-section .section-header {
+    margin-bottom: 40px;
+    font-size: 32px;
+    font-weight: bold;
+  }
+  .flavor-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 36px 10px;
+    height: 100%; 
+  }
+  .flavor-card__image {
+    width: 100%;
+    max-width: 300px; 
+    height: auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .flavor-card__image img {
+    display: block;
+    max-width: 61%;
+    max-height: 100%;
+    height: auto;
+  }
+  .flavor-card__heading {
+    font-size: 19px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  .flavor-card__description {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+    max-width: 250px;
+    font-family: "GT Pressura Mono"
+  }
+
+  .section-flavor-profiles .swiper-pagination-bullet-active{
+    background: grey;
+  }
+  .section-flavor-profiles .swiper-pagination-bullet{
+    border-radius: 0% !important
+  }
+  /* CRITICAL FIX: Ensure the Swiper container has position relative */
+  #{{ swiper_id }} {
+      position: relative;
+      padding-bottom: 50px; /* Add space for the bottom-aligned controls */
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* START: IMAGE SLIDER ARROW REPLICATION STYLES */
+  /* ------------------------------------------------------------------ */
+
+  /* The slider-controls wrapper for positioning the arrows */
+  .flavor-profile-slider-section .slider-controls { 
+    position: absolute;
+    bottom: 0; /* Align to the bottom of the swiper container */
+    right: 20px; /* Pull it inside from the right */
+    top: auto; /* Override default Swiper top positioning */
+    transform: none; /* Override default Swiper transform */
+    width: auto;
+    padding: 0; 
+    gap: 10px; /* Reduced gap from 2rem to 10px */
+    display: flex;
+    justify-content: flex-end; /* Ensure buttons are to the right */
+    align-items: center;
+    z-index: 10;
+  }
+
+  /* Swiper arrows styling adapted from .slider-arrow */
+  .section-flavor-profiles .swiper-button-next, .swiper-button-prev {
+    /* Reset/Override default Swiper styles */
+    position: static; /* Let the .slider-controls handle positioning */
+    margin: 0; 
+    left: auto;
+    right: auto;
+    top: auto;
+    color: white; /* Text color for the arrow content */
+    
+    /* Replicated .slider-arrow styles */
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    transition: all 0.2s ease;
+    border-radius: 0; /* Remove previous round style */
+    box-shadow: none; /* Remove previous shadow */
+  }
+
+  /* Swiper arrows hover state */
+  .section-flavor-profiles .swiper-button-next:hover, .swiper-button-prev:hover {
+    transform: scale(1.1);
+    background-color: black; /* Keep background black on hover */
+  }
+
+  /* SVG icon styling adapted from .slider-arrow svg */
+  .section-flavor-profiles .swiper-button-next svg, .swiper-button-prev svg {
+    width: 20px;
+    height: 20px;
+    stroke: white; /* Change stroke to white for black background */
+  }
+
+  /* Hides the default Swiper pseudo-elements (if any remain) */
+  .section-flavor-profiles .swiper-button-next::after, .swiper-button-prev::after {
+    content: none !important;
+  }
+
+  /* Responsive Adjustments for Full Width and Arrows */
+  @media screen and (max-width: 767px) {
+    /* FIX 1: Remove padding on mobile to allow full width */
+    .flavor-profile-slider-section .page-width {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .swiper-button-next, .swiper-button-prev {
+      width: 36px;
+      height: 36px;
+    }
+
+    .flavor-profile-slider-section .swiper-pagination-bullets{
+      top: 319px !important
+    }
+    
+    .swiper-button-next svg, .swiper-button-prev svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .flavor-profile-slider-section .slider-controls {
+      right: 10px; /* Adjust positioning on mobile */
+    }
+
+    #{{ swiper_id }} {
+      padding-bottom: 40px; /* Less space needed on mobile */
+    }
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* END: IMAGE SLIDER ARROW REPLICATION STYLES */
+  /* ------------------------------------------------------------------ */
+
+  /* Hides the dots if they are included but not desired */
+ .section-flavor-profiles .swiper:not([data-show-pag="true"]) .swiper-pagination {
+    display: none;
+  }
+</style>
+
+<script>
+  // Load Swiper library dynamically to ensure it's available before initialization
+  (function() {
+    const swiperUrl = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
+    const swiperId = '{{ swiper_id }}';
+
+    function initFlavorSwiper(swiperElement) {
+      if (typeof Swiper === 'undefined') {
+        console.warn('Swiper not defined. Skipping initialization.');
+        return;
+      }
+
+      // Read data attributes from Liquid
+      const desktopSlides = parseInt(swiperElement.dataset.desktopSlides);
+      // Removed: const mobileSlides = parseInt(swiperElement.dataset.mobileSlides);
+      const showNav = swiperElement.dataset.showNav === 'true'; 
+      const showPag = swiperElement.dataset.showPag === 'true';
+
+      new Swiper(swiperElement, {
+        // SETTING: Default to 1 slide per view (for mobile first approach)
+        slidesPerView: 1, 
+        spaceBetween: 20, 
+        loop: false, 
+        
+        breakpoints: {
+          768: {
+            // Revert to desktop setting above 768px
+            slidesPerView: desktopSlides,
+            spaceBetween: 30
+          },
+          320: { 
+            // Ensure 1 slide on the smallest screens
+            slidesPerView: 1, 
+            spaceBetween: 10 
+          }
+        },
+
+        navigation: showNav ? {
+          nextEl: swiperElement.querySelector('.swiper-button-next'),
+          prevEl: swiperElement.querySelector('.swiper-button-prev'),
+        } : false,
+
+        pagination: showPag ? {
+          el: swiperElement.querySelector('.swiper-pagination'),
+          clickable: true,
+        } : false,
+      });
+    }
+
+    // Function to handle the initialization when the library is ready
+    function handleSwiperReady() {
+      // 1. Initial Load
+      const containerOnLoad = document.getElementById(swiperId);
+      if (containerOnLoad) {
+        initFlavorSwiper(containerOnLoad);
+      }
+
+      // 2. Theme Editor Preview (Listens for section load/update)
+      document.addEventListener('shopify:section:load', function(event) {
+        if (event.detail.sectionId === '{{ section.id }}') {
+          const containerOnEdit = event.target.querySelector('#' + swiperId);
+          if (containerOnEdit) {
+            setTimeout(() => initFlavorSwiper(containerOnEdit), 50); 
+          }
+        }
+      });
+    }
+
+    // Load Swiper script and call handler upon successful loading
+    const script = document.createElement('script');
+    script.src = swiperUrl;
+    script.defer = true;
+    script.onload = handleSwiperReady;
+    document.head.appendChild(script);
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Flavor Profile Slider",
+  "tag": "section",
+  "class": "section-flavor-profiles",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "The Core Ingredients"
+    },
+    {
+      /* 👇 NEW: Color Picker Setting */
+      "type": "color",
+      "id": "background_color",
+      "label": "Section Background Color",
+      "default": "#E2E2E2",
+      "info": "Choose a background color for this entire section."
+    },
+    {
+      "type": "range",
+      "id": "desktop_slides",
+      "label": "Slides per view (Desktop)",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "mobile_slides",
+      "label": "Slides per view (Mobile)",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "checkbox",
+      "id": "show_navigation",
+      "label": "Show Slider Arrows",
+      "default": true,
+      "info": "Display left/right navigation arrows."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_pagination",
+      "label": "Show Slider Dots",
+      "default": false,
+      "info": "Display dots indicator at the bottom."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "flavor_profile",
+      "name": "Flavor Profile",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Flavor Image/Icon"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Flavor Title",
+          "default": "Flavor headline"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Flavor Description",
+          "default": "Toasty almond crunch with a hint of brittle sweetness"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Flavor Profile Slider",
+      "category": "Image",
+      "blocks": [
+        { "type": "flavor_profile" },
+        { "type": "flavor_profile" },
+        { "type": "flavor_profile" },
+        { "type": "flavor_profile" }
+      ]
+    }
+  ]
+}
+{% endschema %}

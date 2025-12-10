@@ -1,0 +1,272 @@
+{%- comment -%}
+  Renders an offcanvas mobile menu.
+
+  Usage:
+    {% render 'header-drawer-mobile', menu: section.settings.menu, shop: section.settings.menu_mobile_shop %}
+
+  Accepts: 
+    - menu: section.settings.menu, 
+    - shop: section.settings.menu_mobile_shop, 
+    - show_images: section.settings.hide_mobile_category_images, 
+    - badge_background_color: section.settings.badge_background_color, 
+    - badge_color: section.settings.badge_color, 
+    - use_christmas_gift_icon: section.settings.use_christmas_gift_icon
+    - mobile_linklist_enabled {boolean}
+
+    Mobile linklist enabled:
+      Old menu: uses mobile menu from header settings for initial links, then populates remainder of menu from desktop menu.
+      New menu: uses mobile menu for all links.
+        Absolutely minor changes made to allow for switchover:
+        * Menu still truncated at 1st link
+        * Menu still skips 'shop' link for remainder population.
+{%- endcomment -%}
+{% assign shop_name = shop.links | first %}
+{% assign shop_all = shop_name.links | last %}
+{%- liquid 
+  if mobile_menu_enabled
+    assign menu = shop
+  endif
+-%}
+
+<header-drawer data-breakpoint="tablet">
+    <details id="Details-menu-drawer-container" class="menu-drawer-container">
+      <summary class="header__icon header__icon--menu header__icon--summary link focus-inset" aria-label="{{ 'sections.header.menu' | t }}">
+        <span>
+          {% render 'icon-hamburger' %}
+          {% render 'icon-close' %}
+        </span>
+      </summary>
+      <div id="menu-drawer" class="gradient menu-drawer motion-reduce" tabindex="-1" style="border-right: none;">
+        <div class="menu-drawer__inner-container">
+          {%- comment -%}
+            Banner mobile
+          {%- endcomment -%}
+            <div class="menu-drawer__header-icons">
+              {%- if settings.enable_wishlist -%}
+              <div class="menu-drawer__header-wishlist-icon">
+                  <a href="/apps/wishlist" class="menu-drawer__header-wishlist-icon__icon">
+                    <div class="header__icon h-wishlist-icon wishlist-page-widget">
+                    {% render 'icon-heart' %}<span class="wishlist-h-count wishlist-total-count" data-total="0">0</span>
+                    </div>  
+                    <div class="menu-drawer__header-wishlist-icon__text">{{ 'wishlist.my_wishlist' | t }}</div>
+                  </a>
+              </div>
+            {%- endif -%}
+            </div>
+
+        {%- if section.settings.banner_image != nil -%}
+          <div class="menu-drawer__header-image">
+          <a href="{{ section.settings.banner_link }}" aria-label="{{ section.settings.banner_title }}" class="mobile-menu-banner" data-title="{{ section.settings.banner_title }}">
+            <img srcset="{{ section.settings.banner_image | image_url: width: 400 }} 1x, {{ section.settings.banner_image | image_url: width: 800 }} 2x"
+              src="{{ section.settings.banner_image | image_url }}"
+              alt="{{ section.settings.banner_title | default: shop.name | escape }}"
+              style="max-width: 100%;"
+            >
+          </a>
+        </div>
+        {%- endif -%}
+          <div class="menu-drawer__navigation-container">
+            <nav class="menu-drawer__navigation {% if show_images == true %} menu-drawer__without--icons {% endif %} ">
+             
+              <a href="{{ shop_name.url }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">{{ shop_name.title }}</a>
+              <ul class="menu-drawer__menu has-submenu list-menu menu-shop">
+                {%- for link in shop_name.links -%}
+                  <li class="menu-drawer__menu-item"> 
+                    {%- assign menu_item_icon = link.object.metafields.custom.menu_category_image.value -%}
+                    {%- assign navigation_badge = link.object.metafields.custom.navigation_badge.value -%}
+                    <a href="{{ link.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}{% if navigation_badge %} menu-drawer__menu-item--with-badge{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
+                      {%- if show_images != true -%}   
+                        {%- if menu_item_icon != blank -%}
+                          {% capture content %}
+                            {{ menu_item_icon | image_url: width: 200, height: 200, format: 'png' | image_tag: class: 'list-menu__item--icon lazyload', loading: 'lazy' }} 
+                          {% endcapture %} 
+                          {% assign content = content | replace: ' src=', '  src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src='  | replace: ' srcset=', ' data-srcset='  %} 
+                          {{content}}
+                        {%- endif -%}
+                      {%- endif -%}
+                     <div class="mega-menu__link-title" > {{ link.title | escape }} </div>      
+                     {%- if navigation_badge -%}           
+                      <div class="mega-menu__link-badge menu-drawer__menu-item-badge-status" style="{% if link.object.metafields.custom.navigation_badge_style%} background-color:{{ link.object.metafields.custom.navigation_badge_style.value[1] }}; color:{{ link.object.metafields.custom.navigation_badge_style.value[0] }}; {% else %}background-color:{{ badge_background_color }}; color:{{ badge_color }};{% endif %}">{{navigation_badge}}</div>
+                     {%- endif -%}
+                    </a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+              
+
+              <ul class="menu-drawer__menu has-submenu list-menu" role="list">
+                {%- for link in menu.links -%}
+                  {%- if link.title == shop_name.title -%}
+                    {%- continue -%}
+                  {%- endif -%}
+
+                  <li>
+                    {%- if link.links != blank -%}
+                      <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
+                        <summary class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}">
+                          {{ link.title | escape }}
+                          {% if use_christmas_gift_icon != blank and link.title == use_christmas_gift_icon %}
+                            <span> {% render 'icon-animated-present' %}</span>
+                          {%- endif -%}
+                          {% render 'icon-arrow' %}
+                          {% render 'icon-caret' %}
+                        </summary>
+                        <div id="link-{{ link.title | escape }}" class="menu-drawer__submenu has-submenu gradient motion-reduce" tabindex="-1">
+                          <div class="menu-drawer__inner-submenu">
+                            <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
+                              {% render 'icon-arrow' %}
+                              {{ link.title | escape }}
+                            </button>
+                            <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+                              {%- for childlink in link.links -%}
+                                <li>
+                                  {%- if childlink.links == blank -%}
+                                    {%- assign menu_item_icon = childlink.object.metafields.custom.menu_category_image.value -%}
+
+                                    <a href="{{ childlink.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                                      {%- if menu_item_icon != blank -%}
+                                        {{ menu_item_icon | image_url: width: 200, height: 200, format: 'png' | image_tag: class: 'list-menu__item--icon', loading: 'lazy' }} 
+                                      {%- endif -%}
+                                      {{ childlink.title | escape }}
+                                    </a>
+                                  {%- else -%}
+                                    {%- assign menu_item_icon = childlink.object.metafields.custom.menu_category_image.value -%}
+                                    
+                                    <details id="Details-menu-drawer-submenu-{{ forloop.index }}">
+                                      <summary class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
+                                        {%- if menu_item_icon != blank -%}
+                                          {{ menu_item_icon | image_url: width: 200, height: 200, format: 'png' | image_tag: class: 'list-menu__item--icon', loading: 'lazy' }} 
+                                        {%- endif -%}
+                                        {{ childlink.title | escape }}
+                                        {% render 'icon-arrow' %}
+                                        {% render 'icon-caret' %}
+                                      </summary>
+
+                                      <div id="childlink-{{ childlink.title | escape }}" class="menu-drawer__submenu has-submenu gradient motion-reduce">
+                                        <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
+                                          {% render 'icon-arrow' %}
+                                          {{ childlink.title | escape }}
+                                        </button>
+                                        <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+                                          {%- for grandchildlink in childlink.links -%}
+                                            <li>
+                                              <a href="{{ grandchildlink.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                                {{ grandchildlink.title | escape }}
+                                              </a>
+                                            </li>
+                                          {%- endfor -%}
+                                        </ul>
+                                      </div>
+                                    </details>
+                                  {%- endif -%}
+                                </li>
+                              {%- endfor -%}
+                            </ul>
+                          </div>
+                        </div>
+                      </details>
+                    {%- else -%}
+                      <a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
+                        {{ link.title | escape }}
+                        {% if use_christmas_gift_icon != blank and link.title == use_christmas_gift_icon %}
+                          <span> {% render 'icon-animated-present' %}</span>
+                        {%- endif -%}
+                      </a>
+                    {%- endif -%}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </nav>
+            <div class="menu-drawer__utility-links">
+              {%- if shop.customer_accounts_enabled -%}
+                <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="menu-drawer__account link focus-inset h5">
+                  {% render 'icon-account' %}
+                  {%- liquid
+                    if customer
+                      echo 'customer.account_fallback' | t
+                    else
+                      echo 'customer.log_in' | t
+                    endif
+                  -%}
+                </a>
+              {%- endif -%}
+              <ul class="list list-social list-unstyled" role="list">
+                {%- if settings.social_twitter_link != blank -%}
+                  <li class="list-social__item">
+                    <a href="{{ settings.social_twitter_link }}" class="list-social__link link">
+                      {%- render 'icon-twitter' -%}
+                      <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
+                    </a>
+                  </li>
+                {%- endif -%}
+                {%- if settings.social_facebook_link != blank -%}
+                  <li class="list-social__item">
+                    <a href="{{ settings.social_facebook_link }}" class="list-social__link link">
+                      {%- render 'icon-facebook' -%}
+                      <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
+                    </a>
+                  </li>
+                {%- endif -%}
+                {%- if settings.social_pinterest_link != blank -%}
+                  <li class="list-social__item">
+                    <a href="{{ settings.social_pinterest_link }}" class="list-social__link link">
+                      {%- render 'icon-pinterest' -%}
+                      <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
+                    </a>
+                  </li>
+                {%- endif -%}
+                {%- if settings.social_instagram_link != blank -%}
+                  <li class="list-social__item">
+                    <a href="{{ settings.social_instagram_link }}" class="list-social__link link">
+                      {%- render 'icon-instagram' -%}
+                      <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
+                    </a>
+                  </li>
+                {%- endif -%}
+                {%- if settings.social_tiktok_link != blank -%}
+                  <li class="list-social__item">
+                    <a href="{{ settings.social_tiktok_link }}" class="list-social__link link">
+                      {%- render 'icon-tiktok' -%}
+                      <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
+                    </a>
+                  </li>
+                {%- endif -%}
+                {%- if settings.social_tumblr_link != blank -%}
+                  <li class="list-social__item">
+                    <a href="{{ settings.social_tumblr_link }}" class="list-social__link link">
+                      {%- render 'icon-tumblr' -%}
+                      <span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
+                    </a>
+                  </li>
+                {%- endif -%}
+                {%- if settings.social_snapchat_link != blank -%}
+                  <li class="list-social__item">
+                    <a href="{{ settings.social_snapchat_link }}" class="list-social__link link">
+                      {%- render 'icon-snapchat' -%}
+                      <span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
+                    </a>
+                  </li>
+                {%- endif -%}
+                {%- if settings.social_youtube_link != blank -%}
+                  <li class="list-social__item">
+                    <a href="{{ settings.social_youtube_link }}" class="list-social__link link">
+                      {%- render 'icon-youtube' -%}
+                      <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
+                    </a>
+                  </li>
+                {%- endif -%}
+                {%- if settings.social_vimeo_link != blank -%}
+                  <li class="list-social__item">
+                    <a href="{{ settings.social_vimeo_link }}" class="list-social__link link">
+                      {%- render 'icon-vimeo' -%}
+                      <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
+                    </a>
+                  </li>
+                {%- endif -%}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </details>
+</header-drawer>

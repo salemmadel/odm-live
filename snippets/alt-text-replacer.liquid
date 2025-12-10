@@ -1,0 +1,15 @@
+{%- comment -%}
+  Find and replace forbidden phrases within image alt text, e.g. for
+  accessibility
+
+  Usage:
+  - {%- render "alt-text-replacer", alt_text: image.alt -%}
+  
+{%- endcomment -%}
+{%- liquid
+  assign excluded_alt_phrases = "Model:Male,Model:male,Model:Female:Model:female,model:male,model:female,size_shown:S,size_shown:L,size_shown:M,size_shown:XS,size_shown:4XL,size_shown:3XL,size_shown:XL,size_shown:XXL" | split: ","
+  for excluded_alt_phrase in excluded_alt_phrases
+    assign alt_text = alt_text | replace: excluded_alt_phrase
+  endfor
+-%}
+{{ alt_text }}

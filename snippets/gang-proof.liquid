@@ -1,0 +1,12 @@
+{% comment %} Renders the number of proof that can be collected for buying a product Accepts: - proof: {String} The
+number of proof (required) Usage: {% render 'gang-proof', proof: '***' %} {% endcomment %}
+
+<a href="/pages/gang" class="link--nostyle button--full-width">
+  <div class="gang__proof">
+    {{ 'Icon_Gang_Proof.png' | file_img_url: '100x' | img_tag: '','gang__proof__img','100x' }}
+    <p>
+      {{ 'gang.amount_of_points_html' | t: proof: proof }}
+    </p>
+  </div>
+</a>
+  

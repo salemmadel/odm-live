@@ -1,0 +1,627 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+  <head>{% render 'pagefly-head' %}
+
+  {%- if settings.klar_tag != blank -%}
+    <!-- Klar Integration --> 
+    <script>
+      (function () {
+        var a = document.createElement('script');
+        (a.type = 'text/javascript'),
+          (a.async = !0),
+          (a.src = '{{ settings.klar_tag }}'),
+          document.getElementsByTagName('script')[0].appendChild(a);
+      })();
+    </script>
+  <!-- End of Klar Integration -->
+  {%- endif -%}
+
+  {%- if settings.omniconvert_id != blank -%}
+    <!-- Omniconvert Integration --> 
+    <!-- start Omniconvert.com code -->
+    <link rel="dns-prefetch" href="//app.omniconvert.com" />
+    <script type="text/javascript">window._mktz=window._mktz||[];</script>
+    <script src="//cdn.omniconvert.com/js/{{ settings.omniconvert_id }}.js"></script>
+    <!-- end Omniconvert.com code -->
+  <!-- End of Omniconvert Integration -->
+  {%- endif -%}
+
+
+  {%- comment -%}
+    Ensure the global Shopify / Stencil objects are always on the window
+  {%- endcomment -%}
+  <script>
+    window.Shopify = window.Shopify || {};
+    window.Stencil = window.Stencil || {};
+    
+    window.Stencil.PreInitCallbacks = [];
+    window.Stencil.PostInitCallbacks = [];
+    window.Stencil.hasLoaded = false;
+  </script> 
+
+  {%- comment -%}
+    Keyhole inject Stencil
+  {%- endcomment -%}
+  <script src="{{ 'stencil-theme.js' | asset_url }}" defer="defer"></script>
+  {{ 'stencil-theme.css' | asset_url | stylesheet_tag }}
+
+  <script src="{{ 'lazysizes.js' | asset_url }}" ></script>
+    {%- if settings.cookiebot != blank -%}
+            <!-- CookieBot Installation -->
+            <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="{{ settings.cookiebot }}" data-blockingmode="auto" type="text/javascript"></script>
+            <!-- End CookieBot Installation -->
+
+            <script>
+              window.Shopify.loadFeatures(
+                      [{
+                              name: "consent-tracking-api",
+                              version: "0.1",
+                      }, ],
+                      function(error) {
+                              if (error) throw error;
+                              if ("Cookiebot" in window)
+                                      if (Cookiebot.consented || Cookiebot.declined) {
+                                              window.Shopify.customerPrivacy.setTrackingConsent(!Cookiebot.declined, feedback);
+                                              return;
+                                      }
+                              window.Shopify.customerPrivacy.setTrackingConsent(false, feedback);
+                      }
+              );
+              
+              function feedback() {
+                      const p = window.Shopify.customerPrivacy;
+                      console.log(`Tracking ${p.userCanBeTracked() ? "en" : "dis"}abled`);
+              }
+              
+              window.checkifloaded = function(condition_str, func_str, cyclelimit, maxwaitlimit, slot) {
+              
+                      var loaded = false;
+              
+                      if (typeof(window.checker_slot) == "undefined") {
+                              window.checker_slot = [];
+                      };
+              
+                      var slotarray = window.checker_slot;
+              
+                      if (typeof(slot) !== "number") {
+                              slot = slotarray.length;
+                              slotarray[slotarray.length] = 0;
+                      };
+              
+                      var cyclebeklemeayari = cyclelimit || 500;
+                      var maxbeklemeayari = maxwaitlimit || 50;
+              
+                      setTimeout(function() {
+                              if (eval(condition_str) === false && slotarray[slot] < (maxbeklemeayari * 1000 / cyclebeklemeayari) && loaded === false) {
+                                      window.console.log("Condition was not met yet. Current value: " + condition_str + " -> " + eval(condition_str));
+                                      slotarray[slot]++;
+                                      window.checkifloaded(condition_str, func_str, cyclebeklemeayari, maxbeklemeayari, slot);
+              
+                              } else {
+                                      if (slotarray[slot] >= (maxbeklemeayari * 1000 / cyclebeklemeayari)) {
+                                              window.console.log("Time is up, condition was not met. Condition: " + condition_str);
+              
+                                      } else {
+              
+                                              window.console.log("Condition met on  " + ((slotarray[slot] + 1) * 50 / 1000) + " seconds. Condition: " + condition_str);
+                                              loaded = true;
+                                              func_str();
+                                      }
+                              }
+                      }, cyclebeklemeayari);
+              };
+              
+              window.checkifloaded('window.hasOwnProperty("Shopify") == true', function() {
+              
+                      window.checkifloaded('window.Shopify.hasOwnProperty("customerPrivacy") == true', function() {
+              
+                              window.checkifloaded('window.Shopify.customerPrivacy.hasOwnProperty("setTrackingConsent") == true', function() {
+              
+                                      console.log("Fonkisyon Çalıştı");;
+              
+                                      window.addEventListener("CookiebotOnConsentReady", function() {
+                                              window.Shopify.customerPrivacy.setTrackingConsent(!Cookiebot.declined, feedback);
+                                      });
+              
+                              });
+              
+                      });
+              
+              })</script>
+          {%- endif -%}
+
+         
+      
+      
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+
+    <link rel="stylesheet"data- href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0"></script>
+    <script
+      type="text/javascript"
+      async
+      data-src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id={{ settings.klaviyo_id }}"
+    ></script>
+
+    {%- if settings.favicon != blank -%}
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+    {%- endif -%}
+    {%- comment -%}
+      Noindex for some pages
+    {%- endcomment -%}
+    {% if page and page.metafields.head.noindex > 0 or product and product.metafields.head.noindex > 0 or blog and blog.metafields.head.noindex > 0  %}
+      <meta name="robots" content="noindex">
+    {% endif %}
+
+    {%- comment -%}
+      Block hreflang for some pages
+    {%- endcomment -%}
+    {% unless page.metafields.head.nohreflang > 0 %}
+      {% unless request.locale.iso_code == "de" %}
+        <link rel="alternate" hreflang="de" href="http://odonnell.de{{ page.url }}" />
+      {% endunless %}
+      {% unless request.locale.iso_code == "at" %}
+        <link rel="alternate" hreflang="de_AT" href="https://odonnell.at{{ page.url }}" />
+      {% endunless %}
+      {% unless request.locale.iso_code == "uk" %}
+        <link rel="alternate" hreflang="en" href="https://odonnellmoonshine.co.uk{{ page.url }}" />
+      {% endunless %}
+      {% unless request.locale.iso_code == "nl" %}
+        <link rel="alternate" hreflang="nl" href="https://odonnell.nl{{ page.url }}" />
+      {% endunless %}
+    {% endunless %}
+
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    {% render 'meta-tags' %}
+    <script src="{{ 'runtime.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'common.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>                                                                                                                                                                               
+    {% render 'vital-loader' %} 
+
+
+    
+
+
+
+{{ content_for_header }}
+
+    {% style %}
+
+      {% render 'font-faces' %}
+      :root {
+        --font-body-family: "GT Pressura";
+        --font-body-style: "normal";
+        --font-body-weight: "400";
+        --font-body-weight-bold: "700";
+
+        --font-heading-family: "GT Pressura Mono";
+        --font-heading-style: "normal";
+        --font-heading-weight: "700";
+
+        --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
+        --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
+
+        --color-base-text: {{ settings.colors_text.red }}, {{ settings.colors_text.green }}, {{ settings.colors_text.blue }};
+        --color-shadow: {{ settings.colors_text.red }}, {{ settings.colors_text.green }}, {{ settings.colors_text.blue }};
+        --color-base-background-1: {{ settings.colors_background_1.red }}, {{ settings.colors_background_1.green }}, {{ settings.colors_background_1.blue }};
+        --color-base-background-2: {{ settings.colors_background_2.red }}, {{ settings.colors_background_2.green }}, {{ settings.colors_background_2.blue }};
+        --color-base-solid-button-labels: {{ settings.colors_solid_button_labels.red }}, {{ settings.colors_solid_button_labels.green }}, {{ settings.colors_solid_button_labels.blue }};
+        --color-base-outline-button-labels: {{ settings.colors_outline_button_labels.red }}, {{ settings.colors_outline_button_labels.green }}, {{ settings.colors_outline_button_labels.blue }};
+        --color-base-accent-1: {{ settings.colors_accent_1.red }}, {{ settings.colors_accent_1.green }}, {{ settings.colors_accent_1.blue }};
+        --color-base-accent-2: {{ settings.colors_accent_2.red }}, {{ settings.colors_accent_2.green }}, {{ settings.colors_accent_2.blue }};
+        --color-base-accent-red: {{ settings.color_red.red }}, {{ settings.color_red.green }}, {{ settings.color_green.blue }};
+        --color-base-accent-green: {{ settings.color_green.red }}, {{ settings.color_green.green }}, {{ settings.color_green.blue }};
+        --color-base-accent-deal: {{ settings.color_deal.red }}, {{ settings.color_deal.green }}, {{ settings.color_deal.blue }};
+        --payment-terms-background-color: {{ settings.colors_background_1 }};
+
+        --gradient-base-background-1: {% if settings.gradient_background_1 != blank %}{{ settings.gradient_background_1 }}{% else %}{{ settings.colors_background_1 }}{% endif %};
+        --gradient-base-background-2: {% if settings.gradient_background_2 != blank %}{{ settings.gradient_background_2 }}{% else %}{{ settings.colors_background_2 }}{% endif %};
+        --gradient-base-accent-1: {% if settings.gradient_accent_1 != blank %}{{ settings.gradient_accent_1 }}{% else %}{{ settings.colors_accent_1 }}{% endif %};
+        --gradient-base-accent-2: {% if settings.gradient_accent_2 != blank %}{{ settings.gradient_accent_2 }}{% else %}{{ settings.colors_accent_2 }}{% endif %};
+        --gradient-base-accent-green: {% if settings.gradient_accent_green != blank %}{{ settings.gradient_accent_green }}{% else %}{{ settings.colors_accent_green }}{% endif %};
+        --gradient-base-accent-red: {% if settings.gradient_accent_red != blank %}{{ settings.gradient_accent_red }}{% else %}{{ settings.colors_accent_red }}{% endif %};
+        --gradient-base-accent-deal: {% if settings.gradient_accent_deal != blank %}{{ settings.gradient_accent_deal }}{% else %}{{ settings.colors_accent_deal }}{% endif %};
+
+        --media-padding: {{ settings.media_padding }}px;
+        --media-border-opacity: {{ settings.media_border_opacity | divided_by: 100.0 }};
+        --media-border-width: {{ settings.media_border_thickness }}px;
+        --media-radius: {{ settings.media_radius }}px;
+        --media-shadow-opacity: {{ settings.media_shadow_opacity | divided_by: 100.0 }};
+        --media-shadow-horizontal-offset: {{ settings.media_shadow_horizontal_offset }}px;
+        --media-shadow-vertical-offset: {{ settings.media_shadow_vertical_offset }}px;
+        --media-shadow-blur-radius: {{ settings.media_shadow_blur }}px;
+
+        --page-width: {{ settings.page_width | divided_by: 10 }}rem;
+        --page-width-margin: {% if settings.page_width == '1600' %}2{% else %}0{% endif %}rem;
+
+        --card-image-padding: {{ settings.card_image_padding | divided_by: 10.0 }}rem;
+        --card-corner-radius: {{ settings.card_corner_radius | divided_by: 10.0 }}rem;
+        --card-text-alignment: {{ settings.card_text_alignment }};
+        --card-border-width: {{ settings.card_border_thickness | divided_by: 10.0 }}rem;
+        --card-border-opacity: {{ settings.card_border_opacity | divided_by: 100.0 }};
+        --card-shadow-opacity: {{ settings.card_shadow_opacity | divided_by: 100.0 }};
+        --card-shadow-horizontal-offset: {{ settings.card_shadow_horizontal_offset | divided_by: 10.0 }}rem;
+        --card-shadow-vertical-offset: {{ settings.card_shadow_vertical_offset | divided_by: 10.0 }}rem;
+        --card-shadow-blur-radius: {{ settings.card_shadow_blur | divided_by: 10.0 }}rem;
+
+        --badge-corner-radius: {{ settings.badge_corner_radius | divided_by: 10.0 }}rem;
+
+        --popup-border-width: {{ settings.popup_border_thickness }}px;
+        --popup-border-opacity: {{ settings.popup_border_opacity | divided_by: 100.0 }};
+        --popup-corner-radius: {{ settings.popup_corner_radius }}px;
+        --popup-shadow-opacity: {{ settings.popup_shadow_opacity | divided_by: 100.0 }};
+        --popup-shadow-horizontal-offset: {{ settings.popup_shadow_horizontal_offset }}px;
+        --popup-shadow-vertical-offset: {{ settings.popup_shadow_vertical_offset }}px;
+        --popup-shadow-blur-radius: {{ settings.popup_shadow_blur }}px;
+
+        --drawer-border-width: {{ settings.drawer_border_thickness }}px;
+        --drawer-border-opacity: {{ settings.drawer_border_opacity | divided_by: 100.0 }};
+        --drawer-shadow-opacity: {{ settings.drawer_shadow_opacity | divided_by: 100.0 }};
+        --drawer-shadow-horizontal-offset: {{ settings.drawer_shadow_horizontal_offset }}px;
+        --drawer-shadow-vertical-offset: {{ settings.drawer_shadow_vertical_offset }}px;
+        --drawer-shadow-blur-radius: {{ settings.drawer_shadow_blur }}px;
+
+        --spacing-sections-desktop: {{ settings.spacing_sections }}px;
+        --spacing-sections-mobile: {% if settings.spacing_sections < 24 %}{{ settings.spacing_sections }}{% else %}{{ settings.spacing_sections | times: 0.7 | round | at_least: 20 }}{% endif %}px;
+
+        --grid-desktop-vertical-spacing: {{ settings.spacing_grid_vertical }}px;
+        --grid-desktop-horizontal-spacing: {{ settings.spacing_grid_horizontal }}px;
+        --grid-mobile-vertical-spacing: {{ settings.spacing_grid_vertical | divided_by: 2 }}px;
+        --grid-mobile-horizontal-spacing: {{ settings.spacing_grid_horizontal | divided_by: 2 }}px;
+
+        --text-boxes-border-opacity: {{ settings.text_boxes_border_opacity | divided_by: 100.0 }};
+        --text-boxes-border-width: {{ settings.text_boxes_border_thickness }}px;
+        --text-boxes-radius: {{ settings.text_boxes_radius }}px;
+        --text-boxes-shadow-opacity: {{ settings.text_boxes_shadow_opacity | divided_by: 100.0 }};
+        --text-boxes-shadow-horizontal-offset: {{ settings.text_boxes_shadow_horizontal_offset }}px;
+        --text-boxes-shadow-vertical-offset: {{ settings.text_boxes_shadow_vertical_offset }}px;
+        --text-boxes-shadow-blur-radius: {{ settings.text_boxes_shadow_blur }}px;
+
+        --buttons-radius: {{ settings.buttons_radius }}px;
+        --buttons-radius-outset: {% if settings.buttons_radius > 0 %}{{ settings.buttons_radius | plus: settings.buttons_border_thickness }}{% else %}0{% endif %}px;
+        --buttons-border-width: {% if settings.buttons_border_opacity > 0 %}{{ settings.buttons_border_thickness }}{% else %}0{% endif %}px;
+        --buttons-border-opacity: {{ settings.buttons_border_opacity | divided_by: 100.0 }};
+        --buttons-shadow-opacity: {{ settings.buttons_shadow_opacity | divided_by: 100.0 }};
+        --buttons-shadow-horizontal-offset: {{ settings.buttons_shadow_horizontal_offset }}px;
+        --buttons-shadow-vertical-offset: {{ settings.buttons_shadow_vertical_offset }}px;
+        --buttons-shadow-blur-radius: {{ settings.buttons_shadow_blur }}px;
+        --buttons-border-offset: {% if settings.buttons_radius > 0 or settings.buttons_shadow_opacity > 0 %}0.3{% else %}0{% endif %}px;
+
+        --inputs-radius: {{ settings.inputs_radius }}px;
+        --inputs-border-width: {{ settings.inputs_border_thickness }}px;
+        --inputs-border-opacity: {{ settings.inputs_border_opacity | divided_by: 100.0 }};
+        --inputs-shadow-opacity: {{ settings.inputs_shadow_opacity | divided_by: 100.0 }};
+        --inputs-shadow-horizontal-offset: {{ settings.inputs_shadow_horizontal_offset }}px;
+        --inputs-margin-offset: {% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_opacity > 0 %}{{ settings.inputs_shadow_vertical_offset | abs }}{% else %}0{% endif %}px;
+        --inputs-shadow-vertical-offset: {{ settings.inputs_shadow_vertical_offset }}px;
+        --inputs-shadow-blur-radius: {{ settings.inputs_shadow_blur }}px;
+        --inputs-radius-outset: {% if settings.inputs_radius > 0 %}{{ settings.inputs_radius | plus: settings.inputs_border_thickness }}{% else %}0{% endif %}px;
+
+        --variant-pills-radius: {{ settings.variant_pills_radius }}px;
+        --variant-pills-border-width: {{ settings.variant_pills_border_thickness }}px;
+        --variant-pills-border-opacity: {{ settings.variant_pills_border_opacity | divided_by: 100.0 }};
+        --variant-pills-shadow-opacity: {{ settings.variant_pills_shadow_opacity | divided_by: 100.0 }};
+        --variant-pills-shadow-horizontal-offset: {{ settings.variant_pills_shadow_horizontal_offset }}px;
+        --variant-pills-shadow-vertical-offset: {{ settings.variant_pills_shadow_vertical_offset }}px;
+        --variant-pills-shadow-blur-radius: {{ settings.variant_pills_shadow_blur }}px;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+
+      html {
+        box-sizing: border-box;
+        font-size: calc(var(--font-body-scale) * 62.5%);
+        height: 100%;
+      }
+
+      body {
+        display: grid;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-columns: 100%;
+        min-height: 100%;
+        margin: 0;
+        font-size: 1.5rem;
+        letter-spacing: 0.06rem;
+        line-height: calc(1 + 0.8 / var(--font-body-scale));
+        font-family: var(--font-body-family);
+        font-style: var(--font-body-style);
+        font-weight: var(--font-body-weight);
+      }
+
+      @media screen and (min-width: 750px) {
+        body {
+          font-size: 1.6rem;
+        }
+      }
+    {% endstyle %}
+
+    {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
+
+    {%- if settings.predictive_search_enabled -%}
+      <link
+        rel="stylesheet"
+        href="{{ 'component-predictive-search.css' | asset_url }}"
+        media="print"
+        onload="this.media='all'"
+      >
+    {%- endif -%}
+
+    {%- render "shopify-analytics-helper" -%}
+
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+
+      if (Shopify.designMode) {
+        document.documentElement.classList.add('shopify-design-mode');
+      }
+    </script>
+    {% include 'analyzify-gtm-body' %}
+
+    {{ settings.yotpo_scripts | replace: ' src=', ' data-src='  }}
+
+    {%- if settings.clarity_tag != blank -%}
+      <!-- Clarity Integration --> 
+      <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "{{settings.clarity_tag}}");
+      </script>
+     <!-- End of Clarity Integration -->
+    {%- endif -%}
+  </head>
+
+  {%- capture content_for_layout_capture -%}
+    {{ content_for_layout }}
+  {%- endcapture -%}
+  <body x onload="document.body.dataset.loaded = true;" 
+    class="gradient layout-theme template-{{ template.name | handle }} template-suffix-{{ template.suffix | handle }}"
+    data-storefront-api-key="{{ settings.stencil_assistant_storefront_api_key }}"
+    data-gtm-id="{{ settings.google_tag }}"
+    {% if request.design_mode %} data-design-mode="true" {% endif %}>
+    <a class="skip-to-content-link button visually-hidden" href="#MainContent">
+      {{ 'accessibility.skip_to_text' | t }}
+    </a>
+
+    {%- sections 'header-group' -%}
+
+    {% section 'newsletter-popup' %}
+
+    {%- render 'stencil-proposition-definitions' -%}
+
+    {%- comment -%}
+      Action Popup
+      {% section 'action-popup' %}
+    {%- endcomment -%}  
+
+    {%- comment -%}
+      Action Popup
+      {% section 'action-popup' %}
+    {%- endcomment -%}
+    
+    {%- comment -%}
+    Geo Redirect Banner
+    {%- endcomment -%}
+    {%- assign country_code = shop.permanent_domain | split: "." | first | split: "-" | last | upcase -%}
+
+    {%- if settings.show_redirection_banner -%}
+
+      {% render 'geo-redirect-banner', country_code: country_code%}
+    
+    {%- endif -%}
+
+    {%- unless template contains 'cart' -%}
+      {% section 'cart-notification' %}
+    {%- endunless -%}
+
+      {% section 'announcement-bar' %}
+      {% section 'header' %}
+      {% section 'usps' %}
+    
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      {{ content_for_layout_capture }}
+    </main>
+
+    {%- assign content_for_layout_capture_strip_newlines = content_for_layout_capture | strip_newlines | json -%}
+
+    {%- unless content_for_layout_capture_strip_newlines contains 'section-footer.css' -%}
+      {% section 'footer' %}
+    {%- endunless -%}
+
+    <ul hidden>
+      <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
+    </ul>
+
+    <script>
+      window.shopUrl = '{{ request.origin }}';
+      window.routes = {
+        cart_url: '{{ routes.cart_url }}',
+        cart_add_url: '{{ routes.cart_add_url }}',
+        cart_change_url: '{{ routes.cart_change_url }}',
+        cart_update_url: '{{ routes.cart_update_url }}',
+        predictive_search_url: '{{ routes.predictive_search_url }}',
+        cartUrl: '{{ routes.cart_url }}',
+      };
+
+      window.cartStrings = {
+        error: `{{ 'sections.cart.cart_error' | t }}`,
+        quantityError: `{{ 'sections.cart.cart_quantity_error_html' | t: quantity: '[quantity]' }}`,
+      };
+
+      window.variantStrings = {
+        addToCart: `{{ 'products.product.add_to_cart' | t }}`,
+        soldOut: `{{ 'products.product.sold_out' | t }}`,
+        unavailable: `{{ 'products.product.unavailable' | t }}`,
+      };
+
+      window.accessibilityStrings = {
+        imageAvailable: `{{ 'products.product.media.image_available' | t: index: '[index]' }}`,
+        shareSuccess: `{{ 'general.share.success_message' | t }}`,
+        pauseSlideshow: `{{ 'sections.slideshow.pause_slideshow' | t }}`,
+        playSlideshow: `{{ 'sections.slideshow.play_slideshow' | t }}`,
+      };
+
+      window.theme = {
+        moneyFormat: '{{ shop.money_format }}',
+        moneyWithCurrencyFormat: '{{ shop.money_with_currency_format }}',
+      }
+    </script>
+    {%- if settings.predictive_search_enabled -%}
+      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
+
+    {% section 'app-optimization' %}
+{{ 'custom.min.js' | asset_url | script_tag }}    <!-- PickyStory code, do not modify. Safe to remove after the app is uninstalled -->
+  {% if content_for_header contains 'pickystory' %}
+    {% render 'pickystory-combos-prerender' %}
+  {% endif %}
+  <!-- PickyStory code end -->
+  <!-- PickyStory snippet "main_widget_script", do not modify. Safe to remove after the app is uninstalled -->
+  {% if content_for_header contains 'pickystory' %}
+    <script defer src="https://cdn.pickystory.com/widget/dist/latest/pickystory-widget.min.js"></script>
+  {% endif %}
+  <!-- PickyStory end snippet "main_widget_script" -->
+    
+    {%- if settings.klaviyo_bis_enabled -%}
+      {%- render 'klaviyo-back-in-stock' -%}
+    {%- endif -%}
+
+    {%- if settings.enable_wishlist -%}
+      {%- if settings.wishlist_exclude != blank -%}
+        <script>
+        try {
+          window.fetch = new Proxy(window.fetch, {
+            apply(fetch, that, args) {
+              let result = fetch.apply(that, args);
+              return result.then((response) => {
+                if (args[0].search && args[0].search(/apps-wishlist/) >= 0) {
+                  var intervalVar = setInterval(function() {
+                    if (document.querySelector('.wishlist-cart')) {
+                      [{{settings.wishlist_exclude}}].forEach(function(object) {
+                        document.querySelector('.wishlist-cart[data-product_id="' + object + '"]')?.remove()
+                      })
+                      clearInterval(intervalVar);
+                    }
+                  }, 50);
+                }
+              }), result
+            }
+          });
+        } catch (A) {
+          console.log(A), console.log("error catching cart fetch")
+        }
+      </script>
+    {%- endif -%}
+    <script>
+     function createAndDispatchCustomEvent (eventName, bubbles) {
+      const event = new Event(eventName, { bubbles })
+      document.dispatchEvent(event)
+    }
+        
+    function getSectionInnerHTML (html, selector) {
+        return new DOMParser()
+          .parseFromString(html, 'text/html')
+          .querySelector(selector)?.innerHTML
+    }
+    window.wishlistEngineCallback = async function(cartChangeState){
+      await fetch(`${window.routes.cartUrl}` + '?sections=main-cart-items')
+        .then(response => response.json())
+        .then((response) => {
+          const parsedState = cartChangeState;
+          if (!parsedState) return
+
+          const cartNotification = document.querySelector('cart-notification')
+
+          if (cartNotification) {
+            const res = response['main-cart-items']
+            if (!res) return
+
+            const parsedReponse = new DOMParser().parseFromString(res, 'text/html').body.querySelector('[id=main-cart-items]')
+            const productsContainer = cartNotification.querySelector('.cart-notification-products')
+
+            if (productsContainer) {
+              productsContainer.innerHTML = ''
+              productsContainer.appendChild(parsedReponse)
+            }
+
+            if (document.querySelector('#drawer_cart_item_count')) {
+              if (!parsedState.item_count) {
+                const itemCount = new DOMParser().parseFromString(parsedState.sections['cart-notification'], 'text/html').querySelector('#drawer_cart_item_count').innerHTML
+                document.querySelector('#drawer_cart_item_count').innerHTML = itemCount
+              } else {
+                document.querySelector('#drawer_cart_item_count').innerHTML = parsedState.item_count
+              }
+            }
+
+            if (!document.querySelector('#cart-notification').classList.contains('active')) {
+              createAndDispatchCustomEvent('drawer:open', true)
+            }
+
+            createAndDispatchCustomEvent('addToCart:finished', true)
+          } 
+             ([
+                {
+                    "id": "cart-icon-bubble",
+                    "section": "cart-icon-bubble",
+                    "selector": ".shopify-section"
+                },
+                {
+                    "id": "cart-notification",
+                    "section": "cart-notification",
+                    "selector": ".cart-notification__links"
+                },
+                {
+                    "id": "cart-notification",
+                    "section": "cart-notification",
+                    "selector": ".js-contents"
+                },
+                {
+                    "id": "cart-notification",
+                    "section": "cart-notification",
+                    "selector": ".free-products"
+                }
+            ]).map(section => {
+                          const elementToReplace = document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id)
+                          const replacement = getSectionInnerHTML(parsedState.sections[section.section], section.selector);
+                          if(replacement){
+                            const replace = elementToReplace.innerHTML = replacement
+                            return replace
+                          }
+                        })
+          
+
+        
+
+         })
+        .catch((e) => {
+          console.error(e)
+        })
+    }
+  </script>
+  {%- endif -%}
+  
+  </body>
+</html>

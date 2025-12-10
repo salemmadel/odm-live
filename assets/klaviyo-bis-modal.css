@@ -1,0 +1,15 @@
+@import url('https://use.typekit.net/lfz1acb.css');
+
+#klaviyo-bis-modal .modal-title {
+  text-align: center;
+  font-size: 3rem;
+}
+#klaviyo-bis-modal p {
+  margin: 10px 0
+}
+#klaviyo-bis-modal p, #klaviyo-bis-modal button {
+  font-size: 1.8rem;
+}
+#klaviyo-bis-modal select, #klaviyo-bis-modal input {
+  font-size: 1.3rem;
+}

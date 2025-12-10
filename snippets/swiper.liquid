@@ -1,0 +1,79 @@
+{%- comment -%}
+  Renders a simple Swiper carousel of items array
+
+  Accepts:
+  - items: {Array[items]}
+  - lazyload: {Boolean}
+  - slide_class: {String}
+  - gutter_class: {String}
+{%- endcomment -%}
+
+<script>
+  (() => {
+    let options = {
+      threshold: 20,
+      {%- if navigation_enabled %}
+        autoplay: {
+          delay: {{ interval}},
+        },
+      {%- endif -%}
+      loop: true,
+      centeredSlides: true,
+      {%- if navigation_enabled %}
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      {%- endif -%}
+    };
+    swiper.slideToLoop(1, 0);
+
+    customElements.whenDefined("swiper-slider").then(() => {
+      {%- comment -%}
+        Swiper needs to know how many 'slidesPerView', but all we have is the
+        'col-' classes passed from the section settings. Convert to appropriate
+        number of items per row for each breakpoint.
+      {%- endcomment -%}
+      options.breakpoints = Stencil.getSwiperBreakpointsByBSColClass({{ slide_class | json }});
+      {%- comment -%}
+        If the gutter class is set, convert the rem value to pixels and set the
+        'spaceBetween' option.
+      {%- endcomment -%}
+      options.spaceBetween = Stencil.remToPx(Stencil.getStencilVariable({{ gutter_class | json }}));
+      document.querySelector("#swiper-slider-{{ section.id }}-{{ id }}").options = options;
+    });
+
+    document.currentScript?.remove();
+  })();
+</script>
+
+<div>
+  <swiper-slider id="swiper-slider-{{ section.id }}-{{ id }}">
+    <div id="swiper-{{ section.id }}-{{ id }}" class="swiper swiper-match-height overflow-visible">
+      <div class="swiper-wrapper g-3">
+        {%- for item in items -%}
+          <div class="swiper-slide {{ slide_class }}">
+            {{ item }}
+          </div>
+        {%- endfor -%}
+        {%- if loop -%} {% comment %} Swiper 9 and up needs double the number of slides to loop... {% endcomment %}
+          {%- for item in items -%}
+            <div class="swiper-slide {{ slide_class }}">
+              {{ item }}
+            </div>
+          {%- endfor %}
+        {%- endif -%}
+  
+      </div>
+
+      {%- if navigation_enabled -%}
+        <div class="swiper-button-prev {{ section.settings.arrows_style }}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d="M18.3 250.3c-3.1 3.1-3.1 8.2 0 11.3l216 216c3.1 3.1 8.2 3.1 11.3 0s3.1-8.2 0-11.3L35.3 256 245.7 45.7c3.1-3.1 3.1-8.2 0-11.3s-8.2-3.1-11.3 0l-216 216z"/></svg>
+        </div>
+        <div class="swiper-button-next {{ section.settings.arrows_style }}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d="M301.7 250.3c3.1 3.1 3.1 8.2 0 11.3l-216 216c-3.1 3.1-8.2 3.1-11.3 0s-3.1-8.2 0-11.3L284.7 256 74.3 45.7c-3.1-3.1-3.1-8.2 0-11.3s8.2-3.1 11.3 0l216 216z"/></svg>
+        </div>
+      {%- endif -%}
+    </div>
+  </swiper-slider>
+</div>

@@ -1,0 +1,78 @@
+.ss-announcement-bar,
+.ss-announcement-bar__message {
+  overflow: hidden;
+}
+
+.ss-announcement-bar__link {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  line-height: 0;
+}
+
+#marq {
+  width: 100%;
+  border: inset;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: unset;
+  border: 0;
+  box-shadow: unset;
+  border-color: currentcolor;
+  vertical-align: middle;
+}
+
+.ss-announcement-bar__message {
+  font-family: var(--font-body-family);
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+.ss-announcement-bar__message li {
+  font-family: var(--font-body-family);
+}
+
+#orig.reverse .announcement-bar__message {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.ss-announcement-bar__message li {
+  line-height: 1;
+  display: inline-block;
+  padding-right: 114px;
+  position: relative;
+}
+
+.ss-announcement-bar__message li::after {
+  content: "";
+  width: 3.5px;
+  height: 3.5px;
+  background-image: none;
+  opacity: 0.3;
+  border-radius: 50%;
+  position: absolute;
+  top: 40%;
+  right: 50px;
+}
+
+#orig.reverse .announcement-bar__message {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 480px) {
+  #marq {
+    max-height: 39px;
+  }
+  .ss-announcement-bar__message li {
+    padding-right: 55px;
+  }
+  .ss-announcement-bar__message li::after {
+    right: 25px;
+  }
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../.src/scss/section-ss-scrolling-announcement-bar.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;AAAA;EAEE;;;AAGF;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAEJ;EACI;EACA;EACA;EACA;EACA;;;AAEJ;EACE;;;AAGF;EACI;EACA;;;AAGJ;EACI;EACA;EACA;EACA;;;AAEJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;;;AAGJ;EACI;IACE;;EAEF;IACE;;EAEF;IACE%22,%22file%22:%22section-ss-scrolling-announcement-bar.css%22%7D */

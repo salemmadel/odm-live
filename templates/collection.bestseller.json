@@ -1,0 +1,149 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "is_above_the_fold": false,
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "rich_text_headline_XbiGgh": {
+      "type": "rich-text-headline",
+      "name": "Rich Text Header",
+      "settings": {
+        "title": "Likör-Bestseller",
+        "subtitle": "Unsere Besten - Liköre, die du haben musst!",
+        "background_color": "#FFFFFF",
+        "text_color": "#000000",
+        "headline_color": "#000000",
+        "border_bottom_color": "#000000",
+        "padding_top": 35,
+        "padding_bottom": 0
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "custom_css": [],
+      "settings": {
+        "is_above_the_fold": true,
+        "products_per_page": 24,
+        "columns_desktop": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "grey_sold_out_products": true,
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "columns_mobile": "2",
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
+    },
+    "5dfbc4a6-5711-4bb2-94a4-274a90f57354": {
+      "type": "rich-text",
+      "blocks": {
+        "template--17963896832268__5dfbc4a6-5711-4bb2-94a4-274a90f57354-16849356873408bd23-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Entdecke mehr",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--17963896832268__5dfbc4a6-5711-4bb2-94a4-274a90f57354-16849356873408bd23-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 28,
+        "padding_bottom": 0
+      }
+    },
+    "fea829bc-5b6b-4ec0-9463-bbdd5cd4b030": {
+      "type": "front-collections",
+      "blocks": {
+        "af4c18cb-2977-4ffe-9cbc-8c2e739dac4c": {
+          "type": "collection",
+          "settings": {
+            "default_collection": true,
+            "collection_title": "ALLE PRODUKTE",
+            "collection": "all",
+            "view_all_button_label": "Alle Produkte Anzeigen"
+          }
+        },
+        "collection_gPjbRF": {
+          "type": "collection",
+          "settings": {
+            "default_collection": false,
+            "collection_title": "ZUBEHÖR",
+            "collection": "zubehoer",
+            "view_all_button_label": "Alle Zubehör Anzeigen"
+          }
+        },
+        "collection_GH7nRW": {
+          "type": "collection",
+          "settings": {
+            "default_collection": false,
+            "collection_title": "ANGEBOTE",
+            "collection": "besondere-angebote",
+            "view_all_button_label": "Alle Angebote Anzeigen"
+          }
+        }
+      },
+      "block_order": [
+        "af4c18cb-2977-4ffe-9cbc-8c2e739dac4c",
+        "collection_gPjbRF",
+        "collection_GH7nRW"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "Entdecke mehr Produkte",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "products_to_show": 12,
+        "columns_desktop": 5,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "rich_text_headline_XbiGgh",
+    "product-grid",
+    "5dfbc4a6-5711-4bb2-94a4-274a90f57354",
+    "fea829bc-5b6b-4ec0-9463-bbdd5cd4b030"
+  ]
+}

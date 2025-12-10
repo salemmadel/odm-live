@@ -1,0 +1,36 @@
+<!-- Yotpo JavaScript V3 -->
+<script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/bQDcQaEKZ14rrLm0C7WKPSJoZ1sP8Q3RirvNnd14?languageCode={{ localization.language.iso_code | escape }}" async></script>
+<!-- END of Yotpo JavaScript V3 -->
+
+<!-- Yotpo Star rating V3 -->
+<div class="yotpo-widget-instance"
+     data-yotpo-instance-id="400763"
+     data-yotpo-product-id="{{ card_product.id }}"
+     data-yotpo-cart-product-id="{{ item.product.id }}"
+     data-yotpo-section-id="{{ template.name }}">
+</div>
+<!-- END of Yotpo Star rating V3 -->
+
+<!-- Yotpo Reviews Widget V3 -->
+<div class="yotpo-widget-instance"
+     data-yotpo-instance-id="400764"
+     data-yotpo-product-id="{{ product.id }}"
+     data-yotpo-name="{{ product.title | escape }}"
+     data-yotpo-url="{{ shop.url }}{{ product.url }}"
+     data-yotpo-image-url="{{ product.featured_image | product_img_url: 'large' | prepend: 'https:' | replace: '?', '%3F' | replace: '&','%26' }}"
+     data-yotpo-price="{{ product.price | money_without_currency }}"
+     data-yotpo-currency="{{ shop.currency }}"
+     data-yotpo-description="{{ product.description | escape }}">
+</div>
+<!-- END of Yotpo Reviews Widget V3 -->
+
+{% schema %}
+{
+  "name": "Yotpo Widgets",
+  "presets": [
+    {
+      "name": "Yotpo Integration"
+    }
+  ]
+}
+{% endschema %}

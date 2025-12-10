@@ -1,0 +1,103 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rich_text_headline_HH9cDY": {
+      "type": "rich-text-headline",
+      "name": "Rich Text Header",
+      "settings": {
+        "title": "Unser O’Donnell Moonshine Zubehör",
+        "subtitle": "Goodies, die deinen Alltag versüßen.",
+        "background_color": "#FFFFFF",
+        "text_color": "#000000",
+        "headline_color": "#000000",
+        "border_bottom_color": "#000000",
+        "padding_top": 35,
+        "padding_bottom": 0
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "is_above_the_fold": false,
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "is_above_the_fold": false,
+        "products_per_page": 24,
+        "columns_desktop": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "grey_sold_out_products": true,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "83362cb0-d967-41b7-a8a8-972688bd20e3": {
+      "type": "collection-buttons",
+      "disabled": true,
+      "settings": {
+        "title": ""
+      }
+    },
+    "featured_collection_JNzgxp": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "Entdecken unsere Bestsellers",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "collection": "featured",
+        "products_to_show": 12,
+        "columns_desktop": 5,
+        "full_width": true,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "view_all_button_label": "",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    }
+  },
+  "order": [
+    "rich_text_headline_HH9cDY",
+    "banner",
+    "product-grid",
+    "83362cb0-d967-41b7-a8a8-972688bd20e3",
+    "featured_collection_JNzgxp"
+  ]
+}

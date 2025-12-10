@@ -1,0 +1,19 @@
+.present-container {
+  width: 26px; /* Adjust size */
+  height: auto;
+  display: inline-block;
+  position: relative;
+  margin-left: 0.5rem;
+}
+
+.present-svg .lid-and-bow {
+  transition: transform 0.3s ease;
+  transform-origin: center bottom; /* Rotate from the bottom */
+}
+
+.header__menu-item:hover .lid-and-bow,
+.menu-drawer__menu-item:hover .lid-and-bow {
+  transform: translateY(-20px) rotate(-10deg); /* Adjust for an opening effect */
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../.src/scss/component-animated-present.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;EACI;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;;;AAGJ;AAAA;EAEI%22,%22file%22:%22component-animated-present.css%22%7D */

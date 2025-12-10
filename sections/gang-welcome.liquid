@@ -1,0 +1,93 @@
+<link rel="stylesheet" href="{{ 'gang.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'gang.css' | asset_url | stylesheet_tag }}</noscript>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section class="section-{{ section.id }}-padding color-background-2 gang__welcome">
+  {% if customer %}
+    <div class="page-width">
+      {% if section.settings.image_gang %}
+        {{ section.settings.image_gang | image_url: width: 1420 | image_tag: class: 'gang__welcome__img', widths: '550, 700, 1000, 1420' }}
+      {% endif %}
+      {% if customer.first_name != blank %}
+        <h1>{{ customer.first_name }}</h1>
+      {% endif %}
+        <span class="gang__welcome__points">{{ 'gang.welcome.status' | t }} <span data-lion-points="approved" id="points"></span> Proof</span>
+
+        <a href="#rewards" id="reward-link" class="btn btn-outline">{{ 'gang.welcome.rewards' | t }}</a>
+        <a href="/collections/gang" class="btn btn-outline">{{ 'gang.welcome.products' | t }}</a>
+      
+    </div>
+  {% else %}
+    <div class="page-width">
+      {% if section.settings.image_all %}
+        {{ section.settings.image_all | image_url: width: 1420 | image_tag: class: 'gang__welcome__img', widths: '550, 700, 1000, 1420' }}     
+      {% endif %}
+      <div class="gang__welcome__buttons">
+        <a href="/account/register" class="btn btn-outline text-center">{{ 'gang.welcome.register' | t }}</a>
+        <a href="/account/login" class="btn btn-outline text-center">{{ 'gang.welcome.login' | t }}</a>
+      </div>
+    </div>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Gang Welcome",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "image_picker",
+      "id": "image_gang",
+      "label": "t:sections.all.image.gang"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_all",
+      "label": "t:sections.all.image.all"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gang Welcome"
+    }
+  ]
+}
+{% endschema %}

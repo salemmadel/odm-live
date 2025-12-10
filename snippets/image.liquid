@@ -1,0 +1,468 @@
+{%- comment -%}
+  Renders an image using <picture> and <source>s, with lazy loading and 
+  retina support.
+
+  Accepts:
+  - id {Number} A random number
+  - dimensions
+  - dimensions_sm
+  - dimensions_md 
+  - dimensions_lg 
+  - dimensions_xl
+  - dimensions_xxl
+  - image {Image|String}
+  - image_sm
+  - image_md
+  - image_lg
+  - image_xl
+  - image_xxl
+  - alt
+  - image_class
+  - wrapper_class
+  - is_asset (default: false)
+  - is_lazy (default: true)
+  - is_cropped (default: false)
+  - is_cover (default: false)
+  - crop_direction (default: 'center')
+  - bubble_dimensions (default: false) - set higher dimensions to that of specified dimensions
+
+  Usage:
+  {%- render 'image', image: product.featured_image -%}
+
+  Notes:
+  When using 'is_cover' the image expects to be contained within a positioned 
+  element that's part of the document flow (i.e. position-relative or similar).
+{%- endcomment -%}
+
+{%- capture newline %}
+{%- endcapture -%}
+
+{%- comment -%}
+  Specify project / Bootstrap specific configuration
+{%- endcomment -%}
+{%- liquid
+  assign debug = true
+  assign breakpoint_widths = "0px,576px,768px,992px,1200px,1400px" | split: ","
+  assign breakpoint_identifiers = "xs,sm,md,lg,xl,xxl" | split: ","
+  assign default_dimensions_numeric_strings = "576,768,992,1200,1400,1600" | split: ","
+
+  comment
+    Account for gutters, containers, etc. when using per_row. Best guess only.
+  endcomment
+  assign buffer = 60
+
+  if cropped_aspect_ratio
+    assign cropped_aspect_ratio = cropped_aspect_ratio | split: ":"
+  else
+    assign cropped_aspect_ratio = "1:1" | split: ":"
+  endif
+
+  comment
+    Generate random ID if not set
+  endcomment
+  unless id
+    comment
+      As of 10/04/23 - added 'random ID' back in, as Shopify reverted their 
+      breaking change, but now also include the image.id as part of the 'unique'
+      string
+    endcomment
+    assign min = 100000
+    assign max = 999999 
+    assign diff = max | minus: min
+    assign id = "now" | date: "%N" | modulo: diff | plus: min
+    assign id = image.id | append: "-" | append: id
+  endunless
+
+  comment
+    Set crop direction if not specified - only applies if is_cropped
+  endcomment
+  unless crop_direction
+    assign crop_direction = "center"
+  endunless
+-%}
+
+{%- comment -%}
+  'per_row' is great for when we're using row-cols-* classes, but sometimes we
+  want it to be driven by a single 'col-' class. Let's convert!
+
+  Note variables passed to this snippet with no defined value come through as 
+  'blank', which insanely is 'truthy'. Need to test!
+{%- endcomment -%}
+{%- if column_span and column_span != blank -%}
+  {%- assign per_row = 12.0 | divided_by: column_span -%}
+  {%- if column_span_sm -%}{%- assign per_row_sm = 12.0 | divided_by: column_span_sm -%}{%- else -%}{%- assign per_row_sm = per_row -%}{%- endif -%}
+  {%- if column_span_md -%}{%- assign per_row_md = 12.0 | divided_by: column_span_md -%}{%- else -%}{%- assign per_row_md = per_row_sm -%}{%- endif -%}
+  {%- if column_span_lg -%}{%- assign per_row_lg = 12.0 | divided_by: column_span_lg -%}{%- else -%}{%- assign per_row_lg = per_row_md -%}{%- endif -%}
+  {%- if column_span_xl -%}{%- assign per_row_xl = 12.0 | divided_by: column_span_xl -%}{%- else -%}{%- assign per_row_xl = per_row_lg -%}{%- endif -%}
+  {%- if column_span_xxl -%}{%- assign per_row_xxl = 12.0 | divided_by: column_span_xxl -%}{%- else -%}{%- assign per_row_xxl = per_row_xl -%}{%- endif -%}
+{%- endif -%}
+
+{%- comment -%}
+  Generate an array of 'per row' figures for each breakpoint - either passed
+  to this snippet, or using a default (which is 1 per row).
+
+  Note variables passed to this snippet with no defined value come through as 
+  'blank', which insanely is 'truthy'. Need to test!
+{%- endcomment -%}
+{%- unless per_row -%}
+  {%- assign per_row = 1 -%}
+{%- endunless -%}
+{%- assign per_row = per_row | sort -%}
+{%- if per_row_sm and per_row_sm != blank -%}{%- assign per_row_sm = per_row_sm | sort -%}{%- else -%}{%- assign per_row_sm = per_row -%}{%- endif -%}
+{%- if per_row_md and per_row_md != blank -%}{%- assign per_row_md = per_row_md | sort -%}{%- else -%}{%- assign per_row_md = per_row_sm -%}{%- endif -%}
+{%- if per_row_lg and per_row_lg != blank -%}{%- assign per_row_lg = per_row_lg | sort -%}{%- else -%}{%- assign per_row_lg = per_row_md -%}{%- endif -%}
+{%- if per_row_xl and per_row_xl != blank -%}{%- assign per_row_xl = per_row_xl | sort -%}{%- else -%}{%- assign per_row_xl = per_row_lg -%}{%- endif -%}
+{%- if per_row_xxl and per_row_xxl != blank -%}{%- assign per_row_xxl = per_row_xxl | sort -%}{%- else -%}{%- assign per_row_xxl = per_row_xl -%}{%- endif -%}
+{%- assign per_rows = per_row | concat: per_row_sm | concat: per_row_md | concat: per_row_lg | concat: per_row_xl | concat: per_row_xxl -%}
+
+{%- comment -%}
+  Generate an array of default dimensions if none provided, based on the per
+  row figures generated above
+{%- endcomment -%}
+{%- assign default_dimensions = "" -%}
+{%- assign default_dimensions_cropped = "" -%}
+{%- assign default_aspect_ratio_multiplier = cropped_aspect_ratio.last | times: 1.0 | divided_by: cropped_aspect_ratio.first -%}
+{%- for default_dimensions_numeric_string in default_dimensions_numeric_strings -%}
+  {%- assign default_dimension_numeric = default_dimensions_numeric_string | minus: buffer | divided_by: per_rows[forloop.index0] | round -%}
+  {%- assign default_dimension_string = default_dimension_numeric | append: "x" -%}
+  {%- assign default_dimensions = default_dimensions | append: default_dimension_string | append: "," -%}
+
+  {%- assign default_dimension_numeric_height_cropped = default_dimension_numeric | times: default_aspect_ratio_multiplier | round -%}
+  {%- assign default_dimension_string_cropped = default_dimension_numeric | append: "x" | append: default_dimension_numeric_height_cropped -%}
+  {%- assign default_dimensions_cropped = default_dimensions_cropped | append: default_dimension_string_cropped | append: "," -%}
+
+  {% comment -%} The dimensions should be set here either based on defaults divided by per_row, or based on what was passed in plus bubble_dimensions {% endcomment %}
+{%- endfor -%}
+{%- assign default_dimensions = default_dimensions | split: "," -%}
+{%- assign default_dimensions_cropped = default_dimensions_cropped | split: "," -%}
+
+{%- comment -%}
+  Assume lazyloading if not specified
+{%- endcomment -%}
+{%- unless is_lazy == false -%}
+  {%- assign is_lazy = true -%}
+{%- endunless -%}
+
+{%- comment -%}
+  Assume not cover if not specified
+{%- endcomment -%}
+{%- unless is_cover == true -%}
+  {%- assign is_cover = false -%}
+{%- endunless -%}
+
+{%- unless alt -%}
+  {%- capture alt -%}
+    {%- render "alt-text-replacer", alt_text: image.alt -%}
+  {%- endcapture -%}
+  {%- assign alt = alt | replace: newline -%}
+{%- endunless -%}
+
+{%- comment -%}
+  TODO: Evaluate / remove!
+{%- endcomment -%}
+{%- if sharpen -%}
+  {%- assign image_class = image_class | append: " opt-contrast" -%}
+{%- endif -%}
+
+{%- comment -%}
+  Determine until what point to bubble images until. Useful for specifying that no
+  sources are required over a given resolution (e.g. for mobile-only sections,
+  we don't need sources for widths over mobile breakpoints).
+
+  In practice, this is used to specify what <source>s aren't necessary. That is,
+  if an image is only shown on mobile, there's no point in outputting sources
+  for resolutions higher than that. So when using this snippet, you could pass
+  "bubble_images_until: 'md'", and the 'image' you pass will bubble to image_sm and
+  then stop (i.e. no image will be specified for image_md, image_lg, etc.)
+{%- endcomment -%}
+{%- liquid
+  assign bubble_images_until_identifier_index = breakpoint_identifiers.size
+  if bubble_images_until
+    for breakpoint_identifier in breakpoint_identifiers
+      if bubble_images_until == breakpoint_identifier
+        assign bubble_images_until_identifier_index = forloop.index0
+        break
+      endif
+    endfor
+  endif
+-%}
+
+{%- comment -%} 
+  Set default dimensions of images at each breakpoint if not specified, for cropped and non-cropped
+{%- endcomment -%}
+{%- if is_cropped -%}
+  {%- unless dimensions -%}
+    {%- assign dimensions = default_dimensions_cropped[0] -%}
+  {%- endunless -%}
+
+  {%- comment -%} Bubble dimensions means the lowest specified dimensions are bubbled up, rather than having to specify all 5 sets of dimensions or using the defaults {%- endcomment -%}
+  {%- unless dimensions_sm -%}{%- if bubble_dimensions -%}{%- assign dimensions_sm = dimensions -%}{%- else -%}{%- assign dimensions_sm = default_dimensions_cropped[1] -%}{%- endif -%}{%- endunless -%}
+  {%- unless dimensions_md -%}{%- if bubble_dimensions -%}{%- assign dimensions_md = dimensions_sm -%}{%- else -%}{%- assign dimensions_md = default_dimensions_cropped[2] -%}{%- endif -%}{%- endunless -%}
+  {%- unless dimensions_lg -%}{%- if bubble_dimensions -%}{%- assign dimensions_lg = dimensions_md -%}{%- else -%}{%- assign dimensions_lg = default_dimensions_cropped[3] -%}{%- endif -%}{%- endunless -%}
+  {%- unless dimensions_xl -%}{%- if bubble_dimensions -%}{%- assign dimensions_xl = dimensions_lg -%}{%- else -%}{%- assign dimensions_xl = default_dimensions_cropped[4] -%}{%- endif -%}{%- endunless -%}
+  {%- unless dimensions_xxl -%}{%- if bubble_dimensions -%}{%- assign dimensions_xxl = dimensions_xl -%}{%- else -%}{%- assign dimensions_xxl = default_dimensions_cropped[5] -%}{%- endif -%}{%- endunless -%}
+
+{%- else -%}
+  {%- unless dimensions -%}
+    {%- assign dimensions = default_dimensions[0] -%}
+  {%- endunless -%}
+  {%- unless dimensions_sm -%}{%- if bubble_dimensions -%}{%- assign dimensions_sm = dimensions -%}{%- else -%}{%- assign dimensions_sm = default_dimensions[1] -%}{%- endif -%}{%- endunless -%}
+  {%- unless dimensions_md -%}{%- if bubble_dimensions -%}{%- assign dimensions_md = dimensions_sm -%}{%- else -%}{%- assign dimensions_md = default_dimensions[2] -%}{%- endif -%}{%- endunless -%}
+  {%- unless dimensions_lg -%}{%- if bubble_dimensions -%}{%- assign dimensions_lg = dimensions_md -%}{%- else -%}{%- assign dimensions_lg = default_dimensions[3] -%}{%- endif -%}{%- endunless -%}
+  {%- unless dimensions_xl -%}{%- if bubble_dimensions -%}{%- assign dimensions_xl = dimensions_lg -%}{%- else -%}{%- assign dimensions_xl = default_dimensions[4] -%}{%- endif -%}{%- endunless -%}
+  {%- unless dimensions_xxl -%}{%- if bubble_dimensions -%}{%- assign dimensions_xxl = dimensions_xl -%}{%- else -%}{%- assign dimensions_xxl = default_dimensions[5] -%}{%- endif -%}{%- endunless -%}
+
+{%- endif -%}
+{%- assign all_dimensions = dimensions | append: "," | append: dimensions_sm | append: "," | append: dimensions_md | append: "," | append: dimensions_lg | append: "," | append: dimensions_xl | append: "," | append: dimensions_xxl | split: "," -%}
+{%- assign dimensions_base = all_dimensions[0] -%}
+
+{%- comment -%}
+  Set images for higher breakpoints if not specified - only 'image' is required
+  'sort' turns a non-array object into an array containing just that object - 
+  see https://heliumdev.com/blog/create-an-array-in-shopifys-liquid.
+
+  If no image is provided for a given argument the value will be 'nil', but we
+  want an actual image. So we pull a deliberately non-existent image from the
+  'images' global object. This will get caught later, and no source will be 
+  output (through the image != empty check).
+{%- endcomment -%}
+{%- liquid
+  assign fake_image_array = images['deliberately-not-a-real-image-brap-brappp.png'] | sort
+  if image == nil
+    assign image = fake_image_array
+  else 
+    assign image = image | sort
+  endif
+-%}
+{%- if image_sm -%}{%- assign image_sm = image_sm | sort -%}{%- elsif bubble_images_until_identifier_index > 1 -%}{%- assign image_sm = image -%}{%- else -%}{%- assign image_sm = fake_image_array -%}{%- endif -%}
+{%- if image_md -%}{%- assign image_md = image_md | sort -%}{%- elsif bubble_images_until_identifier_index > 2 -%}{%- assign image_md = image_sm -%}{%- else -%}{%- assign image_md = fake_image_array -%}{%- endif -%}
+{%- if image_lg -%}{%- assign image_lg = image_lg | sort -%}{%- elsif bubble_images_until_identifier_index > 3 -%}{%- assign image_lg = image_md -%}{%- else -%}{%- assign image_lg = fake_image_array -%}{%- endif -%}
+{%- if image_xl -%}{%- assign image_xl = image_xl | sort -%}{%- elsif bubble_images_until_identifier_index > 4 -%}{%- assign image_xl = image_lg -%}{%- else -%}{%- assign image_xl = fake_image_array -%}{%- endif -%}
+{%- if image_xxl -%}{%- assign image_xxl = image_xxl | sort -%}{%- elsif bubble_images_until_identifier_index > 5 -%}{%- assign image_xxl = image_xl -%}{%- else -%}{%- assign image_xxl = fake_image_array -%}{%- endif -%}
+
+{%- comment -%}
+  Concat images into array of all images, and then take first as the 'base' image
+{%- endcomment -%}
+{%- assign images = image | concat: image_sm | concat: image_md | concat: image_lg | concat: image_xl | concat: image_xxl -%}
+{%- assign image_base = images[0] -%}
+
+{%- comment -%}
+  Get container padding for base image, with no media query
+{%- endcomment -%}
+{%- unless is_cover -%}
+  {%- assign previous_aspect_ratio = false -%}
+  {%- capture custom_style -%}
+    {%- if is_cropped -%}
+      {%- assign parts = all_dimensions[0] | split: "x" -%}
+      {%- assign width_part = parts[0] | plus: 0 -%}
+      {%- assign height_part = parts[1] | plus: 0 -%}
+      {%- assign calculated_aspect_ratio = width_part | times: 1.0 | divided_by: height_part -%}
+      {%- assign previous_aspect_ratio = calculated_aspect_ratio -%}
+
+      #picture-{{ id }} {
+        aspect-ratio: {{ previous_aspect_ratio }};
+      }
+
+    {%- else -%}
+      {%- assign previous_aspect_ratio = image_base.aspect_ratio -%}
+
+      #picture-{{ id }} {
+        aspect-ratio: {{ previous_aspect_ratio }};
+      }
+
+    {%- endif -%}
+  {%- endcapture -%}
+
+  {%- comment -%}
+    Get container padding for other images, with relevant media queries
+  {%- endcomment -%}
+  {%- for image in images offset: 1 -%}
+    {%- assign breakpoint_width = breakpoint_widths[forloop.index] -%}
+    {%- assign responsive_image_padding_at_breakpoint = false -%}
+    {%- if is_cropped -%}
+      {%- assign parts = all_dimensions[forloop.index] | split: "x" -%}
+      {%- assign width_part = parts[0] | plus: 0 -%}
+      {%- assign height_part = parts[1] | plus: 0 -%}
+      {%- assign calculated_aspect_ratio = width_part | times: 1.0 | divided_by: height_part -%}
+      {%- assign current_aspect_ratio = calculated_aspect_ratio -%}
+      {%- if previous_aspect_ratio != current_aspect_ratio -%}
+        {%- capture responsive_image_padding_at_breakpoint -%}
+
+          @media (min-width: {{ breakpoint_width }}) {
+            #picture-{{ id }} {
+              aspect-ratio: {{ current_aspect_ratio }};
+            }
+          }
+
+        {%- endcapture -%}
+      {%- endif -%}
+    {%- else -%}
+      {%- assign current_aspect_ratio = image.aspect_ratio -%}
+      {%- if previous_aspect_ratio != current_aspect_ratio -%}
+        {%- capture responsive_image_padding_at_breakpoint -%}
+
+          @media (min-width: {{ breakpoint_width }}) {
+            #picture-{{ id }} {
+              aspect-ratio: {{ current_aspect_ratio }};
+            }
+          }
+
+        {%- endcapture -%}
+      {%- endif -%}
+    {%- endif -%}
+    {%- assign previous_aspect_ratio = current_aspect_ratio -%}
+    {%- if responsive_image_padding_at_breakpoint -%}
+      {%- assign custom_style = custom_style | append: responsive_image_padding_at_breakpoint -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endunless -%}
+
+{%- comment -%}
+  Generate <source> elements for breakpoints with unique images / dimensions
+{%- endcomment -%}
+{%- assign last_dimensions = all_dimensions.first -%}
+{%- assign sources = "" -%}
+{%- for image in images -%}
+  {%- if forloop.first -%}
+    {%- continue -%}
+  {%- endif -%}
+  {%- assign breakpoint_width = breakpoint_widths[forloop.index0] -%}
+  {%- assign dimensions = all_dimensions[forloop.index0] -%}
+
+  {%- comment -%}
+    Only capture a srcset if the dimensions are new, and the image isn't an
+    EmptyDrop (i.e. the image wasn't provided).
+
+    FIXME: Dimensions may be the same for 2 different images. This will SKIP
+    the other image if the dimensions match - need to check last_source as well
+    as last_dimensions as just becayse there's an image, and its same dims, doesnt
+    mean its the SAME image
+  {%- endcomment -%}
+  {%- if last_dimensions != dimensions and image != empty -%}
+
+    {%- comment -%} Get the srcset string for each source, depending on whether it's cropped, and where the image should come from {%- endcomment -%}
+    {%- if is_cropped -%}
+      {%- if is_asset -%}
+        {%- capture srcset -%}{{ image | asset_img_url: dimensions, crop: crop_direction }} 1x, {{ image | asset_img_url: dimensions, crop: crop_direction, scale: 2 }} 2x{%- endcapture -%}
+      {%- else -%}
+        {%- capture srcset -%}{{ image | img_url: dimensions, crop: crop_direction }} 1x, {{ image | img_url: dimensions, crop: crop_direction, scale: 2 }} 2x{%- endcapture -%}
+      {%- endif -%}
+    {%- else -%}
+      {%- if is_asset -%}
+        {%- capture srcset -%}{{ image | asset_img_url: dimensions }} 1x, {{ image | asset_img_url: dimensions, scale: 2 }} 2x{%- endcapture -%}
+      {%- else -%}
+        {%- capture srcset -%}{{ image | img_url: dimensions }} 1x, {{ image | img_url: dimensions, scale: 2 }} 2x{%- endcapture -%}
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- capture source -%}
+      <source media="(min-width: {{ breakpoint_width }})" srcset="{{ srcset }}">
+    {%- endcapture -%}
+    {%- assign sources = sources | append: source | append: "||||" -%}
+  {%- endif -%}
+  {%- assign last_dimensions = dimensions -%}
+{%- endfor -%}
+{%- assign sources = sources | split: "||||" | reverse -%}
+
+{%- comment -%}
+  Get the srcset & src for the base img element, depending on whether it's 
+  cropped, and where the image should come from.
+
+  Don't generate a src/srcset if the image_base is empty.
+{%- endcomment -%}
+{%- liquid
+  assign src = ""
+  assign srcset = ""
+-%}
+{%- if is_cropped and image_base != empty -%}
+  {%- if is_asset -%}
+    {%- capture src -%}{{ image_base | asset_img_url: dimensions_base, crop: crop_direction }}{%- endcapture -%}
+    {%- capture srcset -%}{{ image_base | asset_img_url: dimensions_base, crop: crop_direction }} 1x, {{ image_base | asset_img_url: dimensions_base, crop: crop_direction, scale: 2 }} 2x{%- endcapture -%}
+  {%- else -%}
+    {%- capture src -%}{{ image_base | img_url: dimensions_base, crop: crop_direction }}{%- endcapture -%}
+    {%- capture srcset -%}{{ image_base | img_url: dimensions_base, crop: crop_direction }} 1x, {{ image_base | img_url: dimensions_base, crop: crop_direction, scale: 2 }} 2x{%- endcapture -%}
+  {%- endif -%}
+{%- elsif image_base != empty -%}
+  {%- if is_asset -%}
+    {%- capture src -%}{{ image_base | asset_img_url: dimensions_base }}{%- endcapture -%}
+    {%- capture srcset -%}{{ image_base | asset_img_url: dimensions_base }} 1x, {{ image_base | asset_img_url: dimensions_base, scale: 2 }} 2x{%- endcapture -%}
+  {%- else -%}
+    {%- capture src -%}{{ image_base | img_url: dimensions_base }}{%- endcapture -%}
+    {%- capture srcset -%}{{ image_base | img_url: dimensions_base }} 1x, {{ image_base | img_url: dimensions_base, scale: 2 }} 2x{%- endcapture -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- comment -%}
+  Handle widths
+{%- endcomment -%}
+{%- if width -%}
+  {%- assign width = width | sort -%}
+{%- else -%}
+  {%- assign width = "100%" | sort -%}
+{%- endif -%}
+
+{%- if width_sm -%}{%- assign width_sm = width_sm | sort -%}{%- else -%}{%- assign width_sm = width -%}{%- endif -%}
+{%- if width_md -%}{%- assign width_md = width_md | sort -%}{%- else -%}{%- assign width_md = width_sm -%}{%- endif -%}
+{%- if width_lg -%}{%- assign width_lg = width_lg | sort -%}{%- else -%}{%- assign width_lg = width_md -%}{%- endif -%}
+{%- if width_xl -%}{%- assign width_xl = width_xl | sort -%}{%- else -%}{%- assign width_xl = width_lg -%}{%- endif -%}
+{%- if width_xxl -%}{%- assign width_xxl = width_xxl | sort -%}{%- else -%}{%- assign width_xxl = width_xl -%}{%- endif -%}
+
+{%- assign widths = width | concat: width_sm | concat: width_md | concat: width_lg | concat: width_xl | concat: width_xxl -%}
+{%- assign width_base = widths[0] -%}
+
+{%- if width_base != "100%" -%}
+  {%- capture custom_width -%}
+    #picture-{{ id }} img {
+      width: {{ width_base }};
+    }
+  {%- endcapture -%}
+  {%- assign custom_style = custom_style | append: custom_width -%}
+{%- endif -%}
+{%- assign last_width = width_base -%}
+
+{%- for width in widths offset: 1 -%}
+  {%- if last_width != width -%}
+    {%- assign breakpoint_width = breakpoint_widths[forloop.index] -%}
+    {%- capture custom_breakpoint_width -%}
+      @media (min-width: {{ breakpoint_width }}) {
+        #picture-{{ id }} img {
+          width: {{ width }};
+        }
+      }
+    {%- endcapture -%}
+    {%- assign custom_style = custom_style | append: custom_breakpoint_width -%}
+  {%- endif -%}
+  {%- assign last_width = width -%}
+{%- endfor -%}
+
+{%- comment -%} Ouput image specific container CSS {%- endcomment -%}
+{%- if custom_style -%}
+  <div style="display: none;"><style>
+    {{ custom_style | strip_newlines | replace: "  " }}
+  </style></div>
+{%- endif -%}
+
+{%- comment -%}
+  Determine wrapper, if any
+{%- endcomment -%}
+{%- assign picture_class = " " | append: wrapper_class -%}
+{%- if is_cover -%}
+  {%- assign picture_class = picture_class | append: "cover" -%}
+{%- endif -%}
+
+{%- capture data_per_rows -%}
+{%- for bpi in breakpoint_identifiers -%}{{ bpi }}: {{ per_rows[forloop.index0] | strip }} {%- endfor -%}
+{%- endcapture -%}
+
+{%- comment -%}
+  Bring it all together - the source elements and the base img element, inside a picture element, inside a padded placeholder
+{%- endcomment -%}
+<picture id="picture-{{ id }}" class="{{ picture_class | strip }}" data-per-rows="{{ data_per_rows | strip }}">
+  {%- if sources %}{{ sources }}{% endif %}
+  <img 
+    src="{{ src }}" srcset="{{ srcset }}"
+    {% if is_lazy %} loading="lazy" {% else %} fetchpriority="high" {% endif %}
+    {% if is_lazy == false and image_class contains "image-fade" %} onload="setTimeout(() => this.style.opacity = 1 ,200)" {% endif %} {% comment %} Eager load image fade {% endcomment %}
+    class='{{ image_class }} img-fluid {% if image_class contains "image-fade" %} image-fade-eager {% endif %}'
+    alt="{{ alt }}" />
+</picture>

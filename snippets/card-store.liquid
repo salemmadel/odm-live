@@ -1,0 +1,34 @@
+{% comment %}
+    Usage:
+    {% render 'card-store', store_headline: store_headline,  store_info: store_info, image: image %}
+{% endcomment %}
+
+
+ <div class='store__container'>
+    <div class="underline-links-hover">
+         
+         {% comment %} Desktop version of cards with hover {% endcomment %}
+         <div class="store__media-wrapper--desktop {% if store_embedded-map != blank %} store__media-wrapper--desktop-embed {% endif %}">
+            <div class="store__img">{{ image | image_url: width: 3480, format: 'pjpg' | image_tag: widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: image.alt, loading: 'lazy', class:'store__img'}}</div>
+            {% if store_embedded-map != blank %} <div class="store__embedded-map embedded-map--desktop">{{ store_embedded-map }}</div> {% endif %}
+         </div>
+
+         {% comment %} Mobile version of cards with slider {% endcomment %}
+         <div class="store__media-wrapper--mobile {% if store_embedded-map != blank %} store__media-wrapper--mobile-embed {% endif %}">
+            <div class="{% if store_embedded-map != blank %} slider-container  slider {% endif %}">
+            <div class="slide slide-handswipe"> 
+               <div class="store__img">{{ image | image_url: width: 3480, format: 'pjpg' | image_tag: widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: image.alt, loading: 'lazy', class:'store__img'}}</div>
+               {% if store_embedded-map != blank %} <div class="handswipe">{% render 'icon-swipe' %} </div>{% endif %}
+            </div>
+            <div class="slide"> {% if store_embedded-map != blank %}  <div class="store__embedded-map embedded-map--mobile">{{ store_embedded-map }}</div> {% endif %} </div>
+            </div>
+         </div>
+
+        <div class="card__content card__content--store">
+            <div class="card__information--store">
+                 <h3 class="card__heading card__heading--store">{{store_headline}}</h3>
+                <div class="article-card__info caption-with-letter-spacing--large store__info">{{- store_info -}}</a></div>
+             </div>
+        </div>
+    </div>
+ </div>

@@ -1,0 +1,263 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_plain_H8dpwx": {
+      "type": "image-plain",
+      "name": "t:sections.image-with-text.plain",
+      "settings": {
+        "is_above_the_fold": false,
+        "image": "shopify://shop_images/Landing-Page_Desktop_1920x450_DE.jpg",
+        "image_mobile": "shopify://shop_images/Landing-Page_Mobile_1950x800_DE.jpg",
+        "desktop_image_width": 100,
+        "mobile_image_width": 100,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "full_width_enabled": true
+      }
+    },
+    "rich_text_n76fCe": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_mjxcGX": {
+          "type": "heading",
+          "settings": {
+            "heading": "Limette",
+            "heading_size": "h2"
+          }
+        },
+        "text_h3qA8R": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Blueberry Moonshine made with Single Malt Whisky</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mjxcGX",
+        "text_h3qA8R"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "is_above_the_fold": false,
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "featured_collection_fkFbhm": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "<h2>Unsere Limette Bundle</h2>",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 12,
+        "columns_desktop": 5,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "view_all_button_label": "",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "disabled": true,
+      "custom_css": [
+        ".grid__item:first-child .card__badge {display: none;}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "products_per_page": 20,
+        "columns_desktop": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "grey_sold_out_products": true,
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "columns_mobile": "2",
+        "padding_top": 12,
+        "padding_bottom": 24
+      }
+    },
+    "ss_scrolling_anouncement_bar_VRjwzh": {
+      "type": "ss-scrolling-anouncement-bar",
+      "blocks": {
+        "text_DhwtVa": {
+          "type": "text",
+          "settings": {
+            "text": "Limitierte Kooperation: St Kilian x O'Donnell Moonshine"
+          }
+        },
+        "text_bXBfzw": {
+          "type": "text",
+          "settings": {
+            "text": "Hergestellt in Deutschland"
+          }
+        },
+        "text_8FbCNE": {
+          "type": "text",
+          "settings": {
+            "text": "Handgemacht & Nachhaltig"
+          }
+        },
+        "text_AApPhX": {
+          "type": "text",
+          "settings": {
+            "text": "Mit Klarna jetzt kaufen und später bezahlen"
+          }
+        }
+      },
+      "block_order": [
+        "text_DhwtVa",
+        "text_bXBfzw",
+        "text_8FbCNE",
+        "text_AApPhX"
+      ],
+      "name": "t:sections.ss-announcement-bar.presets.name",
+      "settings": {
+        "insert_css_class_target": "",
+        "layout": "full_bleed",
+        "text_size": 14,
+        "link": "",
+        "animation_duration": 134,
+        "animation_direction": "left",
+        "pause_hover": true,
+        "bg": "#000000",
+        "text_color": "#ffffff",
+        "hover_opacity": 90,
+        "padding_horizontal": 2,
+        "padding_vertical": 1.5,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_TcjTK4": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_JiMykM": {
+          "type": "heading",
+          "settings": {
+            "heading": "O’Donnell Moonshine \"Mehr als Likör\"",
+            "heading_size": "h2"
+          }
+        },
+        "text_bttYz7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Inspiriert vom <strong>original</strong> Moonshine der Prohibitionszeit, bringt <strong>O’Donnell</strong> seit <strong>2014</strong> Spirituosen mit Haltung ins Glas. <strong>Fruchtig</strong>, <strong>nussig</strong> oder <strong>cremig</strong> – unsere Liköre und Spirituosen im ikonischen <strong>Mason Jar</strong> stehen für kompromisslosen Geschmack und kreative Rezepturen.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JiMykM",
+        "text_bttYz7"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 750px) {.image-with-text {padding-top: 33px; padding-bottom: 0px; } .image-with-text__heading {font-size: 17px; font-weight: bold; } .image-with-text__content {padding: 3rem calc(2rem / var(--font-body-scale)) 3rem; } .image-with-text__text {text-align: start; }}"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "image": "shopify://shop_images/JanuarVielfalt_Horizontal_Master_DE_01_1_95a78aa2-a579-4e30-8fec-e33b609b6782.jpg",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "1654605637dcfd3e20": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".title {text-align: left;}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "<h2>Kaufe unsere Besteller!</h2>",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "collection": "featured",
+        "products_to_show": 10,
+        "columns_desktop": 5,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "view_all_button_label": "ALLE PRODUKTE ANZEIGEN",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 12
+      }
+    }
+  },
+  "order": [
+    "image_plain_H8dpwx",
+    "rich_text_n76fCe",
+    "banner",
+    "featured_collection_fkFbhm",
+    "product-grid",
+    "ss_scrolling_anouncement_bar_VRjwzh",
+    "image_with_text_TcjTK4",
+    "1654605637dcfd3e20"
+  ]
+}

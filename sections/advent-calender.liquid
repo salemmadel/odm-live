@@ -1,0 +1,569 @@
+<style>
+  .advent-calendar {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 40px 0;
+    max-width: 870px;
+    margin: 0 auto;
+    background-image: url('https://odonnellmoonshine.co.uk/cdn/shop/files/Advent_Calendar_Background.png?format=png&v=1750843057');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  /* Add texture overlay */
+  .advent-calendar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://odonnellmoonshine.co.uk/cdn/shop/files/Texture_Grunge.png?format=png&v=1750843057') repeat;
+    opacity: 0.3;
+    z-index: 1;
+  }
+
+  .advent-calendar-actions {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 36px;
+    align-items: top;
+    align-items: start;
+  }
+
+  .advent-day {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    z-index: 2;
+  }
+
+  .advent-day:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  .advent-day.revealed {
+    cursor: default;
+  }
+
+  .advent-day-front,
+  .advent-day-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .advent-day-front {
+    {% if section.settings.card_front_image != blank %}
+      background-image: url('{{ section.settings.card_front_image | img_url: '150x' }}');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    {% else %}
+      background-color: {{ section.settings.card_front_color }};
+    {% endif %}
+    color: {{ section.settings.card_text_color }};
+    font-size: 2em;
+    transform: rotateY(0deg);
+  }
+
+  /* Number styling */
+  .advent-day-number {
+    background: #fff;
+    color: #000;
+    font-size: 0.5em;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 20px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin: 0;
+    z-index: 3;
+  }
+
+  .advent-day-back {
+    background-color: #fff;
+    transform: rotateY(180deg);
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+  }
+
+  .advent-day.revealed .advent-day-front {
+    transform: rotateY(180deg);
+  }
+
+  .advent-day.revealed .advent-day-back {
+    transform: rotateY(360deg);
+  }
+
+  /* Image Hover Zoom Effect */
+  .advent-day-back img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.3s ease, max-width 0.3s ease;
+    transform-origin: center;
+  }
+
+  .advent-day.revealed .advent-day-back img:hover {
+    transform: scale(1.3);
+    max-width: 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    position: relative;
+  }
+
+  .advent-day-back .surprise-text {
+    font-size: 1.2em;
+    color: #555;
+    font-family: 'Courier New', monospace;
+  }
+
+  .advent-day.disabled .advent-day-front {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  /* ---- CORRECTED MOBILE STYLES FOR THE 2-COLUMN GRID ---- */
+  .show-more-button {
+    display: none; /* Hidden by default */
+  }
+
+  @media screen and (max-width: 749px) {
+    /* More specific selector to override product page styles */
+    .advent-calendar-section .advent-calendar {
+      grid-template-columns: 1fr 1fr;
+      padding: 20px;
+    }
+
+    .advent-day:nth-child(n+3) {
+      display: none;
+    }
+    
+    .advent-calendar.show-all-days .advent-day:nth-child(n+3) {
+      display: block;
+    }
+    
+    .show-more-button {
+      display: inline-block;
+    }
+  }
+
+  /* The final and correct fix for 8 cards. */
+  @media screen and (min-width: 750px) {
+    .advent-calendar.advent-calendar--8-days {
+      grid-template-columns: repeat(4, 1fr);
+      justify-content: center;
+    }
+    .advent-calendar.advent-calendar--8-days .advent-day:nth-child(7),
+    .advent-calendar.advent-calendar--8-days .advent-day:nth-child(8) {
+      margin: 0 auto;
+    }
+  }
+</style>
+
+<div class="advent-calendar advent-calendar--{{ section.settings.number_of_days }}-days" data-section-id="{{ section.id }}">
+  {% for i in (1..section.settings.number_of_days) %}
+    {%- assign day_image_setting_name = 'day_' | append: i | append: '_image' -%}
+
+    <div class="advent-day" data-day="{{ i }}">
+      <div class="advent-day-front">
+        <div class="advent-day-number">
+          {{ i }}
+        </div>
+      </div>
+      <div class="advent-day-back">
+        {%- if section.settings[day_image_setting_name] != blank -%}
+          <img src="{{ section.settings[day_image_setting_name] | img_url: 'medium' }}" alt="Day {{ i }} Reveal">
+        {%- else -%}
+          <p class="surprise-text">Surprise!</p>
+        {%- endif -%}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<div class="advent-calendar-actions">
+  <button class="button show-more-button">{{ section.settings.show_more_button_text | default: "Load the rest" }}</button>
+</div> 
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const sectionId = "{{ section.id }}";
+    const calendar = document.querySelector('.advent-calendar[data-section-id="' + sectionId + '"]');
+    const showMoreButton = document.querySelector('.show-more-button');
+
+    if (!calendar) return;
+
+    const adventDays = calendar.querySelectorAll('.advent-day');
+    const revealedDays = JSON.parse(localStorage.getItem('adventRevealedDays_' + sectionId)) || {};
+
+    // --- NEW: Define the fixed sequence here ---
+    const fixedSequence = [1, 6, 7, 8, 12, 17, 22, 24];
+    const numberOfDays = {{ section.settings.number_of_days }};
+    const shuffledDayNumbers = [];
+    
+    // Populate the sequence
+    for (let i = 0; i < numberOfDays; i++) {
+        shuffledDayNumbers.push(fixedSequence[i] || (i + 1));
+    }
+    // --- END NEW ---
+
+    adventDays.forEach((dayElement, index) => {
+      // Use the number from the fixed sequence
+      const newDayNumber = shuffledDayNumbers[index];
+
+      // Update the number displayed on the front of the door
+      const dayNumberDiv = dayElement.querySelector('.advent-day-number');
+      if (dayNumberDiv) {
+        dayNumberDiv.textContent = newDayNumber;
+      }
+
+      // Update the data-day attribute to the new fixed number
+      dayElement.dataset.day = newDayNumber;
+
+      // Restore state based on the new fixed number
+      if (revealedDays[newDayNumber]) {
+        dayElement.classList.add('revealed');
+      }
+
+      // Check for disabled state on load
+      const today = new Date();
+      const currentDay = today.getDate();
+      const currentMonth = today.getMonth() + 1;
+      const calendarMonth = {{ section.settings.advent_month }};
+      
+      if (
+          {{ section.settings.reveal_only_on_day }} &&
+          (
+            (currentMonth < calendarMonth) ||
+            (currentMonth === calendarMonth && parseInt(newDayNumber) > currentDay)
+          ) &&
+          !revealedDays[newDayNumber]
+      ) {
+          dayElement.classList.add('disabled');
+      }
+    });
+
+    // Handle click to show more days
+    if (showMoreButton) {
+      showMoreButton.addEventListener('click', function() {
+        calendar.classList.add('show-all-days');
+        this.style.display = 'none'; // Hide button after clicking
+      });
+    }
+
+    // --- UPDATED CLICK LISTENER FOR TOGGLE EFFECT ---
+    adventDays.forEach(dayElement => {
+      dayElement.addEventListener('click', function () {
+        const day = this.dataset.day;
+
+        // Prevent interaction if locked
+        if (this.classList.contains('disabled')) {
+          return;
+        }
+
+        const today = new Date();
+        const currentDay = today.getDate();
+        const currentMonth = today.getMonth() + 1;
+        const calendarMonth = {{ section.settings.advent_month }};
+
+        if ({{ section.settings.reveal_only_on_day }}) {
+          if (currentMonth < calendarMonth) {
+            alert('This calendar is for ' + new Date(today.getFullYear(), calendarMonth - 1, 1).toLocaleString('default', { month: 'long' }) + '. Please wait.');
+            return;
+          }
+          if (currentMonth === calendarMonth && parseInt(day) > currentDay) {
+            alert('This day has not arrived yet! Please wait for the correct day to open this door.');
+            return;
+          }
+        }
+
+        // Toggle the 'revealed' class
+        this.classList.toggle('revealed');
+
+        // Update localStorage to reflect the new state (opened or closed)
+        if (this.classList.contains('revealed')) {
+          revealedDays[day] = true;
+        } else {
+          delete revealedDays[day];
+        }
+        localStorage.setItem('adventRevealedDays_' + sectionId, JSON.stringify(revealedDays));
+      });
+    });
+    // --- END UPDATED CLICK LISTENER ---
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Advent Calendar",
+  "tag": "section",
+  "class": "advent-calendar-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Calendar Settings"
+    },
+    {
+      "type": "range",
+      "id": "number_of_days",
+      "min": 1,
+      "max": 31,
+      "step": 1,
+      "label": "Number of days in calendar",
+      "default": 24
+    },
+    {
+      "type": "select",
+      "id": "advent_month",
+      "label": "Month of Advent Calendar",
+      "options": [
+        { "value": "1", "label": "January" },
+        { "value": "2", "label": "February" },
+        { "value": "3", "label": "March" },
+        { "value": "4", "label": "April" },
+        { "value": "5", "label": "May" },
+        { "value": "6", "label": "June" },
+        { "value": "7", "label": "July" },
+        { "value": "8", "label": "August" },
+        { "value": "9", "label": "September" },
+        { "value": "10", "label": "October" },
+        { "value": "11", "label": "November" },
+        { "value": "12", "label": "December" }
+      ],
+      "default": "12"
+    },
+    {
+      "type": "checkbox",
+      "id": "reveal_only_on_day",
+      "label": "Reveal only on corresponding day?",
+      "default": true,
+      "info": "If checked, users can only open a day on or after its actual date."
+    },
+    {
+      "type": "text",
+      "id": "show_more_button_text",
+      "label": "Text for 'Load more' button",
+      "default": "Load the rest"
+    },
+    {
+      "type": "header",
+      "content": "Card Styling"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_front_image",
+      "label": "Card Front Image"
+    },
+    {
+      "type": "color",
+      "id": "card_front_color",
+      "label": "Card Front Color (Fallback)",
+      "default": "#C70039"
+    },
+    {
+      "type": "color",
+      "id": "card_text_color",
+      "label": "Card Text Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Day Content (Images)"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_1_image",
+      "label": "Day 1 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_2_image",
+      "label": "Day 2 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_3_image",
+      "label": "Day 3 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_4_image",
+      "label": "Day 4 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_5_image",
+      "label": "Day 5 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_6_image",
+      "label": "Day 6 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_7_image",
+      "label": "Day 7 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_8_image",
+      "label": "Day 8 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_9_image",
+      "label": "Day 9 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_10_image",
+      "label": "Day 10 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_11_image",
+      "label": "Day 11 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_12_image",
+      "label": "Day 12 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_13_image",
+      "label": "Day 13 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_14_image",
+      "label": "Day 14 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_15_image",
+      "label": "Day 15 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_16_image",
+      "label": "Day 16 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_17_image",
+      "label": "Day 17 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_18_image",
+      "label": "Day 18 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_19_image",
+      "label": "Day 19 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_20_image",
+      "label": "Day 20 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_21_image",
+      "label": "Day 21 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_22_image",
+      "label": "Day 22 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_23_image",
+      "label": "Day 23 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_24_image",
+      "label": "Day 24 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_25_image",
+      "label": "Day 25 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_26_image",
+      "label": "Day 26 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_27_image",
+      "label": "Day 27 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_28_image",
+      "label": "Day 28 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_29_image",
+      "label": "Day 29 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_30_image",
+      "label": "Day 30 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "day_31_image",
+      "label": "Day 31 Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Interactive Advent Calendar",
+      "category": "Custom Content"
+    }
+  ]
+}
+{% endschema %}

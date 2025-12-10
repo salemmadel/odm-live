@@ -1,0 +1,25 @@
+
+
+{%- liquid
+  assign threshold_prefix = 'cart.drawer.free_from' | t
+  assign threshold_prefix = threshold_prefix | replace: "amount" | replace: "{{" | replace: "}}"
+-%}
+
+{%- for metaobject in shop.metaobjects.proposition.values -%}
+  <proposition-ui class="📐" type="incentive-progress-bar" id="{{ metaobject.system.id | json }}" config='{{ metaobject.definition.value | json }}'>
+    <div style="background: #ecfdf5;" class="p-4 d-none">
+      <div class="row">
+        <div class="col-auto">
+          <img data-product-image src="" width="78" height="78" />
+        </div>
+        <div class="col">
+          <span data-product-title class="h4 cart-item__name fw-bold"></span>
+          <div class="">
+            <div class="free-shipping-text">{{ threshold_prefix }} <span data-total-required></span></div>
+            <progress max="" value=""></progress>
+          </div>
+        </div>
+      </div>
+    </div>
+  </proposition-ui>
+{%- endfor -%}

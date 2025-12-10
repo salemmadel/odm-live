@@ -1,0 +1,44 @@
+/* stylelint-disable selector-class-pattern, selector-no-qualifying-type, declaration-property-value-disallowed-list, selector-max-compound-selectors, selector-max-id */
+.product__gang-badge {
+  position: absolute;
+  right: 0rem;
+  top: 0rem;
+  z-index: 2;
+  padding-top: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.product__gang-badge img, .product__season-badge img {
+  height: auto;
+  width: 100%;
+  max-width: 100px;
+}
+
+.product__season-badge {
+  position: absolute;
+  right: 0rem;
+  top: 0rem;
+  z-index: 2;
+}
+
+@media screen and (min-width: 750px) {
+  .product__season-badge {
+    right: -1.5rem;
+    top: -1.5rem;
+  }
+  .product__gang-badge img, .product__season-badge img {
+    max-width: 110px;
+  }
+}
+@media screen and (min-width: 990px) {
+  .product__gang-badge img, .product__season-badge img {
+    max-width: 120px;
+  }
+}
+.season-badge--blackfriday {
+  border-radius: 50%;
+  border: 1.5px solid #C59E35;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../.src/scss/component-season-badge.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;AAGA;EACE;EACA;EACA;EACA;EACA;EACA;;;AAEF;EACE;EACA;EACA;;;AAEF;EACE;EACA;EACA;EACA;;;AAGF;EACE;IACE;IACA;;EAGF;IACE;;;AAIJ;EACE;IACE;;;AAIJ;EACE;EACA;EACA%22,%22file%22:%22component-season-badge.css%22%7D */

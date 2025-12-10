@@ -1,0 +1,108 @@
+{{ 'landingpage-christmas.css' | asset_url | stylesheet_tag }}
+<noscript>{{ 'landingpage-christmas.css' | asset_url | stylesheet_tag }}</noscript>
+
+{% style %}
+ .christmas_landingpage img {
+  width: {{ section.settings.image_width}}%;
+  }
+  .christmas_landingpage .deco {
+    background-image: url('{{ section.settings.banner_image | image_url: width: 750 }}'); 
+    height: {{ section.settings.banner_height_mobile}}rem;
+    @media (min-width: 1024px) { 
+      height: {{ section.settings.banner_height_desktop}}rem; 
+    }
+}
+{%- endstyle -%}
+
+<section class="christmas_landingpage section-{{ section.id }}-height">
+    {% if section.settings.show_intro_banner and section.settings.banner_image != blank%}
+      <div class="deco" style="background-repeat-x: repeat; background-repeat-y: no-repeat;"></div>
+    {%- endif -%}
+    <div class="page-width top__title">
+      {% if section.settings.show_christmas_title_image and section.settings.title_image != blank%}
+
+        <img
+            src="{{ section.settings.title_image | image_url: width: 750 }}"
+            alt="Cocktails"
+            loading="lazy"
+            draggable="false"
+            width="900"
+            height="300"
+            />
+      {%- endif -%}
+        <p class="mono" style="color: #c56442">{{ section.settings.intro }}</p>
+    </div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Christmas Intro Section",
+  "class": "christmas-section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_intro_banner",
+      "default": true,
+      "label": "Show header-banner"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Header Image"
+    },
+    {
+      "type": "range",
+      "id": "banner_height_desktop",
+      "min": 0,
+      "max": 14,
+      "step": 1,
+      "unit": "rem",
+      "label": "Header-banner height on desktop",
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "banner_height_mobile",
+      "min": 0,
+      "max": 14,
+      "step": 1,
+      "unit": "rem",
+      "label": "Header-banner height on mobile",
+      "default": 4
+    },
+    {
+      "type": "checkbox",
+      "id": "show_christmas_title_image",
+      "default": true,
+      "label": "Show title image"
+    },
+    {
+      "type": "image_picker",
+      "id": "title_image",
+      "label": "Title Image"
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Title-image width",
+      "default": 75
+    },
+   {
+        "type": "text",
+        "id": "intro",
+        "label": "Intro Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Christmas Intro",
+      "category": "Landingpage"
+    }
+  ]
+}
+{% endschema %}

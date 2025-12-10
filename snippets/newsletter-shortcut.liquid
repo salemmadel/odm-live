@@ -1,0 +1,21 @@
+{% comment %}
+  {% render 'newsletter-shortcut', id: section.id, newsletter_shortcut: section.settings.newsletter_shortcut%}
+{% endcomment %}
+
+
+{% unless customer %}
+
+
+<div  class="nl__shortcut newsletter-note">
+  {{ image_background | image_url: width: 140, height: 60 | image_tag: class: 'newsletter-note__background', widths: '130, 150' }}
+    <div class="newsletter-note__content">
+      <div id="shortcut-open" class="newsletter-note__message">
+        <p>{{newsletter_shortcut}}</p>
+      </div>
+      <div class="newsletter-note__close">
+        <div id="shortcut-close" class="nl-note__close">{% render 'icon-close', size: 1 %}</div>
+      </div>
+    </div>
+</div>
+
+{% endunless %}

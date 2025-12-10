@@ -1,0 +1,36 @@
+/* stylelint-disable selector-class-pattern, selector-no-qualifying-type, declaration-property-value-disallowed-list, selector-max-compound-selectors, selector-max-id */
+.product_link__title {
+  font-size: 1.3rem;
+  letter-spacing: 0.04rem;
+  line-height: calc(1 + 0.5 / var(--font-body-scale));
+}
+
+.product_link__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.product_link {
+  background-color: rgb(var(--color-background));
+  border: var(--variant-pills-border-width) solid rgba(var(--color-foreground), var(--variant-pills-border-opacity));
+  border-radius: var(--variant-pills-radius);
+  color: rgba(var(--color-foreground));
+  color: rgb(var(--color-foreground));
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  line-height: 1;
+  margin: 0.7rem 0.5rem 0.2rem 0;
+  padding: 1rem 2rem;
+  position: relative;
+  text-align: center;
+  transition: border var(--duration-short) ease;
+}
+
+.product_link:link {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../.src/scss/component-product-link.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;AAEA;EACE;EACA;EACA;;;AAGF;EACE;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE%22,%22file%22:%22component-product-link.css%22%7D */

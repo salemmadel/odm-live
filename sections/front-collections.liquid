@@ -1,0 +1,981 @@
+{%- if section.settings.is_above_the_fold -%}
+
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+{%- else -%}
+
+<link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
+
+{%- endif -%}
+
+
+
+
+
+<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<link rel="stylesheet" href="{{ 'template-collection.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<link rel="stylesheet" href="{{ 'front-collection.css' | asset_url }}" media="print" onload="this.media='all'">
+
+
+
+
+
+{%- if section.settings.enable_quick_add -%}
+
+<link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
+{%- endif -%}
+
+
+
+
+
+<noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
+
+<noscript>{{ 'template-collection.css' | asset_url | stylesheet_tag }}</noscript>
+
+<noscript>{{ 'front-collection.css' | asset_url | stylesheet_tag }}</noscript>
+
+
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+
+
+
+
+
+{%- style -%}
+
+.section-{{ section.id }}-padding {
+
+padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+
+padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+
+}
+
+@media screen and (min-width: 750px) {
+
+.section-{{ section.id }}-padding {
+
+padding-top: {{ section.settings.padding_top }}px;
+
+padding-bottom: {{ section.settings.padding_bottom }}px;
+
+}
+
+.front-grid { padding-left: 3rem; }
+
+}
+
+
+
+
+
+.front-collections .tabs-swiper{ display: none; }
+
+.tabs-nav__item-list--desktop{ display: grid; }
+
+
+
+
+
+@media screen and (max-width: 749px){
+
+.tabs-swiper{ display: block; }
+
+.tabs-nav__item-list--desktop{ display: flex; }
+
+.tabs-swiper .swiper-slide{
+
+width: auto;
+
+padding: 0 6px;
+
+margin-right: 5px !important;
+
+font-weight: 500 !important;
+
+}
+
+.tabs-swiper .tabs-nav__item{ white-space: nowrap; }
+
+
+
+
+
+.tabs-swiper .swiper-button-prev,
+
+.tabs-swiper .swiper-button-next{
+
+top: 50%;
+
+transform: translateY(-50%);
+
+width: 28px; height: 28px;
+
+}
+
+.tabs-swiper .swiper-button-prev{ left: 4px; }
+
+.tabs-swiper .swiper-button-next{ right: 4px; }
+
+.tabs-swiper .swiper-button-disabled{ opacity: .35; }
+
+
+
+
+
+.tabs-swiper .swiper-pagination{
+
+position: relative;
+
+margin: 8px 0 0;
+
+text-align: left;
+
+padding-left: 6px;
+
+}
+
+.tabs-swiper .swiper-pagination-bullet{
+
+width: 6px; height: 6px;
+
+background: #111;
+
+opacity: .25;
+
+margin: 0 3px !important;
+
+display: none /* Keep display none for mobile bullets */
+
+}
+
+.tabs-swiper .swiper-pagination-bullet-active{
+
+opacity: 1;
+
+display: none; /* Keep display none for mobile bullets */
+
+}
+
+}
+
+
+
+@media screen and (min-width: 749px){
+
+.navigation-bar.tabs-nav::after {
+
+display: none;
+
+}
+
+}
+
+/* REFINED FIX: Continuous Light Line (::after) and Dark Line (box-shadow) */
+
+.navigation-bar.tabs-nav {
+
+position: relative;
+
+border-bottom: none;
+
+}
+
+
+
+/* 1. Continuous Light Grey Line (Desktop & Mobile) */
+
+.navigation-bar.tabs-nav::after {
+
+top: 46.8px;
+
+content: '';
+
+position: absolute;
+
+bottom: 0;
+
+left: 0;
+
+width: 100%;
+
+height: 4px;
+
+background-color: #ccc;
+
+pointer-events: none;
+
+z-index: -1;
+
+}
+
+
+
+/* 2. Dark Line on Tabs (using box-shadow for visual overlay) */
+
+.tabs-nav__item {
+
+border-bottom: none !important;
+
+padding-bottom: 5px;
+
+transition: box-shadow 0.2s ease, opacity 0.2s ease;
+
+opacity: 1;
+
+box-shadow: inset 0 -1px 0 0 transparent;
+
+position: relative;
+
+z-index: 2; /* Ensures tabs/shadows are above the ::after light line */
+
+}
+
+
+
+/* Darker underline for the active tab (Thick black line) */
+
+.tabs-nav__item.true {
+
+box-shadow: inset 0 -2px 0 0 #000; /* Thicker dark line (3px) */
+
+}
+
+
+
+/* Darker underline on hover for non-active tabs (Thin dark grey line) */
+
+.tabs-nav__item:hover:not(.true) {
+
+box-shadow: inset 0 -1px 0 0 #333; /* Darker grey thin line on hover */
+
+}
+
+
+/* Darker underline and full opacity for items that have been scrolled past */
+
+.tabs-nav__item.scrolled-past {
+
+opacity: 1 !important;
+
+box-shadow: inset 0 -3px 0 0 #333; /* Thicker dark line (3px) when scrolled past */
+
+}
+
+
+/* Fade out other items when scrolling starts for visual emphasis */
+
+.tabs-nav__item-list--desktop.scrolled-right .tabs-nav__item:not(.true):not(.scrolled-past) {
+
+opacity: 0.5;
+
+}
+
+
+
+/* Mobile View Adjustment: Ensure mobile slides do not interrupt the continuous line */
+
+@media screen and (max-width: 749px){
+
+.tabs-swiper {
+
+padding-bottom: 5px; /* Add padding to contain the continuous line */
+
+}
+
+
+.tabs-swiper .swiper-slide {
+
+/* Swiper slides float and their box-shadows should cover the light line */
+
+box-shadow: inset 0 -3px 0 0 transparent; /* Base transparent shadow */
+
+position: relative;
+
+z-index: 2;
+
+}
+
+.tabs-swiper .tabs-nav__item.true {
+
+/* The dark shadow is applied via the active class on the inner element */
+
+box-shadow: inset 0 -3px 0 0 #000;
+
+}
+
+}
+
+
+
+
+
+.tabs-nav__item--content {
+
+text-decoration: none;
+
+display: inline-block;
+
+}
+
+{%- endstyle -%}
+
+
+
+
+
+{%- liquid
+
+assign number_of_blocks = 0
+
+for block in section.blocks
+
+assign number_of_blocks = number_of_blocks | plus: 1
+
+assign products_to_display = block.settings.collection.all_products_count
+
+if block.settings.collection.all_products_count > section.settings.products_to_show
+
+assign products_to_display = section.settings.products_to_show
+
+assign more_in_collection = true
+
+endif
+
+assign columns_mobile_int = section.settings.columns_mobile | plus: 0
+
+assign show_mobile_slider = false
+
+if section.settings.swipe_on_mobile and products_to_display > columns_mobile_int
+
+assign show_mobile_slider = true
+
+endif
+
+assign show_desktop_slider = false
+
+if section.settings.enable_desktop_slider and products_to_display > section.settings.columns_desktop
+
+assign show_desktop_slider = true
+
+endif
+
+endfor
+
+-%}
+
+
+
+
+
+{%- liquid
+
+assign product_badges = product.metafields.m_p.badges.value
+
+for badge in product_badges
+
+assign image_desktop = badge.image_desktop.value
+
+assign image_mobile = badge.image_mobile.value
+
+if image_desktop != empty
+
+capture badge_image
+
+render "image", image: image_mobile, image_md: image_desktop, is_lazy: true, width: "75px", width_md: "85px"
+
+endcapture
+
+endif
+
+endfor
+
+-%}
+
+
+
+
+
+<div class="color-{{ section.settings.color_scheme }} isolate gradient">
+
+<div class="front-collections collection section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}">
+
+<div class="front-collections__title collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
+
+{%- if section.settings.title != blank -%}
+
+<h2 class="title {{ section.settings.heading_size }}">{{ section.settings.title | escape }}</h2>
+
+{%- endif -%}
+
+{%- if section.settings.description != blank or section.settings.show_description and section.settings.collection.description != empty -%}
+
+<div class="collection__description {{ section.settings.description_style }}">
+
+{%- if section.settings.show_description -%}{{ section.settings.collection.description }}{%- else -%}{{ section.settings.description }}{% endif %}
+
+</div>
+
+{%- endif -%}
+
+<nav class="navigation-bar tabs-nav scroll" id="collection__categories">
+
+<div class="tabs-nav__item-list tabs-nav__item-list--desktop{% if number_of_blocks > 4 %} tabs-nav__item-list--withrows{% else %} tabs-nav__item-list--withcols{% endif %}">
+
+{%- for block in section.blocks -%}
+
+<div class="tabs-nav__item {{ block.settings.default_collection }}" id="{{ block.id }}">
+
+{%- if block.settings.collection_title != blank -%}
+
+<h3 class="tabs-nav__item--content title">{{ block.settings.collection_title }}</h3>
+
+{%- else -%}
+
+<h3 class="tabs-nav__item--content">{{ block.settings.collection }}</h3>
+
+{%- endif -%}
+
+</div>
+
+{%- endfor -%}
+
+</div>
+
+<div class="tabs-swiper swiper" id="TabsSwiper-{{ section.id }}">
+
+<div class="swiper-wrapper">
+
+{%- for block in section.blocks -%}
+
+<div class="swiper-slide">
+
+<div class="tabs-nav__item {{ block.settings.default_collection }}" id="m-{{ block.id }}">
+
+{%- if block.settings.collection_title != blank -%}
+
+<h3 class="tabs-nav__item--content title">{{ block.settings.collection_title }}</h3>
+
+{%- else -%}
+
+<h3 class="tabs-nav__item--content">{{ block.settings.collection }}</h3>
+
+{%- endif -%}
+
+</div>
+
+</div>
+
+{%- endfor -%}
+
+</div>
+
+
+
+
+
+<div class="swiper-pagination swiper-pagination-front"></div>
+
+</div>
+
+</nav>
+
+</div>
+
+
+
+
+
+<div class="collections" id="collections__container">
+
+{%- for block in section.blocks -%}
+
+<div class="collection {{ block.id }}" id="{{ block.settings.collection_title | downcase | replace: ' ', '-' | replace: 'ü', 'ue' | replace: 'ö', 'oe' | replace: 'ä', 'ae' }}">
+
+<slider-component class="slider-mobile-gutter{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if show_mobile_slider == false %} page-width{% endif %}{% if show_desktop_slider == false and section.settings.full_width == false %} page-width-desktop{% endif %}{% if show_desktop_slider %} slider-component-desktop{% endif %}">
+
+<ul id="Slider-{{ section.id }}" class="grid front-grid product-grid contains-card{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid--{{ section.settings.columns_desktop }}-col-desktop{% if section.settings.collection == blank %} grid--2-col-tablet-down{% else %} grid--{{ section.settings.columns_mobile }}-col-tablet-down{% endif %}{% if show_mobile_slider or show_desktop_slider %} slider{% if show_desktop_slider %} slider--desktop{% endif %}{% if show_mobile_slider %} slider--tablet grid--peek{% endif %}{% endif %}" role="list" aria-label="{{ 'sections.featured_collection.slider' | t }}">
+
+{%- for product in block.settings.collection.products limit: section.settings.products_to_show -%}
+
+<li id="Slide-{{ section.id }}-{{ forloop.index }}" class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}">
+
+{% render 'card-product',
+
+card_product: product,
+
+media_aspect_ratio: section.settings.image_ratio,
+
+show_secondary_image: section.settings.show_secondary_image,
+
+show_vendor: section.settings.show_vendor,
+
+show_rating: section.settings.show_rating,
+
+show_quick_add: section.settings.enable_quick_add,
+
+grey_sold_out_products: section.settings.grey_sold_out_products,
+
+section_id: block.id
+
+%}
+
+</li>
+
+{%- else -%}
+
+{%- for i in (1..4) -%}
+
+<li class="grid__item">
+
+{% render 'card-product', show_vendor: section.settings.show_vendor %}
+
+</li>
+
+{%- endfor -%}
+
+{%- endfor -%}
+
+</ul>
+
+
+
+
+
+{%- if show_mobile_slider or show_desktop_slider -%}
+
+<div class="slider-buttons no-js-hidden ">
+
+<button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}</button>
+
+<button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}</button>
+
+</div>
+
+{%- endif -%}
+
+{%- if badge_image != blank and section.settings.badges_enabled-%}
+
+<div class="📐">
+
+<div class="position-absolute top-0 end-0 mt-3 me-4 mt-md-2 me-md-2 z-index-2 pe-2 pe-md-1">
+
+{{ badge_image }}
+
+</div>
+
+</div>
+
+{%- endif -%}
+
+
+
+
+
+{%- if product.tags contains 'new' -%}
+
+<div class="📐">
+
+<div class="position-absolute start-0 top-0 z-index-2 ms-3 mt-2 ms-md-0 mt-md-0">
+
+<div class="badge badge-status position-static">
+
+{{ 'products.product.new' | t }}
+
+</div>
+
+</div>
+
+</div>
+
+{%- endif -%}
+
+{%- if section.settings.show_view_all -%}
+
+<div class="center collection__view-all">
+
+<a href="{{ block.settings.collection.url }}"
+
+class="{% if section.settings.view_all_style == 'link' %}link underlined-link{% elsif section.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}"
+
+aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: block.settings.collection.title }}"
+
+>
+
+{%- if block.settings.view_all_button_label != blank -%} {{block.settings.view_all_button_label}} {% else %} {{ block.settings.collection.title }} {%- endif -%}
+
+</a>
+
+</div>
+
+{%- endif -%}
+
+</slider-component>
+
+</div>
+
+{%- endfor -%}
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+<script>
+var $btns = $('.tabs-nav__item').click(function() {
+    var id = this.id.replace(/^m-/, '');
+    var $el = $('.' + id).fadeIn(450);
+    $('#collections__container > div').not($el).hide();
+    $('.tabs-nav__item').removeClass('true');
+    $('#' + id + ', #m-' + id).addClass('true');
+
+    // Remove scrolled-past class on tab change to reset scroll effect
+    $('.tabs-nav__item').removeClass('scrolled-past');
+
+    // --- START: FIX FOR SLIDER/SCROLL POSITION ---
+
+    // 1. Desktop Scroll Fix
+    const navBar = document.querySelector('.tabs-nav__item-list--desktop');
+    if (navBar) {
+        navBar.classList.remove('scrolled-right');
+        // Calculate the scroll position to center the clicked tab (for smooth scrolling)
+        const clickedItem = document.getElementById(id);
+        if (clickedItem) {
+            const containerWidth = navBar.offsetWidth;
+            const itemOffsetLeft = clickedItem.offsetLeft;
+            const itemWidth = clickedItem.offsetWidth;
+            // Scroll to position the item roughly in the center
+            const scrollTo = itemOffsetLeft - (containerWidth / 2) + (itemWidth / 2);
+            navBar.scrollLeft = scrollTo;
+        }
+    }
+
+    // 2. Mobile Swiper Fix
+    const el = document.getElementById('TabsSwiper-{{ section.id }}');
+    if (el && el.swiper) {
+        // Find the index of the clicked mobile slide (m- prefixed ID)
+        const mobileSlide = document.querySelector('#m-' + id).closest('.swiper-slide');
+        if (mobileSlide) {
+            const index = Array.from(el.swiper.slides).indexOf(mobileSlide);
+            // Slide the Swiper to the correct position (not animated for immediate selection)
+            el.swiper.slideTo(index);
+        }
+    }
+
+    // --- END: FIX FOR SLIDER/SCROLL POSITION ---
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animation-{{section.settings.section_animation}}');
+            }
+        });
+    });
+    let threshold = 0;
+    const cards = document.querySelectorAll('slider-component ul .slider__slide');
+    cards.forEach(card => {
+        if (threshold < 6){
+            observer.observe(card);
+            threshold++;
+        }
+    });
+
+
+    // Auto-select first tab
+    const firstTabDesktop = document.querySelector('.tabs-nav__item-list--desktop .tabs-nav__item');
+    const firstTabMobile = document.querySelector('.tabs-swiper .tabs-nav__item');
+    const firstCollection = document.querySelector('#collections__container > div');
+
+
+    if (firstTabDesktop) firstTabDesktop.classList.add('true');
+    if (firstTabMobile) firstTabMobile.classList.add('true');
+    if (firstCollection) {
+        firstCollection.style.display = 'block';
+        const siblings = firstCollection.parentElement.querySelectorAll(':scope > div:not(:first-child)');
+        siblings.forEach(el => el.style.display = 'none');
+    }
+
+    // === Scroll Tracking Functionality for Desktop Tabs - ADDED/UPDATED ===
+    const navBarDesktop = document.querySelector('.tabs-nav__item-list--desktop');
+    if (navBarDesktop) {
+        const items = navBarDesktop.querySelectorAll('.tabs-nav__item');
+
+        navBarDesktop.addEventListener('scroll', function() {
+            const scrollPos = navBarDesktop.scrollLeft;
+
+            if (scrollPos > 0) {
+                navBarDesktop.classList.add('scrolled-right');
+            } else {
+                navBarDesktop.classList.remove('scrolled-right');
+            }
+
+            items.forEach(item => {
+                // Only apply the effect to non-active tabs
+                if (!item.classList.contains('true')) {
+                    // Check if the item's right edge is to the left of the scroll position
+                    const itemRight = item.offsetLeft + item.offsetWidth;
+
+
+                    if (itemRight < scrollPos) {
+                        item.classList.add('scrolled-past');
+                    } else {
+                        item.classList.remove('scrolled-past');
+                    }
+                }
+            });
+        }, { passive: true });
+    }
+    // === End Scroll Tracking Functionality ===
+
+
+    const mq = window.matchMedia('(max-width: 749px)');
+    function initTabsSwiper(){
+        if (!mq.matches) return;
+        const el = document.getElementById('TabsSwiper-{{ section.id }}');
+        if (!el || el.swiper) return;
+        // Store the Swiper instance on the element for later access in the click handler
+        el.swiper = new Swiper(el, {
+            slidesPerView: 'auto',
+            spaceBetween: 12,
+            freeMode: true,
+            navigation: {
+                nextEl: '#TabsSwiper-{{ section.id }} .swiper-button-next',
+                prevEl: '#TabsSwiper-{{ section.id }} .swiper-button-prev'
+            },
+            pagination: {
+                el: '#TabsSwiper-{{ section.id }} .swiper-pagination',
+                clickable: true,
+                dynamicBullets: true
+            },
+            watchOverflow: true,
+            a11y: true
+        });
+    }
+    initTabsSwiper();
+    window.addEventListener('resize', initTabsSwiper, { passive: true });
+});
+</script>
+
+
+
+
+{% schema %}
+
+{
+
+"name": "t:sections.front-page-collections.name",
+
+"tag": "section",
+
+"class": "section",
+
+"settings": [
+
+{ "type": "checkbox", "id": "is_above_the_fold", "label": "is Above the Fold", "default": false, "info": "Check if Content is loaded first to eliminate CLS" },
+
+{ "type": "text", "id": "title", "default": "Featured collection", "label": "t:sections.featured-collection.settings.title.label" },
+
+{ "type": "select", "id": "heading_size", "options": [
+
+{ "value": "h2", "label": "t:sections.all.heading_size.options__1.label" },
+
+{ "value": "h1", "label": "t:sections.all.heading_size.options__2.label" },
+
+{ "value": "h0", "label": "t:sections.all.heading_size.options__3.label" }
+
+], "default": "h1", "label": "t:sections.all.heading_size.label"
+
+},
+
+{ "type": "richtext", "id": "description", "label": "t:sections.featured-collection.settings.description.label" },
+
+{ "type": "checkbox", "id": "show_description", "label": "t:sections.featured-collection.settings.show_description.label", "default": false },
+
+{ "type": "checkbox", "id": "grey_sold_out_products", "default": true, "label": "Make sold-out products Grey" },
+
+{
+
+"type": "select",
+
+"id": "description_style",
+
+"label": "t:sections.featured-collection.settings.description_style.label",
+
+"options": [
+
+{ "value": "body", "label": "t:sections.featured-collection.settings.description_style.options__1.label" },
+
+{ "value": "subtitle", "label": "t:sections.featured-collection.settings.description_style.options__2.label" },
+
+{ "value": "uppercase", "label": "t:sections.featured-collection.settings.description_style.options__3.label" }
+
+],
+
+"default": "body"
+
+},
+
+{ "type": "range", "id": "products_to_show", "min": 2, "max": 12, "step": 1, "default": 4, "label": "t:sections.featured-collection.settings.products_to_show.label" },
+
+{ "type": "range", "id": "columns_desktop", "min": 1, "max": 5, "step": 1, "default": 4, "label": "t:sections.featured-collection.settings.columns_desktop.label" },
+
+{ "type": "checkbox", "id": "full_width", "label": "t:sections.featured-collection.settings.full_width.label", "default": false },
+
+{ "type": "select", "id": "section_animation", "options": [
+
+{ "value": "none", "label": "t:sections.all.animation.options__1.label" },
+
+{ "value": "fade-in", "label": "t:sections.all.animation.options__2.label" },
+
+{ "value": "top", "label": "t:sections.all.animation.options__3.label" },
+
+{ "value": "bottom", "label": "t:sections.all.animation.options__4.label" },
+
+{ "value": "right", "label": "t:sections.all.animation.options__5.label" },
+
+{ "value": "left", "label": "t:sections.all.animation.options__6.label" }
+
+], "default": "none", "label": "t:sections.all.animation.section_animation"
+
+},
+
+{ "type": "checkbox", "id": "show_view_all", "default": true, "label": "t:sections.featured-collection.settings.show_view_all.label" },
+
+{ "type": "select", "id": "view_all_style", "label": "t:sections.featured-collection.settings.view_all_style.label", "options": [
+
+{ "value": "link", "label": "t:sections.featured-collection.settings.view_all_style.options__1.label" },
+
+{ "value": "outline", "label": "t:sections.featured-collection.settings.view_all_style.options__2.label" },
+
+{ "value": "solid", "label": "t:sections.featured-collection.settings.view_all_style.options__3.label" }
+
+], "default": "solid"
+
+},
+
+{ "type": "select", "id": "color_scheme", "options": [
+
+{ "value": "accent-1", "label": "t:sections.all.colors.accent_1.label" },
+
+{ "value": "accent-2", "label": "t:sections.all.colors.accent_2.label" },
+
+{ "value": "background-1", "label": "t:sections.all.colors.background_1.label" },
+
+{ "value": "background-2", "label": "t:sections.all.colors.background_2.label" },
+
+{ "value": "inverse", "label": "t:sections.all.colors.inverse.label" }
+
+], "default": "background-1", "label": "t:sections.all.colors.label", "info": "t:sections.all.colors.has_cards_info"
+
+},
+
+{ "type": "header", "content": "t:sections.featured-collection.settings.header.content" },
+
+{ "type": "select", "id": "image_ratio", "options": [
+
+{ "value": "adapt", "label": "t:sections.featured-collection.settings.image_ratio.options__1.label" },
+
+{ "value": "portrait", "label": "t:sections.featured-collection.settings.image_ratio.options__2.label" },
+
+{ "value": "square", "label": "t:sections.featured-collection.settings.image_ratio.options__3.label" }
+
+], "default": "adapt", "label": "t:sections.featured-collection.settings.image_ratio.label"
+
+},
+
+{ "type": "checkbox", "id": "show_secondary_image", "default": false, "label": "t:sections.featured-collection.settings.show_secondary_image.label" },
+
+{ "type": "checkbox", "id": "show_vendor", "default": false, "label": "t:sections.featured-collection.settings.show_vendor.label" },
+
+{ "type": "checkbox", "id": "show_rating", "default": false, "label": "t:sections.featured-collection.settings.show_rating.label", "info": "t:sections.featured-collection.settings.show_rating.info" },
+
+{ "type": "checkbox", "id": "enable_quick_add", "default": false, "label": "t:sections.featured-collection.settings.enable_quick_buy.label" },
+
+{ "type": "header", "content": "t:sections.featured-collection.settings.header_mobile.content" },
+
+{ "type": "select", "id": "columns_mobile", "default": "2", "label": "t:sections.featured-collection.settings.columns_mobile.label", "options": [
+
+{ "value": "1", "label": "t:sections.featured-collection.settings.columns_mobile.options__1.label" },
+
+{ "value": "2", "label": "t:sections.featured-collection.settings.columns_mobile.options__2.label" }
+
+]
+
+},
+
+{ "type": "checkbox", "id": "swipe_on_mobile", "default": false, "label": "t:sections.featured-collection.settings.swipe_on_mobile.label" },
+
+{ "type": "header", "content": "t:sections.all.padding.section_padding_heading" },
+
+{ "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "t:sections.all.padding.padding_top", "default": 36 },
+
+{ "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "t:sections.all.padding.padding_bottom", "default": 36 }
+
+],
+
+"blocks":[
+
+{
+
+"type": "collection",
+
+"name": "Collection",
+
+"limit": 6,
+
+"settings": [
+
+{ "type": "checkbox", "id": "default_collection", "label": "t:sections.front-page-collections.blocks.checkbox.label", "default": false },
+
+{ "type": "text", "id": "collection_title", "label": "t:sections.front-page-collections.blocks.collection_title.label" },
+
+{ "type": "collection", "id": "collection", "label": "t:sections.featured-collection.settings.collection.label" },
+
+{ "type": "text", "id": "view_all_button_label", "label": "t:sections.featured-collection.settings.view_all_button_label.label" }
+
+]
+
+}
+
+],
+
+"presets": [
+
+{
+
+"name": "t:sections.front-page-collections.presets.name",
+
+"blocks": [ { "type": "collection" } ]
+
+}
+
+]
+
+}
+
+{% endschema %}

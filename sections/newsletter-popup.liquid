@@ -1,0 +1,239 @@
+<link rel="stylesheet" href="{{ 'component-newsletter-popup.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-newsletter.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-newsletter-shortcut.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'component-newsletter-popup.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-newsletter.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-newsletter-shortcut.css' | asset_url | stylesheet_tag }}</noscript>
+
+<style>
+  .nl__popup {
+    background-image: url('{{ section.settings.image_bg_mobile | image_url: width: 1000 }}');
+  }
+
+  @media only screen and (min-width: 750px) {
+    .nl__popup {
+      background-image: url('{{ section.settings.image_bg_desktop | image_url: width: 1000 }}');
+    }
+  }
+</style>
+
+<div data-newsletter-popup="{{ section.settings.enable_popup }}">
+</div>
+  
+<div id="newsletter-shortcut"></div>
+
+<script defer="defer">
+  // container for popup
+  const container = document.querySelector('[data-newsletter-popup]')
+  const popup = `{% render 'newsletter-popup-template', id: section.id, image_desktop: section.settings.image_desktop, image_mobile: section.settings.image_mobile, blocks: section.blocks, legal: section.settings.newsletter_legal_notice, dont_show: section.settings.newsletter_dont_show %}`
+  container.style.display ="none"
+  // container for shortcut
+  const container_shortcut = document.querySelector('#newsletter-shortcut')
+  const shortcut = `{% render 'newsletter-shortcut', id: section.id, newsletter_shortcut: section.settings.newsletter_shortcut, image_background: section.settings.image_bg_desktop %}`
+
+
+  // check if user doesn't want to see the popup anymore
+  const show = localStorage.getItem('newsletter_show');
+
+  //localStorage.setItem('newsletter_show', true); // Hide the newsletter-popup and shortcut
+
+  // if popup is enabled abd user didn't hide popup 
+  if(container.dataset.newsletterPopup == "true" && show != 'false') {
+    container_shortcut.innerHTML = shortcut;
+    container.innerHTML = popup;
+    container.style.display ="none"
+
+    // close popup and display shortcut
+    //switchTabs('#newsletter-close', '.nl__popup', '.nl__shortcut')
+    const switchPopup = document.querySelector('#newsletter-close')
+    switchPopup.addEventListener('click', event => {
+      fadeOutBottom('.nl__popup')
+      fadeInLeft('.nl__shortcut')
+      // delete popup element after fade out animation
+      setTimeout(function (){
+        container.style.display ="none"
+        $('.nl__shortcut').removeClass('inactive')
+      }, 500); 
+    })
+
+    // display popup window when shortcut clicked
+   // switchTabs('.newsletter-note__message', '.nl__shortcut', '.nl__popup')
+    const switchShortcut= document.querySelector('.newsletter-note__message')
+    switchShortcut.addEventListener('click', event => {
+      fadeOutLeft('.nl__shortcut');
+      fadeInBottom('.nl__popup');
+      // delete popup element after fade out animation
+      setTimeout(function (){
+        $('.nl__shortcut').addClass('inactive')
+        container.style.display ="block"
+      }, 500); 
+    })
+
+
+    //close shortcut 
+    const closeShortcut = document.querySelector('.newsletter-note__close')
+        closeShortcut.addEventListener('click', event => {
+          fadeOutLeft('.nl__shortcut');
+          localStorage.setItem('newsletter_show', false); // Hide the newsletter-popup and shortcut
+          // delete popup element after fade out animation
+          setTimeout(function (){
+            $('.nl__shortcut').addClass('inactive')
+          }, 500); 
+        })
+  }
+
+  
+
+  function fadeOutLeft(element){
+    $(element).animate({
+      opacity: 0, 
+      left: '-80px'
+    }, 500, 'linear');
+  }
+
+  function fadeInLeft(element){
+    $(element).animate({
+      opacity: 1, 
+      left: 0
+    }, 500, 'linear');
+  }
+
+  function fadeOutBottom(element){
+    $(element).animate({
+      opacity: 0, 
+      top: '200px'
+    }, 500, 'linear');
+  }
+  function fadeInBottom(element){
+    // change functionality for smaller screens
+    $(element).animate({
+    opacity: 1, 
+    top: '100px'
+  }, 600, 'linear');
+  }
+
+  {% comment %}
+
+  function fade(element) {
+    var op = 1;  // initial opacity
+    var timer = setInterval(function () {
+        if (op <= 0.1){
+            clearInterval(timer);
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.2;
+    }, 50);
+  }
+
+  function unfade(element) {
+    var op = 0.1;  // initial opacity
+    var timer = setInterval(function () {
+        if (op >= 1){
+            clearInterval(timer);
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op += op * 0.2;
+    }, 10);
+}
+ function switchTabs(currClass ,activeTab, inactiveTab){
+    const close = document.querySelector(currClass)
+        close.addEventListener('click', event => {
+          fade(document.querySelector(activeTab))
+          unfade(document.querySelector(inactiveTab))
+          // delete popup element after fade out animation
+          setTimeout(function (){
+            $(activeTab).addClass('inactive')
+            $(inactiveTab).removeClass('inactive')
+          }, 500); 
+        })
+  }
+
+{% endcomment %}
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.newsletter.popup.preset",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_popup",
+      "label": "t:sections.newsletter.popup.enable",
+      "default": false,
+      "info": "Check if Content is loaded first to eliminate CLS"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "t:sections.newsletter.popup.image_mobile"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_bg_desktop",
+      "label": "t:sections.newsletter.popup.image_bg"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_bg_mobile",
+      "label": "t:sections.newsletter.popup.image_bg_mobile"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_legal_notice",
+      "label": "t:sections.newsletter.popup.legal_notice"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_shortcut",
+      "label": "t:sections.newsletter.popup.shortcut"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefits",
+      "name": "t:sections.newsletter.popup.benefits",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Subscribe to our emails",
+          "label": "t:sections.newsletter.popup.benefit"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.newsletter.popup.benefit_icon"
+        }
+      ]
+    },
+    {
+      "type": "custom_liquid",
+      "name": "t:sections.main-product.blocks.custom_liquid.name",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "t:sections.main-product.blocks.custom_liquid.settings.custom_liquid.label",
+          "info": "t:sections.main-product.blocks.custom_liquid.settings.custom_liquid.info"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.newsletter.popup.preset",
+      "blocks": [
+        {
+          "type": "benefits"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

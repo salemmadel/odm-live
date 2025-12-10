@@ -1,0 +1,403 @@
+{%- liquid
+  assign gutter_class = "g-" | append: section.settings.gutter
+
+  capture column_class
+    render "calc-column-class", columns_xs: section.settings.width_mobile, columns_md: section.settings.width_desktop
+  endcapture
+
+  assign interval = section.settings.interval | times: 1000 | round
+  assign autoplay = section.settings.autoplay_enabled
+  assign items = ""
+-%}
+
+{%- for block in section.blocks -%}
+  {%- capture item -%}
+    <div class="position-relative w-100 h-100">
+      {%- if block.settings.link != nil -%}
+        <a class="d-block" href="{{ block.settings.link }}">
+      {%- endif -%}
+      {%- render "image",
+        image: block.settings.image_mobile,
+        image_md: block.settings.image_desktop,
+        is_lazy: lazyload
+      -%}
+      {%- if block.settings.link != nil -%}
+        </a>
+      {%- endif -%}
+    </div>
+  {%- endcapture -%}
+  {%- assign items = items | append: item | append: "||||" -%}
+{%- endfor -%}
+{%- assign items = items | split: "||||" -%}
+
+<div data-outer id="{{ section.id }}" class="📐 overflow-hidden" style="background-color: {{ section.settings.background_color }};">
+  <div data-inner class="container {{ section.settings.container }} {{ margins_class }}">
+    <div data-content>
+      {%- render "swiper"
+        gutter_class: gutter_class,
+        slide_class: column_class,
+        items: items,
+        loop: true,
+        lazyload: false,
+        navigation_enabled: true,
+        autoplay_enabled: autoplay,
+        interval: interval
+      -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "t:sections.multicolumn_swiper.name",
+    "class": "section-mutlicolumn-swiper",
+    "tag": "section",
+    "enabled_on": {
+      "templates": [
+        "*"
+      ]
+    },
+    "settings": [
+      {
+        "type": "header",
+        "content": "🛠 Configuration"
+      },
+      {
+        "id": "autoplay_enabled",
+        "type": "checkbox",
+        "label": "t:sections.multicolumn_swiper.settings.autoplay_enabled.label",
+        "default": false
+      },
+      {
+        "id": "interval",
+        "type": "range",
+        "label": "t:sections.multicolumn_swiper.settings.scroll_interval.label",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "unit": "s",
+        "info": "t:sections.multicolumn_swiper.settings.scroll_interval.info",
+        "default": 5
+      },
+      {
+        "type": "header",
+        "content": "📐 Layout"
+      },
+      {
+        "type": "select",
+        "options": [
+          {
+            "value": "container",
+            "label": "Default",
+            "group": "Simple"
+          },
+          {
+            "value": "",
+            "label": "None",
+            "group": "Simple"
+          },
+          {
+            "value": "container-fluid",
+            "label": "Full width",
+            "group": "Simple"
+          },
+          {
+            "value": "container-sm-fixed",
+            "label": "Narrowest",
+            "group": "Fixed"
+          },
+          {
+            "value": "container-md-fixed",
+            "label": "Narrower",
+            "group": "Fixed"
+          },
+          {
+            "value": "container-lg-fixed",
+            "label": "Narrow",
+            "group": "Fixed"
+          },
+          {
+            "value": "container-xl-fixed",
+            "label": "Wide",
+            "group": "Fixed"
+          },
+          {
+            "value": "container-xxl-fixed",
+            "label": "Wider",
+            "group": "Fixed"
+          },
+          {
+            "value": "container-xxxl-fixed",
+            "label": "Widest",
+            "group": "Fixed"
+          },
+          {
+            "value": "container-sm",
+            "label": "Scale after 'sm' breakpoint",
+            "group": "Responsive"
+          },
+          {
+            "value": "container-md",
+            "label": "Scale after 'md' breakpoint",
+            "group": "Responsive"
+          },
+          {
+            "value": "container-lg",
+            "label": "Scale after 'lg' breakpoint",
+            "group": "Responsive"
+          },
+          {
+            "value": "container-xl",
+            "label": "Scale after 'xl' breakpoint",
+            "group": "Responsive"
+          },
+          {
+            "value": "container-xxl",
+            "label": "Scale after 'xxl' breakpoint",
+            "group": "Responsive"
+          },
+          {
+            "value": "container-xxxl",
+            "label": "Scale after 'xxxl' breakpoint",
+            "group": "Responsive"
+          }
+        ],
+        "id": "container",
+        "default": "container-xl-fixed",
+        "label": "t:sections.multicolumn_swiper.settings.container.label"
+      },
+      {
+        "type": "select",
+        "options": [
+          {
+            "value": "col-1",
+            "label": "8%"
+          },
+          {
+            "value": "colx-⅒",
+            "label": "10% (⅒)"
+          },
+          {
+            "value": "colx-⅛",
+            "label": "12.5% (⅛)"
+          },
+          {
+            "value": "col-2",
+            "label": "16% (⅙)"
+          },
+          {
+            "value": "colx-⅕",
+            "label": "20% (⅕)"
+          },
+          {
+            "value": "col-3",
+            "label": "25% (¼)"
+          },
+          {
+            "value": "col-4",
+            "label": "33% (⅓)"
+          },
+          {
+            "value": "col-5",
+            "label": "41% (⅖)"
+          },
+          {
+            "value": "col-6",
+            "label": "50% (½)"
+          },
+          {
+            "value": "col-7",
+            "label": "58% (⅗)"
+          },
+          {
+            "value": "col-8",
+            "label": "66% (⅔)"
+          },
+          {
+            "value": "col-9",
+            "label": "75% (¾)"
+          },
+          {
+            "value": "col-10",
+            "label": "83% (⅘)"
+          },
+          {
+            "value": "col-11",
+            "label": "91% (⅚)"
+          },
+          {
+            "value": "col-12",
+            "label": "100%"
+          }
+        ],
+        "id": "width_desktop",
+        "default": "col-12",
+        "label": "t:sections.multicolumn_swiper.settings.width_desktop.label"
+      },
+      {
+        "type": "select",
+        "options": [
+          {
+            "value": "col-1",
+            "label": "8%"
+          },
+          {
+            "value": "colx-⅒",
+            "label": "10% (⅒)"
+          },
+          {
+            "value": "colx-⅛",
+            "label": "12.5% (⅛)"
+          },
+          {
+            "value": "col-2",
+            "label": "16% (⅙)"
+          },
+          {
+            "value": "colx-⅕",
+            "label": "20% (⅕)"
+          },
+          {
+            "value": "col-3",
+            "label": "25% (¼)"
+          },
+          {
+            "value": "col-4",
+            "label": "33% (⅓)"
+          },
+          {
+            "value": "col-5",
+            "label": "41% (⅖)"
+          },
+          {
+            "value": "col-6",
+            "label": "50% (½)"
+          },
+          {
+            "value": "col-7",
+            "label": "58% (⅗)"
+          },
+          {
+            "value": "col-8",
+            "label": "66% (⅔)"
+          },
+          {
+            "value": "col-9",
+            "label": "75% (¾)"
+          },
+          {
+            "value": "col-10",
+            "label": "83% (⅘)"
+          },
+          {
+            "value": "col-11",
+            "label": "91% (⅚)"
+          },
+          {
+            "value": "col-12",
+            "label": "100%"
+          }
+        ],
+        "id": "width_mobile",
+        "default": "col-12",
+        "label": "t:sections.multicolumn_swiper.settings.width_mobile.label"
+      },
+      {
+        "type": "select",
+        "options": [
+          {
+            "value": "0",
+            "label": "None"
+          },
+          {
+            "value": "1",
+            "label": "Smallest"
+          },
+          {
+            "value": "2",
+            "label": "Smaller"
+          },
+          {
+            "value": "3",
+            "label": "Small"
+          },
+          {
+            "value": "4",
+            "label": "Large"
+          },
+          {
+            "value": "5",
+            "label": "Larger"
+          }
+        ],
+        "id": "gutter",
+        "default": "3",
+        "label": "t:sections.multicolumn_swiper.settings.gutter.label"
+      },
+      {
+        "type": "header",
+        "content": "🎨 Style"
+      },
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "t:sections.multicolumn_swiper.settings.background_color.label"
+      },
+      {
+        "type": "select",
+        "id": "arrows_style",
+        "options": [
+          {
+            "value": "text-dark",
+            "label": "t:sections.all.colors.dark.label"
+          },
+          {
+            "value": "text-light",
+            "label": "t:sections.all.colors.light.label"
+          },
+        ],
+        "default": "text-dark",
+        "label": "t:sections.multicolumn_swiper.settings.arrows_style.label"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "slide",
+        "name": "t:sections.multicolumn_swiper.blocks.slide.name",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image_desktop",
+            "label": "t:sections.multicolumn_swiper.blocks.slide.settings.image_desktop.label"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "t:sections.multicolumn_swiper.blocks.slide.settings.image_mobile.label"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "t:sections.multicolumn_swiper.blocks.slide.settings.link.label"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.multicolumn_swiper.presets.name",
+        "blocks": [
+          {
+            "type": "slide"
+          },
+          {
+            "type": "slide"
+          },
+          {
+            "type": "slide"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

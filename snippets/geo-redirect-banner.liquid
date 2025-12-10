@@ -1,0 +1,109 @@
+{% comment %}
+  Renders a geo redirect banner, if the current location is outside the shops
+  country.
+  Accepts:
+  - country_code: {String} Country Code (required)
+
+  Usage:
+    {% render 'geo-redirect-banner', country_code: 'DE' %}
+{% endcomment %}
+<aside class="geo-redirect-banner hidden">
+  <span></span>
+  <span class="geo-redirect-banner__btn"><a></a></span>
+</aside>
+<style>
+
+.geo-redirect-banner {
+  background: rgb(147, 94, 40);
+  color: #fff;
+  font-family:  var(--font-heading-family);
+  font-weight: 100;
+  line-height: 1.5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 12px;
+  width: 100%;
+  letter-spacing: -1.25px;
+}
+
+.geo-redirect-banner > span {
+  font-size: 18px;
+  text-align: center;
+
+  margin: 0 4px;
+}
+.geo-redirect-banner > span:first-child {
+  line-height: 2;
+}
+.geo-redirect-banner > span.geo-redirect-banner__btn > a {
+  background: rgba(0,0,0,0.2);
+  color: #fff;
+  display: block;
+  font-weight: 200;
+  font-family:  var(--font-heading-family);
+  font-size: 18px;
+  line-height: 1.5;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 2px;
+
+  transition: background 200ms;
+}
+.geo-redirect-banner > span.geo-redirect-banner__btn > a:hover {
+  background: rgba(0,0,0,0.3);
+}
+
+.geo-redirect-banner.hidden {
+  display: none;
+}
+</style>
+
+<script>
+  var langs = {
+    'AT': ['Es sieht aus als wärst du aus Österreich', 'Zum österreichischen Shop 🇦🇹',   'https://odonnell.at'],
+    'CH': ['Es sieht aus als wärst du aus der Schweiz', 'Zum schweizer Shop 🇨🇭',         'https://odonnellmoonshine.ch'],
+    'DE': ['Es sieht aus als wärst du aus Deutschland', 'Zum deutschen Shop 🇩🇪',         'https://odonnell.de'],
+    'ES': ['Parece que eres de España',                 'A la tienda española 🇪🇸',       'https://odonnellmoonshine.es'],
+    'FR': ['On dirait que vous venez de France',        'Vers la boutique française 🇫🇷', 'https://odonnell.fr'],
+    'UK': ['It looks like you are from the UK',         'To the UK Shop 🇬🇧',             'https://odonnellmoonshine.co.uk'],
+    'NL': ['Het lijkt erop dat je uit Nederland komt',  'Naar de Nederlandse shop 🇳🇱',   'https://odonnell.nl'],
+  };
+  var timeout = 24 * 60 * 60; // seconds after which the ip country is rechecked
+  
+  window.addEventListener('load', function(){
+    jQuery(function($) {
+      var code = localStorage.getItem('ip-code');
+      var time = localStorage.getItem('ip-code-time'); // time of last check
+  
+  
+      var shopCode = "{{ country_code }}";
+      var now = new Date().getTime();
+  
+      if (code == null || now - time > timeout) {
+        $.get('https://api.ipdata.co/?api-key=2fbe4a76b7baa25da9f95834590fe8d9135e896d5524e45185d02d9c&fields=country_code', function(res) {
+          code = res.country_code;
+          if (code=='GB'){
+            code= 'UK';
+          }
+          localStorage.setItem('ip-code', code);
+          localStorage.setItem('ip-code-time', now);
+          if (code != shopCode && code in langs) {
+            $('aside.geo-redirect-banner > span:first-child').text(langs[code][0]);
+            $('aside.geo-redirect-banner > span > a').text(langs[code][1]);
+            $('aside.geo-redirect-banner > span > a').attr('href', langs[code][2]);
+            $('aside.geo-redirect-banner').removeClass('hidden');
+          }
+        });
+      }
+  
+      if (code != shopCode && code in langs) {
+        $('aside.geo-redirect-banner > span:first-child').text(langs[code][0]);
+        $('aside.geo-redirect-banner > span > a').text(langs[code][1]);
+        $('aside.geo-redirect-banner > span > a').attr('href', langs[code][2]);
+        $('aside.geo-redirect-banner').removeClass('hidden');
+      }
+    });
+   });
+  </script>

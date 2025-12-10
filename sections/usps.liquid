@@ -1,0 +1,255 @@
+{%- comment -%}
+  Render a grid (desktop) and carousel (mobile) or simple USPs
+
+  Usage:
+  - Exclusively within JSON templates
+{%- endcomment -%}
+
+<link rel="stylesheet" href="{{ 'component-usps.css' | asset_url }}" media="print" onload="this.media='all'">
+
+{%- liquid 
+  assign margins_class = ""
+  if section.settings.override_margins_enabled and section.settings.margins_class != empty
+    assign margins_class = section.settings.margins_class
+  endif
+-%}
+
+{%- style -%}
+  .section-usps {
+    xdisplay: none;
+  }
+  @media screen and (min-width: 990px) {
+    .usps-mobile {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 989px) {
+    .usps-desktop {
+      display: none;
+    }
+  }
+{%- endstyle -%}
+
+{%- comment -%}
+  {%- if request.design_mode -%}
+    {%- style -%}
+      .section-usps {
+        display: block !important;
+      }
+    {%- endstyle -%}
+  {%- endif -%}
+{%- endcomment -%}
+
+{%- if section.blocks.size > 0 -%}
+  <div class="{{ margins_class }} usps {% if request.visual_preview_mode %} preview-mode{% endif %}" style="background-color: {{ section.settings.background_colour }};">
+    <div class="usps-desktop">
+      {%- for block in section.blocks -%}
+        {%- if block.settings.override_settings_enabled and block.settings.code != empty -%}
+        <div class="col"
+          {% if section.settings.borders_enabled %} style="border-right: 1px solid; border-color: {{ section.settings.border_colour }}" {% endif %}>
+          <div>
+            {{- block.settings.code -}}
+          </div>
+        </div>
+        {%- else -%}
+         <div class="col"
+            style="background-color: {{ block.settings.background_colour }};
+            {% if section.settings.borders_enabled %} border-right: 1px solid; border-color: {{ section.settings.border_colour }} {% endif %}">
+            {%- render "card-usp"
+              icon: block.settings.icon,
+              title: block.settings.title,
+              subtitle: block.settings.subtitle,
+              content: block.settings.content,
+              link: block.settings.link,
+            -%}
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    <div id="usps-carousel-{{ section.id }}" class="usps-mobile">
+      <div class="swiper-wrapper">
+        {%- for block in section.blocks -%}
+          {%- if block.settings.override_settings_enabled and block.settings.code != empty -%}
+            <div class="swiper-slide" style="background-color: {{ block.settings.background_colour }};">
+              {{- block.settings.code -}}
+            </div>
+          {%- else -%}
+            <div class="swiper-slide" style="background-color: {{ block.settings.background_colour }};">
+              {%- render "card-usp"
+                icon: block.settings.icon,
+                title: block.settings.title,
+                subtitle: block.settings.subtitle,
+                content: block.settings.content,
+                link: block.settings.link,
+              -%}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+
+  </div>
+{%- endif -%}
+
+<script>
+  const swiper_usps = new Swiper('#usps-carousel-{{ section.id }}', {
+    // Optional parameters
+    loop: true,
+    slidesPerView: 1,
+    autoplay: {
+      autoHeight: true,
+      delay: {{ section.settings.slider_speed }},
+      disableOnInteraction: {{ section.settings.autoplay_stop_on_interaction }},
+    },
+  })
+</script>
+
+{% schema %}
+{
+  "name": "USPs",
+  "class": "overflow-hidden position-relative section-usps",
+  "settings": [
+    {
+      "type": "header",
+      "content": "🛠 Configuration"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay_stop_on_interaction",
+      "label": "Stops Autoplay on Interaction",
+      "default": false
+    },
+    {
+      "type": "number",
+      "id": "slider_speed",
+      "label": "Slider Speed (mobile)",
+      "default": 2500
+    },
+    {
+      "type": "header",
+      "content": "🎨 Style"
+    },
+    {
+      "type": "color",
+      "id": "background_colour",
+      "label": "Background colour"
+    },
+    {
+      "type": "color",
+      "id": "border_colour",
+      "label": "Border colour"
+    },
+    {
+      "type": "checkbox",
+      "id": "borders_enabled",
+      "label": "Separate USPs with border",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "⚙️ Advanced"
+    },
+    {
+      "label": "Override margins",
+      "id": "override_margins_enabled",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "label": "Margin class",
+      "id": "margins_class",
+      "type": "text"
+    }
+  ],
+  "max_blocks": 3,
+  "blocks": [
+    {
+      "type": "usp",
+      "name": "USP",
+      "settings": [
+        {
+          "type": "header",
+          "content": "📝 Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "label": "Title",
+          "id": "title",
+          "type": "text",
+          "info": "Has no effect, for reference only"
+        },
+        {
+          "label": "Content",
+          "id": "content",
+          "type": "text"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "header",
+          "content": "🎨 Style"
+        },
+        {
+          "type": "color",
+          "id": "background_colour",
+          "label": "Background colour"
+        },
+        {
+          "type": "header",
+          "content": "⚙️ Advanced"
+        },
+        {
+          "label": "Override settings",
+          "id": "override_settings_enabled",
+          "type": "checkbox",
+          "default": false,
+          "info": "If enabled, the 'Custom code' below will be used instead of the block's other settings."
+        },
+        {
+          "type": "liquid",
+          "id": "code",
+          "label": "Custom code",
+          "default": "<div class='bg-primary text-white p-3'>Your custom code...</div>",
+          "info": "This accepts add any arbitrary HTML or Liquid for when custom USPs are required (e.g. for a specific design)."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "USPs",
+      "blocks": [
+        {
+          "type": "usp",
+          "settings": {
+            "override_settings_enabled": true,
+            "code": "<div class='p-3'>An example USP</div>"
+          }
+        },
+        {
+          "type": "usp",
+          "settings": {
+            "override_settings_enabled": true,
+            "code": "<div class='p-3'>An example USP</div>"
+          }
+        },
+        {
+          "type": "usp",
+          "settings": {
+            "override_settings_enabled": true,
+            "code": "<div class='p-3'>An example USP</div>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

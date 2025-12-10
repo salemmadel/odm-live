@@ -1,0 +1,35 @@
+{%- if upsell_products != blank -%}
+  <script src="{{ 'cart-upsell.js' | asset_url }}" defer="defer"></script>
+  <cart-upsell id="cart-upsell-items" class="cart-upsell">
+    <h3 class="cart-upsell-items-headline">
+      {{ 'cart_upsell.headline' | t }}
+    </h3>
+    
+    <div class="loading-overlay hidden">
+      <div class="loading-overlay__spinner">
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          role="presentation"
+          class="spinner"
+          viewBox="0 0 66 66"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+        </svg>
+      </div>
+    </div>
+    <div class="swiper cart-upsell-swiper">
+      <div class="swiper-wrapper">
+        {%- for item in upsell_products -%}
+          <div class="swiper-slide">
+            {% render 'cart-upsell-item' product_data: item.settings.product, index: forloop.index %}
+          </div>
+        {%- endfor -%}
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </cart-upsell>
+{%- endif -%}

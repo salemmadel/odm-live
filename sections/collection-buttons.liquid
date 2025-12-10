@@ -1,0 +1,51 @@
+{{ 'component-collection-button.css' | asset_url | stylesheet_tag }}
+
+{% assign newArray = false %}
+{% assign zeroFill = '0000' %}
+{% assign zeroFillSize = zeroFill | size %}
+{% for c in collections %}
+  {% if c.image and c.title != collection.title %}
+    {% assign indexCharSize = forloop.index0 | append:'' | size %}
+    {% assign toSlice = zeroFillSize | minus:indexCharSize %}
+    {% assign tmpZeroFill = zeroFill | slice:0,toSlice %}
+    {% assign newOrder = c.metafields.order.order | default:'999999' %}
+    {% assign matrix = tmpZeroFill | append:newOrder | append:'.'  | append: c.handle %}
+    {% if newArray %}
+      {% assign tmpIndex = matrix | split:',' %}
+      {% assign newArray = newArray | concat:tmpIndex %}
+    {% else %}
+      {% assign newArray = matrix | split:',' %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+{% assign newArray = newArray | sort %}
+
+<div class="collection-btns">
+  <h2 class="collection-btns__title"> {{ section.settings.title }}</h2>
+  {% for newArrayItem in newArray %}
+    {% assign i = newArrayItem | split:'.' | last %}
+    <a class="collection-btns__link" href="{{ collections[i].url }}">
+      {% if collections[i].metafields.page.title %}
+        {{ collections[i].metafields.page.title }}
+      {% else %}
+        {{ collections[i].title }}
+      {% endif %}
+    </a>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Collection buttons",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title for other collections"
+    }
+  ],
+  "presets": [{
+    "name": "Collection buttons"
+  }]
+}
+{% endschema %}

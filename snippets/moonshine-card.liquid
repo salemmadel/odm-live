@@ -1,0 +1,61 @@
+{% comment %}
+  Renders a store card
+  Accepts:
+  - product_text: {String} Text next to product (required)
+  - product_name: {String} Name of the product (required)
+  - product_asset_url:
+  - even: {Boolean} positiones the moonshine (required)
+
+  Usage:
+  {% render 'moonshine-card', product_name: block.settings.product_name, is_even: is_even, product_headline: block.settings.product_headline, product_image: block.settings.product_image %}
+{% endcomment %}
+
+{% assign product = all_products[product_name] %}
+<div class="history-moonshine__card"> <!-- container for one bottle -->
+    {{ product_image | image_url: width: 1024 | image_tag: alt: product_image.alt, class: 'history-moonshine__img', widths: '200, 550, 700, 1024' }}
+
+    <div class="season_badge">
+      {%- if product.tags contains 'blackfriday' -%}
+        <div class="product__badge product__season-badge ">
+        {% liquid 
+          assign special_img = "BlackFridayBadge.png"
+          assign bf_80x = special_img | file_img_url: '80x'
+          assign bf_100x = special_img | file_img_url: '100x'
+          assign bf_200x = special_img | file_img_url: '200x'
+          assign bf_300x = special_img | file_img_url: '300x'
+          %}
+          <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ special_img | file_img_url: '200x' }}"
+            loading="lazy"
+            aspectratio="2.4" 
+            sizes="auto" 
+            data-srcset="{{ bf_80x }} 80w,
+                          {{ bf_100x }} 100w,
+                          {{ bf_200x }} 200w,
+                          {{ bf_300x }} 300w"
+            width="120" height="120"
+            alt="" class=" season-badge--blackfriday lazyload" >
+          </div>
+        {%- elsif  product.tags contains 'Gang' -%}
+          <div class="product__badge product__gang-badge">
+            {{ 'gang_badge-light.png' | file_img_url: '130x' | img_tag: 'gang', '100x100', class:"product__gang-badge-image" }}
+          </div>
+        {%- else -%}
+            {%- if  product.tags contains 'summer' and settings.show_summer_badges -%}
+              <div class="product__badge product__season-badge ">
+              {{ 'summer.png' | file_img_url: '130x' | img_tag: 'summer', '110x110', class:"product__season-badge-image" }}
+              </div>
+            {%- elsif product.tags contains 'winter' and settings.show_winter_badges  -%}
+              <div class="product__badge product__season-badge ">
+              {{ 'WinterEdition23.png' | file_img_url: '130x' | img_tag: 'winter', '110x110', class:"product__season-badge-image" }}
+              </div>
+            {%- endif -%}
+        {%- endif -%}
+    </div>
+  
+  <div class="text-center">
+    {{ product_headline | image_url: width: 700 | image_tag: alt: product_headline.alt, class: 'history-moonshine__img', widths: '200, 550, 700' }}
+
+    {%- assign linktext = 'general.accessibility.discover_here' | t -%}
+    <a href ="{{ product.url }}" class="history-moonshine__card__link">{{ linktext }}</a>
+  </div>
+</div>

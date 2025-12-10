@@ -1,0 +1,16 @@
+{% comment %} Usage: {% render 'account-details'%} {% endcomment %}
+
+<div>
+    <b>{{ 'customer.addresses.default_address' | t }}:</b>{{ customer.default_address | format_address }}
+    <b>{{ 'customer.addresses.phone' | t }}:</b> <br>{{ customer.default_address.phone }}<br>
+
+    <p>
+    <a href="{{ routes.account_addresses_url }}">
+    {{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
+    </a><br>
+    <a href="/account/login#recover">
+        {{ 'customer.account.password' | t }}
+    </a>
+</p>
+
+</div>

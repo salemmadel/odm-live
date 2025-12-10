@@ -1,0 +1,624 @@
+<link rel="stylesheet" href="{{ 'component-newsletter.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-action-shortcut.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-action-popup.css' | asset_url }}" media="print" onload="this.media='all'">
+
+
+<noscript>{{ 'component-newsletter.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-action-shortcut.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-action-popup.css' | asset_url | stylesheet_tag }}</noscript>
+
+{%- style -%}
+.section-{{ section.id }}-padding {
+  padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+  padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+}
+
+@media screen and (min-width: 750px) {
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+}
+#shopify-section-{{ section.id }} .action-shortcut {
+    background-color: {{ section.settings.background_color }};
+}
+#shopify-section-{{ section.id }} .action-shortcut p, .action-shortcut__close{
+    color: {{ section.settings.text_color_mobile }};
+
+}
+
+#shopify-section-{{ section.id }} .action-popup  {
+  background-color: {{ section.settings.background_color }};
+}
+
+#shopify-section-{{ section.id }} .action-popup__media{
+  background-color: {{ section.settings.background_color_img }};
+
+}
+@media screen and (max-width: 749px) {
+  #shopify-section-{{ section.id }} .action-popup__content{
+    background-color: {{ section.settings.background_color_img }};
+  }
+  #shopify-section-{{ section.id }} p, #shopify-section-{{ section.id }} h2, #shopify-section-{{ section.id }} h1 span:first-child,  #shopify-section-{{ section.id }} a, #shopify-section-{{ section.id }} .action__close  {
+  color: {{ section.settings.text_color_mobile }};
+  text-shadow: none !important;
+}
+}
+@media screen and (min-width: 750px) {
+  #shopify-section-{{ section.id }} p, #shopify-section-{{ section.id }} h2,  #shopify-section-{{ section.id }} .action__close {
+      color: {{ section.settings.text_color }};
+  }
+}  
+#shopify-section-{{ section.id }} .image_caption {
+  padding-left: 4rem;
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 750px) {
+  #shopify-section-{{ section.id }} .image_caption {
+    padding-left: 0rem;
+  }
+}
+
+
+{%- if section.settings.image_caption != blank -%}
+#shopify-section-{{ section.id }} .action-popup {
+  padding-bottom: 7rem;
+}
+{%- endif -%}
+
+{%- endstyle -%}
+
+
+<div data-newsletter-popup="{{ section.settings.enable_popup }}">
+</div>
+  
+<div id="newsletter-shortcut"></div>
+
+<script defer="defer">
+  // container for popup
+  const container = document.querySelector('[data-newsletter-popup]')
+  const popup = `{% render 'action-popup-template', id: section.id, content_layout: section.settings.content_layout, color_scheme: section.settings.color_scheme, desktop_image_width: section.settings.desktop_image_width, layout: section.settings.layout, desktop_content_position: section.settings.desktop_content_position, desktop_content_alignment: section.settings.desktop_content_alignment, tablet_content_alignment: section.settings.tablet_content_alignment, mobile_content_alignment: section.settings.mobile_content_alignment, height: section.settings.height, image: section.settings.image, image_tablet: section.settings.image_tablet, subheading: block.settings.subheading, heading: block.settings.heading, blocks: section.blocks %}`
+  container.style.display ="none"
+  // container for shortcut
+  const container_shortcut = document.querySelector('#newsletter-shortcut')
+  const shortcut = `{% render 'action-shortcut', id: section.id, newsletter_shortcut: section.settings.newsletter_shortcut, image_background: section.settings.image_bg_desktop %}`
+
+
+  // check if user doesn't want to see the popup anymore
+  const show = localStorage.getItem('newsletter_show');
+
+  localStorage.setItem('newsletter_show', true); // Hide the newsletter-popup and shortcut
+
+  // if popup is enabled abd user didn't hide popup 
+  if(container.dataset.newsletterPopup == "true" && show != 'false') {
+    container_shortcut.innerHTML = shortcut;
+    container.innerHTML = popup;
+    container.style.display ="none"
+
+    // close popup and display shortcut
+    //switchTabs('#newsletter-close', '.nl__popup', '.nl__shortcut')
+    const switchPopup = document.querySelector('#action-popup-close')
+    switchPopup.addEventListener('click', event => {
+      fadeOutBottom('.action-popup')
+      fadeInLeft('.nl__shortcut')
+      // delete popup element after fade out animation
+      setTimeout(function (){
+        container.style.display ="none"
+        $('.nl__shortcut').removeClass('inactive')
+      }, 500); 
+    })
+
+    // display popup window when shortcut clicked
+   // switchTabs('.newsletter-note__message', '.nl__shortcut', '.nl__popup')
+    const switchShortcut= document.querySelector('.action-shortcut__message')
+    switchShortcut.addEventListener('click', event => {
+      fadeOutLeft('.nl__shortcut');
+      fadeInBottom('.action-popup');
+      // delete popup element after fade out animation
+      setTimeout(function (){
+        $('.nl__shortcut').addClass('inactive')
+        container.style.display ="block"
+      }, 500); 
+    })
+
+
+    //close shortcut 
+    const closeShortcut = document.querySelector('.action-shortcut__close')
+        closeShortcut.addEventListener('click', event => {
+          fadeOutLeft('.nl__shortcut');
+          localStorage.setItem('newsletter_show', false); // Hide the newsletter-popup and shortcut
+          // delete popup element after fade out animation
+          setTimeout(function (){
+            $('.nl__shortcut').addClass('inactive')
+          }, 500); 
+        })
+  }
+
+  
+
+  function fadeOutLeft(element){
+    $(element).animate({
+      opacity: 0, 
+      left: '-80px'
+    }, 600, 'linear');
+  }
+
+  function fadeInLeft(element){
+    $(element).animate({
+      opacity: 1, 
+      left: 0
+    }, 600, 'linear');
+  }
+
+  function fadeOutBottom(element){
+    $(element).animate({
+      opacity: 0, 
+      top: '200px'
+    }, 500, 'linear');
+  }
+  function fadeInBottom(element){
+    if($(window).width() < 750)
+      {
+         // change functionality for smaller screens
+         $(element).animate({
+          opacity: 1, 
+          top: '40px'
+        }, 600, 'linear');
+      } else {
+         // change functionality for larger screens
+         $(element).animate({
+          opacity: 1, 
+          top: '0px'
+        }, 600, 'linear');
+      }
+  }
+
+  {% comment %}
+
+  function fade(element) {
+    var op = 1;  // initial opacity
+    var timer = setInterval(function () {
+        if (op <= 0.1){
+            clearInterval(timer);
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.2;
+    }, 50);
+  }
+
+  function unfade(element) {
+    var op = 0.1;  // initial opacity
+    var timer = setInterval(function () {
+        if (op >= 1){
+            clearInterval(timer);
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op += op * 0.2;
+    }, 10);
+}
+ function switchTabs(currClass ,activeTab, inactiveTab){
+    const close = document.querySelector(currClass)
+        close.addEventListener('click', event => {
+          fade(document.querySelector(activeTab))
+          unfade(document.querySelector(inactiveTab))
+          // delete popup element after fade out animation
+          setTimeout(function (){
+            $(activeTab).addClass('inactive')
+            $(inactiveTab).removeClass('inactive')
+          }, 500); 
+        })
+  }
+
+{% endcomment %}
+</script>
+
+{% schema %}
+{
+  "name": "Action Popup",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_popup",
+      "label": "t:sections.newsletter.popup.enable",
+      "default": false,
+      "info": "Check if Content is loaded first to eliminate CLS"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#000"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image Desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_tablet",
+      "label": "Image Tablet"
+    },
+    {
+      "type": "color",
+      "id": "background_color_img",
+      "label": "Background Color of Image",
+      "default": "#000"
+    },
+    {
+    "type": "select",
+    "id": "height",
+    "options": [
+      {
+        "value": "adapt",
+        "label": "t:sections.image-with-text.settings.height.options__1.label"
+      },
+      {
+        "value": "small",
+        "label": "t:sections.image-with-text.settings.height.options__2.label"
+      },
+      {
+        "value": "large",
+        "label": "t:sections.image-with-text.settings.height.options__3.label"
+      }
+    ],
+    "default": "adapt",
+    "label": "t:sections.image-with-text.settings.height.label"
+  },
+  {
+    "type": "select",
+    "id": "desktop_image_width",
+    "options": [
+      {
+        "value": "small",
+        "label": "t:sections.image-with-text.settings.desktop_image_width.options__1.label"
+      },
+      {
+        "value": "medium",
+        "label": "t:sections.image-with-text.settings.desktop_image_width.options__2.label"
+      },
+      {
+        "value": "large",
+        "label": "t:sections.image-with-text.settings.desktop_image_width.options__3.label"
+      }
+    ],
+    "default": "medium",
+    "label": "t:sections.image-with-text.settings.desktop_image_width.label",
+    "info": "t:sections.image-with-text.settings.desktop_image_width.info"
+  },
+    {
+      "type": "select",
+      "id": "layout",
+      "options": [
+        {
+          "value": "image_first",
+          "label": "t:sections.image-with-text.settings.layout.options__1.label"
+        },
+        {
+          "value": "text_first",
+          "label": "t:sections.image-with-text.settings.layout.options__2.label"
+        }
+      ],
+      "default": "image_first",
+      "label": "t:sections.image-with-text.settings.layout.label",
+      "info": "t:sections.image-with-text.settings.layout.info"
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_position",
+      "options": [
+        {
+          "value": "top",
+          "label": "t:sections.image-with-text.settings.desktop_content_position.options__1.label"
+        },
+        {
+          "value": "middle",
+          "label": "t:sections.image-with-text.settings.desktop_content_position.options__2.label"
+        },
+        {
+          "value": "bottom",
+          "label": "t:sections.image-with-text.settings.desktop_content_position.options__3.label"
+        }
+      ],
+      "default": "top",
+      "label": "t:sections.image-with-text.settings.desktop_content_position.label"
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.image-with-text.settings.desktop_content_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.image-with-text.settings.desktop_content_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.image-with-text.settings.desktop_content_alignment.options__3.label"
+        }
+      ],
+      "default": "left",
+      "label": "t:sections.image-with-text.settings.desktop_content_alignment.label"
+    },
+    {
+      "type": "select",
+      "id": "content_layout",
+      "options": [
+        {
+          "value": "no-overlap",
+          "label": "t:sections.image-with-text.settings.content_layout.options__1.label"
+        },
+        {
+          "value": "overlap",
+          "label": "t:sections.image-with-text.settings.content_layout.options__2.label"
+        }
+      ],
+      "default": "no-overlap",
+      "label": "t:sections.image-with-text.settings.content_layout.label"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        },
+        {
+          "value": "transparent",
+          "label": "transparent"
+        }
+      ],
+      "default": "background-1",
+      "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "header",
+      "content": "Tablet layout"
+    },
+    {
+      "type": "select",
+      "id": "tablet_content_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.image-with-text.settings.mobile_content_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.image-with-text.settings.mobile_content_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.image-with-text.settings.mobile_content_alignment.options__3.label"
+        }
+      ],
+      "default": "left",
+      "label": "Tablet Content Alignment"
+    },
+    {
+      "type": "header",
+      "content": "Mobile layout"
+    },
+    {
+      "type": "color",
+      "id": "text_color_mobile",
+      "label": "Text Color Mobile",
+      "default": "#fff"
+    },
+    {
+      "type": "select",
+      "id": "mobile_content_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.image-with-text.settings.mobile_content_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.image-with-text.settings.mobile_content_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.image-with-text.settings.mobile_content_alignment.options__3.label"
+        }
+      ],
+      "default": "left",
+      "label": "t:sections.image-with-text.settings.mobile_content_alignment.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "image_picker",
+      "id": "image_bg_desktop",
+      "label": "t:sections.newsletter.popup.image_bg"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_shortcut",
+      "label": "t:sections.newsletter.popup.shortcut"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefits",
+      "name": "t:sections.newsletter.popup.benefits",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Subscribe to our emails",
+          "label": "t:sections.newsletter.popup.benefit"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.newsletter.popup.benefit_icon"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "t:sections.image-with-text.blocks.heading.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "heading",
+          "default": "<p>Heading</p>",
+          "label": "Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "subheading",
+          "label": "Subheading"
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "options": [
+            {
+              "value": "body",
+              "label": "t:sections.image-with-text.blocks.text.settings.text_style.options__1.label"
+            },
+            {
+              "value": "subtitle",
+              "label": "t:sections.image-with-text.blocks.text.settings.text_style.options__2.label"
+            }
+          ],
+          "default": "body",
+          "label": "t:sections.image-with-text.blocks.text.settings.text_style.label"
+        }
+        
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.image-with-text.blocks.text.name",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+          "label": "t:sections.image-with-text.blocks.text.settings.text.label"
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "options": [
+            {
+              "value": "body",
+              "label": "t:sections.image-with-text.blocks.text.settings.text_style.options__1.label"
+            },
+            {
+              "value": "subtitle",
+              "label": "t:sections.image-with-text.blocks.text.settings.text_style.options__2.label"
+            }
+          ],
+          "default": "body",
+          "label": "t:sections.image-with-text.blocks.text.settings.text_style.label"
+        }
+      ]
+    },
+    {
+      "type": "email_form",
+      "name": "t:sections.newsletter.blocks.email_form.name",
+      "limit": 1,
+      "settings":[
+          {
+              "type": "richtext",
+              "id": "newsletter_legal_notice",
+              "label": "t:sections.newsletter.popup.legal_notice"
+          },
+          {
+              "type": "image_picker",
+              "id": "image_desktop",
+              "label": "Subscribe Image Desktop"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_tablet",
+            "label": "Subscribe Image Tablet"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Subscribe Image Mobile"
+      }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Action Popup",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "email_form"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,35 @@
+{% comment %} Usage: {% render 'gang-tiers'%} {% endcomment %}
+<div class="gang__tiers__container">
+    <div class="gang__tier">
+        <div class="h2 color-inverse">
+        {{'gang.tiers.prospect.name' | t}}
+        {% if customer.tags contains "tier: Prospect" %}
+            {{ 'circlered.png' | file_img_url: '500x' | img_tag: '','gang__tier__img','500x200' }}  
+        {% endif %}
+        </div>
+        <div class="gang__requirements">{{'gang.tiers.prospect.requirement' | t}}</div>
+        <div class="gang__benefits">{{'gang.tiers.prospect.benefits_html' | t}}</div>
+    </div>
+
+    <div class="gang__tier">
+        <div class="h2 color-inverse">
+        {{'gang.tiers.bootlegger.name' | t}}
+        {% if customer.tags contains "tier: Bootlegger" %}
+            {{ 'circlered.png' | file_img_url: '500x' | img_tag: '','gang__tier__img','500x200' }}     
+        {% endif %}
+        </div>
+        <div class="gang__requirements">{{'gang.tiers.bootlegger.requirement' | t}}</div>
+        <div class="gang__benefits">{{'gang.tiers.bootlegger.benefits_html' | t}}</div>
+    </div>
+
+    <div class="gang__tier">
+        <div class="h2 color-inverse">
+        {{'gang.tiers.chief.name' | t}}
+        {% if customer.tags contains "tier: Chief"%}
+            {{ 'circlered.png' | file_img_url: '500x' | img_tag: '','gang__tier__img','500x200' }}     
+        {% endif %}
+        </div>
+        <div class="gang__requirements">{{'gang.tiers.chief.requirement' | t}}</div>
+        <div class="gang__benefits">{{'gang.tiers.chief.benefits_html' | t}}</div>
+    </div>
+</div>

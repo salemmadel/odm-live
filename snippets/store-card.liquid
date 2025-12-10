@@ -1,0 +1,9 @@
+{% comment %}
+    Usage:
+    {% render 'store_card', store_headline: store_headline,  store_info: store_info, image: image %}
+{% endcomment %}
+
+<div class="store_card__address"  style="background-image: url('{{ 'black-paint.png' | file_img_url: '500x' }}')">
+{{- store_info -}}
+</div>
+{{ image | image_url: width: 3840, format: 'pjpg' | image_tag: widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: image.alt, loading: 'lazy', class: "store__img" }}

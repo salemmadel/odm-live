@@ -1,0 +1,107 @@
+.christmas_landingpage img {
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.deco {
+  margin-bottom: 1.5rem;
+  background-size: contain;
+  width: 100vw;
+  display: block !important;
+}
+
+.top__title {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 1024px) {
+  .top__title {
+    max-width: 66%;
+  }
+}
+
+.mono {
+  font-family: var(--font-heading-family);
+}
+
+.christmas__star {
+  margin-bottom: 0.5rem;
+  height: 6rem;
+  background-size: contain;
+}
+@media (min-width: 1024px) {
+  .christmas__star {
+    height: 12rem;
+  }
+}
+
+.christmas__text {
+  margin-bottom: 1.5rem;
+  line-height: 1.75rem;
+}
+@media (min-width: 1024px) {
+  .christmas__text {
+    text-align: center;
+  }
+}
+
+.christmas__products {
+  display: grid;
+  padding: 0;
+  margin: 0.5rem 0 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.christmas__products li {
+  list-style: none;
+}
+@media (min-width: 768px) {
+  .christmas__products {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  .christmas__products {
+    gap: 1.5rem;
+    max-width: 66%;
+    margin: auto;
+  }
+}
+
+.christmas__cocktail--image img {
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 1024px) {
+  .christmas__cocktail--image img {
+    width: 50%;
+    margin: auto;
+  }
+}
+
+.christmas__cocktail--image {
+  text-align: center;
+}
+
+.christmas__cocktail {
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 1024px) {
+  .christmas__cocktail {
+    max-width: 66%;
+  }
+}
+
+.christmas__recipe {
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .christmas__recipe {
+    width: 66%;
+  }
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../.src/scss/landingpage-christmas.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AACI;EACI;EACA;EACA;EACA;;;AAIR;EACI;EACA;EACA;EACA;;;AAKJ;EACI;EACA;EACA;;AAEA;EALJ;IAMQ;;;;AAKR;EACI;;;AAGJ;EACI;EACA;EACA;;AAEA;EALJ;IAMQ;;;;AAIR;EACI;EACA;;AAEA;EAJJ;IAKI;;;;AAIJ;EACI;EACA;EACA;EACA;EACA;;AACA;EACI;;AAGJ;EAVJ;IAWQ;;;AAEJ;EAbJ;IAcQ;IACA;IACA;;;;AAKR;EACI;EACA;;AAEA;EAJJ;IAKQ;IACA;;;;AAIR;EACI;;;AAGJ;EACI;;AAEA;EAHJ;IAIQ;;;;AAIR;EACI;;AACA;EAFJ;IAGQ%22,%22file%22:%22landingpage-christmas.css%22%7D */

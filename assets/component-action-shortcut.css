@@ -1,0 +1,54 @@
+/* stylelint-disable selector-class-pattern, selector-no-qualifying-type, declaration-property-value-disallowed-list, selector-max-compound-selectors, selector-max-id */
+.action-shortcut {
+  border-radius: 4px;
+  margin-left: 0;
+  padding: 0 0.5rem;
+  position: relative;
+  position: fixed;
+  top: 50%;
+  transform: rotate(-90deg) translate(-50%, 0);
+  transform-origin: left top;
+  z-index: 2;
+}
+
+.action-shortcut__content {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+
+.inactive {
+  display: none;
+}
+
+.action-shortcut__message {
+  border-radius: 0;
+  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
+  padding-left: 2px;
+  padding-right: 4px;
+}
+
+.action-shortcut__message p {
+  color: white;
+  font-family: var(--font-body-family);
+  font-size: 14px;
+  line-height: 2rem;
+}
+
+.action-shortcut__close,
+.action-shortcut__message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.action-shortcut__close svg {
+  height: 10px;
+  width: 20px;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../.src/scss/component-action-shortcut.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;AACA;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAIF;EACE;EACA;EACA;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;;AAIF;EACE;EACA;EACA;EACA;;;AAGF;AAAA;EAEE;EACA;EACA;;;AAIF;EACE;EACA%22,%22file%22:%22component-action-shortcut.css%22%7D */

@@ -1,0 +1,59 @@
+/* stylelint-disable selector-class-pattern, selector-no-qualifying-type, declaration-property-value-disallowed-list, selector-max-compound-selectors, selector-max-id */
+.newsletter-note {
+  border-radius: 4px;
+  margin-left: 0;
+  padding: 0 0.5rem;
+  position: relative;
+  position: fixed;
+  top: 50%;
+  transform: rotate(-90deg) translate(-50%, 0);
+  transform-origin: left top;
+  z-index: 4;
+}
+
+.newsletter-note__content {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+
+.inactive {
+  display: none;
+}
+
+.newsletter-note__message {
+  border-radius: 0;
+  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
+  padding-right: 4px;
+}
+
+.newsletter-note__message p {
+  color: #000;
+  font-family: var(--font-body-family);
+  font-size: 14px;
+  line-height: 2rem;
+}
+
+.newsletter-note__close,
+.newsletter-note__message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nl-note__close {
+  color: #000;
+  margin-right: 0.7rem;
+}
+
+.nl-note__close svg {
+  height: 10px;
+  width: 20px;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../.src/scss/component-newsletter-shortcut.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;AACA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;;AAIF;EACE;;;AAGF;EACE;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;;;AAGF;AAAA;EAGE;EACA;EACA;;;AAGF;EACE;EACA;;;AAIF;EACE;EACA%22,%22file%22:%22component-newsletter-shortcut.css%22%7D */

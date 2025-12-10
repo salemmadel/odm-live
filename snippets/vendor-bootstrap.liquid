@@ -1,0 +1,10 @@
+{%- comment -%}
+  Renders Bootstrap 5.2
+
+  Usage:
+  {%- render 'vendor-bootstrap' -%}
+
+{%- endcomment -%}
+
+<script src="{{ 'bootstrap.min.js' | asset_url }}" defer="defer"></script>
+{{ 'bootstrap.min.css' | asset_url | stylesheet_tag: preload: true }}

@@ -1,0 +1,28 @@
+"use strict";
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+(self["webpackChunktheme_template"] = self["webpackChunktheme_template"] || []).push([["cart-notification"],{
+
+/***/ "./.src/js/cart-notification.js":
+/*!**************************************!*\
+  !*** ./.src/js/cart-notification.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _global__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./global */ \"./.src/js/global.js\");\n/* eslint-disable no-undef, no-unused-vars, eqeqeq, camelcase, no-var, no-redeclare, no-useless-return, no-useless-constructor, no-self-assign */\n\n\n\nclass CartNotification extends HTMLElement {\n  constructor () {\n    super()\n\n    this.getSectionsToRender = [\n      {\n        id: 'main-cart-items',\n        section: document.getElementById('main-cart-items').dataset.id,\n        selector: '.js-contents'\n      },\n      {\n        id: 'cart-icon-bubble',\n        section: 'cart-icon-bubble',\n        selector: '.shopify-section'\n      },\n      {\n        id: 'cart-notification',\n        section: 'cart-notification',\n        selector: '.cart-notification__links'\n      },\n      {\n        id: 'cart-notification',\n        section: 'cart-notification',\n        selector: '.free-products'\n      }\n    ]\n\n    this.notification = document.getElementById('cart-notification')\n    this.onBodyClick = this.handleBodyClick.bind(this)\n    this.cartIcon = document.getElementById('cart-icon-bubble')\n    this.cartCloseIcon = document.querySelector('.cart-notification__close')\n\n    this.notification.addEventListener(\n      'keyup',\n      (evt) => evt.code === 'Escape' && this.close()\n    )\n\n    this.initEventlistener()\n\n    this.currentItemCount = Array.from(\n      this.querySelectorAll('[name=\"updates[]\"]')\n    ).reduce(\n      (total, quantityInput) => total + parseInt(quantityInput.value),\n      0\n    )\n  }\n\n  open () {\n    this.notification.classList.add('animate', 'active')\n\n    this.notification.addEventListener(\n      'transitionend',\n      () => {\n        this.notification.focus()\n        ;(0,_global__WEBPACK_IMPORTED_MODULE_0__.trapFocus)(this.notification)\n      },\n      { once: true }\n    )\n\n    document.body.addEventListener('click', this.onBodyClick)\n  }\n\n  close () {\n    (0,_global__WEBPACK_IMPORTED_MODULE_0__.createAndDispatchCustomEvent)('drawer:close', true)\n    this.notification.classList.remove('active')\n\n    document.body.removeEventListener('click', this.onBodyClick)\n\n    ;(0,_global__WEBPACK_IMPORTED_MODULE_0__.removeTrapFocus)(this.activeElement)\n  }\n\n  handleBodyClick (evt) {\n    const target = evt.target\n    if (\n      target !== this.notification &&\n      !target.closest('cart-notification') &&\n      !target.closest('.header__icon--cart')\n    ) {\n      const disclosure = target.closest('details-disclosure, header-menu')\n      this.activeElement = disclosure\n        ? disclosure.querySelector('summary')\n        : null\n      this.close()\n    }\n  }\n\n  cartDrawerOpenEvent () {\n    (0,_global__WEBPACK_IMPORTED_MODULE_0__.createAndDispatchCustomEvent)('drawer:open', true)\n  }\n\n  initEventlistener () {\n    this.cartIcon.addEventListener('click', this.cartDrawerOpenEvent)\n    this.cartCloseIcon.addEventListener('click', this.close.bind(this), false)\n    document.addEventListener('drawer:open', this.open.bind(this), false)\n    this.addEventListener('change', this.debouncedOnChange.bind(this), false)\n    this.addEventListener('click', this.onRemove.bind(this), false)\n  }\n\n  onChange (event) {\n    if (!event.target.closest('cart-upsell')) {\n      (0,_global__WEBPACK_IMPORTED_MODULE_0__.updateItems)({\n        line: event.target.dataset.index,\n        quantity: event.target.value,\n        name: document.activeElement.getAttribute('name'),\n        sections: this.getSectionsToRender,\n        cartType: 'drawer',\n        isUpdatingQuantity: true\n      })\n    }\n  }\n\n  onRemove (event) {\n    if (event.target.closest('cart-remove-button') && !event.target.closest('cart-upsell')) {\n      event.preventDefault()\n      ;(0,_global__WEBPACK_IMPORTED_MODULE_0__.updateItems)({\n        line: event.target.closest('cart-remove-button').dataset.index,\n        quantity: 0,\n        name: null,\n        sections: this.getSectionsToRender,\n        cartType: 'drawer',\n        isRemovingItem: true\n      })\n    }\n  }\n\n  debouncedOnChange = (0,_global__WEBPACK_IMPORTED_MODULE_0__.debounce)((event) => {\n    this.onChange(event)\n  }, 300)\n}\n\ncustomElements.define('cart-notification', CartNotification)\n\n\n//# sourceURL=webpack://theme-template/./.src/js/cart-notification.js?");
+
+/***/ })
+
+},
+/******/ __webpack_require__ => { // webpackRuntimeModules
+/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+/******/ __webpack_require__.O(0, ["common"], () => (__webpack_exec__("./.src/js/cart-notification.js")));
+/******/ var __webpack_exports__ = __webpack_require__.O();
+/******/ }
+]);

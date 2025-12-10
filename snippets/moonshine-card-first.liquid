@@ -1,0 +1,41 @@
+{% comment %}
+  Renders the first moonshine card
+
+  Usage:
+  {% render 'moonshine-card-first', first_product: first_block, second_product: block %}
+{% endcomment %}
+
+<div class="history-moonshine__cards"> <!-- container for start of desktop version -->
+  <div class="history-moonshine__cards--first">
+    {{ 'moonshine-variation-desktop.png' | file_img_url: '700x' | img_tag: '700ml, 350ml and set with pouring lid','history-moonshine__img','500x200' }}
+
+    <div class="history-moonshine__cards__container--first"> <!-- container for second block -->
+      {% assign product_2 = all_products[second_product.product_name] %}
+
+      {{ second_product.product_image | image_url: width: 700  | image_tag: alt: second_product.product_image.alt, class: 'history-moonshine__img history-moonshine__card__img--first', widths: '200, 550, 700' }}
+
+      <div class="history-moonshine__cards--middle">
+        {{ second_product.product_headline | image_url: width: 700  | image_tag: alt: second_product.product_headline.alt, class: 'history-moonshine__img history-moonshine__card__img--second', widths: '200, 550, 700' }}
+
+        <div class="history-moonshine__card__link__container">
+          {%- assign linktext = 'general.accessibility.discover_here' | t -%}
+          <a href ="{{ product_2.url }}" class="history-moonshine__card__link">{{ linktext }}</a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="history-moonshine__cards--second"> <!-- container for first block -->
+    {% assign product = all_products[first_product.product_name] %}
+    
+    {{ first_product.product_image | image_url: width: 1500  | image_tag: alt: first_product.product_image.alt, class: 'history-moonshine__img', widths: '200, 550, 700, 1024, 1500' }}
+
+    {{ first_product.product_headline | image_url: width: 700  | image_tag: alt: first_product.product_headline.alt, class: 'history-moonshine__img', widths: '200, 550, 700' }}
+
+    <div class=".history-moonshine__card__link__container">
+      {%- assign linktext = 'general.accessibility.discover_here' | t -%}
+      <a href ="{{ product.url }}" class="history-moonshine__card__link">{{ linktext }}</a>
+    </div>
+  </div>
+</div>

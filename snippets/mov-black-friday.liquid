@@ -1,0 +1,319 @@
+<div class="cart__discount-milestones">
+ {%- assign cart_total_price = cart.total_price -%}
+
+
+ {%- assign tier_1_price = 4842 -%}  
+ {%- assign tier_2_price = 8990 -%} 
+ {%- assign tier_3_price = 14990 -%} 
+
+
+ {%- assign tier_1_discount = 10 -%}
+ {%- assign tier_2_discount = 15 -%}
+ {%- assign tier_3_discount = 20 -%}
+
+ {%- comment -%}
+   STEP 1: Calculate eligible_total. This total is used ONLY to determine 
+   if the progress bar should be displayed at all (i.e., if eligible_total > 0).
+ {%- endcomment -%}
+
+ {%- assign excluded_variant_ids_string = "34177030389891" -%}
+ {%- assign excluded_variant_ids = excluded_variant_ids_string | split: "," -%}
+
+
+ {%- assign eligible_total = 0 -%}
+ {%- for item in cart.items -%}
+   {%- if item.product and item.variant -%}
+     
+     {%- comment -%} Check 1: Product Tag Exclusion (FIXED: Using explicit if block) {%- endcomment -%}
+     {%- assign tags_string = item.product.tags | join: "," | downcase -%}
+     
+     {%- assign is_no_discount_product = false -%}
+     {%- if tags_string contains 'no-discount' -%}
+       {%- assign is_no_discount_product = true -%}
+     {%- endif -%}
+     
+     {%- comment -%} Check 2: Variant ID Exclusion (Robust check) {%- endcomment -%}
+     {%- assign current_variant_id_str = item.variant.id | to_str -%}
+     {%- assign current_variant_id_num = item.variant.id | plus: 0 -%}
+     {%- assign excluded_variant_id_num = excluded_variant_ids_string | split: "," | first | plus: 0 -%}
+     
+     {%- assign is_excluded_variant = false -%}
+     {%- if excluded_variant_ids contains current_variant_id_str or current_variant_id_num == excluded_variant_id_num -%}
+       {%- assign is_excluded_variant = true -%}
+     {%- endif -%}
+
+     {%- comment -%} Add to eligible_total only if NEITHER exclusion applies {%- endcomment -%}
+     {%- unless is_no_discount_product or is_excluded_variant -%}
+       {%- assign eligible_total = eligible_total | plus: item.line_price -%}
+     {%- endunless -%}
+     
+   {%- endif -%}
+ {%- endfor -%}
+ 
+
+ {%- assign progress_denominator = tier_3_price -%}
+
+
+ {%- if progress_denominator > 0 -%}
+   {%- comment -%} STEP 2: Progress calculated using FULL cart_total_price {%- endcomment -%}
+   {%- assign filled_percent = cart_total_price | times: 100 | divided_by: progress_denominator -%}
+   
+   {%- comment -%} Limita a barra de preenchimento a 100% {%- endcomment -%}
+   {%- if cart_total_price > progress_denominator -%}
+     {%- assign filled_percent = 100 -%}
+   {%- endif -%}
+
+   {%- comment -%}
+     Define a posição do KNOB: 5% no início, 95% no máximo, e o percentual calculado no meio.
+   {%- endcomment -%}
+   {%- assign knob_position_percent = filled_percent -%}
+
+   {%- if cart_total_price >= tier_3_price -%}
+     {%- assign knob_position_percent = 96 -%}  
+   {%- elsif cart_total_price < tier_1_price -%}
+     {%- assign knob_position_percent = 5 -%}   
+   {%- endif -%}
+
+   {%- assign pos1 = tier_1_price | times: 100 | divided_by: progress_denominator -%}
+   {%- assign pos2 = tier_2_price | times: 100 | divided_by: progress_denominator -%}
+   {%- assign pos3 = tier_3_price | times: 100 | divided_by: progress_denominator -%}
+ {%- else -%}
+   {%- assign filled_percent = 0 -%}
+   {%- assign knob_position_percent = 0 -%}
+   {%- assign pos1 = 0 -%}
+   {%- assign pos2 = 0 -%}
+   {%- assign pos3 = 100 -%}
+ {%- endif -%}
+
+
+ {%- assign current_discount = 0 -%}
+
+ {%- comment -%} *** Message conditions use cart_total_price *** {%- endcomment -%}
+ {%- if cart_total_price < tier_1_price %}
+   {%- assign remaining_amount = tier_1_price | minus: cart_total_price | money -%}
+   {%- assign current_message = '<p style="margin: 0px; text-transform: uppercase">Füge noch ' | append: remaining_amount | append: ' hinzu und erhalte -' | append: tier_1_discount | append: '%!</p>' -%}
+
+
+ {% elsif cart_total_price < tier_2_price %}
+   {%- assign remaining_amount = tier_2_price | minus: cart_total_price | money -%}
+   {%- assign current_discount = tier_1_discount -%}
+   {%- assign current_message = '<p style="margin: 0px; text-transform: uppercase">Du bekommst aktuell <span style="font-weight: bold"> '| append: current_discount | append: '% </span>Rabatt! 🎉<p style="margin-top: 0px"> Noch ' | append: remaining_amount | append: ' hinzufügen und <span style="font-weight: bold">' | append: tier_2_discount | append: '% </span> Rabatt erhalten.' -%}
+
+
+ {% elsif cart_total_price < tier_3_price %}
+   {%- assign remaining_amount = tier_3_price | minus: cart_total_price | money -%}
+   {%- assign current_discount = tier_2_discount -%}
+   {%- assign current_message = '<p style="margin: 0px; text-transform: uppercase">Du bekommst aktuell <span style="font-weight: bold"> ' | append: current_discount | append: '% </span>Rabatt! 🎉<p style="margin-top: 0px"> Noch ' | append: remaining_amount | append: ' hinzufügen und <span style="font-weight: bold"> ' | append: tier_3_discount | append: '% %</span> Rabatt erhalten.' -%}
+
+
+ {% else %}
+   {%- assign current_discount = tier_3_discount -%}
+   {%- assign current_message = '<p style="margin: 0px;">Wow! Du hast -' | append: current_discount | append: '% erreicht den höchstmöglichen Rabatt! 🍾</p>' -%}
+ {% endif %}
+
+
+ <div class="milestone-wrapper">
+   {% comment -%} STEP 3: Display bar ONLY if there are eligible products (eligible_total > 0). {%- endcomment -%}
+   {% if eligible_total > 0 %} 
+     <!-- centered marker container -->
+     <div class="milestone-center" >
+       <div class="milestone-markers" aria-hidden="true">
+         <div>
+            <p>49,90</p>
+            <p>10%</p>
+         </div>
+             <div>
+            <p>89,90</p>
+            <p>15%</p>
+         </div>
+             <div>
+            <p>149,90</p>
+            <p>20%</p>
+         </div>
+         {% comment %} Marker comments removed for brevity {% endcomment %}
+       </div>
+     </div>
+
+
+     <!-- track sits at the bottom of the component, centered -->
+     <div class="milestone-track-wrapper">
+       <div class="milestone-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ filled_percent }}">
+         <div class="milestone-fill" style="width: {{ filled_percent }}%;"></div>
+         <div class="milestone-knob" style="left: {{ knob_position_percent }}%;">
+           <span class="knob-dot" aria-hidden="true"></span>
+         </div>
+       </div>
+     </div>
+   {% endif %}
+
+
+   <!-- message below the track (keeps everything spaced nicely) -->
+   {% if eligible_total > 0 %}
+     <div class="discount-milestones-text">{{ current_message }}</div>
+   {% else %}
+     <div class="discount-milestones-text">Jetzt teilnehmendes Produkt hinzufügen & Black-Week Rabatt sofort freischalten 🌟 </div> 
+   {% endif %}
+ </div>
+</div>
+
+
+<style>
+/* outer container */
+.cart__discount-milestones {
+ margin: 0;
+ padding: 15px 15px;
+ text-align: start; 
+ display: flex;
+ background: black;
+ justify-content: center;
+}
+
+p{
+ margin-bottom: 5px
+}
+
+/* message under track */
+.discount-milestones-text {
+font-size: 15px;
+color: white;
+text-align: start;
+margin-top: 10px;
+width: 100%;
+}
+
+
+/* wrapper to hold markers & track stacked vertically and centered */
+.milestone-wrapper {
+ width: 100%;
+ max-width: 920px; /* keeps it centered and not too wide on large screens */
+ display: flex;
+ flex-direction: column;
+ align-items: start;
+ padding-top: 6px
+}
+
+
+/* small fade when inactive - Removed, now hidden by Liquid */
+
+
+/* center box that constrains markers width (use a percentage to keep centered) */
+.milestone-center {
+ width: 80%;       /* change this to make markers/container narrower/wider */
+ max-width: 800px;
+}
+
+/* MARKERS: positioned absolutely inside .milestone-markers which is centered */
+.milestone-markers {
+     display: none
+;
+    justify-content: space-around;
+column-gap: 8rem;
+ margin: 0 auto;
+ pointer-events: none;
+ padding-left: 0.5rem
+}
+
+
+/* each marker is absolutely positioned using the left: % computed in liquid */
+.milestone-marker {
+ position: absolute;
+ top: 4px;
+ transform: translateX(-50%);
+ text-align: start;
+ z-index: 5;
+ min-width: 
+    0px;
+}
+
+
+/* label style */
+.marker-label {
+ font-weight: 800;
+ font-size: 0.78rem;
+ line-height: 1;
+ color: #222;
+ display: inline-block;
+ padding: 0 6px;
+}
+
+
+/* tick */
+.milestone-marker .marker-tick {
+ width: 8px;
+ height: 8px;
+ margin: 6px auto 0;
+ border-radius: 50%;
+ background: #222;
+ box-shadow: 0 0 0 6px rgba(0,0,0,0.03);
+}
+
+
+/* TRACK wrapper (make track centered and at bottom of component) */
+.milestone-track-wrapper {
+ width: 91%;
+ max-width: 800px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+
+
+/* track */
+.milestone-track {
+ position: relative;
+ height: 9px;
+ background: #eee;
+ border-radius: 10px;
+ border: 1px solid #ddd;
+ overflow: visible;
+ width: 109%
+}
+
+
+/* filled*/
+.milestone-fill {
+ height: 100%;
+ border-radius: 10px;
+ background: #111;
+ transition: width 260ms ease;
+ box-shadow: inset 0 -2px 0 rgba(0,0,0,0.06);
+ z-index: 2;
+}
+
+
+/* knob */
+.milestone-knob {
+ position: absolute;
+ top: 50%;
+ transform: translate(-50%, -50%);
+ width: 36px;
+ height: 22px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ z-index: 6;
+ pointer-events: none;
+ transition: left 260ms ease; /* Added transition for smooth movement */
+}
+
+
+/* knob pill */
+.knob-dot {
+ width: 36px;
+ height: 17px;
+ border-radius: 999px;
+ background: #2b441d;
+ display: block;
+ border: 1px solid white;
+ box-shadow: 0 6px 18px rgba(0,0,0,0.14);
+}
+
+
+/* responsive tweaks */
+@media (max-width: 720px) {
+ .milestone-center, .milestone-track-wrapper { width: 95.5%; }
+ .milestone-markers { height: 70px; }
+ .marker-label { font-size: 0.72rem; }
+ .discount-milestones-text { font-size: 14px; }
+ .milestone-track{ width: 105% }
+}
+</style>

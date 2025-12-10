@@ -1,0 +1,95 @@
+
+{%- style -%}
+  main {
+    color: {{ section.settings.color_text }}!important;
+    background-color: {{ section.settings.color_background }}!important;
+    background-image: url('{{ section.settings.bg_image | image_url: width: 1100 }}'); 
+    background-repeat: repeat;
+  }
+
+  .sticky-cart__container{
+    color: {{ section.settings.color_text }}!important;
+    background-color: {{ section.settings.color_background }}!important;
+  }
+
+  main .intro__text a{
+    color: {{ section.settings.color_text }}!important;
+  }
+  main .values__item__text{
+    color: black !important;
+  }
+  
+  .header-wrapper{
+    background-color: rgb(var(--color-background)) !important;
+  }
+
+  main > *:not(footer):not(.cart-notification):not(.announcement-bar),
+  .color-background-1:not(footer):not(.cart-notification):not(.announcement-bar),
+  .color-background-2:not(footer):not(.cart-notification):not(.announcement-bar), 
+  .color-inverse:not(footer):not(.cart-notification):not(.announcement-bar), 
+  .color-accent-1:not(footer):not(.cart-notification):not(.announcement-bar), 
+  .color-accent-2:not(footer):not(.cart-notification):not(.announcement-bar) {
+    color: {{ section.settings.color_text }}!important;
+    {% if sections.settings.bg_image %}
+      background-color: {{ section.settings.color_background }}!important;
+    {% else %}
+      background-color: transparent;
+    {% endif %}
+  }
+
+  .card__heading, .price, .unit-price,.yotpo-icon-star, .yotpo-icon-half-star, .yotpo-icon-empty-star, .h1, h1, h2, h3:not(.footer-block__heading):not(.cart-notification):not(.announcement-bar), h2:not(.footer-block__heading):not(.cart-notification):not(.announcement-bar) {
+    color: {{ section.settings.color_text }}!important;
+  }
+  #collection__categories h3{
+    color: {{ section.settings.color_text }}!important;
+  }
+  #collection__categories .tabs-nav__item:hover{
+    border-bottom: 3px solid {{ section.settings.color_text }}!important;
+  }
+  .welcome .values img{
+    filter: invert(100%);
+  }
+  .welcome .values__item__text{
+    color: {{ section.settings.color_text }}!important;
+  }
+  .banner__content {
+    z-index: 0!important;
+  }
+
+  .h2, h2 {
+    font-family: var(--font-body-family)!important;
+  }
+{%- endstyle -%}
+
+
+{% schema %}
+{
+  "name": "Color Changer",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+        "type": "color",
+        "id": "color_text",
+        "default": "#000000",
+        "label": "t:sections.page_color.text"
+      },
+      {
+        "type": "color",
+        "id": "color_background",
+        "default": "#FFFFFF",
+        "label": "t:sections.page_color.background"
+      },
+      {
+          "type": "image_picker",
+          "id": "bg_image",
+          "label": "Background Image"
+      }
+  ],
+  "presets": [
+    {
+      "name": "Color Changer"
+    }
+  ]
+}
+{% endschema %}

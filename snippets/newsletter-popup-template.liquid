@@ -1,0 +1,41 @@
+{% comment %}
+{% render 'newsletter-popup-template', id: section.id, image_desktop: section.settings.image_desktop, image_mobile: section.settings.image_mobile, benefits: section.blocks, legal: section.settings.newsletter_legal_notice, dont_show: section.settings.newsletter_dont_show %}
+{% endcomment %}
+
+
+<div id="nl_popup_container"class="nl__popup">
+  <div class="nl__close" id="newsletter-close">{% render 'icon-close', size: 0 %}</div>
+
+  {{ image_mobile | image_url: width: 720 | image_tag: class: 'popup__intro popup__intro--mobile', widths: '480, 720', loading: 'lazy' }}
+
+  <div>
+    <div class="popup__content">
+    {% for block in blocks %}
+      {% case block.type %}
+        {%- when 'benefits' -%}
+          <div class="nl__benefit">
+            {{ block.settings.image | image_url: width: 400 | image_tag: loading: 'lazy' }}
+            <div>{{ block.settings.title }}</div>
+          </div>
+          {%- when 'custom_liquid' -%}
+            <div class="newsletter-form__field-wrapper">
+              {{ block.settings.custom_liquid }}
+            </div>
+        
+    {%- endcase -%}
+
+    {% endfor %}
+  </div>
+    {% if dont_show %}
+      <div class="nl__off">
+        <input
+          type="checkbox"
+          id="newsletter_off"
+          name="newsletter_off">
+        <div class="nl__off__text">{{- dont_show -}}
+          <span class="nl__off--ok">OK!</span>
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+</div>

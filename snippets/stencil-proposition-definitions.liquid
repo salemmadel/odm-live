@@ -1,0 +1,11 @@
+
+<script>
+  {%- for metaobject in shop.metaobjects.proposition.values -%}
+    window.Stencil.PostInitCallbacks.push(() => {
+      let propositionConfig = {{ metaobject.definition.value | json }};
+      propositionConfig.title = {{ metaobject.title | json }};
+      propositionConfig.guid = {{ metaobject.system.id | json }};
+      Stencil.Extensions.PropositionsManager.register(propositionConfig);
+    });
+  {%- endfor -%}
+</script> 

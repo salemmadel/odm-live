@@ -1,0 +1,128 @@
+{% comment %}
+  Product - Post add to cart upsell pop-up
+  Renders a modal with product cards. 
+  Modal triggered by a custom event 'cart:added' defined in 'product-form.js'
+
+  Checks if product metafield 'm_p.post_add_to_cart_upsell' != blank
+  Renders a modal with product cards in
+
+  Usage:
+  {% render 'product-post-add-to-cart-upsell' %}
+{% endcomment %}
+
+<link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'template-collection.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-modal.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
+<script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
+{%- liquid
+  assign show_mobile_slider = true
+  assign show_desktop_slider = true
+    
+  if product.metafields.m_p.post_add_to_cart_upsell_title.value != blank
+    assign post_add_to_cart_upsell_popup_title = product.metafields.m_p.post_add_to_cart_upsell_title.value
+  else
+    assign post_add_to_cart_upsell_popup_title = 'products.product.post_add_upsell.title' | t
+  endif
+  if product.metafields.m_p.post_add_to_cart_upsell_content.value != blank
+    assign post_add_to_cart_upsell_popup_content = product.metafields.m_p.post_add_to_cart_upsell_content | metafield_tag
+  else 
+    assign post_add_to_cart_upsell_popup_content = 'products.product.post_add_upsell.content' | t
+  endif
+  assign post_add_to_cart_upsell_products = product.metafields.m_p.post_add_to_cart_upsell.value
+-%}
+
+{%- style -%}
+  .product-post-add-to-cart-upsell .quick-add button {
+    font-size: 1.1rem;
+    background: black;
+    color: white;
+  }
+  .product-post-add-to-cart-upsell .card__content {
+    flex-grow: 1;
+  }
+  .product-post-add-to-cart-upsell .price .unit-price {
+    display: block !important;
+  }
+  .product-post-add-to-cart-upsell .slider-buttons {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30%;
+    z-index: 1;
+    justify-content: space-between;
+  }
+  .product-post-add-to-cart-upsell .slider-button {
+    background: rgba(255,255,255,0.5);
+  }
+  .product-post-add-to-cart-upsell .title {
+    margin-bottom: 1rem;
+  }
+  .product-post-add-to-cart-upsell .slider li:first-child {
+    margin-left: 0 !important;
+  }
+{%- endstyle %}
+
+{%- comment -%}
+  TODO: rename classes etc. from product-post-add-to-cart-upsell to product-post-add-to-cart-upsell - needs approval
+{%- endcomment -%}
+
+<modal-dialog id="PopupModal-{{ section.id }}" class="generic-popup-modal product-post-add-to-cart-upsell">
+  <div role="dialog" aria-label="Complete the look" aria-modal="true" class="generic-popup-modal__content" tabindex="-1">
+    <button id="ModalClose-{{ section.id }}" type="button" class="generic-popup-modal__toggle" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
+    <div class="generic-popup-modal__content-info">
+      
+        <div class="generic-popup-modal__content-intro">
+          <h3 class="title h2">{{ post_add_to_cart_upsell_popup_title }}</h3>
+          <div class="description body">{{ post_add_to_cart_upsell_popup_content }}</div>
+        </div>
+
+      <slider-component class="slider-mobile-gutter  slider-component-full-width slider-component-desktop">
+        <ul id="Slider-{{ section.id }}" class="grid product-grid contains-card grid--4-col-desktop grid--2-col-tablet-down slider slider--desktop slider--tablet grid--peek" role="list" aria-label="">
+          {%- for upsell_product in post_add_to_cart_upsell_products -%}
+            <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="grid__item slider__slide">
+              {% render 'card-product',
+                card_product: upsell_product,
+                media_aspect_ratio: "adapt",
+                show_secondary_image: false,
+                show_vendor: false,
+                show_rating: false,
+                grey_sold_out_products: true,
+                show_quick_add: true,
+                section_id: section.id
+              %}
+            </li>
+          {%- endfor -%}
+        </ul>
+        
+        {%- if show_mobile_slider or show_desktop_slider -%}
+          {%- if post_add_to_cart_upsell_products.count > 2 -%}
+            <div class="slider-buttons no-js-hidden ">
+              <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}</button>
+              <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}</button>
+            </div>
+          {%- endif -%}
+        {%- endif -%}
+      </slider-component>
+    </div>
+  </div>
+</modal-dialog>
+
+<script>
+  // Listening to cart:added event
+  var postAddToCartModalOpened = false;
+
+  document.addEventListener("cart:added", function(e){
+    const modal = document.getElementById('PopupModal-{{ section.id }}');  
+    if (postAddToCartModalOpened != true) {
+      setTimeout(() => {
+        if (modal) modal.show();
+      }, 2000);
+    }
+    postAddToCartModalOpened = true;
+  });
+</script>

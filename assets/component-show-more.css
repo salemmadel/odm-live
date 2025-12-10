@@ -1,0 +1,13 @@
+/* stylelint-disable selector-class-pattern, selector-no-qualifying-type, declaration-property-value-disallowed-list, selector-max-compound-selectors, selector-max-id */
+.button-show-more {
+  justify-content: flex-start;
+  padding-bottom: 1.1rem;
+  padding-left: 0;
+}
+
+.button-show-more,
+.button-show-less {
+  margin-top: 1.5rem;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../.src/scss/component-show-more.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;AAEA;EACE;EACA;EACA;;;AAGF;AAAA;EAGE%22,%22file%22:%22component-show-more.css%22%7D */

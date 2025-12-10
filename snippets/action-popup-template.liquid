@@ -1,0 +1,110 @@
+{% comment %}
+  {% render 'action-popup-template', id: section.id, content_layout: section.settings.content_layout, color_scheme: section.settings.color_scheme, desktop_image_width: section.settings.desktop_image_width, layout: section.settings.layout, desktop_content_position: section.settings.desktop_content_position, desktop_content_alignment: section.settings.desktop_content_alignment, tablet_content_alignment: section.settings.tablet_content_alignment, mobile_content_alignment: section.settings.mobile_content_alignment, height: section.settings.height, image: section.settings.image, image_tablet: section.settings.image_tablet, subheading: block.settings.subheading, heading: block.settings.heading, blocks: section.blocks %}
+{% endcomment %}
+
+
+
+<div class="action-popup  action-popup--{{ content_layout }} isolate  {% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless color_scheme == 'background-1' and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ id }}-padding">
+<div class="action__close" id="action-popup-close">{% render 'icon-close', size: 0 %}</div>
+
+<div class="action-popup__grid grid grid--gapless grid--1-col grid--{% if desktop_image_width == 'medium' %}3-col-tablet{% endif %}{% if layout == 'text_first' %} action-popup__grid--reverse{% endif %}">
+    <div class="action-popup__media-item action-popup__media-item--{{ desktop_image_width }} action-popup__media-item--{{ desktop_content_position }} grid__item">
+      <div class="action-popup__media action-popup__media--{{ height }} gradient color-{{ color_scheme }} obal-media-settings {% if image != blank %}media-properties{% else %}action-popup__media--placeholder placeholder{% endif %}"
+        {% if height == 'adapt' and image != blank %} style="padding-bottom: {{ 1 | divided_by: image.aspect_ratio | times: 100 }}%;"{% endif %}>
+              {{ image | image_url: width: 975, format: 'jpg' | image_tag: widths: '375, 550, 750, 850, 975 ,1000, 1100', class: "action-popup__media-image--large", alt: image.alt, loading: 'lazy', sizes: 'auto' }}
+              {%- for block in blocks -%}
+                {% case block.type %}
+                  {%- when 'heading' -%}
+                  <div class="action-popup__heading-container--mobile">
+                   <div class="action-popup__subheading" >{{ block.settings.subheading }}</div>
+                   {{ image | image_url: width: 1100, format: 'jpg' | image_tag: widths: '375, 550, 750, 850, 975 ,1000, 1100', class: "action-popup__media-image--small", alt: image.alt, loading: 'lazy', sizes: 'auto' }}
+                    <div class="action-popup__heading">{{ block.settings.heading }}</div>
+    
+                  </div>
+                {%- endcase -%}
+              {%- endfor -%}
+              {{ image_tablet | image_url: width: 850, format: 'jpg' | image_tag: widths: '375, 550, 750, 850', class: "action-popup__media-image--medium", alt: image_tablet.alt, loading: 'lazy', sizes: 'auto' }}
+
+
+
+      </div>
+    </div>
+    <div class="action-popup__text-item grid__item color-{{ color_scheme }}">
+      <div class="action-popup__content action-popup__content--{{ desktop_content_position }}  action-popup__content--desktop-{{ desktop_content_alignment }} action-popup__content--mobile-{{ tablet_content_alignment }} action-popup__content--desktop-{{ desktop_content_alignment }} action-popup__content--mobile-{{ mobile_content_alignment }} action-popup__content--{{ height }} gradient  content-container">
+        {%- for block in blocks -%}
+          {% case block.type %}
+
+            {%- when 'heading' -%}
+            <div class="action-popup__heading-container">
+             <div class="action-popup__subheading" >{{ block.settings.subheading }}</div>
+
+              <div class="action-popup__heading">{{ block.settings.heading }}</div>
+
+            </div>
+            {%- when 'text' -%}
+              <div class="action-popup__text action-popup__text--info rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+            {%- when 'email_form' -%}
+              <div class="action-popup__form-container {% if block.settings.image_desktop != blank%} action-popup__form-container--padding{% endif%}">
+
+                  <div class="action-popup__form">
+                    {% if block.settings.image_desktop != blank%}
+                    <div class="action-popup__form-subscribe action-popup__form-subscribe--large">
+                      {{ block.settings.image_desktop | image_url: width: 100, format: 'jpg' | image_tag: widths: '75, 100, 130 ,150', alt: block.settings.image_desktop.alt, loading: 'lady', sizes: 'auto' }}
+                    </div>
+                    <div class="action-popup__form-subscribe action-popup__form-subscribe--small">
+
+                      {{ block.settings.image_tablet | image_url: width: 130, format: 'jpg' | image_tag: widths: '75, 100, 130 ,150', alt: block.settings.image_tablet.alt, class:"action-popup__form-subscribe--small-bl" , loading: 'lady', sizes: 'auto' }}
+
+                      {{ block.settings.image_mobile | image_url: width: 130, format: 'jpg' | image_tag: widths: '75, 100, 130 ,150', alt: block.settings.image_mobile.alt, class:"action-popup__form-subscribe--small-wh", loading: 'lady', sizes: 'auto' }}
+                    </div>
+                  {%- endif -%}
+                    <div {{ block.shopify_attributes }}>
+                      {% form 'customer', class: 'newsletter-form' %}
+                        <input type="hidden" name="contact[tags]" value="newsletter,{{ custom_newsletter_tags }}">
+                        <div class="newsletter-form__field-wrapper">
+                          <div class="field">
+                            <input
+                              id="NewsletterForm--{{ id }}"
+                              type="email"
+                              name="contact[email]"
+                              class="field__input"
+                              value="{{ form.email }}"
+                              aria-required="true"
+                              autocorrect="off"
+                              autocapitalize="off"
+                              autocomplete="email"
+                              {% if form.errors %}
+                                autofocus
+                                aria-invalid="true"
+                                aria-describedby="Newsletter-error--{{ id }}"
+                              {% elsif form.posted_successfully? %}
+                                aria-describedby="Newsletter-success--{{ id }}"
+                              {% endif %}
+                              placeholder="{{ 'newsletter.label' | t }}"
+                              required
+                            >
+                            <label class="field__label" for="NewsletterForm--{{ id }}">
+                              {{ 'newsletter.label' | t }}
+                            </label>
+                            <button type="submit" class="newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
+                              {% render 'icon-arrow' %}
+                            </button>
+                          </div>
+                          {%- if form.errors -%}
+                            <small class="newsletter-form__message form__message" id="Newsletter-error--{{ id }}">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
+                          {%- endif -%}
+                        </div>
+                        {%- if form.posted_successfully? -%}
+                          <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="Newsletter-success--{{ id }}" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
+                        {%- endif -%}
+                      {% endform %}
+                      <div class="action-popup__text newsletter-form__legal">{{block.settings.newsletter_legal_notice}}</div>
+                    </div>
+                </div>
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>

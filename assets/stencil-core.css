@@ -1,0 +1,17 @@
+/* Error: Undefined variable.
+ *    ,
+ * 26 |   $autospacing-margin-value: map-get($spacers, map-get($autospacing-margin, "xs"));
+ *    |                                      ^^^^^^^^
+ *    '
+ *   .src/scss/stencil-core.scss 26:38  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Undefined variable.\a    \2577 \a 26 \2502    $autospacing-margin-value: map-get($spacers, map-get($autospacing-margin, "xs"));\a    \2502                                       ^^^^^^^^\a    \2575 \a   .src/scss/stencil-core.scss 26:38  root stylesheet';
+}

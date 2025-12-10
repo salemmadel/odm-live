@@ -1,0 +1,16 @@
+{% comment %}
+  {% render 'action-shortcut', id: section.id, newsletter_shortcut: section.settings.newsletter_shortcut%}
+{% endcomment %}
+
+
+<div  class="nl__shortcut action-shortcut">
+
+    <div class="action-shortcut__content">
+        <div id="shortcut-open" class="action-shortcut__message">
+          <p>{{newsletter_shortcut}}</p>
+        </div>
+        <div class="action-shortcut__close">
+          <div id="shortcut-close" class="action-shortcut__close">{% render 'icon-close', size: 1 %}</div>
+        </div>
+      </div>
+  </div>

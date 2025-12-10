@@ -1,0 +1,83 @@
+{%- if section.settings.is_above_the_fold -%}
+  {{ 'about-team.css' | asset_url | stylesheet_tag }}
+{%- else -%}
+  <link rel="stylesheet" href="{{ 'about-team.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- endif -%}
+<script src="{{ 'about-team.js' | asset_url }}" defer="defer"></script>
+<noscript>{{ 'about-team.css' | asset_url | stylesheet_tag }}</noscript>
+
+<section class="about-team about-team-{{ section.id }}" >
+    <div class="about-team-buttons">
+
+      {% for block in section.blocks %}
+        {% if block.settings.name %}
+          {% if forloop.first %}
+            <button class="about-team-button about-team-button-hover" data-image-id="{{ block.id }}">{{ block.settings.name }} <br> <p class="about-team-button-position">{{ block.settings.position }}</p></button>
+            {%- else -%}
+            <button class="about-team-button" data-image-id="{{ block.id }}">{{ block.settings.name }} <br> <p class="about-team-button-position">{{ block.settings.position }}</p></button>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="about-team-images">
+      {% for block in section.blocks %}
+        {% if block.settings.image %}
+          {% if forloop.first %}
+            {{ block.settings.image | image_url: width: 1000, height: 1000 | image_tag: class: 'about-team-image about-team-image-toggle', loading: 'lazy', widths: "100, 200, 300, 400, 500, 600, 700, 800, 900, 1000", id: block.id }}
+          {% else %}
+          {{ block.settings.image | image_url: width: 1000, height: 1000 | image_tag: class: 'about-team-image', loading: 'lazy', widths: "100, 200, 300, 400, 500, 600, 700, 800, 900, 1000", id: block.id }}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+</section>
+
+{% schema %}
+  {
+    "name": "About Team Section",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "is_above_the_fold",
+        "label": "is Above the Fold",
+        "default": false,
+        "info": "Check if Content is loaded first to eliminate CLS"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "team",
+        "name": "Team",
+        "settings": [
+          {
+            "type": "text",
+            "id": "name",
+            "label": "Team Member Name"
+          },
+          {
+            "type": "text",
+            "id": "position",
+            "label": "Team Member Position"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Team Member Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "About Team Section",
+        "name": "About Team Section",
+        "settings": {},
+        "blocks": [
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+

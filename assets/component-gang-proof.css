@@ -1,0 +1,26 @@
+/* stylelint-disable selector-class-pattern, selector-no-qualifying-type, declaration-property-value-disallowed-list, selector-max-compound-selectors, selector-max-id */
+.gang__proof {
+  font-size: 1.4rem;
+  align-items: center;
+  background-color: rgba(var(--color-foreground), 0.05);
+  color: var(--color-foreground);
+  display: flex;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.gang__proof:hover {
+  color: rgba(var(--color-link), 0.5);
+}
+
+.gang__proof__img {
+  height: 5rem;
+  margin-right: 1rem;
+  width: auto;
+}
+
+.proof {
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../.src/scss/component-gang-proof.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;;;AAEF;EACE;EACA;EACA;;;AAGF;EACE%22,%22file%22:%22component-gang-proof.css%22%7D */

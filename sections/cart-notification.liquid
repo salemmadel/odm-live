@@ -1,0 +1,206 @@
+{% comment %}
+  Renders cart notification
+
+  Accepts:
+  - color_scheme: {String} sets the color scheme of the notification (optional)
+
+  Usage:
+  {% render 'cart-notification' %}
+{% endcomment %}
+
+{%- if shop.metafields.upsell.items != blank -%}
+  <link rel="stylesheet" href="{{ 'cart-upsell.css' | asset_url }}" media="print" onload="this.media='all'">
+  <noscript>
+    {{ 'cart-upsell.css' | asset_url | stylesheet_tag }}
+  </noscript>
+{%- endif -%}
+
+<cart-notification>
+  <div class="cart-notification-wrapper">
+    <div
+      id="cart-notification"
+      class="cart-notification focus-inset{% if section.settings.color_scheme %} color-{{ section.settings.color_scheme }} gradient{% endif %}"
+      aria-modal="true"
+      aria-label="{{ 'general.cart.item_added' | t }}"
+      role="dialog"
+      tabindex="-1"
+    >
+      <div class="cart-notification__header">
+        <span class="drawer-count">
+          {{- 'sections.cart.title' | t }}
+          (
+          <span id="drawer_cart_item_count">
+            {{ cart.item_count }}
+          </span>
+          {% if cart.item_count < 2 %}
+            <span id="drawer_cart_item_text">
+              {{ 'cart_optimized.article.one' | t }}
+            </span>
+          {% else %}
+            <span id="drawer_cart_item_text">
+              {{ 'cart_optimized.article.other' | t }}
+            </span>
+          {% endif %}
+          )
+        </span>
+        <button
+          type="button"
+          class="cart-notification__close modal__close-button link link--text focus-inset"
+          aria-label="{{ 'accessibility.close' | t }}"
+        >
+          <svg class="icon icon-close" aria-hidden="true" focusable="false">
+            <use href="#icon-close">
+          </svg>
+        </button>
+      </div>
+      <div class="cart-notification-products">
+        {%- assign free_products = section.blocks | where: 'type', 'free_products' -%}
+        {%- assign upsell_products = section.blocks | where: 'type', 'upsell_products' -%}
+        {% render 'cart-items', cart_drawer: true, free_products: free_products, upsell_products: upsell_products, delivery_costs: section.settings.delivery_costs %}
+      </div>
+      <div class="cart-notification__links">
+        <div class="cart-notification__links--price">
+          <span><b>{{ 'sections.cart.subtotal' | t }}:</b></span>
+          <span><b>{{ cart.total_price | money }}</b></span>
+        </div>
+        {% if settings.cart_infotext != blank %}
+          <div class="tax-note tax-note--first-note">{{ settings.cart_infotext }}</div>
+        {% else %}
+          <div class="tax-note tax-note--first-note">{{ 'deutschland.cart_note_html' | t }}</div>
+        {% endif %}
+        <div class="cart_atc_button">
+          {%- unless cart.item_count == 0 -%}
+            <form action="{{ routes.cart_url }}" method="post" id="cart-notification-form">
+              <button class="button button--primary button--full-width" name="checkout">
+                <span class="button-icon-padlock">{% render 'icon-padlock' %}</span> {{ 'sections.cart.checkout' | t }}
+              </button>
+            </form>
+          {%- endunless -%}
+        </div>
+        <a href="/collections/all" class="continue-shopping">
+          <button class="button button--primary button--full-width continue-shopping-button" name="shopping">
+           <span class="button-icon-shopping" title="{{ 'general.continue_shopping' | t }}"> {% render 'icon-shopping'%}</span> {{ 'general.continue_shopping' | t }} 
+          </button>
+        </a>
+
+        <div class="cart-notification__payment-icons hidden">
+          {% for type in shop.enabled_payment_types %}
+            <img class=" lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ type | payment_type_img_url }}" loading="lazy" width="38" height="24">
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</cart-notification>
+{% style %}
+  .cart-notification {
+     display: none;
+  }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "t:sections.theme_cart.name",
+  "class": "section-header",
+  "settings": [
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "background-1",
+      "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "text",
+      "id": "delivery_costs",
+      "label": "t:sections.main-cart-items.settings.delivery_costs.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "default": false,
+      "label": "t:sections.main-cart-items.settings.show_vendor.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "free_products",
+      "name": "t:sections.theme_cart.free_products.name",
+      "settings": [
+        {
+          "type": "number",
+          "id": "value",
+          "label": "t:sections.theme_cart.free_products.order_value"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "t:sections.theme_cart.free_products.product"
+        }, 
+        {
+          "type": "checkbox",
+          "id": "gang_only",
+          "default": false,
+          "label": "t:sections.theme_cart.free_products.gang"
+        }
+      ]
+    },
+    {
+      "type": "upsell_products",
+      "name": "t:sections.theme_cart.upsell_products.name",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "t:sections.theme_cart.free_products.product"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

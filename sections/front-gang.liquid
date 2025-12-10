@@ -1,0 +1,169 @@
+<link
+  rel="stylesheet"
+  href="{{ 'section-gang.css' | asset_url }}"
+  media="print"
+  onload="this.media='all'">
+<noscript>{{ 'section-gang.css' | asset_url | stylesheet_tag }}</noscript>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 -}}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 -}}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top -}}px;
+      padding-bottom: {{ section.settings.padding_bottom -}}px;
+    }
+  }
+{%- endstyle -%}
+
+<section data-section-id="{{ section.id }}" class="section-{{ section.id }}-padding gang">
+  <div class="gang__img__container">
+  {% liquid 
+    assign gang_mob = 'gang-mobile.png' 
+    assign mob_100x = gang_mob | file_img_url: '100x'
+    assign mob_200x = gang_mob | file_img_url: '200x'
+    assign mob_300x = gang_mob | file_img_url: '300x'
+    assign mob_400x = gang_mob | file_img_url: '400x'
+   %}
+
+    <img src="{{ gang_mob | file_img_url: '700x' }}" loading="lazy" widths="[180, 360, 540,720]" aspectratio="0.6666666" sizes="auto" srcset="{{ mob_100x }} 100w,
+   {{ mob_200x }} 200w,
+   {{ mob_300x }} 300w,
+   {{ mob_400x }} 400w" 
+   width="400" height="566" alt="gang" class="gang--mobile">
+
+   {% liquid 
+    assign gang_desk = 'gang-desktop.png' 
+    assign desk_750x = gang_desk | file_img_url: '750x'
+    assign desk_1100x = gang_desk | file_img_url: '1100x'
+    assign desk_1500x = gang_desk | file_img_url: '1500x'
+    assign desk_1780x = gang_desk | file_img_url: '1780x'
+   %}
+
+    <img
+      src="{{ gang_desk | file_img_url: '1400x' }}"
+      aspectratio="2.4"
+      sizes="auto"
+      loading="lazy"
+      srcset="{{ desk_750x }} 750w,
+      {{ desk_1100x }} 1100w,
+     {{ desk_1500x }} 1500w,
+      {{ desk_1780x }} 1780w"
+      height="797"
+      width="1500"
+      alt=""
+      class="gang--desktop">
+  </div>
+  <div class="gang__description page-width">
+    <p>
+      {{ section.settings.text }}
+    </p>
+
+    {%- if section.settings.link != blank and section.settings.link_text != blank -%}
+      <div class="gang__link__container">
+        <a
+          href="{{ section.settings.link }}"
+          class="gang__link"
+          style="background-image: url('{{ 'black-bar.png' | file_img_url: '320x' }}')">{{ section.settings.link_text }}</a>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animation-{{ section.settings.section_animation }}');
+          return; // if we added the class, exit the function
+        }
+      });
+    });
+    observer.observe(document.querySelector('.gang'));
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Gang",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      },
+      {
+        "type": "text",
+        "id": "link",
+        "label": "Link"
+      }, {
+        "type": "text",
+        "id": "link_text",
+        "label": "Link text"
+      }, {
+        "type": "text",
+        "id": "text",
+        "label": "Text"
+      }, {
+        "type": "select",
+        "id": "section_animation",
+        "options": [
+          {
+            "value": "none",
+            "label": "t:sections.all.animation.options__1.label"
+          },
+          {
+            "value": "fade-in",
+            "label": "t:sections.all.animation.options__2.label"
+          },
+          {
+            "value": "top",
+            "label": "t:sections.all.animation.options__3.label"
+          },
+          {
+            "value": "bottom",
+            "label": "t:sections.all.animation.options__4.label"
+          }, {
+            "value": "right",
+            "label": "t:sections.all.animation.options__5.label"
+          }, {
+            "value": "left",
+            "label": "t:sections.all.animation.options__6.label"
+          }
+        ],
+        "default": "none",
+        "label": "t:sections.all.animation.section_animation"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Gang"
+      }
+    ]
+  }
+{% endschema %}

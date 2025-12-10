@@ -1,0 +1,53 @@
+{{ 'landingpage-christmas.css' | asset_url | stylesheet_tag }}
+<noscript>{{ 'landingpage-christmas.css' | asset_url | stylesheet_tag }}</noscript>
+
+<section class="christmas_landingpage">
+    
+    <div class="christmas__tree" style="background-image: url('{{ 'christmas-tree.png' | file_url: '500x' }}'); background-repeat-x: repeat; background-repeat-y: no-repeat;"></div>
+
+    <div class="page-width christmas__cocktail">
+        <img
+            src="{{ 'christmas-cocktail.png' | file_img_url: '700x' }}"
+            alt="Cocktails"
+            loading="lazy"
+            draggable="false"
+            width="900"
+            height="300"
+            />
+        <div class="christmas__cocktail--image">
+          {{ section.settings.image | image_url: width: 1100 | image_tag: widths: '375, 550, 750, 1100', alt: section.settings.image.alt, loading: 'lazy'}}
+        </div>
+
+        <div class="christmas__recipe">
+            <div class="mono" style="color: #3d5a3b!important;">
+                {{ section.settings.cocktail }}
+            </div>
+        </div>
+    </div>
+    <div class="deco bot__deco" style="background-image: url('{{ 'christmas-bottom.png' | file_img_url: '500x' }}'); background-repeat-x: repeat; background-repeat-y: no-repeat;"></div>
+</section>
+
+{% schema %}
+{
+  "name": "Christmas Cocktail",
+  "class": "christmas-section",
+  "settings": [
+    {
+        "type": "richtext",
+        "id": "cocktail",
+        "label": "Cocktail text"
+    },
+    {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Cocktail Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Christmas Cocktail",
+      "category": "Landingpage"
+    }
+  ]
+}
+{% endschema %}

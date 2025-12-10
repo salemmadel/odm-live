@@ -1,0 +1,75 @@
+/* stylelint-disable */
+div[data-address-field=address1] {
+  width: 70%;
+}
+
+div[data-address-field=house-number] {
+  width: 30%;
+}
+
+.section--shipping-address .fieldset {
+  margin: 10px;
+}
+
+.section--shipping-address .section__content {
+  border: 1px solid #d9d9d9;
+}
+
+.address-tabs {
+  display: flex;
+}
+
+.address-tabs__btn {
+  border-right: 1px solid #d9d9d9;
+  cursor: pointer;
+  padding: 10px 20px;
+  text-align: center;
+  width: 50%;
+}
+
+.address-tabs__btn img {
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.address-tabs__btn:last-child {
+  border-right: none;
+}
+
+.address-tabs__btn:not(.active) {
+  background: #f1f1f1;
+}
+
+.section__content[data-address=delivery] #checkout_shipping_address_address1 {
+  display: none;
+}
+
+.section__content[data-address=packing-station] #checkout_shipping_address_address1_street,
+.section__content[data-address=postfiliale] #checkout_shipping_address_address1_street {
+  display: none;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.checkout-success-info {
+  color: #278639;
+  padding: 16px 0;
+}
+
+.order-summary__sections {
+  height: auto !important;
+}
+
+[data-step=contact_information] .step__sections .section__header {
+  display: none;
+}
+
+[data-step=contact_information] .step__sections .section__content {
+  border-radius: 6px;
+}
+
+/* stylelint-enable */
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../.src/scss/checkout.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;AACA;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;AAAA;EAEE;;;AAIF;EACE;;;AAGF;EACE;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAEF%22,%22file%22:%22checkout.css%22%7D */

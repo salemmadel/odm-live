@@ -1,0 +1,61 @@
+{%- comment -%}
+  Emit a custom event when a Klaviyo form is submitted. This event will be 
+  consumed by the 'MP: Google Tag Manager' custom pixel and add the relevant
+  data to the dataLayer
+{%- endcomment -%}
+
+<script>
+  window.addEventListener("klaviyoForms", function(e) { 
+    console.log("[S-A-H]", e);
+    if(e.detail.type == "submit"){
+      console.log("[S-A-H] Got a submit from Klaviyo, sending it to Shopify");
+      Shopify.analytics.publish("newsletter_sign_up", { 
+        formId:  e.detail.formId,
+        formTitle: e.detail.metaData.$source
+      });
+    }
+  });
+</script>
+
+{%- comment -%}
+  Emit a custom event when a Cognito form is submitted.
+{%- endcomment -%}
+
+<script>
+  var waitForGlobal = function(key, callback) {
+    if (window[key]) {
+      callback();
+    } else {
+      setTimeout(function() {
+        waitForGlobal(key, callback);
+      }, 100);
+    }
+  };
+
+  waitForGlobal("Cognito", () => {
+    Cognito.on('afterSubmit', function(e) {
+      console.log("[S-A-H] Got a submit from Cognito, sending it to Shopify");
+      if(e.data.entry.Form.Name == "Store Tasting Sign-Up") {
+        Shopify.analytics.publish("tasting_sign_up", {
+          formId:  e.data.entry.Form.Id,
+          formTitle: e.data.entry.Form.Name
+        });
+      }
+    });
+  });
+</script>
+
+{%- comment -%}
+  Hotjar, but in code - as pixel doesn't work
+{%- endcomment -%}
+
+<script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:{{ settings.hj_id }},hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>

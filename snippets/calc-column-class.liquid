@@ -1,0 +1,27 @@
+{%- comment -%}
+  Determine the responsive column class.
+
+  Tags:
+  [per-project] [capturable]
+{%- endcomment -%}
+{%- liquid
+  assign columns_sm = columns_sm | default: "" | sort
+  assign columns_md = columns_md | default: "" | sort
+  assign columns_lg = columns_lg | default: "" | sort
+  assign columns_xl = columns_xl | default: "" | sort
+  assign columns_xxl = columns_xxl | default: "" | sort
+  assign columns = columns_sm | concat: columns_md | concat: columns_lg | concat: columns_xl | concat: columns_xxl
+
+  assign breakpoints = "sm md lg xl xxl xxxl" | split: " "
+  assign column_class = columns_xs | default: "col-12"
+  for breakpoint in breakpoints
+    if columns[forloop.index0] == ""
+      continue
+    endif
+    assign breakpoint_infix = "-" | append: breakpoint | append: "-"
+    assign breakpoint_column_class = columns[forloop.index0] | replace_first: "-", breakpoint_infix
+    assign column_class = column_class | append: " " | append: breakpoint_column_class
+  endfor
+
+  echo column_class
+-%}

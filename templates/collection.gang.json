@@ -1,0 +1,251 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "5054f308-d475-4457-a6a4-0497d601b01a": {
+      "type": "image-intro-banner",
+      "settings": {
+        "is_above_the_fold": false,
+        "image": "shopify://shop_images/Shop_Heros_Desktop_Gang_864200f1-4019-4761-aa7e-14f8dcdb9ab8.jpg",
+        "image_2": "shopify://shop_images/Shop_Heros_Mobil_Gang_5ae2b1a4-74b2-4cff-985f-e56f35eb9fb5.jpg",
+        "image_4_height": 0,
+        "image_3_height": 0,
+        "link": "",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "section_animation": "none",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "show_text_below": true,
+        "heading_h1": "",
+        "heading_h2": "",
+        "heading_text": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "1654605637dcfd3e20": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "Bestseller",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "collection": "featured",
+        "products_to_show": 5,
+        "columns_desktop": 5,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "view_all_button_label": "",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "is_above_the_fold": false,
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "rich_text_headline_wdhfEC": {
+      "type": "rich-text-headline",
+      "name": "Rich Text Header",
+      "settings": {
+        "title": "Gang",
+        "subtitle": "Unsere exklusiven Artikel - nur für Gangmitglieder!",
+        "background_color": "#FFFFFF",
+        "text_color": "#000000",
+        "headline_color": "#000000",
+        "border_bottom_color": "#000000",
+        "padding_top": 35,
+        "padding_bottom": 0
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "is_above_the_fold": false,
+        "products_per_page": 20,
+        "columns_desktop": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "grey_sold_out_products": true,
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 32
+      }
+    },
+    "rich_text_headline_qJFGFg": {
+      "type": "rich-text-headline",
+      "name": "Rich Text Header",
+      "settings": {
+        "title": "Entdecke mehr Produkte.",
+        "subtitle": "Wir haben noch so viel mehr für dich!",
+        "background_color": "#FFFFFF",
+        "text_color": "#000000",
+        "headline_color": "#000000",
+        "border_bottom_color": "#000000",
+        "padding_top": 35,
+        "padding_bottom": 0
+      }
+    },
+    "521c6eab-fc24-44d5-91dc-8f3f0174831f": {
+      "type": "rich-text",
+      "blocks": {
+        "template--17963896865036__521c6eab-fc24-44d5-91dc-8f3f0174831f-16849356873408bd23-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Entdecke mehr",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--17963896865036__521c6eab-fc24-44d5-91dc-8f3f0174831f-16849356873408bd23-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "9b777c35-adc9-4c2f-a453-b5cef07e1b45": {
+      "type": "collection-buttons",
+      "disabled": true,
+      "settings": {
+        "title": ""
+      }
+    },
+    "1f139c92-f555-426b-97ab-23bc0d981564": {
+      "type": "front-collections",
+      "blocks": {
+        "template--17979640348940__1f139c92-f555-426b-97ab-23bc0d981564-16861325973395f13c-0": {
+          "type": "collection",
+          "settings": {
+            "default_collection": true,
+            "collection_title": "Moonshine",
+            "collection": "moonshine",
+            "view_all_button_label": ""
+          }
+        },
+        "be6981f4-38e9-49c2-8942-53b765d60379": {
+          "type": "collection",
+          "settings": {
+            "default_collection": false,
+            "collection_title": "Sets",
+            "collection": "sets",
+            "view_all_button_label": ""
+          }
+        },
+        "e85d32e9-946f-4f60-842f-3f13d34a621f": {
+          "type": "collection",
+          "settings": {
+            "default_collection": false,
+            "collection_title": "Bestseller",
+            "collection": "featured",
+            "view_all_button_label": ""
+          }
+        },
+        "083b98a9-e540-475e-89cd-6daa2231e839": {
+          "type": "collection",
+          "settings": {
+            "default_collection": false,
+            "collection_title": "Merchandise",
+            "collection": "merchandise",
+            "view_all_button_label": ""
+          }
+        },
+        "2a83e118-b3de-4fc9-a926-40db2af7fd72": {
+          "type": "collection",
+          "settings": {
+            "default_collection": false,
+            "collection_title": "Alles",
+            "collection": "all",
+            "view_all_button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17979640348940__1f139c92-f555-426b-97ab-23bc0d981564-16861325973395f13c-0",
+        "be6981f4-38e9-49c2-8942-53b765d60379",
+        "e85d32e9-946f-4f60-842f-3f13d34a621f",
+        "083b98a9-e540-475e-89cd-6daa2231e839",
+        "2a83e118-b3de-4fc9-a926-40db2af7fd72"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 24,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "5054f308-d475-4457-a6a4-0497d601b01a",
+    "1654605637dcfd3e20",
+    "banner",
+    "rich_text_headline_wdhfEC",
+    "product-grid",
+    "rich_text_headline_qJFGFg",
+    "521c6eab-fc24-44d5-91dc-8f3f0174831f",
+    "9b777c35-adc9-4c2f-a453-b5cef07e1b45",
+    "1f139c92-f555-426b-97ab-23bc0d981564"
+  ]
+}

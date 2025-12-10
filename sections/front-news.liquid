@@ -1,0 +1,200 @@
+<link rel="stylesheet" href="{{ 'section-news.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'section-news.css' | asset_url | stylesheet_tag }}</noscript>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  .news {
+    background-image: none;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top -}}px;
+      padding-bottom: {{ section.settings.padding_bottom -}}px;
+    }
+
+    .news {
+      background-image: url('{{ 'black-paint-newspaper.png' | file_img_url: '1500x' }}');
+        background-image: -webkit-image-set(
+    url('{{ 'black-paint-newspaper.png' | file_img_url: '1500x' }}') 1x,
+    url('{{ 'black-paint-newspaper.png' | file_img_url: '700x' }}') 2x
+  );
+  background-image: image-set(
+    url('{{ 'black-paint-newspaper.png' | file_img_url: '1500x' }}') 1x,
+    url('{{ 'black-paint-newspaper.png' | file_img_url: '700x' }}') 2x
+  );
+    }
+  }
+
+{%- endstyle -%}
+
+<section data-section-id="{{ section.id }}" class="section-{{ section.id }}-padding news">
+  {%- if section.settings.image != blank -%} 
+    {{ section.settings.image | image_url: width: 700, format: 'jpg' | image_tag: alt: section.settings.image.alt, class: 'news__img news--mobile', widths: '200, 550, 700', sizes: 'auto', aspectratio: section.settings.image.aspect_ratio, loading: 'lazy' }}
+  {%- endif -%}
+  <div>
+    {% liquid 
+    assign gang_mob = 'news-text.png' 
+    assign news_100x = gang_mob | file_img_url: '100x'
+    assign news_200x = gang_mob | file_img_url: '200x'
+    assign news_300x = gang_mob | file_img_url: '300x'
+    assign news_400x = gang_mob | file_img_url: '400x'
+    assign news_750x = gang_mob | file_img_url: '750x'
+    assign news_1100x = gang_mob | file_img_url: '1100x'
+    assign news_1500x = gang_mob | file_img_url: '1500x'
+    assign news_1780x = gang_mob | file_img_url: '1780x'
+    assign news_2000x = gang_mob | file_img_url: '2000x' %}
+    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ gang_mob | file_img_url: '1400x' }}"
+      loading="lazy"
+  aspectratio="2.4" 
+      sizes="auto" 
+data-srcset="{{ news_100x }} 100w,
+             {{ news_200x }} 200w,
+             {{ news_300x }} 300w,
+             {{ news_400x }} 400w,
+             {{ news_750x }} 750w,
+             {{ news_1100x }} 1100w,
+             {{ news_1500x }} 1500w,
+             {{ news_1780x }} 1780w,
+      {{ news_2000x }} 2000w"
+width="1400" height="650"
+      alt="" class="news__img news--desktop lazyload" >
+ </div>
+  <div class="news__content">
+    {% liquid 
+    assign news_text = 'news.png' 
+    %}
+
+    {% liquid 
+      assign news_text = 'news.png' 
+      assign text_100x = news_text | file_img_url: '100x'
+      assign text_200x = news_text | file_img_url: '200x'
+      assign text_300x = news_text | file_img_url: '300x'
+      assign text_400x = news_text | file_img_url: '400x'
+      assign text_750x = news_text | file_img_url: '750x' %}
+
+   <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ news_text | file_img_url: '700x' }}"
+      loading="lazy"
+  aspectratio="2.4" 
+      sizes="auto" 
+data-srcset="{{ text_100x }} 100w,
+             {{ text_200x }} 200w,
+             {{ text_300x }} 300w,
+             {{ text_400x }} 400w,
+             {{ text_750x }} 750w"
+width="700" height=""
+      alt="" class="news--text lazyload" >
+   <p class="hidden-sm">{{ section.settings.text }}</p>
+    {%- if section.settings.link != blank and section.settings.link_text != blank -%}
+        <a href="{{ section.settings.link }}" class="news__link" style="background-image: url('//cdn.shopify.com/s/files/1/0729/2649/5002/files/white-space.svg')">{{ section.settings.link_text }}</a>
+    {%- endif -%}
+</section>
+
+<script>
+  document.addEventListener( 'DOMContentLoaded', function () {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animation-{{section.settings.section_animation}}');
+          return; // if we added the class, exit the function
+         }
+      });
+    });
+    observer.observe(document.querySelector('.news'));
+  });
+</script>
+{% schema %}
+{
+  "name": "news",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "link",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link text"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "select",
+      "id": "section_animation",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.all.animation.options__1.label"
+        },
+        {
+          "value": "fade-in",
+          "label": "t:sections.all.animation.options__2.label"
+        },
+        {
+          "value": "top",
+          "label": "t:sections.all.animation.options__3.label"
+        },
+        {
+          "value": "bottom",
+          "label": "t:sections.all.animation.options__4.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.all.animation.options__5.label"
+        },
+        {
+          "value": "left",
+          "label": "t:sections.all.animation.options__6.label"
+        }
+      ],
+      "default": "none",
+      "label": "t:sections.all.animation.section_animation"
+    }
+  ],
+  "presets": [
+    {
+      "name": "news"
+    }
+  ]
+}
+{% endschema %}

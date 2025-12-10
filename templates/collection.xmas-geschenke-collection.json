@@ -1,0 +1,204 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rich_text_headline_TUmTKY": {
+      "type": "rich-text-headline",
+      "name": "Rich Text Header",
+      "settings": {
+        "title": "Unsere XMAS Geschenke.",
+        "subtitle": "Entdecke unsere exklusiven Sets und Geschenkpakete für besonderen Genuss.",
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "headline_color": "#000000",
+        "border_bottom_color": "#000000",
+        "padding_top": 35,
+        "padding_bottom": 0
+      }
+    },
+    "53e9f97b-2521-4226-b107-b20b3dbe0c70": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18042486718732__53e9f97b-2521-4226-b107-b20b3dbe0c70-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Unsere XMAS Geschenke",
+            "heading_size": "h1"
+          }
+        },
+        "template--18042486718732__53e9f97b-2521-4226-b107-b20b3dbe0c70-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Entdecke die perfekten XMAS Geschenke bei O'Donnell Moonshine! Unsere exklusiven Sets und Geschenkpakete bringen Genuss und gute Stimmung – ideal für alle, die das Besondere schätzen.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18042486718732__53e9f97b-2521-4226-b107-b20b3dbe0c70-heading-1",
+        "template--18042486718732__53e9f97b-2521-4226-b107-b20b3dbe0c70-text-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 12
+      }
+    },
+    "e4069c36-347f-4d21-ba5c-7d022ae17435": {
+      "type": "product-highlight",
+      "disabled": true,
+      "settings": {
+        "is_above_the_fold": false,
+        "image": "shopify://shop_images/shop-highlight_700x_c76c22e5-8419-459f-a6b5-3507943bb4f4.webp",
+        "highlighted_product": "moonshine-adventskalender-2023",
+        "product_description": "Sichere dir jetzt unseren Adventskalender!",
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "is_above_the_fold": false,
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "is_above_the_fold": false,
+        "products_per_page": 24,
+        "columns_desktop": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "grey_sold_out_products": true,
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "columns_mobile": "2",
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
+    "00ce110b-ead1-46b9-80b2-61eab39d3ca2": {
+      "type": "front-collections",
+      "blocks": {
+        "10fd9a3e-ced6-4531-bfb9-752ed2f3847c": {
+          "type": "collection",
+          "settings": {
+            "default_collection": false,
+            "collection_title": "BESTSELLERS",
+            "collection": "featured",
+            "view_all_button_label": "Alle Bestseller ansehen"
+          }
+        },
+        "1f1f196f-60eb-4e0e-a819-02c29620aa3d": {
+          "type": "collection",
+          "settings": {
+            "default_collection": false,
+            "collection_title": "ZUBEHÖR",
+            "collection": "zubehoer",
+            "view_all_button_label": "Alle Zubehör Produkte"
+          }
+        },
+        "d50aa51b-bf15-41a9-81ca-64bd3965568d": {
+          "type": "collection",
+          "settings": {
+            "default_collection": false,
+            "collection_title": "ALLE PRODUKTE",
+            "collection": "all",
+            "view_all_button_label": "Alle Produkte ansehen"
+          }
+        }
+      },
+      "block_order": [
+        "10fd9a3e-ced6-4531-bfb9-752ed2f3847c",
+        "1f1f196f-60eb-4e0e-a819-02c29620aa3d",
+        "d50aa51b-bf15-41a9-81ca-64bd3965568d"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "Entdecke mehr Produkte",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "products_to_show": 5,
+        "columns_desktop": 4,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "98aad9e3-ece7-400f-a205-1416f705e6bc": {
+      "type": "rich-text",
+      "blocks": {
+        "template--17287358513420__98aad9e3-ece7-400f-a205-1416f705e6bc-1674733298abedef1d-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Die O'Donnell Geschenksets",
+            "heading_size": "h2"
+          }
+        },
+        "template--17287358513420__98aad9e3-ece7-400f-a205-1416f705e6bc-1674733298abedef1d-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ein Moonshine <strong>Geschenkset</strong> ist die perfekte Wahl für alle, die auf der Suche nach einem besonderen <strong>Geschenk</strong> für Freunde oder Familie, die gerne ausgefallene Spirituosen genießen. Egal ob zu <strong>Weihnachten</strong>, zum <strong>Geburtstag</strong> oder zur Hochzeit - ein O'Donnell Geschenkset passt immer.</p><p>Einer der größten Vorteile von Moonshine Geschenksets ist die Vielfalt an Geschmacksrichtungen. Es gibt viele fruchtige und klassische Varianten wie z.B. Wilde Beere, Bratapfel, Macadamia oder Harte Nuss.</p><p>Ein weiterer Vorteil von unseren O’Donnell Geschenksets ist, dass sie immer aus mehreren Produkten bestehen. Zum Beispiel, unsere “2er Geschenkbox” bestehend aus zwei Gläsern Moonshine, einem Ausgießer und passenden Schnapsgläsern. Dies macht sie besonders wertvoll und zu einem tollen Erlebnis.</p><p>Moonshine Geschenksets sind eine tolle Geschenkidee, weil sie so vielseitig und eine besondere Ergänzung für jede Spirituosen-Sammlung sind. Sie eignen sich perfekt für Menschen, die gerne ausgefallene Spirituosen genießen und bieten die Möglichkeit, einen besonderen Anlass zu feiern oder jemanden zu überraschen.</p><p>Also mach auch du deinen Liebsten eine Freunde mit einem O’Donnell Geschenkset.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--17287358513420__98aad9e3-ece7-400f-a205-1416f705e6bc-1674733298abedef1d-0",
+        "template--17287358513420__98aad9e3-ece7-400f-a205-1416f705e6bc-1674733298abedef1d-1"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".rich-text {text-align: left;}"
+      ],
+      "settings": {
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 24
+      }
+    }
+  },
+  "order": [
+    "rich_text_headline_TUmTKY",
+    "53e9f97b-2521-4226-b107-b20b3dbe0c70",
+    "e4069c36-347f-4d21-ba5c-7d022ae17435",
+    "banner",
+    "product-grid",
+    "00ce110b-ead1-46b9-80b2-61eab39d3ca2",
+    "98aad9e3-ece7-400f-a205-1416f705e6bc"
+  ]
+}

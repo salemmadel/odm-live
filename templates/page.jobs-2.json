@@ -1,0 +1,628 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "91f4dea0-6988-4c9f-9f1f-fe3dffeab614": {
+      "type": "slideshow-with-timer",
+      "blocks": {
+        "template--17287355007244__91f4dea0-6988-4c9f-9f1f-fe3dffeab614-16747435154450de0c-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/EmployerBranding_SO90_Hero_2000_930ee0fb-5422-405d-aab7-0f264f6c3759.jpg",
+            "image_2": "shopify://shop_images/EmployerBranding_SO90_Hero_1080_fb4b9e83-0614-4e2b-bf96-ce502c4d6189.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "timer": "",
+            "countdown_overlay": true,
+            "countdown_overlay_position": "top-center",
+            "countdown_color": "#ffffff",
+            "desktop_button_height": 40,
+            "mobile_button_height": 40,
+            "link_overlay": "",
+            "button_label": "",
+            "link": "",
+            "button_label_2": "",
+            "link_2": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "font_color": "#000000",
+            "background_color": "#ffffff",
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "template--17287355007244__91f4dea0-6988-4c9f-9f1f-fe3dffeab614-16747435154450de0c-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Hero_Jobseite_Desktop_1bf0306c-e8bc-487a-be9a-4615bd6759e5.png",
+            "image_2": "shopify://shop_images/Hero_Jobseite_mobil_4b574a93-e433-4a0d-9f18-4a62699fff35.png",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "timer": "",
+            "countdown_overlay": true,
+            "countdown_overlay_position": "top-center",
+            "countdown_color": "#ffffff",
+            "desktop_button_height": 40,
+            "mobile_button_height": 40,
+            "link_overlay": "",
+            "button_label": "",
+            "link": "",
+            "button_label_2": "",
+            "link_2": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "font_color": "#000000",
+            "background_color": "#ffffff",
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "9825123f-8117-483c-8af1-93a1ee3a4043": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Berlin_Fhain_Store_1800-35_b56c7359-c7e3-48e8-8542-85879d5a1f56.webp",
+            "image_2": "shopify://shop_images/Hero_Jobseite_Mobil3_ff7dacaf-21f0-4318-8ca2-2d9f4ae7932c.png",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "timer": "",
+            "countdown_overlay": true,
+            "countdown_overlay_position": "top-center",
+            "countdown_color": "#ffffff",
+            "desktop_button_height": 40,
+            "mobile_button_height": 40,
+            "link_overlay": "",
+            "button_label": "",
+            "link": "",
+            "button_label_2": "",
+            "link_2": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "font_color": "#000000",
+            "background_color": "#ffffff",
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--17287355007244__91f4dea0-6988-4c9f-9f1f-fe3dffeab614-16747435154450de0c-0",
+        "template--17287355007244__91f4dea0-6988-4c9f-9f1f-fe3dffeab614-16747435154450de0c-1",
+        "9825123f-8117-483c-8af1-93a1ee3a4043"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slides_controls_position": "hide",
+        "auto_rotate": false,
+        "banner_buttons_animation": true,
+        "change_slides_speed": 3,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "0a4c9f9a-cd7f-434c-89a1-60aeddc10d2f": {
+      "type": "rich-text",
+      "blocks": {
+        "template--17034530390284__0a4c9f9a-cd7f-434c-89a1-60aeddc10d2f-16738801173af1a641-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Werde Teil unseres Moonshine-Teams",
+            "heading_size": "h1"
+          }
+        },
+        "template--17034530390284__0a4c9f9a-cd7f-434c-89a1-60aeddc10d2f-16738801173af1a641-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wir freuen uns, dass du ein Teil des O’Donnell Teams werden möchtest! Ganz kurz gesagt, das erwartet dich bei uns: ein familiäres Team, das gemeinsam zur größten Moonshine Brand Europas geworden ist und mit dir zusammen noch weiter wachsen möchte.</p><p>Lerne auf dieser Seite unsere verschiedenen Standorte sowie Teammitglieder kennen und entdecke die aktuell offenen Stellen bei uns.</p><p>Hast du Interesse? Dann sende uns eine E-Mail an <a href=\"mailto:talent-and-culture-@odonnell.de\" target=\"_blank\">talent-and-culture-@odonnell.de</a> und werde Teil unseres Moonshine-Teams!</p>"
+          }
+        },
+        "template--17034530390284__0a4c9f9a-cd7f-434c-89a1-60aeddc10d2f-16738801173af1a641-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Zu den Jobs",
+            "button_link": "https://odonnell-moonshine.jobs.personio.de/",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--17034530390284__0a4c9f9a-cd7f-434c-89a1-60aeddc10d2f-16738801173af1a641-0",
+        "template--17034530390284__0a4c9f9a-cd7f-434c-89a1-60aeddc10d2f-16738801173af1a641-1",
+        "template--17034530390284__0a4c9f9a-cd7f-434c-89a1-60aeddc10d2f-16738801173af1a641-2"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 24,
+        "show_title": true
+      }
+    },
+    "fb7f875a-993d-430d-9efa-178ffdbde8e9": {
+      "type": "careers-links",
+      "blocks": {
+        "a11cc89d-615c-47fd-bf57-6ec5d9b18d46": {
+          "type": "t:sections.career-categories.blocks.image.type",
+          "settings": {
+            "link": "https://odonnell-moonshine.jobs.personio.de/?filters=eyJvZmZpY2VfaWQiOlsyNzg2NjA3XX0=",
+            "image": "shopify://shop_images/Jobs_OfficeText2.jpg"
+          }
+        },
+        "be4c0a54-9a3a-4269-8db6-cc8733ca1859": {
+          "type": "t:sections.career-categories.blocks.image.type",
+          "settings": {
+            "link": "https://odonnell-moonshine.jobs.personio.de/?filters=eyJvZmZpY2VfaWQiOls5NzI0ODldfQ==",
+            "image": "shopify://shop_images/2EmployerBranding_SO90_Thumbnail_2000_Kopie_50fc1d03-bad0-431d-bfff-1b5e4b713aa9.jpg"
+          }
+        },
+        "b61b6cea-a670-42e7-a7ab-34dc750b05b8": {
+          "type": "t:sections.career-categories.blocks.image.type",
+          "settings": {
+            "link": "https://odonnell-moonshine.jobs.personio.de/",
+            "image": "shopify://shop_images/3EmployerBranding_SO90_Thumbnail_2000_Kopie_b045fc49-391b-4f03-8f57-d1ac7ead0e3b.jpg"
+          }
+        },
+        "8342c082-d6ae-414d-8ab7-5f607dbbdb92": {
+          "type": "t:sections.career-categories.blocks.image.type",
+          "settings": {
+            "link": "https://odonnell-moonshine.jobs.personio.de/",
+            "image": "shopify://shop_images/Shopify_POS_2000px-8_Kopie_8e781ffb-4c55-4194-a6c2-f93ba6764388.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "a11cc89d-615c-47fd-bf57-6ec5d9b18d46",
+        "be4c0a54-9a3a-4269-8db6-cc8733ca1859",
+        "b61b6cea-a670-42e7-a7ab-34dc750b05b8",
+        "8342c082-d6ae-414d-8ab7-5f607dbbdb92"
+      ],
+      "settings": {
+        "title": "",
+        "default": "",
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "color_scheme": "accent-2",
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_VKgwXj": {
+      "type": "rich-text",
+      "blocks": {
+        "button_Ra7tn7": {
+          "type": "button",
+          "settings": {
+            "button_label": "Mehr über uns",
+            "button_link": "shopify://pages/about",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "button_Ra7tn7"
+      ],
+      "settings": {
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 12
+      }
+    },
+    "rich_text_7UVqCB": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_hNCnFF": {
+          "type": "heading",
+          "settings": {
+            "heading": "Unsere Benefits",
+            "heading_size": "h1"
+          }
+        },
+        "text_nV4naT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Neben den üblichen Grundleistungen wie der Bereitstellung von hochwertiger Hardware, Getränken und Hygieneartikeln, bieten wir dir eine Vielzahl weiterer Benefits, die du individuell und bei Bedarf in Anspruch nehmen kannst.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_hNCnFF",
+        "text_nV4naT"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 12
+      }
+    },
+    "multicolumn_8rJ9WV": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_3aqBpd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Flexibilitaet.png",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Flexibilität",
+            "text": "<p>Durch flexible Arbeitszeiten,  und 28 Urlaubstagen im Jahr ermöglichen wir dir eine bessere Work-Life-Balance</p>",
+            "mobile_text": "",
+            "link_label": "",
+            "link": "",
+            "button_alignment": "left",
+            "selected_button": false,
+            "grey_out_media": false
+          }
+        },
+        "column_mAFPyb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Mobilitaet.png",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Fitness & Mobilität",
+            "text": "<p>Um deine Gesundheit zu fördern und deine Mobilität zu unterstützen, kannst du dich zwischen einem 20€ Zuschuss pro Monat für den ÖPNV, Urban Sports Club oder JobRad entscheiden</p>",
+            "mobile_text": "",
+            "link_label": "",
+            "link": "",
+            "button_alignment": "left",
+            "selected_button": false,
+            "grey_out_media": false
+          }
+        },
+        "column_pQ4pJc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Mitarbeiterrabatt.png",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Mitarbeiterrabatt",
+            "text": "<p>Natürlich bekommst du auf alle unsere Produkte einen Mitarbeiterrabatt, egal ob es sich um um einen unserer Schnäpse, Bootlegger Equipment oder eine unserer leckeren BBQ-Saucen handelt</p>",
+            "mobile_text": "",
+            "link_label": "",
+            "link": "",
+            "button_alignment": "left",
+            "selected_button": false,
+            "grey_out_media": false
+          }
+        },
+        "column_kbM9XN": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Launch-Sorten.png",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Kostenlose Launch-Sorten",
+            "text": "<p>Als Teil des O'Donnell Teams bekommst du bei jedem Launch ein 700ml-Glas der neuen Sorte geschenkt, damit du sie als erstes probieren kannst</p>",
+            "mobile_text": "",
+            "link_label": "",
+            "link": "",
+            "button_alignment": "left",
+            "selected_button": false,
+            "grey_out_media": false
+          }
+        },
+        "column_hgaHW8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Workation.png",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Workation",
+            "text": "<p>Ob am Strand, in den Bergen oder mitten im Geschehen - wir bieten dir 10 Tage Workation pro Jahr innerhalb der EU an, damit du flexibler bist und deinen Urlaub vielleicht sogar für einen längeren Aufenthalt buchen kannst</p>",
+            "mobile_text": "",
+            "link_label": "",
+            "link": "",
+            "button_alignment": "left",
+            "selected_button": false,
+            "grey_out_media": false
+          }
+        },
+        "column_8xHNPa": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Corporate-Benefits.png",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Corporate Benefits",
+            "text": "<p>Unsere Corporate Benefits Plattform bietet dir eine Vielzahl attraktiver Angebote verschiedener Marken aus allen Lebensbereichen - z.B. Technik, Reisen, Mode, Wohnen - und wird kontinuierlich um neue Anbieter und Angebote erweitert</p>",
+            "mobile_text": "",
+            "link_label": "",
+            "link": "",
+            "button_alignment": "left",
+            "selected_button": false,
+            "grey_out_media": false
+          }
+        },
+        "column_rYqjtY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/BAV-Zuschuss.png",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "BAV Zuschuss",
+            "text": "<p>Damit du eine sinnvolle Absicherung für das Alter hast, bezuschussen wir deine betriebliche Altersvorsorge mit 25%</p>",
+            "mobile_text": "",
+            "link_label": "",
+            "link": "",
+            "button_alignment": "left",
+            "selected_button": false,
+            "grey_out_media": false
+          }
+        },
+        "column_FWkR8r": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Teamevents.png",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Team- & Firmenevents",
+            "text": "<p>Wir unterstützen regelmäßige Teamevents mit Quartalsbudgets und feiern als Unternehmen Sommer- und Winterpartys sowie besondere Anlässe natürlich gemeinsam</p>",
+            "mobile_text": "",
+            "link_label": "",
+            "link": "",
+            "button_alignment": "left",
+            "selected_button": false,
+            "grey_out_media": false
+          }
+        },
+        "column_RTkbTL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Ergonomie.png",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Ergonomie",
+            "text": "<p>Ergonomie ist uns wichtig: Bei uns sitzt ihr an elektrisch höhenverstellbaren Tischen sowie Bürostühlen der Premium-Marke Vitra</p>",
+            "mobile_text": "",
+            "link_label": "",
+            "link": "",
+            "button_alignment": "left",
+            "selected_button": false,
+            "grey_out_media": false
+          }
+        }
+      },
+      "block_order": [
+        "column_3aqBpd",
+        "column_mAFPyb",
+        "column_pQ4pJc",
+        "column_kbM9XN",
+        "column_hgaHW8",
+        "column_8xHNPa",
+        "column_rYqjtY",
+        "column_FWkR8r",
+        "column_RTkbTL"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "",
+        "heading_size": "h2",
+        "title_text": "",
+        "outer_padding": 5,
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "image_border_color": "#ffffff",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "019c49ea-d8ff-4ae2-a99a-f4efce4b3a15": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16695182557452__019c49ea-d8ff-4ae2-a99a-f4efce4b3a15-16727441808d7d00c7-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2_0deff674-83f6-4196-9061-ea115b370576.png",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Jan",
+            "text": "<p>Bei O’Donnell Moonshine zu arbeiten bedeutet für mich stetiges Wachstum, ein tolles Teamgefühl und viele Möglichkeiten, sich selbst weiterzuentwickeln.</p>",
+            "mobile_text": "",
+            "link_label": "",
+            "link": "",
+            "button_alignment": "left",
+            "selected_button": false,
+            "grey_out_media": false
+          }
+        },
+        "template--16695182557452__019c49ea-d8ff-4ae2-a99a-f4efce4b3a15-16727441808d7d00c7-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/3_1ec9557c-52c4-445c-a11a-dca07ad35e82.png",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Richard",
+            "text": "<p>O’Donnell ist für mich Familie, Passion und der geilste Schnaps der Welt.</p>",
+            "mobile_text": "",
+            "link_label": "",
+            "link": "",
+            "button_alignment": "left",
+            "selected_button": false,
+            "grey_out_media": false
+          }
+        },
+        "template--16695182557452__019c49ea-d8ff-4ae2-a99a-f4efce4b3a15-16727441808d7d00c7-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Jess.jpg",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Jess",
+            "text": "<p>Die Zusammenarbeit mit meinem talentierten Team und die dynamische Unternehmenskultur machen O'Donnell Moonshine zu einem großartigen Arbeitsplatz für mich.</p>",
+            "mobile_text": "",
+            "link_label": "",
+            "link": "",
+            "button_alignment": "left",
+            "selected_button": false,
+            "grey_out_media": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16695182557452__019c49ea-d8ff-4ae2-a99a-f4efce4b3a15-16727441808d7d00c7-0",
+        "template--16695182557452__019c49ea-d8ff-4ae2-a99a-f4efce4b3a15-16727441808d7d00c7-2",
+        "template--16695182557452__019c49ea-d8ff-4ae2-a99a-f4efce4b3a15-16727441808d7d00c7-1"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "",
+        "heading_size": "h1",
+        "title_text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+        "outer_padding": 5,
+        "image_width": "third",
+        "image_ratio": "circle",
+        "image_border_color": "#ffffff",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "ce5e3c70-71f4-4f4c-bee3-a9960775c673": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--16695182557452__ce5e3c70-71f4-4f4c-bee3-a9960775c673-1672745961935aa292-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "1. Wie bewerbe ich mich auf einen Job bei O’Donnell Moonshine?",
+            "icon": "question_mark",
+            "row_content": "<p>Auf unserer Jobseite findest du alle offenen Positionen. Wenn du eine passende Stelle gefunden hast, kannst du dich direkt über das Bewerbungsformular auf der Stellenseite bewerben. Falls keine passende Ausschreibung für dich dabei ist, freuen wir uns auf deine Initiativbewerbung. </p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "template--16695182557452__ce5e3c70-71f4-4f4c-bee3-a9960775c673-1672745961935aa292-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "2. Was sollte in meiner Bewerbung enthalten sein?",
+            "icon": "question_mark",
+            "row_content": "<p>Um einen ersten Eindruck von dir gewinnen zu können, schicke uns deinen aktuellen Lebenslauf und ein paar Worte zu dir und deiner Person. Ein Anschreiben ist nicht zwingend notwendig, trotzdem freuen wir uns natürlich, wenn du ein Anschreiben mit sendest.</p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "template--16695182557452__ce5e3c70-71f4-4f4c-bee3-a9960775c673-1672745961935aa292-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "3. Ich habe keine passende Stelle gefunden. Kann ich mich auch initiativ bewerben?",
+            "icon": "question_mark",
+            "row_content": "<p>Du hast die Stellenangebote durchsucht und es war nichts Passendes für dich dabei? Bewirb dich trotzdem! Initiativbewerbungen werden bei uns immer gern gesehen.</p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "template--16695182557452__ce5e3c70-71f4-4f4c-bee3-a9960775c673-1672745961935aa292-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "4. Wie sieht der Bewerbungsprozess aus?",
+            "icon": "question_mark",
+            "row_content": "<p>Nach dem Eingang deiner Bewerbung melden wir uns telefonisch oder per Mail bei dir. Bitte denk deshalb auch daran, deine aktuelle Telefonnummer und E-Mail deinen Bewerbungsunterlagen hinzuzufügen. Das erste Gespräch findet mit einem Mitglied des Talent & Culture Teams statt und dauert ca. 30 Minuten. Dieses Gespräch dient einem kurzen Kennenlernen. Im zweiten Schritt gibt es ein Gespräch mit deinem potenziellen direkten Vorgesetzten. Dieser Termin dauert etwa 45-60 Minuten.</p><p>Im letzten Schritt unseres Prozesses machen wir eine kleine Arbeitsprobe und ein Kennenlernen mit zwei weiteren potenziellen zukünftigen KollegInnen. </p><p>Wir wollen dich kennenlernen, gleichzeitig sollst du natürlich auch unser Unternehmen und die Kultur kennenlernen. </p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "767e08b7-2ce3-4fb8-b74a-3f4395c74e63": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "5. Kann ich bei euch aus dem Home Office arbeiten?",
+            "icon": "question_mark",
+            "row_content": "<p>Ja, diese Option besteht bei uns, kommt aber natürlich immer ganz auf die Stelle an. Du hast die Option, zwei Tage die Woche von Zuhause aus zu arbeiten. Oft findest du eine Info dazu schon in der Stellenbeschreibung.</p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "dabe2770-bdad-4500-935e-c7fc161dec61": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "6. Was macht es so besonders, Teil unseres Teams zu sein?",
+            "icon": "question_mark",
+            "row_content": "<p>Bei uns ziehen alle an einem Strang, arbeiten dabei sehr familiär zusammen und wir stehen zu 100% hinter unserem Produkt. Wir möchten unsere Brand gemeinsam immer weiter wachsen lassen, weshalb Ideen immer gerne gehört werden und der Arbeitsalltag aller MitarbeiterInnen mit viel Freiheit und offenem Austausch gestaltet ist. Dank der verschiedenen Vertriebskanäle, auf die wir uns fokussieren, gibt es innerhalb des Unternehmens ein riesiges Entwicklungspotenzial für alle MitarbeiterInnen. Alle relevanten Abteilungen haben wir uns intern aufgebaut und im Grunde fast gänzlich auf Auslagerungen verzichtet, wodurch sich Positionen in den unterschiedlichsten Bereichen auftun - IT, Marketing, Design, Finance, Verkauf, Logistik, Talent & Culture und vieles mehr. Neben dem Gehalt versuchen wir auch mit weiteren Benefits einen Mehrwert für alle Mitarbeitenden zu schaffen. Dazu gehören unter anderem eine betriebliche Altersvorsorge und natürlich auch Rabatte für den Einkauf unserer Produkte.</p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16695182557452__ce5e3c70-71f4-4f4c-bee3-a9960775c673-1672745961935aa292-0",
+        "template--16695182557452__ce5e3c70-71f4-4f4c-bee3-a9960775c673-1672745961935aa292-1",
+        "template--16695182557452__ce5e3c70-71f4-4f4c-bee3-a9960775c673-1672745961935aa292-2",
+        "template--16695182557452__ce5e3c70-71f4-4f4c-bee3-a9960775c673-1672745961935aa292-3",
+        "767e08b7-2ce3-4fb8-b74a-3f4395c74e63",
+        "dabe2770-bdad-4500-935e-c7fc161dec61"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "caption": "",
+        "heading": "FAQ zum Bewerbungsprozess",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    }
+  },
+  "order": [
+    "91f4dea0-6988-4c9f-9f1f-fe3dffeab614",
+    "0a4c9f9a-cd7f-434c-89a1-60aeddc10d2f",
+    "main",
+    "fb7f875a-993d-430d-9efa-178ffdbde8e9",
+    "rich_text_VKgwXj",
+    "rich_text_7UVqCB",
+    "multicolumn_8rJ9WV",
+    "019c49ea-d8ff-4ae2-a99a-f4efce4b3a15",
+    "ce5e3c70-71f4-4f4c-bee3-a9960775c673"
+  ]
+}

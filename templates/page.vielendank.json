@@ -1,0 +1,176 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "show_title": true
+      }
+    },
+    "rich_text_K7MfhT": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Lq4AWk": {
+          "type": "heading",
+          "settings": {
+            "heading": "Vielen Dank für deine Teilnahme!",
+            "heading_size": "h1"
+          }
+        },
+        "text_XFGUqJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Vielen Dank, dass du an unserer Umfrage teilgenommen hast! Deine Meinung ist uns sehr wichtig und hilft uns, unser Angebot weiter zu verbessern.</p><p>Als kleines Dankeschön erhältst du einen Gutschein über 5€, den du bei einem Einkauf ab 40€ Mindestbestellwert einlösen kannst. Der Gutschein ist ab sofort verfügbar, bis 31.12.2025 gültig, nur im Onlineshop einlösbar und nicht mit anderen Rabatten oder Aktionen kombinierbar.</p><p>Wir schätzen deine Unterstützung und freuen uns, dich bald wieder bei uns begrüßen zu dürfen!<br/><br/><strong>Dein Code lautet:</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Lq4AWk",
+        "text_XFGUqJ"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_kFEdiB": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Fgxt6f": {
+          "type": "heading",
+          "settings": {
+            "heading": "\"UMFRAGE5EURO\"",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Fgxt6f"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_xWmKgp": {
+      "type": "rich-text",
+      "blocks": {
+        "text_TUazcA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Löse deinen Gutschein direkt ein!</p>"
+          }
+        },
+        "button_Rye3bb": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt shoppen!",
+            "button_link": "https://odonnell.de/discount/UMFRAGE5EURO",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "text_TUazcA",
+        "button_Rye3bb"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 12
+      }
+    },
+    "featured_collection_kykN3G": {
+      "type": "featured-collection",
+      "custom_css": [
+        "h2 {text-align: center;}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "Entdecke unsere Produkte",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "collection": "featured",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "view_all_button_label": "ALLE PRODUKTE ENTDECKEN",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "featured_collection_imNXYm": {
+      "type": "featured-collection",
+      "custom_css": [
+        "h2 {text-align: center;}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "Auf der Suche nach einem Geschenk?",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "collection": "sets",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "view_all_button_label": "ALLE GESCHENKE EINKAUFEN",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_K7MfhT",
+    "rich_text_kFEdiB",
+    "rich_text_xWmKgp",
+    "featured_collection_kykN3G",
+    "featured_collection_imNXYm"
+  ]
+}

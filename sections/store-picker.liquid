@@ -1,0 +1,114 @@
+<link rel="stylesheet" href="{{ 'section-stores.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'section-stores.css' | asset_url | stylesheet_tag }}</noscript>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section class="section-{{ section.id }}-padding page-width store_picker">
+  <div class="store_picker__container">
+    <ul class="store_picker__list">
+      {%- for block in section.blocks -%}
+          {% assign identifier = block.settings.store_headline | downcase  | replace: ' ', '-' | replace: 'ü', 'ue' | replace: 'ö', 'oe' | replace: 'ü', 'ue' %}
+          <li data-store-selector data-identifier="{{identifier}}" class="store_picker__name">
+              {{block.settings.store_headline}}
+          </li>
+      {%- endfor -%}
+  </ul>
+  </div>
+  <div class="stores__container">
+      {%- assign first_block = section.blocks | first -%}
+      {%- for block in section.blocks -%}
+      {% assign identifier = block.settings.store_headline | downcase | replace: ' ', '-' | replace: 'ü', 'ue' | replace: 'ö', 'oe' | replace: 'ü', 'ue' %}
+      <div id="{{identifier}}" class="store_card {% if block == first_block %} store_card--active {% else %} {% endif %}">
+          {% render 'store-card', store_headline: block.settings.store_headline, store_info: block.settings.store_info, image: block.settings.store_image %}
+      </div>
+      {%- endfor -%}
+  </div>
+</section>
+ 
+ <script>
+   let store_selectors = document.querySelectorAll('[data-store-selector]')
+   store_selectors.forEach(elem => elem.addEventListener('click', event => {
+     var identifier = elem.dataset.identifier
+     var cards = document.querySelectorAll('.store_card');
+     cards.forEach(elem => {
+       elem.classList.remove('store_card--active')
+     })
+     var active = document.getElementById(identifier);
+     active.classList.add('store_card--active')
+   }))
+ </script>
+
+{% schema %}
+{
+  "name": "t:sections.store-picker.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+    "type": "store",
+      "name": "Stores",
+      "settings": [
+        {
+          "type": "text",
+          "id": "store_headline",
+          "label": "t:sections.store-picker.blocks.store.name"
+        },
+        {
+          "type": "richtext",
+          "id": "store_info",
+          "label": "t:sections.store-picker.blocks.store.info"
+        },
+        {
+          "type": "image_picker",
+          "id": "store_image",
+          "label": "t:sections.store-picker.blocks.store.image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.store-picker.name",
+      "blocks": [
+        {
+          "type": "store"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

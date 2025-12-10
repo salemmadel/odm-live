@@ -1,0 +1,116 @@
+.timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.countdown__container {
+  display: flex;
+  flex-direction: row;
+  font-family: var(--font-heading-family);
+  -webkit-font-smoothing: antialiased;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  position: relative;
+  justify-content: center;
+  perspective: 500px;
+  text-align: center;
+  transform-style: preserve3d;
+}
+
+@media screen and (min-width: 750px) {
+  .countdown__container {
+    gap: 2rem;
+  }
+}
+.countdown__container > div {
+  position: relative;
+}
+
+.countdown__container .countdow__tag {
+  position: absolute;
+}
+
+.separator {
+  align-items: flex-start;
+}
+
+.countdown__number {
+  display: block;
+  font-size: 2.5rem;
+  line-height: 4rem;
+  padding: 1.25rem;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 750px) {
+  .separator {
+    font-size: 2.5rem;
+    margin: 0;
+    width: 2rem;
+  }
+  .countdown__number {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    padding: 2rem;
+    width: 100%;
+  }
+}
+.separator {
+  font-size: 2rem;
+  margin: 0;
+  width: 2rem;
+}
+
+.new,
+.old,
+.current {
+  border-radius: 1rem;
+  color: #333;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.new {
+  animation: show-new 0.4s cubic-bezier(0, 0.9, 0.5, 1.2) forwards;
+}
+
+.old {
+  animation: hide-old 2s cubic-bezier(0, 0.9, 0.56, 1.2) forwards;
+}
+
+@keyframes hide-countdown {
+  to {
+    height: 0;
+    overflow: hidden;
+  }
+}
+@keyframes show-new {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-2rem) scale(0.8) rotateX(-20deg);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes hide-old {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-2.5rem) scale(0.5) rotateX(-75deg);
+  }
+}
+.timer__info {
+  padding: 1.2rem 0;
+  text-align: center;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../.src/scss/countdown-timer.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;EACI;EACA;EACA;EACA;;;AAEJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;IACE;;;AAGN;EACI;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;;AAIF;EACE;IACE;IACA;IACA;;EAEF;IACE;IACA;IACA;IACA;;;AAIJ;EACE;EACA;EACA;;;AAIF;AAAA;AAAA;EAGE;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAIF;EACE;IACE;IACA;;;AAGJ;EACE;IACE;IACA;;EAGF;IACE;;;AAIJ;EACE;IACE;;EAGF;IACE;IACA;;;AAIJ;EACE;EACA%22,%22file%22:%22countdown-timer.css%22%7D */

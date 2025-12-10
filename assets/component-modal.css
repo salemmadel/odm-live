@@ -1,0 +1,146 @@
+/* Generic popup modal */
+.generic-popup-modal {
+  background: rgba(var(--color-foreground), 0.2);
+  box-sizing: border-box;
+  height: 100%;
+  left: 0;
+  margin: 0 auto;
+  opacity: 0;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+  z-index: -1;
+}
+
+.generic-popup-modal[open] {
+  opacity: 1;
+  visibility: visible;
+  z-index: 11;
+}
+
+.generic-popup-modal__content {
+  background-color: rgb(var(--color-background));
+  border-color: rgba(var(--color-foreground), var(--popup-border-opacity));
+  border-radius: var(--popup-corner-radius);
+  border-style: solid;
+  border-width: var(--popup-border-width);
+  box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius) rgba(var(--color-shadow), var(--popup-shadow-opacity));
+  left: 50%;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 3rem 1.5rem;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 92%;
+  max-width: 1000px;
+}
+
+.generic-popup-modal__content.focused {
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3), var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius) rgba(var(--color-shadow), var(--popup-shadow-opacity));
+}
+
+.generic-popup-modal__content:focus-visible {
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3), var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius) rgba(var(--color-shadow), var(--popup-shadow-opacity));
+}
+
+@media screen and (min-width: 750px) {
+  .generic-popup-modal__content {
+    padding: 3rem 1.5rem 1rem;
+    width: 50%;
+  }
+  .product-media-modal__dialog .global-media-settings--no-shadow {
+    overflow: visible !important;
+  }
+}
+.generic-popup-modal__content img {
+  max-width: 100%;
+}
+
+.generic-popup-modal__content-intro .title {
+  margin-top: 0;
+}
+
+.generic-popup-modal__content-intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 749px) {
+  .generic-popup-modal__content table {
+    display: block;
+    margin: 0;
+    max-width: fit-content;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .product-media-modal__dialog .global-media-settings,
+  .product-media-modal__dialog .global-media-settings video,
+  .product-media-modal__dialog .global-media-settings model-viewer,
+  .product-media-modal__dialog .global-media-settings iframe,
+  .product-media-modal__dialog .global-media-settings img {
+    border: none;
+    border-radius: 0;
+  }
+}
+.generic-popup-modal__opener {
+  display: inline-block;
+}
+
+.generic-popup-modal__button {
+  font-size: 1.6rem;
+  height: 4.4rem;
+  padding-left: 0;
+  padding-right: 1.3rem;
+  text-decoration-thickness: 0.1rem;
+  text-underline-offset: 0.3rem;
+  transition: text-decoration-thickness var(--duration-short) ease;
+}
+
+.generic-popup-modal__button:hover {
+  text-decoration-thickness: 0.2rem;
+}
+
+.generic-popup-modal__content-info > * {
+  height: auto;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 749px) {
+  .generic-popup-modal__content-info > * {
+    max-height: 100%;
+  }
+}
+.generic-popup-modal__toggle {
+  align-items: center;
+  background-color: rgb(var(--color-background));
+  border: 0.1rem solid rgba(var(--color-foreground), 0.1);
+  border-radius: 50%;
+  color: rgba(var(--color-foreground), 0.55);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 0 auto;
+  padding: 1.2rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 4rem;
+  z-index: 2;
+}
+
+.generic-popup-modal__toggle:hover {
+  color: rgba(var(--color-foreground), 0.75);
+}
+
+.generic-popup-modal__toggle .icon {
+  height: auto;
+  margin: 0;
+  width: 2.2rem;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../.src/scss/component-modal.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;;;AAKF;EACE;;;AAKF;EACE;IACE;IACA;;EAGF;IACE;;;AAIJ;EACE;;;AAGF;EACE;;;AAGF;EACE;EACA;;;AAGF;EACE;IACE;IACA;IACA;IACA;IACA;;EAGF;AAAA;AAAA;AAAA;AAAA;IAKE;IACA;;;AAIJ;EACE;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;EACA;;;AAGF;EACE;IACE;;;AAIJ;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA%22,%22file%22:%22component-modal.css%22%7D */

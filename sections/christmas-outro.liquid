@@ -1,0 +1,69 @@
+{{ 'landingpage-christmas.css' | asset_url | stylesheet_tag }}
+<noscript>{{ 'landingpage-christmas.css' | asset_url | stylesheet_tag }}</noscript>
+
+{% style %}
+ .christmas_landingpage img {
+  width: {{ section.settings.image_width}}%;
+  }
+  .christmas_landingpage .bot__deco-image {
+    background-image: url('{{ section.settings.banner_image | image_url: width: 750 }}'); 
+    height: {{ section.settings.banner_height_mobile}}rem;
+    @media (min-width: 1024px) { 
+      height: {{ section.settings.banner_height_desktop}}rem; 
+    }
+}
+{%- endstyle -%}
+<section class="christmas_landingpage">
+    
+    <div class="christmas__tree" style="background-image: url('{{ 'christmas-tree.png' | file_url: '500x' }}'); background-repeat-x: repeat; background-repeat-y: no-repeat;"></div>
+
+    <div class="page-width top__title">
+        <p class="mono" style="color: #c56442">{{ section.settings.outro }}</p>
+    </div>
+    <div class="deco bot__deco bot__deco-image" style="background-repeat-x: repeat; background-repeat-y: no-repeat;"></div>
+</section>
+
+{% schema %}
+{
+  "name": "Christmas Outro Section",
+  "class": "christmas-section",
+  "settings": [
+    {
+        "type": "text",
+        "id": "outro",
+        "label": "Outro Text"
+    },
+    {
+        "type": "image_picker",
+        "id": "banner_image",
+        "label": "Header Image"
+    },
+    {
+        "type": "range",
+        "id": "banner_height_desktop",
+        "min": 0,
+        "max": 14,
+        "step": 1,
+        "unit": "rem",
+        "label": " Header-banner height on desktop",
+        "default": 6
+      },
+      {
+        "type": "range",
+        "id": "green_banner_height_mobile",
+        "min": 0,
+        "max": 14,
+        "step": 1,
+        "unit": "rem",
+        "label": "Header-banner height on mobile",
+        "default": 4
+      }
+  ],
+  "presets": [
+    {
+      "name": "Christmas Outro Section",
+      "category": "Landingpage"
+    }
+  ]
+}
+{% endschema %}

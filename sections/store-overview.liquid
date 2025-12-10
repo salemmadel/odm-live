@@ -1,0 +1,246 @@
+<link rel="stylesheet" href="{{ 'section-store-overview.css' | asset_url }}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ 'component-article-card.css' | asset_url }}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>
+  {{ 'component-card.css' | asset_url | stylesheet_tag }}
+  {{ 'section-store-overview.css' | asset_url | stylesheet_tag }}
+  {{ 'component-article-card.css' | asset_url | stylesheet_tag }}
+  {{ 'component-slider.css' | asset_url | stylesheet_tag }}
+</noscript>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{% javascript %}
+  var $btns = $('.button').click(function() {
+    
+  if (this.id == 'all') {
+    // 1. Show all elements instantly
+    $('#stores__container > div').show();
+    
+    // 2. Hide the generic 'liquid' blocks
+    $('#stores__container > div.liquid').hide(); 
+    
+    // 3. 👇 FIX: Use the exact, correct class name: 'weihnachtsmaerkte'
+    $('#stores__container > div.weihnachtsmaerkte').hide(); 
+    
+  } else {
+    // This logic handles all category buttons (including the 'Weihnachtsmarktes' button)
+    // The button logic uses the same class to show the content: .weihnachtsmaerkte
+    var $el = $('.' + this.id).fadeIn(450);
+    $('#stores__container > div').not($el).hide();
+  }
+  
+  $btns.removeClass('active');
+  $(this).addClass('active');
+  })
+{% endjavascript %}
+<section class="overview-store section-{{ section.id }}-padding wrapper page-width ">
+
+  {%- if section.settings.show_categories -%}
+  {% comment %} Assign a categories-array to avoid multiple buttons of same category.{% endcomment %}
+    {% assign categories-array = "no-category" %}
+
+    <div class="stores__selection">
+      <button class="button button--primary active" id="all" >{{ 'sections.store-overview.store_category.all' | t }}</button>
+      {%- for block in section.blocks -%}
+        {% case block.type %}
+          {% comment %} NEW BUTTON: Checks for the custom content block type {% endcomment %}
+          {%- when 'new_content_filter' -%}
+            {% assign new_button_id = block.settings.new_button_label | downcase | replace: ' ', '-' | replace: 'ü', 'ue' | replace: 'ö', 'oe' | replace: 'ü', 'ue' | replace: 'ä', 'ae' %}
+            <button class="button button--primary" id="{{ new_button_id }}">{{ block.settings.new_button_label }}</button>
+          {%- else -%}
+            {%- unless categories-array contains block.settings.store_category -%}
+
+              {% assign translate = 'sections.store-overview.store_category.' | append: block.settings.store_category %}
+          <button class="button button--primary" id="{{ block.settings.store_category | downcase | replace: ' ', '-' | replace: 'ü', 'ue' | replace: 'ö', 'oe' | replace: 'ü', 'ue' | replace: 'ä', 'ae' }}">{% if block.type == 'store' %} {{ translate | t }} {%- else -%} {{ block.settings.store_category }} {%- endif -%}</button>
+              
+              {% comment %}{% Add declared category to the array %}{% endcomment %} 
+              {% assign categories-array = categories-array | append: block.settings.store_category %}
+            {%- endunless -%}
+        {% endcase %}
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+
+     <div class="stores" id="stores__container">
+      {%- for block in section.blocks -%}
+        {% case block.type %}
+          {%- when 'store' -%}
+            {% assign identifier = block.settings.store_headline | downcase | replace: ' ', '-' | replace: 'ü', 'ue' | replace: 'ö', 'oe' | replace: 'ü', 'ue' %}
+            {% assign tag = block.settings.store_category | downcase | replace: ' ', '-' | replace: 'ü', 'ue' | replace: 'ö', 'oe' | replace: 'ü', 'ue' | replace: 'ä', 'ae' %}
+            <div class="store_card {{tag}}" id="{{ identifier }}">  
+                {% render 'card-store', store_embedded-map: block.settings.store_embedded-map, store_headline: block.settings.store_headline, store_info: block.settings.store_info, image: block.settings.store_image %}
+            </div>
+          {% comment %} UPDATED LOGIC: Ensures the content is classified by category (tag) for filtering {% endcomment %}
+          {%- when 'liquid' -%}
+            {% assign tag = block.settings.store_category | downcase | replace: ' ', '-' | replace: 'ü', 'ue' | replace: 'ö', 'oe' | replace: 'ü', 'ue' | replace: 'ä', 'ae' %}
+            <div class="store_card {{ tag }} liquid" id="{{ block.id }}">  
+              {{ block.settings.custom_liquid }}
+            </div>
+          {% comment %} NEW CONTENT: Renders the custom content block when the new button is clicked {% endcomment %}
+          {%- when 'new_content_filter' -%}
+            {% assign new_button_id = block.settings.new_button_label | downcase | replace: ' ', '-' | replace: 'ü', 'ue' | replace: 'ö', 'oe' | replace: 'ü', 'ue' | replace: 'ä', 'ae' %}
+            <div class="store_card {{ new_button_id }}" style="display: none;">  
+              {{ block.settings.new_custom_liquid }}
+            </div>
+         {%- endcase -%}  
+      {%- endfor -%}
+    </div>
+
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.store-overview.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_categories",
+      "default": true,
+      "label": "t:sections.store-overview.settings.show_categories.label"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+    "type": "store",
+      "name": "Store",
+      "settings": [
+        {
+          "type": "text",
+          "id": "store_headline",
+          "label": "t:sections.store-overview.blocks.store.name"
+        },
+        {
+          "type": "richtext",
+          "id": "store_info",
+          "label": "t:sections.store-overview.blocks.store.info"
+        },
+        {
+          "type": "select",
+          "id": "store_category",
+          "label": "t:sections.store-overview.blocks.store.store_category.label",
+          "options": [
+            {
+              "value": "no-category",
+              "label": "t:sections.store-overview.blocks.store.store_category.options__1"
+            },
+            {
+              "value": "flag-ship-stores",
+              "label": "t:sections.store-overview.blocks.store.store_category.options__2"
+            },
+            {
+              "value": "pop-up-stores",
+              "label": "t:sections.store-overview.blocks.store.store_category.options__3"
+            },
+            {
+              "value": "events",
+              "label": "t:sections.store-overview.blocks.store.store_category.options__4"
+            },
+            {
+              "value": "christmas-markets",
+              "label": "t:sections.store-overview.blocks.store.store_category.options__5"
+            },
+            {
+              "value": "other",
+              "label": "t:sections.store-overview.blocks.store.store_category.options__6"
+            }
+          ],
+          "default": "no-category"
+        },
+        {
+          "type": "image_picker",
+          "id": "store_image",
+          "label": "t:sections.store-overview.blocks.store.image"
+        },
+        {
+          "type": "html",
+          "id": "store_embedded-map",
+          "label": "t:sections.store-overview.blocks.store.map",
+          "info": "Insert iframe from google-maps"
+        }
+      ]
+    },
+    {
+    "type": "liquid",
+      "name": "Liquids",
+      "settings": [
+        {
+          "type": "text",
+          "id": "store_category",
+          "label": "t:sections.store-picker.blocks.store.name"
+        },
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "t:sections.custom-liquid.settings.custom_liquid.label",
+          "info": "t:sections.custom-liquid.settings.custom_liquid.info"
+        }
+      ]
+    },
+    {
+    "type": "new_content_filter",
+      "name": "New Filter Content",
+      "settings": [
+        {
+          "type": "text",
+          "id": "new_button_label",
+          "label": "Button Label",
+          "default": "New Filter"
+        },
+        {
+          "type": "liquid",
+          "id": "new_custom_liquid",
+          "label": "Content to Display (Custom Liquid/HTML)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.store-overview.name",
+      "blocks": [
+        {
+          "type": "store"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+

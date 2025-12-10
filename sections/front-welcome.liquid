@@ -1,0 +1,210 @@
+<link
+  rel="stylesheet"
+  href="{{ 'section-welcome.css' | asset_url }}"
+  media="print"
+  onload="this.media='all'">
+<noscript>{{ 'section-welcome.css' | asset_url | stylesheet_tag }}</noscript>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    
+  }
+#usp-section{
+  background-color: {{ section.settings.background_color }};
+}
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<section id="usp-section">
+<section class="section-{{ section.id }}-padding welcome page-width">
+  <div class="welcome__info-container">
+    {% render 'intro-bar', title: section.settings.headline, subtitle: section.settings.subtitle, text: section.settings.text %}
+  </div>
+  <div class="values">
+    {%- for block in section.blocks -%}
+      <div class="values__item">
+        {% if block.settings.image %}
+          {% capture content %} 
+            {{ block.settings.image | image_url: width: 200 | image_tag: alt: block.settings.image.alt, class: 'item__img lazyload', widths: '200, 550, 700', aspectratio: block.settings.image.aspect_ratio, loading: 'lazy' }}
+          {% endcapture %} 
+          {% assign content = content | replace: ' src=', '  src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src=' | replace: ' srcset=', ' data-srcset=' %} 
+          {{content}}
+        {% endif %}
+        <div class="values__item__text">
+          {{ block.settings.text }}
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+</section>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animation-{{section.settings.icons_animation}}');
+          return; // if we added the class, exit the function
+        }
+
+// We're not intersecting, so remove the class!
+      });
+    });
+
+    const values = document.querySelectorAll('.values__item ');
+    values.forEach(value => {
+      observer.observe(value);
+    })
+
+    const textobserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animation-{{section.settings.text_animation}}');
+          return; // if we added the class, exit the function
+        }
+      });
+    });
+
+    textobserver.observe(document.querySelector('.intro'));
+
+
+  });
+</script>
+{% schema %}
+  {
+    "name": "Welcome",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      },
+      {
+        "type": "text",
+        "id": "headline",
+        "label": "Headline"
+      }, {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle"
+      }, {
+        "type": "text",
+        "id": "text",
+        "label": "Text"
+      }, {
+        "type": "select",
+        "id": "text_animation",
+        "options": [
+          {
+            "value": "none",
+            "label": "t:sections.all.animation.options__1.label"
+          },
+          {
+            "value": "fade-in",
+            "label": "t:sections.all.animation.options__2.label"
+          },
+          {
+            "value": "top",
+            "label": "t:sections.all.animation.options__3.label"
+          },
+          {
+            "value": "bottom",
+            "label": "t:sections.all.animation.options__4.label"
+          }, {
+            "value": "right",
+            "label": "t:sections.all.animation.options__5.label"
+          }, {
+            "value": "left",
+            "label": "t:sections.all.animation.options__6.label"
+          }
+        ],
+        "default": "none",
+        "label": "t:sections.all.animation.section_text_animation"
+      }, {
+        "type": "select",
+        "id": "icons_animation",
+        "options": [
+          {
+            "value": "none",
+            "label": "t:sections.all.animation.options__1.label"
+          }, {
+            "value": "fade-in",
+            "label": "t:sections.all.animation.options__2.label"
+          }, {
+            "value": "top",
+            "label": "t:sections.all.animation.options__3.label"
+          }, {
+            "value": "bottom",
+            "label": "t:sections.all.animation.options__4.label"
+          }
+        ],
+        "default": "none",
+        "label": "t:sections.all.animation.section_icons_animation"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "value",
+        "name": "Company Values",
+        "limit": 3,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Value image"
+          }, {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Welcome",
+        "blocks": [
+          {
+            "type": "value"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

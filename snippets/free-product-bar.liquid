@@ -1,0 +1,10 @@
+<div class="">
+  {%- assign cart_total_price = cart.total_price -%}
+  {%- assign free_product_value = minimum_value -%}
+  {%- assign free_product_money = minimum_value | money -%}
+
+  {%- if cart_total_price < free_product_value -%}
+    <div class="free-shipping-text">{{ 'cart.drawer.free_from' | t: amount: free_product_money }}</div>
+  {%- endif -%}
+  <progress max="{{ free_product_value }}" value="{{ cart.total_price }}"></progress>
+</div>

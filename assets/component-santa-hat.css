@@ -1,0 +1,63 @@
+.santa-hat {
+  position: absolute;
+  top: 8px;
+  left: -14px;
+  transform: scaleX(-1) rotate(45deg); /* Flip and tilt */
+  animation: fall 1.5s ease-out forwards, bounce 0.5s 1.5s ease-out, jiggle-cycle 8s infinite;
+  transform-origin: center bottom; /* Pivot point for tilt and bounce */
+  z-index: 1;
+}
+
+@media screen and (max-width: 550px) {
+  .santa-hat {
+    margin-left: 1.5rem;
+  }
+}
+@media screen and (min-width: 990px) {
+  .santa-hat {
+    margin-left: 1.5rem;
+  }
+}
+@keyframes fall {
+  from {
+    top: -100px;
+    transform: rotate(-60deg) scaleX(-1); /* Flipped during fall */
+  }
+  to {
+    top: 8px;
+    transform: rotate(-40deg) scaleX(-1); /* Flipped on landing */
+  }
+}
+@keyframes bounce {
+  0% {
+    top: 8px;
+    transform: rotate(-40deg) scaleX(-1); /* Keep flipped */
+  }
+  50% {
+    top: 3px; /* Small bounce upwards */
+    transform: rotate(-42deg) scaleX(-1); /* Keep flipped */
+  }
+  100% {
+    top: 8px;
+    transform: rotate(-40deg) scaleX(-1); /* Keep flipped */
+  }
+}
+@keyframes jiggle-cycle {
+  0%, 80% {
+    transform: rotate(-45deg) scaleX(-1); /* Keep flipped during resting */
+  }
+  85% {
+    transform: rotate(-37deg) scaleX(-1); /* Slight jiggle to the right while flipped */
+  }
+  90% {
+    transform: rotate(-50deg) scaleX(-1); /* Slight jiggle to the left while flipped */
+  }
+  95% {
+    transform: rotate(-45deg) scaleX(-1); /* Return to resting tilt */
+  }
+  100% {
+    transform: rotate(-45deg) scaleX(-1); /* Remain in resting tilt */
+  }
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../.src/scss/component-santa-hat.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;EACI;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;IACI;;;AAGR;EACI;IACI;;;AAIR;EACI;IACI;IACA;;EAEJ;IACI;IACA;;;AAIR;EACI;IACI;IACA;;EAEJ;IACI;IACA;;EAEJ;IACI;IACA;;;AAIR;EACI;IACI;;EAEJ;IACI;;EAEJ;IACI;;EAEJ;IACI;;EAEJ;IACI%22,%22file%22:%22component-santa-hat.css%22%7D */

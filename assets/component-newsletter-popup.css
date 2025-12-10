@@ -1,0 +1,105 @@
+/* stylelint-disable selector-class-pattern, selector-no-qualifying-type, declaration-property-value-disallowed-list, selector-max-compound-selectors, selector-max-id */
+.nl__benefit {
+  display: flex;
+}
+
+.nl__benefit img {
+  height: 4rem;
+  width: auto;
+}
+
+.nl__benefit div {
+  align-self: center;
+  font-family: var(--font-heading-family);
+  padding-left: 1rem;
+  width: 75%;
+}
+
+.nl__close {
+  color: #000;
+  position: absolute;
+  right: 2.5rem;
+  top: 2rem;
+}
+
+.nl__close svg {
+  height: 20px;
+  width: 20px;
+}
+
+.nl__popup {
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 3rem;
+  opacity: 1;
+  padding: 3rem 3rem 6rem;
+  position: fixed;
+  z-index: 10;
+}
+
+@media only screen and (min-width: 750px) and (max-width: 949px) {
+  .nl__popup {
+    display: flex;
+    flex-direction: row;
+    margin: 8rem;
+  }
+}
+@media only screen and (min-width: 950px) {
+  .nl__popup {
+    display: flex;
+    flex-direction: row;
+    margin: 0 20rem;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .popup__content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.nl__popup label {
+  display: inline-block;
+}
+
+.nl__off {
+  display: flex;
+  width: 100%;
+}
+
+.nl_off__checkbox {
+  align-self: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.nl__off__checkbox input {
+  --transform-scale-x: 1.5;
+  --transform-scale-y: 1.5;
+}
+
+.nl__off__text {
+  font-weight: 700;
+}
+
+.nl__off--ok {
+  background-color: #34d399;
+  border-radius: 0.25rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  opacity: 0;
+  padding: 0.25rem;
+}
+
+.popup__intro {
+  height: 100%;
+  width: 100%;
+}
+
+.popup__intro--mobile {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../.src/scss/component-newsletter-popup.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;AAEA;EACE;;;AAGF;EACE;EACA;;;AAGF;EACE;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;;;AAGF;EACE;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;IACE;IACA;IACA;;;AAKJ;EACE;IACE;IACA;IACA;;;AAKJ;EACE;IACE;IACA;IACA;;;AAIJ;EACE;;;AAGF;EACE;EACA;;;AAGF;EACE;EACA;EACA;;;AAGF;EACE;EACA;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;;;AAIF;EACE;EACA;EACA%22,%22file%22:%22component-newsletter-popup.css%22%7D */

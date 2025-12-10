@@ -1,0 +1,103 @@
+@charset "UTF-8";
+/* stylelint-disable selector-class-pattern, selector-no-qualifying-type, declaration-property-value-disallowed-list, selector-max-compound-selectors, selector-max-id */
+.welcome {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  padding-bottom: 0px;
+}
+
+.welcome .intro  {
+  width: 100%;
+}
+
+@media (max-width: 900px){
+  .welcome{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
+}
+.values {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding-top: 1rem;
+}
+
+.values__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.values__item:nth-child(1) {
+  animation-delay: 0.25s;
+}
+
+.values__item:nth-child(2) {
+  animation-delay: 0.75s;
+}
+
+.values__item:nth-child(3) {
+  animation-delay: 1.25s;
+}
+
+.values__item__text {
+  font-family: var(--font-heading-family);
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1rem 0.25rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 550px) {
+  .values__item__text {
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+}
+.item__img {
+  max-width: 65rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .welcome .intro {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 749px) {
+  .welcome {
+    flex-direction: column;
+    gap: 0;
+  }
+  .welcome .intro {
+    margin: 0;
+    padding: 2rem;
+  }
+  .intro__subtitle {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    padding-right: 2rem;
+  }
+  .intro__text {
+    display: none;
+  }
+  .values {
+    font-weight: bold;
+    gap: 1rem;
+  }
+  .values__item {
+    padding: 0;
+  }
+  .welcome__glass {
+    display: none;
+  }
+}
+.item__img {
+  height: auto;
+  width: 100%;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../.src/scss/section-welcome.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22;AAAA;AAEA;EACE;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;;AAEF;EACE;IACE;IACA;;;AAKJ;EACE;;;AAGF;EACE;IACE;;;AAIJ;EACE;IACE;IACA;;EAGF;IACE;IACA;;EAGF;IACE;IACA;IACA;;EAGF;IACE;;EAGF;IACE;IACA;;EAGF;IACE;;EAIF;IACE;;;AAIJ;EACE;EACA%22,%22file%22:%22section-welcome.css%22%7D */

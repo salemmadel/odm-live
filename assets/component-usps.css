@@ -1,0 +1,60 @@
+/* Component USPs */
+.usps {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 1rem;
+  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+}
+
+.usps-desktop {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+.usps-desktop .col {
+  display: flex;
+  flex: 1 0 0%;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+  align-items: center;
+  justify-content: center !important;
+}
+
+.card-usp {
+  padding: calc(var(--bs-gutter-x) * 0.75) calc(var(--bs-gutter-x));
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+.swiper-slide .card-usp {
+  justify-content: center;
+  text-align: center;
+}
+.card-usp img {
+  max-width: 100%;
+}
+.card-usp > * {
+  display: flex;
+}
+
+.section-usps .swiper-wrapper {
+  align-items: center;
+}
+.section-usps .swiper-slide a, .section-usps .col a {
+  display: flex;
+  color: inherit;
+  text-decoration: none;
+  justify-content: center;
+  gap: 1rem;
+}
+.section-usps .swiper-slide a:hover, .section-usps .col a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../.src/scss/component-usps.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;AACA;EACE;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;;AACA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAIJ;EACE;EACA;EAEA;EACA;EACA;;AACA;EACE;EACA;;AAEF;EACE;;AAEF;EACE;;;AAKF;EACE;;AAGA;EACE;EACA;EACA;EACA;EACA;;AACA;EACE;EACA%22,%22file%22:%22component-usps.css%22%7D */

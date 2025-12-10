@@ -1,0 +1,14 @@
+@media screen and (max-width: 749px) {
+  .banner--mobile-bottom.banner--adapt_image:not(.banner--adapt) .banner__media,
+  .banner--stacked .banner--adapt_image:not(.banner--mobile-bottom):not(.banner--adapt) > .banner__media {
+    min-height: 28rem !important;
+  }
+}
+@media screen and (min-width: 750px) {
+  .banner--adapt_image,
+  .banner--stacked.banner--adapt_image .banner__content {
+    height: auto;
+  }
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../.src/scss/section-image-intro-banner.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;EACI;AAAA;IAEE;;;AAIJ;EACE;AAAA;IAEI%22,%22file%22:%22section-image-intro-banner.css%22%7D */

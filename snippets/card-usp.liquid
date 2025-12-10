@@ -1,0 +1,20 @@
+{%- if link != nil -%}
+  <a href="{{ link }}">
+{%- endif -%}
+  <div class="card-usp" data-usp="{{ title | escape }} - {{ content | escape }}">
+    {%- if icon != nil -%}
+      <div style="width: 40px;">
+        <img src="{{ icon | img_url: '50x' }}" alt="{{ title }}">
+      </div>
+    {%- endif -%}
+    <div>
+      <span class="h5">{{ content }}</span>
+      {%- comment -%}
+      <span class="">{{ title }}</span>
+      <span class="h5">{{ subtitle }}</span>
+      {%- endcomment -%}
+    </div>
+  </div>
+{%- if link != empty -%} 
+</a>
+{%- endif -%}

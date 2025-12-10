@@ -1,0 +1,12 @@
+<div class="cart__items-shipping">
+  {%- assign cart_total_price = cart.total_price -%}
+  {%- assign free_shipping_amount = settings.min_value_for_free_shipping | times: 100 -%}
+  {%- assign calculated_free_shipping = free_shipping_amount | minus: cart_total_price | money -%}
+
+  {%- if cart_total_price < free_shipping_amount -%}
+    <div class="free-shipping-text">{{ 'sections.cart.shipping.not_free' | t: value: calculated_free_shipping }}</div>
+  {%- else -%}
+    <div class="free-shipping-text">{{ 'sections.cart.shipping.free' | t }}</div>
+  {%- endif -%}
+  <progress max="{{ free_shipping_amount }}" value="{{ cart.total_price }}"></progress>
+</div>

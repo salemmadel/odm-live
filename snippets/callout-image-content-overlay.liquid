@@ -1,0 +1,36 @@
+{%- comment -%}
+  Render a collection callout.
+{%- endcomment -%}
+
+<div class="position-relative w-100 h-100">
+  {%- if link != nil -%}
+    <a href="{{ link }}" 
+      class="stretched-link" 
+      data-title="{{ title }}"
+      data-gtag-event-trigger="click" 
+      data-gtag-event="select_promotion"
+      data-gtag-event-parameters='{"creative_name": "{{ title }} (Collection callout)", "creative_slot": "{{ event_creative_slot }}"}'>
+  {%- endif -%}
+  {%- render 'image'
+    image: image_mobile
+    image_sm: image_desktop,
+    per_row: per_row,
+    per_row_md: per_row_md,
+    per_row_xxl: per_row_xxl,
+    is_lazy: lazyload,
+    is_cover: true
+  -%}
+  <div class="position-cover z-index-2 w-100 h-100 d-flex align-items-center justify-content-center {{ title_enabled }}">
+    {%- if title != empty and title_enabled -%}
+      <div class="text-center">
+        <h4 class="{{ text_colour }}">{{ title }}</h4>
+        {%- if subtitle != empty -%}
+          <div class="{{ text_colour }}">{{ subtitle }}</div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+  {%- if link != nil -%}
+    </a>
+  {%- endif -%}
+</div>
