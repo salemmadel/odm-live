@@ -14,6 +14,7 @@
     {{ 'component-inventory.css' | asset_url | stylesheet_tag }}
     {{ 'component-prerelease.css' | asset_url | stylesheet_tag }}
     {{ 'component-card.css' | asset_url | stylesheet_tag }}
+    {{ 'component-product-availability-message.css' | asset_url | stylesheet_tag }}
 
 
   {%- else -%}
@@ -31,6 +32,7 @@
     <link rel="stylesheet" href="{{ 'component-inventory.css' | asset_url }}" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="{{ 'component-prerelease.css' | asset_url }}" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ 'component-product-availability-message.css' | asset_url }}" media="print" onload="this.media='all'">
   {%- endif -%}
 
   {%- assign has_recommended_products = false -%}
@@ -672,7 +674,10 @@
                 product_form_id: product_form_id
               -%}
             {%- endif -%}
-            
+
+          {%- when 'availability_message' -%}
+            {%- render 'product-availability-message', block: block -%}
+
           {%- when 'buy_buttons' -%}
             {%- unless product.metafields.custom.hide_atc -%}
               <div {{ block.shopify_attributes }}>
@@ -1613,6 +1618,25 @@
           "type": "url",
           "id": "gang_url",
           "label": "Gang URL"
+        }
+      ]
+    },
+    {
+      "type": "availability_message",
+      "name": "Availability Message",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_availability_message",
+          "default": true,
+          "label": "Show availability message"
+        },
+        {
+          "type": "text",
+          "id": "availability_text",
+          "default": "Available from now",
+          "label": "Availability text"
         }
       ]
     },

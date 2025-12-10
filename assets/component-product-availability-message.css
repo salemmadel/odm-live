@@ -1,0 +1,32 @@
+.product-availability-message {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: rgba(var(--color-foreground), 0.05);
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.product-availability-message__text {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(var(--color-foreground));
+  line-height: 1.5;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 749px) {
+  .product-availability-message {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+  }
+
+  .product-availability-message__text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Optional: Add a subtle border for better visibility */
+.product-availability-message {
+  border: 1px solid rgba(var(--color-foreground), 0.1);
+}

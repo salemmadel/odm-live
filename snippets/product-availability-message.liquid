@@ -1,0 +1,18 @@
+{% comment %}
+  Renders an availability message for products
+  Can be toggled on/off via theme editor
+
+  Accepts:
+  - block: {Object} Block settings object
+
+  Usage:
+  {% render 'product-availability-message', block: block %}
+{% endcomment %}
+
+{%- if block.settings.show_availability_message -%}
+  <div class="product-availability-message" {{ block.shopify_attributes }}>
+    <p class="product-availability-message__text">
+      {{ block.settings.availability_text }}
+    </p>
+  </div>
+{%- endif -%}
