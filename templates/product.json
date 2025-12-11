@@ -124,57 +124,6 @@
         "padding_bottom": 12
       }
     },
-    "image_with_text_FPx8QT": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_7fKiVB": {
-          "type": "heading",
-          "settings": {
-            "heading": "Entdecke unsere Bestseller",
-            "heading_size": "h2"
-          }
-        },
-        "text_3GQh7E": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Von <em>Harte Nuss</em> bis <em>Kaffee</em> und sogar Creme-Liköre, hier ist für jeden etwas dabei. Die meistverkauften Produkte, die besten Geschenke, unsere Fans können nicht daneben liegen!</p>",
-            "text_style": "body"
-          }
-        },
-        "button_NLiL4d": {
-          "type": "button",
-          "settings": {
-            "button_label": "Jetzt stöbern",
-            "button_link": "shopify://collections/featured",
-            "button_style_white_color": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_7fKiVB",
-        "text_3GQh7E",
-        "button_NLiL4d"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 750px) {.image-with-text__heading {font-size: 17px; font-weight: bold; } .image-with-text__content {padding: 3rem calc(2rem / var(--font-body-scale)) 3rem; } .image-with-text__text {text-align: start; }}"
-      ],
-      "settings": {
-        "is_above_the_fold": false,
-        "background_color": "#ffffff",
-        "text_color": "#000000",
-        "image_caption": "",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "overlap",
-        "color_scheme": "background-2",
-        "mobile_content_alignment": "left",
-        "padding_top": 24,
-        "padding_bottom": 12
-      }
-    },
     "custom_liquid_yWEeX3": {
       "type": "custom-liquid",
       "settings": {
@@ -203,37 +152,6 @@
         "padding_bottom": 12
       }
     },
-    "featured_collection_xnLMT8": {
-      "type": "featured-collection",
-      "settings": {
-        "is_above_the_fold": false,
-        "title": "Ausgewählt für dich - nicht verpassen!",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "grey_sold_out_products": true,
-        "description_style": "body",
-        "collection": "featured",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "section_animation": "none",
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "view_all_button_label": "Alle ansehen",
-        "enable_desktop_slider": true,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": true,
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 12,
-        "padding_bottom": 12
-      }
-    },
     "1668500027a509409d": {
       "type": "apps",
       "settings": {
@@ -244,10 +162,8 @@
   "order": [
     "breadcrumbs",
     "main",
-    "image_with_text_FPx8QT",
     "custom_liquid_yWEeX3",
     "product-recommendations",
-    "featured_collection_xnLMT8",
     "1668500027a509409d"
   ]
 }
