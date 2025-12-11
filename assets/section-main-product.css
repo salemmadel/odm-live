@@ -532,8 +532,8 @@ a.product__text {
   .product__media-list {
     margin-left: 0 !important;
     margin-right: 0 !important;
-    margin-bottom: 3rem;
-    padding-bottom: 2rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
     padding-left: 0 !important;
     padding-right: 0 !important;
     width: 100% !important;
