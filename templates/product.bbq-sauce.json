@@ -1,5 +1,21 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 96,
+        "padding_bottom": 16
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -33,12 +49,6 @@
             "text_style": "subtitle"
           }
         },
-        "fca1c1a8-04e2-407f-a46e-9e6e46e8cb47": {
-          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "{{product}}"
-          }
-        },
         "price": {
           "type": "price",
           "settings": {}
@@ -70,10 +80,6 @@
             "show_dynamic_checkout": false,
             "gang_url": ""
           }
-        },
-        "wishlist_engine_product_page_Dn4jme": {
-          "type": "shopify://apps/se-wishlist-engine/blocks/Product-Page/8f7c0857-8e71-463d-a168-8e133094753b",
-          "settings": {}
         },
         "description": {
           "type": "description",
@@ -147,13 +153,11 @@
         "title",
         "eshop_guide_product_usp_4jRBhe",
         "caption",
-        "fca1c1a8-04e2-407f-a46e-9e6e46e8cb47",
         "price",
         "variant_picker",
         "link_yn6VAA",
         "quantity_selector",
         "buy_buttons",
-        "wishlist_engine_product_page_Dn4jme",
         "description",
         "recommended_products_nLLDbH",
         "collapsible-row-0",
@@ -203,7 +207,6 @@
         "is_above_the_fold": false,
         "background_color": "#ffffff",
         "text_color": "#000000",
-        "image": "shopify://shop_images/BBQ_Sauce-5_1.jpg",
         "image_caption": "",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -262,7 +265,6 @@
         "is_above_the_fold": false,
         "background_color": "#ffffff",
         "text_color": "#000000",
-        "image": "shopify://shop_images/BBQ_Sauce_Bottles_3.png",
         "image_caption": "",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -335,26 +337,8 @@
     },
     "1668500027a509409d": {
       "type": "apps",
-      "blocks": {
-        "cd02110e-c8d7-4ff4-b4bc-b2e6baaf903d": {
-          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "{{product}}"
-          }
-        }
-      },
-      "block_order": [
-        "cd02110e-c8d7-4ff4-b4bc-b2e6baaf903d"
-      ],
       "settings": {
         "include_margins": true
-      }
-    },
-    "breadcrumbs": {
-      "type": "breadcrumbs",
-      "settings": {
-        "padding_top": 24,
-        "padding_bottom": 16
       }
     }
   },
