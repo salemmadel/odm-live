@@ -128,34 +128,6 @@
             "text_alignment_mobile": "center"
           }
         },
-        "slide_n9wfPk": {
-          "type": "slide",
-          "settings": {
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "timer": "",
-            "countdown_overlay": false,
-            "countdown_overlay_position": "top-center",
-            "countdown_color": "#000000",
-            "desktop_button_height": 20,
-            "mobile_button_height": 20,
-            "link_overlay": "https://odonnell.de/products/harte-nuss?utm_source=5th_placement&utm_medium=lp&utm_campaign=harte_nuss_hero1",
-            "button_label": "JETZT KAUFEN",
-            "link": "https://odonnell.de/products/harte-nuss?utm_source=5th_placement&utm_medium=lp&utm_campaign=harte_nuss_hero1",
-            "button_label_2": "",
-            "link_2": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "font_color": "#000000",
-            "background_color": "#ffffff",
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
-        },
         "slide_PQaLM3": {
           "type": "slide",
           "disabled": true,
@@ -307,7 +279,6 @@
         "slide_k89Ngi",
         "slide_BNadJp",
         "slide_DiqfFJ",
-        "slide_n9wfPk",
         "slide_PQaLM3",
         "slide_rgFRgY",
         "slide_aktPMN",
