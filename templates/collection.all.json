@@ -9,6 +9,13 @@
  */
 {
   "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
     "rich_text_headline_ymiiFC": {
       "type": "rich-text-headline",
       "name": "Rich Text Header",
@@ -87,13 +94,6 @@
         "show_collection_description": true,
         "show_collection_image": false,
         "color_scheme": "background-1"
-      }
-    },
-    "breadcrumbs": {
-      "type": "breadcrumbs",
-      "settings": {
-        "padding_top": 24,
-        "padding_bottom": 16
       }
     }
   },
