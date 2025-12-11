@@ -101,7 +101,7 @@ infinite-slider-component ul .slider__slide:nth-child(12n) {
 @media screen and (max-width: 749px) {
   .slider.slider--mobile {
     flex-wrap: inherit;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
     -webkit-overflow-scrolling: touch;
     overflow-x: auto;
     position: relative;
