@@ -491,10 +491,7 @@ a.product__text {
   .product__media-wrapper {
     padding-left: 0;
     padding-right: 0;
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
     width: 100vw;
-    max-width: 100vw;
     position: relative;
     left: 50%;
     right: 50%;
