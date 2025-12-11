@@ -11,9 +11,7 @@
   "sections": {
     "breadcrumbs": {
       "type": "breadcrumbs",
-      "custom_css": [
-        ".breadcrumbs {font-size: 5px;}"
-      ],
+      "custom_css": [],
       "settings": {
         "padding_top": 24,
         "padding_bottom": 16
