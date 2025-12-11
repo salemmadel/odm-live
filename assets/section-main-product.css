@@ -333,7 +333,6 @@ a.product__text {
 }
 
 .product__title {
-  margin-top: 0;
   margin-bottom: 1.5rem;
   word-break: break-word;
 }
@@ -343,7 +342,6 @@ a.product__text {
   font-family: 'GT Pressura Bold', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  margin: 0;
 }
 
 /* Add thin black line after product title on mobile */

@@ -29,7 +29,12 @@
         },
         "title": {
           "type": "title",
-          "settings": {}
+          "settings": {
+            "title_font_size_mobile": 18,
+            "title_font_size_desktop": 24,
+            "title_padding_top": 0,
+            "title_padding_bottom": 0
+          }
         },
         "eshop_guide_product_usp_ppEaLY": {
           "type": "eshop_guide_product_usp",
