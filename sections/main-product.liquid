@@ -865,6 +865,7 @@
               </div>
 
               <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
+            {%- endunless -%}
             </div>
             <div class="sticky-cart {% if block.settings.show_sticky_cart == false %} hidden {% endif %}" id= "sticky-cart">
               <div class="sticky-cart__container page-width--desktop">  
