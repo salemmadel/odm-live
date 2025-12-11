@@ -95,6 +95,45 @@
     z-index: 2 !important;
   }
   {% endif %}
+
+  /* Header transparency and color settings */
+  {% if section.settings.enable_transparent_header %}
+    .header-wrapper {
+      position: absolute;
+      width: 100%;
+      background: transparent !important;
+      z-index: 3;
+    }
+
+    .header-wrapper .header__heading-link,
+    .header-wrapper .header__menu-item,
+    .header-wrapper .list-menu__item,
+    .header-wrapper .header__icon,
+    .header-wrapper svg,
+    .header-wrapper .link {
+      color: {{ section.settings.transparent_header_text_color }} !important;
+    }
+
+    .header-wrapper .icon {
+      fill: {{ section.settings.transparent_header_text_color }} !important;
+      stroke: {{ section.settings.transparent_header_text_color }} !important;
+    }
+
+    /* Ensure dropdown menus still have proper backgrounds */
+    .header__submenu,
+    .mega-menu__content {
+      background: {{ section.settings.header_background_color }} !important;
+    }
+
+    .header__submenu .header__menu-item,
+    .mega-menu__content .mega-menu__link {
+      color: inherit !important;
+    }
+  {% else %}
+    .header-wrapper {
+      background-color: {{ section.settings.header_background_color }} !important;
+    }
+  {% endif %}
 {%- endstyle -%}
 
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
@@ -569,6 +608,35 @@
       "id": "badge_color",
       "label": "t:sections.header.settings.badge_color.label",
       "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Transparency Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_transparent_header",
+      "default": false,
+      "label": "Enable transparent header",
+      "info": "Makes header transparent over banner images (excludes announcement bar)"
+    },
+    {
+      "type": "color",
+      "id": "transparent_header_text_color",
+      "label": "Header text color (when transparent)",
+      "default": "#ffffff",
+      "info": "Color for links, text, and icons when header is transparent"
+    },
+    {
+      "type": "header",
+      "content": "Background Settings"
+    },
+    {
+      "type": "color",
+      "id": "header_background_color",
+      "label": "Header background color",
+      "default": "#ffffff",
+      "info": "Background color when transparency is disabled"
     },
     {
       "type": "header",
