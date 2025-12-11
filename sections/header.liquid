@@ -105,6 +105,19 @@
       z-index: 3;
     }
 
+    /* Add spacing to content below transparent header to prevent overlap */
+    .header-wrapper ~ .shopify-section,
+    .header-wrapper ~ * .shopify-section:first-child {
+      padding-top: calc(var(--header-height, 6rem) + 2rem);
+    }
+
+    @media screen and (max-width: 749px) {
+      .header-wrapper ~ .shopify-section,
+      .header-wrapper ~ * .shopify-section:first-child {
+        padding-top: calc(var(--header-height, 5rem) + 1rem);
+      }
+    }
+
     .header-wrapper .header__heading-link,
     .header-wrapper .header__menu-item,
     .header-wrapper .list-menu__item,
