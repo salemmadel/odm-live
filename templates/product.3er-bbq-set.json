@@ -151,7 +151,7 @@
       "settings": {
         "gift_card_receipient_enabled": false,
         "is_above_the_fold": true,
-        "enable_sticky_info": true,
+        "enable_sticky_info": false,
         "badges_enabled": false,
         "gallery_layout": "thumbnail",
         "media_size": "small",
