@@ -108,7 +108,6 @@ infinite-slider-component ul .slider__slide:nth-child(12n) {
     scroll-behavior: smooth;
     scroll-padding-left: 1.5rem;
     scroll-snap-type: x mandatory;
-    padding-bottom: 1px;
   }
   .slider.slider--mobile .slider__slide {
     margin-bottom: 0;
