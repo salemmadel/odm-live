@@ -1,5 +1,12 @@
 {{ 'component-breadcrumbs.css' | asset_url | stylesheet_tag }}
 
+{%- style -%}
+  .section-breadcrumbs {
+    padding-top: {{ section.settings.padding_top | times: 0.1 }}rem;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.1 }}rem;
+  }
+{%- endstyle -%}
+
 <nav class="breadcrumbs page-width" role="navigation" aria-label="Breadcrumb">
   <ol class="breadcrumbs__list">
     <li class="breadcrumbs__item">
