@@ -488,6 +488,18 @@ a.product__text {
 }
 
 @media screen and (max-width: 749px) {
+  /* Remove page-width padding for full-width gallery */
+  section[id^="MainProduct-"].page-width {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Add padding back to product info so it doesn't touch edges */
+  .product__info-wrapper {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
   /* Remove all padding from wrapper and slider */
   .product__media-wrapper {
     padding-left: 0 !important;
@@ -498,9 +510,7 @@ a.product__text {
   .product__media-wrapper slider-component {
     padding-left: 0 !important;
     padding-right: 0 !important;
-    width: calc(100% + 3rem) !important;
-    margin-left: -1.5rem !important;
-    margin-right: -1.5rem !important;
+    width: 100% !important;
   }
 
   /* Expand product gallery to screen edges */
