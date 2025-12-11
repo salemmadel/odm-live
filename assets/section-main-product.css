@@ -492,21 +492,26 @@ a.product__text {
   .product__media-wrapper {
     padding-left: 0 !important;
     padding-right: 0 !important;
+    overflow: visible !important;
   }
 
   .product__media-wrapper slider-component {
     padding-left: 0 !important;
     padding-right: 0 !important;
+    width: calc(100% + 3rem) !important;
+    margin-left: -1.5rem !important;
+    margin-right: -1.5rem !important;
   }
 
   /* Expand product gallery to screen edges */
   .product__media-list {
-    margin-left: -1.5rem !important;
-    margin-right: -1.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     margin-bottom: 3rem;
     padding-bottom: 2rem;
     padding-left: 0 !important;
     padding-right: 0 !important;
+    width: 100% !important;
   }
 
   /* Remove grid--peek margins on first/last items */
