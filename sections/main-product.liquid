@@ -807,8 +807,8 @@
                             <span>
                               {{ 'products.product.gang_atc' | t }}
                             </span>
-                        </button>
-                      </a>
+                        </a>
+                      </div>
                     {%- endunless -%}
                     {%- if customer -%}
                       {%- if product.metafields.custom.customer_tier.value != blank -%}
@@ -825,25 +825,20 @@
                           {{ atc }}
                         {%- else -%}
                           <div class="product-form__buttons">
-
                               <a
                                 class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
                                 disabled
                               >
                                   <span>{{ block.settings.only_tier_gang_button }}</span>
-                              </button>
-                            </a>
+                              </a>
+                          </div>
                         {%- endif -%}
                       {%- else -%}
                         {{ atc }}
                       {%- endif -%}
                     {%- endif -%}
                   {%- else -%}
-                    {%- if product.metafields.custom.customer_tier.value == blank -%}
-                      {{ atc }}
-                    {%- else -%}
-                      <div class="product-form__buttons">
-                    {%- endif -%}
+                    {{ atc }}
                   {%- endif -%}
                 </product-form>
 
