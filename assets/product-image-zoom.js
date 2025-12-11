@@ -17,25 +17,51 @@ if (!customElements.get('product-image-zoom')) {
       this.pointY = 0;
       this.start = { x: 0, y: 0 };
 
-      this.init();
+      // Wait for DOM to be fully loaded
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => this.init());
+      } else {
+        this.init();
+      }
     }
 
     init() {
-      // Get all product images
-      const imageElements = this.querySelectorAll('.product__media-item img');
-      this.images = Array.from(imageElements).map(img => ({
-        src: img.src.replace(/_(small|compact|medium|grande|large|master|pico|icon|thumb)\./, '.'),
-        alt: img.alt,
-        element: img.closest('.product__media-item')
-      }));
+      // Get all product images from modal-opener elements
+      const modalOpeners = this.querySelectorAll('modal-opener.product__modal-opener--image');
 
-      // Add click listeners to images
-      imageElements.forEach((img, index) => {
-        img.style.cursor = 'zoom-in';
-        img.addEventListener('click', (e) => {
-          e.preventDefault();
-          this.openZoom(index);
+      if (modalOpeners.length === 0) {
+        console.warn('No product images found for zoom');
+        return;
+      }
+
+      modalOpeners.forEach((opener, index) => {
+        const img = opener.querySelector('img');
+        if (!img) return;
+
+        // Get the highest resolution image URL from srcset or src
+        let highResUrl = img.src;
+        if (img.srcset) {
+          const srcsetArray = img.srcset.split(',').map(s => s.trim());
+          // Get the last (highest resolution) image from srcset
+          const lastSrc = srcsetArray[srcsetArray.length - 1];
+          highResUrl = lastSrc.split(' ')[0];
+        }
+
+        this.images.push({
+          src: highResUrl,
+          alt: img.alt,
+          element: opener.closest('.product__media-item')
         });
+
+        // Override the modal-opener behavior for images
+        opener.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          this.openZoom(index);
+        }, true); // Use capture phase to intercept before modal-opener
+
+        // Add cursor style
+        opener.style.cursor = 'zoom-in';
       });
 
       // Add pinch-to-zoom for mobile
@@ -48,13 +74,19 @@ if (!customElements.get('product-image-zoom')) {
       imageContainers.forEach(container => {
         let initialDistance = 0;
         let initialScale = 1;
-        const img = container.querySelector('img');
+        const mediaWrapper = container.querySelector('.product__media');
+        if (!mediaWrapper) return;
+
+        const img = mediaWrapper.querySelector('img');
+        if (!img) return;
 
         container.addEventListener('touchstart', (e) => {
           if (e.touches.length === 2) {
             e.preventDefault();
             initialDistance = this.getDistance(e.touches[0], e.touches[1]);
-            initialScale = parseFloat(img.style.transform?.match(/scale\(([\d.]+)\)/)?.[1] || 1);
+            const transform = img.style.transform || '';
+            const scaleMatch = transform.match(/scale\(([\d.]+)\)/);
+            initialScale = scaleMatch ? parseFloat(scaleMatch[1]) : 1;
           }
         }, { passive: false });
 
@@ -66,14 +98,18 @@ if (!customElements.get('product-image-zoom')) {
 
             img.style.transform = `scale(${scale})`;
             img.style.transformOrigin = 'center center';
-            img.style.transition = 'transform 0.1s ease-out';
+            img.style.transition = 'none';
           }
         }, { passive: false });
 
         container.addEventListener('touchend', (e) => {
           if (e.touches.length < 2) {
-            const currentScale = parseFloat(img.style.transform?.match(/scale\(([\d.]+)\)/)?.[1] || 1);
+            const transform = img.style.transform || '';
+            const scaleMatch = transform.match(/scale\(([\d.]+)\)/);
+            const currentScale = scaleMatch ? parseFloat(scaleMatch[1]) : 1;
+
             if (currentScale <= 1.1) {
+              img.style.transition = 'transform 0.3s ease-out';
               img.style.transform = 'scale(1)';
             }
           }
@@ -177,7 +213,8 @@ if (!customElements.get('product-image-zoom')) {
       overlay.addEventListener('click', () => this.closeModal());
 
       // Keyboard navigation
-      document.addEventListener('keydown', this.handleKeydown.bind(this));
+      this.keydownHandler = this.handleKeydown.bind(this);
+      document.addEventListener('keydown', this.keydownHandler);
 
       // Navigation
       if (prevBtn) prevBtn.addEventListener('click', () => this.navigate(-1));
@@ -313,7 +350,7 @@ if (!customElements.get('product-image-zoom')) {
 
     closeModal() {
       this.modal.classList.remove('active');
-      document.removeEventListener('keydown', this.handleKeydown.bind(this));
+      document.removeEventListener('keydown', this.keydownHandler);
 
       setTimeout(() => {
         this.modal.remove();
