@@ -1,5 +1,21 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 0
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -61,10 +77,6 @@
             "gang_url": ""
           }
         },
-        "wishlist_engine_product_page_jKTTyL": {
-          "type": "shopify://apps/se-wishlist-engine/blocks/Product-Page/8f7c0857-8e71-463d-a168-8e133094753b",
-          "settings": {}
-        },
         "description": {
           "type": "description",
           "settings": {}
@@ -125,7 +137,6 @@
         "d3b07889-73e6-43db-8ad9-0a2945bc560a",
         "quantity_selector",
         "buy_buttons",
-        "wishlist_engine_product_page_jKTTyL",
         "description",
         "collapsible-row-2",
         "collapsible-row-0",
@@ -137,12 +148,13 @@
         "gift_card_receipient_enabled": false,
         "is_above_the_fold": true,
         "enable_sticky_info": true,
+        "badges_enabled": false,
         "gallery_layout": "thumbnail",
         "media_size": "medium",
         "mobile_thumbnails": "show",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 36,
+        "padding_top": 20,
         "padding_bottom": 12
       }
     },
@@ -172,7 +184,6 @@
         "is_above_the_fold": false,
         "background_color": "#ffffff",
         "text_color": "#000000",
-        "image": "shopify://shop_images/Adventskalender_23_8N1A6651_klein_2.jpg",
         "image_caption": "",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -252,7 +263,6 @@
         "is_above_the_fold": false,
         "background_color": "#ffffff",
         "text_color": "#000000",
-        "image": "shopify://shop_images/Adventskalender_23_8N1A6622_gross_1.jpg",
         "image_caption": "",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -292,7 +302,6 @@
         "is_above_the_fold": false,
         "background_color": "#ffffff",
         "text_color": "#000000",
-        "image": "shopify://shop_images/Adventskalender_23_8N1A6651_klein_3.jpg",
         "image_caption": "",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -322,13 +331,6 @@
         "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 28
-      }
-    },
-    "breadcrumbs": {
-      "type": "breadcrumbs",
-      "settings": {
-        "padding_top": 24,
-        "padding_bottom": 16
       }
     }
   },
