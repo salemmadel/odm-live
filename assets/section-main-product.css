@@ -509,6 +509,15 @@ a.product__text {
     padding-right: 0 !important;
   }
 
+  /* Remove grid--peek margins on first/last items */
+  .product__media-list.grid--peek.slider .product__media-item:first-of-type {
+    margin-left: 0 !important;
+  }
+
+  .product__media-list.grid--peek.slider .product__media-item:last-of-type {
+    margin-right: 0 !important;
+  }
+
   .product__media-list .product__media-item {
     width: 100%;
     padding: 0;
