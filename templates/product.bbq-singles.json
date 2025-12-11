@@ -1,5 +1,21 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -31,12 +47,6 @@
           "settings": {
             "text": "{{ product.metafields.descriptors.subtitle.value }}",
             "text_style": "subtitle"
-          }
-        },
-        "0209f2a8-8af4-47f5-8f20-ee27e76c1a98": {
-          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "3er-bbq-set-neu"
           }
         },
         "price": {
@@ -126,7 +136,6 @@
         "title",
         "eshop_guide_product_usp_ppEaLY",
         "caption",
-        "0209f2a8-8af4-47f5-8f20-ee27e76c1a98",
         "price",
         "description",
         "variant_picker",
@@ -182,7 +191,6 @@
         "is_above_the_fold": false,
         "background_color": "#ffffff",
         "text_color": "#000000",
-        "image": "shopify://shop_images/ALL3-Nocarton.png",
         "image_caption": "",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -244,7 +252,6 @@
         "is_above_the_fold": false,
         "background_color": "#ffffff",
         "text_color": "#000000",
-        "image": "shopify://shop_images/BestsellerBundle2erDE.jpg",
         "image_caption": "",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -296,7 +303,6 @@
         "is_above_the_fold": false,
         "background_color": "#ffffff",
         "text_color": "#000000",
-        "image": "shopify://shop_images/Geschenkbox_2er_Mood.jpg",
         "image_caption": "",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -372,26 +378,8 @@
     },
     "1668500027a509409d": {
       "type": "apps",
-      "blocks": {
-        "5a8947ac-3258-44c8-b3fd-bf2720e27444": {
-          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "3er-bbq-set-neu"
-          }
-        }
-      },
-      "block_order": [
-        "5a8947ac-3258-44c8-b3fd-bf2720e27444"
-      ],
       "settings": {
         "include_margins": true
-      }
-    },
-    "breadcrumbs": {
-      "type": "breadcrumbs",
-      "settings": {
-        "padding_top": 24,
-        "padding_bottom": 16
       }
     }
   },
