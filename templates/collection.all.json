@@ -88,9 +88,17 @@
         "show_collection_image": false,
         "color_scheme": "background-1"
       }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
     }
   },
   "order": [
+    "breadcrumbs",
     "rich_text_headline_ymiiFC",
     "product-grid",
     "1654605637dcfd3e20",

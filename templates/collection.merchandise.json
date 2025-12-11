@@ -1,1 +1,228 @@
-{"sections":{"5054f308-d475-4457-a6a4-0497d601b01a":{"type":"image-intro-banner","disabled":true,"settings":{"is_above_the_fold":false,"image":"shopify:\/\/shop_images\/Strohhalm_Eiswuefelfrom_Kategorie_Hero.jpg","image_2":"shopify:\/\/shop_images\/Strohhalm_Eiswuefelform.jpg","image_4_height":0,"image_3_height":0,"link":"","image_overlay_opacity":0,"image_height":"small","adapt_height_first_image":false,"desktop_content_position":"middle-center","section_animation":"none","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"background-1","mobile_content_alignment":"center","show_text_below":true,"heading_h1":"Merchandise","heading_h2":"","heading_text":"<p>Egal ob T-Shirt, Feuerzeug oder BBQ Sauce - hier gibt es alles, was ein:e Moonshiner:in braucht.<\/p>","padding_top":0,"padding_bottom":0}},"b9e5fc23-42c5-40b7-ba90-a1b15b8ae95d":{"type":"rich-text","blocks":{"template--18042486653196__b9e5fc23-42c5-40b7-ba90-a1b15b8ae95d-heading-1":{"type":"heading","settings":{"heading":"Unser O’Donnell Merchandise","heading_size":"h1"}},"template--18042486653196__b9e5fc23-42c5-40b7-ba90-a1b15b8ae95d-text-1":{"type":"text","settings":{"text":"<p>Du willst ein echter Moonshiner sein?<br\/>Wir haben alles was Du dafür brauchst. <\/p>"}},"template--18042486653196__b9e5fc23-42c5-40b7-ba90-a1b15b8ae95d-button-1":{"type":"button","disabled":true,"settings":{"button_label":"Button label","button_link":"","button_style_secondary":false}}},"block_order":["template--18042486653196__b9e5fc23-42c5-40b7-ba90-a1b15b8ae95d-heading-1","template--18042486653196__b9e5fc23-42c5-40b7-ba90-a1b15b8ae95d-text-1","template--18042486653196__b9e5fc23-42c5-40b7-ba90-a1b15b8ae95d-button-1"],"settings":{"color_scheme":"background-1","full_width":true,"padding_top":40,"padding_bottom":0}},"banner":{"type":"main-collection-banner","disabled":true,"settings":{"is_above_the_fold":false,"show_collection_description":true,"show_collection_image":false,"color_scheme":"background-1"}},"product-grid":{"type":"main-collection-product-grid","settings":{"is_above_the_fold":false,"products_per_page":24,"columns_desktop":4,"image_ratio":"adapt","show_secondary_image":true,"show_vendor":false,"show_rating":false,"enable_quick_add":true,"grey_sold_out_products":true,"enable_filtering":true,"filter_type":"horizontal","enable_sorting":true,"columns_mobile":"2","padding_top":16,"padding_bottom":28}},"4cda6c4f-a25c-494f-850f-51050a15c791":{"type":"rich-text","blocks":{"template--17963896930572__4cda6c4f-a25c-494f-850f-51050a15c791-16849356873408bd23-0":{"type":"heading","settings":{"heading":"Entdecke mehr","heading_size":"h1"}}},"block_order":["template--17963896930572__4cda6c4f-a25c-494f-850f-51050a15c791-16849356873408bd23-0"],"disabled":true,"settings":{"color_scheme":"background-1","full_width":true,"padding_top":0,"padding_bottom":0}},"83362cb0-d967-41b7-a8a8-972688bd20e3":{"type":"collection-buttons","disabled":true,"settings":{"title":""}},"95a2049e-6cd5-43b9-b3eb-55c6b1090761":{"type":"front-collections","blocks":{"template--17979637596428__95a2049e-6cd5-43b9-b3eb-55c6b1090761-16861325973395f13c-0":{"type":"collection","settings":{"default_collection":true,"collection_title":"Alle Sorten","collection":"moonshine","view_all_button_label":""}},"4dfb90f5-c5a4-4ee0-adb1-ed7ce797562a":{"type":"collection","settings":{"default_collection":false,"collection_title":"Sets","collection":"sets","view_all_button_label":""}},"1beec8f9-fe32-42af-9bb0-09566d006f84":{"type":"collection","settings":{"default_collection":false,"collection_title":"Bestseller","collection":"featured","view_all_button_label":""}},"ea54334f-df42-4555-8ae4-fc1dea738129":{"type":"collection","settings":{"default_collection":false,"collection_title":"Gang","collection":"gang","view_all_button_label":""}},"4052d317-abc4-4097-886f-f3e5ac910e54":{"type":"collection","settings":{"default_collection":false,"collection_title":"Alles","collection":"all","view_all_button_label":""}}},"block_order":["template--17979637596428__95a2049e-6cd5-43b9-b3eb-55c6b1090761-16861325973395f13c-0","4dfb90f5-c5a4-4ee0-adb1-ed7ce797562a","1beec8f9-fe32-42af-9bb0-09566d006f84","ea54334f-df42-4555-8ae4-fc1dea738129","4052d317-abc4-4097-886f-f3e5ac910e54"],"settings":{"is_above_the_fold":false,"title":"Entdecke mehr Produkte","heading_size":"h2","description":"","show_description":false,"grey_sold_out_products":true,"description_style":"body","products_to_show":4,"columns_desktop":4,"full_width":false,"section_animation":"none","show_view_all":true,"view_all_style":"solid","enable_desktop_slider":false,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":true,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"columns_mobile":"2","swipe_on_mobile":true,"padding_top":36,"padding_bottom":36}}},"order":["5054f308-d475-4457-a6a4-0497d601b01a","b9e5fc23-42c5-40b7-ba90-a1b15b8ae95d","banner","product-grid","4cda6c4f-a25c-494f-850f-51050a15c791","83362cb0-d967-41b7-a8a8-972688bd20e3","95a2049e-6cd5-43b9-b3eb-55c6b1090761"]}
+{
+  "sections": {
+    "5054f308-d475-4457-a6a4-0497d601b01a": {
+      "type": "image-intro-banner",
+      "disabled": true,
+      "settings": {
+        "is_above_the_fold": false,
+        "image": "shopify://shop_images/Strohhalm_Eiswuefelfrom_Kategorie_Hero.jpg",
+        "image_2": "shopify://shop_images/Strohhalm_Eiswuefelform.jpg",
+        "image_4_height": 0,
+        "image_3_height": 0,
+        "link": "",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "section_animation": "none",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "show_text_below": true,
+        "heading_h1": "Merchandise",
+        "heading_h2": "",
+        "heading_text": "<p>Egal ob T-Shirt, Feuerzeug oder BBQ Sauce - hier gibt es alles, was ein:e Moonshiner:in braucht.</p>",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "b9e5fc23-42c5-40b7-ba90-a1b15b8ae95d": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18042486653196__b9e5fc23-42c5-40b7-ba90-a1b15b8ae95d-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Unser O’Donnell Merchandise",
+            "heading_size": "h1"
+          }
+        },
+        "template--18042486653196__b9e5fc23-42c5-40b7-ba90-a1b15b8ae95d-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Du willst ein echter Moonshiner sein?<br/>Wir haben alles was Du dafür brauchst. </p>"
+          }
+        },
+        "template--18042486653196__b9e5fc23-42c5-40b7-ba90-a1b15b8ae95d-button-1": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18042486653196__b9e5fc23-42c5-40b7-ba90-a1b15b8ae95d-heading-1",
+        "template--18042486653196__b9e5fc23-42c5-40b7-ba90-a1b15b8ae95d-text-1",
+        "template--18042486653196__b9e5fc23-42c5-40b7-ba90-a1b15b8ae95d-button-1"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "is_above_the_fold": false,
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "is_above_the_fold": false,
+        "products_per_page": 24,
+        "columns_desktop": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "grey_sold_out_products": true,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 16,
+        "padding_bottom": 28
+      }
+    },
+    "4cda6c4f-a25c-494f-850f-51050a15c791": {
+      "type": "rich-text",
+      "blocks": {
+        "template--17963896930572__4cda6c4f-a25c-494f-850f-51050a15c791-16849356873408bd23-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Entdecke mehr",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--17963896930572__4cda6c4f-a25c-494f-850f-51050a15c791-16849356873408bd23-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "83362cb0-d967-41b7-a8a8-972688bd20e3": {
+      "type": "collection-buttons",
+      "disabled": true,
+      "settings": {
+        "title": ""
+      }
+    },
+    "95a2049e-6cd5-43b9-b3eb-55c6b1090761": {
+      "type": "front-collections",
+      "blocks": {
+        "template--17979637596428__95a2049e-6cd5-43b9-b3eb-55c6b1090761-16861325973395f13c-0": {
+          "type": "collection",
+          "settings": {
+            "default_collection": true,
+            "collection_title": "Alle Sorten",
+            "collection": "moonshine",
+            "view_all_button_label": ""
+          }
+        },
+        "4dfb90f5-c5a4-4ee0-adb1-ed7ce797562a": {
+          "type": "collection",
+          "settings": {
+            "default_collection": false,
+            "collection_title": "Sets",
+            "collection": "sets",
+            "view_all_button_label": ""
+          }
+        },
+        "1beec8f9-fe32-42af-9bb0-09566d006f84": {
+          "type": "collection",
+          "settings": {
+            "default_collection": false,
+            "collection_title": "Bestseller",
+            "collection": "featured",
+            "view_all_button_label": ""
+          }
+        },
+        "ea54334f-df42-4555-8ae4-fc1dea738129": {
+          "type": "collection",
+          "settings": {
+            "default_collection": false,
+            "collection_title": "Gang",
+            "collection": "gang",
+            "view_all_button_label": ""
+          }
+        },
+        "4052d317-abc4-4097-886f-f3e5ac910e54": {
+          "type": "collection",
+          "settings": {
+            "default_collection": false,
+            "collection_title": "Alles",
+            "collection": "all",
+            "view_all_button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17979637596428__95a2049e-6cd5-43b9-b3eb-55c6b1090761-16861325973395f13c-0",
+        "4dfb90f5-c5a4-4ee0-adb1-ed7ce797562a",
+        "1beec8f9-fe32-42af-9bb0-09566d006f84",
+        "ea54334f-df42-4555-8ae4-fc1dea738129",
+        "4052d317-abc4-4097-886f-f3e5ac910e54"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "Entdecke mehr Produkte",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "5054f308-d475-4457-a6a4-0497d601b01a",
+    "b9e5fc23-42c5-40b7-ba90-a1b15b8ae95d",
+    "banner",
+    "product-grid",
+    "4cda6c4f-a25c-494f-850f-51050a15c791",
+    "83362cb0-d967-41b7-a8a8-972688bd20e3",
+    "95a2049e-6cd5-43b9-b3eb-55c6b1090761"
+  ]
+}

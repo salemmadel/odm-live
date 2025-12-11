@@ -1,1 +1,134 @@
-{"sections":{"banner":{"type":"main-collection-banner","disabled":true,"settings":{"is_above_the_fold":false,"show_collection_description":false,"show_collection_image":false,"color_scheme":"background-1"}},"image_intro_banner_GUmfKq":{"type":"image-intro-banner","settings":{"is_above_the_fold":false,"image":"shopify:\/\/shop_images\/HomeHeroD_Cheers25NYE.jpg","image_2":"shopify:\/\/shop_images\/HomeHeroD_Cheers25NYE.jpg","image_4_height":0,"image_3_height":0,"link":"","image_overlay_opacity":0,"image_height":"small","adapt_height_first_image":true,"desktop_content_position":"middle-center","section_animation":"none","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"background-1","mobile_content_alignment":"center","show_text_below":true,"heading_h1":"","heading_h2":"","heading_text":"","padding_top":0,"padding_bottom":0}},"rich_text_cWDLWL":{"type":"rich-text","blocks":{"heading_FR9kxh":{"type":"heading","settings":{"heading":"O'Donnell Moonshine Neujahrs-Kollektion","heading_size":"h1"}},"text_qq6VKc":{"type":"text","settings":{"text":"<p>Stoße mit Stil ins neue Jahr an! Unsere exklusive Neujahrs-Kollektion bietet handgefertigte Moonshine-Kreationen, die jede Feier unvergesslich machen.<\/p>"}}},"block_order":["heading_FR9kxh","text_qq6VKc"],"settings":{"color_scheme":"background-1","full_width":true,"padding_top":24,"padding_bottom":24}},"product-grid":{"type":"main-collection-product-grid","settings":{"is_above_the_fold":false,"products_per_page":20,"columns_desktop":4,"image_ratio":"adapt","show_secondary_image":true,"show_vendor":false,"show_rating":false,"enable_quick_add":true,"grey_sold_out_products":true,"enable_filtering":true,"filter_type":"horizontal","enable_sorting":true,"columns_mobile":"2","padding_top":24,"padding_bottom":24}},"featured_collection_ed7Q8q":{"type":"featured-collection","settings":{"is_above_the_fold":false,"title":"Perfekt zum anstoßen","heading_size":"h1","description":"","show_description":false,"grey_sold_out_products":true,"description_style":"body","collection":"sets","products_to_show":5,"columns_desktop":5,"full_width":false,"section_animation":"none","show_view_all":true,"view_all_style":"solid","view_all_button_label":"","enable_desktop_slider":false,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":true,"show_vendor":false,"show_rating":false,"enable_quick_add":true,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":24,"padding_bottom":24}}},"order":["banner","image_intro_banner_GUmfKq","rich_text_cWDLWL","product-grid","featured_collection_ed7Q8q"]}
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "is_above_the_fold": false,
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "image_intro_banner_GUmfKq": {
+      "type": "image-intro-banner",
+      "settings": {
+        "is_above_the_fold": false,
+        "image": "shopify://shop_images/HomeHeroD_Cheers25NYE.jpg",
+        "image_2": "shopify://shop_images/HomeHeroD_Cheers25NYE.jpg",
+        "image_4_height": 0,
+        "image_3_height": 0,
+        "link": "",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": true,
+        "desktop_content_position": "middle-center",
+        "section_animation": "none",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "show_text_below": true,
+        "heading_h1": "",
+        "heading_h2": "",
+        "heading_text": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_cWDLWL": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_FR9kxh": {
+          "type": "heading",
+          "settings": {
+            "heading": "O'Donnell Moonshine Neujahrs-Kollektion",
+            "heading_size": "h1"
+          }
+        },
+        "text_qq6VKc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Stoße mit Stil ins neue Jahr an! Unsere exklusive Neujahrs-Kollektion bietet handgefertigte Moonshine-Kreationen, die jede Feier unvergesslich machen.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_FR9kxh",
+        "text_qq6VKc"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "is_above_the_fold": false,
+        "products_per_page": 20,
+        "columns_desktop": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "grey_sold_out_products": true,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "featured_collection_ed7Q8q": {
+      "type": "featured-collection",
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "Perfekt zum anstoßen",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "collection": "sets",
+        "products_to_show": 5,
+        "columns_desktop": 5,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "view_all_button_label": "",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "banner",
+    "image_intro_banner_GUmfKq",
+    "rich_text_cWDLWL",
+    "product-grid",
+    "featured_collection_ed7Q8q"
+  ]
+}

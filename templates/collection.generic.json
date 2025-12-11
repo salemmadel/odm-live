@@ -1,1 +1,157 @@
-{"sections":{"rich_text_gF44yV":{"type":"rich-text","blocks":{"heading_CznMjq":{"type":"heading","settings":{"heading":"Unsere Cream Liköre","heading_size":"h1"}},"text_Ezq6ey":{"type":"text","disabled":true,"settings":{"text":"<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"}}},"block_order":["heading_CznMjq","text_Ezq6ey"],"name":"t:sections.rich-text.presets.name","settings":{"color_scheme":"background-1","full_width":true,"padding_top":40,"padding_bottom":52}},"banner":{"type":"main-collection-banner","disabled":true,"settings":{"is_above_the_fold":false,"show_collection_description":true,"show_collection_image":false,"color_scheme":"background-1"}},"product-grid":{"type":"main-collection-product-grid","settings":{"is_above_the_fold":false,"products_per_page":20,"columns_desktop":4,"image_ratio":"adapt","show_secondary_image":true,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"grey_sold_out_products":true,"enable_filtering":false,"filter_type":"horizontal","enable_sorting":false,"columns_mobile":"2","padding_top":24,"padding_bottom":24}},"image_with_text_i6Ai8X":{"type":"image-with-text","blocks":{"heading_Kx3XVx":{"type":"heading","settings":{"heading":"O’Donnell Moonshine \"Mehr als Likör\"","heading_size":"h1"}},"text_pwtEcC":{"type":"text","settings":{"text":"<p>Inspiriert vom original Moonshine der Prohibitionszeit, bringt O’Donnell seit 2014 Spirituosen mit Haltung ins Glas. Fruchtig, nussig oder cremig – unsere Liköre und Spirituosen im ikonischen Mason Jar stehen für kompromisslosen Geschmack und kreative Rezepturen.<\/p>","text_style":"body"}}},"block_order":["heading_Kx3XVx","text_pwtEcC"],"custom_css":["@media screen and (max-width: 750px) {.image-with-text {padding-top: 0px; padding-bottom: 0px; }}"],"name":"t:sections.image-with-text.presets.name","settings":{"is_above_the_fold":false,"background_color":"#fff","text_color":"#000","image":"shopify:\/\/shop_images\/JanuarVielfalt_Horizontal_Master_DE_01_1_95a78aa2-a579-4e30-8fec-e33b609b6782.jpg","image_caption":"","height":"adapt","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"overlap","color_scheme":"background-2","mobile_content_alignment":"left","padding_top":36,"padding_bottom":0}},"1654605637dcfd3e20":{"type":"featured-collection","custom_css":["@media screen and (max-width: 750px) {.image-with-text {padding-top: 0px; padding-bottom: 0px; }}"],"settings":{"is_above_the_fold":false,"title":"Entdecke unsere Bestseller!","heading_size":"h2","description":"","show_description":false,"grey_sold_out_products":true,"description_style":"body","collection":"featured","products_to_show":12,"columns_desktop":5,"full_width":false,"section_animation":"none","show_view_all":true,"view_all_style":"solid","view_all_button_label":"ALLE ENTDECKEN","enable_desktop_slider":true,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":false,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"columns_mobile":"2","swipe_on_mobile":true,"padding_top":24,"padding_bottom":24}}},"order":["rich_text_gF44yV","banner","product-grid","image_with_text_i6Ai8X","1654605637dcfd3e20"]}
+{
+  "sections": {
+    "rich_text_gF44yV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_CznMjq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Unsere Cream Liköre",
+            "heading_size": "h1"
+          }
+        },
+        "text_Ezq6ey": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_CznMjq",
+        "text_Ezq6ey"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "is_above_the_fold": false,
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "is_above_the_fold": false,
+        "products_per_page": 20,
+        "columns_desktop": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "grey_sold_out_products": true,
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "columns_mobile": "2",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "image_with_text_i6Ai8X": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Kx3XVx": {
+          "type": "heading",
+          "settings": {
+            "heading": "O’Donnell Moonshine \"Mehr als Likör\"",
+            "heading_size": "h1"
+          }
+        },
+        "text_pwtEcC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Inspiriert vom original Moonshine der Prohibitionszeit, bringt O’Donnell seit 2014 Spirituosen mit Haltung ins Glas. Fruchtig, nussig oder cremig – unsere Liköre und Spirituosen im ikonischen Mason Jar stehen für kompromisslosen Geschmack und kreative Rezepturen.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Kx3XVx",
+        "text_pwtEcC"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 750px) {.image-with-text {padding-top: 0px; padding-bottom: 0px; }}"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "background_color": "#fff",
+        "text_color": "#000",
+        "image": "shopify://shop_images/JanuarVielfalt_Horizontal_Master_DE_01_1_95a78aa2-a579-4e30-8fec-e33b609b6782.jpg",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "1654605637dcfd3e20": {
+      "type": "featured-collection",
+      "custom_css": [
+        "@media screen and (max-width: 750px) {.image-with-text {padding-top: 0px; padding-bottom: 0px; }}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "Entdecke unsere Bestseller!",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "collection": "featured",
+        "products_to_show": 12,
+        "columns_desktop": 5,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "view_all_button_label": "ALLE ENTDECKEN",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "rich_text_gF44yV",
+    "banner",
+    "product-grid",
+    "image_with_text_i6Ai8X",
+    "1654605637dcfd3e20"
+  ]
+}

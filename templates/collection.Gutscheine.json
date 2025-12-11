@@ -100,9 +100,17 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
     }
   },
   "order": [
+    "breadcrumbs",
     "banner",
     "rich_text_headline_rErnDV",
     "product-grid",

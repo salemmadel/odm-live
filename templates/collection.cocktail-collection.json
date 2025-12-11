@@ -1,1 +1,142 @@
-{"sections":{"image_intro_banner_RTFjhK":{"type":"image-intro-banner","name":"t:sections.image-banner.settings.intro.name","settings":{"is_above_the_fold":false,"image":"shopify:\/\/shop_images\/20250429_Collection_Bundle_DE_1920x500_with_Text.jpg","image_2":"shopify:\/\/shop_images\/20250429_Collection_Bundle_DE_1200x900_with_Text.jpg","image_4_height":0,"image_3_height":0,"link":"","image_overlay_opacity":0,"image_height":"adapt_image","adapt_height_first_image":false,"desktop_content_position":"middle-center","section_animation":"none","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"background-1","mobile_content_alignment":"center","show_text_below":true,"heading_h1":"","heading_h2":"","heading_text":"","padding_top":0,"padding_bottom":0}},"rich_text_n76fCe":{"type":"rich-text","blocks":{"heading_mjxcGX":{"type":"heading","settings":{"heading":"Cocktail Bundles","heading_size":"h1"}},"text_h3qA8R":{"type":"text","settings":{"text":"<p>Lust auf Cocktails wie aus der Lieblingsbar – nur ohne die Rechnung am Ende?<br\/>Unsere <strong>Cocktail-Bundles <\/strong>bringen dir den Bar-Genuss direkt nach Hause. Jede Kombination enthält unsere charakterstarken Moonshine-Sorten – du brauchst nur noch ein paar frische Zutaten, einmal schütteln (oder rühren), und schon kann’s losgehen.<\/p><p><strong>Viel Geschmack.<\/strong> Ran an den Shaker – dein neuer Lieblingsdrink wartet schon.<\/p>"}}},"block_order":["heading_mjxcGX","text_h3qA8R"],"settings":{"color_scheme":"background-1","full_width":true,"padding_top":40,"padding_bottom":52}},"banner":{"type":"main-collection-banner","disabled":true,"settings":{"is_above_the_fold":false,"show_collection_description":true,"show_collection_image":false,"color_scheme":"background-1"}},"product-grid":{"type":"main-collection-product-grid","settings":{"is_above_the_fold":false,"products_per_page":20,"columns_desktop":4,"image_ratio":"adapt","show_secondary_image":true,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"grey_sold_out_products":true,"enable_filtering":false,"filter_type":"horizontal","enable_sorting":false,"columns_mobile":"2","padding_top":24,"padding_bottom":24}},"1654605637dcfd3e20":{"type":"featured-collection","settings":{"is_above_the_fold":false,"title":"Kaufen Sie unsere Bestsellers!","heading_size":"h2","description":"","show_description":false,"grey_sold_out_products":true,"description_style":"body","collection":"featured","products_to_show":12,"columns_desktop":5,"full_width":false,"section_animation":"none","show_view_all":true,"view_all_style":"solid","view_all_button_label":"View All!","enable_desktop_slider":true,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":false,"show_vendor":false,"show_rating":false,"enable_quick_add":true,"columns_mobile":"2","swipe_on_mobile":true,"padding_top":24,"padding_bottom":24}},"1d9bdd37-13c0-43af-b7e6-3e4b498e0243":{"type":"collection-buttons","settings":{"title":""}}},"order":["image_intro_banner_RTFjhK","rich_text_n76fCe","banner","product-grid","1654605637dcfd3e20","1d9bdd37-13c0-43af-b7e6-3e4b498e0243"]}
+{
+  "sections": {
+    "image_intro_banner_RTFjhK": {
+      "type": "image-intro-banner",
+      "name": "t:sections.image-banner.settings.intro.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "image": "shopify://shop_images/20250429_Collection_Bundle_DE_1920x500_with_Text.jpg",
+        "image_2": "shopify://shop_images/20250429_Collection_Bundle_DE_1200x900_with_Text.jpg",
+        "image_4_height": 0,
+        "image_3_height": 0,
+        "link": "",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt_image",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "section_animation": "none",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "show_text_below": true,
+        "heading_h1": "",
+        "heading_h2": "",
+        "heading_text": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_n76fCe": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_mjxcGX": {
+          "type": "heading",
+          "settings": {
+            "heading": "Cocktail Bundles",
+            "heading_size": "h1"
+          }
+        },
+        "text_h3qA8R": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Lust auf Cocktails wie aus der Lieblingsbar – nur ohne die Rechnung am Ende?<br/>Unsere <strong>Cocktail-Bundles </strong>bringen dir den Bar-Genuss direkt nach Hause. Jede Kombination enthält unsere charakterstarken Moonshine-Sorten – du brauchst nur noch ein paar frische Zutaten, einmal schütteln (oder rühren), und schon kann’s losgehen.</p><p><strong>Viel Geschmack.</strong> Ran an den Shaker – dein neuer Lieblingsdrink wartet schon.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mjxcGX",
+        "text_h3qA8R"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "is_above_the_fold": false,
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "is_above_the_fold": false,
+        "products_per_page": 20,
+        "columns_desktop": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "grey_sold_out_products": true,
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "columns_mobile": "2",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "1654605637dcfd3e20": {
+      "type": "featured-collection",
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "Kaufen Sie unsere Bestsellers!",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "collection": "featured",
+        "products_to_show": 12,
+        "columns_desktop": 5,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "view_all_button_label": "View All!",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "1d9bdd37-13c0-43af-b7e6-3e4b498e0243": {
+      "type": "collection-buttons",
+      "settings": {
+        "title": ""
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "image_intro_banner_RTFjhK",
+    "rich_text_n76fCe",
+    "banner",
+    "product-grid",
+    "1654605637dcfd3e20",
+    "1d9bdd37-13c0-43af-b7e6-3e4b498e0243"
+  ]
+}
