@@ -97,7 +97,27 @@
   {% endif %}
 
   /* Header transparency and color settings */
-  {% if section.settings.enable_transparent_header %}
+  {%- liquid
+    assign is_collection_page = false
+    assign is_product_page = false
+    assign should_be_transparent = false
+
+    if template contains 'collection'
+      assign is_collection_page = true
+    endif
+
+    if template contains 'product'
+      assign is_product_page = true
+    endif
+
+    if is_collection_page and section.settings.enable_transparent_header_collections
+      assign should_be_transparent = true
+    elsif is_product_page == false and is_collection_page == false and section.settings.enable_transparent_header_other
+      assign should_be_transparent = true
+    endif
+  -%}
+
+  {% if should_be_transparent %}
     .header-wrapper {
       position: absolute;
       width: 100%;
@@ -628,10 +648,17 @@
     },
     {
       "type": "checkbox",
-      "id": "enable_transparent_header",
+      "id": "enable_transparent_header_collections",
       "default": false,
-      "label": "Enable transparent header",
-      "info": "Makes header transparent over banner images (excludes announcement bar)"
+      "label": "Enable transparent header on collection pages",
+      "info": "Makes header transparent on collection pages only"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_transparent_header_other",
+      "default": false,
+      "label": "Enable transparent header on other pages",
+      "info": "Makes header transparent on pages other than products and collections"
     },
     {
       "type": "color",
