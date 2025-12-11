@@ -1,5 +1,21 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 100,
+        "padding_bottom": 64
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -23,12 +39,6 @@
           "settings": {
             "text": "{{ product.metafields.descriptors.subtitle.value }}",
             "text_style": "subtitle"
-          }
-        },
-        "0209f2a8-8af4-47f5-8f20-ee27e76c1a98": {
-          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "harte-nuss"
           }
         },
         "price": {
@@ -55,21 +65,6 @@
             "set_text": "Wähle 3 Produkte",
             "show_dynamic_checkout": false,
             "gang_url": "https://odonnell.de/account/login"
-          }
-        },
-        "wishlist_engine_product_page_jiPqR9": {
-          "type": "shopify://apps/se-wishlist-engine/blocks/Product-Page/8f7c0857-8e71-463d-a168-8e133094753b",
-          "settings": {}
-        },
-        "klarna_on_site_messaging_app_block_QrNBxT": {
-          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
-          "disabled": true,
-          "settings": {
-            "data_key": "credit-promotion-badge",
-            "theme": "default",
-            "topPadding": "0",
-            "bottomPadding": "0",
-            "messagePrefix": ""
           }
         },
         "description": {
@@ -117,13 +112,10 @@
         "title",
         "eshop_guide_product_usp_aq3WyV",
         "caption",
-        "0209f2a8-8af4-47f5-8f20-ee27e76c1a98",
         "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "wishlist_engine_product_page_jiPqR9",
-        "klarna_on_site_messaging_app_block_QrNBxT",
         "description",
         "collapsible-row-0",
         "collapsible-row-3",
@@ -190,7 +182,6 @@
         "is_above_the_fold": false,
         "background_color": "#ffffff",
         "text_color": "#000000",
-        "image": "shopify://shop_images/HarteNuss_700_Front_D.jpg",
         "image_caption": "",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -259,26 +250,8 @@
     },
     "1668500027a509409d": {
       "type": "apps",
-      "blocks": {
-        "5a8947ac-3258-44c8-b3fd-bf2720e27444": {
-          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "harte-nuss"
-          }
-        }
-      },
-      "block_order": [
-        "5a8947ac-3258-44c8-b3fd-bf2720e27444"
-      ],
       "settings": {
         "include_margins": true
-      }
-    },
-    "breadcrumbs": {
-      "type": "breadcrumbs",
-      "settings": {
-        "padding_top": 24,
-        "padding_bottom": 16
       }
     }
   },
