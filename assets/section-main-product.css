@@ -490,8 +490,8 @@ a.product__text {
 @media screen and (max-width: 749px) {
   /* Expand product gallery to screen edges */
   .product__media-list {
-    margin-left: calc(-1 * var(--page-width-margin));
-    margin-right: calc(-1 * var(--page-width-margin));
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
     margin-bottom: 3rem;
     padding-bottom: 2rem;
   }
