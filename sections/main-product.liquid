@@ -915,6 +915,7 @@
                             {%- endif -%}
                           {%- endfor -%}
                         </ul>
+                      </slider-component>
                     </media-gallery>
                   </div> 
                   <span class="sticky-cart__info"><div class="sticky-cart__title">{{ product.title | escape }}{%- unless product.has_only_default_variant  -%}<span class="sticky-cart__variant"> &#183 <span class="sticky-cart__variant--text">{{product.selected_or_first_available_variant.title}}</span></span>{%- endunless -%}</div> 
@@ -1001,8 +1002,8 @@
                                     <span>
                                       {{ 'products.product.gang_atc' | t }}
                                     </span>
-                                </button>
-                              </a>
+                                </a>
+                              </div>
                             {%- endunless -%}
                             {%- if customer -%}
                               {%- if product.metafields.custom.customer_tier.value != blank -%}
@@ -1025,19 +1026,15 @@
                                         disabled
                                       >
                                           <span>{{ block.settings.only_tier_gang_button }}</span>
-                                      </button>
-                                    </a>
+                                      </a>
+                                  </div>
                                 {%- endif -%}
                               {%- else -%}
                                 {{ atc }}
                               {%- endif -%}
                             {%- endif -%}
                           {%- else -%}
-                            {%- if product.metafields.custom.customer_tier.value == blank -%}
-                              {{ atc }}
-                            {%- else -%}
-                              <div class="product-form__buttons">
-                            {%- endif -%}
+                            {{ atc }}
                           {%- endif -%}
                         </product-form>
         
@@ -1065,13 +1062,9 @@
         
                       <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
                 </div>
-                <div class="{%- if product.metafields.product.prerelease == blank -%} hidden {%-else-%} sticky-cart__go-back button--secondary{%-endif-%}" onclick="topFunction()">{% render 'icon-caret' %}</div>
-
-              </div>
                 <div class="{%- if product.metafields.product.prerelease -%} hidden {%-else-%}sticky-cart__go-back button--secondary {%-endif-%}" onclick="topFunction()">{% render 'icon-caret' %}</div>
               </div>
             </div>
-          {%- endunless -%}
 
           {%- when 'rating' -%}
             {%- if product.metafields.reviews.rating.value != blank -%}
