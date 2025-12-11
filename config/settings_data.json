@@ -265,7 +265,7 @@
           "use_christmas_logo": true,
           "use_christmas_gift_icon": "Geschenke",
           "logo_width": 120,
-          "logo_position": "middle-left",
+          "logo_position": "middle-center",
           "menu": "main-menu",
           "menu_mobile_shop": "",
           "menu_type_desktop": "mega",
