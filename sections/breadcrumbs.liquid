@@ -3,7 +3,11 @@
 <nav class="breadcrumbs page-width" role="navigation" aria-label="Breadcrumb">
   <ol class="breadcrumbs__list">
     <li class="breadcrumbs__item">
-      <a href="/" class="breadcrumbs__link">{{ 'general.breadcrumbs.home' | t | default: 'Home' }}</a>
+      {%- assign home_text = 'general.breadcrumbs.home' | t -%}
+      {%- if home_text contains 'Translation missing' -%}
+        {%- assign home_text = 'Home' -%}
+      {%- endif -%}
+      <a href="/" class="breadcrumbs__link">{{ home_text }}</a>
     </li>
 
     {%- if collection -%}
