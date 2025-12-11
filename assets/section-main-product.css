@@ -339,6 +339,9 @@ a.product__text {
 
 .product__title h1 {
   font-size: 24px;
+  font-family: 'GT Pressura Bold', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .product__title > * {
