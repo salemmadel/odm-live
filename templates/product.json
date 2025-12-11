@@ -1,5 +1,24 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "custom_css": [
+        ".breadcrumbs {font-size: 5px;}"
+      ],
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -12,12 +31,6 @@
           "settings": {
             "text": "{{ product.metafields.descriptors.subtitle.value }}",
             "text_style": "subtitle"
-          }
-        },
-        "5e7e5ddb-7e8c-432c-8193-e5be28a686c2": {
-          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "{{product}}"
           }
         },
         "price": {
@@ -48,17 +61,6 @@
             "set_text": "Wähle 3 Produkte",
             "show_dynamic_checkout": false,
             "gang_url": "https://odonnell.de/account/login"
-          }
-        },
-        "klarna_on_site_messaging_app_block_QrNBxT": {
-          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
-          "disabled": true,
-          "settings": {
-            "data_key": "credit-promotion-badge",
-            "theme": "default",
-            "topPadding": "0",
-            "bottomPadding": "0",
-            "messagePrefix": ""
           }
         },
         "collapsible-row-0": {
@@ -101,13 +103,11 @@
       "block_order": [
         "title",
         "caption",
-        "5e7e5ddb-7e8c-432c-8193-e5be28a686c2",
         "price",
         "description",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "klarna_on_site_messaging_app_block_QrNBxT",
         "collapsible-row-0",
         "collapsible-row-3",
         "recommended_products_f9d3mE"
@@ -164,7 +164,6 @@
         "is_above_the_fold": false,
         "background_color": "#ffffff",
         "text_color": "#000000",
-        "image": "shopify://shop_images/HarteNuss_700_Front_D.jpg",
         "image_caption": "",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -239,26 +238,8 @@
     },
     "1668500027a509409d": {
       "type": "apps",
-      "blocks": {
-        "5a8947ac-3258-44c8-b3fd-bf2720e27444": {
-          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "{{product}}"
-          }
-        }
-      },
-      "block_order": [
-        "5a8947ac-3258-44c8-b3fd-bf2720e27444"
-      ],
       "settings": {
         "include_margins": true
-      }
-    },
-    "breadcrumbs": {
-      "type": "breadcrumbs",
-      "settings": {
-        "padding_top": 24,
-        "padding_bottom": 16
       }
     }
   },

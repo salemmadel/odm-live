@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   font-family: 'GT Pressura Mono', monospace;
-  font-size: 10px;
+  font-size: 1.4rem;
   line-height: 1.6;
 }
 
@@ -41,7 +41,7 @@
 /* Responsive adjustments */
 @media screen and (max-width: 749px) {
   .breadcrumbs__list {
-    font-size: 9px;
+    font-size: 1.2rem;
   }
 
   .breadcrumbs__separator {
