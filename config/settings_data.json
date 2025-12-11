@@ -261,7 +261,7 @@
         ],
         "settings": {
           "color_scheme": "background-1",
-          "logo": "shopify://shop_images/images.jpg",
+          "logo": "shopify://shop_images/Complete_Logo_256x256_crop_center_c6149a90-9b9a-4a47-b832-c89d4ae7a0a2.svg",
           "use_christmas_logo": true,
           "use_christmas_gift_icon": "Geschenke",
           "logo_width": 120,
@@ -274,7 +274,7 @@
           "enable_sticky_header": false,
           "badge_background_color": "#0e6000",
           "badge_color": "#ffffff",
-          "enable_transparent_header": false,
+          "enable_transparent_header": true,
           "transparent_header_text_color": "#ffffff",
           "header_background_color": "#ffffff",
           "margin_bottom": 0,
