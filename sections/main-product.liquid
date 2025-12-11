@@ -771,9 +771,10 @@
                           {%- if block.settings.show_dynamic_checkout -%}
                             {{ form | payment_button }}
                           {%- endif -%}
+                        </div>
 
                       {%- endif -%}
-                        
+
 
                         {%- comment -%}
                           Gang proof
@@ -791,10 +792,6 @@
 
                           {% render 'gang-proof', proof: proof_value %}
                         {%- endif -%}
-                        
-                      </div>
-
-                     
 
                     {%- endform -%}
                   {%- endcapture -%}
