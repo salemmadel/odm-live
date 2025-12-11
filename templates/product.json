@@ -22,7 +22,12 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {}
+          "settings": {
+            "title_font_size_mobile": 16,
+            "title_font_size_desktop": 24,
+            "title_padding_top": 0,
+            "title_padding_bottom": 24
+          }
         },
         "caption": {
           "type": "text",
