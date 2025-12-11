@@ -273,7 +273,7 @@
           "enable_sticky_header": true,
           "badge_background_color": "#0e6000",
           "badge_color": "#ffffff",
-          "enable_transparent_header": true,
+          "enable_transparent_header": false,
           "transparent_header_text_color": "#ffffff",
           "header_background_color": "#ffffff",
           "margin_bottom": 0,
