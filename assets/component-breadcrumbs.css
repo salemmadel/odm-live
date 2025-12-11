@@ -41,7 +41,7 @@
 /* Responsive adjustments */
 @media screen and (max-width: 749px) {
   .breadcrumbs__list {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
 
   .breadcrumbs__separator {
