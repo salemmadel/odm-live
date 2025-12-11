@@ -488,16 +488,25 @@ a.product__text {
 }
 
 @media screen and (max-width: 749px) {
+  /* Remove all padding from wrapper */
+  .product__media-wrapper {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
   /* Expand product gallery to screen edges */
   .product__media-list {
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
+    margin-left: -1.5rem !important;
+    margin-right: -1.5rem !important;
     margin-bottom: 3rem;
     padding-bottom: 2rem;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .product__media-list .product__media-item {
     width: 100%;
+    padding: 0;
   }
 
   /* Add thin black borders to images */
