@@ -415,9 +415,17 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
     }
   },
   "order": [
+    "breadcrumbs",
     "main",
     "image-with-text",
     "f1ea0866-fcfa-41f3-8ae9-84fae6d01566",

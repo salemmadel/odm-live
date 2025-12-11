@@ -1,1 +1,865 @@
-{"sections":{"image_plain_H8dpwx":{"type":"image-plain","name":"t:sections.image-with-text.plain","settings":{"is_above_the_fold":false,"image":"shopify:\/\/shop_images\/LandingPage_Desktop_1920x400_DE_09902e8b-eea8-4003-b0dc-1554dcc5834f.jpg","image_mobile":"shopify:\/\/shop_images\/LandingPage_Mobile_1920x800_DE_8fc36ddc-caff-4437-8dda-09036646912a.jpg","desktop_image_width":100,"mobile_image_width":100,"padding_top":0,"padding_bottom":0,"full_width_enabled":true}},"custom_liquid_xJxhwj":{"type":"custom-liquid","name":"t:sections.custom-liquid.presets.name","settings":{"custom_liquid":"<!-- Announcement Bars Start -->\n<div id=\"announcement-bar-combined\">\n  <div class=\"announcement-line\">\n\n \n    <p><span class=\"gold-text\">MINIMALE FEHLER. MAXIMALE QUALITÄT.<\/span><\/p>\n  <\/div>\n<\/div>\n\n<!-- Mobile-only announcement bar -->\n<div id=\"announcement-bar-10\" class=\"mobile-only\">\n  <div class=\"announcement-line\">\n    <p><span class=\"gold-text\">MINIMALE FEHLER. MAXIMALE QUALITÄT.<\/p>\n  <\/div>\n<\/div>\n\n<style>\n  @font-face {\n    font-family: 'GTPressuraBold';\n    src: url('https:\/\/cdn.shopify.com\/s\/files\/1\/0326\/4859\/3539\/files\/GT-Pressura-Bold.woff2?v=1754313265') format('woff2');\n    font-weight: bold;\n    font-style: normal;\n  }\n\n  \/* Gold text for emphasis *\/\n  .gold-text {\n    color: #af9552;\n    font-weight: 600;\n  }\n\n  \/* Desktop: Single combined bar *\/\n  @media (min-width: 481px) {\n    :root {\n      --announcement-spacing: 80px;\n    }\n\n    .mobile-only {\n      display: none;\n    }\n\n    #announcement-bar-combined {\n      background-color: #000;\n      color: #FFF;\n      padding: 10px 20px;\n      font-size: 20px;\n      font-weight: 600;\n      font-family: 'GTPressuraBold', sans-serif;\n      text-align: center;\n      width: 100%;\n      margin: 0 auto 15px;\n      box-sizing: border-box;\n      border-top: 1px solid #ffffff;\n      border-bottom: 1px solid #ffffff;\n    }\n\n    #announcement-bar-combined .announcement-line {\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      gap: var(--announcement-spacing);\n      width: 100%;\n    }\n\n    #announcement-bar-combined .announcement-line p {\n      margin: 0;\n      line-height: 1.4;\n      white-space: nowrap;\n    }\n\n    #announcement-bar-combined .separator-icon {\n      width: 20px;\n      height: 20px;\n    }\n  }\n\n  \/* Mobile: Single bar *\/\n  @media (max-width: 480px) {\n    #announcement-bar-combined {\n      display: none;\n    }\n\n    .mobile-only {\n      background-color: #000;\n      color: #FFF;\n      padding: 8px 10px;\n      font-size: 16px;\n      font-weight: 600;\n      font-family: 'GTPressuraBold', sans-serif;\n      text-align: center;\n      width: 100%;\n      margin: 0 auto -1px;\n      box-sizing: border-box;\n      border-top: 1px solid #ffffff;\n      border-bottom: 1px solid #ffffff;\n    }\n\n    .announcement-line {\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      gap: 6px;\n      width: 100%;\n    }\n\n    .announcement-line p {\n      margin: 0;\n      line-height: 1.4;\n    }\n  }\n<\/style>","color_scheme":"accent-1","padding_top":0,"padding_bottom":8}},"rich_text_headline_P6adkm":{"type":"rich-text-headline","name":"Rich Text Header","settings":{"title":"Unser B-Ware Highlights.","subtitle":"Tolle Vielfalt, exklusiver Rabatt & minimale Fehler.","background_color":"#000000","text_color":"#ffffff","headline_color":"#ffffff","border_bottom_color":"#ffffff","padding_top":10,"padding_bottom":0}},"banner":{"type":"main-collection-banner","disabled":true,"settings":{"is_above_the_fold":false,"show_collection_description":true,"show_collection_image":false,"color_scheme":"background-1"}},"front_collections_bKG8YD":{"type":"front-collections","blocks":{"collection_dJM3xC":{"type":"collection","settings":{"default_collection":true,"collection_title":"ALLE","collection":"b-ware-kollektion","view_all_button_label":"ALLE ENTDECKEN"}},"collection_wGkxEA":{"type":"collection","settings":{"default_collection":false,"collection_title":"700ml","collection":"700ml-bware","view_all_button_label":"ALLE ENTDECKEN"}},"collection_RkH43e":{"type":"collection","settings":{"default_collection":false,"collection_title":"350ml","collection":"350ml-bware","view_all_button_label":"ALLE ENTDECKEN"}},"collection_KddDKT":{"type":"collection","settings":{"default_collection":false,"collection_title":"50ml","collection":"50ml-bware","view_all_button_label":"ALLE ENTDECKEN"}},"collection_GziE8L":{"type":"collection","settings":{"default_collection":false,"collection_title":"20ml","collection":"20ml-bware","view_all_button_label":"ALLE ENTDECKEN"}}},"block_order":["collection_dJM3xC","collection_wGkxEA","collection_RkH43e","collection_KddDKT","collection_GziE8L"],"custom_css":[".navigation-bar.tabs-nav::after {width: 95%; background-color: #000;}",".tabs-nav__item-list {column-gap: 3rem; row-gap: 0.4rem;}",".tabs-nav__item.true {box-shadow: inset 0 -3px 0 0 #fff;}",".tabs-nav__item--content {font-size: 17px; text-transform: uppercase;}",".tabs-nav__item--content {font-weight: bold;}",".tabs-nav__item-list--withrows {overflow-x: unset;}"],"name":"t:sections.front-page-collections.presets.name","settings":{"is_above_the_fold":false,"title":"","heading_size":"h1","description":"","show_description":false,"grey_sold_out_products":true,"description_style":"body","products_to_show":12,"columns_desktop":4,"full_width":false,"section_animation":"none","show_view_all":true,"view_all_style":"solid","color_scheme":"accent-1","image_ratio":"adapt","show_secondary_image":false,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":20,"padding_bottom":36}},"featured_collection_LQUgXh":{"type":"featured-collection","disabled":true,"custom_css":["@media (max-width: 768px) {.title-wrapper--no-top-margin > .title {font-size: 17px; }}","@media (max-width: 768px) {.collection__title {margin-bottom: -1.5rem; }}","@media (max-width: 768px) {.title-wrapper--no-top-margin > .title {font-size: 17px; }}","@media (max-width: 768px) {.collection__title {margin-bottom: -1.5rem; }}",".badge--top-left {background: #153a29; border: 1px solid #153a29;}"],"name":"t:sections.featured-collection.presets.name","settings":{"is_above_the_fold":false,"title":"","heading_size":"h2","description":"","show_description":false,"grey_sold_out_products":true,"description_style":"body","collection":"b-ware-kollektion","products_to_show":12,"columns_desktop":4,"full_width":false,"section_animation":"none","show_view_all":true,"view_all_style":"solid","view_all_button_label":"ALLE ANZEIGEN","enable_desktop_slider":false,"color_scheme":"accent-1","image_ratio":"adapt","show_secondary_image":false,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":28,"padding_bottom":20}},"ss_scrolling_anouncement_bar_UMbVxx":{"type":"ss-scrolling-anouncement-bar","blocks":{"text_VtYLKF":{"type":"text","settings":{"text":"Black Week Highlight: -25% auf B-Ware!"}},"text_PYbkFN":{"type":"text","settings":{"text":"Nur solange der Vorrat reicht"}},"text_mCgEFQ":{"type":"text","settings":{"text":"Kostenloser Versand ab 75€"}},"text_K3NLdV":{"type":"text","disabled":true,"settings":{"text":"In 1-2 Werktagen bei dir!"}}},"block_order":["text_VtYLKF","text_PYbkFN","text_mCgEFQ","text_K3NLdV"],"name":"t:sections.ss-announcement-bar.presets.name","settings":{"insert_css_class_target":"","layout":"full_bleed","text_size":14,"link":"","animation_duration":110,"animation_direction":"left","pause_hover":true,"bg":"#ffffff","text_color":"#000000","hover_opacity":50,"padding_horizontal":3.6,"padding_vertical":1.4,"padding_top":0,"padding_bottom":0}},"rich_text_headline_h3fTcf":{"type":"rich-text-headline","name":"Rich Text Header","settings":{"title":"DAS SAGEN UNSERE KUNDEN.","subtitle":"Stimmen zu unseren B-WARE.","background_color":"#000000","text_color":"#ffffff","headline_color":"#ffffff","border_bottom_color":"#ffffff","padding_top":30,"padding_bottom":0}},"custom_liquid_fcdUmY":{"type":"custom-liquid","name":"t:sections.custom-liquid.presets.name","settings":{"custom_liquid":"<!-- Custom Text Carousel -->\n<div class=\"custom-text-carousel\" style=\"background-color: #000; padding: 20px 0 40px 0; position: relative;\">\n\n  <div class=\"carousel-wrapper\">\n    <div class=\"carousel\">\n      <div class=\"carousel-item first\">\n        <div class=\"stars\">★★★★★<\/div>\n        \"BWare ohne Qualitätsverlust.\"\n        <div class=\"small-text\">KATRIN<\/div>\n      <\/div>\n      <div class=\"carousel-item\">\n        <div class=\"stars\">★★★★★<\/div>\n        \"Alles supi schnell abgewickelt Man sieht gar nicht das es bware ist.\n\"\n        <div class=\"small-text\">ROCOO V.<\/div>\n      <\/div>\n      <div class=\"carousel-item\">\n        <div class=\"stars\">★★★★★<\/div>\n        \"BWare und genau so gut wie A Ware, wenn nicht noch besser\n\"\n        <div class=\"small-text\">JONAS T.<\/div>\n      <\/div>\n      <div class=\"carousel-item\">\n        <div class=\"stars\">★★★★☆<\/div>\n        \"Super quali passt perfekt auf die Gläser.\"\n        <div class=\"small-text\">MARCO L.<\/div>\n      <\/div>\n      <div class=\"carousel-item\">\n        <div class=\"stars\">★★★★★<\/div>\n        \"Super lecker! Kaum zu sehen das es BWare ist.\"\n        <div class=\"small-text\">ANDREAS S.<\/div>\n      <\/div>\n      <div class=\"carousel-item\">\n        <div class=\"stars\">★★★★★<\/div>\n        \"wie immer schnell und\nin gewohnter Quali.\n\"\n        <div class=\"small-text\">NADINE S.<\/div>\n      <\/div>\n      <div class=\"carousel-item\">\n        <div class=\"stars\">★★★★★<\/div>\n        \"Mega. Lecker wie immer.\"\n        <div class=\"small-text\">FAAS B.<\/div>\n      <\/div>\n      <div class=\"carousel-item\">\n        <div class=\"stars\">★★★★☆<\/div>\n        \"Super.\"\n        <div class=\"small-text\">BIRGIT S.<\/div>\n      <\/div>\n      <div class=\"carousel-item\"><\/div>\n    <\/div>\n  <\/div>\n  \n  <!-- Rectangular Dots Navigation -->\n  <div class=\"carousel-dots\"><\/div>\n  \n  <!-- Navigation Boxes Bottom Right -->\n  <div class=\"carousel-nav-boxes\">\n    <button class=\"nav-box nav-box-left\" aria-label=\"Previous\">\n      <svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"white\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <polyline points=\"15 18 9 12 15 6\"><\/polyline>\n      <\/svg>\n    <\/button>\n    <button class=\"nav-box nav-box-right\" aria-label=\"Next\">\n      <svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"white\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <polyline points=\"9 18 15 12 9 6\"><\/polyline>\n      <\/svg>\n    <\/button>\n  <\/div>\n<\/div>\n\n<style>\n\/* Load GT Pressura Mono font *\/\n@font-face {\n  font-family: 'GT Pressura Mono';\n  src: url('https:\/\/cdn.shopify.com\/s\/files\/1\/0326\/4859\/3539\/files\/GT-Pressura-Mono-Regular.woff2?v=1681482243') format('woff2');\n  font-weight: normal;\n  font-style: normal;\n}\n\n\/* Load GT Pressura Bold font *\/\n@font-face {\n  font-family: 'GT Pressura Bold';\n  src: url('https:\/\/cdn.shopify.com\/s\/files\/1\/0326\/4859\/3539\/files\/GT-Pressura-Bold.woff2?v=1754313265') format('woff2');\n  font-weight: bold;\n  font-style: normal;\n}\n\n.custom-text-carousel .carousel-wrapper {\n  overflow-x: auto;\n  scroll-behavior: smooth;\n  -webkit-overflow-scrolling: touch;\n  scrollbar-width: none;\n}\n\n.custom-text-carousel .carousel-wrapper::-webkit-scrollbar {\n  display: none;\n}\n\n.custom-text-carousel .carousel {\n  display: grid;\n  grid-auto-flow: column;\n  grid-auto-columns: calc((100% - 45px)\/4);\n  gap: 15px;\n  padding-bottom: 5px;\n}\n\n.custom-text-carousel .carousel-item.first {\n  margin-left: 50px;\n}\n\n.custom-text-carousel .carousel-item {\n  padding: 10px;\n  background: #000;\n  border-radius: 8px;\n  text-align: left;\n  font-family: 'GT Pressura Mono', monospace;\n  font-size: 16px;\n  white-space: normal;\n  word-break: break-word;\n  display: flex;\n  flex-direction: column;\n  margin-right: 50px;\n  color: #fff;\n}\n\n.custom-text-carousel .carousel-item .stars {\n  color: #00b67a;\n  font-size: 18px;\n  margin-bottom: 5px;\n}\n\n.custom-text-carousel .carousel-item .small-text {\n  font-family: 'GT Pressura Bold', monospace;\n  font-size: 12px;\n  margin-top: 5px;\n  color: #fff;\n}\n\n\/* Navigation Boxes *\/\n.custom-text-carousel .carousel-nav-boxes {\n  position: absolute;\n  bottom: 30px;\n  right: 50px;\n  display: flex;\n  gap: 10px;\n  z-index: 10;\n}\n\n.custom-text-carousel .nav-box {\n  width: 45px;\n  height: 45px;\n  background-color: #000;\n  border: none;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  transition: background-color 0.3s ease, transform 0.2s ease;\n}\n\n.custom-text-carousel .nav-box:hover {\n  background-color: #333;\n  transform: translateY(-5px);\n}\n\n\/* Dots *\/\n.custom-text-carousel .carousel-dots {\n  display: flex;\n  justify-content: center;\n  gap: 8px;\n  margin-top: 20px;\n  padding: 0 20px;\n  min-height: 10px;\n}\n\n.custom-text-carousel .dot {\n  width: 30px;\n  height: 6px;\n  background-color: #666;\n  border-radius: 3px;\n  cursor: pointer;\n  transition: all 0.3s ease;\n}\n\n.custom-text-carousel .dot.active {\n  background-color: #fff;\n  width: 40px;\n}\n\n.custom-text-carousel .dot:hover {\n  background-color: #999;\n}\n\n\/* Mobile *\/\n@media (max-width: 768px) {\n  .custom-text-carousel .carousel {\n    grid-auto-columns: calc(100% - 20px);\n    gap: 15px;\n    scroll-snap-type: x mandatory;\n  }\n\n  .custom-text-carousel .carousel-item {\n    scroll-snap-align: start;\n    text-align: center;\n    justify-content: center;\n    align-items: center;\n    margin-right: 0;\n  }\n  \n  .custom-text-carousel .carousel-item.first {\n    margin-left: 10px;\n  }\n\n  .custom-text-carousel .carousel-wrapper {\n    scroll-behavior: auto;\n  }\n\n  .custom-text-carousel .dot {\n    width: 20px;\n    height: 5px;\n  }\n\n  .custom-text-carousel .dot.active {\n    width: 30px;\n  }\n\n  .custom-text-carousel .carousel-nav-boxes {\n    bottom: 25px;\n    right: 20px;\n  }\n\n  .custom-text-carousel .nav-box {\n    width: 40px;\n    height: 40px;\n  }\n}\n<\/style>\n\n<script>\n(function() {\n  let updateActiveDot = null;\n  let wrapper = null;\n  let items = [];\n  let dots = [];\n  \n  const DESKTOP_VISIBLE_ITEMS = 4; \n  const MOBILE_VISIBLE_ITEMS = 1; \n\n  function checkIsMobile() {\n    return window.innerWidth <= 768;\n  }\n\n  function initCarousel() {\n    const carousel = document.querySelector('.custom-text-carousel .carousel');\n    wrapper = document.querySelector('.custom-text-carousel .carousel-wrapper');\n    const dotsContainer = document.querySelector('.custom-text-carousel .carousel-dots');\n    items = document.querySelectorAll('.custom-text-carousel .carousel-item');\n    const leftBox = document.querySelector('.custom-text-carousel .nav-box-left');\n    const rightBox = document.querySelector('.custom-text-carousel .nav-box-right');\n\n    if (!carousel || !wrapper || !dotsContainer || items.length === 0) {\n      setTimeout(initCarousel, 100);\n      return;\n    }\n\n    dotsContainer.innerHTML = '';\n    if (updateActiveDot) {\n      wrapper.removeEventListener('scroll', updateActiveDot);\n    }\n\n    const numReviews = items.length;\n    const isMobile = checkIsMobile();\n    const dotsToShow = isMobile ? MOBILE_VISIBLE_ITEMS : DESKTOP_VISIBLE_ITEMS;\n    const numPages = Math.ceil(numReviews \/ dotsToShow);\n\n    for (let i = 0; i < numPages; i++) {\n      const dot = document.createElement('div');\n      dot.classList.add('dot');\n      if (i === 0) dot.classList.add('active');\n      dot.setAttribute('data-index', i);\n\n      dot.addEventListener('click', function() {\n        const pageIndex = parseInt(this.getAttribute('data-index'));\n        scrollToPage(pageIndex);\n      });\n      dotsContainer.appendChild(dot);\n    }\n\n    dots = dotsContainer.querySelectorAll('.dot');\n\n    function scrollToPage(pageIndex) {\n      const isMobile = checkIsMobile();\n      const dotsToShow = isMobile ? MOBILE_VISIBLE_ITEMS : DESKTOP_VISIBLE_ITEMS;\n      const firstItemInPage = items[pageIndex * dotsToShow];\n      \n      if (firstItemInPage) {\n        const offset = isMobile ? 10 : 50;\n        wrapper.scrollTo({\n          left: firstItemInPage.offsetLeft - offset,\n          behavior: 'smooth'\n        });\n      }\n    }\n\n    function updateNavigationBoxes(currentPage) {}\n\n    updateActiveDot = function() {\n      const wrapperScrollLeft = wrapper.scrollLeft;\n      const isMobile = checkIsMobile();\n      const itemsPerScreen = isMobile ? MOBILE_VISIBLE_ITEMS : DESKTOP_VISIBLE_ITEMS;\n      const firstItem = items[0];\n      \n      if (!firstItem) return;\n\n      let pageIndex = 0;\n      \n      if (isMobile) {\n        let minDistance = Infinity;\n        const wrapperCenter = wrapperScrollLeft + wrapper.offsetWidth \/ 2;\n\n        items.forEach(function(item, index) {\n          const itemCenter = item.offsetLeft + item.offsetWidth \/ 2;\n          const distance = Math.abs(itemCenter - wrapperCenter);\n\n          if (distance < minDistance) {\n            minDistance = distance;\n            pageIndex = index;\n          }\n        });\n      } else {\n        const firstItemMargin = 50;\n        const effectiveScrollStart = firstItem.offsetLeft - firstItemMargin;\n        const scrollDistance = wrapperScrollLeft - effectiveScrollStart;\n        const pageScrollWidth = items[3] ? items[3].offsetLeft - items[0].offsetLeft : items[0].offsetWidth * itemsPerScreen;\n        \n        if (pageScrollWidth > 0) {\n          pageIndex = Math.round(wrapperScrollLeft \/ pageScrollWidth);\n        } else {\n          pageIndex = 0;\n        }\n      }\n      \n      if (pageIndex >= dots.length) pageIndex = dots.length - 1;\n      if (pageIndex < 0) pageIndex = 0;\n\n      dots.forEach(function(dot, index) {\n        dot.classList.toggle('active', index === pageIndex);\n      });\n\n      updateNavigationBoxes(pageIndex);\n    };\n\n    wrapper.addEventListener('scroll', updateActiveDot);\n\n    if (leftBox) {\n      leftBox.addEventListener('click', function() {\n        const currentIndex = Array.from(dots).findIndex(d => d.classList.contains('active'));\n        const newIndex = Math.max(0, currentIndex - 1);\n        scrollToPage(newIndex);\n      });\n    }\n\n    if (rightBox) {\n      rightBox.addEventListener('click', function() {\n        const currentIndex = Array.from(dots).findIndex(d => d.classList.contains('active'));\n        const newIndex = Math.min(dots.length - 1, currentIndex + 1);\n        scrollToPage(newIndex);\n      });\n    }\n\n    setTimeout(function() {\n      updateActiveDot();\n      updateNavigationBoxes(0);\n    }, 100);\n    \n    let isDown = false;\n    let startX;\n    let scrollLeft;\n\n    carousel.addEventListener('mousedown', function(e) {\n      isDown = true;\n      startX = e.pageX - carousel.offsetLeft;\n      scrollLeft = wrapper.scrollLeft;\n    });\n\n    carousel.addEventListener('mouseleave', function() { \n      isDown = false; \n    });\n    \n    carousel.addEventListener('mouseup', function() { \n      isDown = false; \n    });\n\n    carousel.addEventListener('mousemove', function(e) {\n      if (!isDown) return;\n      e.preventDefault();\n      const x = e.pageX - carousel.offsetLeft;\n      const walk = (x - startX) * 2;\n      wrapper.scrollLeft = scrollLeft - walk;\n    });\n  }\n\n  if (document.readyState === 'loading') {\n    document.addEventListener('DOMContentLoaded', initCarousel);\n  } else {\n    initCarousel();\n  }\n\n  window.addEventListener('load', function() {\n    setTimeout(initCarousel, 200);\n  });\n})();\n<\/script>","color_scheme":"background-1","padding_top":0,"padding_bottom":20}},"slideshow_with_timer_Tq4nwy":{"type":"slideshow-with-timer","name":"t:sections.slideshow.presets.name-timer","settings":{"is_above_the_fold":false,"layout":"full_bleed","slide_height":"adapt_image","slides_controls_position":"top","auto_rotate":false,"banner_buttons_animation":true,"change_slides_speed":5,"show_text_below":true,"accessibility_info":"Slideshow about our brand","padding_top":0,"padding_bottom":0}},"custom_liquid_tgr86U":{"type":"custom-liquid","disabled":true,"name":"t:sections.custom-liquid.presets.name","settings":{"custom_liquid":"<div class=\"custom-video-wrapper\">\n  <!-- Desktop video -->\n  <video class=\"custom-video custom-video-desktop\" autoplay muted loop playsinline>\n    <source src=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ec279d197eb640b29f3c8153ec289882.mp4\" type=\"video\/mp4\">\n    Your browser does not support the video tag.\n  <\/video>\n\n  <!-- Mobile video -->\n  <video class=\"custom-video custom-video-mobile\" autoplay muted loop playsinline>\n    <source src=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6d244301cb114f9e8267f614c367898e.mp4\" type=\"video\/mp4\">\n    Your browser does not support the video tag.\n  <\/video>\n<\/div>\n\n<style>\n  .custom-video-wrapper {\n    position: relative;\n    width: 100%;\n    max-width: 100%;\n    height: 550px; \/* adjust as needed *\/\n    overflow: hidden;\n  }\n\n  .custom-video {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    object-fit: cover; \/* or 'contain' *\/\n  }\n\n  \/* By default, show desktop video, hide mobile *\/\n  .custom-video-desktop {\n    display: block;\n  }\n\n  .custom-video-mobile {\n    display: none;\n  }\n\n  \/* Show mobile video on screens 767px and smaller *\/\n  @media (max-width: 767px) {\n    .custom-video-desktop {\n      display: none;\n    }\n\n    .custom-video-mobile {\n      display: block;\n    }\n  }\n<\/style>","color_scheme":"background-1","padding_top":0,"padding_bottom":12}},"ss_scrolling_anouncement_bar_NeUKGF":{"type":"ss-scrolling-anouncement-bar","blocks":{"text_THeqHK":{"type":"text","settings":{"text":"Kostenloser Versand ab 75€"}},"text_qLL4fk":{"type":"text","settings":{"text":"In 1-2 Werktagen bei dir!"}},"text_wKfK8V":{"type":"text","disabled":true,"settings":{"text":"Herbstgeschmack im Mason Jar"}},"text_dJaiHj":{"type":"text","disabled":true,"settings":{"text":"Im Bundle kaufen & sparen!"}}},"block_order":["text_THeqHK","text_qLL4fk","text_wKfK8V","text_dJaiHj"],"disabled":true,"name":"t:sections.ss-announcement-bar.presets.name","settings":{"insert_css_class_target":"","layout":"full_bleed","text_size":14,"link":"","animation_duration":110,"animation_direction":"left","pause_hover":true,"bg":"#000000","text_color":"#ffffff","hover_opacity":100,"padding_horizontal":2,"padding_vertical":1.5,"padding_top":20,"padding_bottom":20}},"image_with_text_WrxBtV":{"type":"image-with-text","blocks":{"heading_x4XqbA":{"type":"heading","settings":{"heading":"Image with text","heading_size":"h1"}},"text_L4GQTe":{"type":"text","settings":{"text":"<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>","text_style":"body"}}},"block_order":["heading_x4XqbA","text_L4GQTe"],"disabled":true,"name":"t:sections.image-with-text.presets.name","settings":{"is_above_the_fold":false,"background_color":"#000000","text_color":"#000000","image":"shopify:\/\/shop_images\/NEWSLETTER_4_DE.jpg","image_caption":"","height":"adapt","desktop_image_width":"medium","layout":"text_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","color_scheme":"background-1","mobile_content_alignment":"left","padding_top":36,"padding_bottom":36}},"slideshow_with_video_Hc9kXh":{"type":"slideshow-with-video","blocks":{"video_slide_xdx68j":{"type":"video_slide","disabled":true,"settings":{"video":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ec279d197eb640b29f3c8153ec289882.mp4","video_2":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6d244301cb114f9e8267f614c367898e.mp4","heading":"","heading_size":"h1","subheading":"","timer":"","countdown_overlay":true,"countdown_overlay_position":"top-center","countdown_color":"#ffffff","desktop_button_height":40,"mobile_button_height":40,"link_overlay":"","button_label":"","link":"","button_label_2":"","link_2":"","button_style_secondary":false,"box_align":"middle-center","show_text_box":true,"text_alignment":"center","image_overlay_opacity":0,"font_color":"#000000","background_color":"#ffffff","color_scheme":"accent-1","text_alignment_mobile":"center"}}},"block_order":["video_slide_xdx68j"],"name":"t:sections.slideshow.presets.name-video","settings":{"is_above_the_fold":false,"layout":"full_bleed","slide_height":"adapt_image","slides_controls_position":"top","auto_rotate":false,"banner_buttons_animation":true,"change_slides_speed":5,"show_text_below":true,"accessibility_info":"Slideshow about our brand","padding_top":0,"padding_bottom":0}},"image_with_text_XYMTV4":{"type":"image-with-text","blocks":{"heading_n6XhQE":{"type":"heading","settings":{"heading":"Gemeinsam gemacht.","heading_size":"h2"}},"text_CAFDCf":{"type":"text","settings":{"text":"<p>Von der Gang gewählt, von uns gefüllt - Golden Mango ist endlich da! Sonnig, fruchtig und voller Lebensfreude bringt sie das Gefühl von Sommer ins Glas – egal zu welcher Jahreszeit.<\/p>","text_style":"body"}}},"block_order":["heading_n6XhQE","text_CAFDCf"],"disabled":true,"custom_css":["@media screen and (max-width: 750px) {.image-with-text__content {background-color: white; padding-top: 2rem; padding-bottom: 1.5rem; padding-left: 20px; padding-right: 20px; } .image-with-text__heading {color: #ffffff; } .image-with-text {} .image-with-text__heading {font-size: 24px; } .image-with-text__heading {color: black; } .image-with-text__heading {font-size: 17px; font-weight: bold; }}",".image-with-text__heading {font-size: 17px; font-weight: bold;}"],"name":"t:sections.image-with-text.presets.name","settings":{"is_above_the_fold":false,"background_color":"#000000","text_color":"#000000","image":"shopify:\/\/shop_images\/Mango_USPs_1500_1500_px.jpg","image_caption":"","height":"adapt","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"no-overlap","color_scheme":"background-1","mobile_content_alignment":"left","padding_top":12,"padding_bottom":0}},"image_with_text_mE8HEB":{"type":"image-with-text","blocks":{"heading_UAccP4":{"type":"heading","settings":{"heading":"Vielseitig im Glas.","heading_size":"h2"}},"text_wKCn4y":{"type":"text","settings":{"text":"<p>Ob auf Eis, im Cocktail oder als winterliches Extra – dieser Moonshine ist ein vielseitiger Begleiter für Herbst und Winter. Jetzt probieren und genießen!<\/p>","text_style":"body"}}},"block_order":["heading_UAccP4","text_wKCn4y"],"disabled":true,"custom_css":["@media screen and (max-width: 750px) {.image-with-text__content {background-color: black; padding-top: 2rem; padding-bottom: 1.5rem; padding-left: 20px; padding-right: 20px; } .image-with-text__heading {color: #ffffff; } .image-with-text {} .image-with-text__heading {font-size: 24px; } .image-with-text__heading {color: black; } .image-with-text__heading {font-size: 17px; font-weight: bold; }}",".image-with-text__heading {font-size: 17px; font-weight: bold;}"],"name":"t:sections.image-with-text.presets.name","settings":{"is_above_the_fold":false,"background_color":"#ffffff","text_color":"#000000","image":"shopify:\/\/shop_images\/2_2.jpg","image_caption":"","height":"adapt","desktop_image_width":"medium","layout":"text_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"no-overlap","color_scheme":"background-1","mobile_content_alignment":"left","padding_top":0,"padding_bottom":0}},"image_with_text_mTQXpc":{"type":"image-with-text","blocks":{"heading_DCEPYL":{"type":"heading","settings":{"heading":"Community-Edition.","heading_size":"h2"}},"text_n3mXMy":{"type":"text","settings":{"text":"<p>Golden Mango ist das Ergebnis echter Co-Creation. Das Ergebnis: Ein Mango-Likör, der zeigt, was passiert, wenn Community & Kreativität aufeinandertreffen.<\/p>","text_style":"body"}}},"block_order":["heading_DCEPYL","text_n3mXMy"],"disabled":true,"custom_css":["@media screen and (max-width: 750px) {.image-with-text__content {background-color: black; padding-top: 2rem; padding-bottom: 1.5rem; padding-left: 20px; padding-right: 20px; } .image-with-text__heading {color: #ffffff; } .image-with-text {} .image-with-text__heading {font-size: 24px; } .image-with-text__heading {color: black; } .image-with-text__heading {font-size: 17px; font-weight: bold; }}",".image-with-text__heading {font-size: 17px; font-weight: bold;}"],"name":"t:sections.image-with-text.presets.name","settings":{"is_above_the_fold":false,"background_color":"#ffffff","text_color":"#000000","image":"shopify:\/\/shop_images\/20251014_Golden_Mango_uncropped_16-1-1-square_1_b95b4ac1-5bdf-4cce-a253-2f343b9ba153.jpg","image_caption":"","height":"adapt","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"no-overlap","color_scheme":"background-1","mobile_content_alignment":"left","padding_top":0,"padding_bottom":0}},"featured_collection_ULRYg6":{"type":"featured-collection","disabled":true,"custom_css":["@media (max-width: 768px) {.title-wrapper--no-top-margin > .title {font-size: 17px; }}"],"name":"t:sections.featured-collection.presets.name","settings":{"is_above_the_fold":false,"title":"UNSERE HERBST-LIKÖRE","heading_size":"h2","description":"","show_description":false,"grey_sold_out_products":true,"description_style":"body","collection":"winter-kollektion","products_to_show":4,"columns_desktop":4,"full_width":false,"section_animation":"none","show_view_all":true,"view_all_style":"solid","view_all_button_label":"ALLE ANZEIGEN","enable_desktop_slider":false,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":false,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"columns_mobile":"2","swipe_on_mobile":true,"padding_top":0,"padding_bottom":0}},"image_plain_jikQ7b":{"type":"image-plain","disabled":true,"name":"t:sections.image-with-text.plain","settings":{"is_above_the_fold":false,"image":"shopify:\/\/shop_images\/Kunden_Bewertungen_B-Desktop.png","image_mobile":"shopify:\/\/shop_images\/Kunden_Bewertungen_B-ware_Mobile.png","desktop_image_width":100,"mobile_image_width":100,"padding_top":0,"padding_bottom":36,"full_width_enabled":true}},"image_with_text_fhwQbn":{"type":"image-with-text","blocks":{"heading_jKbeah":{"type":"heading","settings":{"heading":"O’Donnell Moonshine \"Mehr als Likör\"","heading_size":"h2"}},"text_i6cjVB":{"type":"text","settings":{"text":"<p>Inspiriert vom original Moonshine der Prohibitionszeit, bringt O’Donnell Spirituosen mit Haltung ins Glas. Fruchtig, nussig oder cremig – die Liköre im ikonischen Mason Jar stehen für kompromisslosen Geschmack und kreative Rezepturen.<\/p>","text_style":"body"}}},"block_order":["heading_jKbeah","text_i6cjVB"],"custom_css":["@media screen and (max-width: 750px) {.image-with-text__content {background-color: white; padding-top: 2rem; padding-bottom: 1.5rem; padding-left: 20px; padding-right: 20px; } .image-with-text__heading {color: #ffffff; } .image-with-text {} .image-with-text__heading {font-size: 24px; width: 225px; } .image-with-text__heading {color: black; } .image-with-text__heading {font-size: 17px; font-weight: bold; }}",".image-with-text__heading {font-size: 17px; font-weight: bold;}"],"name":"t:sections.image-with-text.presets.name","settings":{"is_above_the_fold":false,"background_color":"#ffffff","text_color":"#000000","image":"shopify:\/\/shop_images\/Design_ohne_Titel_21.png","image_caption":"","height":"adapt","desktop_image_width":"medium","layout":"text_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"no-overlap","color_scheme":"background-1","mobile_content_alignment":"left","padding_top":0,"padding_bottom":16}},"rich_text_headline_MYGT8R":{"type":"rich-text-headline","disabled":true,"custom_css":["@media screen and (min-width: 750px) {.content-container {padding-right: 0px; margin-right: 0px; max-width: 141rem; }}","@media screen and (max-width: 750px) {.content-container {padding-right: 0px; margin-right: 0px; padding-left: 15px; max-width: 100vw !important; }}"],"name":"Rich Text Header","settings":{"title":"Unsere Bestseller.","subtitle":"Entdecke die Lieblingssorten unserer Kunden.","background_color":"#000000","text_color":"#ffffff","headline_color":"#ffffff","border_bottom_color":"#ffffff","padding_top":35,"padding_bottom":0}},"1654605637dcfd3e20":{"type":"featured-collection","disabled":true,"custom_css":[".title {text-align: left;}"],"settings":{"is_above_the_fold":false,"title":"","heading_size":"h2","description":"","show_description":false,"grey_sold_out_products":true,"description_style":"body","collection":"unsere-bestseller-likore","products_to_show":12,"columns_desktop":5,"full_width":false,"section_animation":"none","show_view_all":true,"view_all_style":"solid","view_all_button_label":"ALLE ENTDECKEN","enable_desktop_slider":true,"color_scheme":"accent-1","image_ratio":"adapt","show_secondary_image":false,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"columns_mobile":"2","swipe_on_mobile":true,"padding_top":24,"padding_bottom":24}},"rich_text_headline_Lyr7Nn":{"type":"rich-text-headline","disabled":true,"custom_css":["@media screen and (min-width: 750px) {.content-container {padding-right: 0px; margin-right: 0px; max-width: 141rem; }}","@media screen and (max-width: 750px) {.content-container {padding-right: 0px; margin-right: 0px; padding-left: 15px; max-width: 100vw !important; }}"],"name":"Rich Text Header","settings":{"title":"XMAS Geschenke.","subtitle":"Entdecke alle Geschenkideen für deine Liebsten.","background_color":"#000000","text_color":"#000000","headline_color":"#000000","border_bottom_color":"#000000","padding_top":5,"padding_bottom":0}},"featured_collection_m6whKB":{"type":"featured-collection","disabled":true,"name":"t:sections.featured-collection.presets.name","settings":{"is_above_the_fold":false,"title":"","heading_size":"h2","description":"","show_description":false,"grey_sold_out_products":true,"description_style":"body","collection":"xmas-geschenke","products_to_show":4,"columns_desktop":4,"full_width":false,"section_animation":"none","show_view_all":true,"view_all_style":"solid","view_all_button_label":"ALLE ANZEIGEN","enable_desktop_slider":false,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":false,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"columns_mobile":"2","swipe_on_mobile":true,"padding_top":28,"padding_bottom":0}},"slideshow_with_timer_JDYKaq":{"type":"slideshow-with-timer","blocks":{"slide_h9MUFy":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/Design_ohne_Titel_22.png","image_2":"shopify:\/\/shop_images\/Gang_Mobile_800x1200_DE.jpg","heading":"","heading_size":"h1","subheading":"","timer":"","countdown_overlay":true,"countdown_overlay_position":"top-center","countdown_color":"#ffffff","desktop_button_height":40,"mobile_button_height":40,"link_overlay":"https:\/\/odonnell.de\/pages\/gang","button_label":"","link":"","button_label_2":"","link_2":"","button_style_secondary":false,"box_align":"middle-center","show_text_box":true,"text_alignment":"center","image_overlay_opacity":0,"font_color":"#000000","background_color":"#ffffff","color_scheme":"background-1","text_alignment_mobile":"center"}}},"block_order":["slide_h9MUFy"],"name":"t:sections.slideshow.presets.name-timer","settings":{"is_above_the_fold":false,"layout":"full_bleed","slide_height":"adapt_image","slides_controls_position":"top","auto_rotate":false,"banner_buttons_animation":true,"change_slides_speed":5,"show_text_below":true,"accessibility_info":"Slideshow about our brand","padding_top":0,"padding_bottom":0}}},"order":["image_plain_H8dpwx","custom_liquid_xJxhwj","rich_text_headline_P6adkm","banner","front_collections_bKG8YD","featured_collection_LQUgXh","ss_scrolling_anouncement_bar_UMbVxx","rich_text_headline_h3fTcf","custom_liquid_fcdUmY","slideshow_with_timer_Tq4nwy","custom_liquid_tgr86U","ss_scrolling_anouncement_bar_NeUKGF","image_with_text_WrxBtV","slideshow_with_video_Hc9kXh","image_with_text_XYMTV4","image_with_text_mE8HEB","image_with_text_mTQXpc","featured_collection_ULRYg6","image_plain_jikQ7b","image_with_text_fhwQbn","rich_text_headline_MYGT8R","1654605637dcfd3e20","rich_text_headline_Lyr7Nn","featured_collection_m6whKB","slideshow_with_timer_JDYKaq"]}
+{
+  "sections": {
+    "image_plain_H8dpwx": {
+      "type": "image-plain",
+      "name": "t:sections.image-with-text.plain",
+      "settings": {
+        "is_above_the_fold": false,
+        "image": "shopify://shop_images/LandingPage_Desktop_1920x400_DE_09902e8b-eea8-4003-b0dc-1554dcc5834f.jpg",
+        "image_mobile": "shopify://shop_images/LandingPage_Mobile_1920x800_DE_8fc36ddc-caff-4437-8dda-09036646912a.jpg",
+        "desktop_image_width": 100,
+        "mobile_image_width": 100,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "full_width_enabled": true
+      }
+    },
+    "custom_liquid_xJxhwj": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- Announcement Bars Start -->\n<div id=\"announcement-bar-combined\">\n  <div class=\"announcement-line\">\n\n \n    <p><span class=\"gold-text\">MINIMALE FEHLER. MAXIMALE QUALITÄT.</span></p>\n  </div>\n</div>\n\n<!-- Mobile-only announcement bar -->\n<div id=\"announcement-bar-10\" class=\"mobile-only\">\n  <div class=\"announcement-line\">\n    <p><span class=\"gold-text\">MINIMALE FEHLER. MAXIMALE QUALITÄT.</p>\n  </div>\n</div>\n\n<style>\n  @font-face {\n    font-family: 'GTPressuraBold';\n    src: url('https://cdn.shopify.com/s/files/1/0326/4859/3539/files/GT-Pressura-Bold.woff2?v=1754313265') format('woff2');\n    font-weight: bold;\n    font-style: normal;\n  }\n\n  /* Gold text for emphasis */\n  .gold-text {\n    color: #af9552;\n    font-weight: 600;\n  }\n\n  /* Desktop: Single combined bar */\n  @media (min-width: 481px) {\n    :root {\n      --announcement-spacing: 80px;\n    }\n\n    .mobile-only {\n      display: none;\n    }\n\n    #announcement-bar-combined {\n      background-color: #000;\n      color: #FFF;\n      padding: 10px 20px;\n      font-size: 20px;\n      font-weight: 600;\n      font-family: 'GTPressuraBold', sans-serif;\n      text-align: center;\n      width: 100%;\n      margin: 0 auto 15px;\n      box-sizing: border-box;\n      border-top: 1px solid #ffffff;\n      border-bottom: 1px solid #ffffff;\n    }\n\n    #announcement-bar-combined .announcement-line {\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      gap: var(--announcement-spacing);\n      width: 100%;\n    }\n\n    #announcement-bar-combined .announcement-line p {\n      margin: 0;\n      line-height: 1.4;\n      white-space: nowrap;\n    }\n\n    #announcement-bar-combined .separator-icon {\n      width: 20px;\n      height: 20px;\n    }\n  }\n\n  /* Mobile: Single bar */\n  @media (max-width: 480px) {\n    #announcement-bar-combined {\n      display: none;\n    }\n\n    .mobile-only {\n      background-color: #000;\n      color: #FFF;\n      padding: 8px 10px;\n      font-size: 16px;\n      font-weight: 600;\n      font-family: 'GTPressuraBold', sans-serif;\n      text-align: center;\n      width: 100%;\n      margin: 0 auto -1px;\n      box-sizing: border-box;\n      border-top: 1px solid #ffffff;\n      border-bottom: 1px solid #ffffff;\n    }\n\n    .announcement-line {\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      gap: 6px;\n      width: 100%;\n    }\n\n    .announcement-line p {\n      margin: 0;\n      line-height: 1.4;\n    }\n  }\n</style>",
+        "color_scheme": "accent-1",
+        "padding_top": 0,
+        "padding_bottom": 8
+      }
+    },
+    "rich_text_headline_P6adkm": {
+      "type": "rich-text-headline",
+      "name": "Rich Text Header",
+      "settings": {
+        "title": "Unser B-Ware Highlights.",
+        "subtitle": "Tolle Vielfalt, exklusiver Rabatt & minimale Fehler.",
+        "background_color": "#000000",
+        "text_color": "#ffffff",
+        "headline_color": "#ffffff",
+        "border_bottom_color": "#ffffff",
+        "padding_top": 10,
+        "padding_bottom": 0
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "is_above_the_fold": false,
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "front_collections_bKG8YD": {
+      "type": "front-collections",
+      "blocks": {
+        "collection_dJM3xC": {
+          "type": "collection",
+          "settings": {
+            "default_collection": true,
+            "collection_title": "ALLE",
+            "collection": "b-ware-kollektion",
+            "view_all_button_label": "ALLE ENTDECKEN"
+          }
+        },
+        "collection_wGkxEA": {
+          "type": "collection",
+          "settings": {
+            "default_collection": false,
+            "collection_title": "700ml",
+            "collection": "700ml-bware",
+            "view_all_button_label": "ALLE ENTDECKEN"
+          }
+        },
+        "collection_RkH43e": {
+          "type": "collection",
+          "settings": {
+            "default_collection": false,
+            "collection_title": "350ml",
+            "collection": "350ml-bware",
+            "view_all_button_label": "ALLE ENTDECKEN"
+          }
+        },
+        "collection_KddDKT": {
+          "type": "collection",
+          "settings": {
+            "default_collection": false,
+            "collection_title": "50ml",
+            "collection": "50ml-bware",
+            "view_all_button_label": "ALLE ENTDECKEN"
+          }
+        },
+        "collection_GziE8L": {
+          "type": "collection",
+          "settings": {
+            "default_collection": false,
+            "collection_title": "20ml",
+            "collection": "20ml-bware",
+            "view_all_button_label": "ALLE ENTDECKEN"
+          }
+        }
+      },
+      "block_order": [
+        "collection_dJM3xC",
+        "collection_wGkxEA",
+        "collection_RkH43e",
+        "collection_KddDKT",
+        "collection_GziE8L"
+      ],
+      "custom_css": [
+        ".navigation-bar.tabs-nav::after {width: 95%; background-color: #000;}",
+        ".tabs-nav__item-list {column-gap: 3rem; row-gap: 0.4rem;}",
+        ".tabs-nav__item.true {box-shadow: inset 0 -3px 0 0 #fff;}",
+        ".tabs-nav__item--content {font-size: 17px; text-transform: uppercase;}",
+        ".tabs-nav__item--content {font-weight: bold;}",
+        ".tabs-nav__item-list--withrows {overflow-x: unset;}"
+      ],
+      "name": "t:sections.front-page-collections.presets.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "accent-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 20,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_LQUgXh": {
+      "type": "featured-collection",
+      "disabled": true,
+      "custom_css": [
+        "@media (max-width: 768px) {.title-wrapper--no-top-margin > .title {font-size: 17px; }}",
+        "@media (max-width: 768px) {.collection__title {margin-bottom: -1.5rem; }}",
+        "@media (max-width: 768px) {.title-wrapper--no-top-margin > .title {font-size: 17px; }}",
+        "@media (max-width: 768px) {.collection__title {margin-bottom: -1.5rem; }}",
+        ".badge--top-left {background: #153a29; border: 1px solid #153a29;}"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "collection": "b-ware-kollektion",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "view_all_button_label": "ALLE ANZEIGEN",
+        "enable_desktop_slider": false,
+        "color_scheme": "accent-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 28,
+        "padding_bottom": 20
+      }
+    },
+    "ss_scrolling_anouncement_bar_UMbVxx": {
+      "type": "ss-scrolling-anouncement-bar",
+      "blocks": {
+        "text_VtYLKF": {
+          "type": "text",
+          "settings": {
+            "text": "Black Week Highlight: -25% auf B-Ware!"
+          }
+        },
+        "text_PYbkFN": {
+          "type": "text",
+          "settings": {
+            "text": "Nur solange der Vorrat reicht"
+          }
+        },
+        "text_mCgEFQ": {
+          "type": "text",
+          "settings": {
+            "text": "Kostenloser Versand ab 75€"
+          }
+        },
+        "text_K3NLdV": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "In 1-2 Werktagen bei dir!"
+          }
+        }
+      },
+      "block_order": [
+        "text_VtYLKF",
+        "text_PYbkFN",
+        "text_mCgEFQ",
+        "text_K3NLdV"
+      ],
+      "name": "t:sections.ss-announcement-bar.presets.name",
+      "settings": {
+        "insert_css_class_target": "",
+        "layout": "full_bleed",
+        "text_size": 14,
+        "link": "",
+        "animation_duration": 110,
+        "animation_direction": "left",
+        "pause_hover": true,
+        "bg": "#ffffff",
+        "text_color": "#000000",
+        "hover_opacity": 50,
+        "padding_horizontal": 3.6,
+        "padding_vertical": 1.4,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_headline_h3fTcf": {
+      "type": "rich-text-headline",
+      "name": "Rich Text Header",
+      "settings": {
+        "title": "DAS SAGEN UNSERE KUNDEN.",
+        "subtitle": "Stimmen zu unseren B-WARE.",
+        "background_color": "#000000",
+        "text_color": "#ffffff",
+        "headline_color": "#ffffff",
+        "border_bottom_color": "#ffffff",
+        "padding_top": 30,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_fcdUmY": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- Custom Text Carousel -->\n<div class=\"custom-text-carousel\" style=\"background-color: #000; padding: 20px 0 40px 0; position: relative;\">\n\n  <div class=\"carousel-wrapper\">\n    <div class=\"carousel\">\n      <div class=\"carousel-item first\">\n        <div class=\"stars\">★★★★★</div>\n        \"BWare ohne Qualitätsverlust.\"\n        <div class=\"small-text\">KATRIN</div>\n      </div>\n      <div class=\"carousel-item\">\n        <div class=\"stars\">★★★★★</div>\n        \"Alles supi schnell abgewickelt Man sieht gar nicht das es bware ist.\n\"\n        <div class=\"small-text\">ROCOO V.</div>\n      </div>\n      <div class=\"carousel-item\">\n        <div class=\"stars\">★★★★★</div>\n        \"BWare und genau so gut wie A Ware, wenn nicht noch besser\n\"\n        <div class=\"small-text\">JONAS T.</div>\n      </div>\n      <div class=\"carousel-item\">\n        <div class=\"stars\">★★★★☆</div>\n        \"Super quali passt perfekt auf die Gläser.\"\n        <div class=\"small-text\">MARCO L.</div>\n      </div>\n      <div class=\"carousel-item\">\n        <div class=\"stars\">★★★★★</div>\n        \"Super lecker! Kaum zu sehen das es BWare ist.\"\n        <div class=\"small-text\">ANDREAS S.</div>\n      </div>\n      <div class=\"carousel-item\">\n        <div class=\"stars\">★★★★★</div>\n        \"wie immer schnell und\nin gewohnter Quali.\n\"\n        <div class=\"small-text\">NADINE S.</div>\n      </div>\n      <div class=\"carousel-item\">\n        <div class=\"stars\">★★★★★</div>\n        \"Mega. Lecker wie immer.\"\n        <div class=\"small-text\">FAAS B.</div>\n      </div>\n      <div class=\"carousel-item\">\n        <div class=\"stars\">★★★★☆</div>\n        \"Super.\"\n        <div class=\"small-text\">BIRGIT S.</div>\n      </div>\n      <div class=\"carousel-item\"></div>\n    </div>\n  </div>\n  \n  <!-- Rectangular Dots Navigation -->\n  <div class=\"carousel-dots\"></div>\n  \n  <!-- Navigation Boxes Bottom Right -->\n  <div class=\"carousel-nav-boxes\">\n    <button class=\"nav-box nav-box-left\" aria-label=\"Previous\">\n      <svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"white\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <polyline points=\"15 18 9 12 15 6\"></polyline>\n      </svg>\n    </button>\n    <button class=\"nav-box nav-box-right\" aria-label=\"Next\">\n      <svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"white\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <polyline points=\"9 18 15 12 9 6\"></polyline>\n      </svg>\n    </button>\n  </div>\n</div>\n\n<style>\n/* Load GT Pressura Mono font */\n@font-face {\n  font-family: 'GT Pressura Mono';\n  src: url('https://cdn.shopify.com/s/files/1/0326/4859/3539/files/GT-Pressura-Mono-Regular.woff2?v=1681482243') format('woff2');\n  font-weight: normal;\n  font-style: normal;\n}\n\n/* Load GT Pressura Bold font */\n@font-face {\n  font-family: 'GT Pressura Bold';\n  src: url('https://cdn.shopify.com/s/files/1/0326/4859/3539/files/GT-Pressura-Bold.woff2?v=1754313265') format('woff2');\n  font-weight: bold;\n  font-style: normal;\n}\n\n.custom-text-carousel .carousel-wrapper {\n  overflow-x: auto;\n  scroll-behavior: smooth;\n  -webkit-overflow-scrolling: touch;\n  scrollbar-width: none;\n}\n\n.custom-text-carousel .carousel-wrapper::-webkit-scrollbar {\n  display: none;\n}\n\n.custom-text-carousel .carousel {\n  display: grid;\n  grid-auto-flow: column;\n  grid-auto-columns: calc((100% - 45px)/4);\n  gap: 15px;\n  padding-bottom: 5px;\n}\n\n.custom-text-carousel .carousel-item.first {\n  margin-left: 50px;\n}\n\n.custom-text-carousel .carousel-item {\n  padding: 10px;\n  background: #000;\n  border-radius: 8px;\n  text-align: left;\n  font-family: 'GT Pressura Mono', monospace;\n  font-size: 16px;\n  white-space: normal;\n  word-break: break-word;\n  display: flex;\n  flex-direction: column;\n  margin-right: 50px;\n  color: #fff;\n}\n\n.custom-text-carousel .carousel-item .stars {\n  color: #00b67a;\n  font-size: 18px;\n  margin-bottom: 5px;\n}\n\n.custom-text-carousel .carousel-item .small-text {\n  font-family: 'GT Pressura Bold', monospace;\n  font-size: 12px;\n  margin-top: 5px;\n  color: #fff;\n}\n\n/* Navigation Boxes */\n.custom-text-carousel .carousel-nav-boxes {\n  position: absolute;\n  bottom: 30px;\n  right: 50px;\n  display: flex;\n  gap: 10px;\n  z-index: 10;\n}\n\n.custom-text-carousel .nav-box {\n  width: 45px;\n  height: 45px;\n  background-color: #000;\n  border: none;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  transition: background-color 0.3s ease, transform 0.2s ease;\n}\n\n.custom-text-carousel .nav-box:hover {\n  background-color: #333;\n  transform: translateY(-5px);\n}\n\n/* Dots */\n.custom-text-carousel .carousel-dots {\n  display: flex;\n  justify-content: center;\n  gap: 8px;\n  margin-top: 20px;\n  padding: 0 20px;\n  min-height: 10px;\n}\n\n.custom-text-carousel .dot {\n  width: 30px;\n  height: 6px;\n  background-color: #666;\n  border-radius: 3px;\n  cursor: pointer;\n  transition: all 0.3s ease;\n}\n\n.custom-text-carousel .dot.active {\n  background-color: #fff;\n  width: 40px;\n}\n\n.custom-text-carousel .dot:hover {\n  background-color: #999;\n}\n\n/* Mobile */\n@media (max-width: 768px) {\n  .custom-text-carousel .carousel {\n    grid-auto-columns: calc(100% - 20px);\n    gap: 15px;\n    scroll-snap-type: x mandatory;\n  }\n\n  .custom-text-carousel .carousel-item {\n    scroll-snap-align: start;\n    text-align: center;\n    justify-content: center;\n    align-items: center;\n    margin-right: 0;\n  }\n  \n  .custom-text-carousel .carousel-item.first {\n    margin-left: 10px;\n  }\n\n  .custom-text-carousel .carousel-wrapper {\n    scroll-behavior: auto;\n  }\n\n  .custom-text-carousel .dot {\n    width: 20px;\n    height: 5px;\n  }\n\n  .custom-text-carousel .dot.active {\n    width: 30px;\n  }\n\n  .custom-text-carousel .carousel-nav-boxes {\n    bottom: 25px;\n    right: 20px;\n  }\n\n  .custom-text-carousel .nav-box {\n    width: 40px;\n    height: 40px;\n  }\n}\n</style>\n\n<script>\n(function() {\n  let updateActiveDot = null;\n  let wrapper = null;\n  let items = [];\n  let dots = [];\n  \n  const DESKTOP_VISIBLE_ITEMS = 4; \n  const MOBILE_VISIBLE_ITEMS = 1; \n\n  function checkIsMobile() {\n    return window.innerWidth <= 768;\n  }\n\n  function initCarousel() {\n    const carousel = document.querySelector('.custom-text-carousel .carousel');\n    wrapper = document.querySelector('.custom-text-carousel .carousel-wrapper');\n    const dotsContainer = document.querySelector('.custom-text-carousel .carousel-dots');\n    items = document.querySelectorAll('.custom-text-carousel .carousel-item');\n    const leftBox = document.querySelector('.custom-text-carousel .nav-box-left');\n    const rightBox = document.querySelector('.custom-text-carousel .nav-box-right');\n\n    if (!carousel || !wrapper || !dotsContainer || items.length === 0) {\n      setTimeout(initCarousel, 100);\n      return;\n    }\n\n    dotsContainer.innerHTML = '';\n    if (updateActiveDot) {\n      wrapper.removeEventListener('scroll', updateActiveDot);\n    }\n\n    const numReviews = items.length;\n    const isMobile = checkIsMobile();\n    const dotsToShow = isMobile ? MOBILE_VISIBLE_ITEMS : DESKTOP_VISIBLE_ITEMS;\n    const numPages = Math.ceil(numReviews / dotsToShow);\n\n    for (let i = 0; i < numPages; i++) {\n      const dot = document.createElement('div');\n      dot.classList.add('dot');\n      if (i === 0) dot.classList.add('active');\n      dot.setAttribute('data-index', i);\n\n      dot.addEventListener('click', function() {\n        const pageIndex = parseInt(this.getAttribute('data-index'));\n        scrollToPage(pageIndex);\n      });\n      dotsContainer.appendChild(dot);\n    }\n\n    dots = dotsContainer.querySelectorAll('.dot');\n\n    function scrollToPage(pageIndex) {\n      const isMobile = checkIsMobile();\n      const dotsToShow = isMobile ? MOBILE_VISIBLE_ITEMS : DESKTOP_VISIBLE_ITEMS;\n      const firstItemInPage = items[pageIndex * dotsToShow];\n      \n      if (firstItemInPage) {\n        const offset = isMobile ? 10 : 50;\n        wrapper.scrollTo({\n          left: firstItemInPage.offsetLeft - offset,\n          behavior: 'smooth'\n        });\n      }\n    }\n\n    function updateNavigationBoxes(currentPage) {}\n\n    updateActiveDot = function() {\n      const wrapperScrollLeft = wrapper.scrollLeft;\n      const isMobile = checkIsMobile();\n      const itemsPerScreen = isMobile ? MOBILE_VISIBLE_ITEMS : DESKTOP_VISIBLE_ITEMS;\n      const firstItem = items[0];\n      \n      if (!firstItem) return;\n\n      let pageIndex = 0;\n      \n      if (isMobile) {\n        let minDistance = Infinity;\n        const wrapperCenter = wrapperScrollLeft + wrapper.offsetWidth / 2;\n\n        items.forEach(function(item, index) {\n          const itemCenter = item.offsetLeft + item.offsetWidth / 2;\n          const distance = Math.abs(itemCenter - wrapperCenter);\n\n          if (distance < minDistance) {\n            minDistance = distance;\n            pageIndex = index;\n          }\n        });\n      } else {\n        const firstItemMargin = 50;\n        const effectiveScrollStart = firstItem.offsetLeft - firstItemMargin;\n        const scrollDistance = wrapperScrollLeft - effectiveScrollStart;\n        const pageScrollWidth = items[3] ? items[3].offsetLeft - items[0].offsetLeft : items[0].offsetWidth * itemsPerScreen;\n        \n        if (pageScrollWidth > 0) {\n          pageIndex = Math.round(wrapperScrollLeft / pageScrollWidth);\n        } else {\n          pageIndex = 0;\n        }\n      }\n      \n      if (pageIndex >= dots.length) pageIndex = dots.length - 1;\n      if (pageIndex < 0) pageIndex = 0;\n\n      dots.forEach(function(dot, index) {\n        dot.classList.toggle('active', index === pageIndex);\n      });\n\n      updateNavigationBoxes(pageIndex);\n    };\n\n    wrapper.addEventListener('scroll', updateActiveDot);\n\n    if (leftBox) {\n      leftBox.addEventListener('click', function() {\n        const currentIndex = Array.from(dots).findIndex(d => d.classList.contains('active'));\n        const newIndex = Math.max(0, currentIndex - 1);\n        scrollToPage(newIndex);\n      });\n    }\n\n    if (rightBox) {\n      rightBox.addEventListener('click', function() {\n        const currentIndex = Array.from(dots).findIndex(d => d.classList.contains('active'));\n        const newIndex = Math.min(dots.length - 1, currentIndex + 1);\n        scrollToPage(newIndex);\n      });\n    }\n\n    setTimeout(function() {\n      updateActiveDot();\n      updateNavigationBoxes(0);\n    }, 100);\n    \n    let isDown = false;\n    let startX;\n    let scrollLeft;\n\n    carousel.addEventListener('mousedown', function(e) {\n      isDown = true;\n      startX = e.pageX - carousel.offsetLeft;\n      scrollLeft = wrapper.scrollLeft;\n    });\n\n    carousel.addEventListener('mouseleave', function() { \n      isDown = false; \n    });\n    \n    carousel.addEventListener('mouseup', function() { \n      isDown = false; \n    });\n\n    carousel.addEventListener('mousemove', function(e) {\n      if (!isDown) return;\n      e.preventDefault();\n      const x = e.pageX - carousel.offsetLeft;\n      const walk = (x - startX) * 2;\n      wrapper.scrollLeft = scrollLeft - walk;\n    });\n  }\n\n  if (document.readyState === 'loading') {\n    document.addEventListener('DOMContentLoaded', initCarousel);\n  } else {\n    initCarousel();\n  }\n\n  window.addEventListener('load', function() {\n    setTimeout(initCarousel, 200);\n  });\n})();\n</script>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "slideshow_with_timer_Tq4nwy": {
+      "type": "slideshow-with-timer",
+      "name": "t:sections.slideshow.presets.name-timer",
+      "settings": {
+        "is_above_the_fold": false,
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slides_controls_position": "top",
+        "auto_rotate": false,
+        "banner_buttons_animation": true,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_tgr86U": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"custom-video-wrapper\">\n  <!-- Desktop video -->\n  <video class=\"custom-video custom-video-desktop\" autoplay muted loop playsinline>\n    <source src=\"https://cdn.shopify.com/videos/c/o/v/ec279d197eb640b29f3c8153ec289882.mp4\" type=\"video/mp4\">\n    Your browser does not support the video tag.\n  </video>\n\n  <!-- Mobile video -->\n  <video class=\"custom-video custom-video-mobile\" autoplay muted loop playsinline>\n    <source src=\"https://cdn.shopify.com/videos/c/o/v/6d244301cb114f9e8267f614c367898e.mp4\" type=\"video/mp4\">\n    Your browser does not support the video tag.\n  </video>\n</div>\n\n<style>\n  .custom-video-wrapper {\n    position: relative;\n    width: 100%;\n    max-width: 100%;\n    height: 550px; /* adjust as needed */\n    overflow: hidden;\n  }\n\n  .custom-video {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    object-fit: cover; /* or 'contain' */\n  }\n\n  /* By default, show desktop video, hide mobile */\n  .custom-video-desktop {\n    display: block;\n  }\n\n  .custom-video-mobile {\n    display: none;\n  }\n\n  /* Show mobile video on screens 767px and smaller */\n  @media (max-width: 767px) {\n    .custom-video-desktop {\n      display: none;\n    }\n\n    .custom-video-mobile {\n      display: block;\n    }\n  }\n</style>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 12
+      }
+    },
+    "ss_scrolling_anouncement_bar_NeUKGF": {
+      "type": "ss-scrolling-anouncement-bar",
+      "blocks": {
+        "text_THeqHK": {
+          "type": "text",
+          "settings": {
+            "text": "Kostenloser Versand ab 75€"
+          }
+        },
+        "text_qLL4fk": {
+          "type": "text",
+          "settings": {
+            "text": "In 1-2 Werktagen bei dir!"
+          }
+        },
+        "text_wKfK8V": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Herbstgeschmack im Mason Jar"
+          }
+        },
+        "text_dJaiHj": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Im Bundle kaufen & sparen!"
+          }
+        }
+      },
+      "block_order": [
+        "text_THeqHK",
+        "text_qLL4fk",
+        "text_wKfK8V",
+        "text_dJaiHj"
+      ],
+      "disabled": true,
+      "name": "t:sections.ss-announcement-bar.presets.name",
+      "settings": {
+        "insert_css_class_target": "",
+        "layout": "full_bleed",
+        "text_size": 14,
+        "link": "",
+        "animation_duration": 110,
+        "animation_direction": "left",
+        "pause_hover": true,
+        "bg": "#000000",
+        "text_color": "#ffffff",
+        "hover_opacity": 100,
+        "padding_horizontal": 2,
+        "padding_vertical": 1.5,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "image_with_text_WrxBtV": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_x4XqbA": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "text_L4GQTe": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_x4XqbA",
+        "text_L4GQTe"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "background_color": "#000000",
+        "text_color": "#000000",
+        "image": "shopify://shop_images/NEWSLETTER_4_DE.jpg",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "slideshow_with_video_Hc9kXh": {
+      "type": "slideshow-with-video",
+      "blocks": {
+        "video_slide_xdx68j": {
+          "type": "video_slide",
+          "disabled": true,
+          "settings": {
+            "video": "https://cdn.shopify.com/videos/c/o/v/ec279d197eb640b29f3c8153ec289882.mp4",
+            "video_2": "https://cdn.shopify.com/videos/c/o/v/6d244301cb114f9e8267f614c367898e.mp4",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "timer": "",
+            "countdown_overlay": true,
+            "countdown_overlay_position": "top-center",
+            "countdown_color": "#ffffff",
+            "desktop_button_height": 40,
+            "mobile_button_height": 40,
+            "link_overlay": "",
+            "button_label": "",
+            "link": "",
+            "button_label_2": "",
+            "link_2": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "font_color": "#000000",
+            "background_color": "#ffffff",
+            "color_scheme": "accent-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "video_slide_xdx68j"
+      ],
+      "name": "t:sections.slideshow.presets.name-video",
+      "settings": {
+        "is_above_the_fold": false,
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slides_controls_position": "top",
+        "auto_rotate": false,
+        "banner_buttons_animation": true,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_XYMTV4": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_n6XhQE": {
+          "type": "heading",
+          "settings": {
+            "heading": "Gemeinsam gemacht.",
+            "heading_size": "h2"
+          }
+        },
+        "text_CAFDCf": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Von der Gang gewählt, von uns gefüllt - Golden Mango ist endlich da! Sonnig, fruchtig und voller Lebensfreude bringt sie das Gefühl von Sommer ins Glas – egal zu welcher Jahreszeit.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_n6XhQE",
+        "text_CAFDCf"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "@media screen and (max-width: 750px) {.image-with-text__content {background-color: white; padding-top: 2rem; padding-bottom: 1.5rem; padding-left: 20px; padding-right: 20px; } .image-with-text__heading {color: #ffffff; } .image-with-text {} .image-with-text__heading {font-size: 24px; } .image-with-text__heading {color: black; } .image-with-text__heading {font-size: 17px; font-weight: bold; }}",
+        ".image-with-text__heading {font-size: 17px; font-weight: bold;}"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "background_color": "#000000",
+        "text_color": "#000000",
+        "image": "shopify://shop_images/Mango_USPs_1500_1500_px.jpg",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_mE8HEB": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_UAccP4": {
+          "type": "heading",
+          "settings": {
+            "heading": "Vielseitig im Glas.",
+            "heading_size": "h2"
+          }
+        },
+        "text_wKCn4y": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ob auf Eis, im Cocktail oder als winterliches Extra – dieser Moonshine ist ein vielseitiger Begleiter für Herbst und Winter. Jetzt probieren und genießen!</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UAccP4",
+        "text_wKCn4y"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "@media screen and (max-width: 750px) {.image-with-text__content {background-color: black; padding-top: 2rem; padding-bottom: 1.5rem; padding-left: 20px; padding-right: 20px; } .image-with-text__heading {color: #ffffff; } .image-with-text {} .image-with-text__heading {font-size: 24px; } .image-with-text__heading {color: black; } .image-with-text__heading {font-size: 17px; font-weight: bold; }}",
+        ".image-with-text__heading {font-size: 17px; font-weight: bold;}"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "image": "shopify://shop_images/2_2.jpg",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_mTQXpc": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_DCEPYL": {
+          "type": "heading",
+          "settings": {
+            "heading": "Community-Edition.",
+            "heading_size": "h2"
+          }
+        },
+        "text_n3mXMy": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Golden Mango ist das Ergebnis echter Co-Creation. Das Ergebnis: Ein Mango-Likör, der zeigt, was passiert, wenn Community & Kreativität aufeinandertreffen.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DCEPYL",
+        "text_n3mXMy"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "@media screen and (max-width: 750px) {.image-with-text__content {background-color: black; padding-top: 2rem; padding-bottom: 1.5rem; padding-left: 20px; padding-right: 20px; } .image-with-text__heading {color: #ffffff; } .image-with-text {} .image-with-text__heading {font-size: 24px; } .image-with-text__heading {color: black; } .image-with-text__heading {font-size: 17px; font-weight: bold; }}",
+        ".image-with-text__heading {font-size: 17px; font-weight: bold;}"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "image": "shopify://shop_images/20251014_Golden_Mango_uncropped_16-1-1-square_1_b95b4ac1-5bdf-4cce-a253-2f343b9ba153.jpg",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection_ULRYg6": {
+      "type": "featured-collection",
+      "disabled": true,
+      "custom_css": [
+        "@media (max-width: 768px) {.title-wrapper--no-top-margin > .title {font-size: 17px; }}"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "UNSERE HERBST-LIKÖRE",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "collection": "winter-kollektion",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "view_all_button_label": "ALLE ANZEIGEN",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_plain_jikQ7b": {
+      "type": "image-plain",
+      "disabled": true,
+      "name": "t:sections.image-with-text.plain",
+      "settings": {
+        "is_above_the_fold": false,
+        "image": "shopify://shop_images/Kunden_Bewertungen_B-Desktop.png",
+        "image_mobile": "shopify://shop_images/Kunden_Bewertungen_B-ware_Mobile.png",
+        "desktop_image_width": 100,
+        "mobile_image_width": 100,
+        "padding_top": 0,
+        "padding_bottom": 36,
+        "full_width_enabled": true
+      }
+    },
+    "image_with_text_fhwQbn": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_jKbeah": {
+          "type": "heading",
+          "settings": {
+            "heading": "O’Donnell Moonshine \"Mehr als Likör\"",
+            "heading_size": "h2"
+          }
+        },
+        "text_i6cjVB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Inspiriert vom original Moonshine der Prohibitionszeit, bringt O’Donnell Spirituosen mit Haltung ins Glas. Fruchtig, nussig oder cremig – die Liköre im ikonischen Mason Jar stehen für kompromisslosen Geschmack und kreative Rezepturen.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jKbeah",
+        "text_i6cjVB"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 750px) {.image-with-text__content {background-color: white; padding-top: 2rem; padding-bottom: 1.5rem; padding-left: 20px; padding-right: 20px; } .image-with-text__heading {color: #ffffff; } .image-with-text {} .image-with-text__heading {font-size: 24px; width: 225px; } .image-with-text__heading {color: black; } .image-with-text__heading {font-size: 17px; font-weight: bold; }}",
+        ".image-with-text__heading {font-size: 17px; font-weight: bold;}"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "image": "shopify://shop_images/Design_ohne_Titel_21.png",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 16
+      }
+    },
+    "rich_text_headline_MYGT8R": {
+      "type": "rich-text-headline",
+      "disabled": true,
+      "custom_css": [
+        "@media screen and (min-width: 750px) {.content-container {padding-right: 0px; margin-right: 0px; max-width: 141rem; }}",
+        "@media screen and (max-width: 750px) {.content-container {padding-right: 0px; margin-right: 0px; padding-left: 15px; max-width: 100vw !important; }}"
+      ],
+      "name": "Rich Text Header",
+      "settings": {
+        "title": "Unsere Bestseller.",
+        "subtitle": "Entdecke die Lieblingssorten unserer Kunden.",
+        "background_color": "#000000",
+        "text_color": "#ffffff",
+        "headline_color": "#ffffff",
+        "border_bottom_color": "#ffffff",
+        "padding_top": 35,
+        "padding_bottom": 0
+      }
+    },
+    "1654605637dcfd3e20": {
+      "type": "featured-collection",
+      "disabled": true,
+      "custom_css": [
+        ".title {text-align: left;}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "collection": "unsere-bestseller-likore",
+        "products_to_show": 12,
+        "columns_desktop": 5,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "view_all_button_label": "ALLE ENTDECKEN",
+        "enable_desktop_slider": true,
+        "color_scheme": "accent-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "rich_text_headline_Lyr7Nn": {
+      "type": "rich-text-headline",
+      "disabled": true,
+      "custom_css": [
+        "@media screen and (min-width: 750px) {.content-container {padding-right: 0px; margin-right: 0px; max-width: 141rem; }}",
+        "@media screen and (max-width: 750px) {.content-container {padding-right: 0px; margin-right: 0px; padding-left: 15px; max-width: 100vw !important; }}"
+      ],
+      "name": "Rich Text Header",
+      "settings": {
+        "title": "XMAS Geschenke.",
+        "subtitle": "Entdecke alle Geschenkideen für deine Liebsten.",
+        "background_color": "#000000",
+        "text_color": "#000000",
+        "headline_color": "#000000",
+        "border_bottom_color": "#000000",
+        "padding_top": 5,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection_m6whKB": {
+      "type": "featured-collection",
+      "disabled": true,
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "collection": "xmas-geschenke",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "view_all_button_label": "ALLE ANZEIGEN",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 28,
+        "padding_bottom": 0
+      }
+    },
+    "slideshow_with_timer_JDYKaq": {
+      "type": "slideshow-with-timer",
+      "blocks": {
+        "slide_h9MUFy": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Design_ohne_Titel_22.png",
+            "image_2": "shopify://shop_images/Gang_Mobile_800x1200_DE.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "timer": "",
+            "countdown_overlay": true,
+            "countdown_overlay_position": "top-center",
+            "countdown_color": "#ffffff",
+            "desktop_button_height": 40,
+            "mobile_button_height": 40,
+            "link_overlay": "https://odonnell.de/pages/gang",
+            "button_label": "",
+            "link": "",
+            "button_label_2": "",
+            "link_2": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "font_color": "#000000",
+            "background_color": "#ffffff",
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_h9MUFy"
+      ],
+      "name": "t:sections.slideshow.presets.name-timer",
+      "settings": {
+        "is_above_the_fold": false,
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slides_controls_position": "top",
+        "auto_rotate": false,
+        "banner_buttons_animation": true,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "image_plain_H8dpwx",
+    "custom_liquid_xJxhwj",
+    "rich_text_headline_P6adkm",
+    "banner",
+    "front_collections_bKG8YD",
+    "featured_collection_LQUgXh",
+    "ss_scrolling_anouncement_bar_UMbVxx",
+    "rich_text_headline_h3fTcf",
+    "custom_liquid_fcdUmY",
+    "slideshow_with_timer_Tq4nwy",
+    "custom_liquid_tgr86U",
+    "ss_scrolling_anouncement_bar_NeUKGF",
+    "image_with_text_WrxBtV",
+    "slideshow_with_video_Hc9kXh",
+    "image_with_text_XYMTV4",
+    "image_with_text_mE8HEB",
+    "image_with_text_mTQXpc",
+    "featured_collection_ULRYg6",
+    "image_plain_jikQ7b",
+    "image_with_text_fhwQbn",
+    "rich_text_headline_MYGT8R",
+    "1654605637dcfd3e20",
+    "rich_text_headline_Lyr7Nn",
+    "featured_collection_m6whKB",
+    "slideshow_with_timer_JDYKaq"
+  ]
+}

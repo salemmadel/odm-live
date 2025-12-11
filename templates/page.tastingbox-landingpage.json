@@ -1,1 +1,538 @@
-{"sections":{"422def68-bcd4-4510-bf6c-9a35e677a85c":{"type":"image-intro-banner","settings":{"is_above_the_fold":false,"image":"shopify:\/\/shop_images\/TastingBox_D_Hero_Desktop_409377ba-ce34-4194-93a7-31a0a78fdfed.jpg","image_2":"shopify:\/\/shop_images\/TastingBox_D_Hero_Mobil_4186c267-6f29-4e27-a898-a62a519dd285.jpg","image_overlay_opacity":0,"image_height":"medium","desktop_content_position":"middle-center","section_animation":"none","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"background-1","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":true,"heading_h1":"O'Donnell Tasting Box","heading_h2":"","heading_text":"Entdecke jetzt die Welt von O'Donnell Moonshine und probiere vier verschiedene Geschmäcker mit der praktischen Tasting Box!"}},"main":{"type":"main-page","disabled":true,"settings":{"padding_top":28,"padding_bottom":24,"show_title":true}},"c84ae1c4-b759-489e-93b6-ffb06b6137d4":{"type":"rich-text","blocks":{"template--18049470005516__c84ae1c4-b759-489e-93b6-ffb06b6137d4-text-1":{"type":"text","settings":{"text":"<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"}}},"block_order":["template--18049470005516__c84ae1c4-b759-489e-93b6-ffb06b6137d4-text-1"],"disabled":true,"settings":{"color_scheme":"background-1","full_width":true,"padding_top":40,"padding_bottom":52}},"6cc2ec27-5e90-4e68-9a70-1d92118b6da8":{"type":"video","settings":{"is_above_the_fold":true,"heading":"","heading_size":"h1","cover_image":"shopify:\/\/shop_images\/TastingBox_D_Videovorschau_1.jpg","video_url":"https:\/\/youtu.be\/P4lymLXOxwU","description":"","full_width":false,"color_scheme":"background-1","padding_top":36,"padding_bottom":36}},"3633d995-9c08-44bb-a4ce-24f334b3670a":{"type":"unique-selling-points","blocks":{"template--18043048132876__3633d995-9c08-44bb-a4ce-24f334b3670a-unique_selling_point-2":{"type":"unique_selling_point","disabled":true,"settings":{"title":"Du kennst O'Donnell noch nicht?","text":"Probiere folgende Geschmäcker aus: Harte Nuss, Pralle Kirsche, Wilde Beere und Passionsfrucht."}},"template--18043048132876__3633d995-9c08-44bb-a4ce-24f334b3670a-unique_selling_point-1":{"type":"unique_selling_point","settings":{"title":"Was bekommst du?","text":"Vier kleine Shots zum Probieren im einzigartigen Design & einen 5€ Rabattcode auf deine nächste Bestellung!"}},"aae17629-dc29-4481-923e-342da3b0046a":{"type":"unique_selling_point","disabled":true,"settings":{"title":"Künstlich? Nicht mit uns!","text":"Unsere Schnäpse sind vegan und ohne künstlich Aromen & Farbstoffe"}}},"block_order":["template--18043048132876__3633d995-9c08-44bb-a4ce-24f334b3670a-unique_selling_point-2","template--18043048132876__3633d995-9c08-44bb-a4ce-24f334b3670a-unique_selling_point-1","aae17629-dc29-4481-923e-342da3b0046a"],"settings":{"subheading":"","title":"","background_color_icons":"#ffffff","items_icon_size":60,"small_items_per_row":2,"small_items_icon_size":60,"smaller_items_per_row":2,"smaller_items_icon_size":60,"medium_items_per_row":3,"medium_items_icon_size":60,"desktop_items_per_row":4,"desktop_items_icon_size":60,"background_color":"#ffffff","padding_top":0,"padding_bottom":0}},"9a050aa4-61e8-41b9-85db-74a2a0e7cce1":{"type":"featured-product","blocks":{"template--18043048132876__9a050aa4-61e8-41b9-85db-74a2a0e7cce1-title-1":{"type":"title","settings":{"heading_size":"h1"}},"template--18043048132876__9a050aa4-61e8-41b9-85db-74a2a0e7cce1-text-2":{"type":"text","settings":{"text":"{{ section.settings.product.metafields.descriptors.subtitle.value }}","text_style":"subtitle"}},"template--18043048132876__9a050aa4-61e8-41b9-85db-74a2a0e7cce1-price-1":{"type":"price","settings":{}},"template--18043048132876__9a050aa4-61e8-41b9-85db-74a2a0e7cce1-variant_picker-1":{"type":"variant_picker","settings":{"picker_type":"dropdown"}},"template--18043048132876__9a050aa4-61e8-41b9-85db-74a2a0e7cce1-quantity_selector-1":{"type":"quantity_selector","settings":{}},"template--18043048132876__9a050aa4-61e8-41b9-85db-74a2a0e7cce1-buy_buttons-1":{"type":"buy_buttons","settings":{"show_dynamic_checkout":true}}},"block_order":["template--18043048132876__9a050aa4-61e8-41b9-85db-74a2a0e7cce1-title-1","template--18043048132876__9a050aa4-61e8-41b9-85db-74a2a0e7cce1-text-2","template--18043048132876__9a050aa4-61e8-41b9-85db-74a2a0e7cce1-price-1","template--18043048132876__9a050aa4-61e8-41b9-85db-74a2a0e7cce1-variant_picker-1","template--18043048132876__9a050aa4-61e8-41b9-85db-74a2a0e7cce1-quantity_selector-1","template--18043048132876__9a050aa4-61e8-41b9-85db-74a2a0e7cce1-buy_buttons-1"],"settings":{"is_above_the_fold":false,"enable_sticky_info":true,"product":"tasting-box","color_scheme":"background-1","secondary_background":false,"hide_variants":false,"enable_video_looping":false,"padding_top":36,"padding_bottom":16}},"179d69e3-1373-40a2-92ff-f6e68918fbb5":{"type":"multicolumn","blocks":{"template--18049470005516__179d69e3-1373-40a2-92ff-f6e68918fbb5-column-2":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/Ginger_Nut_f592e38a-20d9-4e1d-8180-f83c44d24b2c.jpg","title":"Harte Nuss","text":"<p>Die Harte Nuss ist die unangefochtene Nummer Eins und unser Bestseller - natürlich nicht ohne Grund. Überzeug dich selbst.<\/p>","link_label":"","link":""}},"template--18049470005516__179d69e3-1373-40a2-92ff-f6e68918fbb5-column-3":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/22Q3_Garden-034_2000_1.jpg","title":"Pralle Kirsche","text":"<p>Der fruchtige Kirschlikör mit leichter Vanillenote schmeckt wie frisch gepflückte Kirschen aus dem Garten und ist ganzjährig ein Genuss.<\/p>","link_label":"","link":""}},"87c4baff-6a63-4d69-9c8b-109206cb3f25":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/22Q3_Garden-022_2000_1_1.jpg","title":"Wilde Beere","text":"<p>Schmeckt nach Sommer und ist absolut erfrischend! Der fruchtig-süße Geschmack unseres beerigen Likörs ist einzigartig.<\/p>","link_label":"","link":""}},"template--18049470005516__179d69e3-1373-40a2-92ff-f6e68918fbb5-column-1":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/Mood22Q1_Home_Esstisch_Still_Toffee_stehend_D_klein_1_1.jpg","title":"Toffee","text":"<p>Unser bernsteinfarbige Schnaps “Toffee” bietet dir eine süß-kräftige, doch äußerst angenehme rauchige Karamell-Note.<\/p>","link_label":"","link":""}}},"block_order":["template--18049470005516__179d69e3-1373-40a2-92ff-f6e68918fbb5-column-2","template--18049470005516__179d69e3-1373-40a2-92ff-f6e68918fbb5-column-3","87c4baff-6a63-4d69-9c8b-109206cb3f25","template--18049470005516__179d69e3-1373-40a2-92ff-f6e68918fbb5-column-1"],"settings":{"is_above_the_fold":false,"title":"","heading_size":"h1","image_width":"full","image_ratio":"adapt","columns_desktop":4,"column_alignment":"left","background_style":"primary","button_label":"","button_link":"","color_scheme":"background-1","columns_mobile":"1","swipe_on_mobile":true,"padding_top":36,"padding_bottom":36}},"dbc9186f-95f5-4922-a676-9a8c15ee5a7f":{"type":"multicolumn","blocks":{"template--18043048132876__dbc9186f-95f5-4922-a676-9a8c15ee5a7f-column-1":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/Stills_Marc.png","title":"Thomas","text":"<p>\"Sehr wilder Geschmack und definitiv ein einzigartiges Design. Tolle Box zum kennenlernen der Marke\"<\/p>","link_label":"","link":""}},"template--18043048132876__dbc9186f-95f5-4922-a676-9a8c15ee5a7f-column-2":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/Stills_Jule.png","title":"Kira","text":"<p>\"Noch nie vorher von gehört, aber super lecker. Mit der Tasting Box kann man gleich mehrere Sorten probieren und seinen Liebling rausfinden\"<\/p>","link_label":"","link":""}},"template--18043048132876__dbc9186f-95f5-4922-a676-9a8c15ee5a7f-column-3":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/Stills_Can.png","title":"Francesco","text":"<p>\"Die Box ist genial um O'Donnell und seine Sorten kennenzulernen. Mich haben die Geschmäcker voll überzeugt. Mehr davon bitte!\"<\/p>","link_label":"","link":""}}},"block_order":["template--18043048132876__dbc9186f-95f5-4922-a676-9a8c15ee5a7f-column-1","template--18043048132876__dbc9186f-95f5-4922-a676-9a8c15ee5a7f-column-2","template--18043048132876__dbc9186f-95f5-4922-a676-9a8c15ee5a7f-column-3"],"settings":{"is_above_the_fold":false,"title":"","heading_size":"h2","image_width":"full","image_ratio":"adapt","columns_desktop":3,"column_alignment":"center","background_style":"primary","button_label":"","button_link":"","color_scheme":"background-1","columns_mobile":"1","swipe_on_mobile":true,"padding_top":36,"padding_bottom":36}},"a524cd34-8f77-43c7-8eb3-82b5981c7dad":{"type":"image-with-text","blocks":{"template--18043048132876__a524cd34-8f77-43c7-8eb3-82b5981c7dad-heading-1":{"type":"heading","settings":{"heading":"Harte Nuss","heading_size":"h2"}},"template--18043048132876__a524cd34-8f77-43c7-8eb3-82b5981c7dad-text-1":{"type":"text","settings":{"text":"<p>Die Harte Nuss ist die unangefochtene Nummer Eins und unser Bestseller - natürlich nicht ohne Grund. Überzeug dich selber und werde zum Moonshiner.<\/p>","text_style":"body"}}},"block_order":["template--18043048132876__a524cd34-8f77-43c7-8eb3-82b5981c7dad-heading-1","template--18043048132876__a524cd34-8f77-43c7-8eb3-82b5981c7dad-text-1"],"disabled":true,"settings":{"is_above_the_fold":false,"background_color":"#ffffff","text_color":"#000000","image":"shopify:\/\/shop_images\/Mood22Q1_Home_Esstisch_Still_HarteNuss_stehend_D_klein_1_1.jpg","image_caption":"","height":"adapt","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"overlap","color_scheme":"background-2","mobile_content_alignment":"left","padding_top":36,"padding_bottom":36}},"33f92ba6-6026-4162-8b31-1e815486233b":{"type":"image-with-text","blocks":{"template--18043048132876__33f92ba6-6026-4162-8b31-1e815486233b-heading-1":{"type":"heading","settings":{"heading":"Pralle Kirsche","heading_size":"h2"}},"template--18043048132876__33f92ba6-6026-4162-8b31-1e815486233b-text-1":{"type":"text","settings":{"text":"<p>Unsere \"Pralle Kirsche\" schmeckt wie frisch gepflückt vom Baum. Süß und vollmundig, dabei aber mit dem gewissem Etwas.<\/p>","text_style":"body"}}},"block_order":["template--18043048132876__33f92ba6-6026-4162-8b31-1e815486233b-heading-1","template--18043048132876__33f92ba6-6026-4162-8b31-1e815486233b-text-1"],"disabled":true,"settings":{"is_above_the_fold":false,"background_color":"#ffffff","text_color":"#000000","image":"shopify:\/\/shop_images\/22Q3_Garden-036_2000_1_1_0782e761-2763-425b-b6bb-d9e59cbe6ca1.jpg","image_caption":"","height":"adapt","desktop_image_width":"medium","layout":"text_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"overlap","color_scheme":"background-2","mobile_content_alignment":"left","padding_top":36,"padding_bottom":36}},"4e1951f9-0f70-42fc-9336-47b25ceaeea2":{"type":"image-with-text","blocks":{"template--18043048132876__4e1951f9-0f70-42fc-9336-47b25ceaeea2-heading-1":{"type":"heading","settings":{"heading":"Passionsfrucht","heading_size":"h2"}},"template--18043048132876__4e1951f9-0f70-42fc-9336-47b25ceaeea2-text-1":{"type":"text","settings":{"text":"<p>Mit den tropischen Passionsfrüchten schlagen wir eine ganz neue Richtung in unserem Geschmacksportfolio ein und verbinden damit Moonshine-Tradition mit außergewöhnlichen Zutaten.<\/p>","text_style":"body"}}},"block_order":["template--18043048132876__4e1951f9-0f70-42fc-9336-47b25ceaeea2-heading-1","template--18043048132876__4e1951f9-0f70-42fc-9336-47b25ceaeea2-text-1"],"disabled":true,"settings":{"is_above_the_fold":false,"background_color":"#ffffff","text_color":"#000000","image":"shopify:\/\/shop_images\/Passionsfrucht_Launch_hoch_1x1_D.jpg","image_caption":"","height":"adapt","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"overlap","color_scheme":"background-2","mobile_content_alignment":"left","padding_top":36,"padding_bottom":36}},"83e0efff-664e-40a5-aba9-225de7ba316f":{"type":"image-with-text","blocks":{"template--18043048132876__83e0efff-664e-40a5-aba9-225de7ba316f-heading-1":{"type":"heading","settings":{"heading":"Wilde Beere","heading_size":"h2"}},"template--18043048132876__83e0efff-664e-40a5-aba9-225de7ba316f-text-1":{"type":"text","settings":{"text":"<p>Unsere \"Wilde Beere\" schmeckt wie frisch gesammelte Beeren aus dem Wald - einfach köstlich und lecker.<\/p>","text_style":"body"}}},"block_order":["template--18043048132876__83e0efff-664e-40a5-aba9-225de7ba316f-heading-1","template--18043048132876__83e0efff-664e-40a5-aba9-225de7ba316f-text-1"],"disabled":true,"settings":{"is_above_the_fold":false,"background_color":"#ffffff","text_color":"#000000","image":"shopify:\/\/shop_images\/Mood22Q1_Home_Esstisch_WildeBeere_D1_klein_1_1.jpg","image_caption":"","height":"adapt","desktop_image_width":"medium","layout":"text_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"overlap","color_scheme":"background-2","mobile_content_alignment":"left","padding_top":36,"padding_bottom":36}},"f8a16c20-082f-4342-8b2f-199904d72be3":{"type":"rich-text","blocks":{"template--18043048132876__f8a16c20-082f-4342-8b2f-199904d72be3-heading-1":{"type":"heading","settings":{"heading":"Die Tasting Box von O'Donnell","heading_size":"h1"}},"template--18043048132876__f8a16c20-082f-4342-8b2f-199904d72be3-text-1":{"type":"text","settings":{"text":"<p>Jetzt probieren und zum echten Moonshiner werden! Worauf wartest du?<\/p>"}},"template--18043048132876__f8a16c20-082f-4342-8b2f-199904d72be3-button-1":{"type":"button","settings":{"button_label":"Zur Box","button_link":"shopify:\/\/products\/tasting-box","button_style_secondary":false}}},"block_order":["template--18043048132876__f8a16c20-082f-4342-8b2f-199904d72be3-heading-1","template--18043048132876__f8a16c20-082f-4342-8b2f-199904d72be3-text-1","template--18043048132876__f8a16c20-082f-4342-8b2f-199904d72be3-button-1"],"settings":{"color_scheme":"background-1","full_width":true,"padding_top":40,"padding_bottom":52}},"fdb6e759-1d06-4d7a-8117-14e8b0d1c79a":{"type":"yotpo-carousel-widget","settings":{"heading":"Reviews","heading_2":"Das sagen unsere Kunden","color_scheme":"background-2","font_size":26,"padding_top":36,"padding_bottom":36}}},"order":["422def68-bcd4-4510-bf6c-9a35e677a85c","main","c84ae1c4-b759-489e-93b6-ffb06b6137d4","6cc2ec27-5e90-4e68-9a70-1d92118b6da8","3633d995-9c08-44bb-a4ce-24f334b3670a","9a050aa4-61e8-41b9-85db-74a2a0e7cce1","179d69e3-1373-40a2-92ff-f6e68918fbb5","dbc9186f-95f5-4922-a676-9a8c15ee5a7f","a524cd34-8f77-43c7-8eb3-82b5981c7dad","33f92ba6-6026-4162-8b31-1e815486233b","4e1951f9-0f70-42fc-9336-47b25ceaeea2","83e0efff-664e-40a5-aba9-225de7ba316f","f8a16c20-082f-4342-8b2f-199904d72be3","fdb6e759-1d06-4d7a-8117-14e8b0d1c79a"]}
+{
+  "sections": {
+    "422def68-bcd4-4510-bf6c-9a35e677a85c": {
+      "type": "image-intro-banner",
+      "settings": {
+        "is_above_the_fold": false,
+        "image": "shopify://shop_images/TastingBox_D_Hero_Desktop_409377ba-ce34-4194-93a7-31a0a78fdfed.jpg",
+        "image_2": "shopify://shop_images/TastingBox_D_Hero_Mobil_4186c267-6f29-4e27-a898-a62a519dd285.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "section_animation": "none",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "heading_h1": "O'Donnell Tasting Box",
+        "heading_h2": "",
+        "heading_text": "Entdecke jetzt die Welt von O'Donnell Moonshine und probiere vier verschiedene Geschmäcker mit der praktischen Tasting Box!"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 24,
+        "show_title": true
+      }
+    },
+    "c84ae1c4-b759-489e-93b6-ffb06b6137d4": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18049470005516__c84ae1c4-b759-489e-93b6-ffb06b6137d4-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18049470005516__c84ae1c4-b759-489e-93b6-ffb06b6137d4-text-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "6cc2ec27-5e90-4e68-9a70-1d92118b6da8": {
+      "type": "video",
+      "settings": {
+        "is_above_the_fold": true,
+        "heading": "",
+        "heading_size": "h1",
+        "cover_image": "shopify://shop_images/TastingBox_D_Videovorschau_1.jpg",
+        "video_url": "https://youtu.be/P4lymLXOxwU",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "3633d995-9c08-44bb-a4ce-24f334b3670a": {
+      "type": "unique-selling-points",
+      "blocks": {
+        "template--18043048132876__3633d995-9c08-44bb-a4ce-24f334b3670a-unique_selling_point-2": {
+          "type": "unique_selling_point",
+          "disabled": true,
+          "settings": {
+            "title": "Du kennst O'Donnell noch nicht?",
+            "text": "Probiere folgende Geschmäcker aus: Harte Nuss, Pralle Kirsche, Wilde Beere und Passionsfrucht."
+          }
+        },
+        "template--18043048132876__3633d995-9c08-44bb-a4ce-24f334b3670a-unique_selling_point-1": {
+          "type": "unique_selling_point",
+          "settings": {
+            "title": "Was bekommst du?",
+            "text": "Vier kleine Shots zum Probieren im einzigartigen Design & einen 5€ Rabattcode auf deine nächste Bestellung!"
+          }
+        },
+        "aae17629-dc29-4481-923e-342da3b0046a": {
+          "type": "unique_selling_point",
+          "disabled": true,
+          "settings": {
+            "title": "Künstlich? Nicht mit uns!",
+            "text": "Unsere Schnäpse sind vegan und ohne künstlich Aromen & Farbstoffe"
+          }
+        }
+      },
+      "block_order": [
+        "template--18043048132876__3633d995-9c08-44bb-a4ce-24f334b3670a-unique_selling_point-2",
+        "template--18043048132876__3633d995-9c08-44bb-a4ce-24f334b3670a-unique_selling_point-1",
+        "aae17629-dc29-4481-923e-342da3b0046a"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "background_color_icons": "#ffffff",
+        "items_icon_size": 60,
+        "small_items_per_row": 2,
+        "small_items_icon_size": 60,
+        "smaller_items_per_row": 2,
+        "smaller_items_icon_size": 60,
+        "medium_items_per_row": 3,
+        "medium_items_icon_size": 60,
+        "desktop_items_per_row": 4,
+        "desktop_items_icon_size": 60,
+        "background_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "9a050aa4-61e8-41b9-85db-74a2a0e7cce1": {
+      "type": "featured-product",
+      "blocks": {
+        "template--18043048132876__9a050aa4-61e8-41b9-85db-74a2a0e7cce1-title-1": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "template--18043048132876__9a050aa4-61e8-41b9-85db-74a2a0e7cce1-text-2": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "template--18043048132876__9a050aa4-61e8-41b9-85db-74a2a0e7cce1-price-1": {
+          "type": "price",
+          "settings": {}
+        },
+        "template--18043048132876__9a050aa4-61e8-41b9-85db-74a2a0e7cce1-variant_picker-1": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown"
+          }
+        },
+        "template--18043048132876__9a050aa4-61e8-41b9-85db-74a2a0e7cce1-quantity_selector-1": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "template--18043048132876__9a050aa4-61e8-41b9-85db-74a2a0e7cce1-buy_buttons-1": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        }
+      },
+      "block_order": [
+        "template--18043048132876__9a050aa4-61e8-41b9-85db-74a2a0e7cce1-title-1",
+        "template--18043048132876__9a050aa4-61e8-41b9-85db-74a2a0e7cce1-text-2",
+        "template--18043048132876__9a050aa4-61e8-41b9-85db-74a2a0e7cce1-price-1",
+        "template--18043048132876__9a050aa4-61e8-41b9-85db-74a2a0e7cce1-variant_picker-1",
+        "template--18043048132876__9a050aa4-61e8-41b9-85db-74a2a0e7cce1-quantity_selector-1",
+        "template--18043048132876__9a050aa4-61e8-41b9-85db-74a2a0e7cce1-buy_buttons-1"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "enable_sticky_info": true,
+        "product": "tasting-box",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 16
+      }
+    },
+    "179d69e3-1373-40a2-92ff-f6e68918fbb5": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--18049470005516__179d69e3-1373-40a2-92ff-f6e68918fbb5-column-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Ginger_Nut_f592e38a-20d9-4e1d-8180-f83c44d24b2c.jpg",
+            "title": "Harte Nuss",
+            "text": "<p>Die Harte Nuss ist die unangefochtene Nummer Eins und unser Bestseller - natürlich nicht ohne Grund. Überzeug dich selbst.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18049470005516__179d69e3-1373-40a2-92ff-f6e68918fbb5-column-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/22Q3_Garden-034_2000_1.jpg",
+            "title": "Pralle Kirsche",
+            "text": "<p>Der fruchtige Kirschlikör mit leichter Vanillenote schmeckt wie frisch gepflückte Kirschen aus dem Garten und ist ganzjährig ein Genuss.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "87c4baff-6a63-4d69-9c8b-109206cb3f25": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/22Q3_Garden-022_2000_1_1.jpg",
+            "title": "Wilde Beere",
+            "text": "<p>Schmeckt nach Sommer und ist absolut erfrischend! Der fruchtig-süße Geschmack unseres beerigen Likörs ist einzigartig.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18049470005516__179d69e3-1373-40a2-92ff-f6e68918fbb5-column-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Mood22Q1_Home_Esstisch_Still_Toffee_stehend_D_klein_1_1.jpg",
+            "title": "Toffee",
+            "text": "<p>Unser bernsteinfarbige Schnaps “Toffee” bietet dir eine süß-kräftige, doch äußerst angenehme rauchige Karamell-Note.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18049470005516__179d69e3-1373-40a2-92ff-f6e68918fbb5-column-2",
+        "template--18049470005516__179d69e3-1373-40a2-92ff-f6e68918fbb5-column-3",
+        "87c4baff-6a63-4d69-9c8b-109206cb3f25",
+        "template--18049470005516__179d69e3-1373-40a2-92ff-f6e68918fbb5-column-1"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "dbc9186f-95f5-4922-a676-9a8c15ee5a7f": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--18043048132876__dbc9186f-95f5-4922-a676-9a8c15ee5a7f-column-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stills_Marc.png",
+            "title": "Thomas",
+            "text": "<p>\"Sehr wilder Geschmack und definitiv ein einzigartiges Design. Tolle Box zum kennenlernen der Marke\"</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18043048132876__dbc9186f-95f5-4922-a676-9a8c15ee5a7f-column-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stills_Jule.png",
+            "title": "Kira",
+            "text": "<p>\"Noch nie vorher von gehört, aber super lecker. Mit der Tasting Box kann man gleich mehrere Sorten probieren und seinen Liebling rausfinden\"</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18043048132876__dbc9186f-95f5-4922-a676-9a8c15ee5a7f-column-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stills_Can.png",
+            "title": "Francesco",
+            "text": "<p>\"Die Box ist genial um O'Donnell und seine Sorten kennenzulernen. Mich haben die Geschmäcker voll überzeugt. Mehr davon bitte!\"</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18043048132876__dbc9186f-95f5-4922-a676-9a8c15ee5a7f-column-1",
+        "template--18043048132876__dbc9186f-95f5-4922-a676-9a8c15ee5a7f-column-2",
+        "template--18043048132876__dbc9186f-95f5-4922-a676-9a8c15ee5a7f-column-3"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "a524cd34-8f77-43c7-8eb3-82b5981c7dad": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--18043048132876__a524cd34-8f77-43c7-8eb3-82b5981c7dad-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Harte Nuss",
+            "heading_size": "h2"
+          }
+        },
+        "template--18043048132876__a524cd34-8f77-43c7-8eb3-82b5981c7dad-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Die Harte Nuss ist die unangefochtene Nummer Eins und unser Bestseller - natürlich nicht ohne Grund. Überzeug dich selber und werde zum Moonshiner.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--18043048132876__a524cd34-8f77-43c7-8eb3-82b5981c7dad-heading-1",
+        "template--18043048132876__a524cd34-8f77-43c7-8eb3-82b5981c7dad-text-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "is_above_the_fold": false,
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "image": "shopify://shop_images/Mood22Q1_Home_Esstisch_Still_HarteNuss_stehend_D_klein_1_1.jpg",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "33f92ba6-6026-4162-8b31-1e815486233b": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--18043048132876__33f92ba6-6026-4162-8b31-1e815486233b-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Pralle Kirsche",
+            "heading_size": "h2"
+          }
+        },
+        "template--18043048132876__33f92ba6-6026-4162-8b31-1e815486233b-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Unsere \"Pralle Kirsche\" schmeckt wie frisch gepflückt vom Baum. Süß und vollmundig, dabei aber mit dem gewissem Etwas.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--18043048132876__33f92ba6-6026-4162-8b31-1e815486233b-heading-1",
+        "template--18043048132876__33f92ba6-6026-4162-8b31-1e815486233b-text-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "is_above_the_fold": false,
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "image": "shopify://shop_images/22Q3_Garden-036_2000_1_1_0782e761-2763-425b-b6bb-d9e59cbe6ca1.jpg",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "4e1951f9-0f70-42fc-9336-47b25ceaeea2": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--18043048132876__4e1951f9-0f70-42fc-9336-47b25ceaeea2-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Passionsfrucht",
+            "heading_size": "h2"
+          }
+        },
+        "template--18043048132876__4e1951f9-0f70-42fc-9336-47b25ceaeea2-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Mit den tropischen Passionsfrüchten schlagen wir eine ganz neue Richtung in unserem Geschmacksportfolio ein und verbinden damit Moonshine-Tradition mit außergewöhnlichen Zutaten.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--18043048132876__4e1951f9-0f70-42fc-9336-47b25ceaeea2-heading-1",
+        "template--18043048132876__4e1951f9-0f70-42fc-9336-47b25ceaeea2-text-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "is_above_the_fold": false,
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "image": "shopify://shop_images/Passionsfrucht_Launch_hoch_1x1_D.jpg",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "83e0efff-664e-40a5-aba9-225de7ba316f": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--18043048132876__83e0efff-664e-40a5-aba9-225de7ba316f-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Wilde Beere",
+            "heading_size": "h2"
+          }
+        },
+        "template--18043048132876__83e0efff-664e-40a5-aba9-225de7ba316f-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Unsere \"Wilde Beere\" schmeckt wie frisch gesammelte Beeren aus dem Wald - einfach köstlich und lecker.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--18043048132876__83e0efff-664e-40a5-aba9-225de7ba316f-heading-1",
+        "template--18043048132876__83e0efff-664e-40a5-aba9-225de7ba316f-text-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "is_above_the_fold": false,
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "image": "shopify://shop_images/Mood22Q1_Home_Esstisch_WildeBeere_D1_klein_1_1.jpg",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "f8a16c20-082f-4342-8b2f-199904d72be3": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18043048132876__f8a16c20-082f-4342-8b2f-199904d72be3-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Die Tasting Box von O'Donnell",
+            "heading_size": "h1"
+          }
+        },
+        "template--18043048132876__f8a16c20-082f-4342-8b2f-199904d72be3-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Jetzt probieren und zum echten Moonshiner werden! Worauf wartest du?</p>"
+          }
+        },
+        "template--18043048132876__f8a16c20-082f-4342-8b2f-199904d72be3-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Zur Box",
+            "button_link": "shopify://products/tasting-box",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18043048132876__f8a16c20-082f-4342-8b2f-199904d72be3-heading-1",
+        "template--18043048132876__f8a16c20-082f-4342-8b2f-199904d72be3-text-1",
+        "template--18043048132876__f8a16c20-082f-4342-8b2f-199904d72be3-button-1"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "fdb6e759-1d06-4d7a-8117-14e8b0d1c79a": {
+      "type": "yotpo-carousel-widget",
+      "settings": {
+        "heading": "Reviews",
+        "heading_2": "Das sagen unsere Kunden",
+        "color_scheme": "background-2",
+        "font_size": 26,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "422def68-bcd4-4510-bf6c-9a35e677a85c",
+    "main",
+    "c84ae1c4-b759-489e-93b6-ffb06b6137d4",
+    "6cc2ec27-5e90-4e68-9a70-1d92118b6da8",
+    "3633d995-9c08-44bb-a4ce-24f334b3670a",
+    "9a050aa4-61e8-41b9-85db-74a2a0e7cce1",
+    "179d69e3-1373-40a2-92ff-f6e68918fbb5",
+    "dbc9186f-95f5-4922-a676-9a8c15ee5a7f",
+    "a524cd34-8f77-43c7-8eb3-82b5981c7dad",
+    "33f92ba6-6026-4162-8b31-1e815486233b",
+    "4e1951f9-0f70-42fc-9336-47b25ceaeea2",
+    "83e0efff-664e-40a5-aba9-225de7ba316f",
+    "f8a16c20-082f-4342-8b2f-199904d72be3",
+    "fdb6e759-1d06-4d7a-8117-14e8b0d1c79a"
+  ]
+}

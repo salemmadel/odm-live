@@ -1,1 +1,127 @@
-{"sections":{"0804e081-6a09-406c-b82a-d37352bac589":{"type":"image-intro-banner","blocks":{"template--16480882655500__0804e081-6a09-406c-b82a-d37352bac589-16703342796ce54a72-0":{"type":"heading","disabled":true,"settings":{"heading":"Image banner","heading_size":"h1"}},"template--16480882655500__0804e081-6a09-406c-b82a-d37352bac589-16703342796ce54a72-1":{"type":"text","disabled":true,"settings":{"text":"Give customers details about the banner image(s) or content on the template.","text_style":"body"}},"template--16480882655500__0804e081-6a09-406c-b82a-d37352bac589-16703342796ce54a72-2":{"type":"buttons","disabled":true,"settings":{"button_label_1":"Button label","button_link_1":"","button_style_secondary_1":false,"button_label_2":"Button label","button_link_2":"","button_style_secondary_2":false}}},"block_order":["template--16480882655500__0804e081-6a09-406c-b82a-d37352bac589-16703342796ce54a72-0","template--16480882655500__0804e081-6a09-406c-b82a-d37352bac589-16703342796ce54a72-1","template--16480882655500__0804e081-6a09-406c-b82a-d37352bac589-16703342796ce54a72-2"],"settings":{"is_above_the_fold":true,"image":"shopify:\/\/shop_images\/Cocktailspage_Desktop_1.jpg","image_2":"shopify:\/\/shop_images\/CocktailsPage_Mobile_1.jpg","image_4_height":0,"image_3_height":0,"link":"","image_overlay_opacity":0,"image_height":"adapt_image","adapt_height_first_image":false,"desktop_content_position":"middle-center","section_animation":"none","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"background-1","mobile_content_alignment":"center","show_text_below":true,"heading_h1":"Moonshine Cocktails","heading_h2":"","heading_text":"<p>Cocktail- und Longdrinkideen mit unserem Moonshine<\/p>","padding_top":0,"padding_bottom":0}},"main":{"type":"main-blog","settings":{"is_above_the_fold":true,"show_tags_for_filter":true,"show_title":false,"cocktails_blog":true,"layout":"grid","show_image":true,"image_height":"adapt","show_date":false,"show_author":false,"show_excerpt":false,"show_excerpt_full":false,"padding_top":52,"padding_bottom":20}},"featured_collection_MG8TqY":{"type":"featured-collection","settings":{"is_above_the_fold":false,"title":"Cocktail-Zubehör","heading_size":"h1","description":"","show_description":false,"grey_sold_out_products":true,"description_style":"body","collection":"cocktail-bundles","products_to_show":12,"columns_desktop":4,"full_width":false,"section_animation":"none","show_view_all":true,"view_all_style":"solid","view_all_button_label":"","enable_desktop_slider":true,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":true,"show_vendor":false,"show_rating":false,"enable_quick_add":true,"columns_mobile":"1","swipe_on_mobile":true,"padding_top":0,"padding_bottom":0}}},"order":["0804e081-6a09-406c-b82a-d37352bac589","main","featured_collection_MG8TqY"]}
+{
+  "sections": {
+    "0804e081-6a09-406c-b82a-d37352bac589": {
+      "type": "image-intro-banner",
+      "blocks": {
+        "template--16480882655500__0804e081-6a09-406c-b82a-d37352bac589-16703342796ce54a72-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "template--16480882655500__0804e081-6a09-406c-b82a-d37352bac589-16703342796ce54a72-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "template--16480882655500__0804e081-6a09-406c-b82a-d37352bac589-16703342796ce54a72-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16480882655500__0804e081-6a09-406c-b82a-d37352bac589-16703342796ce54a72-0",
+        "template--16480882655500__0804e081-6a09-406c-b82a-d37352bac589-16703342796ce54a72-1",
+        "template--16480882655500__0804e081-6a09-406c-b82a-d37352bac589-16703342796ce54a72-2"
+      ],
+      "settings": {
+        "is_above_the_fold": true,
+        "image": "shopify://shop_images/Cocktailspage_Desktop_1.jpg",
+        "image_2": "shopify://shop_images/CocktailsPage_Mobile_1.jpg",
+        "image_4_height": 0,
+        "image_3_height": 0,
+        "link": "",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt_image",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "section_animation": "none",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "show_text_below": true,
+        "heading_h1": "Moonshine Cocktails",
+        "heading_h2": "",
+        "heading_text": "<p>Cocktail- und Longdrinkideen mit unserem Moonshine</p>",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "is_above_the_fold": true,
+        "show_tags_for_filter": true,
+        "show_title": false,
+        "cocktails_blog": true,
+        "layout": "grid",
+        "show_image": true,
+        "image_height": "adapt",
+        "show_date": false,
+        "show_author": false,
+        "show_excerpt": false,
+        "show_excerpt_full": false,
+        "padding_top": 52,
+        "padding_bottom": 20
+      }
+    },
+    "featured_collection_MG8TqY": {
+      "type": "featured-collection",
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "Cocktail-Zubehör",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "collection": "cocktail-bundles",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "view_all_button_label": "",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "0804e081-6a09-406c-b82a-d37352bac589",
+    "main",
+    "featured_collection_MG8TqY"
+  ]
+}

@@ -1,1 +1,395 @@
-{"sections":{"change_page_color_ww6BHr":{"type":"change-page-color","settings":{"color_text":"#ffffff","color_background":"#0f4037"}},"main":{"type":"main-page","disabled":true,"settings":{"padding_top":24,"padding_bottom":24,"show_title":true}},"slideshow_6VwyMa":{"type":"slideshow","blocks":{"slide_gmUbfR":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/Christmas_GifBoxes_Hero_Desktop_D_02.jpg","image_2":"shopify:\/\/shop_images\/Christmas_GifBoxes_Hero_Desktop_D_02.jpg","is_slide_linkable":true,"heading":"","heading_size":"h2","subheading":"","button_label":"","link":"","button_style_secondary":false,"box_align":"middle-center","show_text_box":false,"text_alignment":"center","image_overlay_opacity":0,"color_scheme":"background-1","text_alignment_mobile":"center"}}},"block_order":["slide_gmUbfR"],"custom_css":["img {width: 100%;}"],"settings":{"is_above_the_fold":false,"layout":"full_bleed","slide_height":"adapt_image","desktop_button_height":40,"mobile_button_height":60,"slider_visual":"counter","slides_controls_position":"top","auto_rotate":false,"change_slides_speed":5,"show_text_below":true,"accessibility_info":""}},"rich_text_LeeMBT":{"type":"rich-text","blocks":{"text_inENFA":{"type":"text","settings":{"text":"<p><em>O'Donnell Moonshine ist mehr als nur ein Geschenk – es ist ein Statement. Unsere handgemachten Spirituosen vereinen einzigartigen Geschmack mit nachhaltigem Genuss.<\/em><\/p>"}}},"block_order":["text_inENFA"],"settings":{"color_scheme":"background-1","full_width":true,"padding_top":24,"padding_bottom":24}},"multicolumn_f3Kwtp":{"type":"multicolumn","blocks":{"column_Q4NizL":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/Men_Generic_1er-Giftbox_GreenCup_Website_1x1_01_1.jpg","overlay_title":true,"overlay_title_position":"bottom","title":"Kleine Geschenkbox","text":"<p>Die perfekte Einstiegsvariante für alle, die ein besonderes Geschenk suchen. Mit einem 700ml Glas zum Genießen, einem praktischen Ausgießer und zwei stilvollen Emaille-Tassen wird die Bescherung zu einem ganz besonderen Moment.<br\/><br\/><\/p>","mobile_text":"<p>Die perfekte Einstiegsvariante für alle, die ein besonderes Geschenk suchen. Mit einem 700ml Glas zum Genießen, einem praktischen Ausgießer und zwei stilvollen Emaille-Tassen wird die Bescherung zu einem ganz besonderen Moment.<\/p>","link_label":"Jetzt kaufen!","link":"shopify:\/\/products\/xmas-geschenkbox","button_alignment":"left","selected_button":true,"grey_out_media":false}},"column_F6JGXN":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/Men_Generic_2er-Giftbox_GreenCup_Website_1x1_01_1.jpg","overlay_title":true,"overlay_title_position":"bottom","title":"Große Geschenkbox","text":"<p>Die großzügige Variante für alle, die mehr verschenken möchten. Mit zwei 700ml Gläsern zum Teilen oder Sammeln, einem praktischen Ausgießer und zwei stilvollen Emaille-Tassen wird die Bescherung zu einem ganz besonderen Moment.<\/p>","mobile_text":"<p>Die großzügige Variante für alle, die mehr verschenken möchten. Mit zwei 700ml Gläsern zum Teilen oder Sammeln, einem praktischen Ausgießer und zwei stilvollen Emaille-Tassen wird die Bescherung zu einem ganz besonderen Moment.<\/p>","link_label":"Jetzt kaufen!","link":"shopify:\/\/products\/2er-xmas-geschenkbox","button_alignment":"left","selected_button":true,"grey_out_media":false}}},"block_order":["column_Q4NizL","column_F6JGXN"],"custom_css":[".multicolumn-card__info {background-color: #0f4037; display: flex; flex-direction: column; justify-content: center;}",".hidden-sm,.hidden-lg {order: 2;}","@media screen and (min-width: 750px) {.multicolumn .button {margin-top: 0rem !important; margin-bottom: 3rem; }}"],"settings":{"is_above_the_fold":false,"title":"","heading_size":"h2","title_text":"","outer_padding":5,"image_width":"full","image_ratio":"square","image_border_color":"#ffffff","columns_desktop":2,"column_alignment":"left","background_style":"none","button_label":"","button_link":"","color_scheme":"background-1","columns_mobile":"1","swipe_on_mobile":true,"padding_top":0,"padding_bottom":36}},"image_with_text_VaXjVC":{"type":"image-with-text","blocks":{"heading_mrhM6X":{"type":"heading","settings":{"heading":"Hol alle Geschenke auf einmal!","heading_size":"h1"}},"text_nHf7ry":{"type":"text","settings":{"text":"<p>Kaufe 4 gleiche Geschenkboxen und erhalte 1 gratis! Das perfekte <strong>Weihnachtsgeschenk <\/strong>für alle, die <strong>ausgefallene Spirituosen <\/strong>und <strong>Likör Geschenke <\/strong>lieben.<\/p>","text_style":"body"}}},"block_order":["heading_mrhM6X","text_nHf7ry"],"settings":{"is_above_the_fold":false,"background_color":"#0f4037","text_color":"#ffffff","image":"shopify:\/\/shop_images\/Generic_4_1GiftBox_Product_1x1_D_01_1_8bf80788-3e0a-429f-9fe4-c33a0ed7fc12.jpg","image_caption":"","height":"adapt","desktop_image_width":"medium","layout":"text_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"no-overlap","color_scheme":"background-2","mobile_content_alignment":"left","padding_top":36,"padding_bottom":36}},"mutlicolumn_video_section_G6wnk6":{"type":"mutlicolumn-video-section","blocks":{"video_ThaGab":{"type":"video","settings":{"video_url":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3cec5ab8b4864b7a99153273528f5e5a.mov","overlay_title":false,"overlay_title_position":"bottom","title":"Die Xmas Geschenkbox von O’Donnell Moonshine","text":"<p><br\/>Die perfekte Einstiegsvariante für alle, die ein besonderes Geschenk suchen. Mit einem 700ml Glas zum Genießen, einem praktischen Ausgießer und zwei stilvollen Emaille-Tassen wird die Bescherung zu einem ganz besonderen Moment.<br\/><br\/><br\/><\/p>","mobile_text":"<p>Die perfekte Einstiegsvariante für alle, die ein besonderes Geschenk suchen. Mit einem 700ml Glas zum Genießen, einem praktischen Ausgießer und zwei stilvollen Emaille-Tassen wird die Bescherung zu einem ganz besonderen Moment.<\/p>","link_label":"Jetzt kaufen","link":"shopify:\/\/products\/xmas-geschenkbox","button_alignment":"left","selected_button":true}}},"block_order":["video_ThaGab"],"custom_css":[".multicolumn-card__info {background-color: #0f4037; display: flex; flex-direction: column; justify-content: center;}",".hidden-sm,.hidden-lg {order: 2;}","@media screen and (min-width: 750px) {.multicolumn .button {margin-top: 0rem !important; margin-bottom: 3rem; }}","@media screen and (min-width: 750px) {.mutlicolumn--video .video-wrapper {min-width: 300px; }}"],"settings":{"is_above_the_fold":false,"title":"","heading_size":"h1","title_text":"","columns_desktop":3,"column_alignment":"left","background_style":"none","button_label":"","button_link":"","color_scheme":"background-1","columns_mobile":"1","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"featured_product_cQLkf9":{"type":"featured-product","blocks":{"text_C8rt8M":{"type":"text","settings":{"text":"{{ section.settings.product.vendor }}","text_style":"uppercase"}},"title_XRNwVY":{"type":"title","settings":{"heading_size":"h1"}},"text_3fBbJf":{"type":"text","settings":{"text":"{{ section.settings.product.metafields.descriptors.subtitle.value }}","text_style":"subtitle"}},"price_PNRKnw":{"type":"price","settings":{}},"variant_picker_9Gkdke":{"type":"variant_picker","settings":{"picker_type":"button"}},"quantity_selector_3j8Cwq":{"type":"quantity_selector","settings":{}},"buy_buttons_whzQUA":{"type":"buy_buttons","settings":{"show_dynamic_checkout":true,"show_sticky_cart":false,"only_tier_gang_button":"Erforderliche Gangstufe nicht erreicht"}},"description_WkaiCp":{"type":"description","settings":{}},"link_ftVkDp":{"type":"link","settings":{"title":""}}},"block_order":["text_C8rt8M","title_XRNwVY","text_3fBbJf","price_PNRKnw","variant_picker_9Gkdke","quantity_selector_3j8Cwq","buy_buttons_whzQUA","description_WkaiCp","link_ftVkDp"],"custom_css":["a {color: white;}",".form__label,.form-check-label {color: white;}","p {color: white;}"],"settings":{"gift_card_receipient_enabled":true,"is_above_the_fold":false,"enable_sticky_info":true,"product":"gutschein-kopie","gallery_layout":"stacked","color_scheme":"background-1","secondary_background":false,"hide_variants":false,"enable_video_looping":false,"padding_top":36,"padding_bottom":36}},"featured_collection_VzXYzk":{"type":"featured-collection","custom_css":[".h1 {text-align: center;}"],"settings":{"is_above_the_fold":false,"title":"Schenke deinen Gläsern ein zweites Leben!","heading_size":"h1","description":"","show_description":false,"grey_sold_out_products":true,"description_style":"body","collection":"upcycling","products_to_show":8,"columns_desktop":4,"full_width":false,"section_animation":"none","show_view_all":true,"view_all_style":"solid","view_all_button_label":"","enable_desktop_slider":true,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":true,"show_vendor":false,"show_rating":false,"enable_quick_add":true,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"rich_text_7kxBFi":{"type":"rich-text","blocks":{"text_N37HTX":{"type":"text","settings":{"text":"<p>Erlebe die Magie der Feiertage mit O’Donnell Moonshine – deinem ganz besonderen Weihnachtsgeschenk! Unsere ausgefallenen Spirituosen sind das perfekte Alkohol-Geschenk für Männer zu Weihnachten. Ob für den Papa, den Bruder, den Schwiegervater oder den Opa – unsere hochprozentigen Weihnachtsgeschenke bieten eine außergewöhnliche Auswahl an Likören und Spirituosen, die garantiert für Begeisterung sorgen.<\/p><p>Für die Damen haben wir ebenfalls etwas ganz Besonderes im Angebot: ein edles Likör-Geschenk zu Weihnachten für Frauen oder ein exklusives Spirituosen-Geschenkset für die beste Freundin oder Mama. Unsere ausgefallenen Spirituosen sind auch das ideale Weihnachtsgeschenk für die Schwiegermutter – ein Hochgenuss für alle, die das Besondere lieben.<\/p><p>Entdecke die Vielfalt unserer handgemachten Moonshine-Produkte und schenke deinen Liebsten dieses Jahr etwas Einzigartiges – das perfekte Weihnachtsgeschenk für Spirituosen-Liebhaber!<\/p>"}}},"block_order":["text_N37HTX"],"settings":{"color_scheme":"background-1","full_width":true,"padding_top":40,"padding_bottom":52}}},"order":["change_page_color_ww6BHr","main","slideshow_6VwyMa","rich_text_LeeMBT","multicolumn_f3Kwtp","image_with_text_VaXjVC","mutlicolumn_video_section_G6wnk6","featured_product_cQLkf9","featured_collection_VzXYzk","rich_text_7kxBFi"]}
+{
+  "sections": {
+    "change_page_color_ww6BHr": {
+      "type": "change-page-color",
+      "settings": {
+        "color_text": "#ffffff",
+        "color_background": "#0f4037"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "show_title": true
+      }
+    },
+    "slideshow_6VwyMa": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_gmUbfR": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Christmas_GifBoxes_Hero_Desktop_D_02.jpg",
+            "image_2": "shopify://shop_images/Christmas_GifBoxes_Hero_Desktop_D_02.jpg",
+            "is_slide_linkable": true,
+            "heading": "",
+            "heading_size": "h2",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_gmUbfR"
+      ],
+      "custom_css": [
+        "img {width: 100%;}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "desktop_button_height": 40,
+        "mobile_button_height": 60,
+        "slider_visual": "counter",
+        "slides_controls_position": "top",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": ""
+      }
+    },
+    "rich_text_LeeMBT": {
+      "type": "rich-text",
+      "blocks": {
+        "text_inENFA": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>O'Donnell Moonshine ist mehr als nur ein Geschenk – es ist ein Statement. Unsere handgemachten Spirituosen vereinen einzigartigen Geschmack mit nachhaltigem Genuss.</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_inENFA"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "multicolumn_f3Kwtp": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Q4NizL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Men_Generic_1er-Giftbox_GreenCup_Website_1x1_01_1.jpg",
+            "overlay_title": true,
+            "overlay_title_position": "bottom",
+            "title": "Kleine Geschenkbox",
+            "text": "<p>Die perfekte Einstiegsvariante für alle, die ein besonderes Geschenk suchen. Mit einem 700ml Glas zum Genießen, einem praktischen Ausgießer und zwei stilvollen Emaille-Tassen wird die Bescherung zu einem ganz besonderen Moment.<br/><br/></p>",
+            "mobile_text": "<p>Die perfekte Einstiegsvariante für alle, die ein besonderes Geschenk suchen. Mit einem 700ml Glas zum Genießen, einem praktischen Ausgießer und zwei stilvollen Emaille-Tassen wird die Bescherung zu einem ganz besonderen Moment.</p>",
+            "link_label": "Jetzt kaufen!",
+            "link": "shopify://products/xmas-geschenkbox",
+            "button_alignment": "left",
+            "selected_button": true,
+            "grey_out_media": false
+          }
+        },
+        "column_F6JGXN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Men_Generic_2er-Giftbox_GreenCup_Website_1x1_01_1.jpg",
+            "overlay_title": true,
+            "overlay_title_position": "bottom",
+            "title": "Große Geschenkbox",
+            "text": "<p>Die großzügige Variante für alle, die mehr verschenken möchten. Mit zwei 700ml Gläsern zum Teilen oder Sammeln, einem praktischen Ausgießer und zwei stilvollen Emaille-Tassen wird die Bescherung zu einem ganz besonderen Moment.</p>",
+            "mobile_text": "<p>Die großzügige Variante für alle, die mehr verschenken möchten. Mit zwei 700ml Gläsern zum Teilen oder Sammeln, einem praktischen Ausgießer und zwei stilvollen Emaille-Tassen wird die Bescherung zu einem ganz besonderen Moment.</p>",
+            "link_label": "Jetzt kaufen!",
+            "link": "shopify://products/2er-xmas-geschenkbox",
+            "button_alignment": "left",
+            "selected_button": true,
+            "grey_out_media": false
+          }
+        }
+      },
+      "block_order": [
+        "column_Q4NizL",
+        "column_F6JGXN"
+      ],
+      "custom_css": [
+        ".multicolumn-card__info {background-color: #0f4037; display: flex; flex-direction: column; justify-content: center;}",
+        ".hidden-sm,.hidden-lg {order: 2;}",
+        "@media screen and (min-width: 750px) {.multicolumn .button {margin-top: 0rem !important; margin-bottom: 3rem; }}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "",
+        "heading_size": "h2",
+        "title_text": "",
+        "outer_padding": 5,
+        "image_width": "full",
+        "image_ratio": "square",
+        "image_border_color": "#ffffff",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_VaXjVC": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_mrhM6X": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hol alle Geschenke auf einmal!",
+            "heading_size": "h1"
+          }
+        },
+        "text_nHf7ry": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Kaufe 4 gleiche Geschenkboxen und erhalte 1 gratis! Das perfekte <strong>Weihnachtsgeschenk </strong>für alle, die <strong>ausgefallene Spirituosen </strong>und <strong>Likör Geschenke </strong>lieben.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mrhM6X",
+        "text_nHf7ry"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "background_color": "#0f4037",
+        "text_color": "#ffffff",
+        "image": "shopify://shop_images/Generic_4_1GiftBox_Product_1x1_D_01_1_8bf80788-3e0a-429f-9fe4-c33a0ed7fc12.jpg",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "mutlicolumn_video_section_G6wnk6": {
+      "type": "mutlicolumn-video-section",
+      "blocks": {
+        "video_ThaGab": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/3cec5ab8b4864b7a99153273528f5e5a.mov",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Die Xmas Geschenkbox von O’Donnell Moonshine",
+            "text": "<p><br/>Die perfekte Einstiegsvariante für alle, die ein besonderes Geschenk suchen. Mit einem 700ml Glas zum Genießen, einem praktischen Ausgießer und zwei stilvollen Emaille-Tassen wird die Bescherung zu einem ganz besonderen Moment.<br/><br/><br/></p>",
+            "mobile_text": "<p>Die perfekte Einstiegsvariante für alle, die ein besonderes Geschenk suchen. Mit einem 700ml Glas zum Genießen, einem praktischen Ausgießer und zwei stilvollen Emaille-Tassen wird die Bescherung zu einem ganz besonderen Moment.</p>",
+            "link_label": "Jetzt kaufen",
+            "link": "shopify://products/xmas-geschenkbox",
+            "button_alignment": "left",
+            "selected_button": true
+          }
+        }
+      },
+      "block_order": [
+        "video_ThaGab"
+      ],
+      "custom_css": [
+        ".multicolumn-card__info {background-color: #0f4037; display: flex; flex-direction: column; justify-content: center;}",
+        ".hidden-sm,.hidden-lg {order: 2;}",
+        "@media screen and (min-width: 750px) {.multicolumn .button {margin-top: 0rem !important; margin-bottom: 3rem; }}",
+        "@media screen and (min-width: 750px) {.mutlicolumn--video .video-wrapper {min-width: 300px; }}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "",
+        "heading_size": "h1",
+        "title_text": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_product_cQLkf9": {
+      "type": "featured-product",
+      "blocks": {
+        "text_C8rt8M": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_XRNwVY": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "text_3fBbJf": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "price_PNRKnw": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_9Gkdke": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector_3j8Cwq": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_whzQUA": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_sticky_cart": false,
+            "only_tier_gang_button": "Erforderliche Gangstufe nicht erreicht"
+          }
+        },
+        "description_WkaiCp": {
+          "type": "description",
+          "settings": {}
+        },
+        "link_ftVkDp": {
+          "type": "link",
+          "settings": {
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_C8rt8M",
+        "title_XRNwVY",
+        "text_3fBbJf",
+        "price_PNRKnw",
+        "variant_picker_9Gkdke",
+        "quantity_selector_3j8Cwq",
+        "buy_buttons_whzQUA",
+        "description_WkaiCp",
+        "link_ftVkDp"
+      ],
+      "custom_css": [
+        "a {color: white;}",
+        ".form__label,.form-check-label {color: white;}",
+        "p {color: white;}"
+      ],
+      "settings": {
+        "gift_card_receipient_enabled": true,
+        "is_above_the_fold": false,
+        "enable_sticky_info": true,
+        "product": "gutschein-kopie",
+        "gallery_layout": "stacked",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_VzXYzk": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".h1 {text-align: center;}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "Schenke deinen Gläsern ein zweites Leben!",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "collection": "upcycling",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "view_all_button_label": "",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_7kxBFi": {
+      "type": "rich-text",
+      "blocks": {
+        "text_N37HTX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Erlebe die Magie der Feiertage mit O’Donnell Moonshine – deinem ganz besonderen Weihnachtsgeschenk! Unsere ausgefallenen Spirituosen sind das perfekte Alkohol-Geschenk für Männer zu Weihnachten. Ob für den Papa, den Bruder, den Schwiegervater oder den Opa – unsere hochprozentigen Weihnachtsgeschenke bieten eine außergewöhnliche Auswahl an Likören und Spirituosen, die garantiert für Begeisterung sorgen.</p><p>Für die Damen haben wir ebenfalls etwas ganz Besonderes im Angebot: ein edles Likör-Geschenk zu Weihnachten für Frauen oder ein exklusives Spirituosen-Geschenkset für die beste Freundin oder Mama. Unsere ausgefallenen Spirituosen sind auch das ideale Weihnachtsgeschenk für die Schwiegermutter – ein Hochgenuss für alle, die das Besondere lieben.</p><p>Entdecke die Vielfalt unserer handgemachten Moonshine-Produkte und schenke deinen Liebsten dieses Jahr etwas Einzigartiges – das perfekte Weihnachtsgeschenk für Spirituosen-Liebhaber!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_N37HTX"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "change_page_color_ww6BHr",
+    "main",
+    "slideshow_6VwyMa",
+    "rich_text_LeeMBT",
+    "multicolumn_f3Kwtp",
+    "image_with_text_VaXjVC",
+    "mutlicolumn_video_section_G6wnk6",
+    "featured_product_cQLkf9",
+    "featured_collection_VzXYzk",
+    "rich_text_7kxBFi"
+  ]
+}

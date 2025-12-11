@@ -364,7 +364,7 @@
       "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<!-- Seamless Scrolling Banner Starting With Text -->\n<div style=\"background-color: #fff; overflow: hidden; white-space: nowrap;\">\n  <style>\n    @font-face {\n      font-family: 'Bitterbrush';\n      src: url('https://cdn.shopify.com/s/files/1/0326/4859/3539/files/Bitterbrush_DEMO.otf?v=175192124') format('opentype');\n      font-weight: normal;\n      font-style: normal;\n    }\n\n    .scrolling-wrapper {\n      display: inline-block;\n      white-space: nowrap;\n      animation: scroll-left 20s linear infinite;\n      font-family: 'Bitterbrush', cursive;\n      font-size: 70px;\n      color: #F5C647;\n      /* Removed padding-left so text starts visible */\n    }\n\n    .scrolling-text {\n      display: inline-block;\n      padding-right: 5rem; /* space between repeats */\n    }\n\n    @keyframes scroll-left {\n      0% {\n        transform: translateX(0);\n      }\n      100% {\n        transform: translateX(-50%);\n      }\n    }\n  </style>\n\n  <div style=\"display: flex; width: 200%;\">\n    <div class=\"scrolling-wrapper\">\n      <span class=\"scrolling-text\">NEW IN</span>\n      <span class=\"scrolling-text\">NEW IN</span>\n      <span class=\"scrolling-text\">NEW IN</span>\n      <span class=\"scrolling-text\">NEW IN</span>\n      <span class=\"scrolling-text\">NEW IN</span>\n      <!-- Repeat again for seamless loop -->\n      <span class=\"scrolling-text\">NEW IN</span>\n      <span class=\"scrolling-text\">NEW IN</span>\n      <span class=\"scrolling-text\">NEW IN</span>\n      <span class=\"scrolling-text\">NEW IN</span>\n      <span class=\"scrolling-text\">NEW IN</span>\n    </div>\n  </div>\n</div>",
+        "custom_liquid": "<!-- Seamless Scrolling Banner Starting With Text -->\n<div style=\"background-color: #fff; overflow: hidden; white-space: nowrap;\">\n  <style>\n    @font-face {\n      font-family: 'Bitterbrush';\n      src: url('https://cdn.shopify.com/s/files/1/0326/4859/3539/files/Bitterbrush_DEMO.otf?v=175192124') format('opentype');\n      font-weight: normal;\n      font-style: normal;\n    }\n\n    .scrolling-wrapper {\n      display: inline-block;\n      white-space: nowrap;\n      animation: scroll-left 20s linear infinite;\n      font-family: 'Bitterbrush', cursive;\n      font-size: 70px;\n      color: #F5C647;\n      \n    }\n\n    .scrolling-text {\n      display: inline-block;\n      padding-right: 5rem; \n    }\n\n    @keyframes scroll-left {\n      0% {\n        transform: translateX(0);\n      }\n      100% {\n        transform: translateX(-50%);\n      }\n    }\n  </style>\n\n  <div style=\"display: flex; width: 200%;\">\n    <div class=\"scrolling-wrapper\">\n      <span class=\"scrolling-text\">NEW IN</span>\n      <span class=\"scrolling-text\">NEW IN</span>\n      <span class=\"scrolling-text\">NEW IN</span>\n      <span class=\"scrolling-text\">NEW IN</span>\n      <span class=\"scrolling-text\">NEW IN</span>\n      <!-- Repeat again for seamless loop -->\n      <span class=\"scrolling-text\">NEW IN</span>\n      <span class=\"scrolling-text\">NEW IN</span>\n      <span class=\"scrolling-text\">NEW IN</span>\n      <span class=\"scrolling-text\">NEW IN</span>\n      <span class=\"scrolling-text\">NEW IN</span>\n    </div>\n  </div>\n</div>",
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 52
@@ -610,9 +610,17 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
     }
   },
   "order": [
+    "breadcrumbs",
     "main",
     "ss_scrolling_anouncement_bar_QhgGFU",
     "image-with-text",

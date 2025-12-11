@@ -1,1 +1,294 @@
-{"sections":{"main":{"type":"main-product","blocks":{"title":{"type":"title","settings":{}},"caption":{"type":"text","settings":{"text":"{{ product.metafields.descriptors.subtitle.value }}","text_style":"subtitle"}},"0209f2a8-8af4-47f5-8f20-ee27e76c1a98":{"type":"shopify:\/\/apps\/yotpo-product-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf","settings":{"product":"pralle-kirsche-kirschlikoer"}},"price":{"type":"price","settings":{}},"variant_picker":{"type":"variant_picker","settings":{"picker_type":"dropdown"}},"quantity_selector":{"type":"quantity_selector","settings":{}},"buy_buttons":{"type":"buy_buttons","settings":{"show_sticky_cart":true,"is_set":false,"only_tier_gang_button":"Required gang tier not reached","set_size":3,"set_text":"Wähle 3 Produkte","show_dynamic_checkout":false,"gang_url":"https:\/\/odonnell.de\/account\/login"}},"wishlist_engine_product_page_jiPqR9":{"type":"shopify:\/\/apps\/se-wishlist-engine\/blocks\/Product-Page\/8f7c0857-8e71-463d-a168-8e133094753b","settings":{}},"klarna_on_site_messaging_app_block_QrNBxT":{"type":"shopify:\/\/apps\/klarna-on-site-messaging\/blocks\/app-block\/b95936a9-74b6-4a95-8103-6a1b6459c25e","disabled":true,"settings":{"data_key":"credit-promotion-badge","locale_option":"geolocation","locale_fallback":"","theme":"default","topPadding":"0","bottomPadding":"0","messagePrefix":""}},"description":{"type":"description","settings":{}},"collapsible-row-0":{"type":"collapsible_tab","settings":{"heading":"Komm in die Gang","icon":"silhouette","content":"<p>Werde Teil der <a href=\"\/pages\/gang\" title=\"Die O'Donnell Gang\">Moonshine-Gang<\/a>! Als Mitglied sammelst du mit jedem Kauf im Onlineshop Proof und kannst diese gegen gratis O’Donnell Geschenke eintauschen. Außerdem hast du Zugang zu exklusiven Produkten und kannst im Gang-Rang immer weiter aufsteigen. Worauf wartest du also noch? Wir schmuggeln dir den Schnaps direkt nach Hause — völlig legal natürlich!<\/p>","page":""}},"collapsible-row-3":{"type":"collapsible_tab","settings":{"heading":"Versand","icon":"truck","content":"<ul><li><strong>DHL Priority: Lieferzeit 1-2 Werktage<\/strong><\/li><\/ul><p>Alle Bestellungen bis 12 Uhr werden noch am selben Tag DHL übergeben.<\/p><ul><li><strong>DHL Standard: Lieferzeit 2-3 Werktage<\/strong><\/li><\/ul>","page":""}},"recommended_products_f9d3mE":{"type":"recommended_products","settings":{"title":"So individuell wie du: Werde kreativ und stelle dein Moonshine-Bundle zusammen!","content":"","button_text":"","product_list":["set3-700","set3-350"],"enable_bulk_add":false,"columns_desktop":"2","enable_desktop_slider":true,"columns_mobile":"2","swipe_on_mobile":true}}},"block_order":["title","caption","0209f2a8-8af4-47f5-8f20-ee27e76c1a98","price","variant_picker","quantity_selector","buy_buttons","wishlist_engine_product_page_jiPqR9","klarna_on_site_messaging_app_block_QrNBxT","description","collapsible-row-0","collapsible-row-3","recommended_products_f9d3mE"],"settings":{"gift_card_receipient_enabled":true,"is_above_the_fold":true,"enable_sticky_info":true,"gallery_layout":"thumbnail","media_size":"medium","mobile_thumbnails":"hide","hide_variants":true,"enable_video_looping":false,"padding_top":24,"padding_bottom":12}},"image_with_text_VQFBcc":{"type":"image-with-text","blocks":{"heading_BBt4J9":{"type":"heading","settings":{"heading":"Entdecke unsere Bestseller","heading_size":"h2"}},"text_xT9YMt":{"type":"text","settings":{"text":"<p>Von <em>Harte Nuss<\/em> bis <em>Kaffee<\/em> und sogar Creme-Liköre, hier ist für jeden etwas dabei. Die meistverkauften Produkte, die besten Geschenke, unsere Fans können nicht daneben liegen!<\/p>","text_style":"body"}},"button_G7BtD9":{"type":"button","settings":{"button_label":"Jetzt stöbern","button_link":"shopify:\/\/collections\/featured","button_style_white_color":false}}},"block_order":["heading_BBt4J9","text_xT9YMt","button_G7BtD9"],"settings":{"is_above_the_fold":false,"background_color":"#ffffff","text_color":"#000000","image":"shopify:\/\/shop_images\/HarteNuss_700_Front_D.jpg","image_caption":"","height":"adapt","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"overlap","color_scheme":"background-2","mobile_content_alignment":"left","padding_top":24,"padding_bottom":12}},"custom_liquid_yWEeX3":{"type":"custom-liquid","settings":{"custom_liquid":"<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"671a03587f92b41e14955578\">\n<\/div>","color_scheme":"background-1","padding_top":24,"padding_bottom":24}},"image_with_text_AgXa3j":{"type":"image-with-text","blocks":{"heading_i8cHHC":{"type":"heading","settings":{"heading":"Cocktail oder Longdrink?","heading_size":"h2"}},"text_hEaphi":{"type":"text","settings":{"text":"<p>Natürlich kann man unseren Likör nicht nur pur trinken, sondern auch in leckere Cocktails oder Longdrinks verarbeiten.<\/p>","text_style":"body"}},"button_fRWcxB":{"type":"button","settings":{"button_label":"Zu den Cocktails","button_link":"shopify:\/\/blogs\/cocktails","button_style_white_color":false}}},"block_order":["heading_i8cHHC","text_hEaphi","button_fRWcxB"],"settings":{"is_above_the_fold":false,"background_color":"#ffffff","text_color":"#000000","image":"shopify:\/\/shop_images\/Orange_Hawaiian.jpg","image_caption":"","height":"adapt","desktop_image_width":"medium","layout":"text_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"overlap","color_scheme":"background-2","mobile_content_alignment":"left","padding_top":12,"padding_bottom":0}},"product-recommendations":{"type":"product-recommendations","disabled":true,"settings":{"heading":"Das könnte dir auch gefallen","heading_size":"h2","products_to_show":4,"columns_desktop":4,"color_scheme":"background-1","image_ratio":"square","show_secondary_image":true,"show_vendor":false,"show_rating":false,"grey_sold_out_products":true,"columns_mobile":"2","padding_top":24,"padding_bottom":12}},"1668500027a509409d":{"type":"apps","blocks":{"5a8947ac-3258-44c8-b3fd-bf2720e27444":{"type":"shopify:\/\/apps\/yotpo-product-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf","settings":{"product":"pralle-kirsche-kirschlikoer"}}},"block_order":["5a8947ac-3258-44c8-b3fd-bf2720e27444"],"settings":{"include_margins":true}}},"order":["main","image_with_text_VQFBcc","custom_liquid_yWEeX3","image_with_text_AgXa3j","product-recommendations","1668500027a509409d"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "caption": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "0209f2a8-8af4-47f5-8f20-ee27e76c1a98": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "pralle-kirsche-kirschlikoer"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_sticky_cart": true,
+            "is_set": false,
+            "only_tier_gang_button": "Required gang tier not reached",
+            "set_size": 3,
+            "set_text": "Wähle 3 Produkte",
+            "show_dynamic_checkout": false,
+            "gang_url": "https://odonnell.de/account/login"
+          }
+        },
+        "wishlist_engine_product_page_jiPqR9": {
+          "type": "shopify://apps/se-wishlist-engine/blocks/Product-Page/8f7c0857-8e71-463d-a168-8e133094753b",
+          "settings": {}
+        },
+        "klarna_on_site_messaging_app_block_QrNBxT": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "disabled": true,
+          "settings": {
+            "data_key": "credit-promotion-badge",
+            "locale_option": "geolocation",
+            "locale_fallback": "",
+            "theme": "default",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "collapsible-row-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Komm in die Gang",
+            "icon": "silhouette",
+            "content": "<p>Werde Teil der <a href=\"/pages/gang\" title=\"Die O'Donnell Gang\">Moonshine-Gang</a>! Als Mitglied sammelst du mit jedem Kauf im Onlineshop Proof und kannst diese gegen gratis O’Donnell Geschenke eintauschen. Außerdem hast du Zugang zu exklusiven Produkten und kannst im Gang-Rang immer weiter aufsteigen. Worauf wartest du also noch? Wir schmuggeln dir den Schnaps direkt nach Hause — völlig legal natürlich!</p>",
+            "page": ""
+          }
+        },
+        "collapsible-row-3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Versand",
+            "icon": "truck",
+            "content": "<ul><li><strong>DHL Priority: Lieferzeit 1-2 Werktage</strong></li></ul><p>Alle Bestellungen bis 12 Uhr werden noch am selben Tag DHL übergeben.</p><ul><li><strong>DHL Standard: Lieferzeit 2-3 Werktage</strong></li></ul>",
+            "page": ""
+          }
+        },
+        "recommended_products_f9d3mE": {
+          "type": "recommended_products",
+          "settings": {
+            "title": "So individuell wie du: Werde kreativ und stelle dein Moonshine-Bundle zusammen!",
+            "content": "",
+            "button_text": "",
+            "product_list": [
+              "set3-700",
+              "set3-350"
+            ],
+            "enable_bulk_add": false,
+            "columns_desktop": "2",
+            "enable_desktop_slider": true,
+            "columns_mobile": "2",
+            "swipe_on_mobile": true
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "caption",
+        "0209f2a8-8af4-47f5-8f20-ee27e76c1a98",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "wishlist_engine_product_page_jiPqR9",
+        "klarna_on_site_messaging_app_block_QrNBxT",
+        "description",
+        "collapsible-row-0",
+        "collapsible-row-3",
+        "recommended_products_f9d3mE"
+      ],
+      "settings": {
+        "gift_card_receipient_enabled": true,
+        "is_above_the_fold": true,
+        "enable_sticky_info": true,
+        "gallery_layout": "thumbnail",
+        "media_size": "medium",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 24,
+        "padding_bottom": 12
+      }
+    },
+    "image_with_text_VQFBcc": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_BBt4J9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Entdecke unsere Bestseller",
+            "heading_size": "h2"
+          }
+        },
+        "text_xT9YMt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Von <em>Harte Nuss</em> bis <em>Kaffee</em> und sogar Creme-Liköre, hier ist für jeden etwas dabei. Die meistverkauften Produkte, die besten Geschenke, unsere Fans können nicht daneben liegen!</p>",
+            "text_style": "body"
+          }
+        },
+        "button_G7BtD9": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt stöbern",
+            "button_link": "shopify://collections/featured",
+            "button_style_white_color": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_BBt4J9",
+        "text_xT9YMt",
+        "button_G7BtD9"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "image": "shopify://shop_images/HarteNuss_700_Front_D.jpg",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 24,
+        "padding_bottom": 12
+      }
+    },
+    "custom_liquid_yWEeX3": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"671a03587f92b41e14955578\">\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "image_with_text_AgXa3j": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_i8cHHC": {
+          "type": "heading",
+          "settings": {
+            "heading": "Cocktail oder Longdrink?",
+            "heading_size": "h2"
+          }
+        },
+        "text_hEaphi": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Natürlich kann man unseren Likör nicht nur pur trinken, sondern auch in leckere Cocktails oder Longdrinks verarbeiten.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_fRWcxB": {
+          "type": "button",
+          "settings": {
+            "button_label": "Zu den Cocktails",
+            "button_link": "shopify://blogs/cocktails",
+            "button_style_white_color": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_i8cHHC",
+        "text_hEaphi",
+        "button_fRWcxB"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "image": "shopify://shop_images/Orange_Hawaiian.jpg",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "Das könnte dir auch gefallen",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "grey_sold_out_products": true,
+        "columns_mobile": "2",
+        "padding_top": 24,
+        "padding_bottom": 12
+      }
+    },
+    "1668500027a509409d": {
+      "type": "apps",
+      "blocks": {
+        "5a8947ac-3258-44c8-b3fd-bf2720e27444": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "pralle-kirsche-kirschlikoer"
+          }
+        }
+      },
+      "block_order": [
+        "5a8947ac-3258-44c8-b3fd-bf2720e27444"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "image_with_text_VQFBcc",
+    "custom_liquid_yWEeX3",
+    "image_with_text_AgXa3j",
+    "product-recommendations",
+    "1668500027a509409d"
+  ]
+}

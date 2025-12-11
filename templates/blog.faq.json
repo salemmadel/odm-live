@@ -1,1 +1,728 @@
-{"sections":{"main":{"type":"main-blog","disabled":true,"settings":{"is_above_the_fold":true,"show_tags_for_filter":true,"show_title":true,"cocktails_blog":false,"layout":"grid","show_image":true,"image_height":"small","show_date":false,"show_author":false,"show_excerpt":true,"show_excerpt_full":true,"padding_top":36,"padding_bottom":36}},"rich_text_E9WYLK":{"type":"rich-text","blocks":{"heading_CezkjK":{"type":"heading","settings":{"heading":"Häufig gestellte Fragen","heading_size":"h2"}}},"block_order":["heading_CezkjK"],"custom_css":[],"name":"t:sections.rich-text.presets.name","settings":{"color_scheme":"background-1","full_width":true,"padding_top":12,"padding_bottom":0}},"multicolumn_dLFaNV":{"type":"multicolumn","blocks":{"column_P3npyX":{"type":"column","settings":{"overlay_title":false,"overlay_title_position":"bottom","title":"","text":"","mobile_text":"","link_label":"Reklamation","link":"https:\/\/odonnell.de\/blogs\/faq-allgemein?hcUrl=%2Fde-DE#:~:text=Reklamation-,Reklamation,-Was%20soll%20ich","button_alignment":"center","selected_button":true,"grey_out_media":false}},"column_JnNzwe":{"type":"column","settings":{"overlay_title":false,"overlay_title_position":"bottom","title":"","text":"","mobile_text":"","link_label":"Bestellstatus & Lieferung","link":"https:\/\/odonnell.de\/blogs\/faq-allgemein#:~:text=Bestellstatus%20%26%20Lieferung,-Wie%20kann%20ich","button_alignment":"center","selected_button":true,"grey_out_media":false}},"column_mBzcNX":{"type":"column","settings":{"overlay_title":false,"overlay_title_position":"bottom","title":"","text":"","mobile_text":"","link_label":"Produkt","link":"https:\/\/odonnell.de\/blogs\/faq-allgemein#:~:text=Produktinformation,-Kann%20ich%20mein","button_alignment":"center","selected_button":true,"grey_out_media":false}},"column_KA4WGb":{"type":"column","settings":{"overlay_title":false,"overlay_title_position":"bottom","title":"","text":"","mobile_text":"","link_label":"Gutschein","link":"https:\/\/odonnell.de\/blogs\/faq-allgemein?hcUrl=%2Fde-DE#:~:text=Bestellstatus%20%26%20Lieferung,-Wie%20kann%20ich","button_alignment":"center","selected_button":true,"grey_out_media":false}},"column_PXWbKE":{"type":"column","settings":{"overlay_title":false,"overlay_title_position":"bottom","title":"","text":"","mobile_text":"","link_label":"Zahlung","link":"https:\/\/odonnell.de\/blogs\/faq-allgemein#:~:text=Zahlung,-Was%20soll%20ich","button_alignment":"center","selected_button":true,"grey_out_media":false}},"column_fqrKmU":{"type":"column","settings":{"overlay_title":false,"overlay_title_position":"center","title":"","text":"","mobile_text":"","link_label":"Aktionen & Sonstiges","link":"https:\/\/odonnell.de\/blogs\/faq-allgemein#:~:text=Aktionen%20%26%20Sonstiges,-Was%20muss%20ich","button_alignment":"center","selected_button":true,"grey_out_media":false}},"column_nM9JVm":{"type":"column","settings":{"overlay_title":false,"overlay_title_position":"bottom","title":"","text":"","mobile_text":"","link_label":"Newsletter","link":"https:\/\/odonnell.de\/blogs\/faq-allgemein#:~:text=Newsletter,-Wie%20melde%20ich%20mich%20vom","button_alignment":"center","selected_button":true,"grey_out_media":false}},"column_XrYLzr":{"type":"column","settings":{"overlay_title":false,"overlay_title_position":"bottom","title":"","text":"","mobile_text":"","link_label":"Kontakt","link":"https:\/\/odonnell.de\/blogs\/faq-allgemein#:~:text=den%20Newsletter%20an%3F-,Kontakt,-Mo%2DFr%2013","button_alignment":"center","selected_button":true,"grey_out_media":false}}},"block_order":["column_P3npyX","column_JnNzwe","column_mBzcNX","column_KA4WGb","column_PXWbKE","column_fqrKmU","column_nM9JVm","column_XrYLzr"],"custom_css":[".button {background-color: black; color: white; padding: 5px;}",".body {text-align: center;}",".multicolumn .button {margin-top: 0rem;}","@media screen and (min-width: 750px) {.section-template--18042486489356__multicolumn_dLFaNV-padding {padding-bottom: 12px; }}","@media screen and (max-width: 750px) {.multicolumn .button {padding-top: 1rem; padding-bottom: 1rem; height: 65px; } .multicolumn-card__info {padding-top: 0px; padding-left: 0px; padding-right: 0px; padding-bottom: 1.5rem; } .button {height: 65px; }}"],"name":"t:sections.multicolumn.presets.name","settings":{"is_above_the_fold":true,"title":"","heading_size":"h2","title_text":"","outer_padding":0,"image_width":"full","image_ratio":"adapt","image_border_color":"#ffffff","columns_desktop":4,"column_alignment":"center","background_style":"none","button_label":"","button_link":"","color_scheme":"background-1","columns_mobile":"2","swipe_on_mobile":false,"padding_top":12,"padding_bottom":12}},"collapsible_content_DBCbaq":{"type":"collapsible-content","blocks":{"collapsible_row_xh6AiR":{"type":"collapsible_row","settings":{"heading":"Was soll ich tun, wenn meine Ware beschädigt ist?","icon":"none","row_content":"<p>Es tut uns vorab leid, dass du deine Ware beschädigt erhalten hast. Bitte schicke ein Bild der beschädigten Ware und die Bestellnummer an unser <a href=\"https:\/\/odonnell.de\/blogs\/faq-allgemein\" target=\"_parent\">Support-Team<\/a>. Wir werden dein Anliegen dann schnellstmöglich prüfen.<\/p>","custom_liquid":"","page":""}},"collapsible_row_imfQCk":{"type":"collapsible_row","settings":{"heading":"Was soll ich tun, wenn ich die falschen Produkte erhalten habe?","icon":"none","row_content":"<p>Es tut uns sehr leid, falls du einen falschen Artikel erhalten haben solltest. Es kann schon mal vorkommen, dass es bei einer Bestellung zu einer Verwechslung kommt und nicht der richtige Artikel versendet wird. In dem Fall wende dich bitte unter Angabe deiner Bestellnummer an unser <a href=\"https:\/\/odonnell.de\/blogs\/faq-allgemein\" target=\"_parent\">Support-Team<\/a>. Wir werden dein Anliegen schnellstmöglich klären und dir das richtige Produkt zu senden. <\/p>","custom_liquid":"","page":""}}},"block_order":["collapsible_row_xh6AiR","collapsible_row_imfQCk"],"custom_css":[],"name":"t:sections.collapsible_content.presets.name","settings":{"is_above_the_fold":true,"caption":"","heading":"Reklamation","heading_size":"h2","heading_alignment":"center","layout":"none","color_scheme":"background-1","container_color_scheme":"background-2","open_first_collapsible_row":false,"image_ratio":"adapt","desktop_layout":"image_second","padding_top":12,"padding_bottom":12}},"collapsible_content_6gL8Ji":{"type":"collapsible-content","blocks":{"collapsible_row_iKd86c":{"type":"collapsible_row","settings":{"heading":"Wie kann ich meine Bestellung verfolgen?","icon":"none","row_content":"<p>Sobald du deine Bestellung aufgegeben hast, erhältst du eine Bestätigungs-E-Mail mit deinen Bestelldaten. Du wirst außerdem per E-Mail benachrichtigt, sobald dein Paket versendet wird. In der Versandbestätigung findest du eine Trackingnummer, mit der du deine Sendung auf der DHL-Website (<a href=\"https:\/\/odonnell-de-wb788josok2.gorgias.help\/de-DE\/www.dhl.de\">www.dhl.de<\/a>) nachverfolgen kannst. Wenn du ein Konto erstellt hast, kannst du die Trackingnummer auch in deiner Bestellübersicht einsehen.<\/p><p>Die Informationen zur Sendungsverfolgung sind möglicherweise nicht sofort verfügbar. Falls du sie nicht direkt sehen kannst, hab bitte etwas Geduld – es kann einige Minuten dauern, bis der Status aktualisiert wird.<\/p>","custom_liquid":"","page":""}},"collapsible_row_cbbCCF":{"type":"collapsible_row","settings":{"heading":"In welche Länder liefert ihr eure Produkte?","icon":"none","row_content":"<p>Wir liefern unsere Produkte in alle <strong>EU-Länder<\/strong>.<\/p><p>Wir haben eigene Onlineshops für das Vereinigte Königreich, Österreich, die Niederlande, Frankreich, die Schweiz und Spanien. Diese findest du hier:<\/p><ul><li><a href=\"https:\/\/odonnellmoonshine.co.uk\/\" target=\"_parent\">Vereinigtes Königreich<\/a><\/li><li><a href=\"https:\/\/odonnell.at\/\" target=\"_parent\">Österreich <\/a><\/li><li><a href=\"https:\/\/odonnell.nl\/\" target=\"_parent\">Niederlande<\/a><\/li><li><a href=\"https:\/\/www.odonnell.fr\/\" target=\"_parent\">Frankreich <\/a><\/li><li><a href=\"https:\/\/odonnellmoonshine.ch\/\" target=\"_parent\">Schweiz<\/a><\/li><li><a href=\"https:\/\/odonnellmoonshine.es\/\" target=\"_parent\">Spanien<\/a><\/li><\/ul>","custom_liquid":"","page":""}},"collapsible_row_Cpbhf4":{"type":"collapsible_row","settings":{"heading":"Wie hoch sind die Versandkosten?","icon":"none","row_content":"<p>Die Versandkosten innerhalb Deutschlands betragen <strong>pro Bestellung 3,90€<\/strong>. Ab einem Bestellwert von 75€ ist der Versand kostenfrei.<\/p><p>Die Versandkosten für den Rest der EU betragen pro Bestellung 19,90€. Ab einem Bestellwert von 90€ ist der Versand kostenfre<\/p>","custom_liquid":"","page":""}},"collapsible_row_GQLLLD":{"type":"collapsible_row","settings":{"heading":"Wie lange dauert die Bearbeitung meiner Bestellung?","icon":"none","row_content":"<p>Alle Bestellungen werden von Montag bis Freitag innerhalb von <strong>2 - 4 Werktagen<\/strong> für den Versand vorbereitet.<\/p><p><em>Bitte beachte, dass es in der Weihnachtszeit und während Aktionen aufgrund des erhöhten Paketaufkommens zu Verzögerungen bei der Versandzeit kommen kann<\/em><\/p>","custom_liquid":"","page":""}},"collapsible_row_3UCFiA":{"type":"collapsible_row","settings":{"heading":"Kann ich meine Bestellung nachträglich noch ändern?","icon":"none","row_content":"<p>Sobald du deine Bestellung getätigt hast, wird diese schnellstmöglich von unserem Lager für den Versand vorbereitet. Teile uns gerne deine Bestellnummer und die gewünschte Änderung mit, sodass wir überprüfen können, ob eine Änderung noch möglich ist.  <\/p>","custom_liquid":"","page":""}},"collapsible_row_ApgWCC":{"type":"collapsible_row","settings":{"heading":"Wie kann ich meine Bestellung stornieren?","icon":"none","row_content":"<p>Bitte teile uns deine Bestellnummer (z.B. #DE-624198) und den Grund für die Stornierung mit. Wir werden dann überprüfen, ob eine Stornierung noch möglich ist.<\/p><p>Bestellungen können nur storniert werden, solange die Bearbeitung noch nicht zu weit fortgeschritten ist. Falls deine Bestellung bereits versendet wurde, findest du weitere Informationen in unseren Rückgabebestimmungen. Kontaktiere gerne unser Support-Team bei weiteren Fragen.<\/p>","custom_liquid":"","page":""}}},"block_order":["collapsible_row_iKd86c","collapsible_row_cbbCCF","collapsible_row_Cpbhf4","collapsible_row_GQLLLD","collapsible_row_3UCFiA","collapsible_row_ApgWCC"],"name":"t:sections.collapsible_content.presets.name","settings":{"is_above_the_fold":false,"caption":"","heading":"Bestellstatus & Lieferung","heading_size":"h2","heading_alignment":"center","layout":"none","color_scheme":"background-1","container_color_scheme":"background-2","open_first_collapsible_row":false,"image_ratio":"adapt","desktop_layout":"image_second","padding_top":12,"padding_bottom":12}},"collapsible_content_8Ww9KP":{"type":"collapsible-content","blocks":{"collapsible_row_7DBNVM":{"type":"collapsible_row","settings":{"heading":"Wie kann ich meine Bestellung stornieren?","icon":"none","row_content":"<p>Bitte teile uns deine Bestellnummer (z.B. #DE-624198) und den Grund für die Stornierung mit. Wir werden dann überprüfen, ob eine Stornierung noch möglich ist.<\/p><p>Bestellungen können nur storniert werden, solange die Bearbeitung noch nicht zu weit fortgeschritten ist. Falls deine Bestellung bereits versendet wurde, findest du weitere Informationen in unseren Rückgabebestimmungen. Kontaktiere gerne unser Support-Team bei weiteren Fragen.<\/p>","custom_liquid":"","page":""}}},"block_order":["collapsible_row_7DBNVM"],"name":"t:sections.collapsible_content.presets.name","settings":{"is_above_the_fold":false,"caption":"","heading":"Widerruf","heading_size":"h2","heading_alignment":"center","layout":"none","color_scheme":"background-1","container_color_scheme":"background-2","open_first_collapsible_row":false,"image_ratio":"adapt","desktop_layout":"image_second","padding_top":12,"padding_bottom":12}},"collapsible_content_ibCXc4":{"type":"collapsible-content","blocks":{"collapsible_row_VT46Dy":{"type":"collapsible_row","settings":{"heading":"Kann ich mein leeres Glas zurück geben?","icon":"none","row_content":"<p>Leider bieten wir aktuell keine Rücknahme der geöffneten Gläser an. Zudem ist es aus hygienischen Gründen bisher nicht möglich, die Gläser nachzufüllen.<\/p><p>Dennoch bieten wir viele Möglichkeiten an, die Gläser wiederzuverwenden. Hier sind unsere  verschiedenen <a href=\"https:\/\/odonnell.de\/collections\/upcycling\" target=\"_parent\">Aufsätze oder das Upcycling Set<\/a>.<\/p><p>Falls du keine weitere Verwendung für die Gläser findest, entsorge sie bitte ordnungsgerecht im Glascontainer.<\/p>","custom_liquid":"","page":""}},"collapsible_row_tEMfbn":{"type":"collapsible_row","settings":{"heading":"Infos für Allergiker, Veganer und glutenintolerante Personen","icon":"none","row_content":"<p>Unsere Liköre sind für Allergiker geeignet, da während des Destillationsprozesses alle Allergene entfernt werden. Auch Veganer und Personen mit Glutenintoleranz können unsere Produkte problemlos genießen.<\/p><p>Alle unsere Produkte sind vegan – mit Ausnahme der Cream-Sorten, da diese Milch und Milcherzeugnisse enthalten.<\/p><p>Bei Rückfragen oder wenn du mehr Informationen zu spezifischen Produkten benötigst, steht dir unser Support-Team jederzeit zur Verfügung.<\/p>","custom_liquid":"","page":""}},"collapsible_row_ReD4nr":{"type":"collapsible_row","settings":{"heading":"Wie lange ist der Likör haltbar?","icon":"none","row_content":"<p>Unsere Produkte haben kein Mindesthaltbarkeitsdatum, da sie einen Alkoholgehalt von über zehn Prozent enthalten. Grundsätzlich sind die verschlossenen Gläser bei richtiger Lagerung langfristig haltbar.<\/p><p>Falls ein Glas bereits geöffnet wurde, empfehlen wir, es wieder mit dem Originaldeckel zu verschließen und an einem kühlen Ort aufzubewahren, um die Qualität bestmöglich zu erhalten. <\/p><p>Ausgeschlossen davon sind unsere Creamsorten, da diese Milch und Milcherzeugnissen enthalten. Hier kannst du das Mindesthaltbarkeitsdatum dem Etikett entnehmen.<\/p><p>Das geöffnete Glas empfehlen wir dementsprechend gekühlt zu lagern.<\/p>","custom_liquid":"","page":""}}},"block_order":["collapsible_row_VT46Dy","collapsible_row_tEMfbn","collapsible_row_ReD4nr"],"name":"t:sections.collapsible_content.presets.name","settings":{"is_above_the_fold":false,"caption":"","heading":"Produktinformation","heading_size":"h2","heading_alignment":"center","layout":"none","color_scheme":"background-1","container_color_scheme":"background-1","open_first_collapsible_row":false,"image_ratio":"adapt","desktop_layout":"image_second","padding_top":12,"padding_bottom":12}},"collapsible_content_haa9Dh":{"type":"collapsible-content","blocks":{"collapsible_row_VtLC9x":{"type":"collapsible_row","settings":{"heading":"Kann ich den Gutschein mehrmals einlösen?","icon":"none","row_content":"<p>Unsere Gutscheine sind mehrfach einlösbar, sodass du diesen in Teilen für deine Bestellung verwenden kannst.<\/p><p>Falls dein Code nicht funktioniert, hilft dir unser <a href=\"https:\/\/odonnell.de\/blogs\/faq-allgemein\" target=\"_parent\">Support-Team<\/a> gerne weiter.<\/p>","custom_liquid":"","page":""}},"collapsible_row_XTaYr8":{"type":"collapsible_row","settings":{"heading":"Wo kann ich meinen Gutschein einlösen?","icon":"none","row_content":"<p>Du kannst deinen Gutschein ganz einfach beim Checkout einlösen. Falls dein Gutschein oder Rabattcode nicht funktioniert, hilft dir unser <a href=\"https:\/\/odonnell.de\/blogs\/faq-allgemein\" target=\"_parent\">Support-Team<\/a> gerne weiter.<\/p>","custom_liquid":"","page":""}}},"block_order":["collapsible_row_VtLC9x","collapsible_row_XTaYr8"],"name":"t:sections.collapsible_content.presets.name","settings":{"is_above_the_fold":false,"caption":"","heading":"Gutschein","heading_size":"h2","heading_alignment":"center","layout":"none","color_scheme":"background-1","container_color_scheme":"background-2","open_first_collapsible_row":false,"image_ratio":"adapt","desktop_layout":"image_second","padding_top":12,"padding_bottom":12}},"collapsible_content_LGP99C":{"type":"collapsible-content","blocks":{"collapsible_row_tmfzbW":{"type":"collapsible_row","settings":{"heading":"Was soll ich tun, wenn ich Probleme mit Klarna habe?","icon":"none","row_content":"<p>Bitte melde dich bei Problemen mit Klarna direkt an das Klarna Support Team. Solltest du Klarna als Zahlung ausgewählt haben, musst du die Rechnung dort begleichen.Solltest du eine doppelte Zahlung ausgeführt haben, kannst du ein Foto des Zahlungsnachweises an unser <a href=\"https:\/\/odonnell.de\/blogs\/faq-allgemein?hcUrl=%2Fde-DE\" target=\"_parent\">Support Team<\/a>schicken.<\/p>","custom_liquid":"","page":""}},"collapsible_row_NA4bw8":{"type":"collapsible_row","settings":{"heading":"Welche Zahlungsmethoden gibt es?","icon":"none","row_content":"<p>Wir akzeptieren Mastercard, Maestro, Amex, Visa, PayPal sowie Sofortüberweisung (Klarna), Shop Pay, Google Pay und Giropay. Ein Kauf auf Rechnung ist über Klarna möglich.<\/p>","custom_liquid":"","page":""}}},"block_order":["collapsible_row_tmfzbW","collapsible_row_NA4bw8"],"name":"t:sections.collapsible_content.presets.name","settings":{"is_above_the_fold":false,"caption":"","heading":"Zahlung","heading_size":"h2","heading_alignment":"center","layout":"none","color_scheme":"background-1","container_color_scheme":"background-2","open_first_collapsible_row":false,"image_ratio":"adapt","desktop_layout":"image_second","padding_top":12,"padding_bottom":12}},"collapsible_content_wr4Hpr":{"type":"collapsible-content","blocks":{"collapsible_row_E4LqUj":{"type":"collapsible_row","settings":{"heading":"Was muss ich bei den Aktionen beachten?","icon":"none","row_content":"<p>Unsere Aktionen sind nur in einem bestimmten Zeitraum verfügbar und können nicht mit Rabattcodes oder anderen Aktionen kombiniert werden. Bei allen Aktionen wirst du vorab über alle wichtigen Details informiert, wenn du den Newsletter abonniert hast.<\/p>","custom_liquid":"","page":""}},"collapsible_row_KHfrrR":{"type":"collapsible_row","settings":{"heading":"Sind Vorbestellungen bei euch möglich?","icon":"none","row_content":"<p>Leider sind Vorbestellungen bisher noch nicht möglich. Wenn du den Newsletter abonnierst, wirst du immer über unsere neusten Angebote informiert. <\/p>","custom_liquid":"","page":""}}},"block_order":["collapsible_row_E4LqUj","collapsible_row_KHfrrR"],"name":"t:sections.collapsible_content.presets.name","settings":{"is_above_the_fold":false,"caption":"","heading":"Aktionen & Sonstiges","heading_size":"h2","heading_alignment":"center","layout":"none","color_scheme":"background-1","container_color_scheme":"background-2","open_first_collapsible_row":false,"image_ratio":"adapt","desktop_layout":"image_second","padding_top":12,"padding_bottom":12}},"collapsible_content_RyzK3i":{"type":"collapsible-content","blocks":{"collapsible_row_8fnb88":{"type":"collapsible_row","settings":{"heading":"Sind Vorbestellungen bei euch möglich?","icon":"none","row_content":"<p>Leider sind Vorbestellungen bisher noch nicht möglich. Wenn du den Newsletter abonnierst, wirst du immer über unsere neusten Angebote informiert. <\/p>","custom_liquid":"","page":""}}},"block_order":["collapsible_row_8fnb88"],"name":"t:sections.collapsible_content.presets.name","settings":{"is_above_the_fold":false,"caption":"","heading":"Sonstiges","heading_size":"h2","heading_alignment":"center","layout":"none","color_scheme":"background-1","container_color_scheme":"background-2","open_first_collapsible_row":false,"image_ratio":"adapt","desktop_layout":"image_second","padding_top":12,"padding_bottom":12}},"collapsible_content_MQWRyP":{"type":"collapsible-content","blocks":{"collapsible_row_pNmwQa":{"type":"collapsible_row","settings":{"heading":"Wie melde ich mich vom Newsletter ab?","icon":"none","row_content":"<p>Du kannst dich jederzeit abmelden, indem du auf den Link \"Unsubscribe\" unten in dem Newsletter klickst.<\/p>","custom_liquid":"","page":""}},"collapsible_row_QTQqcH":{"type":"collapsible_row","settings":{"heading":"Wie melde ich mich für den Newsletter an?","icon":"none","row_content":"<p>Wenn du Interesse hast, immer auf dem neusten Stand zu bleiben, kannst du ganz einfach unseren Newsletter abonnieren. Zusätzlich erhältst du einen 10% Rabattcode für die Anmeldung, den du bei deiner Bestellung einlösen kannst. Falls du dich später doch umentscheidest, kannst du dich jederzeit ganz unkompliziert wieder abmelden.<\/p><p><strong>Wichtig: <\/strong>Um dich beim Newsletter anzumelden, musst du deine E-Mail in jedem Fall bestätigen.<\/p>","custom_liquid":"","page":""}}},"block_order":["collapsible_row_pNmwQa","collapsible_row_QTQqcH"],"name":"t:sections.collapsible_content.presets.name","settings":{"is_above_the_fold":false,"caption":"","heading":"Newsletter","heading_size":"h2","heading_alignment":"center","layout":"none","color_scheme":"background-1","container_color_scheme":"background-2","open_first_collapsible_row":false,"image_ratio":"adapt","desktop_layout":"image_second","padding_top":12,"padding_bottom":12}},"rich_text_iieR3x":{"type":"rich-text","blocks":{"heading_bYEi6c":{"type":"heading","settings":{"heading":"Kontakt","heading_size":"h2"}}},"block_order":["heading_bYEi6c"],"name":"t:sections.rich-text.presets.name","settings":{"color_scheme":"background-1","full_width":true,"padding_top":12,"padding_bottom":12}},"1053a5d1-d67a-419b-ad1c-c2e3e9a26981":{"type":"contact-form","settings":{"is_above_the_fold":false,"heading":"","heading_size":"h2","color_scheme":"background-1","padding_top":12,"padding_bottom":20}},"custom_liquid_giz8MF":{"type":"custom-liquid","disabled":true,"custom_css":[],"settings":{"custom_liquid":"<script defer src=\"https:\/\/help-center.gorgias.help\/api\/help-centers\/loader.js?v=2\" data-gorgias-loader-help-center data-gorgias-help-center-uid=\"gyvvxymv\"><\/script>","color_scheme":"background-1","padding_top":12,"padding_bottom":12}},"custom_liquid_qXmckc":{"type":"custom-liquid","disabled":true,"settings":{"custom_liquid":"<div data-gorgias-contact-form-uid=\"66kk0za5\"><\/div>\n<script defer src=\"https:\/\/contact.gorgias.help\/api\/contact-forms\/loader.js?v=2\" data-gorgias-loader-contact-form><\/script>","color_scheme":"background-1","padding_top":12,"padding_bottom":24}}},"order":["main","rich_text_E9WYLK","multicolumn_dLFaNV","collapsible_content_DBCbaq","collapsible_content_6gL8Ji","collapsible_content_8Ww9KP","collapsible_content_ibCXc4","collapsible_content_haa9Dh","collapsible_content_LGP99C","collapsible_content_wr4Hpr","collapsible_content_RyzK3i","collapsible_content_MQWRyP","rich_text_iieR3x","1053a5d1-d67a-419b-ad1c-c2e3e9a26981","custom_liquid_giz8MF","custom_liquid_qXmckc"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-blog",
+      "disabled": true,
+      "settings": {
+        "is_above_the_fold": true,
+        "show_tags_for_filter": true,
+        "show_title": true,
+        "cocktails_blog": false,
+        "layout": "grid",
+        "show_image": true,
+        "image_height": "small",
+        "show_date": false,
+        "show_author": false,
+        "show_excerpt": true,
+        "show_excerpt_full": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_E9WYLK": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_CezkjK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Häufig gestellte Fragen",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_CezkjK"
+      ],
+      "custom_css": [],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_dLFaNV": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_P3npyX": {
+          "type": "column",
+          "settings": {
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "",
+            "text": "",
+            "mobile_text": "",
+            "link_label": "Reklamation",
+            "link": "https://odonnell.de/blogs/faq-allgemein?hcUrl=%2Fde-DE#:~:text=Reklamation-,Reklamation,-Was%20soll%20ich",
+            "button_alignment": "center",
+            "selected_button": true,
+            "grey_out_media": false
+          }
+        },
+        "column_JnNzwe": {
+          "type": "column",
+          "settings": {
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "",
+            "text": "",
+            "mobile_text": "",
+            "link_label": "Bestellstatus & Lieferung",
+            "link": "https://odonnell.de/blogs/faq-allgemein#:~:text=Bestellstatus%20%26%20Lieferung,-Wie%20kann%20ich",
+            "button_alignment": "center",
+            "selected_button": true,
+            "grey_out_media": false
+          }
+        },
+        "column_mBzcNX": {
+          "type": "column",
+          "settings": {
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "",
+            "text": "",
+            "mobile_text": "",
+            "link_label": "Produkt",
+            "link": "https://odonnell.de/blogs/faq-allgemein#:~:text=Produktinformation,-Kann%20ich%20mein",
+            "button_alignment": "center",
+            "selected_button": true,
+            "grey_out_media": false
+          }
+        },
+        "column_KA4WGb": {
+          "type": "column",
+          "settings": {
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "",
+            "text": "",
+            "mobile_text": "",
+            "link_label": "Gutschein",
+            "link": "https://odonnell.de/blogs/faq-allgemein?hcUrl=%2Fde-DE#:~:text=Bestellstatus%20%26%20Lieferung,-Wie%20kann%20ich",
+            "button_alignment": "center",
+            "selected_button": true,
+            "grey_out_media": false
+          }
+        },
+        "column_PXWbKE": {
+          "type": "column",
+          "settings": {
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "",
+            "text": "",
+            "mobile_text": "",
+            "link_label": "Zahlung",
+            "link": "https://odonnell.de/blogs/faq-allgemein#:~:text=Zahlung,-Was%20soll%20ich",
+            "button_alignment": "center",
+            "selected_button": true,
+            "grey_out_media": false
+          }
+        },
+        "column_fqrKmU": {
+          "type": "column",
+          "settings": {
+            "overlay_title": false,
+            "overlay_title_position": "center",
+            "title": "",
+            "text": "",
+            "mobile_text": "",
+            "link_label": "Aktionen & Sonstiges",
+            "link": "https://odonnell.de/blogs/faq-allgemein#:~:text=Aktionen%20%26%20Sonstiges,-Was%20muss%20ich",
+            "button_alignment": "center",
+            "selected_button": true,
+            "grey_out_media": false
+          }
+        },
+        "column_nM9JVm": {
+          "type": "column",
+          "settings": {
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "",
+            "text": "",
+            "mobile_text": "",
+            "link_label": "Newsletter",
+            "link": "https://odonnell.de/blogs/faq-allgemein#:~:text=Newsletter,-Wie%20melde%20ich%20mich%20vom",
+            "button_alignment": "center",
+            "selected_button": true,
+            "grey_out_media": false
+          }
+        },
+        "column_XrYLzr": {
+          "type": "column",
+          "settings": {
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "",
+            "text": "",
+            "mobile_text": "",
+            "link_label": "Kontakt",
+            "link": "https://odonnell.de/blogs/faq-allgemein#:~:text=den%20Newsletter%20an%3F-,Kontakt,-Mo%2DFr%2013",
+            "button_alignment": "center",
+            "selected_button": true,
+            "grey_out_media": false
+          }
+        }
+      },
+      "block_order": [
+        "column_P3npyX",
+        "column_JnNzwe",
+        "column_mBzcNX",
+        "column_KA4WGb",
+        "column_PXWbKE",
+        "column_fqrKmU",
+        "column_nM9JVm",
+        "column_XrYLzr"
+      ],
+      "custom_css": [
+        ".button {background-color: black; color: white; padding: 5px;}",
+        ".body {text-align: center;}",
+        ".multicolumn .button {margin-top: 0rem;}",
+        "@media screen and (min-width: 750px) {.section-template--18042486489356__multicolumn_dLFaNV-padding {padding-bottom: 12px; }}",
+        "@media screen and (max-width: 750px) {.multicolumn .button {padding-top: 1rem; padding-bottom: 1rem; height: 65px; } .multicolumn-card__info {padding-top: 0px; padding-left: 0px; padding-right: 0px; padding-bottom: 1.5rem; } .button {height: 65px; }}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "is_above_the_fold": true,
+        "title": "",
+        "heading_size": "h2",
+        "title_text": "",
+        "outer_padding": 0,
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "image_border_color": "#ffffff",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "collapsible_content_DBCbaq": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_xh6AiR": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Was soll ich tun, wenn meine Ware beschädigt ist?",
+            "icon": "none",
+            "row_content": "<p>Es tut uns vorab leid, dass du deine Ware beschädigt erhalten hast. Bitte schicke ein Bild der beschädigten Ware und die Bestellnummer an unser <a href=\"https://odonnell.de/blogs/faq-allgemein\" target=\"_parent\">Support-Team</a>. Wir werden dein Anliegen dann schnellstmöglich prüfen.</p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_imfQCk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Was soll ich tun, wenn ich die falschen Produkte erhalten habe?",
+            "icon": "none",
+            "row_content": "<p>Es tut uns sehr leid, falls du einen falschen Artikel erhalten haben solltest. Es kann schon mal vorkommen, dass es bei einer Bestellung zu einer Verwechslung kommt und nicht der richtige Artikel versendet wird. In dem Fall wende dich bitte unter Angabe deiner Bestellnummer an unser <a href=\"https://odonnell.de/blogs/faq-allgemein\" target=\"_parent\">Support-Team</a>. Wir werden dein Anliegen schnellstmöglich klären und dir das richtige Produkt zu senden. </p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_xh6AiR",
+        "collapsible_row_imfQCk"
+      ],
+      "custom_css": [],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "is_above_the_fold": true,
+        "caption": "",
+        "heading": "Reklamation",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "collapsible_content_6gL8Ji": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_iKd86c": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wie kann ich meine Bestellung verfolgen?",
+            "icon": "none",
+            "row_content": "<p>Sobald du deine Bestellung aufgegeben hast, erhältst du eine Bestätigungs-E-Mail mit deinen Bestelldaten. Du wirst außerdem per E-Mail benachrichtigt, sobald dein Paket versendet wird. In der Versandbestätigung findest du eine Trackingnummer, mit der du deine Sendung auf der DHL-Website (<a href=\"https://odonnell-de-wb788josok2.gorgias.help/de-DE/www.dhl.de\">www.dhl.de</a>) nachverfolgen kannst. Wenn du ein Konto erstellt hast, kannst du die Trackingnummer auch in deiner Bestellübersicht einsehen.</p><p>Die Informationen zur Sendungsverfolgung sind möglicherweise nicht sofort verfügbar. Falls du sie nicht direkt sehen kannst, hab bitte etwas Geduld – es kann einige Minuten dauern, bis der Status aktualisiert wird.</p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_cbbCCF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "In welche Länder liefert ihr eure Produkte?",
+            "icon": "none",
+            "row_content": "<p>Wir liefern unsere Produkte in alle <strong>EU-Länder</strong>.</p><p>Wir haben eigene Onlineshops für das Vereinigte Königreich, Österreich, die Niederlande, Frankreich, die Schweiz und Spanien. Diese findest du hier:</p><ul><li><a href=\"https://odonnellmoonshine.co.uk/\" target=\"_parent\">Vereinigtes Königreich</a></li><li><a href=\"https://odonnell.at/\" target=\"_parent\">Österreich </a></li><li><a href=\"https://odonnell.nl/\" target=\"_parent\">Niederlande</a></li><li><a href=\"https://www.odonnell.fr/\" target=\"_parent\">Frankreich </a></li><li><a href=\"https://odonnellmoonshine.ch/\" target=\"_parent\">Schweiz</a></li><li><a href=\"https://odonnellmoonshine.es/\" target=\"_parent\">Spanien</a></li></ul>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_Cpbhf4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wie hoch sind die Versandkosten?",
+            "icon": "none",
+            "row_content": "<p>Die Versandkosten innerhalb Deutschlands betragen <strong>pro Bestellung 3,90€</strong>. Ab einem Bestellwert von 75€ ist der Versand kostenfrei.</p><p>Die Versandkosten für den Rest der EU betragen pro Bestellung 19,90€. Ab einem Bestellwert von 90€ ist der Versand kostenfre</p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_GQLLLD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wie lange dauert die Bearbeitung meiner Bestellung?",
+            "icon": "none",
+            "row_content": "<p>Alle Bestellungen werden von Montag bis Freitag innerhalb von <strong>2 - 4 Werktagen</strong> für den Versand vorbereitet.</p><p><em>Bitte beachte, dass es in der Weihnachtszeit und während Aktionen aufgrund des erhöhten Paketaufkommens zu Verzögerungen bei der Versandzeit kommen kann</em></p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_3UCFiA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Kann ich meine Bestellung nachträglich noch ändern?",
+            "icon": "none",
+            "row_content": "<p>Sobald du deine Bestellung getätigt hast, wird diese schnellstmöglich von unserem Lager für den Versand vorbereitet. Teile uns gerne deine Bestellnummer und die gewünschte Änderung mit, sodass wir überprüfen können, ob eine Änderung noch möglich ist.  </p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_ApgWCC": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wie kann ich meine Bestellung stornieren?",
+            "icon": "none",
+            "row_content": "<p>Bitte teile uns deine Bestellnummer (z.B. #DE-624198) und den Grund für die Stornierung mit. Wir werden dann überprüfen, ob eine Stornierung noch möglich ist.</p><p>Bestellungen können nur storniert werden, solange die Bearbeitung noch nicht zu weit fortgeschritten ist. Falls deine Bestellung bereits versendet wurde, findest du weitere Informationen in unseren Rückgabebestimmungen. Kontaktiere gerne unser Support-Team bei weiteren Fragen.</p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_iKd86c",
+        "collapsible_row_cbbCCF",
+        "collapsible_row_Cpbhf4",
+        "collapsible_row_GQLLLD",
+        "collapsible_row_3UCFiA",
+        "collapsible_row_ApgWCC"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "caption": "",
+        "heading": "Bestellstatus & Lieferung",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "collapsible_content_8Ww9KP": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_7DBNVM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wie kann ich meine Bestellung stornieren?",
+            "icon": "none",
+            "row_content": "<p>Bitte teile uns deine Bestellnummer (z.B. #DE-624198) und den Grund für die Stornierung mit. Wir werden dann überprüfen, ob eine Stornierung noch möglich ist.</p><p>Bestellungen können nur storniert werden, solange die Bearbeitung noch nicht zu weit fortgeschritten ist. Falls deine Bestellung bereits versendet wurde, findest du weitere Informationen in unseren Rückgabebestimmungen. Kontaktiere gerne unser Support-Team bei weiteren Fragen.</p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_7DBNVM"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "caption": "",
+        "heading": "Widerruf",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "collapsible_content_ibCXc4": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_VT46Dy": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Kann ich mein leeres Glas zurück geben?",
+            "icon": "none",
+            "row_content": "<p>Leider bieten wir aktuell keine Rücknahme der geöffneten Gläser an. Zudem ist es aus hygienischen Gründen bisher nicht möglich, die Gläser nachzufüllen.</p><p>Dennoch bieten wir viele Möglichkeiten an, die Gläser wiederzuverwenden. Hier sind unsere  verschiedenen <a href=\"https://odonnell.de/collections/upcycling\" target=\"_parent\">Aufsätze oder das Upcycling Set</a>.</p><p>Falls du keine weitere Verwendung für die Gläser findest, entsorge sie bitte ordnungsgerecht im Glascontainer.</p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_tEMfbn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Infos für Allergiker, Veganer und glutenintolerante Personen",
+            "icon": "none",
+            "row_content": "<p>Unsere Liköre sind für Allergiker geeignet, da während des Destillationsprozesses alle Allergene entfernt werden. Auch Veganer und Personen mit Glutenintoleranz können unsere Produkte problemlos genießen.</p><p>Alle unsere Produkte sind vegan – mit Ausnahme der Cream-Sorten, da diese Milch und Milcherzeugnisse enthalten.</p><p>Bei Rückfragen oder wenn du mehr Informationen zu spezifischen Produkten benötigst, steht dir unser Support-Team jederzeit zur Verfügung.</p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_ReD4nr": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wie lange ist der Likör haltbar?",
+            "icon": "none",
+            "row_content": "<p>Unsere Produkte haben kein Mindesthaltbarkeitsdatum, da sie einen Alkoholgehalt von über zehn Prozent enthalten. Grundsätzlich sind die verschlossenen Gläser bei richtiger Lagerung langfristig haltbar.</p><p>Falls ein Glas bereits geöffnet wurde, empfehlen wir, es wieder mit dem Originaldeckel zu verschließen und an einem kühlen Ort aufzubewahren, um die Qualität bestmöglich zu erhalten. </p><p>Ausgeschlossen davon sind unsere Creamsorten, da diese Milch und Milcherzeugnissen enthalten. Hier kannst du das Mindesthaltbarkeitsdatum dem Etikett entnehmen.</p><p>Das geöffnete Glas empfehlen wir dementsprechend gekühlt zu lagern.</p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_VT46Dy",
+        "collapsible_row_tEMfbn",
+        "collapsible_row_ReD4nr"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "caption": "",
+        "heading": "Produktinformation",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-1",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "collapsible_content_haa9Dh": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_VtLC9x": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Kann ich den Gutschein mehrmals einlösen?",
+            "icon": "none",
+            "row_content": "<p>Unsere Gutscheine sind mehrfach einlösbar, sodass du diesen in Teilen für deine Bestellung verwenden kannst.</p><p>Falls dein Code nicht funktioniert, hilft dir unser <a href=\"https://odonnell.de/blogs/faq-allgemein\" target=\"_parent\">Support-Team</a> gerne weiter.</p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_XTaYr8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wo kann ich meinen Gutschein einlösen?",
+            "icon": "none",
+            "row_content": "<p>Du kannst deinen Gutschein ganz einfach beim Checkout einlösen. Falls dein Gutschein oder Rabattcode nicht funktioniert, hilft dir unser <a href=\"https://odonnell.de/blogs/faq-allgemein\" target=\"_parent\">Support-Team</a> gerne weiter.</p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_VtLC9x",
+        "collapsible_row_XTaYr8"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "caption": "",
+        "heading": "Gutschein",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "collapsible_content_LGP99C": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_tmfzbW": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Was soll ich tun, wenn ich Probleme mit Klarna habe?",
+            "icon": "none",
+            "row_content": "<p>Bitte melde dich bei Problemen mit Klarna direkt an das Klarna Support Team. Solltest du Klarna als Zahlung ausgewählt haben, musst du die Rechnung dort begleichen.Solltest du eine doppelte Zahlung ausgeführt haben, kannst du ein Foto des Zahlungsnachweises an unser <a href=\"https://odonnell.de/blogs/faq-allgemein?hcUrl=%2Fde-DE\" target=\"_parent\">Support Team</a>schicken.</p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_NA4bw8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Welche Zahlungsmethoden gibt es?",
+            "icon": "none",
+            "row_content": "<p>Wir akzeptieren Mastercard, Maestro, Amex, Visa, PayPal sowie Sofortüberweisung (Klarna), Shop Pay, Google Pay und Giropay. Ein Kauf auf Rechnung ist über Klarna möglich.</p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_tmfzbW",
+        "collapsible_row_NA4bw8"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "caption": "",
+        "heading": "Zahlung",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "collapsible_content_wr4Hpr": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_E4LqUj": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Was muss ich bei den Aktionen beachten?",
+            "icon": "none",
+            "row_content": "<p>Unsere Aktionen sind nur in einem bestimmten Zeitraum verfügbar und können nicht mit Rabattcodes oder anderen Aktionen kombiniert werden. Bei allen Aktionen wirst du vorab über alle wichtigen Details informiert, wenn du den Newsletter abonniert hast.</p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_KHfrrR": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Sind Vorbestellungen bei euch möglich?",
+            "icon": "none",
+            "row_content": "<p>Leider sind Vorbestellungen bisher noch nicht möglich. Wenn du den Newsletter abonnierst, wirst du immer über unsere neusten Angebote informiert. </p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_E4LqUj",
+        "collapsible_row_KHfrrR"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "caption": "",
+        "heading": "Aktionen & Sonstiges",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "collapsible_content_RyzK3i": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_8fnb88": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Sind Vorbestellungen bei euch möglich?",
+            "icon": "none",
+            "row_content": "<p>Leider sind Vorbestellungen bisher noch nicht möglich. Wenn du den Newsletter abonnierst, wirst du immer über unsere neusten Angebote informiert. </p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_8fnb88"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "caption": "",
+        "heading": "Sonstiges",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "collapsible_content_MQWRyP": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_pNmwQa": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wie melde ich mich vom Newsletter ab?",
+            "icon": "none",
+            "row_content": "<p>Du kannst dich jederzeit abmelden, indem du auf den Link \"Unsubscribe\" unten in dem Newsletter klickst.</p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_QTQqcH": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wie melde ich mich für den Newsletter an?",
+            "icon": "none",
+            "row_content": "<p>Wenn du Interesse hast, immer auf dem neusten Stand zu bleiben, kannst du ganz einfach unseren Newsletter abonnieren. Zusätzlich erhältst du einen 10% Rabattcode für die Anmeldung, den du bei deiner Bestellung einlösen kannst. Falls du dich später doch umentscheidest, kannst du dich jederzeit ganz unkompliziert wieder abmelden.</p><p><strong>Wichtig: </strong>Um dich beim Newsletter anzumelden, musst du deine E-Mail in jedem Fall bestätigen.</p>",
+            "custom_liquid": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_pNmwQa",
+        "collapsible_row_QTQqcH"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "caption": "",
+        "heading": "Newsletter",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "rich_text_iieR3x": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_bYEi6c": {
+          "type": "heading",
+          "settings": {
+            "heading": "Kontakt",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_bYEi6c"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "1053a5d1-d67a-419b-ad1c-c2e3e9a26981": {
+      "type": "contact-form",
+      "settings": {
+        "is_above_the_fold": false,
+        "heading": "",
+        "heading_size": "h2",
+        "color_scheme": "background-1",
+        "padding_top": 12,
+        "padding_bottom": 20
+      }
+    },
+    "custom_liquid_giz8MF": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "custom_liquid": "<script defer src=\"https://help-center.gorgias.help/api/help-centers/loader.js?v=2\" data-gorgias-loader-help-center data-gorgias-help-center-uid=\"gyvvxymv\"></script>",
+        "color_scheme": "background-1",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "custom_liquid_qXmckc": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div data-gorgias-contact-form-uid=\"66kk0za5\"></div>\n<script defer src=\"https://contact.gorgias.help/api/contact-forms/loader.js?v=2\" data-gorgias-loader-contact-form></script>",
+        "color_scheme": "background-1",
+        "padding_top": 12,
+        "padding_bottom": 24
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "rich_text_E9WYLK",
+    "multicolumn_dLFaNV",
+    "collapsible_content_DBCbaq",
+    "collapsible_content_6gL8Ji",
+    "collapsible_content_8Ww9KP",
+    "collapsible_content_ibCXc4",
+    "collapsible_content_haa9Dh",
+    "collapsible_content_LGP99C",
+    "collapsible_content_wr4Hpr",
+    "collapsible_content_RyzK3i",
+    "collapsible_content_MQWRyP",
+    "rich_text_iieR3x",
+    "1053a5d1-d67a-419b-ad1c-c2e3e9a26981",
+    "custom_liquid_giz8MF",
+    "custom_liquid_qXmckc"
+  ]
+}

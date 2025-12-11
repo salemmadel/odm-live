@@ -1,1 +1,19 @@
-{"sections":{"pf-0c505d8f":{"type":"pf-0c505d8f","settings":{}}},"order":["pf-0c505d8f"]}
+{
+  "sections": {
+    "pf-0c505d8f": {
+      "type": "pf-0c505d8f",
+      "settings": {}
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "pf-0c505d8f"
+  ]
+}

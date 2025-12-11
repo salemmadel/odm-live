@@ -1,1 +1,244 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"padding_top":28,"padding_bottom":24,"show_title":true}},"change_page_color_Ppqh64":{"type":"change-page-color","settings":{"color_text":"#000000","color_background":"#f1def1"}},"image_intro_banner_9deNLn":{"type":"image-intro-banner","custom_css":[".intro {width: 100%; text-align: center; font-size: 1.8rem;}"],"settings":{"is_above_the_fold":false,"image":"shopify:\/\/shop_images\/StrawberryCream_LP_Hero.jpg","image_2":"shopify:\/\/shop_images\/StrawberryCream_LP_Hero.jpg","image_3":"shopify:\/\/shop_images\/StrawberryCream_Title2.png","image_4":"shopify:\/\/shop_images\/StrawberryCream_Title2.png","image_4_height":85,"image_3_height":75,"link":"","image_overlay_opacity":0,"image_height":"large","adapt_height_first_image":false,"desktop_content_position":"middle-center","section_animation":"none","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"background-1","mobile_content_alignment":"center","show_text_below":true,"heading_h1":"","heading_h2":"O’Donnells erster sommerlicher Creme-Likör!","heading_text":"<p>Diese besondere Kreation schmeckt nach echten Erdbeeren direkt aus dem Garten und ist <strong>der<\/strong> Creme-Genuss für den Sommer!<\/p>"}},"featured_product_CU8cgA":{"type":"featured-product","blocks":{"title_yELh6c":{"type":"title","settings":{"heading_size":"h1"}},"text_kjp3KR":{"type":"text","settings":{"text":"{{ section.settings.product.metafields.descriptors.subtitle.value }}","text_style":"subtitle"}},"price_8QHtn6":{"type":"price","settings":{}},"variant_picker_RRnVLn":{"type":"variant_picker","settings":{"picker_type":"button"}},"link_mAqJDc":{"type":"link","settings":{"title":"{{ section.settings.product.metafields.custom.link_to_title.value }}"}},"quantity_selector_ic7wt9":{"type":"quantity_selector","settings":{}},"buy_buttons_JymVix":{"type":"buy_buttons","settings":{"show_dynamic_checkout":false,"show_sticky_cart":false,"only_tier_gang_button":"Erforderliche Gangstufe nicht erreicht"}},"description_trrqKz":{"type":"description","settings":{}},"collapsible_tab_Vd9Ycp":{"type":"collapsible_tab","settings":{"heading":"Beschreibung","icon":"clipboard","content":"<p>Cremige Erdbeere für einen Sommer voller Geschmack und Genuss. Unser Erdbeer-Creme-Likör ist der perfekte Sommerdrink für jedes Sommerfest, die nächste Grill-Party oder einen entspannten Abend auf dem Balkon. Mit seiner <strong>cremigen Textur und dem intensiven Erdbeeraroma<\/strong> bietet er ein einzigartiges Geschmackserlebnis und wird vor allem Fans der <a href=\"\/products\/harte-nuss-cream\" title=\"Harte Nuss Cream\"><em>Harte Nuss Cream<\/em><\/a> sowie unserer <em>Rhababeera<\/em> absolut begeistern!<\/p>","page":""}},"collapsible_tab_GLBK98":{"type":"collapsible_tab","settings":{"heading":"Allergen-Hinweis & Inhaltsstoffe","icon":"dairy_free","content":"<p>Enthält Farbstoff (E129), Milch und Milcherzeugnisse!<\/p>","page":""}},"collapsible_tab_YRcETy":{"type":"collapsible_tab","settings":{"heading":"Komm in die O'Donnell Gang","icon":"silhouette","content":"<p>Werde Teil der <a href=\"\/pages\/gang\" title=\"Die O'Donnell Gang\">Moonshine-Gang<\/a>! Als Mitglied sammelst du mit jedem Kauf im Onlineshop Proof und kannst diese gegen gratis O’Donnell Geschenke eintauschen. Außerdem hast du Zugang zu exklusiven Produkten und kannst im Gang-Rang immer weiter aufsteigen. Worauf wartest du also noch?<\/p>","page":""}},"collapsible_tab_RHaMWL":{"type":"collapsible_tab","settings":{"heading":"Versand","icon":"truck","content":"<ul><li><strong>DHL Priority: Lieferzeit 1-2 Tage<\/strong><br\/>Alle Bestellungen bis 12 Uhr werden noch am selben Tag DHL übergeben.<br\/><\/li><li><strong>DHL Standard: Lieferzeit 1-3 Tage<\/strong><\/li><\/ul><p>Wir versenden klimaneutral mit <a href=\"https:\/\/www.dhl.de\/de\/privatkunden\/kampagnenseiten\/gogreen.html\" target=\"_blank\" title=\"DHL &quot;GoGreen&quot;\">DHL \"GoGreen\"<\/a>.<\/p>","page":""}}},"block_order":["title_yELh6c","text_kjp3KR","price_8QHtn6","variant_picker_RRnVLn","link_mAqJDc","quantity_selector_ic7wt9","buy_buttons_JymVix","description_trrqKz","collapsible_tab_Vd9Ycp","collapsible_tab_GLBK98","collapsible_tab_YRcETy","collapsible_tab_RHaMWL"],"settings":{"is_above_the_fold":true,"enable_sticky_info":true,"product":"strawberry-cream","color_scheme":"background-1","secondary_background":false,"hide_variants":false,"enable_video_looping":false,"padding_top":24,"padding_bottom":24}},"multicolumn_e3yJQG":{"type":"multicolumn","blocks":{"column_tHjgdc":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/StrawberryFizz_Solo.jpg","title":"Strawberry Fizz","text":"<p><strong>Zutaten<\/strong>: 50ml <em>Strawberry-Cream<\/em>, 35ml Gin, 10ml Zuckersirup, 15ml Zitronensaft, 1 Eiweiß, Wild Berry Soda zum Auffüllen<\/p>","mobile_text":"","link_label":"Zum Rezept","link":"shopify:\/\/blogs\/cocktails\/strawberry-fizz","button_alignment":"left","selected_button":true}},"column_YXMjDG":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/StrawberryCreamCoffee_Solo.jpg","title":"Strawberry Cream Coffee","text":"<p><strong>Zutaten<\/strong>: Espresso & <em>Strawberry-Cream <\/em>im Verhältnis 1:1, z.B. 50ml Espresso & 50ml <em>Strawberry-Cream, <\/em>Erdbeere zum Garnieren<\/p>","mobile_text":"","link_label":"Zum Rezept","link":"shopify:\/\/blogs\/cocktails\/strawberry-cream-coffee","button_alignment":"left","selected_button":true}}},"block_order":["column_tHjgdc","column_YXMjDG"],"custom_css":[".multicolumn-card__info h3 {font-weight: 800;}"],"settings":{"is_above_the_fold":false,"title":"Cocktails","heading_image_banner":"shopify:\/\/shop_images\/streifen_weiss_desktop.png","heading_size":"h1","image_width":"full","image_ratio":"adapt","columns_desktop":2,"column_alignment":"left","background_style":"none","button_label":"","button_link":"","color_scheme":"background-1","columns_mobile":"1","swipe_on_mobile":false,"padding_top":24,"padding_bottom":24}},"intro_outro_landingpage_kLf9Qp":{"type":"intro-outro-landingpage","settings":{"show_intro_banner":true,"banner_height_desktop":6,"banner_height_mobile":4,"show_intro-outro_title_image":true,"title_image":"shopify:\/\/shop_images\/cheers_desktop.png","image_width":50,"intro":""}}},"order":["main","change_page_color_Ppqh64","image_intro_banner_9deNLn","featured_product_CU8cgA","multicolumn_e3yJQG","intro_outro_landingpage_kLf9Qp"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 24,
+        "show_title": true
+      }
+    },
+    "change_page_color_Ppqh64": {
+      "type": "change-page-color",
+      "settings": {
+        "color_text": "#000000",
+        "color_background": "#f1def1"
+      }
+    },
+    "image_intro_banner_9deNLn": {
+      "type": "image-intro-banner",
+      "custom_css": [
+        ".intro {width: 100%; text-align: center; font-size: 1.8rem;}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "image": "shopify://shop_images/StrawberryCream_LP_Hero.jpg",
+        "image_2": "shopify://shop_images/StrawberryCream_LP_Hero.jpg",
+        "image_3": "shopify://shop_images/StrawberryCream_Title2.png",
+        "image_4": "shopify://shop_images/StrawberryCream_Title2.png",
+        "image_4_height": 85,
+        "image_3_height": 75,
+        "link": "",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "section_animation": "none",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "show_text_below": true,
+        "heading_h1": "",
+        "heading_h2": "O’Donnells erster sommerlicher Creme-Likör!",
+        "heading_text": "<p>Diese besondere Kreation schmeckt nach echten Erdbeeren direkt aus dem Garten und ist <strong>der</strong> Creme-Genuss für den Sommer!</p>"
+      }
+    },
+    "featured_product_CU8cgA": {
+      "type": "featured-product",
+      "blocks": {
+        "title_yELh6c": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "text_kjp3KR": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "price_8QHtn6": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_RRnVLn": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "link_mAqJDc": {
+          "type": "link",
+          "settings": {
+            "title": "{{ section.settings.product.metafields.custom.link_to_title.value }}"
+          }
+        },
+        "quantity_selector_ic7wt9": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_JymVix": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_sticky_cart": false,
+            "only_tier_gang_button": "Erforderliche Gangstufe nicht erreicht"
+          }
+        },
+        "description_trrqKz": {
+          "type": "description",
+          "settings": {}
+        },
+        "collapsible_tab_Vd9Ycp": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Beschreibung",
+            "icon": "clipboard",
+            "content": "<p>Cremige Erdbeere für einen Sommer voller Geschmack und Genuss. Unser Erdbeer-Creme-Likör ist der perfekte Sommerdrink für jedes Sommerfest, die nächste Grill-Party oder einen entspannten Abend auf dem Balkon. Mit seiner <strong>cremigen Textur und dem intensiven Erdbeeraroma</strong> bietet er ein einzigartiges Geschmackserlebnis und wird vor allem Fans der <a href=\"/products/harte-nuss-cream\" title=\"Harte Nuss Cream\"><em>Harte Nuss Cream</em></a> sowie unserer <em>Rhababeera</em> absolut begeistern!</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_GLBK98": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Allergen-Hinweis & Inhaltsstoffe",
+            "icon": "dairy_free",
+            "content": "<p>Enthält Farbstoff (E129), Milch und Milcherzeugnisse!</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_YRcETy": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Komm in die O'Donnell Gang",
+            "icon": "silhouette",
+            "content": "<p>Werde Teil der <a href=\"/pages/gang\" title=\"Die O'Donnell Gang\">Moonshine-Gang</a>! Als Mitglied sammelst du mit jedem Kauf im Onlineshop Proof und kannst diese gegen gratis O’Donnell Geschenke eintauschen. Außerdem hast du Zugang zu exklusiven Produkten und kannst im Gang-Rang immer weiter aufsteigen. Worauf wartest du also noch?</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_RHaMWL": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Versand",
+            "icon": "truck",
+            "content": "<ul><li><strong>DHL Priority: Lieferzeit 1-2 Tage</strong><br/>Alle Bestellungen bis 12 Uhr werden noch am selben Tag DHL übergeben.<br/></li><li><strong>DHL Standard: Lieferzeit 1-3 Tage</strong></li></ul><p>Wir versenden klimaneutral mit <a href=\"https://www.dhl.de/de/privatkunden/kampagnenseiten/gogreen.html\" target=\"_blank\" title=\"DHL &quot;GoGreen&quot;\">DHL \"GoGreen\"</a>.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "title_yELh6c",
+        "text_kjp3KR",
+        "price_8QHtn6",
+        "variant_picker_RRnVLn",
+        "link_mAqJDc",
+        "quantity_selector_ic7wt9",
+        "buy_buttons_JymVix",
+        "description_trrqKz",
+        "collapsible_tab_Vd9Ycp",
+        "collapsible_tab_GLBK98",
+        "collapsible_tab_YRcETy",
+        "collapsible_tab_RHaMWL"
+      ],
+      "settings": {
+        "is_above_the_fold": true,
+        "enable_sticky_info": true,
+        "product": "strawberry-cream",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "multicolumn_e3yJQG": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_tHjgdc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/StrawberryFizz_Solo.jpg",
+            "title": "Strawberry Fizz",
+            "text": "<p><strong>Zutaten</strong>: 50ml <em>Strawberry-Cream</em>, 35ml Gin, 10ml Zuckersirup, 15ml Zitronensaft, 1 Eiweiß, Wild Berry Soda zum Auffüllen</p>",
+            "mobile_text": "",
+            "link_label": "Zum Rezept",
+            "link": "shopify://blogs/cocktails/strawberry-fizz",
+            "button_alignment": "left",
+            "selected_button": true
+          }
+        },
+        "column_YXMjDG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/StrawberryCreamCoffee_Solo.jpg",
+            "title": "Strawberry Cream Coffee",
+            "text": "<p><strong>Zutaten</strong>: Espresso & <em>Strawberry-Cream </em>im Verhältnis 1:1, z.B. 50ml Espresso & 50ml <em>Strawberry-Cream, </em>Erdbeere zum Garnieren</p>",
+            "mobile_text": "",
+            "link_label": "Zum Rezept",
+            "link": "shopify://blogs/cocktails/strawberry-cream-coffee",
+            "button_alignment": "left",
+            "selected_button": true
+          }
+        }
+      },
+      "block_order": [
+        "column_tHjgdc",
+        "column_YXMjDG"
+      ],
+      "custom_css": [
+        ".multicolumn-card__info h3 {font-weight: 800;}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "Cocktails",
+        "heading_image_banner": "shopify://shop_images/streifen_weiss_desktop.png",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "intro_outro_landingpage_kLf9Qp": {
+      "type": "intro-outro-landingpage",
+      "settings": {
+        "show_intro_banner": true,
+        "banner_height_desktop": 6,
+        "banner_height_mobile": 4,
+        "show_intro-outro_title_image": true,
+        "title_image": "shopify://shop_images/cheers_desktop.png",
+        "image_width": 50,
+        "intro": ""
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "change_page_color_Ppqh64",
+    "image_intro_banner_9deNLn",
+    "featured_product_CU8cgA",
+    "multicolumn_e3yJQG",
+    "intro_outro_landingpage_kLf9Qp"
+  ]
+}

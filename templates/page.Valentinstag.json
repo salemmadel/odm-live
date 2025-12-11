@@ -1,1 +1,582 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"padding_top":24,"padding_bottom":24,"show_title":true}},"change_page_color_Yqmbhn":{"type":"change-page-color","settings":{"color_text":"#ffffff","color_background":"#7b0418"}},"image_intro_banner_keXGmq":{"type":"image-intro-banner","custom_css":["@media screen and (max-width: 768px) {.banner__media {padding-top: 350px; }}","@media screen and (min-width: 769px) {.section-template--23847899365644__image_intro_banner_keXGmq-padding {padding-bottom: 50px; }}"],"settings":{"is_above_the_fold":false,"image":"shopify:\/\/shop_images\/Hero_Web.jpg","image_2":"shopify:\/\/shop_images\/Hero_Mobile_6ce7d4db-fe1f-40ae-8af7-2e6cf54f5f77.jpg","image_3":"shopify:\/\/shop_images\/Love_Im_Jar.png","image_4":"shopify:\/\/shop_images\/Love_Im_Jar.png","image_4_height":85,"image_3_height":75,"link":"","image_overlay_opacity":0,"image_height":"adapt_image","adapt_height_first_image":false,"desktop_content_position":"middle-center","section_animation":"none","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"background-1","mobile_content_alignment":"center","show_text_below":true,"heading_h1":"","heading_h2":"","heading_text":"","padding_top":0,"padding_bottom":0}},"rich_text_JrTdzN":{"type":"rich-text","blocks":{"heading_HpiBtG":{"type":"heading","settings":{"heading":"Crush, Lieblingsmensch oder zum Anstoßen reichts?","heading_size":"h2"}},"text_cnmba9":{"type":"text","settings":{"text":"<p><strong>Vergiss langweilige Pralinen<\/strong> – dieses Jahr wird deine Liebesbotschaft <strong>besonders<\/strong>! Mit der <strong>limitierten Pralle Kirsche Love Edition<\/strong> kreierst du ein Geschenk, das <strong>von Herzen kommt<\/strong> und definitiv <strong>in Erinnerung bleibt<\/strong>.<\/p>"}}},"block_order":["heading_HpiBtG","text_cnmba9"],"settings":{"color_scheme":"background-1","full_width":true,"padding_top":0,"padding_bottom":52}},"featured_product_8AJKXb":{"type":"featured-product","blocks":{"text_jYNYEk":{"type":"text","settings":{"text":"{{ section.settings.product.vendor }}","text_style":"uppercase"}},"title_W3zh6Q":{"type":"title","settings":{"heading_size":"h1"}},"text_8Y3jKH":{"type":"text","settings":{"text":"{{ section.settings.product.metafields.descriptors.subtitle.value }}","text_style":"subtitle"}},"price_WXzAMH":{"type":"price","settings":{}},"variant_picker_wEjPgj":{"type":"variant_picker","settings":{"picker_type":"button"}},"quantity_selector_WyyBGG":{"type":"quantity_selector","settings":{}},"buy_buttons_ePiJwg":{"type":"buy_buttons","settings":{"show_dynamic_checkout":true,"show_sticky_cart":true,"only_tier_gang_button":"Erforderliche Gangstufe nicht erreicht"}},"description_Lc9MJB":{"type":"description","settings":{}},"link_p3KEQV":{"type":"link","settings":{"title":""}}},"block_order":["text_jYNYEk","title_W3zh6Q","text_8Y3jKH","price_WXzAMH","variant_picker_wEjPgj","quantity_selector_WyyBGG","buy_buttons_ePiJwg","description_Lc9MJB","link_p3KEQV"],"custom_css":[".form__label,.shopify-payment-button__more-options,.product__tax a,.product__description a,.link {color: white;}",".gang__proof {color: white;}"],"settings":{"gift_card_receipient_enabled":false,"is_above_the_fold":false,"enable_sticky_info":true,"product":"pralle-kirsche-love-edition-2025","gallery_layout":"stacked","color_scheme":"background-1","secondary_background":false,"hide_variants":false,"enable_video_looping":false,"padding_top":0,"padding_bottom":36}},"ss_scrolling_anouncement_bar_kLmBL3":{"type":"ss-scrolling-anouncement-bar","blocks":{"text_UhBA3M":{"type":"text","settings":{"text":"Individuell gestaltbares Etikett"}},"text_ezCkMQ":{"type":"text","settings":{"text":"Kostenloser Versand ab 70€ Bestellwert"}},"text_W6h7yc":{"type":"text","settings":{"text":"In 2-3 Werktagen bei Dir"}},"text_RkDqef":{"type":"text","settings":{"text":"Das perfekte Geschenk zum Valentinstag"}}},"block_order":["text_UhBA3M","text_ezCkMQ","text_W6h7yc","text_RkDqef"],"settings":{"insert_css_class_target":"","layout":"grid","text_size":13,"link":"","animation_duration":100,"animation_direction":"left","pause_hover":false,"bg":"#000000","text_color":"#ffffff","hover_opacity":90,"padding_horizontal":0,"padding_vertical":1.5,"padding_top":0,"padding_bottom":0}},"image_with_text_gt4wY9":{"type":"image-with-text","blocks":{"heading_YibHUT":{"type":"heading","settings":{"heading":"Limitierte Auflage – Nur solange der Vorrat reicht! ","heading_size":"h1"}},"text_4AgQmh":{"type":"text","settings":{"text":"<p>Sichere dir jetzt dein Jar und überrasche deinen Herzensmensch mit einem Geschenk, das anders ist. Perfekt zum Valentinstag oder einfach so!<\/p>","text_style":"body"}}},"block_order":["heading_YibHUT","text_4AgQmh"],"custom_css":["{background-color: #7b0418; color: #7b0418;}",".image-with-text__content {background-color: white;}",".h1 {color: black !important;}","img {border: solid;}"],"settings":{"is_above_the_fold":false,"background_color":"#ffffff","text_color":"#000000","image":"shopify:\/\/shop_images\/Pralle-Kirsche_2025_Newsletter-Hero_D.jpg","image_caption":"","height":"adapt","desktop_image_width":"medium","layout":"text_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"overlap","color_scheme":"background-1","mobile_content_alignment":"left","padding_top":36,"padding_bottom":36}},"image_with_text_ccKDQK":{"type":"image-with-text","blocks":{"heading_VgizhV":{"type":"heading","settings":{"heading":"Für deinen Lieblingsmenschen!","heading_size":"h1"}},"text_Y9kf9R":{"type":"text","settings":{"text":"<p>Interaktives Etikett, pralles Design und der legendäre O'Donnell Moonshine Geschmack in einem! Ob Soulmate, Lieblingsmensch oder deine große Liebe - diese Limited Edition ist eine charmante Art zu sagen \"Du bist was Besonderes\"!<\/p>","text_style":"body"}}},"block_order":["heading_VgizhV","text_Y9kf9R"],"custom_css":["{background-color: #7b0418; color: #7b0418;}",".image-with-text__content {background-color: white;}",".h1 {color: black !important;}","img {border: solid;}"],"settings":{"is_above_the_fold":false,"background_color":"#ffffff","text_color":"#000000","image":"shopify:\/\/shop_images\/Pralle-Kirsche_2025_Newsletter-Hero_D_2.jpg","image_caption":"","height":"adapt","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"overlap","color_scheme":"background-1","mobile_content_alignment":"left","padding_top":36,"padding_bottom":36}},"slideshow_G3XzXM":{"type":"slideshow","blocks":{"slide_KF7fNz":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/Dating_Event_Banner_Desktop.jpg","image_2":"shopify:\/\/shop_images\/Dating_Event_Banner_Desktop.jpg","is_slide_linkable":true,"heading":"","heading_size":"h1","subheading":"","button_label":"","link":"","button_style_secondary":false,"box_align":"middle-center","show_text_box":true,"text_alignment":"center","image_overlay_opacity":0,"color_scheme":"background-1","text_alignment_mobile":"center"}}},"block_order":["slide_KF7fNz"],"custom_css":["img {height: 100%;}"],"settings":{"is_above_the_fold":false,"layout":"full_bleed","slide_height":"adapt_image","desktop_button_height":40,"mobile_button_height":60,"slider_visual":"counter","slides_controls_position":"top","auto_rotate":false,"change_slides_speed":5,"show_text_below":false,"accessibility_info":""}},"rich_text_yydz4E":{"type":"rich-text","blocks":{"heading_tARjF9":{"type":"heading","settings":{"heading":"Du bist Single? Nicht mehr lange!","heading_size":"h1"}},"text_WwG38j":{"type":"text","settings":{"text":"<p><strong>Wir bringen zusammen, was zusammen gehört beim O’Donnell Moonshine & Match Dating Event am 08.02.2025 ab 17:00 Uhr in Berlin. <\/strong><\/p><p><strong>Kommt vorbei zum Speed Dating und findet eure große Liebe (oder habt einen richtig guten Drink <\/strong>😉<strong>).<\/strong><\/p><p><strong>Was euch erwartet: <\/strong><\/p><p>🍒 <strong>Dates <\/strong>mit Menschen, die wirklich zu dir passen<br\/>🍸 <strong>Cocktail-Mixing & freche Challenges<\/strong>, bei denen du dein Match besser kennenlernst<\/p><p>❤️ <strong>Die Chance auf die große Liebe<\/strong> und leckeren Moonshine<br\/>🎁 Eine <strong>O’Donnell Überraschung der Extraklasse<\/strong><\/p><p><strong>Wo?<\/strong><\/p><p><strong>O’Donnell Moonshine Store im Alexa Berlin <\/strong>Grunerstraße 20, 10179 Berlin<\/p>"}}},"block_order":["heading_tARjF9","text_WwG38j"],"settings":{"color_scheme":"background-1","full_width":true,"padding_top":40,"padding_bottom":52}},"rich_text_BRgQnL":{"type":"rich-text","blocks":{"heading_weHyfW":{"type":"heading","settings":{"heading":"Cocktails - mit Liebe gemacht 💕","heading_size":"h1"}}},"block_order":["heading_weHyfW"],"settings":{"color_scheme":"background-1","full_width":true,"padding_top":16,"padding_bottom":0}},"multicolumn_TFqwLB":{"type":"multicolumn","blocks":{"column_gUBjhe":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/Pralle__Kirsche_Cocktail-1_1_1_1.jpg","overlay_title":false,"overlay_title_position":"bottom","title":"Cherry Mate","text":"<p>Rosmarin in deinem Drink ist für dich unvorstellbar? Dann hast du noch nicht unseren \"Cherry Mate\" probiert. Hier beweisen wir dir, dass Rosmarin nicht nur perfekt zu Gerichten passt.<br\/><br\/><\/p>","mobile_text":"<p>Rosmarin in deinem Drink ist für dich unvorstellbar? Dann hast du noch nicht unseren \"Cherry Mate\" probiert. Hier beweisen wir dir, dass Rosmarin nicht nur perfekt zu Gerichten passt.<br\/><br\/><\/p>","link_label":"Zum Rezept","link":"shopify:\/\/blogs\/cocktails\/kirsch-cocktail","button_alignment":"center","selected_button":true,"grey_out_media":false}},"column_PE793i":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/Design_ohne_Titel_7.webp","overlay_title":false,"overlay_title_position":"bottom","title":"Moon Cherry","text":"<p>Mit nur vier einfachen Zutaten, unserem unschlagbaren \"<a href=\"https:\/\/odonnell.de\/products\/pralle-kirsche-kirschlikoer\">Pralle Kirsche<\/a>\" Likör und dem beliebten \"<a href=\"https:\/\/odonnell.de\/products\/high-proof\">High Proof<\/a>\" kreierst du einen simplen, aber unfassbar leckeren Cocktail für jeden Anlass - der <strong>\"Moon Cherry Cocktail\"<\/strong>.<\/p>","mobile_text":"<p>Mit nur vier einfachen Zutaten, unserem unschlagbaren \"<a href=\"https:\/\/odonnell.de\/products\/pralle-kirsche-kirschlikoer\">Pralle Kirsche<\/a>\" Likör und dem beliebten \"<a href=\"https:\/\/odonnell.de\/products\/high-proof\">High Proof<\/a>\" kreierst du einen simplen, aber unfassbar leckeren Cocktail für jeden Anlass - der <strong>\"Moon Cherry Cocktail\"<\/strong>.<\/p>","link_label":"Zum Rezept","link":"shopify:\/\/blogs\/cocktails\/moon-cherry","button_alignment":"center","selected_button":true,"grey_out_media":false}}},"block_order":["column_gUBjhe","column_PE793i"],"custom_css":[".multicolumn-card__info {color: black;}",".multicolumn-card__info h3 {color: black !important;}"],"settings":{"is_above_the_fold":false,"title":"","heading_size":"h1","title_text":"","outer_padding":5,"image_width":"full","image_ratio":"square","image_border_color":"#ffffff","columns_desktop":2,"column_alignment":"left","background_style":"primary","button_label":"","button_link":"","color_scheme":"background-1","columns_mobile":"1","swipe_on_mobile":true,"padding_top":16,"padding_bottom":36}},"rich_text_wp6hj8":{"type":"rich-text","blocks":{"button_b4348b":{"type":"button","settings":{"button_label":"Mehr Cocktails","button_link":"shopify:\/\/blogs\/cocktails","button_style_secondary":false}}},"block_order":["button_b4348b"],"settings":{"color_scheme":"background-1","full_width":true,"padding_top":0,"padding_bottom":52}},"featured_collection_Vi9wFQ":{"type":"featured-collection","custom_css":[".title {text-align: center;}",".color-deal {color: black;}"],"settings":{"is_above_the_fold":false,"title":"Auf der Suche nach einem Set?","heading_size":"h1","description":"","show_description":false,"grey_sold_out_products":true,"description_style":"body","collection":"sets","products_to_show":4,"columns_desktop":4,"full_width":false,"section_animation":"none","show_view_all":true,"view_all_style":"solid","view_all_button_label":"","enable_desktop_slider":false,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":true,"show_vendor":false,"show_rating":false,"enable_quick_add":true,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"featured_collection_3d9HTP":{"type":"featured-collection","custom_css":[".title {text-align: center;}"],"settings":{"is_above_the_fold":false,"title":"Entdecke unsere Bestseller!","heading_size":"h1","description":"","show_description":false,"grey_sold_out_products":true,"description_style":"body","collection":"featured","products_to_show":4,"columns_desktop":4,"full_width":false,"section_animation":"none","show_view_all":true,"view_all_style":"solid","view_all_button_label":"","enable_desktop_slider":false,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":true,"show_vendor":false,"show_rating":false,"enable_quick_add":true,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}}},"order":["main","change_page_color_Yqmbhn","image_intro_banner_keXGmq","rich_text_JrTdzN","featured_product_8AJKXb","ss_scrolling_anouncement_bar_kLmBL3","image_with_text_gt4wY9","image_with_text_ccKDQK","slideshow_G3XzXM","rich_text_yydz4E","rich_text_BRgQnL","multicolumn_TFqwLB","rich_text_wp6hj8","featured_collection_Vi9wFQ","featured_collection_3d9HTP"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "show_title": true
+      }
+    },
+    "change_page_color_Yqmbhn": {
+      "type": "change-page-color",
+      "settings": {
+        "color_text": "#ffffff",
+        "color_background": "#7b0418"
+      }
+    },
+    "image_intro_banner_keXGmq": {
+      "type": "image-intro-banner",
+      "custom_css": [
+        "@media screen and (max-width: 768px) {.banner__media {padding-top: 350px; }}",
+        "@media screen and (min-width: 769px) {.section-template--23847899365644__image_intro_banner_keXGmq-padding {padding-bottom: 50px; }}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "image": "shopify://shop_images/Hero_Web.jpg",
+        "image_2": "shopify://shop_images/Hero_Mobile_6ce7d4db-fe1f-40ae-8af7-2e6cf54f5f77.jpg",
+        "image_3": "shopify://shop_images/Love_Im_Jar.png",
+        "image_4": "shopify://shop_images/Love_Im_Jar.png",
+        "image_4_height": 85,
+        "image_3_height": 75,
+        "link": "",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt_image",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "section_animation": "none",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "show_text_below": true,
+        "heading_h1": "",
+        "heading_h2": "",
+        "heading_text": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_JrTdzN": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_HpiBtG": {
+          "type": "heading",
+          "settings": {
+            "heading": "Crush, Lieblingsmensch oder zum Anstoßen reichts?",
+            "heading_size": "h2"
+          }
+        },
+        "text_cnmba9": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Vergiss langweilige Pralinen</strong> – dieses Jahr wird deine Liebesbotschaft <strong>besonders</strong>! Mit der <strong>limitierten Pralle Kirsche Love Edition</strong> kreierst du ein Geschenk, das <strong>von Herzen kommt</strong> und definitiv <strong>in Erinnerung bleibt</strong>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_HpiBtG",
+        "text_cnmba9"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
+    "featured_product_8AJKXb": {
+      "type": "featured-product",
+      "blocks": {
+        "text_jYNYEk": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_W3zh6Q": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "text_8Y3jKH": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "price_WXzAMH": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_wEjPgj": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector_WyyBGG": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_ePiJwg": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_sticky_cart": true,
+            "only_tier_gang_button": "Erforderliche Gangstufe nicht erreicht"
+          }
+        },
+        "description_Lc9MJB": {
+          "type": "description",
+          "settings": {}
+        },
+        "link_p3KEQV": {
+          "type": "link",
+          "settings": {
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_jYNYEk",
+        "title_W3zh6Q",
+        "text_8Y3jKH",
+        "price_WXzAMH",
+        "variant_picker_wEjPgj",
+        "quantity_selector_WyyBGG",
+        "buy_buttons_ePiJwg",
+        "description_Lc9MJB",
+        "link_p3KEQV"
+      ],
+      "custom_css": [
+        ".form__label,.shopify-payment-button__more-options,.product__tax a,.product__description a,.link {color: white;}",
+        ".gang__proof {color: white;}"
+      ],
+      "settings": {
+        "gift_card_receipient_enabled": false,
+        "is_above_the_fold": false,
+        "enable_sticky_info": true,
+        "product": "pralle-kirsche-love-edition-2025",
+        "gallery_layout": "stacked",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "ss_scrolling_anouncement_bar_kLmBL3": {
+      "type": "ss-scrolling-anouncement-bar",
+      "blocks": {
+        "text_UhBA3M": {
+          "type": "text",
+          "settings": {
+            "text": "Individuell gestaltbares Etikett"
+          }
+        },
+        "text_ezCkMQ": {
+          "type": "text",
+          "settings": {
+            "text": "Kostenloser Versand ab 70€ Bestellwert"
+          }
+        },
+        "text_W6h7yc": {
+          "type": "text",
+          "settings": {
+            "text": "In 2-3 Werktagen bei Dir"
+          }
+        },
+        "text_RkDqef": {
+          "type": "text",
+          "settings": {
+            "text": "Das perfekte Geschenk zum Valentinstag"
+          }
+        }
+      },
+      "block_order": [
+        "text_UhBA3M",
+        "text_ezCkMQ",
+        "text_W6h7yc",
+        "text_RkDqef"
+      ],
+      "settings": {
+        "insert_css_class_target": "",
+        "layout": "grid",
+        "text_size": 13,
+        "link": "",
+        "animation_duration": 100,
+        "animation_direction": "left",
+        "pause_hover": false,
+        "bg": "#000000",
+        "text_color": "#ffffff",
+        "hover_opacity": 90,
+        "padding_horizontal": 0,
+        "padding_vertical": 1.5,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_gt4wY9": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_YibHUT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Limitierte Auflage – Nur solange der Vorrat reicht! ",
+            "heading_size": "h1"
+          }
+        },
+        "text_4AgQmh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sichere dir jetzt dein Jar und überrasche deinen Herzensmensch mit einem Geschenk, das anders ist. Perfekt zum Valentinstag oder einfach so!</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_YibHUT",
+        "text_4AgQmh"
+      ],
+      "custom_css": [
+        "{background-color: #7b0418; color: #7b0418;}",
+        ".image-with-text__content {background-color: white;}",
+        ".h1 {color: black !important;}",
+        "img {border: solid;}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "image": "shopify://shop_images/Pralle-Kirsche_2025_Newsletter-Hero_D.jpg",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_ccKDQK": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_VgizhV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Für deinen Lieblingsmenschen!",
+            "heading_size": "h1"
+          }
+        },
+        "text_Y9kf9R": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Interaktives Etikett, pralles Design und der legendäre O'Donnell Moonshine Geschmack in einem! Ob Soulmate, Lieblingsmensch oder deine große Liebe - diese Limited Edition ist eine charmante Art zu sagen \"Du bist was Besonderes\"!</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_VgizhV",
+        "text_Y9kf9R"
+      ],
+      "custom_css": [
+        "{background-color: #7b0418; color: #7b0418;}",
+        ".image-with-text__content {background-color: white;}",
+        ".h1 {color: black !important;}",
+        "img {border: solid;}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "image": "shopify://shop_images/Pralle-Kirsche_2025_Newsletter-Hero_D_2.jpg",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "slideshow_G3XzXM": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_KF7fNz": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Dating_Event_Banner_Desktop.jpg",
+            "image_2": "shopify://shop_images/Dating_Event_Banner_Desktop.jpg",
+            "is_slide_linkable": true,
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_KF7fNz"
+      ],
+      "custom_css": [
+        "img {height: 100%;}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "desktop_button_height": 40,
+        "mobile_button_height": 60,
+        "slider_visual": "counter",
+        "slides_controls_position": "top",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": false,
+        "accessibility_info": ""
+      }
+    },
+    "rich_text_yydz4E": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_tARjF9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Du bist Single? Nicht mehr lange!",
+            "heading_size": "h1"
+          }
+        },
+        "text_WwG38j": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Wir bringen zusammen, was zusammen gehört beim O’Donnell Moonshine & Match Dating Event am 08.02.2025 ab 17:00 Uhr in Berlin. </strong></p><p><strong>Kommt vorbei zum Speed Dating und findet eure große Liebe (oder habt einen richtig guten Drink </strong>😉<strong>).</strong></p><p><strong>Was euch erwartet: </strong></p><p>🍒 <strong>Dates </strong>mit Menschen, die wirklich zu dir passen<br/>🍸 <strong>Cocktail-Mixing & freche Challenges</strong>, bei denen du dein Match besser kennenlernst</p><p>❤️ <strong>Die Chance auf die große Liebe</strong> und leckeren Moonshine<br/>🎁 Eine <strong>O’Donnell Überraschung der Extraklasse</strong></p><p><strong>Wo?</strong></p><p><strong>O’Donnell Moonshine Store im Alexa Berlin </strong>Grunerstraße 20, 10179 Berlin</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_tARjF9",
+        "text_WwG38j"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_BRgQnL": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_weHyfW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Cocktails - mit Liebe gemacht 💕",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_weHyfW"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_TFqwLB": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_gUBjhe": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Pralle__Kirsche_Cocktail-1_1_1_1.jpg",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Cherry Mate",
+            "text": "<p>Rosmarin in deinem Drink ist für dich unvorstellbar? Dann hast du noch nicht unseren \"Cherry Mate\" probiert. Hier beweisen wir dir, dass Rosmarin nicht nur perfekt zu Gerichten passt.<br/><br/></p>",
+            "mobile_text": "<p>Rosmarin in deinem Drink ist für dich unvorstellbar? Dann hast du noch nicht unseren \"Cherry Mate\" probiert. Hier beweisen wir dir, dass Rosmarin nicht nur perfekt zu Gerichten passt.<br/><br/></p>",
+            "link_label": "Zum Rezept",
+            "link": "shopify://blogs/cocktails/kirsch-cocktail",
+            "button_alignment": "center",
+            "selected_button": true,
+            "grey_out_media": false
+          }
+        },
+        "column_PE793i": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Design_ohne_Titel_7.webp",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Moon Cherry",
+            "text": "<p>Mit nur vier einfachen Zutaten, unserem unschlagbaren \"<a href=\"https://odonnell.de/products/pralle-kirsche-kirschlikoer\">Pralle Kirsche</a>\" Likör und dem beliebten \"<a href=\"https://odonnell.de/products/high-proof\">High Proof</a>\" kreierst du einen simplen, aber unfassbar leckeren Cocktail für jeden Anlass - der <strong>\"Moon Cherry Cocktail\"</strong>.</p>",
+            "mobile_text": "<p>Mit nur vier einfachen Zutaten, unserem unschlagbaren \"<a href=\"https://odonnell.de/products/pralle-kirsche-kirschlikoer\">Pralle Kirsche</a>\" Likör und dem beliebten \"<a href=\"https://odonnell.de/products/high-proof\">High Proof</a>\" kreierst du einen simplen, aber unfassbar leckeren Cocktail für jeden Anlass - der <strong>\"Moon Cherry Cocktail\"</strong>.</p>",
+            "link_label": "Zum Rezept",
+            "link": "shopify://blogs/cocktails/moon-cherry",
+            "button_alignment": "center",
+            "selected_button": true,
+            "grey_out_media": false
+          }
+        }
+      },
+      "block_order": [
+        "column_gUBjhe",
+        "column_PE793i"
+      ],
+      "custom_css": [
+        ".multicolumn-card__info {color: black;}",
+        ".multicolumn-card__info h3 {color: black !important;}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "",
+        "heading_size": "h1",
+        "title_text": "",
+        "outer_padding": 5,
+        "image_width": "full",
+        "image_ratio": "square",
+        "image_border_color": "#ffffff",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 16,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_wp6hj8": {
+      "type": "rich-text",
+      "blocks": {
+        "button_b4348b": {
+          "type": "button",
+          "settings": {
+            "button_label": "Mehr Cocktails",
+            "button_link": "shopify://blogs/cocktails",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "button_b4348b"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
+    "featured_collection_Vi9wFQ": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".title {text-align: center;}",
+        ".color-deal {color: black;}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "Auf der Suche nach einem Set?",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "collection": "sets",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "view_all_button_label": "",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_3d9HTP": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".title {text-align: center;}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "Entdecke unsere Bestseller!",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "collection": "featured",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "view_all_button_label": "",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "change_page_color_Yqmbhn",
+    "image_intro_banner_keXGmq",
+    "rich_text_JrTdzN",
+    "featured_product_8AJKXb",
+    "ss_scrolling_anouncement_bar_kLmBL3",
+    "image_with_text_gt4wY9",
+    "image_with_text_ccKDQK",
+    "slideshow_G3XzXM",
+    "rich_text_yydz4E",
+    "rich_text_BRgQnL",
+    "multicolumn_TFqwLB",
+    "rich_text_wp6hj8",
+    "featured_collection_Vi9wFQ",
+    "featured_collection_3d9HTP"
+  ]
+}

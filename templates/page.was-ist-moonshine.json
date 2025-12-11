@@ -1,1 +1,151 @@
-{"sections":{"44901111-5fbc-4eab-996e-069063c3d899":{"type":"image-banner","blocks":{"template--16204354289932__44901111-5fbc-4eab-996e-069063c3d899-16680943234256bec5-0":{"type":"heading","disabled":true,"settings":{"heading":"Was ist Moonshine","heading_size":"h2"}},"226bfb96-bcd3-40b4-a0fa-5927ceba062d":{"type":"text","disabled":true,"settings":{"text":"Bei O’Donnell Moonshine trifft Tradition auf neue Geschmackswelten. Wir füllen unsere Schnäpse in stilechten Einmachgläsern, sogenannten Mason Jars, ab, genau wie die Gangster während der amerikanischen Prohibition. Unser Name erinnert dabei an den illegal gebrannten \"Moonshine\" und an Spike O’Donnell, den Anführer einer der berüchtigtsten Moonshine-Gangs aus Chicago.","text_style":"body"}}},"block_order":["template--16204354289932__44901111-5fbc-4eab-996e-069063c3d899-16680943234256bec5-0","226bfb96-bcd3-40b4-a0fa-5927ceba062d"],"settings":{"is_above_the_fold":false,"image":"shopify:\/\/shop_images\/Geschichte_Hero_Desktop_abc7525a-2424-4642-8319-2c070cde0125.jpg","image_overlay_opacity":0,"image_height":"small","adapt_height_first_image":true,"desktop_content_position":"middle-left","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"background-1","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":true}},"main":{"type":"main-page","settings":{"padding_top":28,"padding_bottom":24}},"7d6fa997-2a09-488c-b2f5-0fd565ebc305":{"type":"rich-text","blocks":{"template--16204354289932__7d6fa997-2a09-488c-b2f5-0fd565ebc305-166809473071894526-0":{"type":"heading","disabled":true,"settings":{"heading":"Talk about your brand","heading_size":"h1"}},"template--16204354289932__7d6fa997-2a09-488c-b2f5-0fd565ebc305-166809473071894526-1":{"type":"text","settings":{"text":"<p>Bei O’Donnell Moonshine trifft Tradition auf neue Geschmackswelten. Wir füllen unsere Schnäpse in stilechten Einmachgläsern, sogenannten Mason Jars, ab, genau wie die Gangster während der amerikanischen Prohibition. Unser Name erinnert dabei an den illegal gebrannten \"Moonshine\" und an Spike O’Donnell, den Anführer einer der berüchtigtsten Moonshine-Gangs aus Chicago.<\/p>"}},"template--16204354289932__7d6fa997-2a09-488c-b2f5-0fd565ebc305-166809473071894526-2":{"type":"button","disabled":true,"settings":{"button_label":"Button label","button_link":"","button_style_secondary":false}}},"block_order":["template--16204354289932__7d6fa997-2a09-488c-b2f5-0fd565ebc305-166809473071894526-0","template--16204354289932__7d6fa997-2a09-488c-b2f5-0fd565ebc305-166809473071894526-1","template--16204354289932__7d6fa997-2a09-488c-b2f5-0fd565ebc305-166809473071894526-2"],"settings":{"color_scheme":"background-1","full_width":true,"padding_top":0,"padding_bottom":52}},"dea9ebb2-faf2-4220-b03f-e7d7f4233678":{"type":"collection-moonshine","disabled":true,"blocks":{"template--16204354289932__dea9ebb2-faf2-4220-b03f-e7d7f4233678-1668414347bebcc82c-0":{"type":"moonshine","settings":{"product_name":"harte-nuss","product_headline":"shopify:\/\/shop_images\/harte-nuss-titel_1296x_d628f1a0-9977-4173-95ac-ac5eed7e3e0b.webp","product_image":"shopify:\/\/shop_images\/HarteNuss_700_Freisteller.webp"}},"bb05eeaf-0a5c-439e-ad2a-7d4c24298d01":{"type":"moonshine","settings":{"product_name":"bratapfel","product_headline":"shopify:\/\/shop_images\/bratapfel_1296x_f899385e-46f6-459d-b493-fb2244373429.webp","product_image":"shopify:\/\/shop_images\/Bratapfel_700_Freisteller_D.webp"}},"4f6fac3e-c1a2-419a-8950-42651e84281e":{"type":"moonshine","settings":{"product_name":"toffee","product_headline":"shopify:\/\/shop_images\/toffee2_1296x_a2a3a661-b555-44e3-916b-027aaa3a3477.webp","product_image":"shopify:\/\/shop_images\/Toffee_700_Freisteller_da71227b-cc6a-444c-a416-a1f15ea15864.webp"}},"fb89adac-d589-4e9e-a870-9ab975adcbd2":{"type":"moonshine","settings":{"product_name":"macadamia","product_headline":"shopify:\/\/shop_images\/macadamia2_1296x_4a84fc58-00da-427e-958f-f3e892611fb0.webp","product_image":"shopify:\/\/shop_images\/Macadamia_700_Freisteller_D.webp"}}},"block_order":["template--16204354289932__dea9ebb2-faf2-4220-b03f-e7d7f4233678-1668414347bebcc82c-0","bb05eeaf-0a5c-439e-ad2a-7d4c24298d01","4f6fac3e-c1a2-419a-8950-42651e84281e","fb89adac-d589-4e9e-a870-9ab975adcbd2"],"settings":{"padding_top":40,"padding_bottom":52}}},"order":["44901111-5fbc-4eab-996e-069063c3d899","main","7d6fa997-2a09-488c-b2f5-0fd565ebc305","dea9ebb2-faf2-4220-b03f-e7d7f4233678"]}
+{
+  "sections": {
+    "44901111-5fbc-4eab-996e-069063c3d899": {
+      "type": "image-banner",
+      "blocks": {
+        "template--16204354289932__44901111-5fbc-4eab-996e-069063c3d899-16680943234256bec5-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Was ist Moonshine",
+            "heading_size": "h2"
+          }
+        },
+        "226bfb96-bcd3-40b4-a0fa-5927ceba062d": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Bei O’Donnell Moonshine trifft Tradition auf neue Geschmackswelten. Wir füllen unsere Schnäpse in stilechten Einmachgläsern, sogenannten Mason Jars, ab, genau wie die Gangster während der amerikanischen Prohibition. Unser Name erinnert dabei an den illegal gebrannten \"Moonshine\" und an Spike O’Donnell, den Anführer einer der berüchtigtsten Moonshine-Gangs aus Chicago.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--16204354289932__44901111-5fbc-4eab-996e-069063c3d899-16680943234256bec5-0",
+        "226bfb96-bcd3-40b4-a0fa-5927ceba062d"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "image": "shopify://shop_images/Geschichte_Hero_Desktop_abc7525a-2424-4642-8319-2c070cde0125.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": true,
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 24
+      }
+    },
+    "7d6fa997-2a09-488c-b2f5-0fd565ebc305": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16204354289932__7d6fa997-2a09-488c-b2f5-0fd565ebc305-166809473071894526-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "template--16204354289932__7d6fa997-2a09-488c-b2f5-0fd565ebc305-166809473071894526-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bei O’Donnell Moonshine trifft Tradition auf neue Geschmackswelten. Wir füllen unsere Schnäpse in stilechten Einmachgläsern, sogenannten Mason Jars, ab, genau wie die Gangster während der amerikanischen Prohibition. Unser Name erinnert dabei an den illegal gebrannten \"Moonshine\" und an Spike O’Donnell, den Anführer einer der berüchtigtsten Moonshine-Gangs aus Chicago.</p>"
+          }
+        },
+        "template--16204354289932__7d6fa997-2a09-488c-b2f5-0fd565ebc305-166809473071894526-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16204354289932__7d6fa997-2a09-488c-b2f5-0fd565ebc305-166809473071894526-0",
+        "template--16204354289932__7d6fa997-2a09-488c-b2f5-0fd565ebc305-166809473071894526-1",
+        "template--16204354289932__7d6fa997-2a09-488c-b2f5-0fd565ebc305-166809473071894526-2"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
+    "dea9ebb2-faf2-4220-b03f-e7d7f4233678": {
+      "type": "collection-moonshine",
+      "disabled": true,
+      "blocks": {
+        "template--16204354289932__dea9ebb2-faf2-4220-b03f-e7d7f4233678-1668414347bebcc82c-0": {
+          "type": "moonshine",
+          "settings": {
+            "product_name": "harte-nuss",
+            "product_headline": "shopify://shop_images/harte-nuss-titel_1296x_d628f1a0-9977-4173-95ac-ac5eed7e3e0b.webp",
+            "product_image": "shopify://shop_images/HarteNuss_700_Freisteller.webp"
+          }
+        },
+        "bb05eeaf-0a5c-439e-ad2a-7d4c24298d01": {
+          "type": "moonshine",
+          "settings": {
+            "product_name": "bratapfel",
+            "product_headline": "shopify://shop_images/bratapfel_1296x_f899385e-46f6-459d-b493-fb2244373429.webp",
+            "product_image": "shopify://shop_images/Bratapfel_700_Freisteller_D.webp"
+          }
+        },
+        "4f6fac3e-c1a2-419a-8950-42651e84281e": {
+          "type": "moonshine",
+          "settings": {
+            "product_name": "toffee",
+            "product_headline": "shopify://shop_images/toffee2_1296x_a2a3a661-b555-44e3-916b-027aaa3a3477.webp",
+            "product_image": "shopify://shop_images/Toffee_700_Freisteller_da71227b-cc6a-444c-a416-a1f15ea15864.webp"
+          }
+        },
+        "fb89adac-d589-4e9e-a870-9ab975adcbd2": {
+          "type": "moonshine",
+          "settings": {
+            "product_name": "macadamia",
+            "product_headline": "shopify://shop_images/macadamia2_1296x_4a84fc58-00da-427e-958f-f3e892611fb0.webp",
+            "product_image": "shopify://shop_images/Macadamia_700_Freisteller_D.webp"
+          }
+        }
+      },
+      "block_order": [
+        "template--16204354289932__dea9ebb2-faf2-4220-b03f-e7d7f4233678-1668414347bebcc82c-0",
+        "bb05eeaf-0a5c-439e-ad2a-7d4c24298d01",
+        "4f6fac3e-c1a2-419a-8950-42651e84281e",
+        "fb89adac-d589-4e9e-a870-9ab975adcbd2"
+      ],
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "44901111-5fbc-4eab-996e-069063c3d899",
+    "main",
+    "7d6fa997-2a09-488c-b2f5-0fd565ebc305",
+    "dea9ebb2-faf2-4220-b03f-e7d7f4233678"
+  ]
+}

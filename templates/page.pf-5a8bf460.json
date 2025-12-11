@@ -1,1 +1,19 @@
-{"sections":{"pf-5a8bf460":{"type":"pf-5a8bf460","settings":{}}},"order":["pf-5a8bf460"]}
+{
+  "sections": {
+    "pf-5a8bf460": {
+      "type": "pf-5a8bf460",
+      "settings": {}
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "pf-5a8bf460"
+  ]
+}

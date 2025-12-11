@@ -1,1 +1,19 @@
-{"sections":{"pf-83a4b455":{"type":"pf-83a4b455","settings":{}}},"order":["pf-83a4b455"]}
+{
+  "sections": {
+    "pf-83a4b455": {
+      "type": "pf-83a4b455",
+      "settings": {}
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "pf-83a4b455"
+  ]
+}

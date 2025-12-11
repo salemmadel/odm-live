@@ -1,1 +1,81 @@
-{"sections":{"075e9c9a-731e-4c97-a92f-232fcea222d4":{"type":"image-intro-banner","disabled":true,"settings":{"is_above_the_fold":false,"image":"shopify:\/\/shop_images\/Kundenbewertung_desktop_a79db04f-b6bf-4454-85b6-9cf41d2a5205.webp","image_2":"shopify:\/\/shop_images\/Kundenbewertung_mobil_ff0d1541-95ef-4241-9e53-4cac6ecd3170.webp","image_4_height":0,"image_3_height":0,"link":"","image_overlay_opacity":0,"image_height":"small","adapt_height_first_image":false,"desktop_content_position":"middle-center","section_animation":"none","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"background-1","mobile_content_alignment":"center","show_text_below":true,"heading_h1":"","heading_h2":"","heading_text":"<p>Das denken unsere Kunden über uns und unsere Produkte. Überzeug dich selbst!<\/p>","padding_top":0,"padding_bottom":0}},"rich_text_6Ntarw":{"type":"rich-text","blocks":{"heading_rxYDG7":{"type":"heading","settings":{"heading":"Alle Bewertungen","heading_size":"h1"}},"text_Y4awp8":{"type":"text","settings":{"text":"<p>Was unsere Kunden über uns und unsere Produkte sagen. Überzeuge dich selbst.<\/p>"}}},"block_order":["heading_rxYDG7","text_Y4awp8"],"name":"t:sections.rich-text.presets.name","settings":{"color_scheme":"background-1","full_width":true,"padding_top":40,"padding_bottom":12}},"main":{"type":"main-page","settings":{"padding_top":0,"padding_bottom":20,"show_title":false}}},"order":["075e9c9a-731e-4c97-a92f-232fcea222d4","rich_text_6Ntarw","main"]}
+{
+  "sections": {
+    "075e9c9a-731e-4c97-a92f-232fcea222d4": {
+      "type": "image-intro-banner",
+      "disabled": true,
+      "settings": {
+        "is_above_the_fold": false,
+        "image": "shopify://shop_images/Kundenbewertung_desktop_a79db04f-b6bf-4454-85b6-9cf41d2a5205.webp",
+        "image_2": "shopify://shop_images/Kundenbewertung_mobil_ff0d1541-95ef-4241-9e53-4cac6ecd3170.webp",
+        "image_4_height": 0,
+        "image_3_height": 0,
+        "link": "",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "section_animation": "none",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "show_text_below": true,
+        "heading_h1": "",
+        "heading_h2": "",
+        "heading_text": "<p>Das denken unsere Kunden über uns und unsere Produkte. Überzeug dich selbst!</p>",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_6Ntarw": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_rxYDG7": {
+          "type": "heading",
+          "settings": {
+            "heading": "Alle Bewertungen",
+            "heading_size": "h1"
+          }
+        },
+        "text_Y4awp8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Was unsere Kunden über uns und unsere Produkte sagen. Überzeuge dich selbst.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rxYDG7",
+        "text_Y4awp8"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 12
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "show_title": false
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "075e9c9a-731e-4c97-a92f-232fcea222d4",
+    "rich_text_6Ntarw",
+    "main"
+  ]
+}

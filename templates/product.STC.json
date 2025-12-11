@@ -416,9 +416,17 @@
         "padding_top": 24,
         "padding_bottom": 24
       }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
     }
   },
   "order": [
+    "breadcrumbs",
     "main",
     "ss_scrolling_anouncement_bar_Yx6gbK",
     "product-recommendations",

@@ -1,1 +1,84 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"padding_top":28,"padding_bottom":24,"show_title":true}},"image_banner_GcXziD":{"type":"image-banner","settings":{"is_above_the_fold":false,"image":"shopify:\/\/shop_images\/Store_Dortmund.jpg","link":"","image_overlay_opacity":0,"image_height":"small","adapt_height_first_image":false,"desktop_content_position":"middle-center","section_animation":"none","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"background-1","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":true}},"rich_text_QWXnhk":{"type":"rich-text","blocks":{"heading_NUwkBf":{"type":"heading","settings":{"heading":"Jetzt beim Newsletter anmelden und 10% Rabatt kassieren!","heading_size":"h1"}}},"block_order":["heading_NUwkBf"],"settings":{"color_scheme":"background-1","full_width":true,"padding_top":40,"padding_bottom":40}},"1721208739791f483d":{"type":"apps","blocks":{"klaviyo_email_marketing_sms_form_embed_block_WMeiXP":{"type":"shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/form-embed-block\/2632fe16-c075-4321-a88b-50b567f42507","settings":{"formId":"VKYkc9"}}},"block_order":["klaviyo_email_marketing_sms_form_embed_block_WMeiXP"],"settings":{"include_margins":true}}},"order":["main","image_banner_GcXziD","rich_text_QWXnhk","1721208739791f483d"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 24,
+        "show_title": true
+      }
+    },
+    "image_banner_GcXziD": {
+      "type": "image-banner",
+      "settings": {
+        "is_above_the_fold": false,
+        "image": "shopify://shop_images/Store_Dortmund.jpg",
+        "link": "",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "section_animation": "none",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "rich_text_QWXnhk": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_NUwkBf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Jetzt beim Newsletter anmelden und 10% Rabatt kassieren!",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NUwkBf"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "1721208739791f483d": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_email_marketing_sms_form_embed_block_WMeiXP": {
+          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": "VKYkc9"
+          }
+        }
+      },
+      "block_order": [
+        "klaviyo_email_marketing_sms_form_embed_block_WMeiXP"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "image_banner_GcXziD",
+    "rich_text_QWXnhk",
+    "1721208739791f483d"
+  ]
+}

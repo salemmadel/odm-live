@@ -1,1 +1,371 @@
-{"sections":{"main":{"type":"main-product","blocks":{"vendor":{"type":"text","settings":{"text":"{{ product.vendor }}","text_style":"uppercase"}},"title":{"type":"title","settings":{}},"eshop_guide_product_usp_4jRBhe":{"type":"eshop_guide_product_usp","disabled":true,"settings":{"usp_title":"DEAL: Beim Kauf eines 3er-Sets (700ml) gratis erhältlich nur für kurze Zeit!️‍🔥","usp_1":"","usp_2":"","usp_3":"","usp_4":"","usp_5":""}},"caption":{"type":"text","settings":{"text":"{{ product.metafields.descriptors.subtitle.value }}","text_style":"subtitle"}},"fca1c1a8-04e2-407f-a46e-9e6e46e8cb47":{"type":"shopify:\/\/apps\/yotpo-product-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf","settings":{"product":"{{product}}"}},"price":{"type":"price","settings":{}},"variant_picker":{"type":"variant_picker","settings":{"picker_type":"button"}},"link_yn6VAA":{"type":"link","settings":{"title":"Alle drei kaufen"}},"quantity_selector":{"type":"quantity_selector","settings":{}},"buy_buttons":{"type":"buy_buttons","settings":{"show_sticky_cart":true,"is_set":false,"only_tier_gang_button":"Erforderliche Gangstufe nicht erreicht","set_size":3,"set_text":"Wähle 3 Produkte","show_dynamic_checkout":false,"gang_url":""}},"wishlist_engine_product_page_Dn4jme":{"type":"shopify:\/\/apps\/se-wishlist-engine\/blocks\/Product-Page\/8f7c0857-8e71-463d-a168-8e133094753b","settings":{}},"description":{"type":"description","settings":{}},"recommended_products_nLLDbH":{"type":"recommended_products","disabled":true,"settings":{"title":"","content":"","button_text":"","product_list":["set3-700"],"enable_bulk_add":false,"columns_desktop":"1","enable_desktop_slider":false,"columns_mobile":"1","swipe_on_mobile":false}},"collapsible-row-0":{"type":"collapsible_tab","settings":{"heading":"Beschreibung","icon":"clipboard","content":"<p>Würzig-süß, leicht fruchtig und angenehm rauchig – die O’Donnell BBQ Sauce ist genau das Richtige für jedes Grillfest. Ganz egal, ob du mit der Sauce deinen Burger verfeinerst,  Fleisch marinierst oder dein Steak dippst – schmeckt einfach immer wahnsinnig gut. Die karamelligen Noten unserer “Harten Nuss” sind die ideale Ergänzung zum dezent scharfen Charakter der Sauce. Der einmalige Geschmack versetzt dich direkt zurück in die Zeit der Prohibition.<\/p>","page":""}},"collapsible-row-3":{"type":"collapsible_tab","settings":{"heading":"Nährwerte","icon":"box","content":"<p><strong>Nährwertangaben je 100g:<br\/><\/strong>Brennwert 842 kJ \/ 200 kcal<br\/>Fett: &lt;0,5g, davon gesättigte Fettsäuren: &lt;0,1g<br\/>Kohlenhydrate: 47g, davon Zucker: 44g<br\/>Eiweißgehalt: 1,1g<br\/>Salzgehalt: 3,4g<\/p>","page":""}},"collapsible_tab_w9ixJb":{"type":"collapsible_tab","settings":{"heading":"Allergene","icon":"bottle","content":"<p>Enthält <strong>Sojasauce, Sojabohnen<\/strong> und <strong>Weizenmehl<\/strong>.<br\/><br\/>* kann Spuren von <strong>Nüssen, Sellerie, Sesam<\/strong> und <strong>Schalenfrüchten <\/strong>enthalten.<\/p>","page":""}},"collapsible-row-1":{"type":"collapsible_tab","settings":{"heading":"Rezeptvorschläge","icon":"fire","content":"<p>Unsere Moonshine BBQ Sauce passt zu allem was gegrillt ist, egal ob Fleisch, Vegetarisch oder Vegan. <\/p>","page":""}},"collapsible-row-2":{"type":"collapsible_tab","settings":{"heading":"Versand","icon":"truck","content":"<ul><li><strong>DHL Priority: Lieferzeit 1-2 Werktage<\/strong><\/li><\/ul><p>Alle Bestellungen bis 12 Uhr werden noch am selben Tag DHL übergeben.<\/p><ul><li><strong>DHL Standard: Lieferzeit 2-3 Werktage<\/strong><\/li><\/ul>","page":""}}},"block_order":["vendor","title","eshop_guide_product_usp_4jRBhe","caption","fca1c1a8-04e2-407f-a46e-9e6e46e8cb47","price","variant_picker","link_yn6VAA","quantity_selector","buy_buttons","wishlist_engine_product_page_Dn4jme","description","recommended_products_nLLDbH","collapsible-row-0","collapsible-row-3","collapsible_tab_w9ixJb","collapsible-row-1","collapsible-row-2"],"settings":{"gift_card_receipient_enabled":false,"is_above_the_fold":true,"enable_sticky_info":true,"badges_enabled":false,"gallery_layout":"thumbnail","media_size":"medium","mobile_thumbnails":"hide","hide_variants":true,"enable_video_looping":false,"padding_top":36,"padding_bottom":12}},"image_with_text_AzpfXc":{"type":"image-with-text","blocks":{"heading_rd9Lic":{"type":"heading","settings":{"heading":"Für echte Moonshine-Fans!","heading_size":"h2"}},"text_rUBJqn":{"type":"text","settings":{"text":"<p>Die O’Donnell BBQ Sauce vereint rauchig-fruchtige Aromen mit einem einzigartigen Charakter – ideal für jedes Grillfest.<\/p>","text_style":"body"}}},"block_order":["heading_rd9Lic","text_rUBJqn"],"disabled":true,"settings":{"is_above_the_fold":false,"background_color":"#ffffff","text_color":"#000000","image":"shopify:\/\/shop_images\/BBQ_Sauce-5_1.jpg","image_caption":"","height":"adapt","desktop_image_width":"medium","layout":"text_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"overlap","color_scheme":"background-2","mobile_content_alignment":"left","padding_top":36,"padding_bottom":36}},"custom_liquid_nprGrB":{"type":"custom-liquid","disabled":true,"settings":{"custom_liquid":"<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"671a03587f92b41e14955578\">\n<\/div>","color_scheme":"background-1","padding_top":40,"padding_bottom":52}},"image_with_text_m46aQA":{"type":"image-with-text","blocks":{"heading_HyCFnd":{"type":"heading","settings":{"heading":"Der perfekte Kick für dein Grillgut!","heading_size":"h2"}},"text_KL7Jh3":{"type":"text","settings":{"text":"<p>Mit der karamelligen Note der „Harten Nuss“ und einer dezent scharfen Note sorgt unsere BBQ Sauce für einen besonderen Geschmack. <\/p>","text_style":"body"}},"button_aDFptk":{"type":"button","settings":{"button_label":"Jetzt kaufen!","button_link":"shopify:\/\/products\/set3-700","button_style_white_color":false}}},"block_order":["heading_HyCFnd","text_KL7Jh3","button_aDFptk"],"settings":{"is_above_the_fold":false,"background_color":"#ffffff","text_color":"#000000","image":"shopify:\/\/shop_images\/BBQ_Sauce_Bottles_3.png","image_caption":"","height":"adapt","desktop_image_width":"medium","layout":"text_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"overlap","color_scheme":"background-2","mobile_content_alignment":"left","padding_top":36,"padding_bottom":36}},"product-recommendations":{"type":"product-recommendations","disabled":true,"settings":{"heading":"Das könnte dir auch gefallen","heading_size":"h2","products_to_show":4,"columns_desktop":4,"color_scheme":"background-1","image_ratio":"square","show_secondary_image":true,"show_vendor":false,"show_rating":false,"grey_sold_out_products":true,"columns_mobile":"2","padding_top":24,"padding_bottom":24}},"product_recommendations_v2_BqaDVa":{"type":"product-recommendations-v2","custom_css":[".title {text-align: center;}",".quick-add__submit {background-color: black; color: white;}"],"settings":{"is_above_the_fold":false,"title":"Für den perfekten Grillabend!","heading_size":"h1","description":"","grey_sold_out_products":true,"description_style":"body","product_list":["set3-700","pralle-kirsche-kirschlikoer","harte-nuss-und-cream-bundle","bundle-knallharte-nuss","cherry-lemon-smash-bundle","tasting-set","triple-bestseller-bundle"],"columns_desktop":4,"full_width":false,"section_animation":"none","enable_desktop_slider":true,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":false,"show_vendor":false,"show_rating":false,"enable_quick_add":true,"columns_mobile":"1","swipe_on_mobile":true,"padding_top":36,"padding_bottom":20}},"1668500027a509409d":{"type":"apps","blocks":{"cd02110e-c8d7-4ff4-b4bc-b2e6baaf903d":{"type":"shopify:\/\/apps\/yotpo-product-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf","settings":{"product":"{{product}}"}}},"block_order":["cd02110e-c8d7-4ff4-b4bc-b2e6baaf903d"],"settings":{"include_margins":true}}},"order":["main","image_with_text_AzpfXc","custom_liquid_nprGrB","image_with_text_m46aQA","product-recommendations","product_recommendations_v2_BqaDVa","1668500027a509409d"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "eshop_guide_product_usp_4jRBhe": {
+          "type": "eshop_guide_product_usp",
+          "disabled": true,
+          "settings": {
+            "usp_title": "DEAL: Beim Kauf eines 3er-Sets (700ml) gratis erhältlich nur für kurze Zeit!️‍🔥",
+            "usp_1": "",
+            "usp_2": "",
+            "usp_3": "",
+            "usp_4": "",
+            "usp_5": ""
+          }
+        },
+        "caption": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "fca1c1a8-04e2-407f-a46e-9e6e46e8cb47": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "link_yn6VAA": {
+          "type": "link",
+          "settings": {
+            "title": "Alle drei kaufen"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_sticky_cart": true,
+            "is_set": false,
+            "only_tier_gang_button": "Erforderliche Gangstufe nicht erreicht",
+            "set_size": 3,
+            "set_text": "Wähle 3 Produkte",
+            "show_dynamic_checkout": false,
+            "gang_url": ""
+          }
+        },
+        "wishlist_engine_product_page_Dn4jme": {
+          "type": "shopify://apps/se-wishlist-engine/blocks/Product-Page/8f7c0857-8e71-463d-a168-8e133094753b",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "recommended_products_nLLDbH": {
+          "type": "recommended_products",
+          "disabled": true,
+          "settings": {
+            "title": "",
+            "content": "",
+            "button_text": "",
+            "product_list": [
+              "set3-700"
+            ],
+            "enable_bulk_add": false,
+            "columns_desktop": "1",
+            "enable_desktop_slider": false,
+            "columns_mobile": "1",
+            "swipe_on_mobile": false
+          }
+        },
+        "collapsible-row-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Beschreibung",
+            "icon": "clipboard",
+            "content": "<p>Würzig-süß, leicht fruchtig und angenehm rauchig – die O’Donnell BBQ Sauce ist genau das Richtige für jedes Grillfest. Ganz egal, ob du mit der Sauce deinen Burger verfeinerst,  Fleisch marinierst oder dein Steak dippst – schmeckt einfach immer wahnsinnig gut. Die karamelligen Noten unserer “Harten Nuss” sind die ideale Ergänzung zum dezent scharfen Charakter der Sauce. Der einmalige Geschmack versetzt dich direkt zurück in die Zeit der Prohibition.</p>",
+            "page": ""
+          }
+        },
+        "collapsible-row-3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Nährwerte",
+            "icon": "box",
+            "content": "<p><strong>Nährwertangaben je 100g:<br/></strong>Brennwert 842 kJ / 200 kcal<br/>Fett: &lt;0,5g, davon gesättigte Fettsäuren: &lt;0,1g<br/>Kohlenhydrate: 47g, davon Zucker: 44g<br/>Eiweißgehalt: 1,1g<br/>Salzgehalt: 3,4g</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_w9ixJb": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Allergene",
+            "icon": "bottle",
+            "content": "<p>Enthält <strong>Sojasauce, Sojabohnen</strong> und <strong>Weizenmehl</strong>.<br/><br/>* kann Spuren von <strong>Nüssen, Sellerie, Sesam</strong> und <strong>Schalenfrüchten </strong>enthalten.</p>",
+            "page": ""
+          }
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Rezeptvorschläge",
+            "icon": "fire",
+            "content": "<p>Unsere Moonshine BBQ Sauce passt zu allem was gegrillt ist, egal ob Fleisch, Vegetarisch oder Vegan. </p>",
+            "page": ""
+          }
+        },
+        "collapsible-row-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Versand",
+            "icon": "truck",
+            "content": "<ul><li><strong>DHL Priority: Lieferzeit 1-2 Werktage</strong></li></ul><p>Alle Bestellungen bis 12 Uhr werden noch am selben Tag DHL übergeben.</p><ul><li><strong>DHL Standard: Lieferzeit 2-3 Werktage</strong></li></ul>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "eshop_guide_product_usp_4jRBhe",
+        "caption",
+        "fca1c1a8-04e2-407f-a46e-9e6e46e8cb47",
+        "price",
+        "variant_picker",
+        "link_yn6VAA",
+        "quantity_selector",
+        "buy_buttons",
+        "wishlist_engine_product_page_Dn4jme",
+        "description",
+        "recommended_products_nLLDbH",
+        "collapsible-row-0",
+        "collapsible-row-3",
+        "collapsible_tab_w9ixJb",
+        "collapsible-row-1",
+        "collapsible-row-2"
+      ],
+      "settings": {
+        "gift_card_receipient_enabled": false,
+        "is_above_the_fold": true,
+        "enable_sticky_info": true,
+        "badges_enabled": false,
+        "gallery_layout": "thumbnail",
+        "media_size": "medium",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "image_with_text_AzpfXc": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_rd9Lic": {
+          "type": "heading",
+          "settings": {
+            "heading": "Für echte Moonshine-Fans!",
+            "heading_size": "h2"
+          }
+        },
+        "text_rUBJqn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Die O’Donnell BBQ Sauce vereint rauchig-fruchtige Aromen mit einem einzigartigen Charakter – ideal für jedes Grillfest.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rd9Lic",
+        "text_rUBJqn"
+      ],
+      "disabled": true,
+      "settings": {
+        "is_above_the_fold": false,
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "image": "shopify://shop_images/BBQ_Sauce-5_1.jpg",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_nprGrB": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"671a03587f92b41e14955578\">\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_m46aQA": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_HyCFnd": {
+          "type": "heading",
+          "settings": {
+            "heading": "Der perfekte Kick für dein Grillgut!",
+            "heading_size": "h2"
+          }
+        },
+        "text_KL7Jh3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Mit der karamelligen Note der „Harten Nuss“ und einer dezent scharfen Note sorgt unsere BBQ Sauce für einen besonderen Geschmack. </p>",
+            "text_style": "body"
+          }
+        },
+        "button_aDFptk": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt kaufen!",
+            "button_link": "shopify://products/set3-700",
+            "button_style_white_color": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_HyCFnd",
+        "text_KL7Jh3",
+        "button_aDFptk"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "image": "shopify://shop_images/BBQ_Sauce_Bottles_3.png",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "Das könnte dir auch gefallen",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "grey_sold_out_products": true,
+        "columns_mobile": "2",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "product_recommendations_v2_BqaDVa": {
+      "type": "product-recommendations-v2",
+      "custom_css": [
+        ".title {text-align: center;}",
+        ".quick-add__submit {background-color: black; color: white;}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "Für den perfekten Grillabend!",
+        "heading_size": "h1",
+        "description": "",
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "product_list": [
+          "set3-700",
+          "pralle-kirsche-kirschlikoer",
+          "harte-nuss-und-cream-bundle",
+          "bundle-knallharte-nuss",
+          "cherry-lemon-smash-bundle",
+          "tasting-set",
+          "triple-bestseller-bundle"
+        ],
+        "columns_desktop": 4,
+        "full_width": false,
+        "section_animation": "none",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 20
+      }
+    },
+    "1668500027a509409d": {
+      "type": "apps",
+      "blocks": {
+        "cd02110e-c8d7-4ff4-b4bc-b2e6baaf903d": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "cd02110e-c8d7-4ff4-b4bc-b2e6baaf903d"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "image_with_text_AzpfXc",
+    "custom_liquid_nprGrB",
+    "image_with_text_m46aQA",
+    "product-recommendations",
+    "product_recommendations_v2_BqaDVa",
+    "1668500027a509409d"
+  ]
+}

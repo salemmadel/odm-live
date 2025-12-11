@@ -1,1 +1,217 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"padding_top":28,"padding_bottom":24,"show_title":true}},"c47eb502-e669-47fe-9e97-4cb2eb38c9a6":{"type":"image-intro-banner","settings":{"is_above_the_fold":false,"image":"shopify:\/\/shop_images\/Haendler_Desktop.jpg","image_2":"shopify:\/\/shop_images\/8N1A6519_1_1.jpg","image_4_height":0,"image_3_height":0,"link":"","image_overlay_opacity":0,"image_height":"small","adapt_height_first_image":false,"desktop_content_position":"middle-center","section_animation":"none","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"background-1","mobile_content_alignment":"center","show_text_below":true,"heading_h1":"Händler","heading_h2":"","heading_text":"","padding_top":0,"padding_bottom":0}},"2536e688-1c7d-417c-bc7f-8acebe2a40f4":{"type":"multicolumn","blocks":{"template--17826107359500__2536e688-1c7d-417c-bc7f-8acebe2a40f4-167818948280f6270e-0":{"type":"column","settings":{"overlay_title":false,"overlay_title_position":"bottom","title":"Für Neukunden","text":"","mobile_text":"<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>","link_label":"Registiere dich hier","link":"https:\/\/odonnell.de\/pages\/wholesale_new","button_alignment":"left","selected_button":false,"grey_out_media":false}},"template--17826107359500__2536e688-1c7d-417c-bc7f-8acebe2a40f4-167818948280f6270e-1":{"type":"column","settings":{"overlay_title":false,"overlay_title_position":"bottom","title":"Login","text":"","mobile_text":"<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>","link_label":"zum Login","link":"https:\/\/odonnell-dealer.de","button_alignment":"left","selected_button":false,"grey_out_media":false}},"column_XbFpLV":{"type":"column","settings":{"overlay_title":false,"overlay_title_position":"bottom","title":"Wir sind für dich da!","text":"<p>030 120883301<\/p><p><a href=\"mailto:vertrieb@odonnell.de\" target=\"_blank\">vertrieb@odonnell.de<\/a><\/p>","mobile_text":"","link_label":"","link":"","button_alignment":"left","selected_button":false,"grey_out_media":false}}},"block_order":["template--17826107359500__2536e688-1c7d-417c-bc7f-8acebe2a40f4-167818948280f6270e-0","template--17826107359500__2536e688-1c7d-417c-bc7f-8acebe2a40f4-167818948280f6270e-1","column_XbFpLV"],"settings":{"is_above_the_fold":false,"title":"","heading_size":"h1","title_text":"<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>","outer_padding":5,"image_width":"full","image_ratio":"adapt","image_border_color":"#ffffff","columns_desktop":3,"column_alignment":"left","background_style":"primary","button_label":"","button_link":"","color_scheme":"background-1","columns_mobile":"1","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"0224beae-ade7-4476-8148-a67d01c0855b":{"type":"image-with-text","blocks":{"template--16203256332556__0224beae-ade7-4476-8148-a67d01c0855b-1668095215827e1d7a-0":{"type":"heading","disabled":true,"settings":{"heading":"Image with text","heading_size":"h1"}},"template--16203256332556__0224beae-ade7-4476-8148-a67d01c0855b-1668095215827e1d7a-1":{"type":"text","settings":{"text":"<p>Wir sind stets auf der Suche nach tollen Partnern, die mit uns gemeinsam Moonshine dealen und damit der Tradition der Gangster, während der amerikanischen Prohibition, folgen.<\/p><p>Hast du vielleicht eine coole Bar oder ein Geschäft in dem unser Moonshine einfach nicht fehlen darf? Dann melde dich bei uns und wir senden dir gerne mal eine Kostprobe unseres Schnapses zu!<\/p><p>Der Großteil unserer Gewerbekunden besteht aus kleinen, inhabergeführten Geschäften und unser Team bietet dir eine zuverlässige und individuelle Beratung an. Langfristige Kooperationen und eine gute Bindung zu unseren Händler sind uns nämlich sehr wichtig.<\/p>","text_style":"body"}},"template--16203256332556__0224beae-ade7-4476-8148-a67d01c0855b-1668095215827e1d7a-2":{"type":"button","disabled":true,"settings":{"button_label":"Für Neukunden","button_link":"","button_style_white_color":false}}},"block_order":["template--16203256332556__0224beae-ade7-4476-8148-a67d01c0855b-1668095215827e1d7a-0","template--16203256332556__0224beae-ade7-4476-8148-a67d01c0855b-1668095215827e1d7a-1","template--16203256332556__0224beae-ade7-4476-8148-a67d01c0855b-1668095215827e1d7a-2"],"settings":{"is_above_the_fold":true,"background_color":"#ffffff","text_color":"#000000","image":"shopify:\/\/shop_images\/bild2_e53be545-b532-448e-b08f-45c827122efb.jpg","image_caption":"","height":"adapt","desktop_image_width":"medium","layout":"text_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","color_scheme":"background-2","mobile_content_alignment":"left","padding_top":36,"padding_bottom":8}},"d3d93694-3217-4cf3-a07f-c570ab56de3f":{"type":"newsletter","blocks":{"template--16695186686220__d3d93694-3217-4cf3-a07f-c570ab56de3f-167290975195b812f1-0":{"type":"heading","settings":{"heading":"Unser Newsletter","heading_size":"h2"}},"template--16695186686220__d3d93694-3217-4cf3-a07f-c570ab56de3f-167290975195b812f1-1":{"type":"paragraph","settings":{"text":"<p><strong>10% Rabatt<\/strong> auf Deine nächste Bestellung, verpasse keine neue Sorte und profitiere von <strong>exklusiven Sonderaktionen<\/strong> für unsere Abonnenten.<\/p>"}},"template--16695186686220__d3d93694-3217-4cf3-a07f-c570ab56de3f-167290975195b812f1-2":{"type":"email_form","settings":{}}},"block_order":["template--16695186686220__d3d93694-3217-4cf3-a07f-c570ab56de3f-167290975195b812f1-0","template--16695186686220__d3d93694-3217-4cf3-a07f-c570ab56de3f-167290975195b812f1-1","template--16695186686220__d3d93694-3217-4cf3-a07f-c570ab56de3f-167290975195b812f1-2"],"disabled":true,"settings":{"is_above_the_fold":false,"color_scheme":"background-1","full_width":true,"newsletter_ln":"Ich habe die Hinweise zum Umgang mit personenbezogenen Daten zur Kenntnis genommen. Ein Widerruf bzw. eine Abmeldung des Newsletter-Abonnements ist jederzeit über einen Link im Newsletter oder über eine Nachricht an info@odonnell.de möglich.","custom_newsletter_tags":"","padding_top":32,"padding_bottom":24}}},"order":["main","c47eb502-e669-47fe-9e97-4cb2eb38c9a6","2536e688-1c7d-417c-bc7f-8acebe2a40f4","0224beae-ade7-4476-8148-a67d01c0855b","d3d93694-3217-4cf3-a07f-c570ab56de3f"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 24,
+        "show_title": true
+      }
+    },
+    "c47eb502-e669-47fe-9e97-4cb2eb38c9a6": {
+      "type": "image-intro-banner",
+      "settings": {
+        "is_above_the_fold": false,
+        "image": "shopify://shop_images/Haendler_Desktop.jpg",
+        "image_2": "shopify://shop_images/8N1A6519_1_1.jpg",
+        "image_4_height": 0,
+        "image_3_height": 0,
+        "link": "",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "section_animation": "none",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "show_text_below": true,
+        "heading_h1": "Händler",
+        "heading_h2": "",
+        "heading_text": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "2536e688-1c7d-417c-bc7f-8acebe2a40f4": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--17826107359500__2536e688-1c7d-417c-bc7f-8acebe2a40f4-167818948280f6270e-0": {
+          "type": "column",
+          "settings": {
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Für Neukunden",
+            "text": "",
+            "mobile_text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "Registiere dich hier",
+            "link": "https://odonnell.de/pages/wholesale_new",
+            "button_alignment": "left",
+            "selected_button": false,
+            "grey_out_media": false
+          }
+        },
+        "template--17826107359500__2536e688-1c7d-417c-bc7f-8acebe2a40f4-167818948280f6270e-1": {
+          "type": "column",
+          "settings": {
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Login",
+            "text": "",
+            "mobile_text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "zum Login",
+            "link": "https://odonnell-dealer.de",
+            "button_alignment": "left",
+            "selected_button": false,
+            "grey_out_media": false
+          }
+        },
+        "column_XbFpLV": {
+          "type": "column",
+          "settings": {
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Wir sind für dich da!",
+            "text": "<p>030 120883301</p><p><a href=\"mailto:vertrieb@odonnell.de\" target=\"_blank\">vertrieb@odonnell.de</a></p>",
+            "mobile_text": "",
+            "link_label": "",
+            "link": "",
+            "button_alignment": "left",
+            "selected_button": false,
+            "grey_out_media": false
+          }
+        }
+      },
+      "block_order": [
+        "template--17826107359500__2536e688-1c7d-417c-bc7f-8acebe2a40f4-167818948280f6270e-0",
+        "template--17826107359500__2536e688-1c7d-417c-bc7f-8acebe2a40f4-167818948280f6270e-1",
+        "column_XbFpLV"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "",
+        "heading_size": "h1",
+        "title_text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+        "outer_padding": 5,
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "image_border_color": "#ffffff",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "0224beae-ade7-4476-8148-a67d01c0855b": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16203256332556__0224beae-ade7-4476-8148-a67d01c0855b-1668095215827e1d7a-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "template--16203256332556__0224beae-ade7-4476-8148-a67d01c0855b-1668095215827e1d7a-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wir sind stets auf der Suche nach tollen Partnern, die mit uns gemeinsam Moonshine dealen und damit der Tradition der Gangster, während der amerikanischen Prohibition, folgen.</p><p>Hast du vielleicht eine coole Bar oder ein Geschäft in dem unser Moonshine einfach nicht fehlen darf? Dann melde dich bei uns und wir senden dir gerne mal eine Kostprobe unseres Schnapses zu!</p><p>Der Großteil unserer Gewerbekunden besteht aus kleinen, inhabergeführten Geschäften und unser Team bietet dir eine zuverlässige und individuelle Beratung an. Langfristige Kooperationen und eine gute Bindung zu unseren Händler sind uns nämlich sehr wichtig.</p>",
+            "text_style": "body"
+          }
+        },
+        "template--16203256332556__0224beae-ade7-4476-8148-a67d01c0855b-1668095215827e1d7a-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Für Neukunden",
+            "button_link": "",
+            "button_style_white_color": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16203256332556__0224beae-ade7-4476-8148-a67d01c0855b-1668095215827e1d7a-0",
+        "template--16203256332556__0224beae-ade7-4476-8148-a67d01c0855b-1668095215827e1d7a-1",
+        "template--16203256332556__0224beae-ade7-4476-8148-a67d01c0855b-1668095215827e1d7a-2"
+      ],
+      "settings": {
+        "is_above_the_fold": true,
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "image": "shopify://shop_images/bild2_e53be545-b532-448e-b08f-45c827122efb.jpg",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 8
+      }
+    },
+    "d3d93694-3217-4cf3-a07f-c570ab56de3f": {
+      "type": "newsletter",
+      "blocks": {
+        "template--16695186686220__d3d93694-3217-4cf3-a07f-c570ab56de3f-167290975195b812f1-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Unser Newsletter",
+            "heading_size": "h2"
+          }
+        },
+        "template--16695186686220__d3d93694-3217-4cf3-a07f-c570ab56de3f-167290975195b812f1-1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p><strong>10% Rabatt</strong> auf Deine nächste Bestellung, verpasse keine neue Sorte und profitiere von <strong>exklusiven Sonderaktionen</strong> für unsere Abonnenten.</p>"
+          }
+        },
+        "template--16695186686220__d3d93694-3217-4cf3-a07f-c570ab56de3f-167290975195b812f1-2": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "template--16695186686220__d3d93694-3217-4cf3-a07f-c570ab56de3f-167290975195b812f1-0",
+        "template--16695186686220__d3d93694-3217-4cf3-a07f-c570ab56de3f-167290975195b812f1-1",
+        "template--16695186686220__d3d93694-3217-4cf3-a07f-c570ab56de3f-167290975195b812f1-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "is_above_the_fold": false,
+        "color_scheme": "background-1",
+        "full_width": true,
+        "newsletter_ln": "Ich habe die Hinweise zum Umgang mit personenbezogenen Daten zur Kenntnis genommen. Ein Widerruf bzw. eine Abmeldung des Newsletter-Abonnements ist jederzeit über einen Link im Newsletter oder über eine Nachricht an info@odonnell.de möglich.",
+        "custom_newsletter_tags": "",
+        "padding_top": 32,
+        "padding_bottom": 24
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "c47eb502-e669-47fe-9e97-4cb2eb38c9a6",
+    "2536e688-1c7d-417c-bc7f-8acebe2a40f4",
+    "0224beae-ade7-4476-8148-a67d01c0855b",
+    "d3d93694-3217-4cf3-a07f-c570ab56de3f"
+  ]
+}

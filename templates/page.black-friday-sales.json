@@ -1,1 +1,187 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"padding_top":28,"padding_bottom":24,"show_title":true}},"image_intro_banner_x6h3iT":{"type":"image-intro-banner","settings":{"is_above_the_fold":true,"image":"shopify:\/\/shop_images\/BW24_HeroD.jpg","image_2":"shopify:\/\/shop_images\/BW24_HeroD.jpg","image_4_height":0,"image_3_height":0,"link":"","image_overlay_opacity":0,"image_height":"adapt_image","adapt_height_first_image":true,"desktop_content_position":"middle-center","section_animation":"none","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"background-1","mobile_content_alignment":"center","show_text_below":true,"heading_h1":"","heading_h2":"","heading_text":"","padding_top":0,"padding_bottom":0}},"rich_text_geCUjy":{"type":"rich-text","blocks":{"text_ef7FqU":{"type":"text","settings":{"text":"<p>Mach dich bereit für unsere besten Deals des Jahres! Die begehrten Angebote sind traditionell schnell vergriffen, also markiere dir die Termine und bleibe auf dem Laufenden. Hier kommen starke Angebote auf dich zu – aber nur solange der Vorrat reicht!<\/p><p><strong>Es ist Black Friday! So starke Deals hatten wir noch nie!<\/strong><\/p>"}},"button_qb8HXQ":{"type":"button","disabled":true,"settings":{"button_label":"Jetzt mehr erfahren","button_link":"shopify:\/\/products\/bundle-knallharte-nuss","button_style_secondary":false}}},"block_order":["text_ef7FqU","button_qb8HXQ"],"settings":{"color_scheme":"background-1","full_width":true,"padding_top":24,"padding_bottom":24}},"multicolumn_9b6d3p":{"type":"multicolumn","blocks":{"column_H89bry":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/BW_Coffee24.jpg","overlay_title":false,"overlay_title_position":"bottom","title":"Seit 07. November","text":"<p>Unser <strong>Kaffee-Likör<\/strong> ist wieder da!<\/p>","mobile_text":"","link_label":"Jetzt kaufen","link":"shopify:\/\/products\/kaffee","button_alignment":"center","selected_button":true,"grey_out_media":false}},"column_MUC87G":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/BW_Mysterybox24.jpg","overlay_title":false,"overlay_title_position":"bottom","title":"Seit 15. November","text":"<p>Unsere traditionellen <strong>Mystery-Boxen<\/strong>!<\/p>","mobile_text":"","link_label":"Ausverkauft!","link":"","button_alignment":"center","selected_button":true,"grey_out_media":true}},"column_XJzF8k":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/BlackWeek24.jpg","overlay_title":false,"overlay_title_position":"bottom","title":"Seit 22. November","text":"<p>Je mehr du kaufst, <strong>desto mehr sparst<\/strong> du!<\/p>","mobile_text":"","link_label":"Jetzt sparen","link":"shopify:\/\/collections\/black-week-sale","button_alignment":"center","selected_button":true,"grey_out_media":false}},"column_DikawQ":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/BW_BWare24.jpg","overlay_title":false,"overlay_title_position":"bottom","title":"29. November - 01. Dezember","text":"<p>Sichere dir <strong>25% Rabatt<\/strong> auf B-Ware, aber nur solange der Vorrat reicht!<\/p>","mobile_text":"","link_label":"Jetzt zuschlagen!","link":"shopify:\/\/collections\/black-friday","button_alignment":"center","selected_button":true,"grey_out_media":false}}},"block_order":["column_H89bry","column_MUC87G","column_XJzF8k","column_DikawQ"],"custom_css":[".title-wrapper-with-link {justify-content: center; text-align: center;}",".multicolumn,.multicolumn .h1,.multicolumn h3 {color: #fff;}",".multicolumn-card__info p strong {color: #c59e35;}","@media screen and (min-width: 1149px) {.title-wrapper-with-link {padding-top: 20px; }}",".multicolumn-card__info .button {background: #fff; color: #000;}",".multicolumn-card__info .button {justify-content: center;}"],"settings":{"is_above_the_fold":false,"title":"Unsere BLACK WEEKS Angebote","image_background_desktop":"shopify:\/\/shop_images\/BW_backgroundD.png","heading_size":"h1","title_text":"","outer_padding":20,"image_width":"full","image_ratio":"square","image_border_color":"#c59e35","columns_desktop":2,"column_alignment":"center","background_style":"primary","button_label":"","button_link":"","color_scheme":"transparent","columns_mobile":"1","swipe_on_mobile":true,"padding_top":120,"padding_bottom":36}}},"order":["main","image_intro_banner_x6h3iT","rich_text_geCUjy","multicolumn_9b6d3p"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 24,
+        "show_title": true
+      }
+    },
+    "image_intro_banner_x6h3iT": {
+      "type": "image-intro-banner",
+      "settings": {
+        "is_above_the_fold": true,
+        "image": "shopify://shop_images/BW24_HeroD.jpg",
+        "image_2": "shopify://shop_images/BW24_HeroD.jpg",
+        "image_4_height": 0,
+        "image_3_height": 0,
+        "link": "",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt_image",
+        "adapt_height_first_image": true,
+        "desktop_content_position": "middle-center",
+        "section_animation": "none",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "show_text_below": true,
+        "heading_h1": "",
+        "heading_h2": "",
+        "heading_text": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_geCUjy": {
+      "type": "rich-text",
+      "blocks": {
+        "text_ef7FqU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Mach dich bereit für unsere besten Deals des Jahres! Die begehrten Angebote sind traditionell schnell vergriffen, also markiere dir die Termine und bleibe auf dem Laufenden. Hier kommen starke Angebote auf dich zu – aber nur solange der Vorrat reicht!</p><p><strong>Es ist Black Friday! So starke Deals hatten wir noch nie!</strong></p>"
+          }
+        },
+        "button_qb8HXQ": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Jetzt mehr erfahren",
+            "button_link": "shopify://products/bundle-knallharte-nuss",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "text_ef7FqU",
+        "button_qb8HXQ"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "multicolumn_9b6d3p": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_H89bry": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/BW_Coffee24.jpg",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Seit 07. November",
+            "text": "<p>Unser <strong>Kaffee-Likör</strong> ist wieder da!</p>",
+            "mobile_text": "",
+            "link_label": "Jetzt kaufen",
+            "link": "shopify://products/kaffee",
+            "button_alignment": "center",
+            "selected_button": true,
+            "grey_out_media": false
+          }
+        },
+        "column_MUC87G": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/BW_Mysterybox24.jpg",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Seit 15. November",
+            "text": "<p>Unsere traditionellen <strong>Mystery-Boxen</strong>!</p>",
+            "mobile_text": "",
+            "link_label": "Ausverkauft!",
+            "link": "",
+            "button_alignment": "center",
+            "selected_button": true,
+            "grey_out_media": true
+          }
+        },
+        "column_XJzF8k": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/BlackWeek24.jpg",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Seit 22. November",
+            "text": "<p>Je mehr du kaufst, <strong>desto mehr sparst</strong> du!</p>",
+            "mobile_text": "",
+            "link_label": "Jetzt sparen",
+            "link": "shopify://collections/black-week-sale",
+            "button_alignment": "center",
+            "selected_button": true,
+            "grey_out_media": false
+          }
+        },
+        "column_DikawQ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/BW_BWare24.jpg",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "29. November - 01. Dezember",
+            "text": "<p>Sichere dir <strong>25% Rabatt</strong> auf B-Ware, aber nur solange der Vorrat reicht!</p>",
+            "mobile_text": "",
+            "link_label": "Jetzt zuschlagen!",
+            "link": "shopify://collections/black-friday",
+            "button_alignment": "center",
+            "selected_button": true,
+            "grey_out_media": false
+          }
+        }
+      },
+      "block_order": [
+        "column_H89bry",
+        "column_MUC87G",
+        "column_XJzF8k",
+        "column_DikawQ"
+      ],
+      "custom_css": [
+        ".title-wrapper-with-link {justify-content: center; text-align: center;}",
+        ".multicolumn,.multicolumn .h1,.multicolumn h3 {color: #fff;}",
+        ".multicolumn-card__info p strong {color: #c59e35;}",
+        "@media screen and (min-width: 1149px) {.title-wrapper-with-link {padding-top: 20px; }}",
+        ".multicolumn-card__info .button {background: #fff; color: #000;}",
+        ".multicolumn-card__info .button {justify-content: center;}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "Unsere BLACK WEEKS Angebote",
+        "image_background_desktop": "shopify://shop_images/BW_backgroundD.png",
+        "heading_size": "h1",
+        "title_text": "",
+        "outer_padding": 20,
+        "image_width": "full",
+        "image_ratio": "square",
+        "image_border_color": "#c59e35",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "transparent",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 120,
+        "padding_bottom": 36
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "image_intro_banner_x6h3iT",
+    "rich_text_geCUjy",
+    "multicolumn_9b6d3p"
+  ]
+}

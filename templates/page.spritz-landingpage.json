@@ -1,1 +1,696 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"padding_top":24,"padding_bottom":24,"show_title":true}},"image_plain_MC7H8a":{"type":"image-plain","name":"t:sections.image-with-text.plain","settings":{"is_above_the_fold":false,"image":"shopify:\/\/shop_images\/250623_Spritz_Bundle_Collection_Header_Desktop_1920x500_DE.jpg","image_mobile":"shopify:\/\/shop_images\/250623_Spritz_Bundle_Collection_Header_Mobile_1200x900_DE.jpg","desktop_image_width":100,"mobile_image_width":100,"padding_top":0,"padding_bottom":0,"full_width_enabled":true}},"rich_text_7fppJr":{"type":"rich-text","blocks":{"text_qHhY4X":{"type":"text","settings":{"text":"<h3>Erhalte 1 oder 2 Gläser zum Vorteilspreis im Bundle<\/h3>"}}},"block_order":["text_qHhY4X"],"settings":{"color_scheme":"background-1","full_width":true,"padding_top":4,"padding_bottom":4}},"featured_collection_JLFTr7":{"type":"featured-collection","custom_css":[".title {text-align: center;}","ul {justify-content: center;}"],"settings":{"is_above_the_fold":false,"title":"","heading_size":"h1","description":"","show_description":false,"grey_sold_out_products":true,"description_style":"body","collection":"spritz-bundles","products_to_show":12,"columns_desktop":5,"full_width":false,"section_animation":"none","show_view_all":true,"view_all_style":"solid","view_all_button_label":"","enable_desktop_slider":true,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":true,"show_vendor":false,"show_rating":false,"enable_quick_add":true,"columns_mobile":"2","swipe_on_mobile":true,"padding_top":0,"padding_bottom":16}},"slideshow_with_video_9TyFQN":{"type":"slideshow-with-video","blocks":{"video_slide_FDRJB4":{"type":"video_slide","settings":{"video":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/5153be64d2184958903cd827c334d190.mp4","video_2":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/a49be537d9dd4948b3e91e39ac5925bb.mp4","image":"shopify:\/\/shop_images\/250623_Spritz_Bundle_Collection_Header_Desktop_1920x500_DE.jpg","image_2":"shopify:\/\/shop_images\/250623_Spritz_Bundle_PDP_Pralle_Kirsche_1500x1500_Double_DE_03.jpg","heading":"","heading_size":"h1","subheading":"","timer":"","countdown_overlay":false,"countdown_overlay_position":"top-center","countdown_color":"#ffffff","desktop_button_height":40,"mobile_button_height":40,"link_overlay":"","button_label":"","link":"","button_label_2":"","link_2":"","button_style_secondary":false,"box_align":"middle-center","show_text_box":false,"text_alignment":"center","image_overlay_opacity":0,"font_color":"#000000","background_color":"#ffffff","color_scheme":"background-1","text_alignment_mobile":"center"}}},"block_order":["video_slide_FDRJB4"],"custom_css":[],"name":"t:sections.slideshow.presets.name-video","settings":{"is_above_the_fold":false,"layout":"full_bleed","slide_height":"large","slides_controls_position":"top","auto_rotate":false,"banner_buttons_animation":true,"change_slides_speed":5,"show_text_below":true,"accessibility_info":"Slideshow about our brand","padding_top":0,"padding_bottom":0}},"ss_scrolling_anouncement_bar_yz8dFw":{"type":"ss-scrolling-anouncement-bar","blocks":{"text_Tkpcia":{"type":"text","settings":{"text":"Kostenloser Versand ab 75€"}},"text_7dW39T":{"type":"text","settings":{"text":"Perfekt für den Sommer"}},"text_dtAxth":{"type":"text","settings":{"text":"In 1-2 Werktagen bei dir"}},"text_fhc8qq":{"type":"text","settings":{"text":"Mit Klarna jetzt kaufen und später bezahlen"}}},"block_order":["text_Tkpcia","text_7dW39T","text_dtAxth","text_fhc8qq"],"settings":{"insert_css_class_target":"","layout":"full_bleed","text_size":16,"link":"","animation_duration":116,"animation_direction":"left","pause_hover":false,"bg":"#ffb676","text_color":"#000000","hover_opacity":90,"padding_horizontal":0,"padding_vertical":1.5,"padding_top":0,"padding_bottom":16}},"image_with_text_WxrVqb":{"type":"image-with-text","blocks":{"heading_RriGWf":{"type":"heading","settings":{"heading":"Spritz like O’Donnell","heading_size":"h2"}},"text_QmfYRH":{"type":"text","settings":{"text":"<p>Spritz muss nicht Orange und Standard sein. Spritz geht auch anders. Unseren fruchtigen Moonshine-Liköre geben jedem Spritz ein Upgrade:mit Geschmack, der knallt, Farben, die auffallen, und einem Stil, der alles andere als gewöhnlich ist. <\/p><p>So gelingt jeder Spritz mit der 3-2-1 Formel: <\/p><ul><li>O’Donnell Spritz Glas mit Eiswürfel füllen<\/li><li>3 Teile (90ml) Prosecco<\/li><li>2 Teile (60ml) Moonshine Likör deiner Wahl<\/li><li>1 Teil (30ml) Soda Wasser<\/li><li>Garnierung deiner Wahl<\/li><\/ul>","text_style":"body"}}},"block_order":["heading_RriGWf","text_QmfYRH"],"custom_css":[],"settings":{"is_above_the_fold":false,"background_color":"#ffffff","text_color":"#000000","image":"shopify:\/\/shop_images\/250623_Spritz_Bundle_PDP_Pfirsich_1500x1500_Single_DE_01.jpg","image_caption":"","height":"adapt","desktop_image_width":"medium","layout":"text_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"overlap","color_scheme":"background-2","mobile_content_alignment":"left","padding_top":0,"padding_bottom":12}},"multicolumn_FDHA73":{"type":"multicolumn","blocks":{"column_PGjF7k":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/250623_Spritz_Bundle_PDP_Pralle_Kirsche_1500x1500_Double_DE_01.jpg","overlay_title":false,"overlay_title_position":"bottom","title":"Pralle Kirsche","text":"<p>Kirschiger Kick mit einem Hauch Vanille – schmeckt nach Sommer, aber besser.<\/p>","mobile_text":"<p>Kirschiger Kick mit einem Hauch Vanille – schmeckt nach Sommer, aber besser.<\/p>","link_label":"Shop Pralle Kirsch Spritz Bundle","link":"https:\/\/odonnell.de\/products\/doppel-pralle-kirsche-spritz-bundle","button_alignment":"left","selected_button":false,"grey_out_media":false}},"column_PQzNY7":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/20250613_Spritz_Bundles_Wilde_Beere_PDP_DE_233_NEU.jpg","overlay_title":false,"overlay_title_position":"bottom","title":"Wilde Beere","text":"<p>Intensiv beerig und wild im Geschmack – perfekt für alle, die’s aufregend mögen.<\/p>","mobile_text":"<p>Intensiv beerig und wild im Geschmack – perfekt für alle, die’s aufregend mögen.<\/p>","link_label":"Shop Wild Beere Spritz Bundle","link":"https:\/\/odonnell.de\/products\/doppel-wilde-beere-spritz-bundle","button_alignment":"left","selected_button":false,"grey_out_media":false}},"column_r7wwVH":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/250623_Spritz_Bundle_PDP_Aperitivo_1500x1500_Single_DE_03.jpg","overlay_title":false,"overlay_title_position":"bottom","title":"Aperitivo","text":"<p>Bitter mit Zitrone und Kräutern – der klassische Mixer, nur besser.<br\/><br\/><\/p>","mobile_text":"<p>Bitter mit Zitrone und Kräutern – der Klassiker, nur eben besser.<\/p>","link_label":"Shop Aperitivo Spritz Bundle","link":"https:\/\/odonnell.de\/products\/doppel-aperitivo-spritz-bundle","button_alignment":"left","selected_button":false,"grey_out_media":false}},"column_jyzgLg":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/250623_Spritz_Bundle_PDP_Blutorange_1500x1500_Single_DE_02.jpg","overlay_title":false,"overlay_title_position":"bottom","title":"Blutorange","text":"<p>Herb und fruchtig – schmeckt nach Sonnenuntergang und Feierabendfreude.<\/p>","mobile_text":"<p>Herb und fruchtig – schmeckt nach Sonnenuntergang und Feierabendfreude.<\/p>","link_label":"Shop Blutorange Spritz Bundle","link":"https:\/\/odonnell.de\/products\/doppel-blutorange-spritz-bundle","button_alignment":"left","selected_button":false,"grey_out_media":false}},"column_C7T6Cy":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/250623_Spritz_Bundle_PDP_Pfirsich_1500x1500_Single_DE_01.jpg","overlay_title":false,"overlay_title_position":"bottom","title":"Pfirsich","text":"<p>Weich, fruchtig und einfach gemacht für Prosecco – dein Sommerklassiker im Glas<\/p>","mobile_text":"<p>Weich, fruchtig und einfach gemacht für Prosecco – dein Sommerklassiker im Glas<\/p>","link_label":"Shop Pfirsich Spritz Bundle","link":"https:\/\/odonnell.de\/products\/double-spritz-glas-bundle-pfirsich","button_alignment":"left","selected_button":false,"grey_out_media":false}},"column_i3tLCR":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/250623_Spritz_Bundle_PDP_Passionsfrucht_1500x1500_Single_DE_02.jpg","overlay_title":false,"overlay_title_position":"bottom","title":"Passionsfrucht","text":"<p>Spritzig, exotisch und voller Urlaubsflair – wie ein Kurztrip für den Gaumen.<\/p>","mobile_text":"<p>Spritzig, exotisch und voller Urlaubsflair – wie ein Kurztrip für den Gaumen.<\/p>","link_label":"Shop Passionsfrucht Spritz Bundle","link":"https:\/\/odonnell.de\/products\/doppel-passionsfrucht-spritz-bundle","button_alignment":"left","selected_button":false,"grey_out_media":false}}},"block_order":["column_PGjF7k","column_PQzNY7","column_r7wwVH","column_jyzgLg","column_C7T6Cy","column_i3tLCR"],"name":"t:sections.multicolumn.presets.name","settings":{"is_above_the_fold":false,"title":"Diese Moonshines eignen sich perfekt für Spritz","heading_size":"h2","title_text":"","outer_padding":5,"image_width":"full","image_ratio":"adapt","image_border_color":"#ffb676","columns_desktop":3,"column_alignment":"left","background_style":"primary","button_label":"","button_link":"","color_scheme":"background-1","columns_mobile":"1","swipe_on_mobile":true,"padding_top":36,"padding_bottom":36}},"yotpo_reviews_6JGmGm":{"type":"yotpo-reviews","settings":{}},"featured_collection_D4mxPM":{"type":"featured-collection","custom_css":["ul {justify-content: center;}"],"name":"t:sections.featured-collection.presets.name","settings":{"is_above_the_fold":false,"title":"Weitere Cocktail-Accessoires und Sets!","heading_size":"h2","description":"","show_description":false,"grey_sold_out_products":true,"description_style":"body","collection":"cocktail-bundles","products_to_show":12,"columns_desktop":5,"full_width":false,"section_animation":"none","show_view_all":true,"view_all_style":"solid","view_all_button_label":"","enable_desktop_slider":true,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":false,"show_vendor":false,"show_rating":false,"enable_quick_add":true,"columns_mobile":"2","swipe_on_mobile":true,"padding_top":36,"padding_bottom":20}},"rich_text_fhm6cJ":{"type":"rich-text","blocks":{"heading_YUh3Gr":{"type":"heading","settings":{"heading":"Beim Newsletter anmelden und nichts verpassen!","heading_size":"h2"}}},"block_order":["heading_YUh3Gr"],"settings":{"color_scheme":"background-1","full_width":true,"padding_top":40,"padding_bottom":8}},"174368400616f2091c":{"type":"apps","blocks":{"klaviyo_email_marketing_sms_form_embed_block_GdEn4D":{"type":"shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/form-embed-block\/2632fe16-c075-4321-a88b-50b567f42507","settings":{"formId":"XRTE9n"}}},"block_order":["klaviyo_email_marketing_sms_form_embed_block_GdEn4D"],"settings":{"include_margins":true}},"rich_text_DR8n3i":{"type":"rich-text","blocks":{"text_PRpm3a":{"type":"text","settings":{"text":"<p>Melde dich jetzt beim Newsletter an und erhalte <strong>10% Rabatt<\/strong> auf deine erste Bestellung!<\/p>"}}},"block_order":["text_PRpm3a"],"settings":{"color_scheme":"background-1","full_width":true,"padding_top":12,"padding_bottom":12}},"rich_text_4KGNz6":{"type":"rich-text","blocks":{"heading_GD7f7e":{"type":"heading","settings":{"heading":"Du bist noch kein Gang-Mitglied?","heading_size":"h1"}},"text_4mx7yA":{"type":"text","settings":{"text":"<p>Werde jetzt <a href=\"\/pages\/gang\" target=\"_blank\" title=\"Die O'Donnell Gang\"><strong>O’Donnell Gang<\/strong><\/a><strong> <\/strong>Member! Als Mitglied hast du viele Vorteile und sammelst <strong>mit jedem Einkauf Proof <\/strong>– diese kannst du gegen <strong>Prämien <\/strong>oder <strong>10€ - 15€ Gutscheine eintauschen!<\/strong><\/p>"}},"button_JKP4fm":{"type":"button","settings":{"button_label":"Werde Teil der Gang","button_link":"https:\/\/odonnell.de\/account\/login","button_style_secondary":true}}},"block_order":["heading_GD7f7e","text_4mx7yA","button_JKP4fm"],"custom_css":[".color-background-1 {background-color: #ffb676; color: black;}"],"name":"t:sections.rich-text.presets.name","settings":{"color_scheme":"background-1","full_width":true,"padding_top":40,"padding_bottom":52}},"image_with_text_aXTVQh":{"type":"image-with-text","blocks":{"heading_rGwiFM":{"type":"heading","settings":{"heading":"Du bist noch kein Gang-Mitglied?","heading_size":"h1"}},"text_kgbGD9":{"type":"text","settings":{"text":"<p>Werde jetzt <a href=\"\/pages\/gang\" target=\"_blank\" title=\"Die O'Donnell Gang\"><strong>O’Donnell Gang<\/strong><\/a><strong> <\/strong>Member! Als Mitglied hast du viele Vorteile und sammelst <strong>mit jedem Einkauf Proof <\/strong>– diese kannst du gegen <strong>Prämien <\/strong>oder <strong>10€ - 15€ Gutscheine eintauschen!<\/strong><\/p>","text_style":"body"}}},"block_order":["heading_rGwiFM","text_kgbGD9"],"disabled":true,"custom_css":[".image-with-text__media {border: solid; border-width: 0px; border-color: white;}"],"settings":{"is_above_the_fold":false,"background_color":"#ffb676","text_color":"#000000","image":"shopify:\/\/shop_images\/Design_ohne_Titel_1.png","image_caption":"","height":"adapt","desktop_image_width":"medium","layout":"text_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"no-overlap","color_scheme":"background-1","mobile_content_alignment":"left","padding_top":36,"padding_bottom":36}},"image_with_text_BE7H3t":{"type":"image-with-text","blocks":{"heading_Ktc3Mi":{"type":"heading","settings":{"heading":"Probiere Limette in den Stores","heading_size":"h1"}},"text_jX4Xfr":{"type":"text","settings":{"text":"<p><strong>Du willst nicht warten, bis dir der Postbote Limette bringt?<\/strong> Dann besuche uns in unseren Stores und sei Teil unserer exklusiven Launch-Celebration!<\/p><p><strong>10.-12. April: Limette Launch-Party in allen O'Donnell Moonshine Stores<\/strong><\/p><p>Sei einer der Ersten, die unseren spritzigen Neuzugang probieren! Genieße exklusive Cocktail-Kreationen, sichere dir aufregende Gewinne und lass dich in Frühlingsstimmung versetzen.<\/p>","text_style":"body"}},"button_iMfzjF":{"type":"button","settings":{"button_label":"Jetzt Tasting buchen!","button_link":"shopify:\/\/products\/store-tasting","button_style_white_color":false}}},"block_order":["heading_Ktc3Mi","text_jX4Xfr","button_iMfzjF"],"disabled":true,"custom_css":[".image-with-text__media {border: solid; border-color: white;}"],"settings":{"is_above_the_fold":false,"background_color":"#e4ebd2","text_color":"#000000","image":"shopify:\/\/shop_images\/Berlin_Alexa_1.jpg","image_caption":"","height":"adapt","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","color_scheme":"background-1","mobile_content_alignment":"left","padding_top":36,"padding_bottom":36}},"featured_collection_DPTRD4":{"type":"featured-collection","custom_css":[".title {text-align: center;}","ul {justify-content: center;}"],"settings":{"is_above_the_fold":false,"title":"Entdecke unsere Bestseller","heading_size":"h2","description":"","show_description":false,"grey_sold_out_products":true,"description_style":"body","collection":"featured","products_to_show":12,"columns_desktop":5,"full_width":false,"section_animation":"none","show_view_all":true,"view_all_style":"solid","view_all_button_label":"","enable_desktop_slider":true,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":false,"show_vendor":false,"show_rating":false,"enable_quick_add":true,"columns_mobile":"2","swipe_on_mobile":true,"padding_top":36,"padding_bottom":36}},"custom_liquid_trrbnn":{"type":"custom-liquid","custom_css":["\/* Verzweifelte Klammern #neverforget *\/"],"settings":{"custom_liquid":"<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"671a03587f92b41e14955578\">\n<\/div>","color_scheme":"background-1","padding_top":40,"padding_bottom":16}},"rich_text_HNmTpX":{"type":"rich-text","blocks":{"button_kdkyiU":{"type":"button","settings":{"button_label":"Alle Spritz Bundles","button_link":"shopify:\/\/collections\/spritz-bundles","button_style_secondary":true}}},"block_order":["button_kdkyiU"],"custom_css":[".button {background-color: #ffb676; min-width: 250px; min-height: 40px; font-size: 25px;}",".color-background-1 {background-color: #00000;}"],"settings":{"color_scheme":"background-1","full_width":true,"padding_top":8,"padding_bottom":8}}},"order":["main","image_plain_MC7H8a","rich_text_7fppJr","featured_collection_JLFTr7","slideshow_with_video_9TyFQN","ss_scrolling_anouncement_bar_yz8dFw","image_with_text_WxrVqb","multicolumn_FDHA73","yotpo_reviews_6JGmGm","featured_collection_D4mxPM","rich_text_fhm6cJ","174368400616f2091c","rich_text_DR8n3i","rich_text_4KGNz6","image_with_text_aXTVQh","image_with_text_BE7H3t","featured_collection_DPTRD4","custom_liquid_trrbnn","rich_text_HNmTpX"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "show_title": true
+      }
+    },
+    "image_plain_MC7H8a": {
+      "type": "image-plain",
+      "name": "t:sections.image-with-text.plain",
+      "settings": {
+        "is_above_the_fold": false,
+        "image": "shopify://shop_images/250623_Spritz_Bundle_Collection_Header_Desktop_1920x500_DE.jpg",
+        "image_mobile": "shopify://shop_images/250623_Spritz_Bundle_Collection_Header_Mobile_1200x900_DE.jpg",
+        "desktop_image_width": 100,
+        "mobile_image_width": 100,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "full_width_enabled": true
+      }
+    },
+    "rich_text_7fppJr": {
+      "type": "rich-text",
+      "blocks": {
+        "text_qHhY4X": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Erhalte 1 oder 2 Gläser zum Vorteilspreis im Bundle</h3>"
+          }
+        }
+      },
+      "block_order": [
+        "text_qHhY4X"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
+    "featured_collection_JLFTr7": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".title {text-align: center;}",
+        "ul {justify-content: center;}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "collection": "spritz-bundles",
+        "products_to_show": 12,
+        "columns_desktop": 5,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "view_all_button_label": "",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 16
+      }
+    },
+    "slideshow_with_video_9TyFQN": {
+      "type": "slideshow-with-video",
+      "blocks": {
+        "video_slide_FDRJB4": {
+          "type": "video_slide",
+          "settings": {
+            "video": "https://cdn.shopify.com/videos/c/o/v/5153be64d2184958903cd827c334d190.mp4",
+            "video_2": "https://cdn.shopify.com/videos/c/o/v/a49be537d9dd4948b3e91e39ac5925bb.mp4",
+            "image": "shopify://shop_images/250623_Spritz_Bundle_Collection_Header_Desktop_1920x500_DE.jpg",
+            "image_2": "shopify://shop_images/250623_Spritz_Bundle_PDP_Pralle_Kirsche_1500x1500_Double_DE_03.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "timer": "",
+            "countdown_overlay": false,
+            "countdown_overlay_position": "top-center",
+            "countdown_color": "#ffffff",
+            "desktop_button_height": 40,
+            "mobile_button_height": 40,
+            "link_overlay": "",
+            "button_label": "",
+            "link": "",
+            "button_label_2": "",
+            "link_2": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "font_color": "#000000",
+            "background_color": "#ffffff",
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "video_slide_FDRJB4"
+      ],
+      "custom_css": [],
+      "name": "t:sections.slideshow.presets.name-video",
+      "settings": {
+        "is_above_the_fold": false,
+        "layout": "full_bleed",
+        "slide_height": "large",
+        "slides_controls_position": "top",
+        "auto_rotate": false,
+        "banner_buttons_animation": true,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "ss_scrolling_anouncement_bar_yz8dFw": {
+      "type": "ss-scrolling-anouncement-bar",
+      "blocks": {
+        "text_Tkpcia": {
+          "type": "text",
+          "settings": {
+            "text": "Kostenloser Versand ab 75€"
+          }
+        },
+        "text_7dW39T": {
+          "type": "text",
+          "settings": {
+            "text": "Perfekt für den Sommer"
+          }
+        },
+        "text_dtAxth": {
+          "type": "text",
+          "settings": {
+            "text": "In 1-2 Werktagen bei dir"
+          }
+        },
+        "text_fhc8qq": {
+          "type": "text",
+          "settings": {
+            "text": "Mit Klarna jetzt kaufen und später bezahlen"
+          }
+        }
+      },
+      "block_order": [
+        "text_Tkpcia",
+        "text_7dW39T",
+        "text_dtAxth",
+        "text_fhc8qq"
+      ],
+      "settings": {
+        "insert_css_class_target": "",
+        "layout": "full_bleed",
+        "text_size": 16,
+        "link": "",
+        "animation_duration": 116,
+        "animation_direction": "left",
+        "pause_hover": false,
+        "bg": "#ffb676",
+        "text_color": "#000000",
+        "hover_opacity": 90,
+        "padding_horizontal": 0,
+        "padding_vertical": 1.5,
+        "padding_top": 0,
+        "padding_bottom": 16
+      }
+    },
+    "image_with_text_WxrVqb": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_RriGWf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Spritz like O’Donnell",
+            "heading_size": "h2"
+          }
+        },
+        "text_QmfYRH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Spritz muss nicht Orange und Standard sein. Spritz geht auch anders. Unseren fruchtigen Moonshine-Liköre geben jedem Spritz ein Upgrade:mit Geschmack, der knallt, Farben, die auffallen, und einem Stil, der alles andere als gewöhnlich ist. </p><p>So gelingt jeder Spritz mit der 3-2-1 Formel: </p><ul><li>O’Donnell Spritz Glas mit Eiswürfel füllen</li><li>3 Teile (90ml) Prosecco</li><li>2 Teile (60ml) Moonshine Likör deiner Wahl</li><li>1 Teil (30ml) Soda Wasser</li><li>Garnierung deiner Wahl</li></ul>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_RriGWf",
+        "text_QmfYRH"
+      ],
+      "custom_css": [],
+      "settings": {
+        "is_above_the_fold": false,
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "image": "shopify://shop_images/250623_Spritz_Bundle_PDP_Pfirsich_1500x1500_Single_DE_01.jpg",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 12
+      }
+    },
+    "multicolumn_FDHA73": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_PGjF7k": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/250623_Spritz_Bundle_PDP_Pralle_Kirsche_1500x1500_Double_DE_01.jpg",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Pralle Kirsche",
+            "text": "<p>Kirschiger Kick mit einem Hauch Vanille – schmeckt nach Sommer, aber besser.</p>",
+            "mobile_text": "<p>Kirschiger Kick mit einem Hauch Vanille – schmeckt nach Sommer, aber besser.</p>",
+            "link_label": "Shop Pralle Kirsch Spritz Bundle",
+            "link": "https://odonnell.de/products/doppel-pralle-kirsche-spritz-bundle",
+            "button_alignment": "left",
+            "selected_button": false,
+            "grey_out_media": false
+          }
+        },
+        "column_PQzNY7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/20250613_Spritz_Bundles_Wilde_Beere_PDP_DE_233_NEU.jpg",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Wilde Beere",
+            "text": "<p>Intensiv beerig und wild im Geschmack – perfekt für alle, die’s aufregend mögen.</p>",
+            "mobile_text": "<p>Intensiv beerig und wild im Geschmack – perfekt für alle, die’s aufregend mögen.</p>",
+            "link_label": "Shop Wild Beere Spritz Bundle",
+            "link": "https://odonnell.de/products/doppel-wilde-beere-spritz-bundle",
+            "button_alignment": "left",
+            "selected_button": false,
+            "grey_out_media": false
+          }
+        },
+        "column_r7wwVH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/250623_Spritz_Bundle_PDP_Aperitivo_1500x1500_Single_DE_03.jpg",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Aperitivo",
+            "text": "<p>Bitter mit Zitrone und Kräutern – der klassische Mixer, nur besser.<br/><br/></p>",
+            "mobile_text": "<p>Bitter mit Zitrone und Kräutern – der Klassiker, nur eben besser.</p>",
+            "link_label": "Shop Aperitivo Spritz Bundle",
+            "link": "https://odonnell.de/products/doppel-aperitivo-spritz-bundle",
+            "button_alignment": "left",
+            "selected_button": false,
+            "grey_out_media": false
+          }
+        },
+        "column_jyzgLg": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/250623_Spritz_Bundle_PDP_Blutorange_1500x1500_Single_DE_02.jpg",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Blutorange",
+            "text": "<p>Herb und fruchtig – schmeckt nach Sonnenuntergang und Feierabendfreude.</p>",
+            "mobile_text": "<p>Herb und fruchtig – schmeckt nach Sonnenuntergang und Feierabendfreude.</p>",
+            "link_label": "Shop Blutorange Spritz Bundle",
+            "link": "https://odonnell.de/products/doppel-blutorange-spritz-bundle",
+            "button_alignment": "left",
+            "selected_button": false,
+            "grey_out_media": false
+          }
+        },
+        "column_C7T6Cy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/250623_Spritz_Bundle_PDP_Pfirsich_1500x1500_Single_DE_01.jpg",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Pfirsich",
+            "text": "<p>Weich, fruchtig und einfach gemacht für Prosecco – dein Sommerklassiker im Glas</p>",
+            "mobile_text": "<p>Weich, fruchtig und einfach gemacht für Prosecco – dein Sommerklassiker im Glas</p>",
+            "link_label": "Shop Pfirsich Spritz Bundle",
+            "link": "https://odonnell.de/products/double-spritz-glas-bundle-pfirsich",
+            "button_alignment": "left",
+            "selected_button": false,
+            "grey_out_media": false
+          }
+        },
+        "column_i3tLCR": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/250623_Spritz_Bundle_PDP_Passionsfrucht_1500x1500_Single_DE_02.jpg",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Passionsfrucht",
+            "text": "<p>Spritzig, exotisch und voller Urlaubsflair – wie ein Kurztrip für den Gaumen.</p>",
+            "mobile_text": "<p>Spritzig, exotisch und voller Urlaubsflair – wie ein Kurztrip für den Gaumen.</p>",
+            "link_label": "Shop Passionsfrucht Spritz Bundle",
+            "link": "https://odonnell.de/products/doppel-passionsfrucht-spritz-bundle",
+            "button_alignment": "left",
+            "selected_button": false,
+            "grey_out_media": false
+          }
+        }
+      },
+      "block_order": [
+        "column_PGjF7k",
+        "column_PQzNY7",
+        "column_r7wwVH",
+        "column_jyzgLg",
+        "column_C7T6Cy",
+        "column_i3tLCR"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "Diese Moonshines eignen sich perfekt für Spritz",
+        "heading_size": "h2",
+        "title_text": "",
+        "outer_padding": 5,
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "image_border_color": "#ffb676",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "yotpo_reviews_6JGmGm": {
+      "type": "yotpo-reviews",
+      "settings": {}
+    },
+    "featured_collection_D4mxPM": {
+      "type": "featured-collection",
+      "custom_css": [
+        "ul {justify-content: center;}"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "Weitere Cocktail-Accessoires und Sets!",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "collection": "cocktail-bundles",
+        "products_to_show": 12,
+        "columns_desktop": 5,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "view_all_button_label": "",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 20
+      }
+    },
+    "rich_text_fhm6cJ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_YUh3Gr": {
+          "type": "heading",
+          "settings": {
+            "heading": "Beim Newsletter anmelden und nichts verpassen!",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_YUh3Gr"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 8
+      }
+    },
+    "174368400616f2091c": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_email_marketing_sms_form_embed_block_GdEn4D": {
+          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": "XRTE9n"
+          }
+        }
+      },
+      "block_order": [
+        "klaviyo_email_marketing_sms_form_embed_block_GdEn4D"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "rich_text_DR8n3i": {
+      "type": "rich-text",
+      "blocks": {
+        "text_PRpm3a": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Melde dich jetzt beim Newsletter an und erhalte <strong>10% Rabatt</strong> auf deine erste Bestellung!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_PRpm3a"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "rich_text_4KGNz6": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_GD7f7e": {
+          "type": "heading",
+          "settings": {
+            "heading": "Du bist noch kein Gang-Mitglied?",
+            "heading_size": "h1"
+          }
+        },
+        "text_4mx7yA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Werde jetzt <a href=\"/pages/gang\" target=\"_blank\" title=\"Die O'Donnell Gang\"><strong>O’Donnell Gang</strong></a><strong> </strong>Member! Als Mitglied hast du viele Vorteile und sammelst <strong>mit jedem Einkauf Proof </strong>– diese kannst du gegen <strong>Prämien </strong>oder <strong>10€ - 15€ Gutscheine eintauschen!</strong></p>"
+          }
+        },
+        "button_JKP4fm": {
+          "type": "button",
+          "settings": {
+            "button_label": "Werde Teil der Gang",
+            "button_link": "https://odonnell.de/account/login",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_GD7f7e",
+        "text_4mx7yA",
+        "button_JKP4fm"
+      ],
+      "custom_css": [
+        ".color-background-1 {background-color: #ffb676; color: black;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_aXTVQh": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_rGwiFM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Du bist noch kein Gang-Mitglied?",
+            "heading_size": "h1"
+          }
+        },
+        "text_kgbGD9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Werde jetzt <a href=\"/pages/gang\" target=\"_blank\" title=\"Die O'Donnell Gang\"><strong>O’Donnell Gang</strong></a><strong> </strong>Member! Als Mitglied hast du viele Vorteile und sammelst <strong>mit jedem Einkauf Proof </strong>– diese kannst du gegen <strong>Prämien </strong>oder <strong>10€ - 15€ Gutscheine eintauschen!</strong></p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rGwiFM",
+        "text_kgbGD9"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".image-with-text__media {border: solid; border-width: 0px; border-color: white;}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "background_color": "#ffb676",
+        "text_color": "#000000",
+        "image": "shopify://shop_images/Design_ohne_Titel_1.png",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_BE7H3t": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Ktc3Mi": {
+          "type": "heading",
+          "settings": {
+            "heading": "Probiere Limette in den Stores",
+            "heading_size": "h1"
+          }
+        },
+        "text_jX4Xfr": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Du willst nicht warten, bis dir der Postbote Limette bringt?</strong> Dann besuche uns in unseren Stores und sei Teil unserer exklusiven Launch-Celebration!</p><p><strong>10.-12. April: Limette Launch-Party in allen O'Donnell Moonshine Stores</strong></p><p>Sei einer der Ersten, die unseren spritzigen Neuzugang probieren! Genieße exklusive Cocktail-Kreationen, sichere dir aufregende Gewinne und lass dich in Frühlingsstimmung versetzen.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_iMfzjF": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt Tasting buchen!",
+            "button_link": "shopify://products/store-tasting",
+            "button_style_white_color": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Ktc3Mi",
+        "text_jX4Xfr",
+        "button_iMfzjF"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".image-with-text__media {border: solid; border-color: white;}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "background_color": "#e4ebd2",
+        "text_color": "#000000",
+        "image": "shopify://shop_images/Berlin_Alexa_1.jpg",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_DPTRD4": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".title {text-align: center;}",
+        "ul {justify-content: center;}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "Entdecke unsere Bestseller",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "collection": "featured",
+        "products_to_show": 12,
+        "columns_desktop": 5,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "view_all_button_label": "",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_trrbnn": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "/* Verzweifelte Klammern #neverforget */"
+      ],
+      "settings": {
+        "custom_liquid": "<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"671a03587f92b41e14955578\">\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 16
+      }
+    },
+    "rich_text_HNmTpX": {
+      "type": "rich-text",
+      "blocks": {
+        "button_kdkyiU": {
+          "type": "button",
+          "settings": {
+            "button_label": "Alle Spritz Bundles",
+            "button_link": "shopify://collections/spritz-bundles",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "button_kdkyiU"
+      ],
+      "custom_css": [
+        ".button {background-color: #ffb676; min-width: 250px; min-height: 40px; font-size: 25px;}",
+        ".color-background-1 {background-color: #00000;}"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "image_plain_MC7H8a",
+    "rich_text_7fppJr",
+    "featured_collection_JLFTr7",
+    "slideshow_with_video_9TyFQN",
+    "ss_scrolling_anouncement_bar_yz8dFw",
+    "image_with_text_WxrVqb",
+    "multicolumn_FDHA73",
+    "yotpo_reviews_6JGmGm",
+    "featured_collection_D4mxPM",
+    "rich_text_fhm6cJ",
+    "174368400616f2091c",
+    "rich_text_DR8n3i",
+    "rich_text_4KGNz6",
+    "image_with_text_aXTVQh",
+    "image_with_text_BE7H3t",
+    "featured_collection_DPTRD4",
+    "custom_liquid_trrbnn",
+    "rich_text_HNmTpX"
+  ]
+}

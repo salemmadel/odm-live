@@ -1,1 +1,184 @@
-{"sections":{"main":{"type":"main-product","blocks":{"title":{"type":"title","settings":{}},"caption":{"type":"text","settings":{"text":"{{ product.metafields.descriptors.subtitle.value }}","text_style":"subtitle"}},"price":{"type":"price","settings":{}},"variant_picker":{"type":"variant_picker","settings":{"picker_type":"button"}},"quantity_selector":{"type":"quantity_selector","disabled":true,"settings":{}},"buy_buttons":{"type":"buy_buttons","disabled":true,"settings":{"show_sticky_cart":true,"is_set":false,"only_tier_gang_button":"Erforderliche Gangstufe nicht erreicht","set_size":3,"set_text":"Wähle 3 Produkte","show_dynamic_checkout":false,"gang_url":""}},"description":{"type":"description","settings":{}},"collapsible-row-3":{"type":"collapsible_tab","settings":{"heading":"Komm in die Gang","icon":"silhouette","content":"<p>Werde Teil der <a href=\"\/pages\/gang\" title=\"Die O'Donnell Gang\">Moonshine-Gang<\/a>! Als Mitglied sammelst du mit jedem Kauf im Onlineshop Proof und kannst diese gegen gratis O’Donnell Geschenke eintauschen. Außerdem hast du Zugang zu exklusiven Produkten und kannst im Gang-Rang immer weiter aufsteigen. Worauf wartest du also noch? Wir schmuggeln dir den Schnaps direkt nach Hause — völlig legal natürlich!<\/p>","page":""}},"collapsible-row-1":{"type":"collapsible_tab","settings":{"heading":"Versand","icon":"truck","content":"<ul><li><strong>DHL Priority: Lieferzeit 1-2 Werktage<\/strong><\/li><\/ul><p>Alle Bestellungen bis 12 Uhr werden noch am selben Tag DHL übergeben.<\/p><ul><li><strong>DHL Standard: Lieferzeit 2-3 Werktage<\/strong><\/li><\/ul>","page":""}},"recommended_products_VzA4DE":{"type":"recommended_products","settings":{"title":"Empfohlene Produkte","content":"","button_text":"","product_list":["harte-nuss-cream","2er-xmas-geschenkbox","2er-geschenkbox-700"],"enable_bulk_add":false,"columns_desktop":"2","enable_desktop_slider":true,"columns_mobile":"2","swipe_on_mobile":true}}},"block_order":["title","caption","price","variant_picker","quantity_selector","buy_buttons","description","collapsible-row-3","collapsible-row-1","recommended_products_VzA4DE"],"settings":{"gift_card_receipient_enabled":false,"is_above_the_fold":true,"enable_sticky_info":true,"badges_enabled":false,"gallery_layout":"thumbnail","media_size":"small","mobile_thumbnails":"hide","hide_variants":true,"enable_video_looping":false,"padding_top":24,"padding_bottom":12}},"65d32c6d-e676-4e7a-9822-44369f233d90":{"type":"rich-text","blocks":{"template--18366337745164__65d32c6d-e676-4e7a-9822-44369f233d90-button-1":{"type":"button","settings":{"button_label":"Zum Shop","button_link":"shopify:\/\/collections\/all","button_style_secondary":false}}},"block_order":["template--18366337745164__65d32c6d-e676-4e7a-9822-44369f233d90-button-1"],"settings":{"color_scheme":"background-1","full_width":true,"padding_top":12,"padding_bottom":12}},"product-recommendations":{"type":"product-recommendations","settings":{"heading":"Das könnte Dir auch gefallen","heading_size":"h2","products_to_show":4,"columns_desktop":4,"color_scheme":"background-1","image_ratio":"square","show_secondary_image":true,"show_vendor":false,"show_rating":false,"grey_sold_out_products":true,"columns_mobile":"2","padding_top":36,"padding_bottom":28}},"1668500027a509409d":{"type":"apps","blocks":{"f2f478cf-b2a7-4be0-8853-3336891d56e8":{"type":"shopify:\/\/apps\/yotpo-product-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf","settings":{"product":"{{product}}"}}},"block_order":["f2f478cf-b2a7-4be0-8853-3336891d56e8"],"settings":{"include_margins":true}}},"order":["main","65d32c6d-e676-4e7a-9822-44369f233d90","product-recommendations","1668500027a509409d"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "caption": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "disabled": true,
+          "settings": {
+            "show_sticky_cart": true,
+            "is_set": false,
+            "only_tier_gang_button": "Erforderliche Gangstufe nicht erreicht",
+            "set_size": 3,
+            "set_text": "Wähle 3 Produkte",
+            "show_dynamic_checkout": false,
+            "gang_url": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "collapsible-row-3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Komm in die Gang",
+            "icon": "silhouette",
+            "content": "<p>Werde Teil der <a href=\"/pages/gang\" title=\"Die O'Donnell Gang\">Moonshine-Gang</a>! Als Mitglied sammelst du mit jedem Kauf im Onlineshop Proof und kannst diese gegen gratis O’Donnell Geschenke eintauschen. Außerdem hast du Zugang zu exklusiven Produkten und kannst im Gang-Rang immer weiter aufsteigen. Worauf wartest du also noch? Wir schmuggeln dir den Schnaps direkt nach Hause — völlig legal natürlich!</p>",
+            "page": ""
+          }
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Versand",
+            "icon": "truck",
+            "content": "<ul><li><strong>DHL Priority: Lieferzeit 1-2 Werktage</strong></li></ul><p>Alle Bestellungen bis 12 Uhr werden noch am selben Tag DHL übergeben.</p><ul><li><strong>DHL Standard: Lieferzeit 2-3 Werktage</strong></li></ul>",
+            "page": ""
+          }
+        },
+        "recommended_products_VzA4DE": {
+          "type": "recommended_products",
+          "settings": {
+            "title": "Empfohlene Produkte",
+            "content": "",
+            "button_text": "",
+            "product_list": [
+              "harte-nuss-cream",
+              "2er-xmas-geschenkbox",
+              "2er-geschenkbox-700"
+            ],
+            "enable_bulk_add": false,
+            "columns_desktop": "2",
+            "enable_desktop_slider": true,
+            "columns_mobile": "2",
+            "swipe_on_mobile": true
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "caption",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "collapsible-row-3",
+        "collapsible-row-1",
+        "recommended_products_VzA4DE"
+      ],
+      "settings": {
+        "gift_card_receipient_enabled": false,
+        "is_above_the_fold": true,
+        "enable_sticky_info": true,
+        "badges_enabled": false,
+        "gallery_layout": "thumbnail",
+        "media_size": "small",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 24,
+        "padding_bottom": 12
+      }
+    },
+    "65d32c6d-e676-4e7a-9822-44369f233d90": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18366337745164__65d32c6d-e676-4e7a-9822-44369f233d90-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Zum Shop",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18366337745164__65d32c6d-e676-4e7a-9822-44369f233d90-button-1"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "Das könnte Dir auch gefallen",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "grey_sold_out_products": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "1668500027a509409d": {
+      "type": "apps",
+      "blocks": {
+        "f2f478cf-b2a7-4be0-8853-3336891d56e8": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "f2f478cf-b2a7-4be0-8853-3336891d56e8"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "65d32c6d-e676-4e7a-9822-44369f233d90",
+    "product-recommendations",
+    "1668500027a509409d"
+  ]
+}

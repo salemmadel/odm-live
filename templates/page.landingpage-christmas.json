@@ -1,1 +1,79 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"padding_top":28,"padding_bottom":24,"show_title":true}},"16d21f3a-e5f1-46e2-8e7f-2472a906daf0":{"type":"christmas-intro","settings":{"intro":"Weihnachten steht vor der Tür und du hast noch keine Geschenke oder Geschenkideen für die Familie, Freunde, Freundin oder Freund? Keine Sorge, bei O’Donnell findest du für jeden etwas - egal ob für Männer oder Frauen. Unsere Geschenksets sind nicht nur originell, sondern lassen sich auch perfekt wiederverwenden. Somit bringen sie nicht nur Spaß und Geschmack, sondern haben auch einen hohen Nachhaltigkeitsfaktor."}},"2aca1437-109a-49e5-bf6c-108aaf0e4085":{"type":"featured-collection","settings":{"is_above_the_fold":false,"title":"Weihnachtsgeschenke","heading_size":"h1","description":"","show_description":false,"grey_sold_out_products":true,"description_style":"body","collection":"sets","products_to_show":8,"columns_desktop":4,"full_width":false,"section_animation":"none","show_view_all":true,"view_all_style":"solid","enable_desktop_slider":false,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":false,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"bade0a1f-2706-4d41-aa61-a560688d3d18":{"type":"christmas-cocktail","settings":{"cocktail":"<p>10cl Bratapfel<br\/>20cl Apfelsaft<br\/>40cl Weißwein<br\/>Orangenschalen, Nelken, Sternanis, Zimtstange<br\/><br\/>Einfach alle Zutaten in einen Topf geben und erwärmen. Achte darauf, dass es nicht köchelt und nur erwärmt wird. Sonst könnte der Alkohol verdampfen.<br\/><br\/>Hier findest du noch mehr leckere <a href=\"https:\/\/w0aievqyh4vc1q3z-32648593539.shopifypreview.com\/blogs\/cocktails\" title=\"Cocktails\"><strong>Moonshine Cocktail Rezepte<\/strong><\/a>.<\/p>","image":"shopify:\/\/shop_images\/BA_BratapfelPunsch_1.jpg"}},"5d53c2af-77d6-4265-8292-e3c373733eff":{"type":"change-page-color","settings":{"color_text":"#3d5a3b","color_background":"#ffffff","bg_image":"shopify:\/\/shop_images\/christmas-bg.jpg"}}},"order":["main","16d21f3a-e5f1-46e2-8e7f-2472a906daf0","2aca1437-109a-49e5-bf6c-108aaf0e4085","bade0a1f-2706-4d41-aa61-a560688d3d18","5d53c2af-77d6-4265-8292-e3c373733eff"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 24,
+        "show_title": true
+      }
+    },
+    "16d21f3a-e5f1-46e2-8e7f-2472a906daf0": {
+      "type": "christmas-intro",
+      "settings": {
+        "intro": "Weihnachten steht vor der Tür und du hast noch keine Geschenke oder Geschenkideen für die Familie, Freunde, Freundin oder Freund? Keine Sorge, bei O’Donnell findest du für jeden etwas - egal ob für Männer oder Frauen. Unsere Geschenksets sind nicht nur originell, sondern lassen sich auch perfekt wiederverwenden. Somit bringen sie nicht nur Spaß und Geschmack, sondern haben auch einen hohen Nachhaltigkeitsfaktor."
+      }
+    },
+    "2aca1437-109a-49e5-bf6c-108aaf0e4085": {
+      "type": "featured-collection",
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "Weihnachtsgeschenke",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "collection": "sets",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "bade0a1f-2706-4d41-aa61-a560688d3d18": {
+      "type": "christmas-cocktail",
+      "settings": {
+        "cocktail": "<p>10cl Bratapfel<br/>20cl Apfelsaft<br/>40cl Weißwein<br/>Orangenschalen, Nelken, Sternanis, Zimtstange<br/><br/>Einfach alle Zutaten in einen Topf geben und erwärmen. Achte darauf, dass es nicht köchelt und nur erwärmt wird. Sonst könnte der Alkohol verdampfen.<br/><br/>Hier findest du noch mehr leckere <a href=\"https://w0aievqyh4vc1q3z-32648593539.shopifypreview.com/blogs/cocktails\" title=\"Cocktails\"><strong>Moonshine Cocktail Rezepte</strong></a>.</p>",
+        "image": "shopify://shop_images/BA_BratapfelPunsch_1.jpg"
+      }
+    },
+    "5d53c2af-77d6-4265-8292-e3c373733eff": {
+      "type": "change-page-color",
+      "settings": {
+        "color_text": "#3d5a3b",
+        "color_background": "#ffffff",
+        "bg_image": "shopify://shop_images/christmas-bg.jpg"
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "16d21f3a-e5f1-46e2-8e7f-2472a906daf0",
+    "2aca1437-109a-49e5-bf6c-108aaf0e4085",
+    "bade0a1f-2706-4d41-aa61-a560688d3d18",
+    "5d53c2af-77d6-4265-8292-e3c373733eff"
+  ]
+}

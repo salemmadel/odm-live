@@ -1,1 +1,115 @@
-{"sections":{"44901111-5fbc-4eab-996e-069063c3d899":{"type":"image-banner","settings":{"is_above_the_fold":true,"image":"shopify:\/\/shop_images\/23Q2_Aperitivo_gross-058_1.jpg","link":"","image_overlay_opacity":0,"image_height":"small","adapt_height_first_image":true,"desktop_content_position":"middle-left","section_animation":"none","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"background-1","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":true}},"main":{"type":"main-page","disabled":true,"settings":{"padding_top":0,"padding_bottom":0,"show_title":false}},"7d6fa997-2a09-488c-b2f5-0fd565ebc305":{"type":"rich-text","blocks":{"template--16204354289932__7d6fa997-2a09-488c-b2f5-0fd565ebc305-166809473071894526-0":{"type":"heading","settings":{"heading":"Exklusive Moonshine Tastings bei O’Donnell!","heading_size":"h2"}},"template--16204354289932__7d6fa997-2a09-488c-b2f5-0fd565ebc305-166809473071894526-1":{"type":"text","settings":{"text":"<p>Bei O’Donnell Moonshine trifft Tradition auf neue Geschmackswelten. Nutze deine Chance und tauche in die Welt des Moonshines ein. Teste die neuesten Sorten und probier dich durch die leckersten Drinks - <strong>vollkommen kostenlos<\/strong>!<\/p><p>Unsere Tastings finden momentan immer <strong>Donnerstags und Freitags um 18 Uhr<\/strong> in unseren Stores statt (Ausgenommen: Berlin-Spandau Werksverkauf, hier finden momentan <strong>nur Freitags<\/strong> um 18 Uhr Tastings statt). Wo genau unsere Stores sind, findest du <a href=\"\/pages\/stores\" title=\"Moonshine Stores\">HIER.<\/a><\/p><p>Hast Du Interesse? Melde dich gleich hier für unsere Tastings an! Aber sei schnell, denn die Plätze sind je Standort & Termin limitiert!<\/p>"}}},"block_order":["template--16204354289932__7d6fa997-2a09-488c-b2f5-0fd565ebc305-166809473071894526-0","template--16204354289932__7d6fa997-2a09-488c-b2f5-0fd565ebc305-166809473071894526-1"],"settings":{"color_scheme":"background-1","full_width":true,"padding_top":20,"padding_bottom":24}},"custom_liquid_C3jkhr":{"type":"custom-liquid","settings":{"custom_liquid":"<script src=\"https:\/\/www.cognitoforms.com\/f\/seamless.js\" data-key=\"RankZjAcLkuUpe_ERLyzzA\" data-form=\"2\"><\/script>","color_scheme":"background-1","padding_top":12,"padding_bottom":12}},"featured_collection_Cxeqrg":{"type":"featured-collection","settings":{"is_above_the_fold":false,"title":"Welche Sorten dich unter anderem erwarten","heading_size":"h2","description":"","show_description":false,"grey_sold_out_products":true,"description_style":"body","collection":"moonshine","products_to_show":8,"columns_desktop":4,"full_width":false,"section_animation":"none","show_view_all":false,"view_all_style":"solid","view_all_button_label":"","enable_desktop_slider":false,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":false,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":24,"padding_bottom":12}}},"order":["44901111-5fbc-4eab-996e-069063c3d899","main","7d6fa997-2a09-488c-b2f5-0fd565ebc305","custom_liquid_C3jkhr","featured_collection_Cxeqrg"]}
+{
+  "sections": {
+    "44901111-5fbc-4eab-996e-069063c3d899": {
+      "type": "image-banner",
+      "settings": {
+        "is_above_the_fold": true,
+        "image": "shopify://shop_images/23Q2_Aperitivo_gross-058_1.jpg",
+        "link": "",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": true,
+        "desktop_content_position": "middle-left",
+        "section_animation": "none",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_title": false
+      }
+    },
+    "7d6fa997-2a09-488c-b2f5-0fd565ebc305": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16204354289932__7d6fa997-2a09-488c-b2f5-0fd565ebc305-166809473071894526-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Exklusive Moonshine Tastings bei O’Donnell!",
+            "heading_size": "h2"
+          }
+        },
+        "template--16204354289932__7d6fa997-2a09-488c-b2f5-0fd565ebc305-166809473071894526-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bei O’Donnell Moonshine trifft Tradition auf neue Geschmackswelten. Nutze deine Chance und tauche in die Welt des Moonshines ein. Teste die neuesten Sorten und probier dich durch die leckersten Drinks - <strong>vollkommen kostenlos</strong>!</p><p>Unsere Tastings finden momentan immer <strong>Donnerstags und Freitags um 18 Uhr</strong> in unseren Stores statt (Ausgenommen: Berlin-Spandau Werksverkauf, hier finden momentan <strong>nur Freitags</strong> um 18 Uhr Tastings statt). Wo genau unsere Stores sind, findest du <a href=\"/pages/stores\" title=\"Moonshine Stores\">HIER.</a></p><p>Hast Du Interesse? Melde dich gleich hier für unsere Tastings an! Aber sei schnell, denn die Plätze sind je Standort & Termin limitiert!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16204354289932__7d6fa997-2a09-488c-b2f5-0fd565ebc305-166809473071894526-0",
+        "template--16204354289932__7d6fa997-2a09-488c-b2f5-0fd565ebc305-166809473071894526-1"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 24
+      }
+    },
+    "custom_liquid_C3jkhr": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<script src=\"https://www.cognitoforms.com/f/seamless.js\" data-key=\"RankZjAcLkuUpe_ERLyzzA\" data-form=\"2\"></script>",
+        "color_scheme": "background-1",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "featured_collection_Cxeqrg": {
+      "type": "featured-collection",
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "Welche Sorten dich unter anderem erwarten",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "collection": "moonshine",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "view_all_button_label": "",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 24,
+        "padding_bottom": 12
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "44901111-5fbc-4eab-996e-069063c3d899",
+    "main",
+    "7d6fa997-2a09-488c-b2f5-0fd565ebc305",
+    "custom_liquid_C3jkhr",
+    "featured_collection_Cxeqrg"
+  ]
+}

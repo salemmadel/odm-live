@@ -1,1 +1,19 @@
-{"sections":{"pf-c6a6b265":{"type":"pf-c6a6b265","settings":{}}},"order":["pf-c6a6b265"]}
+{
+  "sections": {
+    "pf-c6a6b265": {
+      "type": "pf-c6a6b265",
+      "settings": {}
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "pf-c6a6b265"
+  ]
+}

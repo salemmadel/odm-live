@@ -1,1 +1,786 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"padding_top":24,"padding_bottom":24,"show_title":true}},"slideshow_with_timer_UzVgyL":{"type":"slideshow-with-timer","blocks":{"slide_hjcrGC":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/Homepage_Desktop_1900x800_freedelivery1.png","image_2":"shopify:\/\/shop_images\/Homepage_Mobile_800x1200_freedelivery2.png","heading":"","heading_size":"h1","subheading":"","timer":"","countdown_overlay":false,"countdown_overlay_position":"top-center","countdown_color":"#ffffff","desktop_button_height":40,"mobile_button_height":40,"link_overlay":"shopify:\/\/collections\/featured","button_label":"","link":"","button_label_2":"","link_2":"","button_style_secondary":false,"box_align":"middle-center","show_text_box":false,"text_alignment":"center","image_overlay_opacity":0,"font_color":"#000000","background_color":"#ffffff","color_scheme":"background-1","text_alignment_mobile":"center"}}},"block_order":["slide_hjcrGC"],"name":"t:sections.slideshow.presets.name-timer","settings":{"is_above_the_fold":false,"layout":"full_bleed","slide_height":"adapt_image","slides_controls_position":"top","auto_rotate":false,"banner_buttons_animation":true,"change_slides_speed":5,"show_text_below":true,"accessibility_info":"Slideshow about our brand","padding_top":0,"padding_bottom":0}},"custom_liquid_j6Vyj3":{"type":"custom-liquid","name":"t:sections.custom-liquid.presets.name","settings":{"custom_liquid":"<!-- Announcement Bar Start -->\n<div id=\"announcement-bar\">\n  <div id=\"announcement-line1\">\n    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0326\/4859\/3539\/files\/number-one_1.png?v=1752162249\" id=\"announcement-image\" alt=\"Number One\">\n    <p> Einfach ein <span class=\"highlight\">Produkt<\/span> aus unserem Shop wählen<\/p>\n  <\/div>\n<\/div>\n\n<style>\n  @font-face {\n    font-family: 'Bitterbrush';\n    src: url('https:\/\/cdn.shopify.com\/s\/files\/1\/0326\/4859\/3539\/files\/Bitterbrush_DEMO.otf?v=1751921243') format('opentype');\n    font-weight: normal;\n    font-style: normal;\n  }\n\n  \/* Base styles *\/\n  #announcement-bar {\n    background-color: #e1d6c1;\n    color: #2c2c2c;\n    padding: 10px 20px;\n    font-size: 20px;\n    font-weight: 500;\n    font-family: 'Bitterbrush', cursive;\n\n    position: relative;\n    width: 60%;\n    left: 0;\n\n    margin: 0 auto; \/* center on desktop *\/\n    box-sizing: border-box;\n  }\n\n  #announcement-line1 {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n  }\n\n  #announcement-image {\n    height: 40px;\n    width: auto;\n    flex-shrink: 0;\n  }\n\n  #announcement-line1 p {\n    margin: 0;\n    line-height: 1.4;\n  }\n\n  #announcement-line1 .highlight {\n    color: #AD5551;\n  }\n\n  \/* Responsive for tablets and smaller devices *\/\n  @media (max-width: 900px) {\n    #announcement-bar {\n      width: 90%;\n      font-size: 18px;\n      padding: 8px 15px;\n    }\n  }\n\n  \/* Mobile devices *\/\n  @media (max-width: 480px) {\n    #announcement-bar {\n      width: 100%;\n      font-size: 16px;\n      padding: 8px 10px;\n    }\n\n    #announcement-line1 {\n      \/* Remove the column layout — keep row layout *\/\n      flex-direction: row; \n      align-items: center;\n      gap: 6px;\n    }\n\n    #announcement-image {\n      height: 30px;\n    }\n  }\n<\/style>","color_scheme":"background-1","padding_top":36,"padding_bottom":12}},"custom_liquid_WaiUEC":{"type":"custom-liquid","name":"t:sections.custom-liquid.presets.name","settings":{"custom_liquid":"<!-- Right Announcement Bar Centered -->\n<div id=\"announcement-bar-right\">\n  <div id=\"announcement-line2\">\n    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0326\/4859\/3539\/files\/number-2.png?v=1752162246\" alt=\"Number 2 Icon\" id=\"announcement-image-right\">\n    <p> Nutze den Code <span class=\"highlight\">\"FIRSTSIP\"<\/span> an der Kasse<\/p>\n  <\/div>\n<\/div>\n\n<style>\n  @font-face {\n    font-family: 'Bitterbrush';\n    src: url('https:\/\/cdn.shopify.com\/s\/files\/1\/0326\/4859\/3539\/files\/Bitterbrush_DEMO.otf?v=1751921243') format('opentype');\n    font-weight: normal;\n    font-style: normal;\n  }\n\n  #announcement-bar-right {\n    background-color: #e1d6c1;\n    color: #2c2c2c;\n    padding: 10px 20px;\n    font-size: 20px;\n    font-weight: 500;\n    font-family: 'Bitterbrush', cursive;\n\n    position: relative;\n    width: 60%;\n    margin: 0 auto; \/* Center horizontally *\/\n    box-sizing: border-box;\n  }\n\n  #announcement-line2 {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n  }\n\n  #announcement-image-right {\n    height: 40px;\n    width: auto;\n    flex-shrink: 0;\n  }\n\n  #announcement-line2 p {\n    margin: 0;\n    line-height: 1.4;\n  }\n\n  #announcement-line2 .highlight {\n    color: #AD5551;\n  }\n\n  \/* Responsive for tablets and smaller devices *\/\n  @media (max-width: 900px) {\n    #announcement-bar-right {\n      width: 90%;\n      font-size: 18px;\n      padding: 8px 15px;\n    }\n  }\n\n  \/* Mobile devices *\/\n  @media (max-width: 480px) {\n    #announcement-bar-right {\n      width: 100%;\n      font-size: 16px;\n      padding: 8px 10px;\n    }\n\n    #announcement-line2 {\n      flex-direction: row; \/* Keep icon and text in a row on mobile *\/\n      align-items: center;\n      gap: 6px;\n    }\n\n    #announcement-image-right {\n      height: 30px;\n    }\n  }\n<\/style>","color_scheme":"background-1","padding_top":0,"padding_bottom":4}},"custom_liquid_Eb8KBK":{"type":"custom-liquid","name":"t:sections.custom-liquid.presets.name","settings":{"custom_liquid":"<!-- Third Line Announcement Bar -->\n<div id=\"announcement-bar-third\">\n  <div id=\"announcement-line3\">\n    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0326\/4859\/3539\/files\/number-3.png?v=1752162244\" alt=\"Number 3 Icon\" id=\"announcement-image-third\">\n    <p> A <span class=\"highlight\">Mini glass<\/span> is added to your cart for <span  added to your cart for class=\"highlight\">free<\/span><\/p>\n  <\/div>\n<\/div>\n\n<style>\n  @font-face {\n    font-family: 'Bitterbrush';\n    src: url('https:\/\/cdn.shopify.com\/s\/files\/1\/0326\/4859\/3539\/files\/Bitterbrush_DEMO.otf?v=1751921243') format('opentype');\n    font-weight: normal;\n    font-style: normal;\n  }\n\n  #announcement-bar-third {\n    background-color: #e1d6c1;\n    color: #2c2c2c;\n    padding: 10px 20px;\n    font-size: 20px;\n    font-weight: 500;\n    font-family: 'Bitterbrush', cursive;\n\n    position: relative; \/* changed from absolute *\/\n    width: 60%;\n    margin: 0 auto; \/* center horizontally *\/\n    text-align: left;\n    box-sizing: border-box;\n  }\n\n  #announcement-line3 {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n  }\n\n  #announcement-image-third {\n    height: 40px;\n    width: auto;\n    flex-shrink: 0;\n  }\n\n  #announcement-line3 p {\n    margin: 0;\n    line-height: 1.4;\n  }\n\n  #announcement-line3 .highlight {\n    color: #AD5551;\n  }\n\n  \/* Tablets and smaller screens *\/\n  @media (max-width: 900px) {\n    #announcement-bar-third {\n      width: 90%;\n      font-size: 18px;\n      padding: 8px 15px;\n    }\n  }\n\n  \/* Mobile devices *\/\n  @media (max-width: 480px) {\n    #announcement-bar-third {\n      width: 100%;\n      font-size: 16px;\n      padding: 8px 10px;\n    }\n\n    #announcement-line3 {\n      flex-direction: row; \/* Keep icon and text next to each other *\/\n      align-items: center;\n      gap: 6px;\n    }\n\n    #announcement-image-third {\n      height: 30px;\n    }\n  }\n<\/style>","color_scheme":"background-1","padding_top":8,"padding_bottom":12}},"custom_liquid_gyVDTJ":{"type":"custom-liquid","name":"t:sections.custom-liquid.presets.name","settings":{"custom_liquid":"<!-- Third Line Announcement Bar -->\n<div id=\"announcement-bar-third\">\n  <div id=\"announcement-line3\">\n    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0326\/4859\/3539\/files\/number-four.png?v=1753349648\" alt=\"Number 4 Icon\" id=\"announcement-image-third\">\n    <p>On top, you get a <\/p><span class=\"highlight\">free delivery<\/span><p> on your order<\/P\n  <\/div>\n<\/div>\n\n<style>\n  @font-face {\n    font-family: 'Bitterbrush';\n    src: url('https:\/\/cdn.shopify.com\/s\/files\/1\/0326\/4859\/3539\/files\/Bitterbrush_DEMO.otf?v=1751921243') format('opentype');\n    font-weight: normal;\n    font-style: normal;\n  }\n\n  #announcement-bar-third {\n    background-color: #e1d6c1;\n    color: #2c2c2c;\n    padding: 10px 20px;\n    font-size: 20px;\n    font-weight: 500;\n    font-family: 'Bitterbrush', cursive;\n\n    position: relative; \/* changed from absolute *\/\n    width: 60%;\n    margin: 0 auto; \/* center horizontally *\/\n    text-align: left;\n    box-sizing: border-box;\n  }\n\n  #announcement-line3 {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n  }\n\n  #announcement-image-third {\n    height: 40px;\n    width: auto;\n    flex-shrink: 0;\n  }\n\n  #announcement-line3 p {\n    margin: 0;\n    line-height: 1.4;\n  }\n\n  #announcement-line3 .highlight {\n    color: #AD5551;\n  }\n\n  \/* Tablets and smaller screens *\/\n  @media (max-width: 900px) {\n    #announcement-bar-third {\n      width: 90%;\n      font-size: 18px;\n      padding: 8px 15px;\n    }\n  }\n\n  \/* Mobile devices *\/\n  @media (max-width: 480px) {\n    #announcement-bar-third {\n      width: 100%;\n      font-size: 16px;\n      padding: 8px 10px;\n    }\n\n    #announcement-line3 {\n      flex-direction: row; \/* Keep icon and text next to each other *\/\n      align-items: center;\n      gap: 6px;\n    }\n\n    #announcement-image-third {\n      height: 30px;\n    }\n  }\n<\/style>","color_scheme":"background-1","padding_top":0,"padding_bottom":0}},"rich_text_headline_tLr6R7":{"type":"rich-text-headline","name":"Rich Text Header","settings":{"title":"Unsere Bestseller.","subtitle":"Entdecke die Lieblingssorten unserer Kunden.","background_color":"#FFFFFF","text_color":"#000000","headline_color":"#000000","border_bottom_color":"#000000","padding_top":35,"padding_bottom":0}},"featured_collection_HLpEqF":{"type":"featured-collection","settings":{"is_above_the_fold":false,"title":"","heading_size":"h2","description":"","show_description":false,"grey_sold_out_products":true,"description_style":"body","collection":"featured","products_to_show":12,"columns_desktop":4,"full_width":false,"section_animation":"none","show_view_all":true,"view_all_style":"solid","view_all_button_label":"","enable_desktop_slider":true,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":true,"show_vendor":false,"show_rating":false,"enable_quick_add":true,"columns_mobile":"2","swipe_on_mobile":true,"padding_top":32,"padding_bottom":36}},"ss_scrolling_anouncement_bar_yz8dFw":{"type":"ss-scrolling-anouncement-bar","blocks":{"text_7dW39T":{"type":"text","settings":{"text":"Vegan 🌱"}},"text_Tkpcia":{"type":"text","settings":{"text":"Made in Berlin 🇩🇪"}},"text_dtAxth":{"type":"text","settings":{"text":"Sustainable & Handmade ♻️"}},"text_fhc8qq":{"type":"text","disabled":true,"settings":{"text":"Buy now with Klarna & pay later"}}},"block_order":["text_7dW39T","text_Tkpcia","text_dtAxth","text_fhc8qq"],"custom_css":[],"settings":{"insert_css_class_target":"","layout":"full_bleed","text_size":14,"link":"","animation_duration":134,"animation_direction":"left","pause_hover":true,"bg":"#e1d5c1","text_color":"#2c2c2c","hover_opacity":90,"padding_horizontal":0,"padding_vertical":1.5,"padding_top":0,"padding_bottom":0}},"image_with_text_8xmpY8":{"type":"image-with-text","blocks":{"heading_kyRKc9":{"type":"heading","settings":{"heading":"Moonshine, das Original im Mason Jar","heading_size":"h2"}},"text_XeTULe":{"type":"text","settings":{"text":"<p>Bei O’Donnell Moonshine trifft Tradition auf neue Geschmackswelten. Wir füllen unsere Schnäpse in stilechten Einmachgläsern, sogenannten Mason Jars, ab, genau wie die Gangster während der amerikanischen Prohibition. <br\/><br\/>Unser Name erinnert dabei an den illegal gebrannten \"Moonshine\" und an Spike O’Donnell, den Anführer einer der berüchtigtsten Moonshine-Gangs aus Chicago.<\/p>","text_style":"body"}},"button_kxqpfB":{"type":"button","disabled":true,"settings":{"button_label":"Entdecke das Glas","button_link":"shopify:\/\/products\/odonnell-spritz-glas","button_style_white_color":false}}},"block_order":["heading_kyRKc9","text_XeTULe","button_kxqpfB"],"custom_css":[".image-with-text__media {border: solid; border-color: white;}"],"settings":{"is_above_the_fold":false,"background_color":"#ffffff","text_color":"#000000","image":"shopify:\/\/shop_images\/22Q3_Garden-052_2000_0d92f36f-6db7-4cda-b39a-f42245f1c15a.jpg","image_caption":"","height":"adapt","desktop_image_width":"medium","layout":"text_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"overlap","color_scheme":"background-2","mobile_content_alignment":"left","padding_top":36,"padding_bottom":36}},"rich_text_headline_Ce3pj4":{"type":"rich-text-headline","name":"Rich Text Header","settings":{"title":"Unsere Moonshine-Deals für dich","subtitle":"Die besten Preise für unsere beliebtesten Sorten.","background_color":"#FFFFFF","text_color":"#000000","headline_color":"#000000","border_bottom_color":"#000000","padding_top":35,"padding_bottom":0}},"custom_liquid_trrbnn":{"type":"custom-liquid","disabled":true,"custom_css":["\/* Verzweifelte Klammern #neverforget *\/"],"settings":{"custom_liquid":"<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"68552d97dcab190705eb30ae\">\n<\/div>","color_scheme":"background-1","padding_top":20,"padding_bottom":0}},"yotpo_reviews_wTtydq":{"type":"yotpo-reviews","name":"Yotpo Reviews","settings":{}},"rich_text_7fppJr":{"type":"rich-text","blocks":{"heading_YfbbYk":{"type":"heading","settings":{"heading":"Deal info","heading_size":"h1"}},"text_YKQpjU":{"type":"text","settings":{"text":"<p><strong>Spritz Glas geschenkt! Ab 74,90€ Bestellwert.<\/strong><\/p>"}},"button_EGfaCe":{"type":"button","settings":{"button_label":"Pfirsich kaufen","button_link":"","button_style_secondary":false}}},"block_order":["heading_YfbbYk","text_YKQpjU","button_EGfaCe"],"disabled":true,"custom_css":["h1 {text-align: left;}"],"name":"t:sections.rich-text.presets.name","settings":{"color_scheme":"background-1","full_width":true,"padding_top":40,"padding_bottom":16}},"image_with_text_4TyXFk":{"type":"image-with-text","blocks":{"heading_h6PpFi":{"type":"heading","settings":{"heading":"Der Sommerlikör schlechthin","heading_size":"h2"}},"text_VQiyMM":{"type":"text","settings":{"text":"<p>Fruchtig, leicht und einfach unglaublich erfrischend: <strong>Pfirsich ist der O'Donnell-Likör für heiße Tage und laue Nächte.  <\/strong>Mit seinem sanft-süßen Geschmack, einer dezenten Zitrusfrische und feinen exotischen Noten ist er wie gemacht für kreative Sommerdrinks – ob klassisch als Spritz, mit Tonic gemixt oder als Highlight in Bowlen und Eistees.<\/p>","text_style":"body"}},"button_FKiphw":{"type":"button","settings":{"button_label":"Pfirsich kaufen","button_link":"shopify:\/\/products\/pfirsich","button_style_white_color":false}}},"block_order":["heading_h6PpFi","text_VQiyMM","button_FKiphw"],"disabled":true,"settings":{"is_above_the_fold":false,"background_color":"#ffffff","text_color":"#000000","image":"shopify:\/\/shop_images\/FlavourdescriptionPeach.jpg","image_caption":"","height":"adapt","desktop_image_width":"medium","layout":"text_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"overlap","color_scheme":"background-2","mobile_content_alignment":"left","padding_top":36,"padding_bottom":36}},"yotpo_reviews_HC3Ee9":{"type":"yotpo-reviews","name":"Yotpo Reviews","settings":{}},"rich_text_ktQbUP":{"type":"rich-text","blocks":{"heading_VKJfP4":{"type":"heading","settings":{"heading":"So schmeckt der Sommer","heading_size":"h1"}}},"block_order":["heading_VKJfP4"],"disabled":true,"custom_css":[".color-background-1 {background-color: #ffb676;}"],"name":"t:sections.rich-text.presets.name","settings":{"color_scheme":"background-1","full_width":true,"padding_top":12,"padding_bottom":0}},"multicolumn_tCG3H6":{"type":"multicolumn","blocks":{"column_dtCQ4K":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/Peach-Bellini-Bundle_PDP_1500x1500_2_DE.jpg","overlay_title":false,"overlay_title_position":"bottom","title":"Peach Bellini","text":"<ul><li>50ml <a href=\"https:\/\/odonnell.de\/products\/pfirsich\" title=\"Pfirsich von O’Donnell Moonshine\">Pfirsich<\/a><\/li><li>30ml <a href=\"https:\/\/odonnell.de\/products\/vodka\" title=\"https:\/\/odonnell.de\/products\/vodka\">Vodka<\/a><\/li><li>20ml Pfirsichpüree<\/li><li>Prosecco<\/li><li>Orangenzeste oder Pfirsichstreifen<\/li><\/ul><p>Ein Sektglas mit Pfirsich und Pfirsichpüree füllen und umrühren. Mit Prosecco aufgießen. <strong>Servieren und genießen!<\/strong><\/p>","mobile_text":"<ul><li>50ml <a href=\"https:\/\/odonnell.de\/products\/pfirsich\" title=\"Pfirsich von O’Donnell Moonshine\">Pfirsich<\/a><\/li><li>30ml <a href=\"https:\/\/odonnell.de\/products\/vodka\" title=\"https:\/\/odonnell.de\/products\/vodka\">Vodka<\/a><\/li><li>20ml Pfirsichpüree<\/li><li>Prosecco<\/li><li>Orangenzeste oder Pfirsichstreifen<\/li><\/ul><p>Ein Sektglas mit Pfirsich und Pfirsichpüree füllen und umrühren. Mit Prosecco aufgießen. <strong>Servieren und genießen!<\/strong><\/p>","link_label":"Peach Bellini Bundle kaufen","link":"https:\/\/odonnell.de\/products\/peach-bellini-bundle","button_alignment":"center","selected_button":true,"grey_out_media":false}},"column_eRmkyA":{"type":"column","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Pfirsich_700_Product.jpg","overlay_title":false,"overlay_title_position":"bottom","title":"Column","text":"<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>","mobile_text":"<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>","link_label":"","link":"","button_alignment":"left","selected_button":false,"grey_out_media":false}},"column_nQDbYd":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/P-Supreme.png","overlay_title":false,"overlay_title_position":"bottom","title":"Supreme Summer","text":"<ul><li>40ml <a href=\"https:\/\/odonnell.de\/products\/vodka\" title=\"Vodka O'Donnell Moonshine\">Vodka<\/a><\/li><li>20ml <a href=\"https:\/\/odonnell.de\/products\/pfirsich\" title=\"Pfirsich von O’Donnell Moonshine\">Pfirsich<\/a> <\/li><li>20ml Limettensaft<\/li><li>Vanillesirup<\/li><li>200ml Maracujasaft<br\/><\/li><\/ul><p>Alle Zutaten mit Eis in einen Shaker geben und gut schütteln. <\/p><p>Den Drink abseihen und in einem Tumbler mit Eis servieren!<\/p>","mobile_text":"<ul><li>40ml <a href=\"https:\/\/odonnell.de\/products\/vodka\" title=\"Vodka O'Donnell Moonshine\">Vodka<\/a><\/li><li>20ml <a href=\"https:\/\/odonnell.de\/products\/pfirsich\" title=\"Pfirsich von O’Donnell Moonshine\">Pfirsich<\/a> <\/li><li>20ml Limettensaft<\/li><li>Vanillesirup<\/li><li>200ml Maracujasaft<\/li><\/ul><p>Alle Zutaten mit Eis in einen Shaker geben und gut schütteln. Den Drink abseihen und in einem Tumbler mit Eis servieren!<\/p>","link_label":"Pfirsich kaufen","link":"https:\/\/odonnell.de\/products\/pfirsich","button_alignment":"center","selected_button":true,"grey_out_media":false}}},"block_order":["column_dtCQ4K","column_eRmkyA","column_nQDbYd"],"disabled":true,"custom_css":[".button {background-color: #white; color: #black;}",".color-background-1 {background-color: #ffb676; color: black;}"],"name":"t:sections.multicolumn.presets.name","settings":{"is_above_the_fold":false,"title":"","heading_size":"h1","title_text":"","outer_padding":5,"image_width":"full","image_ratio":"adapt","image_border_color":"#ffffff","columns_desktop":2,"column_alignment":"left","background_style":"primary","button_label":"Entdecken alle Cocktails","button_link":"https:\/\/odonnell.de\/blogs\/cocktails\/tagged\/pfirsich","color_scheme":"background-1","columns_mobile":"1","swipe_on_mobile":true,"padding_top":0,"padding_bottom":36}},"product_recommendations_v2_igzdnT":{"type":"product-recommendations-v2","disabled":true,"name":"t:sections.product-recommendations-v2.name","settings":{"is_above_the_fold":false,"title":"Cocktail-Zubehör","heading_size":"h2","description":"","grey_sold_out_products":true,"description_style":"body","product_list":["edelstahl-strohhalm-set","edelstahl-eiswuerfelform","4er-longdrinkglas-set","glas-700ml","shaker-aufsatz","zitronenpresse","ausgiesser"],"columns_desktop":5,"full_width":false,"section_animation":"none","enable_desktop_slider":true,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":false,"show_vendor":false,"show_rating":false,"enable_quick_add":true,"columns_mobile":"2","swipe_on_mobile":true,"padding_top":36,"padding_bottom":36}},"featured_collection_4eh7YC":{"type":"featured-collection","disabled":true,"name":"t:sections.featured-collection.presets.name","settings":{"is_above_the_fold":false,"title":"Entdecke unsere Spar-sets","heading_size":"h2","description":"","show_description":false,"grey_sold_out_products":true,"description_style":"body","collection":"granatapfel","products_to_show":4,"columns_desktop":4,"full_width":false,"section_animation":"none","show_view_all":true,"view_all_style":"solid","view_all_button_label":"","enable_desktop_slider":true,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":false,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":0,"padding_bottom":36}},"product_recommendations_v2_er6DUL":{"type":"product-recommendations-v2","custom_css":["ul{justify-content: center;}"],"name":"t:sections.product-recommendations-v2.name","settings":{"is_above_the_fold":false,"title":"","heading_size":"h2","description":"","grey_sold_out_products":true,"description_style":"body","product_list":["2er-geschenkbox-700","granatapfel-probier-set","mini-sets-kleine-likoere","tasting-set"],"columns_desktop":4,"full_width":false,"section_animation":"none","enable_desktop_slider":true,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":false,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"front_welcome_tRYL8H":{"type":"front-welcome","blocks":{"value_mJCA4f":{"type":"value","settings":{"image":"shopify:\/\/shop_images\/Master_Medal.png","text":"Award Winner"}},"value_hLGFHJ":{"type":"value","settings":{"image":"shopify:\/\/shop_images\/made-in-germany_ec825fcc-2e15-426d-9bc8-c264134d11c2.png","text":""}},"value_tMx4Ji":{"type":"value","settings":{"image":"shopify:\/\/shop_images\/plastic_dafe9889-e066-4c04-8939-c01e7c7b2687.png","text":""}}},"block_order":["value_mJCA4f","value_hLGFHJ","value_tMx4Ji"],"disabled":true,"custom_css":[".values__item .item__img {width: 150px; height: auto; display: block; \/* make image a block element *\/ margin-left: auto; \/* push left *\/ margin-right: auto; \/* push right *\/}"],"name":"Welcome","settings":{"background_color":"#ffffff","padding_top":36,"padding_bottom":36,"headline":"","subtitle":"","text":"","text_animation":"none","icons_animation":"none"}},"image_with_text_aXTVQh":{"type":"image-with-text","blocks":{"heading_rGwiFM":{"type":"heading","settings":{"heading":"Zum Newsletter anmelden und sparen","heading_size":"h2"}},"text_kgbGD9":{"type":"text","settings":{"text":"<p>Melde dich zu unserem Newsletter an und sichere dir 10% auf deine erste Bestellung. <\/p><p>Werde Teil der Gang und erhalte Zugang zu limitierten Produkten, Launches, Rabatten und weiteren Vorteilen. <\/p>","text_style":"body"}},"button_hVXGwa":{"type":"button","settings":{"button_label":"Gang-Mitglied werden","button_link":"https:\/\/odonnell.de\/account\/login","button_style_white_color":false}}},"block_order":["heading_rGwiFM","text_kgbGD9","button_hVXGwa"],"disabled":true,"custom_css":[".image-with-text__media {border: solid; border-width: 0px; border-color: white;}"],"settings":{"is_above_the_fold":false,"background_color":"#ffb676","text_color":"#000000","image":"shopify:\/\/shop_images\/Design_ohne_Titel_1.png","image_caption":"","height":"adapt","desktop_image_width":"medium","layout":"text_first","desktop_content_position":"middle","desktop_content_alignment":"left","content_layout":"no-overlap","color_scheme":"background-1","mobile_content_alignment":"left","padding_top":36,"padding_bottom":36}},"image_with_text_BE7H3t":{"type":"image-with-text","blocks":{"heading_Ktc3Mi":{"type":"heading","settings":{"heading":"Probiere Limette in den Stores","heading_size":"h1"}},"text_jX4Xfr":{"type":"text","settings":{"text":"<p><strong>Du willst nicht warten, bis dir der Postbote Limette bringt?<\/strong> Dann besuche uns in unseren Stores und sei Teil unserer exklusiven Launch-Celebration!<\/p><p><strong>10.-12. April: Limette Launch-Party in allen O'Donnell Moonshine Stores<\/strong><\/p><p>Sei einer der Ersten, die unseren spritzigen Neuzugang probieren! Genieße exklusive Cocktail-Kreationen, sichere dir aufregende Gewinne und lass dich in Frühlingsstimmung versetzen.<\/p>","text_style":"body"}},"button_iMfzjF":{"type":"button","settings":{"button_label":"Jetzt Tasting buchen!","button_link":"shopify:\/\/products\/store-tasting","button_style_white_color":false}}},"block_order":["heading_Ktc3Mi","text_jX4Xfr","button_iMfzjF"],"disabled":true,"custom_css":[".image-with-text__media {border: solid; border-color: white;}"],"settings":{"is_above_the_fold":false,"background_color":"#e4ebd2","text_color":"#000000","image":"shopify:\/\/shop_images\/Berlin_Alexa_1.jpg","image_caption":"","height":"adapt","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","color_scheme":"background-1","mobile_content_alignment":"left","padding_top":36,"padding_bottom":36}}},"order":["main","slideshow_with_timer_UzVgyL","custom_liquid_j6Vyj3","custom_liquid_WaiUEC","custom_liquid_Eb8KBK","custom_liquid_gyVDTJ","rich_text_headline_tLr6R7","featured_collection_HLpEqF","ss_scrolling_anouncement_bar_yz8dFw","image_with_text_8xmpY8","rich_text_headline_Ce3pj4","custom_liquid_trrbnn","yotpo_reviews_wTtydq","rich_text_7fppJr","image_with_text_4TyXFk","yotpo_reviews_HC3Ee9","rich_text_ktQbUP","multicolumn_tCG3H6","product_recommendations_v2_igzdnT","featured_collection_4eh7YC","product_recommendations_v2_er6DUL","front_welcome_tRYL8H","image_with_text_aXTVQh","image_with_text_BE7H3t"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "show_title": true
+      }
+    },
+    "slideshow_with_timer_UzVgyL": {
+      "type": "slideshow-with-timer",
+      "blocks": {
+        "slide_hjcrGC": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Homepage_Desktop_1900x800_freedelivery1.png",
+            "image_2": "shopify://shop_images/Homepage_Mobile_800x1200_freedelivery2.png",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "timer": "",
+            "countdown_overlay": false,
+            "countdown_overlay_position": "top-center",
+            "countdown_color": "#ffffff",
+            "desktop_button_height": 40,
+            "mobile_button_height": 40,
+            "link_overlay": "shopify://collections/featured",
+            "button_label": "",
+            "link": "",
+            "button_label_2": "",
+            "link_2": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "font_color": "#000000",
+            "background_color": "#ffffff",
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_hjcrGC"
+      ],
+      "name": "t:sections.slideshow.presets.name-timer",
+      "settings": {
+        "is_above_the_fold": false,
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slides_controls_position": "top",
+        "auto_rotate": false,
+        "banner_buttons_animation": true,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_j6Vyj3": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- Announcement Bar Start -->\n<div id=\"announcement-bar\">\n  <div id=\"announcement-line1\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0326/4859/3539/files/number-one_1.png?v=1752162249\" id=\"announcement-image\" alt=\"Number One\">\n    <p> Einfach ein <span class=\"highlight\">Produkt</span> aus unserem Shop wählen</p>\n  </div>\n</div>\n\n<style>\n  @font-face {\n    font-family: 'Bitterbrush';\n    src: url('https://cdn.shopify.com/s/files/1/0326/4859/3539/files/Bitterbrush_DEMO.otf?v=1751921243') format('opentype');\n    font-weight: normal;\n    font-style: normal;\n  }\n\n  /* Base styles */\n  #announcement-bar {\n    background-color: #e1d6c1;\n    color: #2c2c2c;\n    padding: 10px 20px;\n    font-size: 20px;\n    font-weight: 500;\n    font-family: 'Bitterbrush', cursive;\n\n    position: relative;\n    width: 60%;\n    left: 0;\n\n    margin: 0 auto; /* center on desktop */\n    box-sizing: border-box;\n  }\n\n  #announcement-line1 {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n  }\n\n  #announcement-image {\n    height: 40px;\n    width: auto;\n    flex-shrink: 0;\n  }\n\n  #announcement-line1 p {\n    margin: 0;\n    line-height: 1.4;\n  }\n\n  #announcement-line1 .highlight {\n    color: #AD5551;\n  }\n\n  /* Responsive for tablets and smaller devices */\n  @media (max-width: 900px) {\n    #announcement-bar {\n      width: 90%;\n      font-size: 18px;\n      padding: 8px 15px;\n    }\n  }\n\n  /* Mobile devices */\n  @media (max-width: 480px) {\n    #announcement-bar {\n      width: 100%;\n      font-size: 16px;\n      padding: 8px 10px;\n    }\n\n    #announcement-line1 {\n      /* Remove the column layout — keep row layout */\n      flex-direction: row; \n      align-items: center;\n      gap: 6px;\n    }\n\n    #announcement-image {\n      height: 30px;\n    }\n  }\n</style>",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "custom_liquid_WaiUEC": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- Right Announcement Bar Centered -->\n<div id=\"announcement-bar-right\">\n  <div id=\"announcement-line2\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0326/4859/3539/files/number-2.png?v=1752162246\" alt=\"Number 2 Icon\" id=\"announcement-image-right\">\n    <p> Nutze den Code <span class=\"highlight\">\"FIRSTSIP\"</span> an der Kasse</p>\n  </div>\n</div>\n\n<style>\n  @font-face {\n    font-family: 'Bitterbrush';\n    src: url('https://cdn.shopify.com/s/files/1/0326/4859/3539/files/Bitterbrush_DEMO.otf?v=1751921243') format('opentype');\n    font-weight: normal;\n    font-style: normal;\n  }\n\n  #announcement-bar-right {\n    background-color: #e1d6c1;\n    color: #2c2c2c;\n    padding: 10px 20px;\n    font-size: 20px;\n    font-weight: 500;\n    font-family: 'Bitterbrush', cursive;\n\n    position: relative;\n    width: 60%;\n    margin: 0 auto; /* Center horizontally */\n    box-sizing: border-box;\n  }\n\n  #announcement-line2 {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n  }\n\n  #announcement-image-right {\n    height: 40px;\n    width: auto;\n    flex-shrink: 0;\n  }\n\n  #announcement-line2 p {\n    margin: 0;\n    line-height: 1.4;\n  }\n\n  #announcement-line2 .highlight {\n    color: #AD5551;\n  }\n\n  /* Responsive for tablets and smaller devices */\n  @media (max-width: 900px) {\n    #announcement-bar-right {\n      width: 90%;\n      font-size: 18px;\n      padding: 8px 15px;\n    }\n  }\n\n  /* Mobile devices */\n  @media (max-width: 480px) {\n    #announcement-bar-right {\n      width: 100%;\n      font-size: 16px;\n      padding: 8px 10px;\n    }\n\n    #announcement-line2 {\n      flex-direction: row; /* Keep icon and text in a row on mobile */\n      align-items: center;\n      gap: 6px;\n    }\n\n    #announcement-image-right {\n      height: 30px;\n    }\n  }\n</style>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 4
+      }
+    },
+    "custom_liquid_Eb8KBK": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- Third Line Announcement Bar -->\n<div id=\"announcement-bar-third\">\n  <div id=\"announcement-line3\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0326/4859/3539/files/number-3.png?v=1752162244\" alt=\"Number 3 Icon\" id=\"announcement-image-third\">\n    <p> A <span class=\"highlight\">Mini glass</span> is added to your cart for <span  added to your cart for class=\"highlight\">free</span></p>\n  </div>\n</div>\n\n<style>\n  @font-face {\n    font-family: 'Bitterbrush';\n    src: url('https://cdn.shopify.com/s/files/1/0326/4859/3539/files/Bitterbrush_DEMO.otf?v=1751921243') format('opentype');\n    font-weight: normal;\n    font-style: normal;\n  }\n\n  #announcement-bar-third {\n    background-color: #e1d6c1;\n    color: #2c2c2c;\n    padding: 10px 20px;\n    font-size: 20px;\n    font-weight: 500;\n    font-family: 'Bitterbrush', cursive;\n\n    position: relative; /* changed from absolute */\n    width: 60%;\n    margin: 0 auto; /* center horizontally */\n    text-align: left;\n    box-sizing: border-box;\n  }\n\n  #announcement-line3 {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n  }\n\n  #announcement-image-third {\n    height: 40px;\n    width: auto;\n    flex-shrink: 0;\n  }\n\n  #announcement-line3 p {\n    margin: 0;\n    line-height: 1.4;\n  }\n\n  #announcement-line3 .highlight {\n    color: #AD5551;\n  }\n\n  /* Tablets and smaller screens */\n  @media (max-width: 900px) {\n    #announcement-bar-third {\n      width: 90%;\n      font-size: 18px;\n      padding: 8px 15px;\n    }\n  }\n\n  /* Mobile devices */\n  @media (max-width: 480px) {\n    #announcement-bar-third {\n      width: 100%;\n      font-size: 16px;\n      padding: 8px 10px;\n    }\n\n    #announcement-line3 {\n      flex-direction: row; /* Keep icon and text next to each other */\n      align-items: center;\n      gap: 6px;\n    }\n\n    #announcement-image-third {\n      height: 30px;\n    }\n  }\n</style>",
+        "color_scheme": "background-1",
+        "padding_top": 8,
+        "padding_bottom": 12
+      }
+    },
+    "custom_liquid_gyVDTJ": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- Third Line Announcement Bar -->\n<div id=\"announcement-bar-third\">\n  <div id=\"announcement-line3\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0326/4859/3539/files/number-four.png?v=1753349648\" alt=\"Number 4 Icon\" id=\"announcement-image-third\">\n    <p>On top, you get a </p><span class=\"highlight\">free delivery</span><p> on your order</P\n  </div>\n</div>\n\n<style>\n  @font-face {\n    font-family: 'Bitterbrush';\n    src: url('https://cdn.shopify.com/s/files/1/0326/4859/3539/files/Bitterbrush_DEMO.otf?v=1751921243') format('opentype');\n    font-weight: normal;\n    font-style: normal;\n  }\n\n  #announcement-bar-third {\n    background-color: #e1d6c1;\n    color: #2c2c2c;\n    padding: 10px 20px;\n    font-size: 20px;\n    font-weight: 500;\n    font-family: 'Bitterbrush', cursive;\n\n    position: relative; /* changed from absolute */\n    width: 60%;\n    margin: 0 auto; /* center horizontally */\n    text-align: left;\n    box-sizing: border-box;\n  }\n\n  #announcement-line3 {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n  }\n\n  #announcement-image-third {\n    height: 40px;\n    width: auto;\n    flex-shrink: 0;\n  }\n\n  #announcement-line3 p {\n    margin: 0;\n    line-height: 1.4;\n  }\n\n  #announcement-line3 .highlight {\n    color: #AD5551;\n  }\n\n  /* Tablets and smaller screens */\n  @media (max-width: 900px) {\n    #announcement-bar-third {\n      width: 90%;\n      font-size: 18px;\n      padding: 8px 15px;\n    }\n  }\n\n  /* Mobile devices */\n  @media (max-width: 480px) {\n    #announcement-bar-third {\n      width: 100%;\n      font-size: 16px;\n      padding: 8px 10px;\n    }\n\n    #announcement-line3 {\n      flex-direction: row; /* Keep icon and text next to each other */\n      align-items: center;\n      gap: 6px;\n    }\n\n    #announcement-image-third {\n      height: 30px;\n    }\n  }\n</style>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_headline_tLr6R7": {
+      "type": "rich-text-headline",
+      "name": "Rich Text Header",
+      "settings": {
+        "title": "Unsere Bestseller.",
+        "subtitle": "Entdecke die Lieblingssorten unserer Kunden.",
+        "background_color": "#FFFFFF",
+        "text_color": "#000000",
+        "headline_color": "#000000",
+        "border_bottom_color": "#000000",
+        "padding_top": 35,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection_HLpEqF": {
+      "type": "featured-collection",
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "collection": "featured",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "view_all_button_label": "",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 32,
+        "padding_bottom": 36
+      }
+    },
+    "ss_scrolling_anouncement_bar_yz8dFw": {
+      "type": "ss-scrolling-anouncement-bar",
+      "blocks": {
+        "text_7dW39T": {
+          "type": "text",
+          "settings": {
+            "text": "Vegan 🌱"
+          }
+        },
+        "text_Tkpcia": {
+          "type": "text",
+          "settings": {
+            "text": "Made in Berlin 🇩🇪"
+          }
+        },
+        "text_dtAxth": {
+          "type": "text",
+          "settings": {
+            "text": "Sustainable & Handmade ♻️"
+          }
+        },
+        "text_fhc8qq": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Buy now with Klarna & pay later"
+          }
+        }
+      },
+      "block_order": [
+        "text_7dW39T",
+        "text_Tkpcia",
+        "text_dtAxth",
+        "text_fhc8qq"
+      ],
+      "custom_css": [],
+      "settings": {
+        "insert_css_class_target": "",
+        "layout": "full_bleed",
+        "text_size": 14,
+        "link": "",
+        "animation_duration": 134,
+        "animation_direction": "left",
+        "pause_hover": true,
+        "bg": "#e1d5c1",
+        "text_color": "#2c2c2c",
+        "hover_opacity": 90,
+        "padding_horizontal": 0,
+        "padding_vertical": 1.5,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_8xmpY8": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_kyRKc9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Moonshine, das Original im Mason Jar",
+            "heading_size": "h2"
+          }
+        },
+        "text_XeTULe": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bei O’Donnell Moonshine trifft Tradition auf neue Geschmackswelten. Wir füllen unsere Schnäpse in stilechten Einmachgläsern, sogenannten Mason Jars, ab, genau wie die Gangster während der amerikanischen Prohibition. <br/><br/>Unser Name erinnert dabei an den illegal gebrannten \"Moonshine\" und an Spike O’Donnell, den Anführer einer der berüchtigtsten Moonshine-Gangs aus Chicago.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_kxqpfB": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Entdecke das Glas",
+            "button_link": "shopify://products/odonnell-spritz-glas",
+            "button_style_white_color": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_kyRKc9",
+        "text_XeTULe",
+        "button_kxqpfB"
+      ],
+      "custom_css": [
+        ".image-with-text__media {border: solid; border-color: white;}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "image": "shopify://shop_images/22Q3_Garden-052_2000_0d92f36f-6db7-4cda-b39a-f42245f1c15a.jpg",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_headline_Ce3pj4": {
+      "type": "rich-text-headline",
+      "name": "Rich Text Header",
+      "settings": {
+        "title": "Unsere Moonshine-Deals für dich",
+        "subtitle": "Die besten Preise für unsere beliebtesten Sorten.",
+        "background_color": "#FFFFFF",
+        "text_color": "#000000",
+        "headline_color": "#000000",
+        "border_bottom_color": "#000000",
+        "padding_top": 35,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_trrbnn": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "custom_css": [
+        "/* Verzweifelte Klammern #neverforget */"
+      ],
+      "settings": {
+        "custom_liquid": "<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"68552d97dcab190705eb30ae\">\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "yotpo_reviews_wTtydq": {
+      "type": "yotpo-reviews",
+      "name": "Yotpo Reviews",
+      "settings": {}
+    },
+    "rich_text_7fppJr": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_YfbbYk": {
+          "type": "heading",
+          "settings": {
+            "heading": "Deal info",
+            "heading_size": "h1"
+          }
+        },
+        "text_YKQpjU": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Spritz Glas geschenkt! Ab 74,90€ Bestellwert.</strong></p>"
+          }
+        },
+        "button_EGfaCe": {
+          "type": "button",
+          "settings": {
+            "button_label": "Pfirsich kaufen",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_YfbbYk",
+        "text_YKQpjU",
+        "button_EGfaCe"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h1 {text-align: left;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 16
+      }
+    },
+    "image_with_text_4TyXFk": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_h6PpFi": {
+          "type": "heading",
+          "settings": {
+            "heading": "Der Sommerlikör schlechthin",
+            "heading_size": "h2"
+          }
+        },
+        "text_VQiyMM": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Fruchtig, leicht und einfach unglaublich erfrischend: <strong>Pfirsich ist der O'Donnell-Likör für heiße Tage und laue Nächte.  </strong>Mit seinem sanft-süßen Geschmack, einer dezenten Zitrusfrische und feinen exotischen Noten ist er wie gemacht für kreative Sommerdrinks – ob klassisch als Spritz, mit Tonic gemixt oder als Highlight in Bowlen und Eistees.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_FKiphw": {
+          "type": "button",
+          "settings": {
+            "button_label": "Pfirsich kaufen",
+            "button_link": "shopify://products/pfirsich",
+            "button_style_white_color": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_h6PpFi",
+        "text_VQiyMM",
+        "button_FKiphw"
+      ],
+      "disabled": true,
+      "settings": {
+        "is_above_the_fold": false,
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "image": "shopify://shop_images/FlavourdescriptionPeach.jpg",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "yotpo_reviews_HC3Ee9": {
+      "type": "yotpo-reviews",
+      "name": "Yotpo Reviews",
+      "settings": {}
+    },
+    "rich_text_ktQbUP": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_VKJfP4": {
+          "type": "heading",
+          "settings": {
+            "heading": "So schmeckt der Sommer",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_VKJfP4"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".color-background-1 {background-color: #ffb676;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_tCG3H6": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_dtCQ4K": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Peach-Bellini-Bundle_PDP_1500x1500_2_DE.jpg",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Peach Bellini",
+            "text": "<ul><li>50ml <a href=\"https://odonnell.de/products/pfirsich\" title=\"Pfirsich von O’Donnell Moonshine\">Pfirsich</a></li><li>30ml <a href=\"https://odonnell.de/products/vodka\" title=\"https://odonnell.de/products/vodka\">Vodka</a></li><li>20ml Pfirsichpüree</li><li>Prosecco</li><li>Orangenzeste oder Pfirsichstreifen</li></ul><p>Ein Sektglas mit Pfirsich und Pfirsichpüree füllen und umrühren. Mit Prosecco aufgießen. <strong>Servieren und genießen!</strong></p>",
+            "mobile_text": "<ul><li>50ml <a href=\"https://odonnell.de/products/pfirsich\" title=\"Pfirsich von O’Donnell Moonshine\">Pfirsich</a></li><li>30ml <a href=\"https://odonnell.de/products/vodka\" title=\"https://odonnell.de/products/vodka\">Vodka</a></li><li>20ml Pfirsichpüree</li><li>Prosecco</li><li>Orangenzeste oder Pfirsichstreifen</li></ul><p>Ein Sektglas mit Pfirsich und Pfirsichpüree füllen und umrühren. Mit Prosecco aufgießen. <strong>Servieren und genießen!</strong></p>",
+            "link_label": "Peach Bellini Bundle kaufen",
+            "link": "https://odonnell.de/products/peach-bellini-bundle",
+            "button_alignment": "center",
+            "selected_button": true,
+            "grey_out_media": false
+          }
+        },
+        "column_eRmkyA": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Pfirsich_700_Product.jpg",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "mobile_text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": "",
+            "button_alignment": "left",
+            "selected_button": false,
+            "grey_out_media": false
+          }
+        },
+        "column_nQDbYd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/P-Supreme.png",
+            "overlay_title": false,
+            "overlay_title_position": "bottom",
+            "title": "Supreme Summer",
+            "text": "<ul><li>40ml <a href=\"https://odonnell.de/products/vodka\" title=\"Vodka O'Donnell Moonshine\">Vodka</a></li><li>20ml <a href=\"https://odonnell.de/products/pfirsich\" title=\"Pfirsich von O’Donnell Moonshine\">Pfirsich</a> </li><li>20ml Limettensaft</li><li>Vanillesirup</li><li>200ml Maracujasaft<br/></li></ul><p>Alle Zutaten mit Eis in einen Shaker geben und gut schütteln. </p><p>Den Drink abseihen und in einem Tumbler mit Eis servieren!</p>",
+            "mobile_text": "<ul><li>40ml <a href=\"https://odonnell.de/products/vodka\" title=\"Vodka O'Donnell Moonshine\">Vodka</a></li><li>20ml <a href=\"https://odonnell.de/products/pfirsich\" title=\"Pfirsich von O’Donnell Moonshine\">Pfirsich</a> </li><li>20ml Limettensaft</li><li>Vanillesirup</li><li>200ml Maracujasaft</li></ul><p>Alle Zutaten mit Eis in einen Shaker geben und gut schütteln. Den Drink abseihen und in einem Tumbler mit Eis servieren!</p>",
+            "link_label": "Pfirsich kaufen",
+            "link": "https://odonnell.de/products/pfirsich",
+            "button_alignment": "center",
+            "selected_button": true,
+            "grey_out_media": false
+          }
+        }
+      },
+      "block_order": [
+        "column_dtCQ4K",
+        "column_eRmkyA",
+        "column_nQDbYd"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".button {background-color: #white; color: #black;}",
+        ".color-background-1 {background-color: #ffb676; color: black;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "",
+        "heading_size": "h1",
+        "title_text": "",
+        "outer_padding": 5,
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "image_border_color": "#ffffff",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Entdecken alle Cocktails",
+        "button_link": "https://odonnell.de/blogs/cocktails/tagged/pfirsich",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "product_recommendations_v2_igzdnT": {
+      "type": "product-recommendations-v2",
+      "disabled": true,
+      "name": "t:sections.product-recommendations-v2.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "Cocktail-Zubehör",
+        "heading_size": "h2",
+        "description": "",
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "product_list": [
+          "edelstahl-strohhalm-set",
+          "edelstahl-eiswuerfelform",
+          "4er-longdrinkglas-set",
+          "glas-700ml",
+          "shaker-aufsatz",
+          "zitronenpresse",
+          "ausgiesser"
+        ],
+        "columns_desktop": 5,
+        "full_width": false,
+        "section_animation": "none",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_4eh7YC": {
+      "type": "featured-collection",
+      "disabled": true,
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "Entdecke unsere Spar-sets",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "collection": "granatapfel",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "section_animation": "none",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "view_all_button_label": "",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "product_recommendations_v2_er6DUL": {
+      "type": "product-recommendations-v2",
+      "custom_css": [
+        "ul{justify-content: center;}"
+      ],
+      "name": "t:sections.product-recommendations-v2.name",
+      "settings": {
+        "is_above_the_fold": false,
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "grey_sold_out_products": true,
+        "description_style": "body",
+        "product_list": [
+          "2er-geschenkbox-700",
+          "granatapfel-probier-set",
+          "mini-sets-kleine-likoere",
+          "tasting-set"
+        ],
+        "columns_desktop": 4,
+        "full_width": false,
+        "section_animation": "none",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "front_welcome_tRYL8H": {
+      "type": "front-welcome",
+      "blocks": {
+        "value_mJCA4f": {
+          "type": "value",
+          "settings": {
+            "image": "shopify://shop_images/Master_Medal.png",
+            "text": "Award Winner"
+          }
+        },
+        "value_hLGFHJ": {
+          "type": "value",
+          "settings": {
+            "image": "shopify://shop_images/made-in-germany_ec825fcc-2e15-426d-9bc8-c264134d11c2.png",
+            "text": ""
+          }
+        },
+        "value_tMx4Ji": {
+          "type": "value",
+          "settings": {
+            "image": "shopify://shop_images/plastic_dafe9889-e066-4c04-8939-c01e7c7b2687.png",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "value_mJCA4f",
+        "value_hLGFHJ",
+        "value_tMx4Ji"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".values__item .item__img {width: 150px; height: auto; display: block; /* make image a block element */ margin-left: auto; /* push left */ margin-right: auto; /* push right */}"
+      ],
+      "name": "Welcome",
+      "settings": {
+        "background_color": "#ffffff",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "headline": "",
+        "subtitle": "",
+        "text": "",
+        "text_animation": "none",
+        "icons_animation": "none"
+      }
+    },
+    "image_with_text_aXTVQh": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_rGwiFM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Zum Newsletter anmelden und sparen",
+            "heading_size": "h2"
+          }
+        },
+        "text_kgbGD9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Melde dich zu unserem Newsletter an und sichere dir 10% auf deine erste Bestellung. </p><p>Werde Teil der Gang und erhalte Zugang zu limitierten Produkten, Launches, Rabatten und weiteren Vorteilen. </p>",
+            "text_style": "body"
+          }
+        },
+        "button_hVXGwa": {
+          "type": "button",
+          "settings": {
+            "button_label": "Gang-Mitglied werden",
+            "button_link": "https://odonnell.de/account/login",
+            "button_style_white_color": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_rGwiFM",
+        "text_kgbGD9",
+        "button_hVXGwa"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".image-with-text__media {border: solid; border-width: 0px; border-color: white;}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "background_color": "#ffb676",
+        "text_color": "#000000",
+        "image": "shopify://shop_images/Design_ohne_Titel_1.png",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_BE7H3t": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Ktc3Mi": {
+          "type": "heading",
+          "settings": {
+            "heading": "Probiere Limette in den Stores",
+            "heading_size": "h1"
+          }
+        },
+        "text_jX4Xfr": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Du willst nicht warten, bis dir der Postbote Limette bringt?</strong> Dann besuche uns in unseren Stores und sei Teil unserer exklusiven Launch-Celebration!</p><p><strong>10.-12. April: Limette Launch-Party in allen O'Donnell Moonshine Stores</strong></p><p>Sei einer der Ersten, die unseren spritzigen Neuzugang probieren! Genieße exklusive Cocktail-Kreationen, sichere dir aufregende Gewinne und lass dich in Frühlingsstimmung versetzen.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_iMfzjF": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt Tasting buchen!",
+            "button_link": "shopify://products/store-tasting",
+            "button_style_white_color": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Ktc3Mi",
+        "text_jX4Xfr",
+        "button_iMfzjF"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".image-with-text__media {border: solid; border-color: white;}"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "background_color": "#e4ebd2",
+        "text_color": "#000000",
+        "image": "shopify://shop_images/Berlin_Alexa_1.jpg",
+        "image_caption": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "slideshow_with_timer_UzVgyL",
+    "custom_liquid_j6Vyj3",
+    "custom_liquid_WaiUEC",
+    "custom_liquid_Eb8KBK",
+    "custom_liquid_gyVDTJ",
+    "rich_text_headline_tLr6R7",
+    "featured_collection_HLpEqF",
+    "ss_scrolling_anouncement_bar_yz8dFw",
+    "image_with_text_8xmpY8",
+    "rich_text_headline_Ce3pj4",
+    "custom_liquid_trrbnn",
+    "yotpo_reviews_wTtydq",
+    "rich_text_7fppJr",
+    "image_with_text_4TyXFk",
+    "yotpo_reviews_HC3Ee9",
+    "rich_text_ktQbUP",
+    "multicolumn_tCG3H6",
+    "product_recommendations_v2_igzdnT",
+    "featured_collection_4eh7YC",
+    "product_recommendations_v2_er6DUL",
+    "front_welcome_tRYL8H",
+    "image_with_text_aXTVQh",
+    "image_with_text_BE7H3t"
+  ]
+}

@@ -1,1 +1,81 @@
-{"sections":{"03831b04-2468-4201-9b1d-f70552da2501":{"type":"image-banner","blocks":{"template--16203255415052__03831b04-2468-4201-9b1d-f70552da2501-16680948154ed063ff-0":{"type":"heading","disabled":true,"settings":{"heading":"Image banner","heading_size":"h1"}},"template--16203255415052__03831b04-2468-4201-9b1d-f70552da2501-16680948154ed063ff-1":{"type":"text","disabled":true,"settings":{"text":"Give customers details about the banner image(s) or content on the template.","text_style":"body"}},"template--16203255415052__03831b04-2468-4201-9b1d-f70552da2501-16680948154ed063ff-2":{"type":"buttons","disabled":true,"settings":{"button_label_1":"Button label","button_link_1":"","button_style_secondary_1":false,"button_label_2":"Button label","button_link_2":"","button_style_secondary_2":false}}},"block_order":["template--16203255415052__03831b04-2468-4201-9b1d-f70552da2501-16680948154ed063ff-0","template--16203255415052__03831b04-2468-4201-9b1d-f70552da2501-16680948154ed063ff-1","template--16203255415052__03831b04-2468-4201-9b1d-f70552da2501-16680948154ed063ff-2"],"settings":{"is_above_the_fold":false,"image":"shopify:\/\/shop_images\/COCKTAIL_desktop_1.jpg","image_overlay_opacity":0,"image_height":"small","adapt_height_first_image":true,"desktop_content_position":"middle-center","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"background-1","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":true}},"main":{"type":"main-blog","settings":{"is_above_the_fold":true,"layout":"grid","show_image":true,"image_height":"small","show_date":true,"show_author":true,"padding_top":36,"padding_bottom":36}}},"order":["03831b04-2468-4201-9b1d-f70552da2501","main"]}
+{
+  "sections": {
+    "03831b04-2468-4201-9b1d-f70552da2501": {
+      "type": "image-banner",
+      "blocks": {
+        "template--16203255415052__03831b04-2468-4201-9b1d-f70552da2501-16680948154ed063ff-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "template--16203255415052__03831b04-2468-4201-9b1d-f70552da2501-16680948154ed063ff-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "template--16203255415052__03831b04-2468-4201-9b1d-f70552da2501-16680948154ed063ff-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16203255415052__03831b04-2468-4201-9b1d-f70552da2501-16680948154ed063ff-0",
+        "template--16203255415052__03831b04-2468-4201-9b1d-f70552da2501-16680948154ed063ff-1",
+        "template--16203255415052__03831b04-2468-4201-9b1d-f70552da2501-16680948154ed063ff-2"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "image": "shopify://shop_images/COCKTAIL_desktop_1.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": true,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "is_above_the_fold": true,
+        "layout": "grid",
+        "show_image": true,
+        "image_height": "small",
+        "show_date": true,
+        "show_author": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "03831b04-2468-4201-9b1d-f70552da2501",
+    "main"
+  ]
+}

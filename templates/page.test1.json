@@ -16,9 +16,17 @@
         "padding_bottom": 24,
         "show_title": true
       }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
     }
   },
   "order": [
+    "breadcrumbs",
     "main"
   ]
 }

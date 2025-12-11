@@ -217,7 +217,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div class=\"custom-video-wrapper\">\n  <!-- Desktop video -->\n  <video class=\"custom-video custom-video-desktop\" autoplay muted loop playsinline>\n    <source src=\"https://cdn.shopify.com/videos/c/o/v/ba2425159732407fb60e51478e3a76b6.mp4\" type=\"video/mp4\">\n    Your browser does not support the video tag.\n  </video>\n\n  <!-- Mobile video -->\n  <video class=\"custom-video custom-video-mobile\" autoplay muted loop playsinline>\n    <source src=\"https://cdn.shopify.com/videos/c/o/v/3942c6a8361347e28af0a236cc7df74a.mp4\" type=\"video/mp4\">\n    Your browser does not support the video tag.\n  </video>\n</div>\n\n<style>\n  .custom-video-wrapper {\n    position: relative;\n    width: 100%;\n    max-width: 100%;\n    height: 550px; /* adjust as needed */\n    overflow: hidden;\n  }\n\n  .custom-video {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    object-fit: cover; /* or 'contain' */\n  }\n\n  /* By default, show desktop video, hide mobile */\n  .custom-video-desktop {\n    display: block;\n  }\n\n  .custom-video-mobile {\n    display: none;\n  }\n\n  /* Show mobile video on screens 767px and smaller */\n  @media (max-width: 767px) {\n    .custom-video-desktop {\n      display: none;\n    }\n\n    .custom-video-mobile {\n      display: block;\n    }\n  }\n</style>",
+        "custom_liquid": "<div class=\"custom-video-wrapper\">\n  <!-- Desktop video -->\n  <video class=\"custom-video custom-video-desktop\" autoplay muted loop playsinline>\n    <source src=\"https://cdn.shopify.com/videos/c/o/v/ba2425159732407fb60e51478e3a76b6.mp4\" type=\"video/mp4\">\n    Your browser does not support the video tag.\n  </video>\n\n  <!-- Mobile video -->\n  <video class=\"custom-video custom-video-mobile\" autoplay muted loop playsinline>\n    <source src=\"https://cdn.shopify.com/videos/c/o/v/3942c6a8361347e28af0a236cc7df74a.mp4\" type=\"video/mp4\">\n    Your browser does not support the video tag.\n  </video>\n</div>\n\n<style>\n  .custom-video-wrapper {\n    position: relative;\n    width: 100%;\n    max-width: 100%;\n    height: 550px; \n    overflow: hidden;\n  }\n\n  .custom-video {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    object-fit: cover; \n  }\n\n  \n  .custom-video-desktop {\n    display: block;\n  }\n\n  .custom-video-mobile {\n    display: none;\n  }\n\n  \n  @media (max-width: 767px) {\n    .custom-video-desktop {\n      display: none;\n    }\n\n    .custom-video-mobile {\n      display: block;\n    }\n  }\n</style>",
         "color_scheme": "background-1",
         "padding_top": 0,
         "padding_bottom": 0
@@ -440,7 +440,7 @@
       "type": "custom-liquid",
       "disabled": true,
       "custom_css": [
-        "/* Verzweifelte Klammern #neverforget */"
+        ""
       ],
       "settings": {
         "custom_liquid": "<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"68552d97dcab190705eb30ae\">\n</div>",
@@ -778,7 +778,7 @@
       ],
       "disabled": true,
       "custom_css": [
-        ".values__item .item__img {width: 150px; height: auto; display: block; /* make image a block element */ margin-left: auto; /* push left */ margin-right: auto; /* push right */}"
+        ".values__item .item__img {width: 150px; height: auto; display: block;  margin-left: auto;  margin-right: auto; }"
       ],
       "name": "Welcome",
       "settings": {
@@ -896,9 +896,17 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
     }
   },
   "order": [
+    "breadcrumbs",
     "main",
     "slideshow_with_timer_UzVgyL",
     "image_with_text_tbTUn3",

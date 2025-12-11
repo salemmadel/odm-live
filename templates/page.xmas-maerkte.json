@@ -1,1 +1,79 @@
-{"sections":{"8efb7bef-82fb-473b-b3b8-95c43b3d5e65":{"type":"image-intro-banner","blocks":{"template--16486018777356__8efb7bef-82fb-473b-b3b8-95c43b3d5e65-16703406854c9f6196-0":{"type":"heading","disabled":true,"settings":{"heading":"Image banner","heading_size":"h1"}},"template--16486018777356__8efb7bef-82fb-473b-b3b8-95c43b3d5e65-16703406854c9f6196-1":{"type":"text","disabled":true,"settings":{"text":"Give customers details about the banner image(s) or content on the template.","text_style":"body"}},"template--16486018777356__8efb7bef-82fb-473b-b3b8-95c43b3d5e65-16703406854c9f6196-2":{"type":"buttons","disabled":true,"settings":{"button_label_1":"Button label","button_link_1":"","button_style_secondary_1":false,"button_label_2":"Button label","button_link_2":"","button_style_secondary_2":false}}},"block_order":["template--16486018777356__8efb7bef-82fb-473b-b3b8-95c43b3d5e65-16703406854c9f6196-0","template--16486018777356__8efb7bef-82fb-473b-b3b8-95c43b3d5e65-16703406854c9f6196-1","template--16486018777356__8efb7bef-82fb-473b-b3b8-95c43b3d5e65-16703406854c9f6196-2"],"settings":{"is_above_the_fold":false,"image":"shopify:\/\/shop_images\/Weihnachtsmarkt21_gross-36_1.jpg","image_2":"shopify:\/\/shop_images\/Weihnachtsmarkt21_gross-67_1.jpg","image_overlay_opacity":0,"image_height":"small","desktop_content_position":"middle-center","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"background-1","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":true,"heading_h1":"O'Donnell Weihnachtsmärkte","heading_h2":"","heading_text":"Auf unserer interaktiven Karte findest unsere Weihnachtsmarktstände in ganz Deutschland"}},"main":{"type":"main-page","disabled":true,"settings":{"padding_top":28,"padding_bottom":24}}},"order":["8efb7bef-82fb-473b-b3b8-95c43b3d5e65","main"]}
+{
+  "sections": {
+    "8efb7bef-82fb-473b-b3b8-95c43b3d5e65": {
+      "type": "image-intro-banner",
+      "blocks": {
+        "template--16486018777356__8efb7bef-82fb-473b-b3b8-95c43b3d5e65-16703406854c9f6196-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "template--16486018777356__8efb7bef-82fb-473b-b3b8-95c43b3d5e65-16703406854c9f6196-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "template--16486018777356__8efb7bef-82fb-473b-b3b8-95c43b3d5e65-16703406854c9f6196-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16486018777356__8efb7bef-82fb-473b-b3b8-95c43b3d5e65-16703406854c9f6196-0",
+        "template--16486018777356__8efb7bef-82fb-473b-b3b8-95c43b3d5e65-16703406854c9f6196-1",
+        "template--16486018777356__8efb7bef-82fb-473b-b3b8-95c43b3d5e65-16703406854c9f6196-2"
+      ],
+      "settings": {
+        "is_above_the_fold": false,
+        "image": "shopify://shop_images/Weihnachtsmarkt21_gross-36_1.jpg",
+        "image_2": "shopify://shop_images/Weihnachtsmarkt21_gross-67_1.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "heading_h1": "O'Donnell Weihnachtsmärkte",
+        "heading_h2": "",
+        "heading_text": "Auf unserer interaktiven Karte findest unsere Weihnachtsmarktstände in ganz Deutschland"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 24
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "8efb7bef-82fb-473b-b3b8-95c43b3d5e65",
+    "main"
+  ]
+}
