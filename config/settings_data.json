@@ -128,6 +128,7 @@
     "wishlist_exclude": "'11638357754124','11638367486220','11638459072780','11638707519756','6588059517059', '4498300141699', '4498300043395', '6657007779971', '8628688683276','5103589752963', '9716669743372', '5117440524419', '8791071490316', '7972135239948', '5037724532867', '4498302861443', '11516239511820'",
     "sold_out_striked_through": true,
     "shipping_time": "Versand in 1 bis 2 Werktagen",
+    "enable_header_group": false,
     "checkout_logo_image": "shopify://shop_images/odonnell_39dc53ee-2a9e-4dc0-b770-2a08b66df973.png",
     "checkout_logo_position": "center",
     "checkout_body_background_color": "#ffffff",
