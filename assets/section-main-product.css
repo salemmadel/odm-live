@@ -273,7 +273,7 @@ variant-radios .disabled_variant:checked + label {
 }
 
 .product-form__submit {
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */ /* Removed to allow theme editor control */
   text-transform: uppercase;
 }
 
@@ -309,14 +309,15 @@ variant-radios .disabled_variant:checked + label {
 }
 
 /* Product info */
-.product__info-container > * + * {
+/* Removed hardcoded margins to allow theme editor control */
+/* .product__info-container > * + * {
   margin: 1.5rem 0;
-}
+} */
 
-.product__info-container .product-form,
+/* .product__info-container .product-form,
 .product__info-container .product__description {
   margin: 2.5rem 0;
-}
+} */
 
 .product__text {
   margin-bottom: 0;
