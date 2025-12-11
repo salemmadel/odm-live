@@ -344,6 +344,14 @@ a.product__text {
   font-weight: 700;
 }
 
+/* Add thin black line after product title on mobile */
+@media screen and (max-width: 749px) {
+  .product__title {
+    border-bottom: 1px solid #000000;
+    padding-bottom: 1.5rem;
+  }
+}
+
 .product__title > * {
   margin: 0;
 }
