@@ -1,0 +1,20 @@
+{% comment %}
+  Renders a delivery badge with a green circle indicator
+
+  Accepts:
+  - text: {String} The delivery text to display (default: "Delivery 1-2")
+  - show_badge: {Boolean} Whether to show the badge (default: true)
+
+  Usage:
+  {% render 'delivery-badge',
+    text: "Delivery 1-2",
+    show_badge: true
+  %}
+{% endcomment %}
+
+{%- if show_badge -%}
+  <div class="delivery-badge">
+    <span class="delivery-badge__indicator"></span>
+    <span class="delivery-badge__text">{{ text | default: "Delivery 1-2" }}</span>
+  </div>
+{%- endif -%}

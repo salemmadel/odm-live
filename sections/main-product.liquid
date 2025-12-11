@@ -11,6 +11,7 @@
     {{ 'component-gang-proof.css' | asset_url | stylesheet_tag }}
     {{ 'component-product-link.css' | asset_url | stylesheet_tag }}
     {{ 'component-season-badge.css' | asset_url | stylesheet_tag }}
+    {{ 'component-delivery-badge.css' | asset_url | stylesheet_tag }}
     {{ 'component-inventory.css' | asset_url | stylesheet_tag }}
     {{ 'component-prerelease.css' | asset_url | stylesheet_tag }}
     {{ 'component-card.css' | asset_url | stylesheet_tag }}
@@ -28,6 +29,7 @@
     <link rel="stylesheet" href="{{ 'component-gang-proof.css' | asset_url }}" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="{{ 'component-product-link.css' | asset_url }}" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="{{ 'component-season-badge.css' | asset_url }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ 'component-delivery-badge.css' | asset_url }}" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="{{ 'component-inventory.css' | asset_url }}" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="{{ 'component-prerelease.css' | asset_url }}" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -359,8 +361,12 @@
               {%- if lieferinfo == false -%}
                 {{ settings.shipping_time }}
               {%- endif -%}
-                
+
             </div>
+            {%- render 'delivery-badge',
+              text: section.settings.delivery_badge_text,
+              show_badge: section.settings.delivery_badge_enabled
+            -%}
             <div {{ block.shopify_attributes }}>
               {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
               {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
@@ -2056,6 +2062,18 @@
       "id": "badges_enabled",
       "default": false,
       "label": "Show product badges"
+    },
+    {
+      "type": "checkbox",
+      "id": "delivery_badge_enabled",
+      "default": true,
+      "label": "Show delivery badge"
+    },
+    {
+      "type": "text",
+      "id": "delivery_badge_text",
+      "default": "Delivery 1-2",
+      "label": "Delivery badge text"
     },
     {
       "type": "header",
