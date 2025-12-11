@@ -331,6 +331,24 @@
               {{- block.settings.text -}}
             </p>
           {%- when 'title' -%}
+            <style>
+              #shopify-section-{{ section.id }} .product__title {
+                padding-top: {{ block.settings.title_padding_top }}px;
+                padding-bottom: {{ block.settings.title_padding_bottom }}px;
+              }
+
+              @media screen and (max-width: 749px) {
+                #shopify-section-{{ section.id }} .product__title h1 {
+                  font-size: {{ block.settings.title_font_size_mobile }}px;
+                }
+              }
+
+              @media screen and (min-width: 750px) {
+                #shopify-section-{{ section.id }} .product__title h1 {
+                  font-size: {{ block.settings.title_font_size_desktop }}px;
+                }
+              }
+            </style>
             <div class="product__title" {{ block.shopify_attributes }}>
               <h1>{{ product.title | escape }}</h1>
               <a href="{{ product.url }}" class="product__title">
@@ -1532,7 +1550,49 @@
     {
       "type": "title",
       "name": "t:sections.main-product.blocks.title.name",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        {
+          "type": "range",
+          "id": "title_font_size_mobile",
+          "min": 12,
+          "max": 48,
+          "step": 1,
+          "unit": "px",
+          "label": "Font size (Mobile)",
+          "default": 24
+        },
+        {
+          "type": "range",
+          "id": "title_font_size_desktop",
+          "min": 12,
+          "max": 72,
+          "step": 1,
+          "unit": "px",
+          "label": "Font size (Desktop)",
+          "default": 24
+        },
+        {
+          "type": "range",
+          "id": "title_padding_top",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "Padding top",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "title_padding_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "Padding bottom",
+          "default": 24
+        }
+      ]
     },
     {
       "type": "price",
