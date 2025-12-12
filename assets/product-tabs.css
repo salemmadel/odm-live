@@ -47,6 +47,8 @@
 /* Tab Panels Container */
 .product-tabs__panels {
   width: 100% !important;
+  padding-bottom: 1.5rem !important;
+  border-bottom: 1px solid #000000 !important;
 }
 
 /* Hide accordion on all screen sizes */
@@ -146,6 +148,14 @@
 
   .product-tabs__panel {
     /* Add padding to content on mobile */
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  .product-tabs__panels {
+    /* Extend border line to full width on mobile */
+    margin-left: -1.5rem !important;
+    margin-right: -1.5rem !important;
     padding-left: 1.5rem !important;
     padding-right: 1.5rem !important;
   }
