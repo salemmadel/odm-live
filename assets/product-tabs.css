@@ -67,7 +67,8 @@
 /* Tab Panels - visible on all screen sizes */
 .product-tabs__panel {
   display: none !important;
-  padding: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
   overflow-x: hidden !important;
   word-wrap: break-word !important;
 }
