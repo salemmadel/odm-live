@@ -125,6 +125,12 @@
 /* Mobile-specific adjustments */
 @media screen and (max-width: 749px) {
   .product-tabs {
+    /* Reset any constraints */
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .product-tabs__nav {
     /* Extend to full width like the border lines above */
     width: calc(100% + 3rem) !important;
     margin-left: -1.5rem !important;
