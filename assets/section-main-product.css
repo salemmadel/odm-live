@@ -513,6 +513,11 @@ a.product__text {
   .product__info-wrapper {
     padding-left: 1.5rem !important;
     padding-right: 1.5rem !important;
+    overflow: visible !important;
+  }
+
+  .product__info-container {
+    overflow: visible !important;
   }
 
   /* Remove all padding from wrapper and slider */

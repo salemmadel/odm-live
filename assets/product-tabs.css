@@ -126,8 +126,10 @@
 @media screen and (max-width: 749px) {
   .product-tabs {
     /* Extend to full width like the border lines above */
+    width: calc(100% + 3rem) !important;
     margin-left: -1.5rem !important;
     margin-right: -1.5rem !important;
+    position: relative !important;
   }
 
   .product-tabs__button {
