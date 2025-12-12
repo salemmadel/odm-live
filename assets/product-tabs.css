@@ -130,17 +130,9 @@
     margin-right: -1.5rem !important;
   }
 
-  .product-tabs__nav {
-    /* Full width tabs on mobile */
-    flex-direction: column !important;
-  }
-
   .product-tabs__button {
-    border-right: none !important;
-    border-bottom: 1px solid #000000 !important;
-  }
-
-  .product-tabs__button:last-child {
-    border-bottom: none !important;
+    /* Smaller font and padding on mobile for better fit */
+    font-size: 0.9rem !important;
+    padding: 1rem 0.8rem !important;
   }
 }
