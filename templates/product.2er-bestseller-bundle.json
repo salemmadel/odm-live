@@ -60,18 +60,6 @@
           "type": "quantity_selector",
           "settings": {}
         },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_sticky_cart": true,
-            "is_set": false,
-            "only_tier_gang_button": "Required gang tier not reached",
-            "set_size": 3,
-            "set_text": "Wähle 3 Produkte",
-            "show_dynamic_checkout": false,
-            "gang_url": "https://odonnell.de/account/login"
-          }
-        },
         "product_tabs_ztBUjG": {
           "type": "product_tabs",
           "settings": {
@@ -83,6 +71,18 @@
             "tab3_content": "<p>asdfasdf</p>",
             "tab4_title": "Care Instructions",
             "tab4_content": "<p>asdfasdf</p>"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_sticky_cart": true,
+            "is_set": false,
+            "only_tier_gang_button": "Required gang tier not reached",
+            "set_size": 3,
+            "set_text": "Wähle 3 Produkte",
+            "show_dynamic_checkout": false,
+            "gang_url": "https://odonnell.de/account/login"
           }
         },
         "description": {
@@ -133,8 +133,8 @@
         "price",
         "variant_picker",
         "quantity_selector",
-        "buy_buttons",
         "product_tabs_ztBUjG",
+        "buy_buttons",
         "description",
         "collapsible-row-0",
         "collapsible-row-3",
