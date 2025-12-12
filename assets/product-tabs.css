@@ -138,9 +138,5 @@
     padding: 1rem 0.8rem !important;
   }
 
-  .product-tabs__panel {
-    /* Add padding to content on mobile */
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
-  }
+  
 }
