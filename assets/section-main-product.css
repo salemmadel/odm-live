@@ -507,6 +507,7 @@ a.product__text {
   section[id^="MainProduct-"].page-width {
     padding-left: 0 !important;
     padding-right: 0 !important;
+    overflow-x: visible !important;
   }
 
   /* Add padding back to product info so it doesn't touch edges */
