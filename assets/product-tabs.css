@@ -1,0 +1,177 @@
+/* Product Tabs Component */
+
+.product-tabs {
+  margin-top: 0;
+  width: 100%;
+}
+
+/* Tab Navigation (Desktop only) */
+.product-tabs__nav {
+  display: none; /* Hidden on mobile */
+  border-bottom: 1px solid #000000;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 750px) {
+  .product-tabs__nav {
+    display: flex;
+    gap: 0;
+  }
+}
+
+.product-tabs__button {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 1.2rem 2rem;
+  font-family: 'GT Pressura Mono', monospace;
+  font-size: 1.4rem;
+  letter-spacing: 0.05rem;
+  color: #666666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: -1px;
+}
+
+.product-tabs__button:hover {
+  color: #000000;
+}
+
+.product-tabs__button.active {
+  color: #000000;
+  border-bottom-color: #000000;
+}
+
+/* Tab Panels Container */
+.product-tabs__panels {
+  width: 100%;
+}
+
+/* Mobile: Accordion Style */
+.product-tabs__accordion-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.product-tabs__accordion-button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border: none;
+  padding: 1.5rem 0;
+  font-family: 'GT Pressura Mono', monospace;
+  font-size: 1.4rem;
+  letter-spacing: 0.05rem;
+  color: #000000;
+  text-align: left;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.product-tabs__accordion-icon {
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.product-tabs__accordion-button.active .product-tabs__accordion-icon {
+  transform: rotate(180deg);
+}
+
+.product-tabs__panel {
+  display: none;
+  padding: 0 0 1.5rem 0;
+}
+
+.product-tabs__panel.active {
+  display: block;
+}
+
+/* Desktop: Hide accordion buttons, show tabs */
+@media screen and (min-width: 750px) {
+  .product-tabs__accordion-item {
+    border: none;
+  }
+
+  .product-tabs__accordion-button {
+    display: none;
+  }
+
+  .product-tabs__panel {
+    display: none;
+    padding: 0;
+  }
+
+  .product-tabs__panel.active {
+    display: block;
+  }
+}
+
+/* Tab Content Styling */
+.product-tabs__content {
+  font-family: var(--font-body-family);
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.product-tabs__content p {
+  margin-bottom: 1rem;
+}
+
+.product-tabs__content ul,
+.product-tabs__content ol {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+.product-tabs__content li {
+  margin-bottom: 0.5rem;
+}
+
+.product-tabs__content h1,
+.product-tabs__content h2,
+.product-tabs__content h3,
+.product-tabs__content h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/* Mobile-specific adjustments */
+@media screen and (max-width: 749px) {
+  .product-tabs {
+    /* Extend to full width like the border lines above */
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
+
+  .product-tabs__accordion-button {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .product-tabs__panel {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Animation for accordion */
+@media screen and (max-width: 749px) {
+  .product-tabs__panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .product-tabs__panel.active {
+    max-height: 2000px;
+    padding-bottom: 1.5rem;
+  }
+}

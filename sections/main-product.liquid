@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="{{ 'component-inventory.css' | asset_url }}" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="{{ 'component-prerelease.css' | asset_url }}" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ 'product-tabs.css' | asset_url }}" media="print" onload="this.media='all'">
   {%- endif -%}
 
   {%- assign has_recommended_products = false -%}
@@ -562,6 +563,95 @@
                       {%- endif -%}
                     {%- endif -%}
                 </div>
+            {%- endif -%}
+          {%- when 'product_tabs' -%}
+            {%- liquid
+              assign tabs = ''
+              assign tab_count = 0
+
+              for i in (1..4)
+                assign title_key = 'tab' | append: i | append: '_title'
+                assign content_key = 'tab' | append: i | append: '_content'
+                assign tab_title = block.settings[title_key]
+                assign tab_content = block.settings[content_key]
+
+                if tab_title != blank and tab_content != blank
+                  assign tab_count = tab_count | plus: 1
+                  assign tabs = tabs | append: '|TABSTART|' | append: tab_title | append: '|TABMID|' | append: tab_content | append: '|TABEND|'
+                endif
+              endfor
+            -%}
+
+            {%- if tab_count > 0 -%}
+              <product-tabs class="product-tabs" data-section-id="{{ section.id }}" {{ block.shopify_attributes }}>
+                <!-- Tab Navigation (Desktop) -->
+                <div class="product-tabs__nav" role="tablist">
+                  {%- assign current_tab = 0 -%}
+                  {%- for i in (1..4) -%}
+                    {%- assign title_key = 'tab' | append: i | append: '_title' -%}
+                    {%- assign content_key = 'tab' | append: i | append: '_content' -%}
+                    {%- assign tab_title = block.settings[title_key] -%}
+                    {%- assign tab_content = block.settings[content_key] -%}
+
+                    {%- if tab_title != blank and tab_content != blank -%}
+                      {%- assign current_tab = current_tab | plus: 1 -%}
+                      <button
+                        class="product-tabs__button{% if current_tab == 1 %} active{% endif %}"
+                        role="tab"
+                        aria-selected="{% if current_tab == 1 %}true{% else %}false{% endif %}"
+                        aria-controls="tab-panel-{{ section.id }}-{{ current_tab }}"
+                        id="tab-{{ section.id }}-{{ current_tab }}"
+                        data-tab="{{ current_tab }}"
+                      >
+                        {{ tab_title }}
+                      </button>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </div>
+
+                <!-- Tab Panels (Desktop) and Accordion (Mobile) -->
+                <div class="product-tabs__panels">
+                  {%- assign current_tab = 0 -%}
+                  {%- for i in (1..4) -%}
+                    {%- assign title_key = 'tab' | append: i | append: '_title' -%}
+                    {%- assign content_key = 'tab' | append: i | append: '_content' -%}
+                    {%- assign tab_title = block.settings[title_key] -%}
+                    {%- assign tab_content = block.settings[content_key] -%}
+
+                    {%- if tab_title != blank and tab_content != blank -%}
+                      {%- assign current_tab = current_tab | plus: 1 -%}
+
+                      <!-- Mobile Accordion Item -->
+                      <div class="product-tabs__accordion-item">
+                        <button
+                          class="product-tabs__accordion-button{% if current_tab == 1 %} active{% endif %}"
+                          aria-expanded="{% if current_tab == 1 %}true{% else %}false{% endif %}"
+                          aria-controls="accordion-panel-{{ section.id }}-{{ current_tab }}"
+                          data-accordion="{{ current_tab }}"
+                        >
+                          {{ tab_title }}
+                          <span class="product-tabs__accordion-icon">
+                            <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </span>
+                        </button>
+                        <div
+                          class="product-tabs__panel{% if current_tab == 1 %} active{% endif %}"
+                          role="tabpanel"
+                          id="tab-panel-{{ section.id }}-{{ current_tab }}"
+                          aria-labelledby="tab-{{ section.id }}-{{ current_tab }}"
+                          tabindex="0"
+                        >
+                          <div class="product-tabs__content rte">
+                            {{ tab_content }}
+                          </div>
+                        </div>
+                      </div>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </div>
+              </product-tabs>
             {%- endif -%}
           {%- when 'popup' -%}
               <modal-opener class="product-popup-modal__opener no-js-hidden quick-add-hidden" data-modal="#PopupModal-{{ block.id }}" {{ block.shopify_attributes }}>
@@ -1334,6 +1424,8 @@
     <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
 
+  <script src="{{ 'product-tabs.js' | asset_url }}" defer="defer"></script>
+
   {%- if first_3d_model -%}
     <script type="application/json" id="ProductJSON-{{ product.id }}">
       {{ product.media | where: 'media_type', 'model' | json }}
@@ -2039,6 +2131,73 @@
           "type": "text",
           "id": "title",
           "label": "t:sections.main-product.blocks.link.settings.title.label"
+        }
+      ]
+    },
+    {
+      "type": "product_tabs",
+      "name": "Product Description Tabs",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Tab 1"
+        },
+        {
+          "type": "text",
+          "id": "tab1_title",
+          "label": "Tab 1 Title",
+          "default": "Description"
+        },
+        {
+          "type": "richtext",
+          "id": "tab1_content",
+          "label": "Tab 1 Content"
+        },
+        {
+          "type": "header",
+          "content": "Tab 2"
+        },
+        {
+          "type": "text",
+          "id": "tab2_title",
+          "label": "Tab 2 Title",
+          "default": "Specifications"
+        },
+        {
+          "type": "richtext",
+          "id": "tab2_content",
+          "label": "Tab 2 Content"
+        },
+        {
+          "type": "header",
+          "content": "Tab 3"
+        },
+        {
+          "type": "text",
+          "id": "tab3_title",
+          "label": "Tab 3 Title",
+          "default": "Shipping"
+        },
+        {
+          "type": "richtext",
+          "id": "tab3_content",
+          "label": "Tab 3 Content"
+        },
+        {
+          "type": "header",
+          "content": "Tab 4"
+        },
+        {
+          "type": "text",
+          "id": "tab4_title",
+          "label": "Tab 4 Title",
+          "default": "Care Instructions"
+        },
+        {
+          "type": "richtext",
+          "id": "tab4_content",
+          "label": "Tab 4 Content"
         }
       ]
     },
