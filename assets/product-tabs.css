@@ -6,19 +6,13 @@
   padding: 0 !important;
 }
 
-/* Tab Navigation (Desktop only) */
+/* Tab Navigation (Mobile and Desktop) */
 .product-tabs__nav {
-  display: none !important; /* Hidden on mobile */
+  display: flex !important;
   border: 1px solid #000000 !important;
   margin-bottom: 2rem !important;
   background: #ffffff !important;
-}
-
-@media screen and (min-width: 750px) {
-  .product-tabs__nav {
-    display: flex !important;
-    gap: 0 !important;
-  }
+  gap: 0 !important;
 }
 
 .product-tabs__button {
@@ -55,65 +49,27 @@
   width: 100% !important;
 }
 
-/* Mobile: Accordion Style */
+/* Hide accordion on all screen sizes */
 .product-tabs__accordion-item {
-  border-bottom: 1px solid #e5e5e5 !important;
+  border: none !important;
 }
 
 .product-tabs__accordion-button {
-  width: 100% !important;
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  background: transparent !important;
-  border: none !important;
-  padding: 1.5rem 0 !important;
-  font-family: 'GT Pressura Mono', monospace !important;
-  font-size: 1.4rem !important;
-  letter-spacing: 0.05rem !important;
-  color: #000000 !important;
-  text-align: left !important;
-  cursor: pointer !important;
-  text-transform: uppercase !important;
+  display: none !important;
 }
 
 .product-tabs__accordion-icon {
-  transition: transform 0.3s ease !important;
-  display: flex !important;
-  align-items: center !important;
+  display: none !important;
 }
 
-.product-tabs__accordion-button.active .product-tabs__accordion-icon {
-  transform: rotate(180deg) !important;
-}
-
+/* Tab Panels - visible on all screen sizes */
 .product-tabs__panel {
   display: none !important;
-  padding: 0 0 1.5rem 0 !important;
+  padding: 0 !important;
 }
 
 .product-tabs__panel.active {
   display: block !important;
-}
-
-/* Desktop: Hide accordion buttons, show tabs */
-@media screen and (min-width: 750px) {
-  .product-tabs__accordion-item {
-    border: none !important;
-  }
-
-  .product-tabs__accordion-button {
-    display: none !important;
-  }
-
-  .product-tabs__panel {
-    display: none !important;
-    padding: 0 !important;
-  }
-
-  .product-tabs__panel.active {
-    display: block !important;
-  }
 }
 
 /* Tab Content Styling */
@@ -170,33 +126,21 @@
 @media screen and (max-width: 749px) {
   .product-tabs {
     /* Extend to full width like the border lines above */
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
+    margin-left: -1.5rem !important;
+    margin-right: -1.5rem !important;
   }
 
-  .product-tabs__accordion-button {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+  .product-tabs__nav {
+    /* Full width tabs on mobile */
+    flex-direction: column !important;
   }
 
-  .product-tabs__panel {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
-/* Animation for accordion */
-@media screen and (max-width: 749px) {
-  .product-tabs__panel {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    padding-top: 0;
-    padding-bottom: 0;
+  .product-tabs__button {
+    border-right: none !important;
+    border-bottom: 1px solid #000000 !important;
   }
 
-  .product-tabs__panel.active {
-    max-height: 2000px;
-    padding-bottom: 1.5rem;
+  .product-tabs__button:last-child {
+    border-bottom: none !important;
   }
 }
