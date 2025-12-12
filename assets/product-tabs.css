@@ -71,6 +71,8 @@
   padding-bottom: 0 !important;
   overflow-x: hidden !important;
   word-wrap: break-word !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
 }
 
 .product-tabs__panel.active {
@@ -87,6 +89,13 @@
   overflow-wrap: break-word !important;
   white-space: normal !important;
   overflow-x: hidden !important;
+  box-sizing: border-box !important;
+  max-width: 100% !important;
+}
+
+.product-tabs__content > * {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 .product-tabs__content p {
