@@ -29,7 +29,12 @@
         },
         "title": {
           "type": "title",
-          "settings": {}
+          "settings": {
+            "title_font_size_mobile": 24,
+            "title_font_size_desktop": 24,
+            "title_padding_top": 0,
+            "title_padding_bottom": 24
+          }
         },
         "eshop_guide_product_usp_ppEaLY": {
           "type": "eshop_guide_product_usp",
@@ -79,6 +84,19 @@
             "set_text": "Wähle 3 Produkte",
             "show_dynamic_checkout": false,
             "gang_url": "https://odonnell.de/account/login"
+          }
+        },
+        "product_tabs_wQgQCi": {
+          "type": "product_tabs",
+          "settings": {
+            "tab1_title": "Description",
+            "tab1_content": "<p>hjfjh</p>",
+            "tab2_title": "Specifications",
+            "tab2_content": "<p>hjgfjhfj</p>",
+            "tab3_title": "Shipping",
+            "tab3_content": "",
+            "tab4_title": "Care Instructions",
+            "tab4_content": ""
           }
         },
         "description": {
@@ -141,6 +159,7 @@
         "link_GMGnV3",
         "quantity_selector",
         "buy_buttons",
+        "product_tabs_wQgQCi",
         "description",
         "collapsible_tab_AxMVt3",
         "collapsible_tab_Udxygk",
