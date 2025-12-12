@@ -68,6 +68,8 @@
 .product-tabs__panel {
   display: none !important;
   padding: 0 !important;
+  overflow-x: hidden !important;
+  word-wrap: break-word !important;
 }
 
 .product-tabs__panel.active {
@@ -80,6 +82,10 @@
   font-size: 1.3rem;
   line-height: 1.8;
   color: #000000;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  white-space: normal !important;
+  overflow-x: hidden !important;
 }
 
 .product-tabs__content p {
