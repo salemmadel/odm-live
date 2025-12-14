@@ -1,0 +1,183 @@
+{{ 'section-easy-add.css' | asset_url | stylesheet_tag }}
+
+{%- if product.metafields.custom.easy_add.value != blank -%}
+  {%- assign easy-product = product.metafields.custom.easy_add.value -%}
+
+  <style>
+    #shopify-section-{{ section.id }} .easy-add-section {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+      #shopify-section-{{ section.id }} .easy-add-section {
+        padding-top: {{ section.settings.padding_top_desktop }}px;
+        padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+      }
+    }
+  </style>
+
+  <div class="easy-add-section page-width">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="easy-add-section__heading">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+
+    <div class="easy-add-section__container">
+      <!-- Product Image -->
+      <div class="easy-add-section__image">
+        <a href="{{ easy-product.url }}">
+          {{ easy-product.featured_image | image_url: width: 600 | image_tag:
+             alt: easy-product.featured_image.alt,
+             loading: 'lazy',
+             widths: '300, 400, 500, 600'
+          }}
+        </a>
+      </div>
+
+      <!-- Product Info -->
+      <div class="easy-add-section__info">
+        <div class="easy-add-section__details">
+          <!-- Headline -->
+          {%- if easy-product.metafields.custom.easy_add_headline != blank -%}
+            <h3 class="easy-add-section__title">
+              {{ easy-product.metafields.custom.easy_add_headline }}
+            </h3>
+          {%- elsif easy-product.metafields.product.easy_headline != blank -%}
+            <h3 class="easy-add-section__title">
+              {{ easy-product.metafields.product.easy_headline }}
+            </h3>
+          {%- else -%}
+            <h3 class="easy-add-section__title">
+              <a href="{{ easy-product.url }}">{{ easy-product.title }}</a>
+            </h3>
+          {%- endif -%}
+
+          <!-- Price -->
+          <div class="easy-add-section__price">
+            {%- render 'price', product: easy-product, use_variant: true, show_badges: false, price_class: 'price--large' -%}
+          </div>
+
+          <!-- Details Description -->
+          {%- if easy-product.metafields.custom.easy_add_details != blank -%}
+            <div class="easy-add-section__description">
+              {{ easy-product.metafields.custom.easy_add_details }}
+            </div>
+          {%- elsif easy-product.metafields.product.easy_details != blank -%}
+            <div class="easy-add-section__description">
+              {{ easy-product.metafields.product.easy_details }}
+            </div>
+          {%- endif -%}
+
+          <!-- Add to Cart Button -->
+          {%- if easy-product != blank -%}
+            <product-form class="easy-add-section__form">
+              {%- form 'product', easy-product, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                <input type="hidden" name="id" value="{{ easy-product.selected_or_first_available_variant.id }}">
+
+                <button
+                  type="submit"
+                  name="add"
+                  class="easy-add-section__button button"
+                  {% if easy-product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                >
+                  <span>
+                    {%- if easy-product.selected_or_first_available_variant.available -%}
+                      {{ section.settings.button_text | default: 'IN DEN WARENKORB' }}
+                    {%- else -%}
+                      {{ 'products.product.sold_out' | t }}
+                    {%- endif -%}
+                  </span>
+                </button>
+              {%- endform -%}
+            </product-form>
+          {%- endif -%}
+        </div>
+
+        <!-- Arrow Button -->
+        <div class="easy-add-section__arrow">
+          <a href="{{ easy-product.url }}" class="easy-add-section__arrow-button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "Easy Add Product",
+  "tag": "section",
+  "class": "section-easy-add",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "GEEIGNETES ZUBEHÖR"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "IN DEN WARENKORB"
+    },
+    {
+      "type": "header",
+      "content": "Padding Settings"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top (Mobile)",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom (Mobile)",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top (Desktop)",
+      "default": 52
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom (Desktop)",
+      "default": 52
+    }
+  ],
+  "presets": [
+    {
+      "name": "Easy Add Product"
+    }
+  ],
+  "enabled_on": {
+    "templates": ["product"]
+  }
+}
+{% endschema %}
