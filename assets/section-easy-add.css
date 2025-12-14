@@ -259,8 +259,70 @@
   cursor: not-allowed;
 }
 
-/* Mobile-specific adjustments */
-@media screen and (max-width: 749px) {
+/* Small mobile screens (320px - 480px) */
+@media screen and (max-width: 480px) {
+  .easy-add-carousel__track {
+    gap: 0.8rem;
+  }
+
+  .easy-add-item {
+    grid-template-columns: 110px 1fr 50px;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: start;
+  }
+
+  .easy-add-item__image {
+    width: 110px;
+    height: 110px;
+  }
+
+  .easy-add-item__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .easy-add-item__info {
+    gap: 0.8rem;
+  }
+
+  .easy-add-item__title {
+    font-size: 1.4rem;
+    line-height: 1.1;
+  }
+
+  .easy-add-item__price .price {
+    font-size: 1.6rem;
+  }
+
+  .easy-add-item__button {
+    padding: 1.2rem 1.5rem !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+  }
+
+  /* Show arrow on mobile */
+  .easy-add-item__arrow {
+    display: flex !important;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 0.5rem;
+  }
+
+  .easy-add-item__arrow-link {
+    width: 50px;
+    height: 50px;
+  }
+
+  .easy-add-item__arrow-link svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Larger mobile screens (481px - 749px) */
+@media screen and (min-width: 481px) and (max-width: 749px) {
   .easy-add-carousel__track {
     gap: 1rem;
   }
