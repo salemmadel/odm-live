@@ -145,16 +145,6 @@
         "padding_bottom": 0
       }
     },
-    "custom_liquid_yWEeX3": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "settings": {
-        "custom_liquid": "<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"66150cd80628020014a9c1bf\"\n\tdata-product-id=\"{{ product.id }}\">\n</div>",
-        "color_scheme": "background-1",
-        "padding_top": 24,
-        "padding_bottom": 24
-      }
-    },
     "product-recommendations": {
       "type": "product-recommendations",
       "disabled": true,
@@ -214,7 +204,6 @@
   "order": [
     "breadcrumbs",
     "main",
-    "custom_liquid_yWEeX3",
     "product-recommendations",
     "product_easy_add_GjWdcD",
     "1668500027a509409d"
