@@ -64,7 +64,7 @@
 /* Easy Add Item - Base Mobile Layout (320px+) */
 .easy-add-item {
   display: grid;
-  grid-template-columns: 104px 1fr 40px;
+  grid-template-columns: 104px 1fr 25px;
   gap: 0.8rem;
   align-items: stretch;
   padding: 0;
@@ -88,7 +88,7 @@
 /* 375px+ - Small Mobile */
 @media screen and (min-width: 375px) {
   .easy-add-item {
-    grid-template-columns: 104px 1fr 45px;
+    grid-template-columns: 104px 1fr 28px;
     gap: 1rem;
   }
 
@@ -101,7 +101,7 @@
 /* 480px+ - Standard Mobile */
 @media screen and (min-width: 480px) {
   .easy-add-item {
-    grid-template-columns: 104px 1fr 50px;
+    grid-template-columns: 104px 1fr 30px;
     gap: 1.2rem;
   }
 
@@ -114,7 +114,7 @@
 /* 750px+ - Tablet */
 @media screen and (min-width: 750px) {
   .easy-add-item {
-    grid-template-columns: 104px 1fr 55px;
+    grid-template-columns: 104px 1fr 33px;
     gap: 1.5rem;
   }
 
@@ -127,7 +127,7 @@
 /* 990px+ - Desktop */
 @media screen and (min-width: 990px) {
   .easy-add-item {
-    grid-template-columns: 104px 1fr 60px;
+    grid-template-columns: 104px 1fr 35px;
     gap: 2rem;
   }
 
@@ -303,8 +303,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   background-color: #000000;
   color: #ffffff;
   text-decoration: none;
@@ -316,59 +316,59 @@
 }
 
 .easy-add-item__arrow-link svg {
-  width: 28px;
-  height: 28px;
+  width: 16px;
+  height: 16px;
 }
 
 /* 375px+ - Scale arrow */
 @media screen and (min-width: 375px) {
   .easy-add-item__arrow-link {
-    width: 45px;
-    height: 45px;
+    width: 28px;
+    height: 28px;
   }
 
   .easy-add-item__arrow-link svg {
-    width: 30px;
-    height: 30px;
+    width: 18px;
+    height: 18px;
   }
 }
 
 /* 480px+ - Standard arrow size */
 @media screen and (min-width: 480px) {
   .easy-add-item__arrow-link {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
   }
 
   .easy-add-item__arrow-link svg {
-    width: 32px;
-    height: 32px;
+    width: 20px;
+    height: 20px;
   }
 }
 
 /* 750px+ - Larger arrow */
 @media screen and (min-width: 750px) {
   .easy-add-item__arrow-link {
-    width: 55px;
-    height: 55px;
+    width: 33px;
+    height: 33px;
   }
 
   .easy-add-item__arrow-link svg {
-    width: 35px;
-    height: 35px;
+    width: 22px;
+    height: 22px;
   }
 }
 
 /* 990px+ - Desktop arrow */
 @media screen and (min-width: 990px) {
   .easy-add-item__arrow-link {
-    width: 60px;
-    height: 60px;
+    width: 35px;
+    height: 35px;
   }
 
   .easy-add-item__arrow-link svg {
-    width: 40px;
-    height: 40px;
+    width: 24px;
+    height: 24px;
   }
 }
 
