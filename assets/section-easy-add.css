@@ -249,7 +249,8 @@
   text-transform: uppercase !important;
   cursor: pointer !important;
   transition: background-color 0.3s ease !important;
-  width: 100%;
+  width: calc(100% + 0.8rem + 25px);
+  margin-right: calc(-0.8rem - 25px);
   height: 20px;
   display: flex;
   align-items: center;
@@ -268,6 +269,8 @@
 /* 375px+ - Slightly larger button */
 @media screen and (min-width: 375px) {
   .easy-add-item__button {
+    width: calc(100% + 1rem + 28px);
+    margin-right: calc(-1rem - 28px);
     height: 40px;
     font-size: 0.95rem !important;
   }
@@ -276,6 +279,8 @@
 /* 480px+ - Standard button size */
 @media screen and (min-width: 480px) {
   .easy-add-item__button {
+    width: calc(100% + 1.2rem + 30px);
+    margin-right: calc(-1.2rem - 30px);
     height: 44px;
     font-size: 1rem !important;
     letter-spacing: 0.1rem !important;
@@ -285,7 +290,17 @@
 /* 750px+ - Larger button */
 @media screen and (min-width: 750px) {
   .easy-add-item__button {
+    width: calc(100% + 1.5rem + 33px);
+    margin-right: calc(-1.5rem - 33px);
     font-size: 1.1rem !important;
+  }
+}
+
+/* 990px+ - Desktop button */
+@media screen and (min-width: 990px) {
+  .easy-add-item__button {
+    width: calc(100% + 2rem + 35px);
+    margin-right: calc(-2rem - 35px);
   }
 }
 
