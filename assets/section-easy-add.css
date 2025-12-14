@@ -320,102 +320,30 @@
   height: 16px;
 }
 
-/* Carousel Controls - Base (320px+) */
+/* Carousel Controls - Hidden */
 .easy-add-carousel__controls {
-  display: flex;
-  justify-content: center;
-  gap: 0.8rem;
-  margin-top: 1.5rem;
+  display: none;
 }
 
-.easy-add-carousel__button {
-  background-color: #000000;
-  color: #ffffff;
-  border: none;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  pointer-events: all;
-  flex-shrink: 0;
-}
-
-.easy-add-carousel__button svg {
-  width: 16px;
-  height: 16px;
-}
-
-.easy-add-carousel__button:hover {
-  background-color: #333333;
-}
-
-.easy-add-carousel__button:disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
-}
-
-/* 480px+ - Slightly larger carousel buttons */
-@media screen and (min-width: 480px) {
-  .easy-add-carousel__controls {
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-
-  .easy-add-carousel__button {
-    width: 36px;
-    height: 36px;
-  }
-
-  .easy-add-carousel__button svg {
-    width: 18px;
-    height: 18px;
-  }
-}
-
-/* 750px+ - Larger buttons */
-@media screen and (min-width: 750px) {
-  .easy-add-carousel__button {
-    width: 40px;
-    height: 40px;
-  }
-
-  .easy-add-carousel__button svg {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-/* 990px+ - Desktop positioning */
-@media screen and (min-width: 990px) {
-  .easy-add-carousel__controls {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-    justify-content: space-between;
-    margin-top: 0;
-    padding: 0 1rem;
-    pointer-events: none;
-  }
-
-  .easy-add-carousel__button {
-    width: 50px;
-    height: 50px;
-  }
-
-  .easy-add-carousel__button svg {
-    width: 24px;
-    height: 24px;
-  }
-}
-
-/* Carousel Track - Responsive gaps */
+/* Carousel Track - Snappy scrolling */
 .easy-add-carousel__track {
   gap: 1rem;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.easy-add-carousel__track::-webkit-scrollbar {
+  display: none;
+}
+
+.easy-add-carousel__slide {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  flex-shrink: 0;
 }
 
 @media screen and (min-width: 480px) {

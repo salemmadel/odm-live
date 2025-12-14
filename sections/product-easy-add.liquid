@@ -108,6 +108,41 @@
 
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const easyAddCarousels = document.querySelectorAll('.easy-add-carousel');
+
+  easyAddCarousels.forEach(carousel => {
+    const track = carousel.querySelector('.easy-add-carousel__track');
+    const arrowButtons = carousel.querySelectorAll('.easy-add-item__arrow-link');
+
+    if (!track) return;
+
+    arrowButtons.forEach((arrow, index) => {
+      arrow.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        // Get all slides
+        const slides = Array.from(track.querySelectorAll('.easy-add-carousel__slide'));
+
+        // Find next slide (current index + 1, or loop back to 0)
+        const nextIndex = (index + 1) % slides.length;
+        const nextSlide = slides[nextIndex];
+
+        if (nextSlide) {
+          // Scroll to next slide with smooth behavior
+          nextSlide.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+            inline: 'start'
+          });
+        }
+      });
+    });
+  });
+});
+</script>
+
 {% schema %}
 {
   "name": "Easy Add Product",
