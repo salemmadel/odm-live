@@ -188,6 +188,29 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "product_easy_add_GjWdcD": {
+      "type": "product-easy-add",
+      "blocks": {
+        "product_YwTw77": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_YwTw77"
+      ],
+      "name": "Easy Add Product",
+      "settings": {
+        "heading": "GEEIGNETES ZUBEHÖR",
+        "button_text": "IN DEN WARENKORB",
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36,
+        "padding_top_desktop": 52,
+        "padding_bottom_desktop": 52
+      }
     }
   },
   "order": [
@@ -196,6 +219,7 @@
     "custom_liquid_yWEeX3",
     "product_easy_add_7cgQ3a",
     "product-recommendations",
-    "1668500027a509409d"
+    "1668500027a509409d",
+    "product_easy_add_GjWdcD"
   ]
 }
