@@ -61,29 +61,21 @@
   }
 }
 
-/* Easy Add Item - Mobile Layout (Image Left, Info Right) */
+/* Easy Add Item - Base Mobile Layout (320px+) */
 .easy-add-item {
   display: grid;
-  grid-template-columns: 95px 1fr auto;
-  gap: 1.5rem;
-  align-items: center;
+  grid-template-columns: 75px 1fr 20px;
+  gap: 0.8rem;
+  align-items: start;
   padding: 0;
   background: transparent;
   border: none;
 }
 
-@media screen and (min-width: 750px) {
-  .easy-add-item {
-    grid-template-columns: 95px 1fr auto;
-    gap: 2rem;
-    padding: 0;
-  }
-}
-
-/* Product Image */
+/* Product Image - Base */
 .easy-add-item__image {
-  width: 95px;
-  height: 95px;
+  width: 75px;
+  height: 75px;
 }
 
 .easy-add-item__image img {
@@ -93,21 +85,74 @@
   object-fit: cover;
 }
 
+/* 375px+ - Small Mobile */
+@media screen and (min-width: 375px) {
+  .easy-add-item {
+    grid-template-columns: 85px 1fr 20px;
+    gap: 1rem;
+  }
+
+  .easy-add-item__image {
+    width: 85px;
+    height: 85px;
+  }
+}
+
+/* 480px+ - Standard Mobile */
+@media screen and (min-width: 480px) {
+  .easy-add-item {
+    grid-template-columns: 95px 1fr 20px;
+    gap: 1.2rem;
+  }
+
+  .easy-add-item__image {
+    width: 95px;
+    height: 95px;
+  }
+}
+
+/* 750px+ - Tablet */
+@media screen and (min-width: 750px) {
+  .easy-add-item {
+    grid-template-columns: 110px 1fr 20px;
+    gap: 1.5rem;
+  }
+
+  .easy-add-item__image {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+/* 990px+ - Desktop */
+@media screen and (min-width: 990px) {
+  .easy-add-item {
+    grid-template-columns: 120px 1fr 20px;
+    gap: 2rem;
+  }
+
+  .easy-add-item__image {
+    width: 120px;
+    height: 120px;
+  }
+}
+
 /* Product Info */
 .easy-add-item__info {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.6rem;
 }
 
+/* Product Title - Base (320px+) */
 .easy-add-item__title {
   font-family: 'GT Pressura Bold', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
   margin: 0;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
 .easy-add-item__title a {
@@ -119,31 +164,75 @@
   text-decoration: underline;
 }
 
-@media screen and (min-width: 750px) {
-  .easy-add-item__title {
-    font-size: 2rem;
-  }
-}
-
-/* Price */
+/* Price - Base (320px+) */
 .easy-add-item__price {
   margin: 0;
 }
 
 .easy-add-item__price .price {
   font-family: 'GT Pressura Mono', monospace;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: 0.05rem;
 }
 
+/* 375px+ - Scale up title and price */
+@media screen and (min-width: 375px) {
+  .easy-add-item__info {
+    gap: 0.7rem;
+  }
+
+  .easy-add-item__title {
+    font-size: 1.3rem;
+  }
+
+  .easy-add-item__price .price {
+    font-size: 1.5rem;
+  }
+}
+
+/* 480px+ - Standard Mobile */
+@media screen and (min-width: 480px) {
+  .easy-add-item__info {
+    gap: 0.8rem;
+  }
+
+  .easy-add-item__title {
+    font-size: 1.4rem;
+  }
+
+  .easy-add-item__price .price {
+    font-size: 1.6rem;
+  }
+}
+
+/* 750px+ - Tablet */
 @media screen and (min-width: 750px) {
+  .easy-add-item__info {
+    gap: 1rem;
+  }
+
+  .easy-add-item__title {
+    font-size: 1.6rem;
+  }
+
+  .easy-add-item__price .price {
+    font-size: 1.8rem;
+  }
+}
+
+/* 990px+ - Desktop */
+@media screen and (min-width: 990px) {
+  .easy-add-item__title {
+    font-size: 1.8rem;
+  }
+
   .easy-add-item__price .price {
     font-size: 2rem;
   }
 }
 
-/* Add to Cart Button */
+/* Add to Cart Button - Base (320px+) */
 .easy-add-item__form {
   margin: 0;
 }
@@ -154,14 +243,15 @@
   border: none !important;
   padding: 0 !important;
   font-family: 'GT Pressura Bold', sans-serif !important;
-  font-size: 1.1rem !important;
+  font-size: 0.9rem !important;
   font-weight: 700 !important;
-  letter-spacing: 0.1rem !important;
+  letter-spacing: 0.05rem !important;
   text-transform: uppercase !important;
   cursor: pointer !important;
   transition: background-color 0.3s ease !important;
-  width: 207px;
-  height: 44px;
+  width: 100%;
+  max-width: 180px;
+  height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -176,17 +266,37 @@
   cursor: not-allowed !important;
 }
 
-/* Arrow Link */
-.easy-add-item__arrow {
-  display: none;
+/* 375px+ - Slightly larger button */
+@media screen and (min-width: 375px) {
+  .easy-add-item__button {
+    max-width: 190px;
+    height: 40px;
+    font-size: 0.95rem !important;
+  }
 }
 
-@media screen and (min-width: 990px) {
-  .easy-add-item__arrow {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+/* 480px+ - Standard button size */
+@media screen and (min-width: 480px) {
+  .easy-add-item__button {
+    max-width: 207px;
+    height: 44px;
+    font-size: 1rem !important;
+    letter-spacing: 0.1rem !important;
   }
+}
+
+/* 750px+ - Larger button */
+@media screen and (min-width: 750px) {
+  .easy-add-item__button {
+    font-size: 1.1rem !important;
+  }
+}
+
+/* Arrow Link - Always visible */
+.easy-add-item__arrow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .easy-add-item__arrow-link {
@@ -210,14 +320,75 @@
   height: 16px;
 }
 
-/* Carousel Controls */
+/* Carousel Controls - Base (320px+) */
 .easy-add-carousel__controls {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
 }
 
+.easy-add-carousel__button {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  pointer-events: all;
+  flex-shrink: 0;
+}
+
+.easy-add-carousel__button svg {
+  width: 16px;
+  height: 16px;
+}
+
+.easy-add-carousel__button:hover {
+  background-color: #333333;
+}
+
+.easy-add-carousel__button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* 480px+ - Slightly larger carousel buttons */
+@media screen and (min-width: 480px) {
+  .easy-add-carousel__controls {
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .easy-add-carousel__button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .easy-add-carousel__button svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* 750px+ - Larger buttons */
+@media screen and (min-width: 750px) {
+  .easy-add-carousel__button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .easy-add-carousel__button svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* 990px+ - Desktop positioning */
 @media screen and (min-width: 990px) {
   .easy-add-carousel__controls {
     position: absolute;
@@ -230,156 +401,31 @@
     padding: 0 1rem;
     pointer-events: none;
   }
-}
 
-.easy-add-carousel__button {
-  background-color: #000000;
-  color: #ffffff;
-  border: none;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  pointer-events: all;
-}
-
-.easy-add-carousel__button:hover {
-  background-color: #333333;
-}
-
-@media screen and (min-width: 990px) {
   .easy-add-carousel__button {
     width: 50px;
     height: 50px;
   }
+
+  .easy-add-carousel__button svg {
+    width: 24px;
+    height: 24px;
+  }
 }
 
-.easy-add-carousel__button:disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
+/* Carousel Track - Responsive gaps */
+.easy-add-carousel__track {
+  gap: 1rem;
 }
 
-/* Small mobile screens (320px - 480px) */
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 480px) {
   .easy-add-carousel__track {
-    gap: 0.8rem;
-  }
-
-  .easy-add-item {
-    grid-template-columns: 95px 1fr 20px;
-    gap: 1rem;
-    padding: 0;
-    align-items: start;
-  }
-
-  .easy-add-item__image {
-    width: 95px;
-    height: 95px;
-  }
-
-  .easy-add-item__image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .easy-add-item__info {
-    gap: 0.8rem;
-  }
-
-  .easy-add-item__title {
-    font-size: 1.4rem;
-    line-height: 1.1;
-  }
-
-  .easy-add-item__price .price {
-    font-size: 1.6rem;
-  }
-
-  .easy-add-item__button {
-    width: 207px;
-    height: 44px;
-    font-size: 1rem !important;
-  }
-
-  /* Show arrow on mobile */
-  .easy-add-item__arrow {
-    display: flex !important;
-    align-items: flex-start;
-    justify-content: center;
-  }
-
-  .easy-add-item__arrow-link {
-    width: 20px;
-    height: 20px;
-  }
-
-  .easy-add-item__arrow-link svg {
-    width: 16px;
-    height: 16px;
-  }
-}
-
-/* Larger mobile screens (481px - 749px) */
-@media screen and (min-width: 481px) and (max-width: 749px) {
-  .easy-add-carousel__track {
-    gap: 1rem;
-  }
-
-  .easy-add-item {
-    grid-template-columns: 95px 1fr 20px;
     gap: 1.5rem;
-    padding: 0;
-    align-items: start;
   }
+}
 
-  .easy-add-item__image {
-    width: 95px;
-    height: 95px;
-  }
-
-  .easy-add-item__image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .easy-add-item__info {
-    gap: 1.2rem;
-  }
-
-  .easy-add-item__title {
-    font-size: 1.8rem;
-    line-height: 1.1;
-  }
-
-  .easy-add-item__price .price {
-    font-size: 2rem;
-  }
-
-  .easy-add-item__button {
-    width: 207px;
-    height: 44px;
-    font-size: 1.2rem !important;
-  }
-
-  /* Show arrow on mobile */
-  .easy-add-item__arrow {
-    display: flex !important;
-    align-items: flex-start;
-    justify-content: center;
-  }
-
-  .easy-add-item__arrow-link {
-    width: 20px;
-    height: 20px;
-  }
-
-  .easy-add-item__arrow-link svg {
-    width: 16px;
-    height: 16px;
+@media screen and (min-width: 750px) {
+  .easy-add-carousel__track {
+    gap: 2rem;
   }
 }
