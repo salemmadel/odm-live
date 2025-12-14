@@ -151,7 +151,7 @@
   background-color: #2d5c2e !important;
   color: #ffffff !important;
   border: none !important;
-  padding: 1.2rem 2rem !important;
+  padding: 0 !important;
   font-family: 'GT Pressura Bold', sans-serif !important;
   font-size: 1.1rem !important;
   font-weight: 700 !important;
@@ -159,7 +159,11 @@
   text-transform: uppercase !important;
   cursor: pointer !important;
   transition: background-color 0.3s ease !important;
-  width: 100%;
+  width: 207px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .easy-add-item__button:hover {
@@ -171,13 +175,6 @@
   cursor: not-allowed !important;
 }
 
-@media screen and (min-width: 750px) {
-  .easy-add-item__button {
-    padding: 1.4rem 2.5rem !important;
-    font-size: 1.2rem !important;
-  }
-}
-
 /* Arrow Link */
 .easy-add-item__arrow {
   display: none;
@@ -186,7 +183,7 @@
 @media screen and (min-width: 990px) {
   .easy-add-item__arrow {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
   }
 }
@@ -195,16 +192,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
-  background-color: #000000;
-  color: #ffffff;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  color: #000000;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .easy-add-item__arrow-link:hover {
-  background-color: #333333;
+  opacity: 0.7;
+}
+
+.easy-add-item__arrow-link svg {
+  width: 20px;
+  height: 20px;
 }
 
 /* Carousel Controls */
@@ -266,7 +268,7 @@
   }
 
   .easy-add-item {
-    grid-template-columns: 110px 1fr 50px;
+    grid-template-columns: 110px 1fr 20px;
     gap: 1rem;
     padding: 0;
     align-items: start;
@@ -297,9 +299,9 @@
   }
 
   .easy-add-item__button {
-    padding: 1.2rem 1.5rem !important;
+    width: 207px;
+    height: 44px;
     font-size: 1rem !important;
-    font-weight: 700 !important;
   }
 
   /* Show arrow on mobile */
@@ -307,12 +309,11 @@
     display: flex !important;
     align-items: flex-start;
     justify-content: center;
-    padding-top: 0.5rem;
   }
 
   .easy-add-item__arrow-link {
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
   }
 
   .easy-add-item__arrow-link svg {
@@ -328,7 +329,7 @@
   }
 
   .easy-add-item {
-    grid-template-columns: 150px 1fr 60px;
+    grid-template-columns: 150px 1fr 20px;
     gap: 1.5rem;
     padding: 0;
     align-items: start;
@@ -359,9 +360,9 @@
   }
 
   .easy-add-item__button {
-    padding: 1.6rem 2rem !important;
+    width: 207px;
+    height: 44px;
     font-size: 1.2rem !important;
-    font-weight: 700 !important;
   }
 
   /* Show arrow on mobile */
@@ -369,11 +370,15 @@
     display: flex !important;
     align-items: flex-start;
     justify-content: center;
-    padding-top: 0.5rem;
   }
 
   .easy-add-item__arrow-link {
-    width: 60px;
-    height: 60px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .easy-add-item__arrow-link svg {
+    width: 20px;
+    height: 20px;
   }
 }
