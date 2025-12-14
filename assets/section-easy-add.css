@@ -259,24 +259,59 @@
   cursor: not-allowed;
 }
 
-/* Hide scrollbar on mobile but keep functionality */
+/* Mobile-specific adjustments */
 @media screen and (max-width: 749px) {
   .easy-add-carousel__track {
     gap: 1rem;
   }
 
   .easy-add-item {
-    grid-template-columns: 100px 1fr;
-    gap: 1rem;
-    padding: 1rem;
+    grid-template-columns: 150px 1fr 60px;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    align-items: start;
+  }
+
+  .easy-add-item__image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .easy-add-item__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .easy-add-item__info {
+    gap: 1.2rem;
   }
 
   .easy-add-item__title {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
+    line-height: 1.1;
+  }
+
+  .easy-add-item__price .price {
+    font-size: 2rem;
   }
 
   .easy-add-item__button {
-    padding: 1rem 1.5rem !important;
-    font-size: 1rem !important;
+    padding: 1.6rem 2rem !important;
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+  }
+
+  /* Show arrow on mobile */
+  .easy-add-item__arrow {
+    display: flex !important;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 0.5rem;
+  }
+
+  .easy-add-item__arrow-link {
+    width: 60px;
+    height: 60px;
   }
 }
