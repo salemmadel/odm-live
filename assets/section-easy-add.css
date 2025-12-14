@@ -67,16 +67,16 @@
   grid-template-columns: 120px 1fr auto;
   gap: 1.5rem;
   align-items: center;
-  padding: 1.5rem;
-  background: #ffffff;
-  border: 1px solid #e5e5e5;
+  padding: 0;
+  background: transparent;
+  border: none;
 }
 
 @media screen and (min-width: 750px) {
   .easy-add-item {
     grid-template-columns: 150px 1fr auto;
     gap: 2rem;
-    padding: 2rem;
+    padding: 0;
   }
 }
 
@@ -268,7 +268,7 @@
   .easy-add-item {
     grid-template-columns: 110px 1fr 50px;
     gap: 1rem;
-    padding: 1rem;
+    padding: 0;
     align-items: start;
   }
 
@@ -330,7 +330,7 @@
   .easy-add-item {
     grid-template-columns: 150px 1fr 60px;
     gap: 1.5rem;
-    padding: 1.5rem;
+    padding: 0;
     align-items: start;
   }
 
