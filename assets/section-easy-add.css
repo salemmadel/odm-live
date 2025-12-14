@@ -64,7 +64,7 @@
 /* Easy Add Item - Mobile Layout (Image Left, Info Right) */
 .easy-add-item {
   display: grid;
-  grid-template-columns: 120px 1fr auto;
+  grid-template-columns: 95px 1fr auto;
   gap: 1.5rem;
   align-items: center;
   padding: 0;
@@ -74,7 +74,7 @@
 
 @media screen and (min-width: 750px) {
   .easy-add-item {
-    grid-template-columns: 150px 1fr auto;
+    grid-template-columns: 95px 1fr auto;
     gap: 2rem;
     padding: 0;
   }
@@ -82,12 +82,13 @@
 
 /* Product Image */
 .easy-add-item__image {
-  width: 100%;
+  width: 95px;
+  height: 95px;
 }
 
 .easy-add-item__image img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   object-fit: cover;
 }
@@ -268,15 +269,15 @@
   }
 
   .easy-add-item {
-    grid-template-columns: 110px 1fr 20px;
+    grid-template-columns: 95px 1fr 20px;
     gap: 1rem;
     padding: 0;
     align-items: start;
   }
 
   .easy-add-item__image {
-    width: 110px;
-    height: 110px;
+    width: 95px;
+    height: 95px;
   }
 
   .easy-add-item__image img {
@@ -329,15 +330,15 @@
   }
 
   .easy-add-item {
-    grid-template-columns: 150px 1fr 20px;
+    grid-template-columns: 95px 1fr 20px;
     gap: 1.5rem;
     padding: 0;
     align-items: start;
   }
 
   .easy-add-item__image {
-    width: 150px;
-    height: 150px;
+    width: 95px;
+    height: 95px;
   }
 
   .easy-add-item__image img {
