@@ -194,19 +194,19 @@
   justify-content: center;
   width: 20px;
   height: 20px;
-  background-color: transparent;
-  color: #000000;
+  background-color: #000000;
+  color: #ffffff;
   text-decoration: none;
-  transition: opacity 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .easy-add-item__arrow-link:hover {
-  opacity: 0.7;
+  background-color: #333333;
 }
 
 .easy-add-item__arrow-link svg {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
 }
 
 /* Carousel Controls */
@@ -317,8 +317,8 @@
   }
 
   .easy-add-item__arrow-link svg {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
   }
 }
 
@@ -378,7 +378,7 @@
   }
 
   .easy-add-item__arrow-link svg {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
   }
 }
