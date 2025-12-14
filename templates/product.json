@@ -192,14 +192,21 @@
     "product_easy_add_GjWdcD": {
       "type": "product-easy-add",
       "blocks": {
+        "product_C7Mkmk": {
+          "type": "product",
+          "settings": {
+            "product": "test-product-copy"
+          }
+        },
         "product_YwTw77": {
           "type": "product",
           "settings": {
-            "product": ""
+            "product": "test-product"
           }
         }
       },
       "block_order": [
+        "product_C7Mkmk",
         "product_YwTw77"
       ],
       "name": "Easy Add Product",
