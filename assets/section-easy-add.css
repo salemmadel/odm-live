@@ -64,7 +64,7 @@
 /* Easy Add Item - Base Mobile Layout (320px+) */
 .easy-add-item {
   display: grid;
-  grid-template-columns: 104px 1fr 25px;
+  grid-template-columns: 104px 1fr 30px;
   gap: 0.8rem;
   align-items: stretch;
   padding: 0;
@@ -88,7 +88,7 @@
 /* 375px+ - Small Mobile */
 @media screen and (min-width: 375px) {
   .easy-add-item {
-    grid-template-columns: 104px 1fr 28px;
+    grid-template-columns: 104px 1fr 33px;
     gap: 1rem;
   }
 
@@ -101,7 +101,7 @@
 /* 480px+ - Standard Mobile */
 @media screen and (min-width: 480px) {
   .easy-add-item {
-    grid-template-columns: 104px 1fr 30px;
+    grid-template-columns: 104px 1fr 36px;
     gap: 1.2rem;
   }
 
@@ -114,7 +114,7 @@
 /* 750px+ - Tablet */
 @media screen and (min-width: 750px) {
   .easy-add-item {
-    grid-template-columns: 104px 1fr 33px;
+    grid-template-columns: 104px 1fr 40px;
     gap: 1.5rem;
   }
 
@@ -127,7 +127,7 @@
 /* 990px+ - Desktop */
 @media screen and (min-width: 990px) {
   .easy-add-item {
-    grid-template-columns: 104px 1fr 35px;
+    grid-template-columns: 104px 1fr 44px;
     gap: 2rem;
   }
 
@@ -249,8 +249,8 @@
   text-transform: uppercase !important;
   cursor: pointer !important;
   transition: background-color 0.3s ease !important;
-  width: calc(100% + 0.8rem + 25px);
-  margin-right: calc(-0.8rem - 25px);
+  width: calc(100% + 0.8rem + 30px);
+  margin-right: calc(-0.8rem - 30px);
   height: 20px;
   display: flex;
   align-items: center;
@@ -269,8 +269,8 @@
 /* 375px+ - Slightly larger button */
 @media screen and (min-width: 375px) {
   .easy-add-item__button {
-    width: calc(100% + 1rem + 28px);
-    margin-right: calc(-1rem - 28px);
+    width: calc(100% + 1rem + 33px);
+    margin-right: calc(-1rem - 33px);
     height: 40px;
     font-size: 0.95rem !important;
   }
@@ -279,8 +279,8 @@
 /* 480px+ - Standard button size */
 @media screen and (min-width: 480px) {
   .easy-add-item__button {
-    width: calc(100% + 1.2rem + 30px);
-    margin-right: calc(-1.2rem - 30px);
+    width: calc(100% + 1.2rem + 36px);
+    margin-right: calc(-1.2rem - 36px);
     height: 44px;
     font-size: 1rem !important;
     letter-spacing: 0.1rem !important;
@@ -290,8 +290,8 @@
 /* 750px+ - Larger button */
 @media screen and (min-width: 750px) {
   .easy-add-item__button {
-    width: calc(100% + 1.5rem + 33px);
-    margin-right: calc(-1.5rem - 33px);
+    width: calc(100% + 1.5rem + 40px);
+    margin-right: calc(-1.5rem - 40px);
     font-size: 1.1rem !important;
   }
 }
@@ -299,8 +299,8 @@
 /* 990px+ - Desktop button */
 @media screen and (min-width: 990px) {
   .easy-add-item__button {
-    width: calc(100% + 2rem + 35px);
-    margin-right: calc(-2rem - 35px);
+    width: calc(100% + 2rem + 44px);
+    margin-right: calc(-2rem - 44px);
   }
 }
 
@@ -315,8 +315,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   background-color: #000000;
   color: #ffffff;
   text-decoration: none;
@@ -328,38 +328,12 @@
 }
 
 .easy-add-item__arrow-link svg {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
 }
 
 /* 375px+ - Scale arrow */
 @media screen and (min-width: 375px) {
-  .easy-add-item__arrow-link {
-    width: 28px;
-    height: 28px;
-  }
-
-  .easy-add-item__arrow-link svg {
-    width: 18px;
-    height: 18px;
-  }
-}
-
-/* 480px+ - Standard arrow size */
-@media screen and (min-width: 480px) {
-  .easy-add-item__arrow-link {
-    width: 30px;
-    height: 30px;
-  }
-
-  .easy-add-item__arrow-link svg {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-/* 750px+ - Larger arrow */
-@media screen and (min-width: 750px) {
   .easy-add-item__arrow-link {
     width: 33px;
     height: 33px;
@@ -371,16 +345,42 @@
   }
 }
 
-/* 990px+ - Desktop arrow */
-@media screen and (min-width: 990px) {
+/* 480px+ - Standard arrow size */
+@media screen and (min-width: 480px) {
   .easy-add-item__arrow-link {
-    width: 35px;
-    height: 35px;
+    width: 36px;
+    height: 36px;
   }
 
   .easy-add-item__arrow-link svg {
     width: 24px;
     height: 24px;
+  }
+}
+
+/* 750px+ - Larger arrow */
+@media screen and (min-width: 750px) {
+  .easy-add-item__arrow-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .easy-add-item__arrow-link svg {
+    width: 27px;
+    height: 27px;
+  }
+}
+
+/* 990px+ - Desktop arrow */
+@media screen and (min-width: 990px) {
+  .easy-add-item__arrow-link {
+    width: 44px;
+    height: 44px;
+  }
+
+  .easy-add-item__arrow-link svg {
+    width: 30px;
+    height: 30px;
   }
 }
 
