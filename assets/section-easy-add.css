@@ -6,7 +6,7 @@
 
 .easy-add-section__heading {
   font-family: 'GT Pressura Bold', sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
@@ -15,188 +15,268 @@
   border-bottom: 2px solid #000000;
 }
 
-.easy-add-section__container {
-  display: grid;
-  grid-template-columns: 1fr;
+@media screen and (min-width: 750px) {
+  .easy-add-section__heading {
+    font-size: 1.4rem;
+  }
+}
+
+/* Carousel */
+.easy-add-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.easy-add-carousel__track {
+  display: flex;
   gap: 2rem;
-  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.easy-add-carousel__track::-webkit-scrollbar {
+  display: none;
+}
+
+.easy-add-carousel__slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
 }
 
 @media screen and (min-width: 750px) {
-  .easy-add-section__container {
-    grid-template-columns: auto 1fr;
-    gap: 3rem;
+  .easy-add-carousel__slide {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .easy-add-carousel__slide {
+    flex: 0 0 calc(33.333% - 1.333rem);
+  }
+}
+
+/* Easy Add Item - Mobile Layout (Image Left, Info Right) */
+.easy-add-item {
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+}
+
+@media screen and (min-width: 750px) {
+  .easy-add-item {
+    grid-template-columns: 150px 1fr auto;
+    gap: 2rem;
+    padding: 2rem;
   }
 }
 
 /* Product Image */
-.easy-add-section__image {
+.easy-add-item__image {
   width: 100%;
-  max-width: 400px;
 }
 
-@media screen and (min-width: 750px) {
-  .easy-add-section__image {
-    max-width: 350px;
-  }
-}
-
-.easy-add-section__image img {
+.easy-add-item__image img {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
 }
 
 /* Product Info */
-.easy-add-section__info {
+.easy-add-item__info {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.easy-add-section__details {
-  flex: 1;
-}
-
-.easy-add-section__title {
+.easy-add-item__title {
   font-family: 'GT Pressura Bold', sans-serif;
-  font-size: 2.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  margin: 0 0 1.5rem 0;
+  margin: 0;
   line-height: 1.2;
 }
 
-.easy-add-section__title a {
+.easy-add-item__title a {
   color: #000000;
   text-decoration: none;
 }
 
-.easy-add-section__title a:hover {
+.easy-add-item__title a:hover {
   text-decoration: underline;
 }
 
 @media screen and (min-width: 750px) {
-  .easy-add-section__title {
-    font-size: 3.2rem;
+  .easy-add-item__title {
+    font-size: 2rem;
   }
 }
 
 /* Price */
-.easy-add-section__price {
-  margin-bottom: 2rem;
+.easy-add-item__price {
+  margin: 0;
 }
 
-.easy-add-section__price .price {
+.easy-add-item__price .price {
   font-family: 'GT Pressura Mono', monospace;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   letter-spacing: 0.05rem;
 }
 
 @media screen and (min-width: 750px) {
-  .easy-add-section__price .price {
-    font-size: 2.4rem;
+  .easy-add-item__price .price {
+    font-size: 2rem;
   }
 }
 
-/* Description */
-.easy-add-section__description {
-  font-size: 1.4rem;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-  color: #333333;
-}
-
 /* Add to Cart Button */
-.easy-add-section__form {
-  margin-bottom: 0;
+.easy-add-item__form {
+  margin: 0;
 }
 
-.easy-add-section__button {
+.easy-add-item__button {
   background-color: #2d5c2e !important;
   color: #ffffff !important;
   border: none !important;
-  padding: 1.6rem 4rem !important;
+  padding: 1.2rem 2rem !important;
   font-family: 'GT Pressura Bold', sans-serif !important;
-  font-size: 1.4rem !important;
+  font-size: 1.1rem !important;
   font-weight: 700 !important;
   letter-spacing: 0.1rem !important;
   text-transform: uppercase !important;
   cursor: pointer !important;
   transition: background-color 0.3s ease !important;
   width: 100%;
-  max-width: 400px;
 }
 
-.easy-add-section__button:hover {
+.easy-add-item__button:hover {
   background-color: #234a23 !important;
 }
 
-.easy-add-section__button:disabled {
+.easy-add-item__button:disabled {
   background-color: #cccccc !important;
   cursor: not-allowed !important;
 }
 
 @media screen and (min-width: 750px) {
-  .easy-add-section__button {
-    width: auto;
-    min-width: 300px;
+  .easy-add-item__button {
+    padding: 1.4rem 2.5rem !important;
+    font-size: 1.2rem !important;
   }
 }
 
-/* Arrow Button */
-.easy-add-section__arrow {
-  flex-shrink: 0;
+/* Arrow Link */
+.easy-add-item__arrow {
   display: none;
 }
 
-@media screen and (min-width: 750px) {
-  .easy-add-section__arrow {
-    display: block;
+@media screen and (min-width: 990px) {
+  .easy-add-item__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
-.easy-add-section__arrow-button {
+.easy-add-item__arrow-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   background-color: #000000;
   color: #ffffff;
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
 
-.easy-add-section__arrow-button:hover {
+.easy-add-item__arrow-link:hover {
   background-color: #333333;
 }
 
-.easy-add-section__arrow-button svg {
-  width: 24px;
-  height: 24px;
+/* Carousel Controls */
+.easy-add-carousel__controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
-/* Mobile Adjustments */
+@media screen and (min-width: 990px) {
+  .easy-add-carousel__controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    justify-content: space-between;
+    margin-top: 0;
+    padding: 0 1rem;
+    pointer-events: none;
+  }
+}
+
+.easy-add-carousel__button {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  pointer-events: all;
+}
+
+.easy-add-carousel__button:hover {
+  background-color: #333333;
+}
+
+@media screen and (min-width: 990px) {
+  .easy-add-carousel__button {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.easy-add-carousel__button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Hide scrollbar on mobile but keep functionality */
 @media screen and (max-width: 749px) {
-  .easy-add-section__heading {
-    font-size: 1.2rem;
+  .easy-add-carousel__track {
+    gap: 1rem;
   }
 
-  .easy-add-section__container {
-    gap: 1.5rem;
+  .easy-add-item {
+    grid-template-columns: 100px 1fr;
+    gap: 1rem;
+    padding: 1rem;
   }
 
-  .easy-add-section__info {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
+  .easy-add-item__title {
+    font-size: 1.4rem;
   }
 
-  .easy-add-section__image {
-    margin: 0 auto;
+  .easy-add-item__button {
+    padding: 1rem 1.5rem !important;
+    font-size: 1rem !important;
   }
 }
