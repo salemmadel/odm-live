@@ -19,10 +19,6 @@ customElements.define('recipient-form',
       if (this.offsetProperty) this.offsetProperty.value = new Date().getTimezoneOffset().toString();
       this.currentProductVariantId = this.dataset.productVariantId;
       this.addEventListener('change', this.onChange.bind(this));
-
-      document.addEventListener("cart:rendered", (event) => {
-        console.log('rf', event);
-      });
     }
 
     onChange() {

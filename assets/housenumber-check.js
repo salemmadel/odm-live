@@ -1,5 +1,7 @@
-$(document).on("page:load page:change", function () {
-  if (Shopify.Checkout.step == 'contact_information') {
+// Check if jQuery and Shopify are available
+if (typeof $ !== 'undefined' && typeof Shopify !== 'undefined') {
+  $(document).on("page:load page:change", function () {
+    if (Shopify.Checkout.step == 'contact_information') {
 
     $('body').prepend(`
                     <div class="address-tabs" style="display:none">
@@ -39,8 +41,6 @@ $(document).on("page:load page:change", function () {
 
     var address_val = $('#checkout_shipping_address_address1').val();
     address_val = address_val.split(/(\d+)/);
-
-    console.log(`Hausnummer Race Check #1`)
 
     $('#checkout_shipping_address_address1_street').val(address_val[0]);
     var c = 0;
@@ -239,8 +239,6 @@ $(document).ready(function () {
 
 window.onload = function () {
 
-  console.log(`Hausnummer Race Check #2`)
-
   var button = document.getElementById('continue_button');
   var input = document.getElementById('checkout_shipping_address_house-number');
   var street = document.getElementById('checkout_shipping_address_address1');
@@ -283,4 +281,5 @@ window.onload = function () {
     }
 
   });
+}
 }

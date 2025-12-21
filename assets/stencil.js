@@ -14,7 +14,7 @@
   \****************************/
 /***/ (() => {
 
-eval("console.log('hello from stencil.js'); \n\n//# sourceURL=webpack://theme-template/./.src/js/stencil.js?");
+eval("\n\n//# sourceURL=webpack://theme-template/./.src/js/stencil.js?");
 
 /***/ })
 
