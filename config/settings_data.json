@@ -1,1 +1,761 @@
-{"current":{"colors_solid_button_labels":"#ffffff","colors_accent_1":"#000000","gradient_accent_1":"","colors_accent_2":"#efeae4","gradient_accent_2":"","colors_text":"#000000","colors_outline_button_labels":"#000000","colors_background_1":"#ffffff","gradient_background_1":"","colors_background_2":"#efeae4","gradient_background_2":"","heading_scale":100,"body_scale":100,"page_width":1200,"spacing_sections":0,"spacing_grid_horizontal":8,"spacing_grid_vertical":8,"buttons_border_thickness":1,"buttons_border_opacity":100,"buttons_radius":0,"buttons_shadow_opacity":0,"buttons_shadow_horizontal_offset":0,"buttons_shadow_vertical_offset":4,"buttons_shadow_blur":5,"variant_pills_border_thickness":1,"variant_pills_border_opacity":55,"variant_pills_radius":40,"variant_pills_shadow_opacity":0,"variant_pills_shadow_horizontal_offset":0,"variant_pills_shadow_vertical_offset":4,"variant_pills_shadow_blur":5,"inputs_border_thickness":1,"inputs_border_opacity":55,"inputs_radius":0,"inputs_shadow_opacity":0,"inputs_shadow_horizontal_offset":0,"inputs_shadow_vertical_offset":4,"inputs_shadow_blur":5,"card_style":"standard","card_image_padding":0,"card_text_alignment":"left","card_color_scheme":"background-2","card_border_thickness":0,"card_border_opacity":10,"card_corner_radius":0,"card_shadow_opacity":0,"card_shadow_horizontal_offset":0,"card_shadow_vertical_offset":4,"card_shadow_blur":5,"text_boxes_border_thickness":0,"text_boxes_border_opacity":10,"text_boxes_radius":0,"text_boxes_shadow_opacity":0,"text_boxes_shadow_horizontal_offset":0,"text_boxes_shadow_vertical_offset":4,"text_boxes_shadow_blur":5,"media_border_thickness":0,"media_border_opacity":5,"media_radius":0,"media_shadow_opacity":0,"media_shadow_horizontal_offset":0,"media_shadow_vertical_offset":4,"media_shadow_blur":5,"popup_border_thickness":1,"popup_border_opacity":10,"popup_corner_radius":0,"popup_shadow_opacity":0,"popup_shadow_horizontal_offset":0,"popup_shadow_vertical_offset":4,"popup_shadow_blur":5,"drawer_border_thickness":1,"drawer_border_opacity":10,"drawer_shadow_opacity":0,"drawer_shadow_horizontal_offset":0,"drawer_shadow_vertical_offset":4,"drawer_shadow_blur":5,"badge_position":"bottom left","badge_corner_radius":40,"sale_badge_color_scheme":"accent-green","sold_out_badge_color_scheme":"background-1","show_summer_badges":false,"show_winter_badges":true,"accent_icons":"text","social_twitter_link":"","social_facebook_link":"https:\/\/www.facebook.com\/ODonnellMoonshine","social_pinterest_link":"","social_instagram_link":"https:\/\/www.instagram.com\/odonnellmoonshine","social_tiktok_link":"https:\/\/www.tiktok.com\/@odonnellmoonshine","social_tumblr_link":"","social_snapchat_link":"","social_youtube_link":"","social_vimeo_link":"","predictive_search_enabled":true,"predictive_search_show_vendor":false,"predictive_search_show_price":false,"favicon":"shopify:\/\/shop_images\/favicon.png","currency_code_enabled":false,"min_value_for_free_shipping":75,"cart_infotext":"<p>Rabattcodes können nur an der Kasse eingelöst werden und gelten nicht in Verbindung mit anderen Angeboten.<\/p>","klaviyo_id":"UBtnhm","klaviyo_bis_enabled":false,"klaviyo_bis_product_page_text":"Benachrichtigt mich, sobald verfügbar","klaviyo_bis_body_content":"Registriere dich für eine Benachrichtigung, sobald das Produkt wieder erhältlich ist.","klaviyo_bis_button_label":"Benachrichtigt mich, sobald verfügbar","klaviyo_bis_subscription_success_label":"Erledigt! Wir lassen dich wissen, wenn es wieder da ist.","google_tag":"GTM-N2TN955","klar_tag":"","clarity_tag":"o4jtd9gjyw","cookiebot":"","is_gang":false,"gang_double_proof":false,"yotpo_key":"bQDcQaEKZ14rrLm0C7WKPSJoZ1sP8Q3RirvNnd14e","yotpo_scripts":"","is_german":true,"omniconvert_id":"","enable_wishlist":false,"wishlist_exclude":"'11638357754124','11638367486220','11638459072780','11638707519756','6588059517059', '4498300141699', '4498300043395', '6657007779971', '8628688683276','5103589752963', '9716669743372', '5117440524419', '8791071490316', '7972135239948', '5037724532867', '4498302861443', '11516239511820'","sold_out_striked_through":true,"shipping_time":"Versand in 1 bis 2 Werktagen","checkout_logo_image":"shopify:\/\/shop_images\/odonnell_39dc53ee-2a9e-4dc0-b770-2a08b66df973.png","checkout_logo_position":"center","checkout_body_background_color":"#ffffff","checkout_accent_color":"#000000","checkout_button_color":"#212121","checkout_error_color":"#e32c2b","type_header_font":"work_sans_n6","type_body_font":"work_sans_n4","sections":{"announcement-bar":{"type":"announcement-bar","blocks":{"announcement_TALXFx":{"type":"announcement","disabled":true,"settings":{"text":"UNSERE B-WARE DEALS: -25% sparen!","html_content":"","color_scheme":"accent-1","link":"shopify:\/\/pages\/b-ware"}},"announcement_keRjMN":{"type":"announcement","settings":{"text":"Highlight: Gratis Nuss-Creme ab 59.9€","html_content":"","color_scheme":"accent-1","link":"shopify:\/\/pages\/xmas-deals"}},"announcement_jkMa7b":{"type":"announcement","settings":{"text":"Likör-Geschenke finden!","html_content":"","color_scheme":"accent-1","link":"shopify:\/\/pages\/xmas-geschenke"}},"announcement_cFBFLi":{"type":"announcement","disabled":true,"settings":{"text":"Golden Mango - endlich verfügbar!","html_content":"","color_scheme":"accent-1","link":"shopify:\/\/pages\/mango-community-edition"}},"c679d9d1-2112-4fa2-92a9-6d71db273fba":{"type":"announcement","disabled":true,"settings":{"text":"Bewertung","html_content":"5 \/ 5 ☆ basierend auf über\n60.000 Bewertungen!","color_scheme":"accent-1","link":"shopify:\/\/pages\/bewertungen"}},"announcement_Hr9JPh":{"type":"announcement","disabled":true,"settings":{"text":"Gratis dazu: Sweet & Spicy BBQ-Sauce beim Kauf von drei 700ml Gläsern!","html_content":"","color_scheme":"accent-1","link":"shopify:\/\/products\/bbq-saucen"}},"announcement_MFbwM7":{"type":"announcement","disabled":true,"settings":{"text":"FRUCHTALARM! 3 MAL PURER GENUSS IM BUNDLE.","html_content":"","color_scheme":"accent-1","link":"https:\/\/odonnell.de\/products\/frucht-kick-bundle"}},"announcement_hMGdmQ":{"type":"announcement","disabled":true,"settings":{"text":"Schon vor Ostern etwas Süßes finden: Likör im Körbchen Bundle!","html_content":"","color_scheme":"accent-1","link":"https:\/\/odonnell.de\/products\/moonshine-oster-bundle"}},"fbb71999-5088-4d54-a060-860f766f3b26":{"type":"announcement","disabled":true,"settings":{"text":"Werde jetzt Gang-Member und sichere dir viele Vorteile!","html_content":"","color_scheme":"accent-1","link":"shopify:\/\/pages\/gang"}}},"block_order":["announcement_TALXFx","announcement_keRjMN","announcement_jkMa7b","announcement_cFBFLi","c679d9d1-2112-4fa2-92a9-6d71db273fba","announcement_Hr9JPh","announcement_MFbwM7","announcement_hMGdmQ","fbb71999-5088-4d54-a060-860f766f3b26"],"custom_css":[".announcement-bar__link .icon-arrow {display: none;}"],"settings":{"autoplay_stop_on_interaction":true,"slider_speed":5000,"apply_special_colors":true,"background_color_special":"#000000","heading_color_special":"#ffffff"}},"header":{"type":"header","custom_css":[".menu-drawer .list-social {margin-top: 0;}",".header {padding-top: 0; padding-bottom: 0;}",".header__heading-link {padding: 0px;}"],"settings":{"color_scheme":"background-1","logo":"shopify:\/\/shop_images\/Complete_Logo_256x256_crop_center_c6149a90-9b9a-4a47-b832-c89d4ae7a0a2.svg","use_christmas_logo":true,"use_christmas_gift_icon":"Geschenke","logo_width":120,"logo_position":"middle-center","menu":"navigation","menu_mobile_shop":"eshop-guide-test-men","menu_type_desktop":"mega","mobile_menu_enabled":true,"show_line_separator":true,"enable_sticky_header":true,"badge_background_color":"#0e6000","badge_color":"#ffffff","margin_bottom":0,"hide_mobile_category_images":true,"banner_link":"shopify:\/\/collections\/whiskey","banner_title":""}},"footer":{"type":"footer","blocks":{"footer-2":{"type":"text","settings":{"heading":"Kontakt","subtext":"<p>Hast du eine <a href=\"\/pages\/help\" title=\"Hilfe\">Frage<\/a>? Unser <a href=\"\/pages\/help\" title=\"Hilfe\">Support-Team<\/a> hilft Dir.<\/p>"}},"footer-0":{"type":"link_list","settings":{"heading":"O'Donnell Moonshine","menu":"footer-menu-2"}},"footer-1":{"type":"link_list","settings":{"heading":"Information","menu":"footer"}},"6c239383-447f-45a3-add2-6024073662e4":{"type":"link_list","settings":{"heading":"Allgemein","menu":"footer-menu-3-rechtliches"}}},"block_order":["footer-2","footer-0","footer-1","6c239383-447f-45a3-add2-6024073662e4"],"custom_css":[],"settings":{"is_above_the_fold":false,"show_copyright":true,"color_scheme":"accent-1","newsletter_enable":true,"custom_liquid":"<div class=\"klaviyo-form-SrEF6S\"><\/div>","newsletter_ln":"Eine Abmeldung ist jederzeit möglich. Mehr Infos <a href=\"https:\/\/odonnell.de\/policies\/privacy-policy\">HIER<\/a>","custom_newsletter_tags":"","newsletter_heading":"Spare 10% mit unserem Newsletter!","show_social":true,"enable_country_selector":false,"enable_language_selector":false,"payment_enable":true,"margin_top":0,"padding_top":24,"padding_bottom":24}},"main-password-header":{"type":"main-password-header","settings":{"logo_max_width":100,"color_scheme":"background-1"}},"main-password-footer":{"type":"main-password-footer","settings":{"color_scheme":"background-1"}},"cart-notification":{"type":"cart-notification","blocks":{"upsell_products_mVd4kT":{"type":"upsell_products","settings":{"product":"mini-sets-kleine-likoere"}},"upsell_products_tRXeFA":{"type":"upsell_products","settings":{"product":"tasting-set"}},"upsell_products_aY997b":{"type":"upsell_products","settings":{"product":"ausgiesser"}},"free_products_qKCJfc":{"type":"free_products","disabled":true,"settings":{"value":4990,"product":"set-mini-moonshine-jars","gang_only":false}}},"block_order":["upsell_products_mVd4kT","upsell_products_tRXeFA","upsell_products_aY997b","free_products_qKCJfc"],"settings":{"color_scheme":"background-1","delivery_costs":"","show_vendor":false,"padding_top":72,"padding_bottom":36}},"newsletter-popup":{"type":"newsletter-popup","blocks":{"89cebe8d-9edc-4bff-9b5e-a1c731bd94f1":{"type":"benefits","settings":{"title":"10% Rabatt auf deine nächste Bestellung","image":"shopify:\/\/shop_images\/red-discount_b8c76534-cc83-4fd7-88ee-47018d038e67.png"}},"e1222767-4dfb-4ee5-8490-fb12ab7057cb":{"type":"benefits","settings":{"title":"Verpasse keine Sorte","image":"shopify:\/\/shop_images\/glas-newsletter_b80ab12f-99c2-4d72-aeef-56f04aa3a925.png"}},"c2641532-76d3-4b9f-a5d5-7342086f4a90":{"type":"benefits","settings":{"title":"Profitiere von exklusiven Aktionen","image":"shopify:\/\/shop_images\/red-star_8c855beb-ca39-4dc9-aa0c-957e40069648.png"}},"custom_liquid_KqRAeg":{"type":"custom_liquid","settings":{"custom_liquid":"<div class=\"klaviyo-form-RLWCZJ\"><\/div>"}}},"block_order":["89cebe8d-9edc-4bff-9b5e-a1c731bd94f1","e1222767-4dfb-4ee5-8490-fb12ab7057cb","c2641532-76d3-4b9f-a5d5-7342086f4a90","custom_liquid_KqRAeg"],"settings":{"enable_popup":false,"image_mobile":"shopify:\/\/shop_images\/handschrift-mobil.png","image_bg_desktop":"shopify:\/\/shop_images\/paper-desktop_e88f3212-0e56-440f-a62a-c57f3d5a5c62.png","image_bg_mobile":"shopify:\/\/shop_images\/paper-mobile_e00d47a2-6614-4604-bb0e-2f215abf0304.png","newsletter_legal_notice":"Ich habe die Hinweise zum Umgang mit personenbezogenen Daten zur Kenntnis genommen. Ein Widerruf bzw. eine Abmeldung des Newsletter-Abonnements ist jederzeit über einen Link im Newsletter oder über eine Nachricht an info@odonnell.de möglich.","newsletter_shortcut":"10% Rabatt"}},"app-optimization":{"type":"app-optimization","blocks":{"2f69b676-3a32-4dbd-96f7-34ba288fc565":{"type":"app","settings":{"title":"","url":"","block_index":false,"block_product":false,"block_collection":false,"block_page":false,"block_blog":false,"block_article":false,"block_cart":false,"block_search":false,"block_customers":false,"block_gift_card":false,"scroll_index":false,"scroll_product":false,"scroll_collection":false,"scroll_page":false,"scroll_blog":false,"scroll_article":false,"scroll_cart":false,"scroll_search":false,"scroll_customers":false,"scroll_gift_card":false,"interaction_index":false,"interaction_product":false,"interaction_collection":false,"interaction_page":false,"interaction_blog":false,"interaction_article":false,"interaction_cart":false,"interaction_search":false,"interaction_customers":false,"interaction_gift_card":false,"interaction_selectors_1":"","interaction_event_1":"click","interaction_selectors_2":"","interaction_event_2":"click"}}},"block_order":["2f69b676-3a32-4dbd-96f7-34ba288fc565"],"settings":{"enable":true,"debug_enable":false}},"main-register":{"type":"main-register","settings":{"padding_top":36,"padding_bottom":36}},"main-login":{"type":"main-login","settings":{"padding_top":36,"padding_bottom":36}},"usps":{"type":"usps","blocks":{"usp_fgMr3A":{"type":"usp","disabled":true,"settings":{"icon":"shopify:\/\/shop_images\/BAV-Zuschuss.png","title":"Klarna","content":"Jetzt bestellen, später zahlen","link":"","background_colour":"","override_settings_enabled":false,"code":"<div class='bg-primary text-white p-3'>Your custom code...<\/div>"}},"usp_giU9CP":{"type":"usp","disabled":true,"settings":{"icon":"shopify:\/\/shop_images\/Launch-Sorten.png","title":"Gang","content":"Jetzt bei der Gang anmelden!","link":"https:\/\/odonnell.de\/pages\/gang","background_colour":"","override_settings_enabled":false,"code":"<div class='bg-primary text-white p-3'>Your custom code...<\/div>"}},"usp_wAzPBA":{"type":"usp","disabled":true,"settings":{"icon":"shopify:\/\/shop_images\/red-discount_b8c76534-cc83-4fd7-88ee-47018d038e67.png","title":"Newsletter","content":"Newsletter abonnieren und 10% sparen","link":"shopify:\/\/pages\/landingpage-newsletter","background_colour":"","override_settings_enabled":false,"code":"<div class='bg-primary text-white p-3'>Your custom code...<\/div>"}}},"block_order":["usp_fgMr3A","usp_giU9CP","usp_wAzPBA"],"settings":{"autoplay_stop_on_interaction":false,"slider_speed":3000,"background_colour":"","border_colour":"#e2e2e2","borders_enabled":true,"override_margins_enabled":false,"margins_class":""}}},"content_for_index":[],"blocks":{"855628211100114053":{"type":"shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507","disabled":false,"settings":{}},"8962992520437913685":{"type":"shopify:\/\/apps\/yotpo-loyalty-rewards\/blocks\/loader-app-embed-block\/2f9660df-5018-4e02-9868-ee1fb88d6ccd","disabled":false,"settings":{"inject_modules_loader":true,"inject_sdk_loader":true}},"7570552984445421165":{"type":"shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/settings\/eb7dfd7d-db44-4334-bc49-c893b51b36cf","disabled":false,"settings":{}},"16548475241908962911":{"type":"shopify:\/\/apps\/oxi-social-login\/blocks\/social-login-embed\/24ad60bc-8f09-42fa-807e-e5eda0fdae17","disabled":false,"settings":{"enabled_on_page":"account"}},"1039332699720682334":{"type":"shopify:\/\/apps\/omniconvert-explore\/blocks\/explore_tracking_code\/3ba98ea4-c855-42be-8457-a2f559ecf515","disabled":false,"settings":{"tracking_code_id":"a54bac4"}},"3886181796285292942":{"type":"shopify:\/\/apps\/cowlendar-booking\/blocks\/app-embed\/6d8b8f6a-9b3c-42b8-b2e6-a758c38d45bf","disabled":false,"settings":{}},"14339172867238703359":{"type":"shopify:\/\/apps\/yotpo-product-reviews\/blocks\/reviews_tab\/eb7dfd7d-db44-4334-bc49-c893b51b36cf","disabled":false,"settings":{"product":"adventskalender-1"}},"3140817623390692025":{"type":"shopify:\/\/apps\/na-age-verification\/blocks\/agechecker_y1K8NR3dvv\/15fad4c9-4ba9-4c27-8e6c-1f214a81924f","disabled":false,"settings":{}},"7280966411886983154":{"type":"shopify:\/\/apps\/monk\/blocks\/app-embed\/e949adb6-87ca-4b97-8f31-0e51bf507f2d","disabled":true,"settings":{}}}},"presets":{"Default":{"colors_solid_button_labels":"#ffffff","colors_accent_1":"#121212","gradient_accent_1":"","colors_accent_2":"#334fb4","gradient_accent_2":"","colors_text":"#121212","colors_outline_button_labels":"#121212","colors_background_1":"#ffffff","gradient_background_1":"","colors_background_2":"#f3f3f3","gradient_background_2":"","type_header_font":"assistant_n4","heading_scale":100,"type_body_font":"assistant_n4","body_scale":100,"page_width":1200,"spacing_sections":0,"spacing_grid_horizontal":8,"spacing_grid_vertical":8,"buttons_border_thickness":1,"buttons_border_opacity":100,"buttons_radius":0,"buttons_shadow_opacity":0,"buttons_shadow_horizontal_offset":0,"buttons_shadow_vertical_offset":4,"buttons_shadow_blur":5,"variant_pills_border_thickness":1,"variant_pills_border_opacity":55,"variant_pills_radius":40,"variant_pills_shadow_opacity":0,"variant_pills_shadow_horizontal_offset":0,"variant_pills_shadow_vertical_offset":4,"variant_pills_shadow_blur":5,"inputs_border_thickness":1,"inputs_border_opacity":55,"inputs_radius":0,"inputs_shadow_opacity":0,"inputs_shadow_horizontal_offset":0,"inputs_shadow_vertical_offset":4,"inputs_shadow_blur":5,"card_style":"standard","card_image_padding":0,"card_text_alignment":"left","card_color_scheme":"background-2","card_border_thickness":0,"card_border_opacity":10,"card_corner_radius":0,"card_shadow_opacity":0,"card_shadow_horizontal_offset":0,"card_shadow_vertical_offset":4,"card_shadow_blur":5,"text_boxes_border_thickness":0,"text_boxes_border_opacity":10,"text_boxes_radius":0,"text_boxes_shadow_opacity":0,"text_boxes_shadow_horizontal_offset":0,"text_boxes_shadow_vertical_offset":4,"text_boxes_shadow_blur":5,"media_border_thickness":1,"media_border_opacity":5,"media_radius":0,"media_shadow_opacity":0,"media_shadow_horizontal_offset":0,"media_shadow_vertical_offset":4,"media_shadow_blur":5,"popup_border_thickness":1,"popup_border_opacity":10,"popup_corner_radius":0,"popup_shadow_opacity":0,"popup_shadow_horizontal_offset":0,"popup_shadow_vertical_offset":4,"popup_shadow_blur":5,"drawer_border_thickness":1,"drawer_border_opacity":10,"drawer_shadow_opacity":0,"drawer_shadow_horizontal_offset":0,"drawer_shadow_vertical_offset":4,"drawer_shadow_blur":5,"badge_position":"bottom left","badge_corner_radius":40,"sale_badge_color_scheme":"accent-2","sold_out_badge_color_scheme":"inverse","accent_icons":"text","social_twitter_link":"","social_facebook_link":"","social_pinterest_link":"","social_instagram_link":"","social_tiktok_link":"","social_tumblr_link":"","social_snapchat_link":"","social_youtube_link":"","social_vimeo_link":"","predictive_search_enabled":true,"predictive_search_show_vendor":false,"predictive_search_show_price":false,"currency_code_enabled":true,"sections":{"announcement-bar":{"type":"announcement-bar","blocks":{"announcement-bar-0":{"type":"announcement","settings":{"text":"Welcome to our store","color_scheme":"background-1","link":""}}},"block_order":["announcement-bar-0"],"settings":{"background_color_special":"#000000","heading_color_special":"#FFFFFF"}},"header":{"type":"header","settings":{"color_scheme":"background-1","logo_width":90,"logo_position":"middle-left","menu":"main-menu","show_line_separator":true,"enable_sticky_header":true,"badge_background_color":"#000000","badge_color":"#FFFFFF","margin_bottom":0}},"footer":{"type":"footer","blocks":{"footer-0":{"type":"link_list","settings":{"heading":"Quick links","menu":"footer"}},"footer-1":{"type":"link_list","settings":{"heading":"Info","menu":"footer"}},"footer-2":{"type":"text","settings":{"heading":"Our mission","subtext":"<p>Share contact information, store details, and brand content with your customers.<\/p>"}}},"block_order":["footer-0","footer-1","footer-2"],"settings":{"color_scheme":"background-1","newsletter_enable":true,"newsletter_heading":"Subscribe to our emails","show_social":true,"enable_country_selector":false,"enable_language_selector":false,"payment_enable":true,"margin_top":48,"padding_top":36,"padding_bottom":36}},"main-password-header":{"type":"main-password-header","settings":{"logo_max_width":100,"color_scheme":"background-1"}},"main-password-footer":{"type":"main-password-footer","settings":{"color_scheme":"background-1"}}}}},"platform_customizations":{"custom_css":[".h-wishlist-icon {color: #000;}",".section-template--23815942471948__featured_collection_mpQnTq-padding {padding-top: 250px;}","@media screen and (min-width: 750px) {.section-template--23815942471948__featured_collection_mpQnTq-padding {padding-top: 200px; }}"]}}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "colors_solid_button_labels": "#ffffff",
+    "colors_accent_1": "#000000",
+    "gradient_accent_1": "",
+    "colors_accent_2": "#efeae4",
+    "gradient_accent_2": "",
+    "colors_text": "#000000",
+    "colors_outline_button_labels": "#000000",
+    "colors_background_1": "#ffffff",
+    "gradient_background_1": "",
+    "colors_background_2": "#efeae4",
+    "gradient_background_2": "",
+    "heading_scale": 100,
+    "body_scale": 100,
+    "page_width": 1200,
+    "spacing_sections": 0,
+    "spacing_grid_horizontal": 8,
+    "spacing_grid_vertical": 8,
+    "buttons_border_thickness": 1,
+    "buttons_border_opacity": 100,
+    "buttons_radius": 0,
+    "buttons_shadow_opacity": 0,
+    "buttons_shadow_horizontal_offset": 0,
+    "buttons_shadow_vertical_offset": 4,
+    "buttons_shadow_blur": 5,
+    "variant_pills_border_thickness": 1,
+    "variant_pills_border_opacity": 55,
+    "variant_pills_radius": 40,
+    "variant_pills_shadow_opacity": 0,
+    "variant_pills_shadow_horizontal_offset": 0,
+    "variant_pills_shadow_vertical_offset": 4,
+    "variant_pills_shadow_blur": 5,
+    "inputs_border_thickness": 1,
+    "inputs_border_opacity": 55,
+    "inputs_radius": 0,
+    "inputs_shadow_opacity": 0,
+    "inputs_shadow_horizontal_offset": 0,
+    "inputs_shadow_vertical_offset": 4,
+    "inputs_shadow_blur": 5,
+    "card_style": "standard",
+    "card_image_padding": 0,
+    "card_text_alignment": "left",
+    "card_color_scheme": "background-2",
+    "card_border_thickness": 0,
+    "card_border_opacity": 10,
+    "card_corner_radius": 0,
+    "card_shadow_opacity": 0,
+    "card_shadow_horizontal_offset": 0,
+    "card_shadow_vertical_offset": 4,
+    "card_shadow_blur": 5,
+    "text_boxes_border_thickness": 0,
+    "text_boxes_border_opacity": 10,
+    "text_boxes_radius": 0,
+    "text_boxes_shadow_opacity": 0,
+    "text_boxes_shadow_horizontal_offset": 0,
+    "text_boxes_shadow_vertical_offset": 4,
+    "text_boxes_shadow_blur": 5,
+    "media_border_thickness": 0,
+    "media_border_opacity": 5,
+    "media_radius": 0,
+    "media_shadow_opacity": 0,
+    "media_shadow_horizontal_offset": 0,
+    "media_shadow_vertical_offset": 4,
+    "media_shadow_blur": 5,
+    "popup_border_thickness": 1,
+    "popup_border_opacity": 10,
+    "popup_corner_radius": 0,
+    "popup_shadow_opacity": 0,
+    "popup_shadow_horizontal_offset": 0,
+    "popup_shadow_vertical_offset": 4,
+    "popup_shadow_blur": 5,
+    "drawer_border_thickness": 1,
+    "drawer_border_opacity": 10,
+    "drawer_shadow_opacity": 0,
+    "drawer_shadow_horizontal_offset": 0,
+    "drawer_shadow_vertical_offset": 4,
+    "drawer_shadow_blur": 5,
+    "badge_position": "bottom left",
+    "badge_corner_radius": 40,
+    "sale_badge_color_scheme": "accent-green",
+    "sold_out_badge_color_scheme": "background-1",
+    "show_summer_badges": false,
+    "show_winter_badges": true,
+    "accent_icons": "text",
+    "social_twitter_link": "",
+    "social_facebook_link": "https://www.facebook.com/ODonnellMoonshine",
+    "social_pinterest_link": "",
+    "social_instagram_link": "https://www.instagram.com/odonnellmoonshine",
+    "social_tiktok_link": "https://www.tiktok.com/@odonnellmoonshine",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "predictive_search_enabled": true,
+    "predictive_search_show_vendor": false,
+    "predictive_search_show_price": false,
+    "favicon": "shopify://shop_images/favicon.png",
+    "currency_code_enabled": false,
+    "min_value_for_free_shipping": 75,
+    "cart_infotext": "<p>Rabattcodes können nur an der Kasse eingelöst werden und gelten nicht in Verbindung mit anderen Angeboten.</p>",
+    "klaviyo_id": "UBtnhm",
+    "klaviyo_bis_enabled": false,
+    "klaviyo_bis_product_page_text": "Benachrichtigt mich, sobald verfügbar",
+    "klaviyo_bis_body_content": "Registriere dich für eine Benachrichtigung, sobald das Produkt wieder erhältlich ist.",
+    "klaviyo_bis_button_label": "Benachrichtigt mich, sobald verfügbar",
+    "klaviyo_bis_subscription_success_label": "Erledigt! Wir lassen dich wissen, wenn es wieder da ist.",
+    "google_tag": "GTM-N2TN955",
+    "klar_tag": "",
+    "clarity_tag": "o4jtd9gjyw",
+    "cookiebot": "",
+    "is_gang": false,
+    "gang_double_proof": false,
+    "yotpo_key": "bQDcQaEKZ14rrLm0C7WKPSJoZ1sP8Q3RirvNnd14e",
+    "yotpo_scripts": "",
+    "is_german": true,
+    "omniconvert_id": "",
+    "enable_wishlist": false,
+    "wishlist_exclude": "'11638357754124','11638367486220','11638459072780','11638707519756','6588059517059', '4498300141699', '4498300043395', '6657007779971', '8628688683276','5103589752963', '9716669743372', '5117440524419', '8791071490316', '7972135239948', '5037724532867', '4498302861443', '11516239511820'",
+    "sold_out_striked_through": true,
+    "shipping_time": "Versand in 1 bis 2 Werktagen",
+    "checkout_logo_image": "shopify://shop_images/odonnell_39dc53ee-2a9e-4dc0-b770-2a08b66df973.png",
+    "checkout_logo_position": "center",
+    "checkout_body_background_color": "#ffffff",
+    "checkout_accent_color": "#000000",
+    "checkout_button_color": "#212121",
+    "checkout_error_color": "#e32c2b",
+    "type_header_font": "work_sans_n6",
+    "type_body_font": "work_sans_n4",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "announcement_TALXFx": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "UNSERE B-WARE DEALS: -25% sparen!",
+              "html_content": "",
+              "color_scheme": "accent-1",
+              "link": "shopify://pages/b-ware"
+            }
+          },
+          "announcement_keRjMN": {
+            "type": "announcement",
+            "settings": {
+              "text": "Highlight: Gratis Nuss-Creme ab 59.9€",
+              "html_content": "",
+              "color_scheme": "accent-1",
+              "link": "shopify://pages/xmas-deals"
+            }
+          },
+          "announcement_jkMa7b": {
+            "type": "announcement",
+            "settings": {
+              "text": "Likör-Geschenke finden!",
+              "html_content": "",
+              "color_scheme": "accent-1",
+              "link": "shopify://pages/xmas-geschenke"
+            }
+          },
+          "announcement_cFBFLi": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "Golden Mango - endlich verfügbar!",
+              "html_content": "",
+              "color_scheme": "accent-1",
+              "link": "shopify://pages/mango-community-edition"
+            }
+          },
+          "c679d9d1-2112-4fa2-92a9-6d71db273fba": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "Bewertung",
+              "html_content": "5 / 5 ☆ basierend auf über\n60.000 Bewertungen!",
+              "color_scheme": "accent-1",
+              "link": "shopify://pages/bewertungen"
+            }
+          },
+          "announcement_Hr9JPh": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "Gratis dazu: Sweet & Spicy BBQ-Sauce beim Kauf von drei 700ml Gläsern!",
+              "html_content": "",
+              "color_scheme": "accent-1",
+              "link": "shopify://products/bbq-saucen"
+            }
+          },
+          "announcement_MFbwM7": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "FRUCHTALARM! 3 MAL PURER GENUSS IM BUNDLE.",
+              "html_content": "",
+              "color_scheme": "accent-1",
+              "link": "https://odonnell.de/products/frucht-kick-bundle"
+            }
+          },
+          "announcement_hMGdmQ": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "Schon vor Ostern etwas Süßes finden: Likör im Körbchen Bundle!",
+              "html_content": "",
+              "color_scheme": "accent-1",
+              "link": "https://odonnell.de/products/moonshine-oster-bundle"
+            }
+          },
+          "fbb71999-5088-4d54-a060-860f766f3b26": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "Werde jetzt Gang-Member und sichere dir viele Vorteile!",
+              "html_content": "",
+              "color_scheme": "accent-1",
+              "link": "shopify://pages/gang"
+            }
+          }
+        },
+        "block_order": [
+          "announcement_TALXFx",
+          "announcement_keRjMN",
+          "announcement_jkMa7b",
+          "announcement_cFBFLi",
+          "c679d9d1-2112-4fa2-92a9-6d71db273fba",
+          "announcement_Hr9JPh",
+          "announcement_MFbwM7",
+          "announcement_hMGdmQ",
+          "fbb71999-5088-4d54-a060-860f766f3b26"
+        ],
+        "custom_css": [
+          ".announcement-bar__link .icon-arrow {display: none;}"
+        ],
+        "settings": {
+          "autoplay_stop_on_interaction": true,
+          "slider_speed": 5000,
+          "apply_special_colors": true,
+          "background_color_special": "#000000",
+          "heading_color_special": "#ffffff"
+        }
+      },
+      "header": {
+        "type": "header",
+        "custom_css": [
+          ".menu-drawer .list-social {margin-top: 0;}",
+          ".header {padding-top: 0; padding-bottom: 0;}",
+          ".header__heading-link {padding: 0px;}"
+        ],
+        "settings": {
+          "color_scheme": "background-1",
+          "logo": "shopify://shop_images/Complete_Logo_256x256_crop_center_c6149a90-9b9a-4a47-b832-c89d4ae7a0a2.svg",
+          "use_christmas_logo": true,
+          "use_christmas_gift_icon": "Geschenke",
+          "logo_width": 120,
+          "logo_position": "middle-center",
+          "menu": "",
+          "menu_mobile_shop": "",
+          "menu_type_desktop": "mega",
+          "mobile_menu_enabled": true,
+          "show_line_separator": true,
+          "enable_sticky_header": true,
+          "badge_background_color": "#0e6000",
+          "badge_color": "#ffffff",
+          "margin_bottom": 0,
+          "hide_mobile_category_images": true,
+          "banner_link": "shopify://collections/whiskey",
+          "banner_title": ""
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-2": {
+            "type": "text",
+            "settings": {
+              "heading": "Kontakt",
+              "subtext": "<p>Hast du eine <a href=\"/pages/help\" title=\"Hilfe\">Frage</a>? Unser <a href=\"/pages/help\" title=\"Hilfe\">Support-Team</a> hilft Dir.</p>"
+            }
+          },
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "heading": "O'Donnell Moonshine",
+              "menu": ""
+            }
+          },
+          "footer-1": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Information",
+              "menu": "footer"
+            }
+          },
+          "6c239383-447f-45a3-add2-6024073662e4": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Allgemein",
+              "menu": ""
+            }
+          }
+        },
+        "block_order": [
+          "footer-2",
+          "footer-0",
+          "footer-1",
+          "6c239383-447f-45a3-add2-6024073662e4"
+        ],
+        "custom_css": [],
+        "settings": {
+          "is_above_the_fold": false,
+          "show_copyright": true,
+          "color_scheme": "accent-1",
+          "newsletter_enable": true,
+          "custom_liquid": "<div class=\"klaviyo-form-SrEF6S\"></div>",
+          "newsletter_ln": "Eine Abmeldung ist jederzeit möglich. Mehr Infos <a href=\"https://odonnell.de/policies/privacy-policy\">HIER</a>",
+          "custom_newsletter_tags": "",
+          "newsletter_heading": "Spare 10% mit unserem Newsletter!",
+          "show_social": true,
+          "enable_country_selector": false,
+          "enable_language_selector": false,
+          "payment_enable": true,
+          "margin_top": 0,
+          "padding_top": 24,
+          "padding_bottom": 24
+        }
+      },
+      "main-password-header": {
+        "type": "main-password-header",
+        "settings": {
+          "logo_max_width": 100,
+          "color_scheme": "background-1"
+        }
+      },
+      "main-password-footer": {
+        "type": "main-password-footer",
+        "settings": {
+          "color_scheme": "background-1"
+        }
+      },
+      "cart-notification": {
+        "type": "cart-notification",
+        "blocks": {
+          "upsell_products_mVd4kT": {
+            "type": "upsell_products",
+            "settings": {
+              "product": "test-product"
+            }
+          },
+          "upsell_products_tRXeFA": {
+            "type": "upsell_products",
+            "settings": {
+              "product": "tasting-set"
+            }
+          },
+          "upsell_products_aY997b": {
+            "type": "upsell_products",
+            "settings": {
+              "product": "ausgiesser"
+            }
+          },
+          "free_products_qKCJfc": {
+            "type": "free_products",
+            "disabled": true,
+            "settings": {
+              "value": 4990,
+              "product": "set-mini-moonshine-jars",
+              "gang_only": false
+            }
+          }
+        },
+        "block_order": [
+          "upsell_products_mVd4kT",
+          "upsell_products_tRXeFA",
+          "upsell_products_aY997b",
+          "free_products_qKCJfc"
+        ],
+        "settings": {
+          "color_scheme": "background-1",
+          "delivery_costs": "",
+          "show_vendor": false,
+          "padding_top": 72,
+          "padding_bottom": 36
+        }
+      },
+      "newsletter-popup": {
+        "type": "newsletter-popup",
+        "blocks": {
+          "89cebe8d-9edc-4bff-9b5e-a1c731bd94f1": {
+            "type": "benefits",
+            "settings": {
+              "title": "10% Rabatt auf deine nächste Bestellung"
+            }
+          },
+          "e1222767-4dfb-4ee5-8490-fb12ab7057cb": {
+            "type": "benefits",
+            "settings": {
+              "title": "Verpasse keine Sorte"
+            }
+          },
+          "c2641532-76d3-4b9f-a5d5-7342086f4a90": {
+            "type": "benefits",
+            "settings": {
+              "title": "Profitiere von exklusiven Aktionen"
+            }
+          },
+          "custom_liquid_KqRAeg": {
+            "type": "custom_liquid",
+            "settings": {
+              "custom_liquid": "<div class=\"klaviyo-form-RLWCZJ\"></div>"
+            }
+          }
+        },
+        "block_order": [
+          "89cebe8d-9edc-4bff-9b5e-a1c731bd94f1",
+          "e1222767-4dfb-4ee5-8490-fb12ab7057cb",
+          "c2641532-76d3-4b9f-a5d5-7342086f4a90",
+          "custom_liquid_KqRAeg"
+        ],
+        "settings": {
+          "enable_popup": false,
+          "newsletter_legal_notice": "Ich habe die Hinweise zum Umgang mit personenbezogenen Daten zur Kenntnis genommen. Ein Widerruf bzw. eine Abmeldung des Newsletter-Abonnements ist jederzeit über einen Link im Newsletter oder über eine Nachricht an info@odonnell.de möglich.",
+          "newsletter_shortcut": "10% Rabatt"
+        }
+      },
+      "app-optimization": {
+        "type": "app-optimization",
+        "blocks": {
+          "2f69b676-3a32-4dbd-96f7-34ba288fc565": {
+            "type": "app",
+            "settings": {
+              "title": "",
+              "url": "",
+              "block_index": false,
+              "block_product": false,
+              "block_collection": false,
+              "block_page": false,
+              "block_blog": false,
+              "block_article": false,
+              "block_cart": false,
+              "block_search": false,
+              "block_customers": false,
+              "block_gift_card": false,
+              "scroll_index": false,
+              "scroll_product": false,
+              "scroll_collection": false,
+              "scroll_page": false,
+              "scroll_blog": false,
+              "scroll_article": false,
+              "scroll_cart": false,
+              "scroll_search": false,
+              "scroll_customers": false,
+              "scroll_gift_card": false,
+              "interaction_index": false,
+              "interaction_product": false,
+              "interaction_collection": false,
+              "interaction_page": false,
+              "interaction_blog": false,
+              "interaction_article": false,
+              "interaction_cart": false,
+              "interaction_search": false,
+              "interaction_customers": false,
+              "interaction_gift_card": false,
+              "interaction_selectors_1": "",
+              "interaction_event_1": "click",
+              "interaction_selectors_2": "",
+              "interaction_event_2": "click"
+            }
+          }
+        },
+        "block_order": [
+          "2f69b676-3a32-4dbd-96f7-34ba288fc565"
+        ],
+        "settings": {
+          "enable": true,
+          "debug_enable": false
+        }
+      },
+      "main-register": {
+        "type": "main-register",
+        "settings": {
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
+      },
+      "main-login": {
+        "type": "main-login",
+        "settings": {
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
+      },
+      "usps": {
+        "type": "usps",
+        "blocks": {
+          "usp_fgMr3A": {
+            "type": "usp",
+            "disabled": true,
+            "settings": {
+              "title": "Klarna",
+              "content": "Jetzt bestellen, später zahlen",
+              "link": "",
+              "background_colour": "",
+              "override_settings_enabled": false,
+              "code": "<div class='bg-primary text-white p-3'>Your custom code...</div>"
+            }
+          },
+          "usp_giU9CP": {
+            "type": "usp",
+            "disabled": true,
+            "settings": {
+              "title": "Gang",
+              "content": "Jetzt bei der Gang anmelden!",
+              "link": "https://odonnell.de/pages/gang",
+              "background_colour": "",
+              "override_settings_enabled": false,
+              "code": "<div class='bg-primary text-white p-3'>Your custom code...</div>"
+            }
+          },
+          "usp_wAzPBA": {
+            "type": "usp",
+            "disabled": true,
+            "settings": {
+              "title": "Newsletter",
+              "content": "Newsletter abonnieren und 10% sparen",
+              "link": "shopify://pages/landingpage-newsletter",
+              "background_colour": "",
+              "override_settings_enabled": false,
+              "code": "<div class='bg-primary text-white p-3'>Your custom code...</div>"
+            }
+          }
+        },
+        "block_order": [
+          "usp_fgMr3A",
+          "usp_giU9CP",
+          "usp_wAzPBA"
+        ],
+        "settings": {
+          "autoplay_stop_on_interaction": false,
+          "slider_speed": 3000,
+          "background_colour": "",
+          "border_colour": "#e2e2e2",
+          "borders_enabled": true,
+          "override_margins_enabled": false,
+          "margins_class": ""
+        }
+      }
+    },
+    "content_for_index": []
+  },
+  "presets": {
+    "Default": {
+      "colors_solid_button_labels": "#ffffff",
+      "colors_accent_1": "#121212",
+      "gradient_accent_1": "",
+      "colors_accent_2": "#334fb4",
+      "gradient_accent_2": "",
+      "colors_text": "#121212",
+      "colors_outline_button_labels": "#121212",
+      "colors_background_1": "#ffffff",
+      "gradient_background_1": "",
+      "colors_background_2": "#f3f3f3",
+      "gradient_background_2": "",
+      "type_header_font": "assistant_n4",
+      "heading_scale": 100,
+      "type_body_font": "assistant_n4",
+      "body_scale": 100,
+      "page_width": 1200,
+      "spacing_sections": 0,
+      "spacing_grid_horizontal": 8,
+      "spacing_grid_vertical": 8,
+      "buttons_border_thickness": 1,
+      "buttons_border_opacity": 100,
+      "buttons_radius": 0,
+      "buttons_shadow_opacity": 0,
+      "buttons_shadow_horizontal_offset": 0,
+      "buttons_shadow_vertical_offset": 4,
+      "buttons_shadow_blur": 5,
+      "variant_pills_border_thickness": 1,
+      "variant_pills_border_opacity": 55,
+      "variant_pills_radius": 40,
+      "variant_pills_shadow_opacity": 0,
+      "variant_pills_shadow_horizontal_offset": 0,
+      "variant_pills_shadow_vertical_offset": 4,
+      "variant_pills_shadow_blur": 5,
+      "inputs_border_thickness": 1,
+      "inputs_border_opacity": 55,
+      "inputs_radius": 0,
+      "inputs_shadow_opacity": 0,
+      "inputs_shadow_horizontal_offset": 0,
+      "inputs_shadow_vertical_offset": 4,
+      "inputs_shadow_blur": 5,
+      "card_style": "standard",
+      "card_image_padding": 0,
+      "card_text_alignment": "left",
+      "card_color_scheme": "background-2",
+      "card_border_thickness": 0,
+      "card_border_opacity": 10,
+      "card_corner_radius": 0,
+      "card_shadow_opacity": 0,
+      "card_shadow_horizontal_offset": 0,
+      "card_shadow_vertical_offset": 4,
+      "card_shadow_blur": 5,
+      "text_boxes_border_thickness": 0,
+      "text_boxes_border_opacity": 10,
+      "text_boxes_radius": 0,
+      "text_boxes_shadow_opacity": 0,
+      "text_boxes_shadow_horizontal_offset": 0,
+      "text_boxes_shadow_vertical_offset": 4,
+      "text_boxes_shadow_blur": 5,
+      "media_border_thickness": 1,
+      "media_border_opacity": 5,
+      "media_radius": 0,
+      "media_shadow_opacity": 0,
+      "media_shadow_horizontal_offset": 0,
+      "media_shadow_vertical_offset": 4,
+      "media_shadow_blur": 5,
+      "popup_border_thickness": 1,
+      "popup_border_opacity": 10,
+      "popup_corner_radius": 0,
+      "popup_shadow_opacity": 0,
+      "popup_shadow_horizontal_offset": 0,
+      "popup_shadow_vertical_offset": 4,
+      "popup_shadow_blur": 5,
+      "drawer_border_thickness": 1,
+      "drawer_border_opacity": 10,
+      "drawer_shadow_opacity": 0,
+      "drawer_shadow_horizontal_offset": 0,
+      "drawer_shadow_vertical_offset": 4,
+      "drawer_shadow_blur": 5,
+      "badge_position": "bottom left",
+      "badge_corner_radius": 40,
+      "sale_badge_color_scheme": "accent-2",
+      "sold_out_badge_color_scheme": "inverse",
+      "accent_icons": "text",
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_tiktok_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "predictive_search_enabled": true,
+      "predictive_search_show_vendor": false,
+      "predictive_search_show_price": false,
+      "currency_code_enabled": true,
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "announcement-bar-0": {
+              "type": "announcement",
+              "settings": {
+                "text": "Welcome to our store",
+                "color_scheme": "background-1",
+                "link": ""
+              }
+            }
+          },
+          "block_order": [
+            "announcement-bar-0"
+          ],
+          "settings": {
+            "background_color_special": "#000000",
+            "heading_color_special": "#FFFFFF"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "color_scheme": "background-1",
+            "logo_width": 90,
+            "logo_position": "middle-left",
+            "menu": "main-menu",
+            "show_line_separator": true,
+            "enable_sticky_header": true,
+            "badge_background_color": "#000000",
+            "badge_color": "#FFFFFF",
+            "margin_bottom": 0
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "link_list",
+              "settings": {
+                "heading": "Quick links",
+                "menu": "footer"
+              }
+            },
+            "footer-1": {
+              "type": "link_list",
+              "settings": {
+                "heading": "Info",
+                "menu": "footer"
+              }
+            },
+            "footer-2": {
+              "type": "text",
+              "settings": {
+                "heading": "Our mission",
+                "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
+              }
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1",
+            "footer-2"
+          ],
+          "settings": {
+            "color_scheme": "background-1",
+            "newsletter_enable": true,
+            "newsletter_heading": "Subscribe to our emails",
+            "show_social": true,
+            "enable_country_selector": false,
+            "enable_language_selector": false,
+            "payment_enable": true,
+            "margin_top": 48,
+            "padding_top": 36,
+            "padding_bottom": 36
+          }
+        },
+        "main-password-header": {
+          "type": "main-password-header",
+          "settings": {
+            "logo_max_width": 100,
+            "color_scheme": "background-1"
+          }
+        },
+        "main-password-footer": {
+          "type": "main-password-footer",
+          "settings": {
+            "color_scheme": "background-1"
+          }
+        }
+      }
+    }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".h-wishlist-icon {color: #000;}",
+      ".section-template--23815942471948__featured_collection_mpQnTq-padding {padding-top: 250px;}",
+      "@media screen and (min-width: 750px) {.section-template--23815942471948__featured_collection_mpQnTq-padding {padding-top: 200px; }}"
+    ]
+  }
+}
