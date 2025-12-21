@@ -360,12 +360,14 @@
           },
           "upsell_products_tRXeFA": {
             "type": "upsell_products",
+            "disabled": true,
             "settings": {
               "product": "tasting-set"
             }
           },
           "upsell_products_aY997b": {
             "type": "upsell_products",
+            "disabled": true,
             "settings": {
               "product": "ausgiesser"
             }
