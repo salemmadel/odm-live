@@ -1,0 +1,12 @@
+{
+  "name": "custom-cart-transform-function",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "javy compile src/index.js -o dist/index.wasm"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@shopify/shopify-function-javy": "^1.0.0"
+  }
+}

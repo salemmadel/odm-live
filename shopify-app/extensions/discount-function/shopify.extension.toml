@@ -1,0 +1,21 @@
+api_version = "2024-10"
+
+[[extensions]]
+type = "function"
+name = "custom-discount-function"
+handle = "custom-discount"
+
+[extensions.build]
+command = "npm run build"
+path = "dist/index.wasm"
+
+[[extensions.targeting]]
+target = "purchase.discount.run"
+input_query = "discount-function-input.graphql"
+
+[extensions.settings]
+[[extensions.settings.fields]]
+key = "discount_rules"
+name = "Discount Rules"
+description = "JSON configuration for discount rules"
+type = "json"

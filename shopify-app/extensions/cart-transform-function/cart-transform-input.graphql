@@ -1,0 +1,49 @@
+query CartTransformInput {
+  cart {
+    cost {
+      subtotalAmount {
+        amount
+      }
+    }
+    lines {
+      id
+      quantity
+      merchandise {
+        ... on ProductVariant {
+          id
+          product {
+            id
+            title
+            variants(first: 10) {
+              nodes {
+                id
+                title
+                price {
+                  amount
+                }
+              }
+            }
+          }
+        }
+      }
+      cost {
+        amountPerQuantity {
+          amount
+        }
+        totalAmount {
+          amount
+        }
+      }
+    }
+    buyerIdentity {
+      customer {
+        id
+      }
+    }
+  }
+  cartTransform {
+    metafield(namespace: "custom-cart", key: "config") {
+      value
+    }
+  }
+}

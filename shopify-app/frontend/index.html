@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Discounts & Cart Logic</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>Custom Discounts & Cart Logic</h1>
+      <p>Manage your custom discount rules and cart transformations</p>
+    </header>
+
+    <div class="tabs">
+      <button class="tab-button active" data-tab="discounts">Discount Rules</button>
+      <button class="tab-button" data-tab="cart-rules">Cart Rules</button>
+    </div>
+
+    <div class="tab-content">
+      <!-- Discount Rules Tab -->
+      <div id="discounts-tab" class="tab-pane active">
+        <div class="section-header">
+          <h2>Discount Rules</h2>
+          <button class="btn btn-primary" id="add-discount-btn">Add New Discount</button>
+        </div>
+
+        <div id="discounts-list" class="rules-list">
+          <!-- Discount rules will be loaded here -->
+        </div>
+
+        <!-- Discount Form Modal -->
+        <div id="discount-modal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="discount-modal-title">Add Discount Rule</h3>
+
+            <form id="discount-form">
+              <div class="form-group">
+                <label for="discount-name">Name *</label>
+                <input type="text" id="discount-name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="discount-description">Description</label>
+                <textarea id="discount-description" rows="3"></textarea>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="discount-type">Type *</label>
+                  <select id="discount-type" required>
+                    <option value="">Select type...</option>
+                    <option value="PERCENTAGE">Percentage Off</option>
+                    <option value="FIXED_AMOUNT">Fixed Amount Off</option>
+                    <option value="BUY_X_GET_Y">Buy X Get Y</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="discount-value">Value *</label>
+                  <input type="number" id="discount-value" step="0.01" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="discount-min-cart">Min Cart Value</label>
+                  <input type="number" id="discount-min-cart" step="0.01">
+                </div>
+
+                <div class="form-group">
+                  <label for="discount-max-cart">Max Cart Value</label>
+                  <input type="number" id="discount-max-cart" step="0.01">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="discount-min-qty">Min Quantity</label>
+                <input type="number" id="discount-min-qty">
+              </div>
+
+              <div class="form-group">
+                <label for="discount-product-ids">Product IDs (comma-separated)</label>
+                <input type="text" id="discount-product-ids" placeholder="gid://shopify/Product/123, gid://shopify/Product/456">
+              </div>
+
+              <div class="form-group">
+                <label for="discount-customer-tags">Customer Tags (comma-separated)</label>
+                <input type="text" id="discount-customer-tags" placeholder="vip, wholesale">
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="discount-start-date">Start Date</label>
+                  <input type="datetime-local" id="discount-start-date">
+                </div>
+
+                <div class="form-group">
+                  <label for="discount-end-date">End Date</label>
+                  <input type="datetime-local" id="discount-end-date">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="discount-priority">Priority</label>
+                  <input type="number" id="discount-priority" value="0">
+                </div>
+
+                <div class="form-group checkbox-group">
+                  <label>
+                    <input type="checkbox" id="discount-stackable">
+                    Stackable with other discounts
+                  </label>
+                </div>
+
+                <div class="form-group checkbox-group">
+                  <label>
+                    <input type="checkbox" id="discount-active" checked>
+                    Active
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="button" class="btn btn-secondary" id="cancel-discount-btn">Cancel</button>
+                <button type="submit" class="btn btn-primary">Save Discount</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cart Rules Tab -->
+      <div id="cart-rules-tab" class="tab-pane">
+        <div class="section-header">
+          <h2>Cart Transform Rules</h2>
+          <button class="btn btn-primary" id="add-cart-rule-btn">Add New Cart Rule</button>
+        </div>
+
+        <div id="cart-rules-list" class="rules-list">
+          <!-- Cart rules will be loaded here -->
+        </div>
+
+        <!-- Cart Rule Form Modal -->
+        <div id="cart-rule-modal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="cart-rule-modal-title">Add Cart Rule</h3>
+
+            <form id="cart-rule-form">
+              <div class="form-group">
+                <label for="cart-rule-name">Name *</label>
+                <input type="text" id="cart-rule-name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="cart-rule-description">Description</label>
+                <textarea id="cart-rule-description" rows="3"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="cart-rule-type">Type *</label>
+                <select id="cart-rule-type" required>
+                  <option value="">Select type...</option>
+                  <option value="ADD_FREE_ITEM">Add Free Item</option>
+                  <option value="BUNDLE_PRODUCTS">Bundle Products</option>
+                  <option value="MODIFY_QUANTITY">Modify Quantity</option>
+                  <option value="TIERED_PRICING">Tiered Pricing</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="cart-rule-trigger-type">Trigger Type *</label>
+                  <select id="cart-rule-trigger-type" required>
+                    <option value="">Select trigger...</option>
+                    <option value="ON_CART_THRESHOLD">Cart Threshold</option>
+                    <option value="ON_PRODUCT_ADD">Product Added</option>
+                    <option value="ON_QUANTITY">Quantity Reached</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="cart-rule-trigger-value">Trigger Value</label>
+                  <input type="text" id="cart-rule-trigger-value">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="cart-rule-action-type">Action Type *</label>
+                  <input type="text" id="cart-rule-action-type" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="cart-rule-action-value">Action Config (JSON)</label>
+                  <textarea id="cart-rule-action-value" rows="3" placeholder='{"freeItemVariantId": "gid://...", "quantity": "1"}'></textarea>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="cart-rule-min-cart">Min Cart Value</label>
+                <input type="number" id="cart-rule-min-cart" step="0.01">
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="cart-rule-priority">Priority</label>
+                  <input type="number" id="cart-rule-priority" value="0">
+                </div>
+
+                <div class="form-group checkbox-group">
+                  <label>
+                    <input type="checkbox" id="cart-rule-active" checked>
+                    Active
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="button" class="btn btn-secondary" id="cancel-cart-rule-btn">Cancel</button>
+                <button type="submit" class="btn btn-primary">Save Cart Rule</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+// Prisma schema for Shopify Custom Discounts App
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Store session data for Shopify OAuth
+model Session {
+  id          String   @id
+  shop        String
+  state       String
+  isOnline    Boolean  @default(false)
+  scope       String?
+  accessToken String?
+  expires     DateTime?
+  onlineAccessInfo String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([shop])
+}
+
+// Store installed shops
+model Shop {
+  id              String   @id @default(uuid())
+  shopDomain      String   @unique
+  accessToken     String
+  scope           String
+  installedAt     DateTime @default(now())
+  uninstalledAt   DateTime?
+  isActive        Boolean  @default(true)
+  discountRules   DiscountRule[]
+  cartRules       CartRule[]
+
+  @@index([shopDomain])
+}
+
+// Custom discount rules
+model DiscountRule {
+  id              String   @id @default(uuid())
+  shopId          String
+  shop            Shop     @relation(fields: [shopId], references: [id], onDelete: Cascade)
+
+  name            String
+  description     String?
+  type            String   // PERCENTAGE, FIXED_AMOUNT, BUY_X_GET_Y, etc.
+  value           Float
+
+  // Conditions
+  minCartValue    Float?
+  maxCartValue    Float?
+  minQuantity     Int?
+  productIds      String[] // Array of product IDs
+  collectionIds   String[] // Array of collection IDs
+  customerTags    String[] // Array of customer tags
+
+  // Stacking rules
+  stackable       Boolean  @default(false)
+  priority        Int      @default(0)
+
+  // Validity
+  startDate       DateTime?
+  endDate         DateTime?
+  isActive        Boolean  @default(true)
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([shopId])
+  @@index([isActive])
+}
+
+// Custom cart transformation rules
+model CartRule {
+  id              String   @id @default(uuid())
+  shopId          String
+  shop            Shop     @relation(fields: [shopId], references: [id], onDelete: Cascade)
+
+  name            String
+  description     String?
+  type            String   // ADD_ITEM, REMOVE_ITEM, MODIFY_PRICE, BUNDLE, etc.
+
+  // Trigger conditions
+  triggerType     String   // ON_PRODUCT_ADD, ON_CART_THRESHOLD, ON_COLLECTION, etc.
+  triggerValue    String?  // Product ID, collection ID, etc.
+
+  // Action configuration
+  actionType      String   // What to do when triggered
+  actionValue     String?  // Action parameters (JSON string)
+
+  // Conditions
+  minCartValue    Float?
+  productIds      String[]
+  collectionIds   String[]
+
+  priority        Int      @default(0)
+  isActive        Boolean  @default(true)
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([shopId])
+  @@index([isActive])
+}

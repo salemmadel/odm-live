@@ -1,0 +1,21 @@
+api_version = "2024-10"
+
+[[extensions]]
+type = "function"
+name = "custom-cart-transform"
+handle = "cart-transform"
+
+[extensions.build]
+command = "npm run build"
+path = "dist/index.wasm"
+
+[[extensions.targeting]]
+target = "purchase.cart-transform.run"
+input_query = "cart-transform-input.graphql"
+
+[extensions.settings]
+[[extensions.settings.fields]]
+key = "cart_rules"
+name = "Cart Transform Rules"
+description = "JSON configuration for cart transformation rules"
+type = "json"

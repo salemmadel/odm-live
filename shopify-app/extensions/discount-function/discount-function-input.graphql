@@ -1,0 +1,39 @@
+query DiscountFunctionInput {
+  cart {
+    cost {
+      subtotalAmount {
+        amount
+      }
+    }
+    lines {
+      id
+      quantity
+      merchandise {
+        ... on ProductVariant {
+          id
+          product {
+            id
+            title
+            hasAnyTag(tags: ["vip", "special"])
+          }
+        }
+      }
+      cost {
+        amountPerQuantity {
+          amount
+        }
+      }
+    }
+    buyerIdentity {
+      customer {
+        id
+        hasTags(tags: ["vip", "wholesale"])
+      }
+    }
+  }
+  discountNode {
+    metafield(namespace: "custom-discounts", key: "config") {
+      value
+    }
+  }
+}
