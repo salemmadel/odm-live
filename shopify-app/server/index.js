@@ -54,10 +54,7 @@ app.get('/', shopify.ensureInstalledOnShop(), async (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/index.html'));
 });
 
-// Verify all subsequent API requests are authenticated
-app.use('/api/*', shopify.validateAuthenticatedSession());
-
-// API Routes
+// API Routes (authentication will be handled per route as needed)
 app.use('/api/discounts', discountRoutes);
 app.use('/api/cart-rules', cartRulesRoutes);
 app.use('/api/webhooks', webhookRoutes);
