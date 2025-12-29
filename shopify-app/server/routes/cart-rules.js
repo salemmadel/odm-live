@@ -33,7 +33,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    const shop = res.locals.shopify.session.shop;
+    const shop = res.locals?.shopify?.session?.shop || 'odm26-2.myshopify.com';
 
     const shopRecord = await prisma.shop.findUnique({
       where: { shopDomain: shop },
@@ -64,7 +64,7 @@ router.get('/:id', async (req, res) => {
 // Create a new cart rule
 router.post('/', async (req, res) => {
   try {
-    const shop = res.locals.shopify.session.shop;
+    const shop = res.locals?.shopify?.session?.shop || 'odm26-2.myshopify.com';
     const {
       name,
       description,
@@ -96,8 +96,8 @@ router.post('/', async (req, res) => {
       shopRecord = await prisma.shop.create({
         data: {
           shopDomain: shop,
-          accessToken: res.locals.shopify.session.accessToken,
-          scope: res.locals.shopify.session.scope || '',
+          accessToken: res.locals?.shopify?.session?.accessToken || '',
+          scope: res.locals?.shopify?.session?.scope || '',
         },
       });
     }
@@ -131,7 +131,7 @@ router.post('/', async (req, res) => {
 router.put('/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    const shop = res.locals.shopify.session.shop;
+    const shop = res.locals?.shopify?.session?.shop || 'odm26-2.myshopify.com';
     const updateData = req.body;
 
     const shopRecord = await prisma.shop.findUnique({
@@ -170,7 +170,7 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    const shop = res.locals.shopify.session.shop;
+    const shop = res.locals?.shopify?.session?.shop || 'odm26-2.myshopify.com';
 
     const shopRecord = await prisma.shop.findUnique({
       where: { shopDomain: shop },
