@@ -2,10 +2,15 @@ import 'dotenv/config';
 import express from 'express';
 import compression from 'compression';
 import cors from 'cors';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import shopify from './config/shopify.js';
 import discountRoutes from './routes/discounts.js';
 import cartRulesRoutes from './routes/cart-rules.js';
 import webhookRoutes from './routes/webhooks.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const PORT = parseInt(process.env.PORT || '3000', 10);
 const app = express();
@@ -44,14 +49,17 @@ app.use('/api/discounts', discountRoutes);
 app.use('/api/cart-rules', cartRulesRoutes);
 app.use('/api/webhooks', webhookRoutes);
 
+// Serve static files from frontend directory
+app.use(express.static(path.join(__dirname, '../frontend')));
+
 // Health check endpoint
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
-// Root endpoint
+// Root endpoint - serve the frontend
 app.get('/', (req, res) => {
-  res.send('Shopify Custom Discounts App - Server Running');
+  res.sendFile(path.join(__dirname, '../frontend/index.html'));
 });
 
 // Error handling middleware
