@@ -7,7 +7,11 @@ const prisma = new PrismaClient();
 // Get all cart rules for a shop
 router.get('/', async (req, res) => {
   try {
-    const shop = res.locals.shopify.session.shop;
+    const shop = res.locals?.shopify?.session?.shop;
+
+    if (!shop) {
+      return res.json({ cartRules: [] });
+    }
 
     const shopRecord = await prisma.shop.findUnique({
       where: { shopDomain: shop },
@@ -15,13 +19,13 @@ router.get('/', async (req, res) => {
     });
 
     if (!shopRecord) {
-      return res.status(404).json({ error: 'Shop not found' });
+      return res.json({ cartRules: [] });
     }
 
     res.json({ cartRules: shopRecord.cartRules });
   } catch (error) {
     console.error('Error fetching cart rules:', error);
-    res.status(500).json({ error: 'Failed to fetch cart rules' });
+    res.status(500).json({ error: 'Failed to fetch cart rules', message: error.message });
   }
 });
 

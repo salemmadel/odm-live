@@ -7,7 +7,11 @@ const prisma = new PrismaClient();
 // Get all discount rules for a shop
 router.get('/', async (req, res) => {
   try {
-    const shop = res.locals.shopify.session.shop;
+    const shop = res.locals?.shopify?.session?.shop;
+
+    if (!shop) {
+      return res.json({ discounts: [] });
+    }
 
     const shopRecord = await prisma.shop.findUnique({
       where: { shopDomain: shop },
@@ -15,13 +19,13 @@ router.get('/', async (req, res) => {
     });
 
     if (!shopRecord) {
-      return res.status(404).json({ error: 'Shop not found' });
+      return res.json({ discounts: [] });
     }
 
     res.json({ discounts: shopRecord.discountRules });
   } catch (error) {
     console.error('Error fetching discounts:', error);
-    res.status(500).json({ error: 'Failed to fetch discounts' });
+    res.status(500).json({ error: 'Failed to fetch discounts', message: error.message });
   }
 });
 
