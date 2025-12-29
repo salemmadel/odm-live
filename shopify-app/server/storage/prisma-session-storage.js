@@ -1,5 +1,4 @@
 import { PrismaClient } from '@prisma/client';
-import { Session } from '@shopify/shopify-api';
 
 const prisma = new PrismaClient();
 
@@ -11,8 +10,8 @@ export class PrismaSessionStorage {
         shop: session.shop,
         state: session.state,
         isOnline: session.isOnline,
-        scope: session.scope,
-        accessToken: session.accessToken,
+        scope: session.scope || '',
+        accessToken: session.accessToken || '',
         expires: session.expires,
         onlineAccessInfo: session.onlineAccessInfo ? JSON.stringify(session.onlineAccessInfo) : null,
       },
@@ -21,8 +20,8 @@ export class PrismaSessionStorage {
         shop: session.shop,
         state: session.state,
         isOnline: session.isOnline,
-        scope: session.scope,
-        accessToken: session.accessToken,
+        scope: session.scope || '',
+        accessToken: session.accessToken || '',
         expires: session.expires,
         onlineAccessInfo: session.onlineAccessInfo ? JSON.stringify(session.onlineAccessInfo) : null,
       },
@@ -37,27 +36,26 @@ export class PrismaSessionStorage {
 
     if (!sessionData) return undefined;
 
-    const session = new Session({
+    return {
       id: sessionData.id,
       shop: sessionData.shop,
       state: sessionData.state,
       isOnline: sessionData.isOnline,
-    });
-
-    if (sessionData.scope) session.scope = sessionData.scope;
-    if (sessionData.accessToken) session.accessToken = sessionData.accessToken;
-    if (sessionData.expires) session.expires = sessionData.expires;
-    if (sessionData.onlineAccessInfo) {
-      session.onlineAccessInfo = JSON.parse(sessionData.onlineAccessInfo);
-    }
-
-    return session;
+      scope: sessionData.scope,
+      accessToken: sessionData.accessToken,
+      expires: sessionData.expires,
+      onlineAccessInfo: sessionData.onlineAccessInfo ? JSON.parse(sessionData.onlineAccessInfo) : undefined,
+    };
   }
 
   async deleteSession(id) {
-    await prisma.session.delete({
-      where: { id },
-    });
+    try {
+      await prisma.session.delete({
+        where: { id },
+      });
+    } catch (error) {
+      // Ignore if session doesn't exist
+    }
     return true;
   }
 
@@ -77,22 +75,15 @@ export class PrismaSessionStorage {
       where: { shop },
     });
 
-    return sessions.map((sessionData) => {
-      const session = new Session({
-        id: sessionData.id,
-        shop: sessionData.shop,
-        state: sessionData.state,
-        isOnline: sessionData.isOnline,
-      });
-
-      if (sessionData.scope) session.scope = sessionData.scope;
-      if (sessionData.accessToken) session.accessToken = sessionData.accessToken;
-      if (sessionData.expires) session.expires = sessionData.expires;
-      if (sessionData.onlineAccessInfo) {
-        session.onlineAccessInfo = JSON.parse(sessionData.onlineAccessInfo);
-      }
-
-      return session;
-    });
+    return sessions.map((sessionData) => ({
+      id: sessionData.id,
+      shop: sessionData.shop,
+      state: sessionData.state,
+      isOnline: sessionData.isOnline,
+      scope: sessionData.scope,
+      accessToken: sessionData.accessToken,
+      expires: sessionData.expires,
+      onlineAccessInfo: sessionData.onlineAccessInfo ? JSON.parse(sessionData.onlineAccessInfo) : undefined,
+    }));
   }
 }
