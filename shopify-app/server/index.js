@@ -41,26 +41,26 @@ app.post(
   shopify.processWebhooks({ webhookHandlers: {} })
 );
 
-// Verify all subsequent requests are authenticated
+// Serve static files from frontend directory
+app.use(express.static(path.join(__dirname, '../frontend')));
+
+// Health check endpoint (no auth required)
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'ok', timestamp: new Date().toISOString() });
+});
+
+// Root endpoint - serve the frontend (no auth required for initial load)
+app.get('/', shopify.ensureInstalledOnShop(), async (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/index.html'));
+});
+
+// Verify all subsequent API requests are authenticated
 app.use('/api/*', shopify.validateAuthenticatedSession());
 
 // API Routes
 app.use('/api/discounts', discountRoutes);
 app.use('/api/cart-rules', cartRulesRoutes);
 app.use('/api/webhooks', webhookRoutes);
-
-// Serve static files from frontend directory
-app.use(express.static(path.join(__dirname, '../frontend')));
-
-// Health check endpoint
-app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', timestamp: new Date().toISOString() });
-});
-
-// Root endpoint - serve the frontend
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/index.html'));
-});
 
 // Error handling middleware
 app.use((err, req, res, next) => {
