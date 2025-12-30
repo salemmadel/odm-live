@@ -1,7 +1,5 @@
-/* stylelint-disable selector-class-pattern, selector-no-qualifying-type, declaration-property-value-disallowed-list, selector-max-compound-selectors, selector-max-id */
 .list-social {
   display: flex;
-  flex-grow: 1;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
@@ -10,24 +8,25 @@
   .list-social {
     justify-content: center;
   }
-  li.list-social__item:first-child {
-    padding-left: 0;
-  }
 }
+
 .list-social__item .icon {
-  height: 1.8rem;
-  width: 1.8rem;
+  height: 2.2rem;
+  width: 2.2rem;
 }
 
 .list-social__link {
   align-items: center;
-  color: rgb(var(--color-foreground));
   display: flex;
-  padding: 1.3rem;
+  padding: 1.1rem;
+  color: rgb(var(--color-foreground));
+}
+
+.utility-bar .list-social__link {
+  padding: 0 0.8rem;
+  height: 3.8rem;
 }
 
 .list-social__link:hover .icon {
   transform: scale(1.07);
 }
-
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../.src/scss/component-list-social.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;AAEA;EACE;EACA;EACA;EACA;;;AAGF;EACE;IACE;;EAGF;IACE;;;AAIJ;EACE;EACA;;;AAGF;EACE;EACA;EACA;EACA;;;AAGF;EACE%22,%22file%22:%22component-list-social.css%22%7D */

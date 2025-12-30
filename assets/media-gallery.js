@@ -1,28 +1,117 @@
-"use strict";
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
-(self["webpackChunktheme_template"] = self["webpackChunktheme_template"] || []).push([["media-gallery"],{
+if (!customElements.get('media-gallery')) {
+  customElements.define(
+    'media-gallery',
+    class MediaGallery extends HTMLElement {
+      constructor() {
+        super();
+        this.elements = {
+          liveRegion: this.querySelector('[id^="GalleryStatus"]'),
+          viewer: this.querySelector('[id^="GalleryViewer"]'),
+          thumbnails: this.querySelector('[id^="GalleryThumbnails"]'),
+        };
+        this.mql = window.matchMedia('(min-width: 750px)');
+        if (!this.elements.thumbnails) return;
 
-/***/ "./.src/js/media-gallery.js":
-/*!**********************************!*\
-  !*** ./.src/js/media-gallery.js ***!
-  \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+        this.elements.viewer.addEventListener('slideChanged', debounce(this.onSlideChanged.bind(this), 500));
+        this.elements.thumbnails.querySelectorAll('[data-target]').forEach((mediaToSwitch) => {
+          mediaToSwitch
+            .querySelector('button')
+            .addEventListener('click', this.setActiveMedia.bind(this, mediaToSwitch.dataset.target, false));
+        });
+        if (this.dataset.desktopLayout.includes('thumbnail') && this.mql.matches) this.removeListSemantic();
+      }
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _global__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./global */ \"./.src/js/global.js\");\n/* eslint-disable no-undef, no-unused-vars, eqeqeq, camelcase, no-var, no-redeclare, no-useless-return, no-useless-constructor, no-self-assign */\n\n\n\nif (!customElements.get('media-gallery')) {\n  customElements.define('media-gallery', class MediaGallery extends HTMLElement {\n    constructor () {\n      super()\n      this.elements = {\n        liveRegion: this.querySelector('[id^=\"GalleryStatus\"]'),\n        viewer: this.querySelector('[id^=\"GalleryViewer\"]'),\n        thumbnails: this.querySelector('[id^=\"GalleryThumbnails\"]')\n      }\n      this.mql = window.matchMedia('(min-width: 750px)')\n      if (!this.elements.thumbnails) return\n\n      this.elements.viewer.addEventListener('slideChanged', (0,_global__WEBPACK_IMPORTED_MODULE_0__.debounce)(this.onSlideChanged.bind(this), 500))\n      this.elements.thumbnails.querySelectorAll('[data-target]').forEach((mediaToSwitch) => {\n        mediaToSwitch.querySelector('button').addEventListener('click', this.setActiveMedia.bind(this, mediaToSwitch.dataset.target, false))\n      })\n      if (this.dataset.desktopLayout !== 'stacked' && this.mql.matches) this.removeListSemantic()\n    }\n\n    onSlideChanged (event) {\n      const thumbnail = this.elements.thumbnails.querySelector(`[data-target=\"${event.detail.currentElement.dataset.mediaId}\"]`)\n      this.setActiveThumbnail(thumbnail)\n    }\n\n    setActiveMedia (mediaId, prepend) {\n      const activeMedia = this.elements.viewer.querySelector(`[data-media-id=\"${mediaId}\"]`)\n      this.elements.viewer.querySelectorAll('[data-media-id]').forEach((element) => {\n        element.classList.remove('is-active')\n      })\n      activeMedia.classList.add('is-active')\n\n      if (prepend) {\n        activeMedia.parentElement.prepend(activeMedia)\n        if (this.elements.thumbnails) {\n          const activeThumbnail = this.elements.thumbnails.querySelector(`[data-target=\"${mediaId}\"]`)\n          activeThumbnail.parentElement.prepend(activeThumbnail)\n        }\n        if (this.elements.viewer.slider) this.elements.viewer.resetPages()\n      }\n\n      this.preventStickyHeader()\n      window.setTimeout(() => {\n        if (this.elements.thumbnails) {\n          activeMedia.parentElement.scrollTo({ left: activeMedia.offsetLeft })\n        }\n        if (!this.elements.thumbnails || this.dataset.desktopLayout === 'stacked') {\n          activeMedia.scrollIntoView({ behavior: 'smooth' })\n        }\n      })\n      this.playActiveMedia(activeMedia)\n\n      if (!this.elements.thumbnails) return\n      const activeThumbnail = this.elements.thumbnails.querySelector(`[data-target=\"${mediaId}\"]`)\n      this.setActiveThumbnail(activeThumbnail)\n      this.announceLiveRegion(activeMedia, activeThumbnail.dataset.mediaPosition)\n    }\n\n    setActiveThumbnail (thumbnail) {\n      if (!this.elements.thumbnails || !thumbnail) return\n\n      this.elements.thumbnails.querySelectorAll('button').forEach((element) => element.removeAttribute('aria-current'))\n      thumbnail.querySelector('button').setAttribute('aria-current', true)\n      if (this.elements.thumbnails.isSlideVisible(thumbnail, 10)) return\n\n      this.elements.thumbnails.slider.scrollTo({ left: thumbnail.offsetLeft })\n    }\n\n    announceLiveRegion (activeItem, position) {\n      const image = activeItem.querySelector('.product__modal-opener--image img')\n      if (!image) return\n      image.onload = () => {\n        this.elements.liveRegion.setAttribute('aria-hidden', false)\n        this.elements.liveRegion.innerHTML = window.accessibilityStrings.imageAvailable.replace(\n          '[index]',\n          position\n        )\n        setTimeout(() => {\n          this.elements.liveRegion.setAttribute('aria-hidden', true)\n        }, 2000)\n      }\n      image.src = image.src\n    }\n\n    playActiveMedia (activeItem) {\n      (0,_global__WEBPACK_IMPORTED_MODULE_0__.pauseAllMedia)()\n      const deferredMedia = activeItem.querySelector('.deferred-media')\n      if (deferredMedia) deferredMedia.loadContent(false)\n    }\n\n    preventStickyHeader () {\n      this.stickyHeader = this.stickyHeader || document.querySelector('sticky-header')\n      if (!this.stickyHeader) return\n      this.stickyHeader.dispatchEvent(new Event('preventHeaderReveal'))\n    }\n\n    removeListSemantic () {\n      if (!this.elements.viewer.slider) return\n      this.elements.viewer.slider.setAttribute('role', 'presentation')\n      this.elements.viewer.sliderItems.forEach(slide => slide.setAttribute('role', 'presentation'))\n    }\n  })\n}\n\n\n//# sourceURL=webpack://theme-template/./.src/js/media-gallery.js?");
+      onSlideChanged(event) {
+        const thumbnail = this.elements.thumbnails.querySelector(
+          `[data-target="${event.detail.currentElement.dataset.mediaId}"]`
+        );
+        this.setActiveThumbnail(thumbnail);
+      }
 
-/***/ })
+      setActiveMedia(mediaId, prepend) {
+        const activeMedia =
+          this.elements.viewer.querySelector(`[data-media-id="${mediaId}"]`) ||
+          this.elements.viewer.querySelector('[data-media-id]');
+        if (!activeMedia) {
+          return;
+        }
+        this.elements.viewer.querySelectorAll('[data-media-id]').forEach((element) => {
+          element.classList.remove('is-active');
+        });
+        activeMedia?.classList?.add('is-active');
 
-},
-/******/ __webpack_require__ => { // webpackRuntimeModules
-/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ __webpack_require__.O(0, ["common"], () => (__webpack_exec__("./.src/js/media-gallery.js")));
-/******/ var __webpack_exports__ = __webpack_require__.O();
-/******/ }
-]);
+        if (prepend) {
+          activeMedia.parentElement.firstChild !== activeMedia && activeMedia.parentElement.prepend(activeMedia);
+
+          if (this.elements.thumbnails) {
+            const activeThumbnail = this.elements.thumbnails.querySelector(`[data-target="${mediaId}"]`);
+            activeThumbnail.parentElement.firstChild !== activeThumbnail && activeThumbnail.parentElement.prepend(activeThumbnail);
+          }
+
+          if (this.elements.viewer.slider) this.elements.viewer.resetPages();
+        }
+
+        this.preventStickyHeader();
+        window.setTimeout(() => {
+          if (!this.mql.matches || this.elements.thumbnails) {
+            activeMedia.parentElement.scrollTo({ left: activeMedia.offsetLeft });
+          }
+          const activeMediaRect = activeMedia.getBoundingClientRect();
+          // Don't scroll if the image is already in view
+          if (activeMediaRect.top > -0.5) return;
+          const top = activeMediaRect.top + window.scrollY;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        });
+        this.playActiveMedia(activeMedia);
+
+        if (!this.elements.thumbnails) return;
+        const activeThumbnail = this.elements.thumbnails.querySelector(`[data-target="${mediaId}"]`);
+        this.setActiveThumbnail(activeThumbnail);
+        this.announceLiveRegion(activeMedia, activeThumbnail.dataset.mediaPosition);
+      }
+
+      setActiveThumbnail(thumbnail) {
+        if (!this.elements.thumbnails || !thumbnail) return;
+
+        this.elements.thumbnails
+          .querySelectorAll('button')
+          .forEach((element) => element.removeAttribute('aria-current'));
+        thumbnail.querySelector('button').setAttribute('aria-current', true);
+        if (this.elements.thumbnails.isSlideVisible(thumbnail, 10)) return;
+
+        this.elements.thumbnails.slider.scrollTo({ left: thumbnail.offsetLeft });
+      }
+
+      announceLiveRegion(activeItem, position) {
+        const image = activeItem.querySelector('.product__modal-opener--image img');
+        if (!image) return;
+        image.onload = () => {
+          this.elements.liveRegion.setAttribute('aria-hidden', false);
+          this.elements.liveRegion.innerHTML = window.accessibilityStrings.imageAvailable.replace('[index]', position);
+          setTimeout(() => {
+            this.elements.liveRegion.setAttribute('aria-hidden', true);
+          }, 2000);
+        };
+        image.src = image.src;
+      }
+
+      playActiveMedia(activeItem) {
+        window.pauseAllMedia();
+        const deferredMedia = activeItem.querySelector('.deferred-media');
+        if (deferredMedia) deferredMedia.loadContent(false);
+      }
+
+      preventStickyHeader() {
+        this.stickyHeader = this.stickyHeader || document.querySelector('sticky-header');
+        if (!this.stickyHeader) return;
+        this.stickyHeader.dispatchEvent(new Event('preventHeaderReveal'));
+      }
+
+      removeListSemantic() {
+        if (!this.elements.viewer.slider) return;
+        this.elements.viewer.slider.setAttribute('role', 'presentation');
+        this.elements.viewer.sliderItems.forEach((slide) => slide.setAttribute('role', 'presentation'));
+      }
+    }
+  );
+}

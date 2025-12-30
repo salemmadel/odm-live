@@ -1,28 +1,277 @@
-"use strict";
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
-(self["webpackChunktheme_template"] = self["webpackChunktheme_template"] || []).push([["predictive-search"],{
+class PredictiveSearch extends SearchForm {
+  constructor() {
+    super();
+    this.cachedResults = {};
+    this.predictiveSearchResults = this.querySelector('[data-predictive-search]');
+    this.allPredictiveSearchInstances = document.querySelectorAll('predictive-search');
+    this.isOpen = false;
+    this.abortController = new AbortController();
+    this.searchTerm = '';
 
-/***/ "./.src/js/predictive-search.js":
-/*!**************************************!*\
-  !*** ./.src/js/predictive-search.js ***!
-  \**************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+    this.setupEventListeners();
+  }
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _global__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./global */ \"./.src/js/global.js\");\n/* eslint-disable no-undef, no-unused-vars, eqeqeq, camelcase, no-var, no-redeclare, no-useless-return, no-useless-constructor, no-self-assign */\n\n\n\nclass PredictiveSearch extends HTMLElement {\n  constructor () {\n    super()\n    this.cachedResults = {}\n    this.input = this.querySelector('input[type=\"search\"]')\n    this.predictiveSearchResults = this.querySelector('[data-predictive-search]')\n    this.isOpen = false\n\n    this.setupEventListeners()\n  }\n\n  setupEventListeners () {\n    const form = this.querySelector('form.search')\n    form.addEventListener('submit', this.onFormSubmit.bind(this))\n\n    this.input.addEventListener('input', (0,_global__WEBPACK_IMPORTED_MODULE_0__.debounce)((event) => {\n      this.onChange(event)\n    }, 300).bind(this))\n    this.input.addEventListener('focus', this.onFocus.bind(this))\n    this.addEventListener('focusout', this.onFocusOut.bind(this))\n    this.addEventListener('keyup', this.onKeyup.bind(this))\n    this.addEventListener('keydown', this.onKeydown.bind(this))\n  }\n\n  getQuery () {\n    return this.input.value.trim()\n  }\n\n  onChange () {\n    const searchTerm = this.getQuery()\n\n    if (!searchTerm.length) {\n      this.close(true)\n      return\n    }\n\n    this.getSearchResults(searchTerm)\n  }\n\n  onFormSubmit (event) {\n    if (!this.getQuery().length || this.querySelector('[aria-selected=\"true\"] a')) event.preventDefault()\n  }\n\n  onFocus () {\n    const searchTerm = this.getQuery()\n\n    if (!searchTerm.length) return\n\n    if (this.getAttribute('results') === 'true') {\n      this.open()\n    } else {\n      this.getSearchResults(searchTerm)\n    }\n  }\n\n  onFocusOut () {\n    setTimeout(() => {\n      if (!this.contains(document.activeElement)) this.close()\n    })\n  }\n\n  onKeyup (event) {\n    if (!this.getQuery().length) this.close(true)\n    event.preventDefault()\n\n    switch (event.code) {\n      case 'ArrowUp':\n        this.switchOption('up')\n        break\n      case 'ArrowDown':\n        this.switchOption('down')\n        break\n      case 'Enter':\n        this.selectOption()\n        break\n    }\n  }\n\n  onKeydown (event) {\n    // Prevent the cursor from moving in the input when using the up and down arrow keys\n    if (\n      event.code === 'ArrowUp' ||\n      event.code === 'ArrowDown'\n    ) {\n      event.preventDefault()\n    }\n  }\n\n  switchOption (direction) {\n    if (!this.getAttribute('open')) return\n\n    const moveUp = direction === 'up'\n    const selectedElement = this.querySelector('[aria-selected=\"true\"]')\n    const allElements = this.querySelectorAll('li')\n    let activeElement = this.querySelector('li')\n\n    if (moveUp && !selectedElement) return\n\n    this.statusElement.textContent = ''\n\n    if (!moveUp && selectedElement) {\n      activeElement = selectedElement.nextElementSibling || allElements[0]\n    } else if (moveUp) {\n      activeElement = selectedElement.previousElementSibling || allElements[allElements.length - 1]\n    }\n\n    if (activeElement === selectedElement) return\n\n    activeElement.setAttribute('aria-selected', true)\n    if (selectedElement) selectedElement.setAttribute('aria-selected', false)\n\n    this.setLiveRegionText(activeElement.textContent)\n    this.input.setAttribute('aria-activedescendant', activeElement.id)\n  }\n\n  selectOption () {\n    const selectedProduct = this.querySelector('[aria-selected=\"true\"] a, [aria-selected=\"true\"] button')\n\n    if (selectedProduct) selectedProduct.click()\n  }\n\n  getSearchResults (searchTerm) {\n    const queryKey = searchTerm.replace(' ', '-').toLowerCase()\n    this.setLiveRegionLoadingState()\n\n    if (this.cachedResults[queryKey]) {\n      this.renderSearchResults(this.cachedResults[queryKey])\n      return\n    }\n\n    fetch(`${routes.predictive_search_url}?q=${encodeURIComponent(searchTerm)}&${encodeURIComponent('resources[type]')}=product&${encodeURIComponent('resources[limit]')}=4&section_id=predictive-search`)\n      .then((response) => {\n        if (!response.ok) {\n          const error = new Error(response.status)\n          this.close()\n          throw error\n        }\n\n        return response.text()\n      })\n      .then((text) => {\n        const resultsMarkup = new DOMParser().parseFromString(text, 'text/html').querySelector('#shopify-section-predictive-search').innerHTML\n        this.cachedResults[queryKey] = resultsMarkup\n        this.renderSearchResults(resultsMarkup)\n      })\n      .catch((error) => {\n        this.close()\n        throw error\n      })\n  }\n\n  setLiveRegionLoadingState () {\n    this.statusElement = this.statusElement || this.querySelector('.predictive-search-status')\n    this.loadingText = this.loadingText || this.getAttribute('data-loading-text')\n\n    this.setLiveRegionText(this.loadingText)\n    this.setAttribute('loading', true)\n  }\n\n  setLiveRegionText (statusText) {\n    this.statusElement.setAttribute('aria-hidden', 'false')\n    this.statusElement.textContent = statusText\n\n    setTimeout(() => {\n      this.statusElement.setAttribute('aria-hidden', 'true')\n    }, 1000)\n  }\n\n  renderSearchResults (resultsMarkup) {\n    this.predictiveSearchResults.innerHTML = resultsMarkup\n    this.setAttribute('results', true)\n\n    this.setLiveRegionResults()\n    this.open()\n  }\n\n  setLiveRegionResults () {\n    this.removeAttribute('loading')\n    this.setLiveRegionText(this.querySelector('[data-predictive-search-live-region-count-value]').textContent)\n  }\n\n  getResultsMaxHeight () {\n    this.resultsMaxHeight = window.innerHeight - document.getElementById('shopify-section-header').getBoundingClientRect().bottom\n    return this.resultsMaxHeight\n  }\n\n  open () {\n    this.predictiveSearchResults.style.maxHeight = this.resultsMaxHeight || `${this.getResultsMaxHeight()}px`\n    this.setAttribute('open', true)\n    this.input.setAttribute('aria-expanded', true)\n    this.isOpen = true\n  }\n\n  close (clearSearchTerm = false) {\n    if (clearSearchTerm) {\n      this.input.value = ''\n      this.removeAttribute('results')\n    }\n\n    const selected = this.querySelector('[aria-selected=\"true\"]')\n\n    if (selected) selected.setAttribute('aria-selected', false)\n\n    this.input.setAttribute('aria-activedescendant', '')\n    this.removeAttribute('open')\n    this.input.setAttribute('aria-expanded', false)\n    this.resultsMaxHeight = false\n    this.predictiveSearchResults.removeAttribute('style')\n\n    this.isOpen = false\n  }\n}\n\ncustomElements.define('predictive-search', PredictiveSearch)\n\n\n//# sourceURL=webpack://theme-template/./.src/js/predictive-search.js?");
+  setupEventListeners() {
+    this.input.form.addEventListener('submit', this.onFormSubmit.bind(this));
 
-/***/ })
+    this.input.addEventListener('focus', this.onFocus.bind(this));
+    this.addEventListener('focusout', this.onFocusOut.bind(this));
+    this.addEventListener('keyup', this.onKeyup.bind(this));
+    this.addEventListener('keydown', this.onKeydown.bind(this));
+  }
 
-},
-/******/ __webpack_require__ => { // webpackRuntimeModules
-/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ __webpack_require__.O(0, ["common"], () => (__webpack_exec__("./.src/js/predictive-search.js")));
-/******/ var __webpack_exports__ = __webpack_require__.O();
-/******/ }
-]);
+  getQuery() {
+    return this.input.value.trim();
+  }
+
+  onChange() {
+    super.onChange();
+    const newSearchTerm = this.getQuery();
+    if (!this.searchTerm || !newSearchTerm.startsWith(this.searchTerm)) {
+      // Remove the results when they are no longer relevant for the new search term
+      // so they don't show up when the dropdown opens again
+      this.querySelector('#predictive-search-results-groups-wrapper')?.remove();
+    }
+
+    // Update the term asap, don't wait for the predictive search query to finish loading
+    this.updateSearchForTerm(this.searchTerm, newSearchTerm);
+
+    this.searchTerm = newSearchTerm;
+
+    if (!this.searchTerm.length) {
+      this.close(true);
+      return;
+    }
+
+    this.getSearchResults(this.searchTerm);
+  }
+
+  onFormSubmit(event) {
+    if (!this.getQuery().length || this.querySelector('[aria-selected="true"] a')) event.preventDefault();
+  }
+
+  onFormReset(event) {
+    super.onFormReset(event);
+    if (super.shouldResetForm()) {
+      this.searchTerm = '';
+      this.abortController.abort();
+      this.abortController = new AbortController();
+      this.closeResults(true);
+    }
+  }
+
+  onFocus() {
+    const currentSearchTerm = this.getQuery();
+
+    if (!currentSearchTerm.length) return;
+
+    if (this.searchTerm !== currentSearchTerm) {
+      // Search term was changed from other search input, treat it as a user change
+      this.onChange();
+    } else if (this.getAttribute('results') === 'true') {
+      this.open();
+    } else {
+      this.getSearchResults(this.searchTerm);
+    }
+  }
+
+  onFocusOut() {
+    setTimeout(() => {
+      if (!this.contains(document.activeElement)) this.close();
+    });
+  }
+
+  onKeyup(event) {
+    if (!this.getQuery().length) this.close(true);
+    event.preventDefault();
+
+    switch (event.code) {
+      case 'ArrowUp':
+        this.switchOption('up');
+        break;
+      case 'ArrowDown':
+        this.switchOption('down');
+        break;
+      case 'Enter':
+        this.selectOption();
+        break;
+    }
+  }
+
+  onKeydown(event) {
+    // Prevent the cursor from moving in the input when using the up and down arrow keys
+    if (event.code === 'ArrowUp' || event.code === 'ArrowDown') {
+      event.preventDefault();
+    }
+  }
+
+  updateSearchForTerm(previousTerm, newTerm) {
+    const searchForTextElement = this.querySelector('[data-predictive-search-search-for-text]');
+    const currentButtonText = searchForTextElement?.innerText;
+    if (currentButtonText) {
+      if (currentButtonText.match(new RegExp(previousTerm, 'g')).length > 1) {
+        // The new term matches part of the button text and not just the search term, do not replace to avoid mistakes
+        return;
+      }
+      const newButtonText = currentButtonText.replace(previousTerm, newTerm);
+      searchForTextElement.innerText = newButtonText;
+    }
+  }
+
+  switchOption(direction) {
+    if (!this.getAttribute('open')) return;
+
+    const moveUp = direction === 'up';
+    const selectedElement = this.querySelector('[aria-selected="true"]');
+
+    // Filter out hidden elements (duplicated page and article resources) thanks
+    // to this https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetParent
+    const allVisibleElements = Array.from(this.querySelectorAll('li, button.predictive-search__item')).filter(
+      (element) => element.offsetParent !== null
+    );
+    let activeElementIndex = 0;
+
+    if (moveUp && !selectedElement) return;
+
+    let selectedElementIndex = -1;
+    let i = 0;
+
+    while (selectedElementIndex === -1 && i <= allVisibleElements.length) {
+      if (allVisibleElements[i] === selectedElement) {
+        selectedElementIndex = i;
+      }
+      i++;
+    }
+
+    this.statusElement.textContent = '';
+
+    if (!moveUp && selectedElement) {
+      activeElementIndex = selectedElementIndex === allVisibleElements.length - 1 ? 0 : selectedElementIndex + 1;
+    } else if (moveUp) {
+      activeElementIndex = selectedElementIndex === 0 ? allVisibleElements.length - 1 : selectedElementIndex - 1;
+    }
+
+    if (activeElementIndex === selectedElementIndex) return;
+
+    const activeElement = allVisibleElements[activeElementIndex];
+
+    activeElement.setAttribute('aria-selected', true);
+    if (selectedElement) selectedElement.setAttribute('aria-selected', false);
+
+    this.input.setAttribute('aria-activedescendant', activeElement.id);
+  }
+
+  selectOption() {
+    const selectedOption = this.querySelector('[aria-selected="true"] a, button[aria-selected="true"]');
+
+    if (selectedOption) selectedOption.click();
+  }
+
+  getSearchResults(searchTerm) {
+    const queryKey = searchTerm.replace(' ', '-').toLowerCase();
+    this.setLiveRegionLoadingState();
+
+    if (this.cachedResults[queryKey]) {
+      this.renderSearchResults(this.cachedResults[queryKey]);
+      return;
+    }
+
+    fetch(`${routes.predictive_search_url}?q=${encodeURIComponent(searchTerm)}&section_id=predictive-search`, {
+      signal: this.abortController.signal,
+    })
+      .then((response) => {
+        if (!response.ok) {
+          var error = new Error(response.status);
+          this.close();
+          throw error;
+        }
+
+        return response.text();
+      })
+      .then((text) => {
+        const resultsMarkup = new DOMParser()
+          .parseFromString(text, 'text/html')
+          .querySelector('#shopify-section-predictive-search').innerHTML;
+        // Save bandwidth keeping the cache in all instances synced
+        this.allPredictiveSearchInstances.forEach((predictiveSearchInstance) => {
+          predictiveSearchInstance.cachedResults[queryKey] = resultsMarkup;
+        });
+        this.renderSearchResults(resultsMarkup);
+      })
+      .catch((error) => {
+        if (error?.code === 20) {
+          // Code 20 means the call was aborted
+          return;
+        }
+        this.close();
+        throw error;
+      });
+  }
+
+  setLiveRegionLoadingState() {
+    this.statusElement = this.statusElement || this.querySelector('.predictive-search-status');
+    this.loadingText = this.loadingText || this.getAttribute('data-loading-text');
+
+    this.setLiveRegionText(this.loadingText);
+    this.setAttribute('loading', true);
+  }
+
+  setLiveRegionText(statusText) {
+    this.statusElement.setAttribute('aria-hidden', 'false');
+    this.statusElement.textContent = statusText;
+
+    setTimeout(() => {
+      this.statusElement.setAttribute('aria-hidden', 'true');
+    }, 1000);
+  }
+
+  renderSearchResults(resultsMarkup) {
+    this.predictiveSearchResults.innerHTML = resultsMarkup;
+    this.setAttribute('results', true);
+
+    this.setLiveRegionResults();
+    this.open();
+  }
+
+  setLiveRegionResults() {
+    this.removeAttribute('loading');
+    this.setLiveRegionText(this.querySelector('[data-predictive-search-live-region-count-value]').textContent);
+  }
+
+  getResultsMaxHeight() {
+    this.resultsMaxHeight =
+      window.innerHeight - document.querySelector('.section-header')?.getBoundingClientRect().bottom;
+    return this.resultsMaxHeight;
+  }
+
+  open() {
+    this.predictiveSearchResults.style.maxHeight = this.resultsMaxHeight || `${this.getResultsMaxHeight()}px`;
+    this.setAttribute('open', true);
+    this.input.setAttribute('aria-expanded', true);
+    this.isOpen = true;
+  }
+
+  close(clearSearchTerm = false) {
+    this.closeResults(clearSearchTerm);
+    this.isOpen = false;
+  }
+
+  closeResults(clearSearchTerm = false) {
+    if (clearSearchTerm) {
+      this.input.value = '';
+      this.removeAttribute('results');
+    }
+    const selected = this.querySelector('[aria-selected="true"]');
+
+    if (selected) selected.setAttribute('aria-selected', false);
+
+    this.input.setAttribute('aria-activedescendant', '');
+    this.removeAttribute('loading');
+    this.removeAttribute('open');
+    this.input.setAttribute('aria-expanded', false);
+    this.resultsMaxHeight = false;
+    this.predictiveSearchResults.removeAttribute('style');
+  }
+}
+
+customElements.define('predictive-search', PredictiveSearch);

@@ -1,28 +1,122 @@
-"use strict";
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
-(self["webpackChunktheme_template"] = self["webpackChunktheme_template"] || []).push([["quick-add"],{
+if (!customElements.get('quick-add-modal')) {
+  customElements.define(
+    'quick-add-modal',
+    class QuickAddModal extends ModalDialog {
+      constructor() {
+        super();
+        this.modalContent = this.querySelector('[id^="QuickAddInfo-"]');
 
-/***/ "./.src/js/quick-add.js":
-/*!******************************!*\
-  !*** ./.src/js/quick-add.js ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+        this.addEventListener('product-info:loaded', ({ target }) => {
+          target.addPreProcessCallback(this.preprocessHTML.bind(this));
+        });
+      }
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _global__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./global */ \"./.src/js/global.js\");\n/* eslint-disable no-undef, no-unused-vars, eqeqeq, camelcase, no-var, no-redeclare, no-useless-return, no-useless-constructor, no-self-assign */\n\n\n\nif (!customElements.get('quick-add-modal')) {\n  customElements.define('quick-add-modal', class QuickAddModal extends _global__WEBPACK_IMPORTED_MODULE_0__.ModalDialog {\n    constructor () {\n      super()\n      this.modalContent = this.querySelector('[id^=\"QuickAddInfo-\"]')\n    }\n\n    hide (preventFocus = false) {\n      const cartNotification = document.querySelector('cart-notification')\n      if (cartNotification) cartNotification.focus(this.openedBy)\n      this.modalContent.innerHTML = ''\n\n      if (preventFocus) this.openedBy = null\n      super.hide()\n    }\n\n    show (opener) {\n      opener.setAttribute('aria-disabled', true)\n      opener.classList.add('loading')\n      opener.querySelector('.loading-overlay__spinner').classList.remove('hidden')\n\n      fetch(opener.getAttribute('data-product-url'))\n        .then((response) => response.text())\n        .then((responseText) => {\n          const responseHTML = new DOMParser().parseFromString(responseText, 'text/html')\n          this.productElement = responseHTML.querySelector('section[id^=\"MainProduct-\"]')\n          this.preventDuplicatedIDs()\n          this.removeDOMElements()\n          this.setInnerHTML(this.modalContent, this.productElement.innerHTML)\n\n          if (window.Shopify && Shopify.PaymentButton) {\n            Shopify.PaymentButton.init()\n          }\n\n          if (window.ProductModel) window.ProductModel.loadShopifyXR()\n\n          this.removeGalleryListSemantic()\n          this.preventVariantURLSwitching()\n          super.show(opener)\n        })\n        .finally(() => {\n          opener.removeAttribute('aria-disabled')\n          opener.classList.remove('loading')\n          opener.querySelector('.loading-overlay__spinner').classList.add('hidden')\n        })\n      \n        // Closing other modals after item added - listening to cart:added event\n        document.addEventListener(\"cart:added\", function(e){\n          const activeModals = document.querySelectorAll('quick-add-modal[open], modal-dialog[open]');\n          activeModals.forEach(function(e) {\n            e.hide();\n          });\n        });\n    }\n\n    setInnerHTML (element, html) {\n      element.innerHTML = html\n\n      // Reinjects the script tags to allow execution. By default, scripts are disabled when using element.innerHTML.\n      element.querySelectorAll('script').forEach(oldScriptTag => {\n        const newScriptTag = document.createElement('script')\n        Array.from(oldScriptTag.attributes).forEach(attribute => {\n          newScriptTag.setAttribute(attribute.name, attribute.value)\n        })\n        newScriptTag.appendChild(document.createTextNode(oldScriptTag.innerHTML))\n        oldScriptTag.parentNode.replaceChild(newScriptTag, oldScriptTag)\n      })\n    }\n\n    preventVariantURLSwitching () {\n      try {\n        this.modalContent.querySelector('variant-radios,variant-selects').setAttribute('data-update-url', 'false')\n      } catch (e) {\n        console.warn('Quick Add: Unable to prevent variant URL switching.', e);\n      }\n    }\n\n    removeDOMElements () {\n      const pickupAvailability = this.productElement.querySelector('pickup-availability')\n      if (pickupAvailability) pickupAvailability.remove()\n\n      const productModal = this.productElement.querySelector('product-modal')\n      if (productModal) productModal.remove()\n    }\n\n    preventDuplicatedIDs () {\n      const sectionId = this.productElement.dataset.section\n      this.productElement.innerHTML = this.productElement.innerHTML.replaceAll(sectionId, `quickadd-${sectionId}`)\n      this.productElement.querySelectorAll('variant-selects, variant-radios').forEach((variantSelect) => {\n        variantSelect.dataset.originalSection = sectionId\n      })\n    }\n\n    removeGalleryListSemantic () {\n      const galleryList = this.modalContent.querySelector('[id^=\"Slider-Gallery\"]')\n      if (!galleryList) return\n\n      galleryList.setAttribute('role', 'presentation')\n      galleryList.querySelectorAll('[id^=\"Slide-\"]').forEach(li => li.setAttribute('role', 'presentation'))\n    }\n  })\n}\n\n\n//# sourceURL=webpack://theme-template/./.src/js/quick-add.js?");
+      hide(preventFocus = false) {
+        const cartNotification = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
+        if (cartNotification) cartNotification.setActiveElement(this.openedBy);
+        this.modalContent.innerHTML = '';
 
-/***/ })
+        if (preventFocus) this.openedBy = null;
+        super.hide();
+      }
 
-},
-/******/ __webpack_require__ => { // webpackRuntimeModules
-/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ __webpack_require__.O(0, ["common"], () => (__webpack_exec__("./.src/js/quick-add.js")));
-/******/ var __webpack_exports__ = __webpack_require__.O();
-/******/ }
-]);
+      show(opener) {
+        opener.setAttribute('aria-disabled', true);
+        opener.classList.add('loading');
+        opener.querySelector('.loading__spinner').classList.remove('hidden');
+
+        fetch(opener.getAttribute('data-product-url'))
+          .then((response) => response.text())
+          .then((responseText) => {
+            const responseHTML = new DOMParser().parseFromString(responseText, 'text/html');
+            const productElement = responseHTML.querySelector('product-info');
+
+            this.preprocessHTML(productElement);
+            HTMLUpdateUtility.setInnerHTML(this.modalContent, productElement.outerHTML);
+
+            if (window.Shopify && Shopify.PaymentButton) {
+              Shopify.PaymentButton.init();
+            }
+            if (window.ProductModel) window.ProductModel.loadShopifyXR();
+
+            super.show(opener);
+          })
+          .finally(() => {
+            opener.removeAttribute('aria-disabled');
+            opener.classList.remove('loading');
+            opener.querySelector('.loading__spinner').classList.add('hidden');
+          });
+      }
+
+      preprocessHTML(productElement) {
+        productElement.classList.forEach((classApplied) => {
+          if (classApplied.startsWith('color-') || classApplied === 'gradient')
+            this.modalContent.classList.add(classApplied);
+        });
+        this.preventDuplicatedIDs(productElement);
+        this.removeDOMElements(productElement);
+        this.removeGalleryListSemantic(productElement);
+        this.updateImageSizes(productElement);
+        this.preventVariantURLSwitching(productElement);
+      }
+
+      preventVariantURLSwitching(productElement) {
+        productElement.setAttribute('data-update-url', 'false');
+      }
+
+      removeDOMElements(productElement) {
+        const pickupAvailability = productElement.querySelector('pickup-availability');
+        if (pickupAvailability) pickupAvailability.remove();
+
+        const productModal = productElement.querySelector('product-modal');
+        if (productModal) productModal.remove();
+
+        const modalDialog = productElement.querySelectorAll('modal-dialog');
+        if (modalDialog) modalDialog.forEach((modal) => modal.remove());
+      }
+
+      preventDuplicatedIDs(productElement) {
+        const sectionId = productElement.dataset.section;
+
+        const oldId = sectionId;
+        const newId = `quickadd-${sectionId}`;
+        productElement.innerHTML = productElement.innerHTML.replaceAll(oldId, newId);
+        Array.from(productElement.attributes).forEach((attribute) => {
+          if (attribute.value.includes(oldId)) {
+            productElement.setAttribute(attribute.name, attribute.value.replace(oldId, newId));
+          }
+        });
+
+        productElement.dataset.originalSection = sectionId;
+      }
+
+      removeGalleryListSemantic(productElement) {
+        const galleryList = productElement.querySelector('[id^="Slider-Gallery"]');
+        if (!galleryList) return;
+
+        galleryList.setAttribute('role', 'presentation');
+        galleryList.querySelectorAll('[id^="Slide-"]').forEach((li) => li.setAttribute('role', 'presentation'));
+      }
+
+      updateImageSizes(productElement) {
+        const product = productElement.querySelector('.product');
+        const desktopColumns = product?.classList.contains('product--columns');
+        if (!desktopColumns) return;
+
+        const mediaImages = product.querySelectorAll('.product__media img');
+        if (!mediaImages.length) return;
+
+        let mediaImageSizes =
+          '(min-width: 1000px) 715px, (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)';
+
+        if (product.classList.contains('product--medium')) {
+          mediaImageSizes = mediaImageSizes.replace('715px', '605px');
+        } else if (product.classList.contains('product--small')) {
+          mediaImageSizes = mediaImageSizes.replace('715px', '495px');
+        }
+
+        mediaImages.forEach((img) => img.setAttribute('sizes', mediaImageSizes));
+      }
+    }
+  );
+}

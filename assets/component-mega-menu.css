@@ -1,4 +1,3 @@
-/* stylelint-disable selector-class-pattern, selector-no-qualifying-type, declaration-property-value-disallowed-list, selector-max-compound-selectors, selector-max-id */
 .mega-menu {
   position: static;
 }
@@ -10,12 +9,11 @@
   border-right: 0;
   left: 0;
   overflow-y: auto;
-  padding-bottom: 2.4rem;
-  padding-top: 2.4rem;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
   position: absolute;
   right: 0;
   top: 100%;
-  z-index: -1;
 }
 
 .shopify-section-header-sticky .mega-menu__content {
@@ -37,65 +35,37 @@
 }
 
 .mega-menu__list {
-  display: flex;
-  gap: 2.4rem 4rem;
-  justify-content: center;
+  display: grid;
+  gap: 1.8rem 4rem;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   list-style: none;
 }
 
 .mega-menu__link {
   color: rgba(var(--color-foreground), 0.75);
   display: block;
-  font-size: 1.3rem;
   line-height: calc(1 + 0.3 / var(--font-body-scale));
   padding-bottom: 0.6rem;
   padding-top: 0.6rem;
   text-decoration: none;
   transition: text-decoration var(--duration-short) ease;
   word-wrap: break-word;
-  position: relative;
 }
 
 .mega-menu__link--level-2 {
-  font-size: 1.4rem;
-}
-
-.list-menu__item--has-image {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  text-align: center;
-}
-
-.mega-menu__link--level-2:not(:only-child) {
-  margin-bottom: 0.8rem;
+  font-weight: bold;
 }
 
 .header--top-center .mega-menu__list {
-  column-gap: 0;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-}
-
-.menu_item_icon--desktop {
-  height: auto;
-  min-width: 85px;
-  padding-right: 0.5rem;
-  max-width: 100%;
-}
-
-.list-menu__item--icon {
-  height: auto;
-  width: 60px;
+  flex-wrap: wrap;
+  column-gap: 0;
 }
 
 .header--top-center .mega-menu__list > li {
-  flex-basis: 0;
-  padding-right: 2.5rem;
-  white-space: nowrap;
   width: 16%;
+  padding-right: 2.4rem;
 }
 
 .mega-menu__link:hover,
@@ -115,38 +85,3 @@
 .mega-menu__list--condensed .mega-menu__link {
   font-weight: normal;
 }
-
-.mega-menu__link-badge {
-  background-color: rgb(var(--color-badge-background));
-  border: 1px solid transparent;
-  border-color: rgba(var(--color-badge-border), var(--alpha-badge-border));
-  border-radius: var(--badge-corner-radius);
-  color: rgb(var(--color-foreground));
-  color: rgb(var(--color-foreground));
-  display: inline-block;
-  font-size: 1.25rem;
-  letter-spacing: 0.1rem;
-  line-height: 1;
-  margin: 1rem;
-  padding: 0.5rem 0.75rem;
-  text-align: center;
-  word-break: break-word;
-}
-
-.mega-menu__link-badge-status {
-  background-color: #000;
-  color: #fff;
-  right: -2.5rem;
-  position: absolute;
-  z-index: 1;
-}
-
-.menu-drawer__menu-item-badge-status {
-  background-color: #000;
-  color: #fff;
-  position: relative;
-  margin: 0 1rem;
-  z-index: 1;
-}
-
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../.src/scss/component-mega-menu.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;AAEA;EACE;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;EACA;;;AAGF;EACE;EACA;;;AAGF;EACE;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;;;AAGF;EACE;EACA;;;AAGF;EACE;EACA;EACA;EACA;;;AAGF;AAAA;EAEE;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;EACA;EAA4C;EAC5C;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA%22,%22file%22:%22component-mega-menu.css%22%7D */

@@ -1,26 +1,85 @@
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
-(self["webpackChunktheme_template"] = self["webpackChunktheme_template"] || []).push([["customer"],{
+const selectors = {
+  customerAddresses: '[data-customer-addresses]',
+  addressCountrySelect: '[data-address-country-select]',
+  addressContainer: '[data-address]',
+  toggleAddressButton: 'button[aria-expanded]',
+  cancelAddressButton: 'button[type="reset"]',
+  deleteAddressButton: 'button[data-confirm-message]',
+};
 
-/***/ "./.src/js/customer.js":
-/*!*****************************!*\
-  !*** ./.src/js/customer.js ***!
-  \*****************************/
-/***/ (() => {
+const attributes = {
+  expanded: 'aria-expanded',
+  confirmMessage: 'data-confirm-message',
+};
 
-eval("/* eslint-disable no-undef, no-unused-vars, eqeqeq, camelcase, no-var, no-redeclare, no-useless-return, no-useless-constructor, no-self-assign */\n\nconst selectors = {\n  customerAddresses: '[data-customer-addresses]',\n  addressCountrySelect: '[data-address-country-select]',\n  addressContainer: '[data-address]',\n  toggleAddressButton: 'button[aria-expanded]',\n  cancelAddressButton: 'button[type=\"reset\"]',\n  deleteAddressButton: 'button[data-confirm-message]'\n}\n\nconst attributes = {\n  expanded: 'aria-expanded',\n  confirmMessage: 'data-confirm-message'\n}\n\nclass CustomerAddresses {\n  constructor () {\n    this.elements = this._getElements()\n    if (Object.keys(this.elements).length === 0) return\n    this._setupCountries()\n    this._setupEventListeners()\n  }\n\n  _getElements () {\n    const container = document.querySelector(selectors.customerAddresses)\n    return container\n      ? {\n          container,\n          addressContainer: container.querySelector(selectors.addressContainer),\n          toggleButtons: document.querySelectorAll(\n            selectors.toggleAddressButton\n          ),\n          cancelButtons: container.querySelectorAll(\n            selectors.cancelAddressButton\n          ),\n          deleteButtons: container.querySelectorAll(\n            selectors.deleteAddressButton\n          ),\n          countrySelects: container.querySelectorAll(\n            selectors.addressCountrySelect\n          )\n        }\n      : {}\n  }\n\n  _setupCountries () {\n    if (Shopify && Shopify.CountryProvinceSelector) {\n      // eslint-disable-next-line no-new\n      new Shopify.CountryProvinceSelector(\n        'AddressCountryNew',\n        'AddressProvinceNew',\n        {\n          hideElement: 'AddressProvinceContainerNew'\n        }\n      )\n      this.elements.countrySelects.forEach((select) => {\n        const formId = select.dataset.formId\n        // eslint-disable-next-line no-new\n        new Shopify.CountryProvinceSelector(\n          `AddressCountry_${formId}`,\n          `AddressProvince_${formId}`,\n          {\n            hideElement: `AddressProvinceContainer_${formId}`\n          }\n        )\n      })\n    }\n  }\n\n  _setupEventListeners () {\n    this.elements.toggleButtons.forEach((element) => {\n      element.addEventListener('click', this._handleAddEditButtonClick)\n    })\n    this.elements.cancelButtons.forEach((element) => {\n      element.addEventListener('click', this._handleCancelButtonClick)\n    })\n    this.elements.deleteButtons.forEach((element) => {\n      element.addEventListener('click', this._handleDeleteButtonClick)\n    })\n  }\n\n  _toggleExpanded (target) {\n    target.setAttribute(\n      attributes.expanded,\n      (target.getAttribute(attributes.expanded) === 'false').toString()\n    )\n  }\n\n  _handleAddEditButtonClick = ({ currentTarget }) => {\n    this._toggleExpanded(currentTarget)\n  }\n\n  _handleCancelButtonClick = ({ currentTarget }) => {\n    this._toggleExpanded(\n      currentTarget\n        .closest(selectors.addressContainer)\n        .querySelector(`[${attributes.expanded}]`)\n    )\n  }\n\n  _handleDeleteButtonClick = ({ currentTarget }) => {\n    // eslint-disable-next-line no-alert\n    if (confirm(currentTarget.getAttribute(attributes.confirmMessage))) {\n      Shopify.postLink(currentTarget.dataset.target, {\n        parameters: { _method: 'delete' }\n      })\n    }\n  }\n}\n/* Manage addresses buttons click (Bug Fix) */\n\nif ($('.customer.addresses')) {\n  $(selectors.toggleAddressButton).on('click', function () {\n    this.setAttribute(\n      attributes.expanded,\n      (this.getAttribute(attributes.expanded) === 'false').toString()\n    )\n  })\n\n  $(selectors.deleteAddressButton).on('click', function (event) {\n    event.preventDefault()\n    var choice = confirm(this.getAttribute('data-confirm-message'))\n\n    if (choice) {\n      Shopify.postLink(this.dataset.target, {\n        parameters: { _method: 'delete' }\n      })\n    }\n  })\n  $(selectors.cancelAddressButton).on('click', function () {\n    var cancel = this.closest(selectors.addressContainer)\n      .querySelector(`[${attributes.expanded}]`)\n    cancel.setAttribute(\n      attributes.expanded,\n      (cancel.getAttribute(attributes.expanded) === 'false').toString()\n    )\n  })\n}\n\n\n//# sourceURL=webpack://theme-template/./.src/js/customer.js?");
+class CustomerAddresses {
+  constructor() {
+    this.elements = this._getElements();
+    if (Object.keys(this.elements).length === 0) return;
+    this._setupCountries();
+    this._setupEventListeners();
+  }
 
-/***/ })
+  _getElements() {
+    const container = document.querySelector(selectors.customerAddresses);
+    return container
+      ? {
+          container,
+          addressContainer: container.querySelector(selectors.addressContainer),
+          toggleButtons: document.querySelectorAll(selectors.toggleAddressButton),
+          cancelButtons: container.querySelectorAll(selectors.cancelAddressButton),
+          deleteButtons: container.querySelectorAll(selectors.deleteAddressButton),
+          countrySelects: container.querySelectorAll(selectors.addressCountrySelect),
+        }
+      : {};
+  }
 
-},
-/******/ __webpack_require__ => { // webpackRuntimeModules
-/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ var __webpack_exports__ = (__webpack_exec__("./.src/js/customer.js"));
-/******/ }
-]);
+  _setupCountries() {
+    if (Shopify && Shopify.CountryProvinceSelector) {
+      // eslint-disable-next-line no-new
+      new Shopify.CountryProvinceSelector('AddressCountryNew', 'AddressProvinceNew', {
+        hideElement: 'AddressProvinceContainerNew',
+      });
+      this.elements.countrySelects.forEach((select) => {
+        const formId = select.dataset.formId;
+        // eslint-disable-next-line no-new
+        new Shopify.CountryProvinceSelector(`AddressCountry_${formId}`, `AddressProvince_${formId}`, {
+          hideElement: `AddressProvinceContainer_${formId}`,
+        });
+      });
+    }
+  }
+
+  _setupEventListeners() {
+    this.elements.toggleButtons.forEach((element) => {
+      element.addEventListener('click', this._handleAddEditButtonClick);
+    });
+    this.elements.cancelButtons.forEach((element) => {
+      element.addEventListener('click', this._handleCancelButtonClick);
+    });
+    this.elements.deleteButtons.forEach((element) => {
+      element.addEventListener('click', this._handleDeleteButtonClick);
+    });
+  }
+
+  _toggleExpanded(target) {
+    target.setAttribute(attributes.expanded, (target.getAttribute(attributes.expanded) === 'false').toString());
+  }
+
+  _handleAddEditButtonClick = ({ currentTarget }) => {
+    this._toggleExpanded(currentTarget);
+  };
+
+  _handleCancelButtonClick = ({ currentTarget }) => {
+    this._toggleExpanded(currentTarget.closest(selectors.addressContainer).querySelector(`[${attributes.expanded}]`));
+  };
+
+  _handleDeleteButtonClick = ({ currentTarget }) => {
+    // eslint-disable-next-line no-alert
+    if (confirm(currentTarget.getAttribute(attributes.confirmMessage))) {
+      Shopify.postLink(currentTarget.dataset.target, {
+        parameters: { _method: 'delete' },
+      });
+    }
+  };
+}

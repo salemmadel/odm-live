@@ -1,28 +1,142 @@
-"use strict";
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
-(self["webpackChunktheme_template"] = self["webpackChunktheme_template"] || []).push([["product-form"],{
+if (!customElements.get('product-form')) {
+  customElements.define(
+    'product-form',
+    class ProductForm extends HTMLElement {
+      constructor() {
+        super();
 
-/***/ "./.src/js/product-form.js":
-/*!*********************************!*\
-  !*** ./.src/js/product-form.js ***!
-  \*********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+        this.form = this.querySelector('form');
+        this.variantIdInput.disabled = false;
+        this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
+        this.cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
+        this.submitButton = this.querySelector('[type="submit"]');
+        this.submitButtonText = this.submitButton.querySelector('span');
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _global__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./global */ \"./.src/js/global.js\");\n/* eslint-disable no-undef, no-unused-vars, eqeqeq, camelcase, no-var, no-redeclare, no-useless-return, no-useless-constructor, no-self-assign */\n\n\n\nif (!customElements.get('product-form')) {\n  customElements.define(\n    'product-form',\n    class ProductForm extends HTMLElement {\n      constructor () {\n        super()\n\n        this.form = this.querySelector('form')\n        if (this.form.querySelector('[name=id]') && this.form.querySelector('[name=id]').disabled) {\n          this.form.querySelector('[name=id]').disabled = false\n        }\n        this.form.addEventListener('submit', this.onSubmitHandler.bind(this))\n        this.submitButton = this.querySelector('[type=\"submit\"]')\n        document.addEventListener(\n          'addToCart:finished',\n          () => {\n            this.submitButton.classList.remove('loading')\n            if (!this.error) this.submitButton.removeAttribute('aria-disabled')\n            this.querySelector('.loading-overlay__spinner').classList.add(\n              'hidden'\n            )\n          },\n          false\n        )\n\n        if (document.querySelector('[data-set]')) {\n          this.set = {\n            el: document.querySelector('[data-set]')\n          }\n          this.prepareSet()\n        }\n\n        this.getSectionsToRender = [\n          {\n            id: 'cart-icon-bubble',\n            section: 'cart-icon-bubble',\n            selector: '.shopify-section'\n          },\n          {\n            id: 'cart-notification',\n            section: 'cart-notification',\n            selector: '.cart-notification__links'\n          },\n          {\n            id: 'cart-notification',\n            section: 'cart-notification',\n            selector: '.js-contents'\n          },\n          {\n            id: 'cart-notification',\n            section: 'cart-notification',\n            selector: '.free-products'\n          }\n        ]\n      }\n\n      onSubmitHandler (evt) {\n        console.log(evt)\n        evt.preventDefault()\n        if (this.submitButton.getAttribute('aria-disabled') === 'true') return\n\n        this.handleErrorMessage()\n\n        this.submitButton.setAttribute('aria-disabled', true)\n        this.submitButton.classList.add('loading')\n        this.querySelector('.loading-overlay__spinner').classList.remove(\n          'hidden'\n        )\n\n        const config = (0,_global__WEBPACK_IMPORTED_MODULE_0__.fetchConfig)('javascript')\n        config.headers['X-Requested-With'] = 'XMLHttpRequest'\n        delete config.headers['Content-Type']\n\n        const formData = new FormData(this.form)\n        var doubles = []\n        if (formData.get('is_set')) {\n          for (var p of formData) {\n            const name = p[0]\n            const value = p[1]\n            var double = doubles.find(x => x.value === value)\n            if (double) {\n              var id = name.match(/\\d+/)[0]\n              var quantity = parseInt(formData.get(`items[${double.id}][quantity]`))\n              formData.set(`items[${double.id}][quantity]`, quantity + 1)\n              formData.delete(name)\n              formData.delete(`items[${id}][quantity]`)\n            } else if (name.includes('[id]')) {\n              var id = name.match(/\\d+/)[0]\n              doubles.push({ name, value, id })\n            }\n          }\n        }\n\n        formData.append('sections_url', window.location.pathname)\n        config.body = formData\n\n        fetch(`${routes.cart_add_url}`, config)\n          .then((response) => response.json())\n          .then((response) => {\n            if (response.status >= 400) {\n              this.handleErrorMessage(response.description)\n\n              const soldOutMessage =\n                this.submitButton.querySelector('.sold-out-message')\n              if (!soldOutMessage) return\n              this.submitButton.setAttribute('aria-disabled', true)\n              this.submitButton.querySelector('span').classList.add('hidden')\n              soldOutMessage.classList.remove('hidden')\n              this.error = true\n              return\n            }\n\n            // Create the 'added to cart' event\n            let cartItemsAdded = new CustomEvent(\"cart:added\");\n\n            // Dispatching 'add to cart' event\n            document.dispatchEvent(cartItemsAdded);            \n\n            const productData = response\n\n            this.error = false\n\n            fetch(`${window.origin}/cart.js`)\n              .then(response => response.json())\n              .then(response => {\n                // console.log('Refreshing from PRODUCT-FORM.js line 130');\n\n                // let event = new CustomEvent(\"cart:refreshed\", {\n                //   detail: { response }\n                // });\n                // document.dispatchEvent(event);\n                function trackAddToCart (quantityButton) {\n                  const cartData = response\n                  const _learnq = []\n\n                  const cartItemNamesArr = []\n                  for (const item of cartData.items) {\n                    cartItemNamesArr.push(item.product_title + ' - ' + item.variant_title)\n                  }\n\n                  const cartItemsArr = []\n                  for (const item of cartData.items) {\n                    const itemData = {\n                      ProductID: item.id,\n                      SKU: item.sku,\n                      ProductName: item.product_title + ' - ' + item.variant_title,\n                      Quantity: item.quantity,\n                      ItemPrice: item.final_price / 100,\n                      RowTotal: item.line_price / 100,\n                      ProductURL: window.location.origin + item.url,\n                      ImageURL: item.image\n                    }\n                    cartItemsArr.push(itemData)\n                  }\n\n                  var quantity = 1\n                  if (quantityButton) { quantity = quantityButton.value }\n\n                  const addToCartData = {\n                    $value: cartData.total_price / 100,\n                    AddedItemProductName: productData.product_title + ' - ' + productData.variant_title,\n                    AddedItemProductID: productData.variant_id,\n                    AddedItemSKU: productData.sku,\n                    AddedItemImageURL: productData.image,\n                    AddedItemURL: window.location.origin + productData.url,\n                    AddedItemPrice: (productData.final_price * quantity) / 100,\n                    AddedItemQuantity: quantity,\n                    ItemNames: cartItemNamesArr,\n                    Items: cartItemsArr\n                  }\n\n                  _learnq.push(['track', 'Added to Cart', addToCartData])\n                }\n\n                if (typeof Cookiebot !== 'undefined' && Cookiebot.consented) {\n                  trackAddToCart(this.quantityButton)\n                }\n\n                (0,_global__WEBPACK_IMPORTED_MODULE_0__.updateItems)({\n                  line: '1',\n                  quantity: response.items[0].quantity,\n                  name: null,\n                  sections: this.getSectionsToRender,\n                  cartType: 'drawer'\n                })\n              })\n          })\n          .catch((e) => {\n            console.error(e)\n          })\n      }\n\n      handleErrorMessage (errorMessage = false) {\n        this.errorMessageWrapper =\n          this.errorMessageWrapper ||\n          this.querySelector('.product-form__error-message-wrapper')\n        if (!this.errorMessageWrapper) return\n        this.errorMessage =\n          this.errorMessage ||\n          this.errorMessageWrapper.querySelector(\n            '.product-form__error-message'\n          )\n\n        this.errorMessageWrapper.toggleAttribute('hidden', !errorMessage)\n\n        if (errorMessage) {\n          if(Object.prototype.toString.call(errorMessage) === '[object Object]') {\n            function getObjectValues(obj) {\n              let values = [];\n              for (let key in obj) {\n                  if (obj.hasOwnProperty(key)) {\n                      let value = obj[key];\n                      if (Array.isArray(value)) {\n                          values = values.concat(value); // Include array values\n                      } else if (typeof value === 'object' && value !== null) {\n                          values = values.concat(getObjectValues(value)); // Recurse into objects\n                      } else {\n                          values.push(value); // Include other values\n                      }\n                  }\n              }\n          \n              return values;\n            }\n            errorMessage = getObjectValues(errorMessage).join(', ');\n          }\n          this.errorMessage.textContent = errorMessage;\n          (0,_global__WEBPACK_IMPORTED_MODULE_0__.createAndDispatchCustomEvent)('addToCart:finished', true);\n        }\n      }\n\n      prepareSet () {\n        for (var child of this.set.el.children) {\n          child.querySelector('[data-set-add]').addEventListener('click', this.addToSet.bind(this, child))\n          child.querySelector('[data-set-subtract]').addEventListener('click', this.subtractFromSet.bind(this, child))\n        }\n      }\n\n      addToSet (target) {\n        if (this.set.el.dataset.setQuantity < this.set.el.dataset.set) {\n          this.set.el.dataset.setQuantity++\n          var value = Number(target.querySelector('[data-set-value]').value) + 1\n          target.querySelector('[data-set-quantity]').innerHTML = value\n          target.querySelector('[data-set-value]').value = value\n\n          if (this.set.el.dataset.setQuantity == this.set.el.dataset.set) {\n            this.submitButton.disabled = false\n          }\n        }\n      }\n\n      subtractFromSet (target) {\n        if (this.set.el.dataset.setQuantity > 0) {\n          this.set.el.dataset.setQuantity--\n          var value = Number(target.querySelector('[data-set-value]').value) - 1\n          target.querySelector('[data-set-quantity]').innerHTML = value\n          target.querySelector('[data-set-value]').value = value\n\n          if (this.set.el.dataset.setQuantity < this.set.el.dataset.set) {\n            this.submitButton.disabled = true\n          }\n        }\n      }\n    }\n  )\n}\n\n\n//# sourceURL=webpack://theme-template/./.src/js/product-form.js?");
+        if (document.querySelector('cart-drawer')) this.submitButton.setAttribute('aria-haspopup', 'dialog');
 
-/***/ })
+        this.hideErrors = this.dataset.hideErrors === 'true';
+      }
 
-},
-/******/ __webpack_require__ => { // webpackRuntimeModules
-/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ __webpack_require__.O(0, ["common"], () => (__webpack_exec__("./.src/js/product-form.js")));
-/******/ var __webpack_exports__ = __webpack_require__.O();
-/******/ }
-]);
+      onSubmitHandler(evt) {
+        evt.preventDefault();
+        if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
+
+        this.handleErrorMessage();
+
+        this.submitButton.setAttribute('aria-disabled', true);
+        this.submitButton.classList.add('loading');
+        this.querySelector('.loading__spinner').classList.remove('hidden');
+
+        const config = fetchConfig('javascript');
+        config.headers['X-Requested-With'] = 'XMLHttpRequest';
+        delete config.headers['Content-Type'];
+
+        const formData = new FormData(this.form);
+        if (this.cart) {
+          formData.append(
+            'sections',
+            this.cart.getSectionsToRender().map((section) => section.id)
+          );
+          formData.append('sections_url', window.location.pathname);
+          this.cart.setActiveElement(document.activeElement);
+        }
+        config.body = formData;
+
+        fetch(`${routes.cart_add_url}`, config)
+          .then((response) => response.json())
+          .then((response) => {
+            if (response.status) {
+              publish(PUB_SUB_EVENTS.cartError, {
+                source: 'product-form',
+                productVariantId: formData.get('id'),
+                errors: response.errors || response.description,
+                message: response.message,
+              });
+              this.handleErrorMessage(response.description);
+
+              const soldOutMessage = this.submitButton.querySelector('.sold-out-message');
+              if (!soldOutMessage) return;
+              this.submitButton.setAttribute('aria-disabled', true);
+              this.submitButtonText.classList.add('hidden');
+              soldOutMessage.classList.remove('hidden');
+              this.error = true;
+              return;
+            } else if (!this.cart) {
+              window.location = window.routes.cart_url;
+              return;
+            }
+
+            const startMarker = CartPerformance.createStartingMarker('add:wait-for-subscribers');
+            if (!this.error)
+              publish(PUB_SUB_EVENTS.cartUpdate, {
+                source: 'product-form',
+                productVariantId: formData.get('id'),
+                cartData: response,
+              }).then(() => {
+                CartPerformance.measureFromMarker('add:wait-for-subscribers', startMarker);
+              });
+            this.error = false;
+            const quickAddModal = this.closest('quick-add-modal');
+            if (quickAddModal) {
+              document.body.addEventListener(
+                'modalClosed',
+                () => {
+                  setTimeout(() => {
+                    CartPerformance.measure("add:paint-updated-sections", () => {
+                      this.cart.renderContents(response);
+                    });
+                  });
+                },
+                { once: true }
+              );
+              quickAddModal.hide(true);
+            } else {
+              CartPerformance.measure("add:paint-updated-sections", () => {
+                this.cart.renderContents(response);
+              });
+            }
+          })
+          .catch((e) => {
+            console.error(e);
+          })
+          .finally(() => {
+            this.submitButton.classList.remove('loading');
+            if (this.cart && this.cart.classList.contains('is-empty')) this.cart.classList.remove('is-empty');
+            if (!this.error) this.submitButton.removeAttribute('aria-disabled');
+            this.querySelector('.loading__spinner').classList.add('hidden');
+
+            CartPerformance.measureFromEvent("add:user-action", evt);
+          });
+      }
+
+      handleErrorMessage(errorMessage = false) {
+        if (this.hideErrors) return;
+
+        this.errorMessageWrapper =
+          this.errorMessageWrapper || this.querySelector('.product-form__error-message-wrapper');
+        if (!this.errorMessageWrapper) return;
+        this.errorMessage = this.errorMessage || this.errorMessageWrapper.querySelector('.product-form__error-message');
+
+        this.errorMessageWrapper.toggleAttribute('hidden', !errorMessage);
+
+        if (errorMessage) {
+          this.errorMessage.textContent = errorMessage;
+        }
+      }
+
+      toggleSubmitButton(disable = true, text) {
+        if (disable) {
+          this.submitButton.setAttribute('disabled', 'disabled');
+          if (text) this.submitButtonText.textContent = text;
+        } else {
+          this.submitButton.removeAttribute('disabled');
+          this.submitButtonText.textContent = window.variantStrings.addToCart;
+        }
+      }
+
+      get variantIdInput() {
+        return this.form.querySelector('[name=id]');
+      }
+    }
+  );
+}

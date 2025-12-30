@@ -1,26 +1,54 @@
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
-(self["webpackChunktheme_template"] = self["webpackChunktheme_template"] || []).push([["theme-editor"],{
+function hideProductModal() {
+  const productModal = document.querySelectorAll('product-modal[open]');
+  productModal && productModal.forEach((modal) => modal.hide());
+}
 
-/***/ "./.src/js/theme-editor.js":
-/*!*********************************!*\
-  !*** ./.src/js/theme-editor.js ***!
-  \*********************************/
-/***/ (() => {
+document.addEventListener('shopify:block:select', function (event) {
+  hideProductModal();
+  const blockSelectedIsSlide = event.target.classList.contains('slideshow__slide');
+  if (!blockSelectedIsSlide) return;
 
-eval("/* eslint-disable no-undef, no-unused-vars, eqeqeq, camelcase, no-var, no-redeclare, no-useless-return, no-useless-constructor, no-self-assign */\n\ndocument.addEventListener('shopify:block:select', function (event) {\n  const blockSelectedIsSlide = event.target.classList.contains('slideshow__slide')\n  if (!blockSelectedIsSlide) return\n\n  const parentSlideshowComponent = event.target.closest('slideshow-component')\n  parentSlideshowComponent.pause()\n\n  setTimeout(function () {\n    parentSlideshowComponent.slider.scrollTo({\n      left: event.target.offsetLeft\n    })\n  }, 200)\n})\n\ndocument.addEventListener('shopify:block:deselect', function (event) {\n  const blockDeselectedIsSlide = event.target.classList.contains('slideshow__slide')\n  if (!blockDeselectedIsSlide) return\n  const parentSlideshowComponent = event.target.closest('slideshow-component')\n  if (parentSlideshowComponent.autoplayButtonIsSetToPlay) parentSlideshowComponent.play()\n})\n\n\n//# sourceURL=webpack://theme-template/./.src/js/theme-editor.js?");
+  const parentSlideshowComponent = event.target.closest('slideshow-component');
+  parentSlideshowComponent.pause();
 
-/***/ })
+  setTimeout(function () {
+    parentSlideshowComponent.slider.scrollTo({
+      left: event.target.offsetLeft,
+    });
+  }, 200);
+});
 
-},
-/******/ __webpack_require__ => { // webpackRuntimeModules
-/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ var __webpack_exports__ = (__webpack_exec__("./.src/js/theme-editor.js"));
-/******/ }
-]);
+document.addEventListener('shopify:block:deselect', function (event) {
+  const blockDeselectedIsSlide = event.target.classList.contains('slideshow__slide');
+  if (!blockDeselectedIsSlide) return;
+  const parentSlideshowComponent = event.target.closest('slideshow-component');
+  if (parentSlideshowComponent.autoplayButtonIsSetToPlay) parentSlideshowComponent.play();
+});
+
+document.addEventListener('shopify:section:load', () => {
+  hideProductModal();
+  const zoomOnHoverScript = document.querySelector('[id^=EnableZoomOnHover]');
+  if (!zoomOnHoverScript) return;
+  if (zoomOnHoverScript) {
+    const newScriptTag = document.createElement('script');
+    newScriptTag.src = zoomOnHoverScript.src;
+    zoomOnHoverScript.parentNode.replaceChild(newScriptTag, zoomOnHoverScript);
+  }
+});
+
+document.addEventListener('shopify:section:unload', (event) => {
+  document.querySelectorAll(`[data-section="${event.detail.sectionId}"]`).forEach((element) => {
+    element.remove();
+    document.body.classList.remove('overflow-hidden');
+  });
+});
+
+document.addEventListener('shopify:section:reorder', () => hideProductModal());
+
+document.addEventListener('shopify:section:select', () => hideProductModal());
+
+document.addEventListener('shopify:section:deselect', () => hideProductModal());
+
+document.addEventListener('shopify:inspector:activate', () => hideProductModal());
+
+document.addEventListener('shopify:inspector:deactivate', () => hideProductModal());

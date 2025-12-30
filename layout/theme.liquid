@@ -1,183 +1,19 @@
 <!doctype html>
-<html class="no-js" lang="{{ request.locale.iso_code }}">
-  <head>{% render 'pagefly-head' %}
-
-  {%- if settings.klar_tag != blank -%}
-    <!-- Klar Integration --> 
-    <script>
-      (function () {
-        var a = document.createElement('script');
-        (a.type = 'text/javascript'),
-          (a.async = !0),
-          (a.src = '{{ settings.klar_tag }}'),
-          document.getElementsByTagName('script')[0].appendChild(a);
-      })();
-    </script>
-  <!-- End of Klar Integration -->
-  {%- endif -%}
-
-  {%- if settings.omniconvert_id != blank -%}
-    <!-- Omniconvert Integration --> 
-    <!-- start Omniconvert.com code -->
-    <link rel="dns-prefetch" href="//app.omniconvert.com" />
-    <script type="text/javascript">window._mktz=window._mktz||[];</script>
-    <script src="//cdn.omniconvert.com/js/{{ settings.omniconvert_id }}.js"></script>
-    <!-- end Omniconvert.com code -->
-  <!-- End of Omniconvert Integration -->
-  {%- endif -%}
-
-
-  {%- comment -%}
-    Ensure the global Shopify / Stencil objects are always on the window
-  {%- endcomment -%}
-  <script>
-    window.Shopify = window.Shopify || {};
-    window.Stencil = window.Stencil || {};
-    
-    window.Stencil.PreInitCallbacks = [];
-    window.Stencil.PostInitCallbacks = [];
-    window.Stencil.hasLoaded = false;
-  </script> 
-
-  {%- comment -%}
-    Keyhole inject Stencil
-  {%- endcomment -%}
-  <script src="{{ 'stencil-theme.js' | asset_url }}" defer="defer"></script>
-  {{ 'stencil-theme.css' | asset_url | stylesheet_tag }}
-
-  <script src="{{ 'lazysizes.js' | asset_url }}" ></script>
-    {%- if settings.cookiebot != blank -%}
-            <!-- CookieBot Installation -->
-            <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="{{ settings.cookiebot }}" data-blockingmode="auto" type="text/javascript"></script>
-            <!-- End CookieBot Installation -->
-
-            <script>
-              window.Shopify.loadFeatures(
-                      [{
-                              name: "consent-tracking-api",
-                              version: "0.1",
-                      }, ],
-                      function(error) {
-                              if (error) throw error;
-                              if ("Cookiebot" in window)
-                                      if (Cookiebot.consented || Cookiebot.declined) {
-                                              window.Shopify.customerPrivacy.setTrackingConsent(!Cookiebot.declined, feedback);
-                                              return;
-                                      }
-                              window.Shopify.customerPrivacy.setTrackingConsent(false, feedback);
-                      }
-              );
-              
-              function feedback() {
-                      const p = window.Shopify.customerPrivacy;
-                      console.log(`Tracking ${p.userCanBeTracked() ? "en" : "dis"}abled`);
-              }
-              
-              window.checkifloaded = function(condition_str, func_str, cyclelimit, maxwaitlimit, slot) {
-              
-                      var loaded = false;
-              
-                      if (typeof(window.checker_slot) == "undefined") {
-                              window.checker_slot = [];
-                      };
-              
-                      var slotarray = window.checker_slot;
-              
-                      if (typeof(slot) !== "number") {
-                              slot = slotarray.length;
-                              slotarray[slotarray.length] = 0;
-                      };
-              
-                      var cyclebeklemeayari = cyclelimit || 500;
-                      var maxbeklemeayari = maxwaitlimit || 50;
-              
-                      setTimeout(function() {
-                              if (eval(condition_str) === false && slotarray[slot] < (maxbeklemeayari * 1000 / cyclebeklemeayari) && loaded === false) {
-                                      window.console.log("Condition was not met yet. Current value: " + condition_str + " -> " + eval(condition_str));
-                                      slotarray[slot]++;
-                                      window.checkifloaded(condition_str, func_str, cyclebeklemeayari, maxbeklemeayari, slot);
-              
-                              } else {
-                                      if (slotarray[slot] >= (maxbeklemeayari * 1000 / cyclebeklemeayari)) {
-                                              window.console.log("Time is up, condition was not met. Condition: " + condition_str);
-              
-                                      } else {
-              
-                                              window.console.log("Condition met on  " + ((slotarray[slot] + 1) * 50 / 1000) + " seconds. Condition: " + condition_str);
-                                              loaded = true;
-                                              func_str();
-                                      }
-                              }
-                      }, cyclebeklemeayari);
-              };
-              
-              window.checkifloaded('window.hasOwnProperty("Shopify") == true', function() {
-              
-                      window.checkifloaded('window.Shopify.hasOwnProperty("customerPrivacy") == true', function() {
-              
-                              window.checkifloaded('window.Shopify.customerPrivacy.hasOwnProperty("setTrackingConsent") == true', function() {
-              
-                                      console.log("Fonkisyon Çalıştı");;
-              
-                                      window.addEventListener("CookiebotOnConsentReady", function() {
-                                              window.Shopify.customerPrivacy.setTrackingConsent(!Cookiebot.declined, feedback);
-                                      });
-              
-                              });
-              
-                      });
-              
-              })</script>
-          {%- endif -%}
-
-         
-      
-      
-
+<html class="js" lang="{{ request.locale.iso_code }}">
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
-    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
-
-    <link rel="stylesheet"data- href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0"></script>
-    <script
-      type="text/javascript"
-      async
-      data-src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id={{ settings.klaviyo_id }}"
-    ></script>
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
-    {%- comment -%}
-      Noindex for some pages
-    {%- endcomment -%}
-    {% if page and page.metafields.head.noindex > 0 or product and product.metafields.head.noindex > 0 or blog and blog.metafields.head.noindex > 0  %}
-      <meta name="robots" content="noindex">
-    {% endif %}
 
-    {%- comment -%}
-      Block hreflang for some pages
-    {%- endcomment -%}
-    {% unless page.metafields.head.nohreflang > 0 %}
-      {% unless request.locale.iso_code == "de" %}
-        <link rel="alternate" hreflang="de" href="http://odonnell.de{{ page.url }}" />
-      {% endunless %}
-      {% unless request.locale.iso_code == "at" %}
-        <link rel="alternate" hreflang="de_AT" href="https://odonnell.at{{ page.url }}" />
-      {% endunless %}
-      {% unless request.locale.iso_code == "uk" %}
-        <link rel="alternate" hreflang="en" href="https://odonnellmoonshine.co.uk{{ page.url }}" />
-      {% endunless %}
-      {% unless request.locale.iso_code == "nl" %}
-        <link rel="alternate" hreflang="nl" href="https://odonnell.nl{{ page.url }}" />
-      {% endunless %}
-    {% endunless %}
+    {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
+      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    {%- endunless -%}
 
     <title>
       {{ page_title }}
@@ -191,54 +27,90 @@
     {% endif %}
 
     {% render 'meta-tags' %}
-    <script src="{{ 'runtime.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'common.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>                                                                                                                                                                               
-    {% render 'vital-loader' %} 
 
+    <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
 
-    
+    {%- if settings.animations_reveal_on_scroll -%}
+      <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
 
+    {{ content_for_header }}
 
-
-{{ content_for_header }}
+    {%- liquid
+      assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+      assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+      assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+    %}
 
     {% style %}
+      {{ settings.type_body_font | font_face: font_display: 'swap' }}
+      {{ body_font_bold | font_face: font_display: 'swap' }}
+      {{ body_font_italic | font_face: font_display: 'swap' }}
+      {{ body_font_bold_italic | font_face: font_display: 'swap' }}
+      {{ settings.type_header_font | font_face: font_display: 'swap' }}
 
-      {% render 'font-faces' %}
+      {% for scheme in settings.color_schemes -%}
+        {% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
+        {% if forloop.index == 1 -%}
+          :root,
+        {%- endif %}
+        .color-{{ scheme.id }} {
+          --color-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
+        {% if scheme.settings.background_gradient != empty %}
+          --gradient-background: {{ scheme.settings.background_gradient }};
+        {% else %}
+          --gradient-background: {{ scheme.settings.background }};
+        {% endif %}
+
+        {% liquid
+          assign background_color = scheme.settings.background
+          assign background_color_brightness = background_color | color_brightness
+          if background_color_brightness <= 26
+            assign background_color_contrast = background_color | color_lighten: 50
+          elsif background_color_brightness <= 65
+            assign background_color_contrast = background_color | color_lighten: 5
+          else
+            assign background_color_contrast = background_color | color_darken: 25
+          endif
+        %}
+
+        --color-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
+        --color-background-contrast: {{ background_color_contrast.red }},{{ background_color_contrast.green }},{{ background_color_contrast.blue }};
+        --color-shadow: {{ scheme.settings.shadow.red }},{{ scheme.settings.shadow.green }},{{ scheme.settings.shadow.blue }};
+        --color-button: {{ scheme.settings.button.red }},{{ scheme.settings.button.green }},{{ scheme.settings.button.blue }};
+        --color-button-text: {{ scheme.settings.button_label.red }},{{ scheme.settings.button_label.green }},{{ scheme.settings.button_label.blue }};
+        --color-secondary-button: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
+        --color-secondary-button-text: {{ scheme.settings.secondary_button_label.red }},{{ scheme.settings.secondary_button_label.green }},{{ scheme.settings.secondary_button_label.blue }};
+        --color-link: {{ scheme.settings.secondary_button_label.red }},{{ scheme.settings.secondary_button_label.green }},{{ scheme.settings.secondary_button_label.blue }};
+        --color-badge-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
+        --color-badge-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
+        --color-badge-border: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
+        --payment-terms-background-color: rgb({{ scheme.settings.background.rgb }});
+      }
+      {% endfor %}
+
+      {{ scheme_classes | prepend: 'body' }} {
+        color: rgba(var(--color-foreground), 0.75);
+        background-color: rgb(var(--color-background));
+      }
+
       :root {
-        --font-body-family: "GT Pressura";
-        --font-body-style: "normal";
-        --font-body-weight: "400";
-        --font-body-weight-bold: "700";
+        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+        --font-body-style: {{ settings.type_body_font.style }};
+        --font-body-weight: {{ settings.type_body_font.weight }};
+        --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
 
-        --font-heading-family: "GT Pressura Mono";
-        --font-heading-style: "normal";
-        --font-heading-weight: "700";
+        --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+        --font-heading-style: {{ settings.type_header_font.style }};
+        --font-heading-weight: {{ settings.type_header_font.weight }};
 
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
         --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
-
-        --color-base-text: {{ settings.colors_text.red }}, {{ settings.colors_text.green }}, {{ settings.colors_text.blue }};
-        --color-shadow: {{ settings.colors_text.red }}, {{ settings.colors_text.green }}, {{ settings.colors_text.blue }};
-        --color-base-background-1: {{ settings.colors_background_1.red }}, {{ settings.colors_background_1.green }}, {{ settings.colors_background_1.blue }};
-        --color-base-background-2: {{ settings.colors_background_2.red }}, {{ settings.colors_background_2.green }}, {{ settings.colors_background_2.blue }};
-        --color-base-solid-button-labels: {{ settings.colors_solid_button_labels.red }}, {{ settings.colors_solid_button_labels.green }}, {{ settings.colors_solid_button_labels.blue }};
-        --color-base-outline-button-labels: {{ settings.colors_outline_button_labels.red }}, {{ settings.colors_outline_button_labels.green }}, {{ settings.colors_outline_button_labels.blue }};
-        --color-base-accent-1: {{ settings.colors_accent_1.red }}, {{ settings.colors_accent_1.green }}, {{ settings.colors_accent_1.blue }};
-        --color-base-accent-2: {{ settings.colors_accent_2.red }}, {{ settings.colors_accent_2.green }}, {{ settings.colors_accent_2.blue }};
-        --color-base-accent-red: {{ settings.color_red.red }}, {{ settings.color_red.green }}, {{ settings.color_green.blue }};
-        --color-base-accent-green: {{ settings.color_green.red }}, {{ settings.color_green.green }}, {{ settings.color_green.blue }};
-        --color-base-accent-deal: {{ settings.color_deal.red }}, {{ settings.color_deal.green }}, {{ settings.color_deal.blue }};
-        --payment-terms-background-color: {{ settings.colors_background_1 }};
-
-        --gradient-base-background-1: {% if settings.gradient_background_1 != blank %}{{ settings.gradient_background_1 }}{% else %}{{ settings.colors_background_1 }}{% endif %};
-        --gradient-base-background-2: {% if settings.gradient_background_2 != blank %}{{ settings.gradient_background_2 }}{% else %}{{ settings.colors_background_2 }}{% endif %};
-        --gradient-base-accent-1: {% if settings.gradient_accent_1 != blank %}{{ settings.gradient_accent_1 }}{% else %}{{ settings.colors_accent_1 }}{% endif %};
-        --gradient-base-accent-2: {% if settings.gradient_accent_2 != blank %}{{ settings.gradient_accent_2 }}{% else %}{{ settings.colors_accent_2 }}{% endif %};
-        --gradient-base-accent-green: {% if settings.gradient_accent_green != blank %}{{ settings.gradient_accent_green }}{% else %}{{ settings.colors_accent_green }}{% endif %};
-        --gradient-base-accent-red: {% if settings.gradient_accent_red != blank %}{{ settings.gradient_accent_red }}{% else %}{{ settings.colors_accent_red }}{% endif %};
-        --gradient-base-accent-deal: {% if settings.gradient_accent_deal != blank %}{{ settings.gradient_accent_deal }}{% else %}{{ settings.colors_accent_deal }}{% endif %};
 
         --media-padding: {{ settings.media_padding }}px;
         --media-border-opacity: {{ settings.media_border_opacity | divided_by: 100.0 }};
@@ -248,19 +120,43 @@
         --media-shadow-horizontal-offset: {{ settings.media_shadow_horizontal_offset }}px;
         --media-shadow-vertical-offset: {{ settings.media_shadow_vertical_offset }}px;
         --media-shadow-blur-radius: {{ settings.media_shadow_blur }}px;
+        --media-shadow-visible: {% if settings.media_shadow_opacity > 0 %}1{% else %}0{% endif %};
 
         --page-width: {{ settings.page_width | divided_by: 10 }}rem;
         --page-width-margin: {% if settings.page_width == '1600' %}2{% else %}0{% endif %}rem;
 
-        --card-image-padding: {{ settings.card_image_padding | divided_by: 10.0 }}rem;
-        --card-corner-radius: {{ settings.card_corner_radius | divided_by: 10.0 }}rem;
-        --card-text-alignment: {{ settings.card_text_alignment }};
-        --card-border-width: {{ settings.card_border_thickness | divided_by: 10.0 }}rem;
-        --card-border-opacity: {{ settings.card_border_opacity | divided_by: 100.0 }};
-        --card-shadow-opacity: {{ settings.card_shadow_opacity | divided_by: 100.0 }};
-        --card-shadow-horizontal-offset: {{ settings.card_shadow_horizontal_offset | divided_by: 10.0 }}rem;
-        --card-shadow-vertical-offset: {{ settings.card_shadow_vertical_offset | divided_by: 10.0 }}rem;
-        --card-shadow-blur-radius: {{ settings.card_shadow_blur | divided_by: 10.0 }}rem;
+        --product-card-image-padding: {{ settings.card_image_padding | divided_by: 10.0 }}rem;
+        --product-card-corner-radius: {{ settings.card_corner_radius | divided_by: 10.0 }}rem;
+        --product-card-text-alignment: {{ settings.card_text_alignment }};
+        --product-card-border-width: {{ settings.card_border_thickness | divided_by: 10.0 }}rem;
+        --product-card-border-opacity: {{ settings.card_border_opacity | divided_by: 100.0 }};
+        --product-card-shadow-opacity: {{ settings.card_shadow_opacity | divided_by: 100.0 }};
+        --product-card-shadow-visible: {% if settings.card_shadow_opacity > 0 %}1{% else %}0{% endif %};
+        --product-card-shadow-horizontal-offset: {{ settings.card_shadow_horizontal_offset | divided_by: 10.0 }}rem;
+        --product-card-shadow-vertical-offset: {{ settings.card_shadow_vertical_offset | divided_by: 10.0 }}rem;
+        --product-card-shadow-blur-radius: {{ settings.card_shadow_blur | divided_by: 10.0 }}rem;
+
+        --collection-card-image-padding: {{ settings.collection_card_image_padding | divided_by: 10.0 }}rem;
+        --collection-card-corner-radius: {{ settings.collection_card_corner_radius | divided_by: 10.0 }}rem;
+        --collection-card-text-alignment: {{ settings.collection_card_text_alignment }};
+        --collection-card-border-width: {{ settings.collection_card_border_thickness | divided_by: 10.0 }}rem;
+        --collection-card-border-opacity: {{ settings.collection_card_border_opacity | divided_by: 100.0 }};
+        --collection-card-shadow-opacity: {{ settings.collection_card_shadow_opacity | divided_by: 100.0 }};
+        --collection-card-shadow-visible: {% if settings.collection_card_shadow_opacity > 0 %}1{% else %}0{% endif %};
+        --collection-card-shadow-horizontal-offset: {{ settings.collection_card_shadow_horizontal_offset | divided_by: 10.0 }}rem;
+        --collection-card-shadow-vertical-offset: {{ settings.collection_card_shadow_vertical_offset | divided_by: 10.0 }}rem;
+        --collection-card-shadow-blur-radius: {{ settings.collection_card_shadow_blur | divided_by: 10.0 }}rem;
+
+        --blog-card-image-padding: {{ settings.blog_card_image_padding | divided_by: 10.0 }}rem;
+        --blog-card-corner-radius: {{ settings.blog_card_corner_radius | divided_by: 10.0 }}rem;
+        --blog-card-text-alignment: {{ settings.blog_card_text_alignment }};
+        --blog-card-border-width: {{ settings.blog_card_border_thickness | divided_by: 10.0 }}rem;
+        --blog-card-border-opacity: {{ settings.blog_card_border_opacity | divided_by: 100.0 }};
+        --blog-card-shadow-opacity: {{ settings.blog_card_shadow_opacity | divided_by: 100.0 }};
+        --blog-card-shadow-visible: {% if settings.blog_card_shadow_opacity > 0 %}1{% else %}0{% endif %};
+        --blog-card-shadow-horizontal-offset: {{ settings.blog_card_shadow_horizontal_offset | divided_by: 10.0 }}rem;
+        --blog-card-shadow-vertical-offset: {{ settings.blog_card_shadow_vertical_offset | divided_by: 10.0 }}rem;
+        --blog-card-shadow-blur-radius: {{ settings.blog_card_shadow_blur | divided_by: 10.0 }}rem;
 
         --badge-corner-radius: {{ settings.badge_corner_radius | divided_by: 10.0 }}rem;
 
@@ -291,6 +187,7 @@
         --text-boxes-border-width: {{ settings.text_boxes_border_thickness }}px;
         --text-boxes-radius: {{ settings.text_boxes_radius }}px;
         --text-boxes-shadow-opacity: {{ settings.text_boxes_shadow_opacity | divided_by: 100.0 }};
+        --text-boxes-shadow-visible: {% if settings.text_boxes_shadow_opacity > 0 %}1{% else %}0{% endif %};
         --text-boxes-shadow-horizontal-offset: {{ settings.text_boxes_shadow_horizontal_offset }}px;
         --text-boxes-shadow-vertical-offset: {{ settings.text_boxes_shadow_vertical_offset }}px;
         --text-boxes-shadow-blur-radius: {{ settings.text_boxes_shadow_blur }}px;
@@ -300,6 +197,7 @@
         --buttons-border-width: {% if settings.buttons_border_opacity > 0 %}{{ settings.buttons_border_thickness }}{% else %}0{% endif %}px;
         --buttons-border-opacity: {{ settings.buttons_border_opacity | divided_by: 100.0 }};
         --buttons-shadow-opacity: {{ settings.buttons_shadow_opacity | divided_by: 100.0 }};
+        --buttons-shadow-visible: {% if settings.buttons_shadow_opacity > 0 %}1{% else %}0{% endif %};
         --buttons-shadow-horizontal-offset: {{ settings.buttons_shadow_horizontal_offset }}px;
         --buttons-shadow-vertical-offset: {{ settings.buttons_shadow_vertical_offset }}px;
         --buttons-shadow-blur-radius: {{ settings.buttons_shadow_blur }}px;
@@ -357,7 +255,32 @@
       }
     {% endstyle %}
 
-    {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'base.css' | asset_url | stylesheet_tag }}
+    <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
+
+    {%- if settings.cart_type == 'drawer' -%}
+      {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
+      {{ 'component-cart.css' | asset_url | stylesheet_tag }}
+      {{ 'component-totals.css' | asset_url | stylesheet_tag }}
+      {{ 'component-price.css' | asset_url | stylesheet_tag }}
+      {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
+    {%- endif -%}
+
+    {%- unless settings.type_body_font.system? -%}
+      {% comment %}theme-check-disable AssetPreload{% endcomment %}
+      <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
+      {% comment %}theme-check-enable AssetPreload{% endcomment %}
+    {%- endunless -%}
+    {%- unless settings.type_header_font.system? -%}
+      {% comment %}theme-check-disable AssetPreload{% endcomment %}
+      <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
+      {% comment %}theme-check-enable AssetPreload{% endcomment %}
+    {%- endunless -%}
+
+    {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
+      {{ 'component-localization-form.css' | asset_url | stylesheet_tag: preload: true }}
+      <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
 
     {%- if settings.predictive_search_enabled -%}
       <link
@@ -368,102 +291,43 @@
       >
     {%- endif -%}
 
-    {%- render "shopify-analytics-helper" -%}
-
     <script>
-      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-
       if (Shopify.designMode) {
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-    {% include 'analyzify-gtm-body' %}
-
-    {{ settings.yotpo_scripts | replace: ' src=', ' data-src='  }}
-
-    {%- if settings.clarity_tag != blank -%}
-      <!-- Clarity Integration --> 
-      <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "{{settings.clarity_tag}}");
-      </script>
-     <!-- End of Clarity Integration -->
-    {%- endif -%}
   </head>
 
-  {%- capture content_for_layout_capture -%}
-    {{ content_for_layout }}
-  {%- endcapture -%}
-  <body x onload="document.body.dataset.loaded = true;" 
-    class="gradient layout-theme template-{{ template.name | handle }} template-suffix-{{ template.suffix | handle }}"
-    data-storefront-api-key="{{ settings.stencil_assistant_storefront_api_key }}"
-    data-gtm-id="{{ settings.google_tag }}"
-    {% if request.design_mode %} data-design-mode="true" {% endif %}>
+  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
 
-    {%- sections 'header-group' -%}
-
-    {% section 'newsletter-popup' %}
-
-    {%- render 'stencil-proposition-definitions' -%}
-
-    {%- comment -%}
-      Action Popup
-      {% section 'action-popup' %}
-    {%- endcomment -%}  
-
-    {%- comment -%}
-      Action Popup
-      {% section 'action-popup' %}
-    {%- endcomment -%}
-    
-    {%- comment -%}
-    Geo Redirect Banner
-    {%- endcomment -%}
-    {%- assign country_code = shop.permanent_domain | split: "." | first | split: "-" | last | upcase -%}
-
-    {%- if settings.show_redirection_banner -%}
-
-      {% render 'geo-redirect-banner', country_code: country_code%}
-    
+    {%- if settings.cart_type == 'drawer' -%}
+      {%- render 'cart-drawer' -%}
     {%- endif -%}
 
-    {%- unless template contains 'cart' -%}
-      {% section 'cart-notification' %}
-    {%- endunless -%}
+    {% sections 'header-group' %}
 
-      {% section 'announcement-bar' %}
-      {% section 'header' %}
-      {% section 'usps' %}
-    
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      {{ content_for_layout_capture }}
+      {{ content_for_layout }}
     </main>
 
-    {%- assign content_for_layout_capture_strip_newlines = content_for_layout_capture | strip_newlines | json -%}
-
-    {%- unless content_for_layout_capture_strip_newlines contains 'section-footer.css' -%}
-      {% section 'footer' %}
-    {%- endunless -%}
+    {% sections 'footer-group' %}
 
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
+      <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
 
     <script>
       window.shopUrl = '{{ request.origin }}';
       window.routes = {
-        cart_url: '{{ routes.cart_url }}',
         cart_add_url: '{{ routes.cart_add_url }}',
         cart_change_url: '{{ routes.cart_change_url }}',
         cart_update_url: '{{ routes.cart_update_url }}',
+        cart_url: '{{ routes.cart_url }}',
         predictive_search_url: '{{ routes.predictive_search_url }}',
-        cartUrl: '{{ routes.cart_url }}',
       };
 
       window.cartStrings = {
@@ -475,6 +339,19 @@
         addToCart: `{{ 'products.product.add_to_cart' | t }}`,
         soldOut: `{{ 'products.product.sold_out' | t }}`,
         unavailable: `{{ 'products.product.unavailable' | t }}`,
+        unavailable_with_option: `{{ 'products.product.value_unavailable' | t: option_value: '[value]' }}`,
+      };
+
+      window.quickOrderListStrings = {
+        itemsAdded: `{{ 'sections.quick_order_list.items_added.other' | t: quantity: '[quantity]' }}`,
+        itemAdded: `{{ 'sections.quick_order_list.items_added.one' | t: quantity: '[quantity]' }}`,
+        itemsRemoved: `{{ 'sections.quick_order_list.items_removed.other' | t: quantity: '[quantity]' }}`,
+        itemRemoved: `{{ 'sections.quick_order_list.items_removed.one' | t: quantity: '[quantity]' }}`,
+        viewCart: `{{- 'sections.quick_order_list.view_cart' | t -}}`,
+        each: `{{- 'sections.quick_order_list.each' | t: money: '[money]' }}`,
+        min_error: `{{- 'sections.quick_order_list.min_error' | t: min: '[min]' }}`,
+        max_error: `{{- 'sections.quick_order_list.max_error' | t: max: '[max]' }}`,
+        step_error: `{{- 'sections.quick_order_list.step_error' | t: step: '[step]' }}`,
       };
 
       window.accessibilityStrings = {
@@ -482,146 +359,18 @@
         shareSuccess: `{{ 'general.share.success_message' | t }}`,
         pauseSlideshow: `{{ 'sections.slideshow.pause_slideshow' | t }}`,
         playSlideshow: `{{ 'sections.slideshow.play_slideshow' | t }}`,
+        recipientFormExpanded: `{{ 'recipient.form.expanded' | t }}`,
+        recipientFormCollapsed: `{{ 'recipient.form.collapsed' | t }}`,
+        countrySelectorSearchCount: `{{ 'localization.country_results_count' | t: count: '[count]' }}`,
       };
-
-      window.theme = {
-        moneyFormat: '{{ shop.money_format }}',
-        moneyWithCurrencyFormat: '{{ shop.money_with_currency_format }}',
-      }
     </script>
+
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
-    {% section 'app-optimization' %}
-{{ 'custom.min.js' | asset_url | script_tag }}    <!-- PickyStory code, do not modify. Safe to remove after the app is uninstalled -->
-  {% if content_for_header contains 'pickystory' %}
-    {% render 'pickystory-combos-prerender' %}
-  {% endif %}
-  <!-- PickyStory code end -->
-  <!-- PickyStory snippet "main_widget_script", do not modify. Safe to remove after the app is uninstalled -->
-  {% if content_for_header contains 'pickystory' %}
-    <script defer src="https://cdn.pickystory.com/widget/dist/latest/pickystory-widget.min.js"></script>
-  {% endif %}
-  <!-- PickyStory end snippet "main_widget_script" -->
-    
-    {%- if settings.klaviyo_bis_enabled -%}
-      {%- render 'klaviyo-back-in-stock' -%}
+    {%- if settings.cart_type == 'drawer' -%}
+      <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-
-    {%- if settings.enable_wishlist -%}
-      {%- if settings.wishlist_exclude != blank -%}
-        <script>
-        try {
-          window.fetch = new Proxy(window.fetch, {
-            apply(fetch, that, args) {
-              let result = fetch.apply(that, args);
-              return result.then((response) => {
-                if (args[0].search && args[0].search(/apps-wishlist/) >= 0) {
-                  var intervalVar = setInterval(function() {
-                    if (document.querySelector('.wishlist-cart')) {
-                      [{{settings.wishlist_exclude}}].forEach(function(object) {
-                        document.querySelector('.wishlist-cart[data-product_id="' + object + '"]')?.remove()
-                      })
-                      clearInterval(intervalVar);
-                    }
-                  }, 50);
-                }
-              }), result
-            }
-          });
-        } catch (A) {
-          console.log(A), console.log("error catching cart fetch")
-        }
-      </script>
-    {%- endif -%}
-    <script>
-     function createAndDispatchCustomEvent (eventName, bubbles) {
-      const event = new Event(eventName, { bubbles })
-      document.dispatchEvent(event)
-    }
-        
-    function getSectionInnerHTML (html, selector) {
-        return new DOMParser()
-          .parseFromString(html, 'text/html')
-          .querySelector(selector)?.innerHTML
-    }
-    window.wishlistEngineCallback = async function(cartChangeState){
-      await fetch(`${window.routes.cartUrl}` + '?sections=main-cart-items')
-        .then(response => response.json())
-        .then((response) => {
-          const parsedState = cartChangeState;
-          if (!parsedState) return
-
-          const cartNotification = document.querySelector('cart-notification')
-
-          if (cartNotification) {
-            const res = response['main-cart-items']
-            if (!res) return
-
-            const parsedReponse = new DOMParser().parseFromString(res, 'text/html').body.querySelector('[id=main-cart-items]')
-            const productsContainer = cartNotification.querySelector('.cart-notification-products')
-
-            if (productsContainer) {
-              productsContainer.innerHTML = ''
-              productsContainer.appendChild(parsedReponse)
-            }
-
-            if (document.querySelector('#drawer_cart_item_count')) {
-              if (!parsedState.item_count) {
-                const itemCount = new DOMParser().parseFromString(parsedState.sections['cart-notification'], 'text/html').querySelector('#drawer_cart_item_count').innerHTML
-                document.querySelector('#drawer_cart_item_count').innerHTML = itemCount
-              } else {
-                document.querySelector('#drawer_cart_item_count').innerHTML = parsedState.item_count
-              }
-            }
-
-            if (!document.querySelector('#cart-notification').classList.contains('active')) {
-              createAndDispatchCustomEvent('drawer:open', true)
-            }
-
-            createAndDispatchCustomEvent('addToCart:finished', true)
-          } 
-             ([
-                {
-                    "id": "cart-icon-bubble",
-                    "section": "cart-icon-bubble",
-                    "selector": ".shopify-section"
-                },
-                {
-                    "id": "cart-notification",
-                    "section": "cart-notification",
-                    "selector": ".cart-notification__links"
-                },
-                {
-                    "id": "cart-notification",
-                    "section": "cart-notification",
-                    "selector": ".js-contents"
-                },
-                {
-                    "id": "cart-notification",
-                    "section": "cart-notification",
-                    "selector": ".free-products"
-                }
-            ]).map(section => {
-                          const elementToReplace = document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id)
-                          const replacement = getSectionInnerHTML(parsedState.sections[section.section], section.selector);
-                          if(replacement){
-                            const replace = elementToReplace.innerHTML = replacement
-                            return replace
-                          }
-                        })
-          
-
-        
-
-         })
-        .catch((e) => {
-          console.error(e)
-        })
-    }
-  </script>
-  {%- endif -%}
-  
   </body>
 </html>
