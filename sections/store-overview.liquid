@@ -55,51 +55,26 @@
     {% assign categories-array = "no-category" %}
 
     <div class="stores__selection">
-      {% comment %} "All" button hidden - was displaying as "Our Stores" {% endcomment %}
+      <button class="button button--primary active" id="all" >{{ 'sections.store-overview.store_category.all' | t }}</button>
       {%- for block in section.blocks -%}
-        {% case block.type %}
-          {% comment %} NEW BUTTON: Checks for the custom content block type {% endcomment %}
-          {%- when 'new_content_filter' -%}
-            {% assign new_button_id = block.settings.new_button_label | downcase | replace: ' ', '-' | replace: 'ü', 'ue' | replace: 'ö', 'oe' | replace: 'ü', 'ue' | replace: 'ä', 'ae' %}
-            <button class="button button--primary" id="{{ new_button_id }}">{{ block.settings.new_button_label }}</button>
-          {% comment %} LIQUID BLOCKS: Create buttons for Liquid blocks only (Store blocks won't create buttons) {% endcomment %}
-          {%- when 'liquid' -%}
-            {%- unless categories-array contains block.settings.store_category -%}
-              {% comment %} Hide "flag-ship-stores" button (displays as "Stores") {% endcomment %}
-              {%- unless block.settings.store_category == "flag-ship-stores" -%}
-                <button class="button button--primary" id="{{ block.settings.store_category | downcase | replace: ' ', '-' | replace: 'ü', 'ue' | replace: 'ö', 'oe' | replace: 'ü', 'ue' | replace: 'ä', 'ae' }}">{{ block.settings.store_category }}</button>
-              {%- endunless -%}
+        {%- unless categories-array contains block.settings.store_category -%}
+          {% assign translate = 'sections.store-overview.store_category.' | append: block.settings.store_category %}
+          <button class="button button--primary" id="{{ block.settings.store_category | downcase | replace: ' ', '-' | replace: 'ü', 'ue' | replace: 'ö', 'oe' | replace: 'ü', 'ue' | replace: 'ä', 'ae' }}">{{ translate | t }}</button>
 
-              {% comment %}{% Add declared category to the array %}{% endcomment %}
-              {% assign categories-array = categories-array | append: block.settings.store_category %}
-            {%- endunless -%}
-        {% endcase %}
+          {% comment %}{% Add declared category to the array %}{% endcomment %}
+          {% assign categories-array = categories-array | append: block.settings.store_category %}
+        {%- endunless -%}
       {%- endfor -%}
     </div>
   {%- endif -%}
 
      <div class="stores" id="stores__container">
       {%- for block in section.blocks -%}
-        {% case block.type %}
-          {%- when 'store' -%}
-            {% assign identifier = block.settings.store_headline | downcase | replace: ' ', '-' | replace: 'ü', 'ue' | replace: 'ö', 'oe' | replace: 'ü', 'ue' %}
-            {% assign tag = block.settings.store_category | downcase | replace: ' ', '-' | replace: 'ü', 'ue' | replace: 'ö', 'oe' | replace: 'ü', 'ue' | replace: 'ä', 'ae' %}
-            <div class="store_card {{tag}}" id="{{ identifier }}">  
-                {% render 'card-store', store_embedded-map: block.settings.store_embedded-map, store_headline: block.settings.store_headline, store_info: block.settings.store_info, image: block.settings.store_image %}
-            </div>
-          {% comment %} UPDATED LOGIC: Ensures the content is classified by category (tag) for filtering {% endcomment %}
-          {%- when 'liquid' -%}
-            {% assign tag = block.settings.store_category | downcase | replace: ' ', '-' | replace: 'ü', 'ue' | replace: 'ö', 'oe' | replace: 'ü', 'ue' | replace: 'ä', 'ae' %}
-            <div class="store_card {{ tag }} liquid" id="{{ block.id }}">  
-              {{ block.settings.custom_liquid }}
-            </div>
-          {% comment %} NEW CONTENT: Renders the custom content block when the new button is clicked {% endcomment %}
-          {%- when 'new_content_filter' -%}
-            {% assign new_button_id = block.settings.new_button_label | downcase | replace: ' ', '-' | replace: 'ü', 'ue' | replace: 'ö', 'oe' | replace: 'ü', 'ue' | replace: 'ä', 'ae' %}
-            <div class="store_card {{ new_button_id }}" style="display: none;">  
-              {{ block.settings.new_custom_liquid }}
-            </div>
-         {%- endcase -%}  
+        {% assign identifier = block.settings.store_headline | downcase | replace: ' ', '-' | replace: 'ü', 'ue' | replace: 'ö', 'oe' | replace: 'ü', 'ue' %}
+        {% assign tag = block.settings.store_category | downcase | replace: ' ', '-' | replace: 'ü', 'ue' | replace: 'ö', 'oe' | replace: 'ü', 'ue' | replace: 'ä', 'ae' %}
+        <div class="store_card {{tag}}" id="{{ identifier }}">
+            {% render 'card-store', store_embedded-map: block.settings.store_embedded-map, store_headline: block.settings.store_headline, store_info: block.settings.store_info, image: block.settings.store_image %}
+        </div>
       {%- endfor -%}
     </div>
 
@@ -195,40 +170,6 @@
           "id": "store_embedded-map",
           "label": "t:sections.store-overview.blocks.store.map",
           "info": "Insert iframe from google-maps"
-        }
-      ]
-    },
-    {
-    "type": "liquid",
-      "name": "Liquids",
-      "settings": [
-        {
-          "type": "text",
-          "id": "store_category",
-          "label": "t:sections.store-picker.blocks.store.name"
-        },
-        {
-          "type": "liquid",
-          "id": "custom_liquid",
-          "label": "t:sections.custom-liquid.settings.custom_liquid.label",
-          "info": "t:sections.custom-liquid.settings.custom_liquid.info"
-        }
-      ]
-    },
-    {
-    "type": "new_content_filter",
-      "name": "New Filter Content",
-      "settings": [
-        {
-          "type": "text",
-          "id": "new_button_label",
-          "label": "Button Label",
-          "default": "New Filter"
-        },
-        {
-          "type": "liquid",
-          "id": "new_custom_liquid",
-          "label": "Content to Display (Custom Liquid/HTML)"
         }
       ]
     }
