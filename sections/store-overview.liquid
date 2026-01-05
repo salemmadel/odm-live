@@ -62,13 +62,12 @@
           {%- when 'new_content_filter' -%}
             {% assign new_button_id = block.settings.new_button_label | downcase | replace: ' ', '-' | replace: 'ü', 'ue' | replace: 'ö', 'oe' | replace: 'ü', 'ue' | replace: 'ä', 'ae' %}
             <button class="button button--primary" id="{{ new_button_id }}">{{ block.settings.new_button_label }}</button>
-          {%- else -%}
+          {% comment %} LIQUID BLOCKS: Create buttons for Liquid blocks only (Store blocks won't create buttons) {% endcomment %}
+          {%- when 'liquid' -%}
             {%- unless categories-array contains block.settings.store_category -%}
+              <button class="button button--primary" id="{{ block.settings.store_category | downcase | replace: ' ', '-' | replace: 'ü', 'ue' | replace: 'ö', 'oe' | replace: 'ü', 'ue' | replace: 'ä', 'ae' }}">{{ block.settings.store_category }}</button>
 
-              {% assign translate = 'sections.store-overview.store_category.' | append: block.settings.store_category %}
-          <button class="button button--primary" id="{{ block.settings.store_category | downcase | replace: ' ', '-' | replace: 'ü', 'ue' | replace: 'ö', 'oe' | replace: 'ü', 'ue' | replace: 'ä', 'ae' }}">{% if block.type == 'store' %} {{ translate | t }} {%- else -%} {{ block.settings.store_category }} {%- endif -%}</button>
-              
-              {% comment %}{% Add declared category to the array %}{% endcomment %} 
+              {% comment %}{% Add declared category to the array %}{% endcomment %}
               {% assign categories-array = categories-array | append: block.settings.store_category %}
             {%- endunless -%}
         {% endcase %}
