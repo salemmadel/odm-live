@@ -55,7 +55,7 @@
     {% assign categories-array = "no-category" %}
 
     <div class="stores__selection">
-      <button class="button button--primary active" id="all" >{{ 'sections.store-overview.store_category.all' | t }}</button>
+      {% comment %} "All" button hidden - was displaying as "Our Stores" {% endcomment %}
       {%- for block in section.blocks -%}
         {% case block.type %}
           {% comment %} NEW BUTTON: Checks for the custom content block type {% endcomment %}
@@ -65,7 +65,10 @@
           {% comment %} LIQUID BLOCKS: Create buttons for Liquid blocks only (Store blocks won't create buttons) {% endcomment %}
           {%- when 'liquid' -%}
             {%- unless categories-array contains block.settings.store_category -%}
-              <button class="button button--primary" id="{{ block.settings.store_category | downcase | replace: ' ', '-' | replace: 'ü', 'ue' | replace: 'ö', 'oe' | replace: 'ü', 'ue' | replace: 'ä', 'ae' }}">{{ block.settings.store_category }}</button>
+              {% comment %} Hide "flag-ship-stores" button (displays as "Stores") {% endcomment %}
+              {%- unless block.settings.store_category == "flag-ship-stores" -%}
+                <button class="button button--primary" id="{{ block.settings.store_category | downcase | replace: ' ', '-' | replace: 'ü', 'ue' | replace: 'ö', 'oe' | replace: 'ü', 'ue' | replace: 'ä', 'ae' }}">{{ block.settings.store_category }}</button>
+              {%- endunless -%}
 
               {% comment %}{% Add declared category to the array %}{% endcomment %}
               {% assign categories-array = categories-array | append: block.settings.store_category %}
