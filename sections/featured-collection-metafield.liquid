@@ -122,23 +122,7 @@
             endif
           -%}
           <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}">
-            {% render 'card-product',
-              card_product: product,
-              media_aspect_ratio: section.settings.image_ratio,
-              show_secondary_image: section.settings.show_secondary_image,
-              show_vendor: section.settings.show_vendor,
-              show_rating: section.settings.show_rating,
-              grey_sold_out_products: section.settings.grey_sold_out_products,
-              show_quick_add: section.settings.enable_quick_add,
-              section_id: section.id,
-              custom_featured_media: product_featured_media,  <-- This line passes the metafield data.
-              {# Pass dynamic colors to the card-product snippet for direct styling #}
-              heading_color: section.settings.heading_color,
-              card_info_color: section.settings.card_info_color,
-              inventory_color: section.settings.inventory_color,
-              regular_price_color: section.settings.regular_price_color,
-              card_media_background: section.settings.card_media_background
-            %}
+            {% render 'card-product', card_product: product, media_aspect_ratio: section.settings.image_ratio, show_secondary_image: section.settings.show_secondary_image, show_vendor: section.settings.show_vendor, show_rating: section.settings.show_rating, grey_sold_out_products: section.settings.grey_sold_out_products, show_quick_add: section.settings.enable_quick_add, section_id: section.id, custom_featured_media: product_featured_media, heading_color: section.settings.heading_color, card_info_color: section.settings.card_info_color, inventory_color: section.settings.inventory_color, regular_price_color: section.settings.regular_price_color, card_media_background: section.settings.card_media_background %}
           </li>
         {%- else -%}
           {%- for i in (1..4) -%}
@@ -557,4 +541,37 @@
     }
   ]
 }
-{% endschema %}
+{% endschema %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {% render 'card-product',
+                  card_product: product,
+                  media_aspect_ratio: section.settings.image_ratio,
+                  show_secondary_image: section.settings.show_secondary_image,
+                  show_vendor: section.settings.show_vendor,
+                  show_rating: section.settings.show_rating,
+                  grey_sold_out_products: section.settings.grey_sold_out_products,
+                  show_quick_add: section.settings.enable_quick_add,
+                  section_id: section.id,
+                  custom_featured_media: product_featured_media,  <-- This line passes the metafield data.
+                  {# Pass dynamic colors to the card-product snippet for direct styling #}
+                  heading_color: section.settings.heading_color,
+                  card_info_color: section.settings.card_info_color,
+                  inventory_color: section.settings.inventory_color,
+                  regular_price_color: section.settings.regular_price_color,
+                  card_media_background: section.settings.card_media_background
+                %}
+  to: "{% render 'card-product', card_product: product, media_aspect_ratio: section.settings.image_ratio,
+    show_secondary_image: section.settings.show_secondary_image, show_vendor: section.settings.show_vendor,
+    show_rating: section.settings.show_rating, grey_sold_out_products: section.settings.grey_sold_out_products,
+    show_quick_add: section.settings.enable_quick_add, section_id: section.id, custom_featured_media:
+    product_featured_media, heading_color: section.settings.heading_color, card_info_color:
+    section.settings.card_info_color, inventory_color: section.settings.inventory_color,
+    regular_price_color: section.settings.regular_price_color, card_media_background:
+    section.settings.card_media_background %}"
+  position: 6764..7469
+{%- endcomment -%}
